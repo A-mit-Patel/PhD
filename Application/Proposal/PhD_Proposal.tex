@@ -1,0 +1,190 @@
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper, 11pt]{article} % A4 paper size, default 11pt font size and oneside for equal margins
+\usepackage[svgnames]{xcolor} % Required for colour specification
+\usepackage{graphicx} % Required for box manipulation
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+%\usepackage{PTSerif} % Use the Paratype Serif font
+\usepackage[margin=1in]{geometry} % Specify the margins
+\usepackage[hidelinks]{hyperref}
+\usepackage{cite} % to cite multiple referencs at once
+
+\newcommand{\RN}[1]{
+	\textup{\uppercase\expandafter{\romannumeral#1}}} % New function to make roman numerals
+
+\begin{document} 
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage} % Suppresses headers and footers on the title page
+
+	\centering % Centre all text
+
+	%------------------------------------------------
+	%	Title and subtitle
+	%------------------------------------------------
+	
+	\setlength{\unitlength}{0.6\textwidth} % Set the width of the curly brackets above and below the titles
+	
+	{\color{AliceBlue}\resizebox*{\unitlength}{\baselineskip}{\rotatebox{90}{$\}$}}}\\[\baselineskip] % Top curly bracket
+	
+	\textcolor{DarkCyan}{\textit{\Huge Developments to established dose-finding methodologies for application in trials with complex and innovative designs}}\\[\baselineskip] % Title
+	
+	{\color{DarkCyan}\Large PhD Proposal}\\ % Subtitle or further description
+	
+	{\color{AliceBlue}\resizebox*{\unitlength}{\baselineskip}{\rotatebox{-90}{$\}$}}} % Bottom curly bracket
+		\vfill
+	
+	\bigskip % Whitespace between the title and the author name
+	
+	%------------------------------------------------
+	%	Author
+	%------------------------------------------------
+	
+	{\Large\textbf{Amit Patel}}\\  % Author name
+	
+	\bigskip % Whitespace between the author name and the publisher logo
+	
+	{\Large\textbf{Supervisors:}}\\
+	{\Large\textbf{Professor Lucinda Billingham}}\\ 
+	{\Large\textbf{Dr Kristian Brock}}\\
+	
+	\vfill
+
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------------------------
+%	MAIN DOCUMENT 
+%----------------------------------------------------------------------------------------
+\section{\textcolor{DarkCyan}{Introduction}}
+
+Early phase clinical trials are essential in the drug development process as they provide key information about new interventions which can be used in later-phase testing. Specifically, phase\RN{1} trials aim to establish the maximum tolerated dose (MTD) of a new intervention, by determining the dose with the closest dose-limiting toxicity (DLT) probability to the target toxicity level (TTL). Conventionally, designs of these trials are algorithm based, model based or model-assisted based \cite{Zhou2018}. Some examples of each type of design: 
+
+\begin{itemize}
+	\item \textbf{Algorithm based designs}
+		\begin{itemize}
+			\item 3 + 3
+			\item Up-and-down
+		\end{itemize}
+	\item \textbf{Model based designs}
+		\begin{itemize}
+			\item Continual reassessment method (CRM)
+			\item Escalation with overdose control (EWOC)
+		\end{itemize}
+	\item \textbf{Model-assisted based designs}
+		\begin{itemize}
+			\item Bayesian optimal interval (BOIN)
+			\item Modified toxicity probability interval (mTPI)
+		\end{itemize}
+\end{itemize}
+
+\noindent Algorithm based designs use pre-determined rules to pick the MTD and allocate patients to a dose level. These are the most common designs implemented in phase\RN{1} trials due to their simplicity. In contrast, model based designs like the CRM, use a statistical model to determine the dose-toxicity relationship and allocate patients accordingly \cite{Love2017}. Model-assisted designs combine the simplicity of algorithm designs with pre-determined rules for dose escalation and de-escalation with the performance of model based designs, which models data observed at the current dose \cite{Zhou2018}.\\ 
+
+\noindent Simulations can be used to compare different trial designs by assessing statistical operating characteristics such as: the accuracy of selecting the MTD, percentage of patients assigned to the MTD, percentage of patients over-dosed or under-dosed and the number of DLT's observed. Ananthakrishnan et al. \cite{Ananthakrishnan2017} conducted a simulation study assessing a variety of trial designs with comparable design specifications under a range of scenarios. It was found that model based designs performed well and assigned the highest number of patients to the MTD, and also had a relatively high probability of selecting the correct MTD. Some algorithm based designs worked as well as the model based designs but required a higher sample size of patients than those designs. These comparisons were conducted under certain assumptions, and as such different trial designs may be better optimised for different scenarios. \\
+
+\noindent A review into phase\RN{1} trials of new anticancer therapies found 90 statistical methodology papers and 1235 clinical trials between 1991 and 2006. Only 1.6\% (20/1235) of clinical trials used statistical methods presented in the methodology papers, 17 of which were CRM designs and three were EWOC \cite{Rogatko2007}. Another review looking at oncology trials between 2008 and 2014 found 1693 clinical trials, 92 (5.4\%) of which used model based/novel designs \cite{Chiuzan2017}.  \\
+
+\noindent The CRM as a design utilises all available trial data and when compared to the 3 + 3, more accurately determines the MTD as well as treating more patients at the MTD. There are a number of key considerations, highlighted by Wheeler et al. \cite{Wheeler2019}, that go into this design which require both statistical and clinical input. These are: 
+\begin{itemize}
+	\item Number of doses 
+	\item Target toxicity level
+	\item Dose toxicity model
+	\item Dose toxicity skeleton 
+	\item Method of inference 
+	\item Sample size and cohort size
+	\item Safety modifications 
+	\item Stopping rules / Decision rules
+\end{itemize}
+Having too few doses can lead to poor estimation, whilst too many will lead to poor escalation. The target toxicity level is the target probability of a patient experiencing a DLT usually ranging between 20 and 40\%. A number of dose toxicity models can be chosen to model the relationship between dose and probability of observing a DLT. The main assumption of this model is that it's monotonically increasing in dose, implying higher doses are more toxic. The dose toxicity skeleton is the  DLT  probability the investigators expect at each dose level, which is usually determined using clinical input or previous trial data. Two modes of inference can be selected, either a likelihood based approach or a Bayesian approach. A binary toxicity outcome is observed from each patient, they either have a DLT or they do not. This data is then used in the dose toxicity model along with the dose toxicity skeleton to produce a posterior distribution which can be used to infer probability of DLT at each dose. The dose closest to the TTL becomes the recommend dose for the next patient/cohort. Sample size is usually constrained by practical issues such as the number of centres involved, disease prevalence and recruitment rates. Simulations can be conducted in order to optimise operating characteristics under feasible sample sizes. Using cohorts of one patient would theoretically provide the best results however, this may potentially be harmful to patients due to quick escalation without observation of necessary safety data. Safety modifications can be introduced to further reduce the chance of overdosing patients. Two common examples are starting the trial at a lower dose and not escalating past untried doses. A number of stopping rules can be implemented to reduce trial duration before the maximum sample size is reached. Criteria should be established for scenarios where: the MTD appears to be outside the range of pre-defined doses, the lowest dose is too toxic, sufficient evidence the MTD has been reached early or a combination of these \cite{Wheeler2019}.        \\ 
+
+\noindent The CRM design has been extended and modified to deal with a number of issues that arise in phase\RN{1} trials. Certain interventions, such as radiotherapy or some immunotherapy,  may cause late-onset toxicities. Normal CRM designs would have to increase the duration of the DLT evaluation period to capture these toxicities, which would inevitably prolong the trial. The time-to-event CRM, referred to as the TITE-CRM developed by Cheung and Chappel \cite{Cheung2000}, presents a solution by considering partial information on patients. If a patient is part way through their evaluation without experiencing a DLT, they are evaluated as having tolerated the dose up to the observed time-point. This is incorporated into the CRM model with a weighting parameter calculated for each patient as a function of time. Patients who reach the end of the DLT evaluation period with no toxic reaction are considered to have tolerated the dose and contribute full information to the model. Similarly, those who experience a DLT at any time also contribute fully to the model. The partial information only applies to tolerances that have been observed part way through the evaluation period. The TITE-CRM allows for patients to be entered into the study in a staggered fashion without compromising accuracy of estimation for the MTD, whilst also significantly reducing trial duration. However, in scenarios where recruitment is rapid the TITE-CRM could allocate a number of patients to a dose level which hasn't been observed for a significant period of time. This could lead to reduced efficiency in the scenario where the dose level is truly safe as higher doses aren't being explored. Many patients could also be exposed to a higher toxicity dose if the current dose exhibits multiple late-onset toxicities. Both of these issues can be resolved by allocating dose levels to a cohort of patients and waiting till the DLT evaluation period has passed to allocate the subsequent dose level \cite{Polley2019}. \\
+
+\noindent For immunotherapies and certain molecularly targeted agents it may be inadequate to consider only toxicity and tolerability in dose finding trials. Scenarios may occur where higher doses may not be more efficacious than lower doses, DLT's may not be observed before escalation and toxicity may not be a surrogate for activity. In these cases it would be important to consider efficacy as an additional end-point. Other designs such as the bivariate CRM (bCRM) and the EffTox design model bivariate binary and trinary outcomes respectively, which aims to recommend a dose level not only based on a drugs toxicity but its efficacy as well. The bCRM, in comparison to the traditional CRM, defines the MTD as a function of two outcomes toxicity and response which are combined into a joint likelihood model, an additional parameter is also included to account for the within-subject association of both outcomes \cite{Braun2002}. Alternatively, EffTox a Bayesian adaptive phase\RN{1} /\RN{2} design by Thall and Cook \cite{Thall2004}, considers the trade-offs between toxicity and efficacy. This method allows for binary as well as trinary outcomes where efficacy and toxicity are disjoint and neither can occur. The optimal dose is selected based upon the non-Euclidean distance between the ideal point (that being (1, 0) in the (prob-eff, prob-tox) quadrant which is the point where efficacy is guaranteed and toxicity impossible) and the expected probabilities of efficacy and toxicity given the data, based on a family of contours characterising these trade-offs for each dose \cite{Thall2004}. EffTox designs are best suited when there is an early biomarker for efficacy available and the disease population for the drug is homogeneous. \\ 
+
+\noindent The general objective of early-phase trials is to identify/recommend promising dose regimens for investigations in phase\RN{3} trials. Phase\RN{1} trials are dose finding that examine safety and toxicity and evaluate an MTD for use in phase\RN{2} trials which aim to find evidence of efficacy. Independently these trials can take an incredible amount of resources to set-up and conduct. Adaptive designs such as EffTox can be used to facilitate seamless transitions between phase\RN{1} /\RN{2} trials and expedite the process. Furthermore, the use of early-phase platform trials could be used to facilitate such designs. Platform trials are typically randomised trials in a single histology which investigates multiple biomarkers and multiple treatments \cite{Polley2019}. Rather than answer a specific clinical question the trial aims to randomise treatments to biomarker strata. Designs such as EffTox and issues such as delayed toxicities should always be considered when designing early-phase trials. Platform trials effectively take advantage of designs such as these as within -trial information of efficacy and safety can be shared.   \\     
+
+\section{\textcolor{DarkCyan}{Aims}}
+The main aims of this project are to investigate extensions to existing methodologies in early-phase trials with complex and innovative designs. This will involve introducing new concepts for use in trials, adapting current methodology for use in platform trials and extending certain early-phase designs. Another aim will be to explore the application and implementation of these extensions, into trials currently being conducted, in order to gauge the effectiveness of these developments. 
+
+
+\section{\textcolor{DarkCyan}{Topics and Chapters}}
+
+\subsection{\textcolor{DarkCyan}{Applications and implementation into real world trials}} 
+
+Most of the proposed topics revolve around methodological developments which can be made to improve and enhance the conduct of early phase trial designs. However, it is also important to consider how these developments can be implemented effectively and their impact on actual trials. There are two trials, which are yet to be open, in which some of this work could be put to use and evaluated.\\ 
+
+\noindent \textbf{Radiant-BC}\\
+\noindent Radiant-BC is a  multi-arm phase\RN{1}b/expansion cohort platform trial of the efficacy and safety of radiosurgery with durvalumab (immunotherapy) and systemic therapies as part of standard of care in patients with brain metastases secondary to breast cancer. \\
+
+\noindent This trial involves three groups each allowing for stratification into trial arms to the clinicians' choice of systematic therapies. The platform trial design allows for the addition of extra arms into the groups. Heterogeneity within the arms of the groups may become an issue. Statistical methodology to deal with these issues is a topic of interest. \\
+
+\noindent \textbf{ADePT-DDR}\\
+\noindent ADePT-DDR is an open-label, multi-centre, platform trial which will evaluate the safety and efficacy of different DNA Damage Repair (DDR) agents, or different immunotherapy agents and/or DDR and immunotherapy combinations, together with radiotherapy in patients with head and neck squamous cell carcinoma being treated curatively. The trial will allow for the evaluation of new DDR agents and for roll-on to a randomised phase\RN{2} /\RN{3} trial. The initial component of this trial will open with a single-arm dose-finding phase\RN{1}b /\RN{2}a trial. \\
+
+\noindent The initial component of this trial is a dose escalation design based on a two-stage modified TITE-CRM with partial ordering. As a combination of interventions are being investigated we have a scenario where dose toxicity is not necessarily monotonically increasing, which is a fundamental assumption of the dose toxicity model. Methodology has been introduced to deal with this problem \cite{Wages2013} however, this may be the first time it has been implemented into a trial. As such the conduct of this trial may be of interest. 
+
+
+\subsection{\textcolor{DarkCyan}{Literature review}} 
+
+The most recent literature review pertaining to methodologies used in early-phase trials was published in 2014. Since then new methodologies have emerged and new tools to make conducting these trials more accessible. Updating this knowledge will be useful in understanding the current number of early-phase trials utilising statistical designs and help identify if previous challenges have been addressed or if any new barriers to entry have developed. Early-phase platform trials could also be included in this review to see how many examples exist. \\ 
+
+\noindent This information could then be used to establish comprehensive guidance of available methodologies and optimal scenarios in which to use them. Simulations can be incorporated to compare operating characteristics for various scenarios to validate the guidance provided.  
+
+\subsection{\textcolor{DarkCyan}{Entropy classification}}
+Entropy, also referred to as Shanon entropy, is a term from information theory and is defined as a measure of unpredictability of information content. It is essentially a measure of uncertainty. The entropy formula for an event $X$ with $n$ possible outcomes and probabilities ($p_{1}, ..., p_{n}$) is $H(X)= H(p_{1}, ..., p_{n})=- \sum_{i=1}^{n}p_{i}\log_2p_{i}$. Entropy is maximum when all outcomes are equally likely. Any time we move away from equally likely outcomes or introduce predictability entropy goes down. \\
+
+\noindent In the context of dose-finding trials we have a number of doses which could be classified as the MTD. Entropy as a tool may be useful as a measure of uncertainty. The application of this could be applied retrospectively to a trial, or to a simulated trial, to investigate how entropy changes over its duration. As we collect more information we would expect uncertainty to decrease implying the entropy would decrease. This could be used to establish thresholds for terminating trials early if a certain level of entropy is reached. In simulations entropy could be utilised as an operating characteristic to compare uncertainty under different design specifications. It could also be used to help inform simulations for sample size decisions by calculating the change in uncertainty additional patients are likely to bring. 
+
+\subsection{\textcolor{DarkCyan}{Issues of heterogeneity}}
+Designs also exist for scenarios where there is expected patient heterogeneity, where patients can be put into groups and assessed in the same study rather than running separate trials in parallel which may be infeasible. The simplest case is when patients can be separated into two separate groups. Methodology exists to deal with this (CRM for ordered groups \cite{OQuigley2003}, two-sample CRM \cite{OQuigley1999}). Real scenarios can obviously be more complex, there may be multiple groups or continuous covariates to consider and due to sample size limitations different tools are needed to deal with this. More recently designs for partially ordered groups have been published. This is for scenarios where only some of the groups can be ordered with respect to the probability of toxicity at that dose. One method by Conaway \cite{Conaway2018} makes use of parametric models in combination with the Hwang-Peddada order-restricted estimation procedure. Another, proposed by Horton et al. \cite{Horton2019}, uses shift models. Hierarchical modelling has been suggested by Cunanan and Koopmeiners \cite{Cunanan2018, Cunanan2018a} as a way to evaluate the MTD in multiple patient populations, simulations have been conducted in both CRM \cite{Cunanan2018} and efficacy/toxicity \cite{Cunanan2018a} designs and show improvements in operating characteristics. In the context of early-phase platform trials this will be an area to explore as information can be shared across heterogeneous population groups. Implementation of these designs/methods may be complex as such it would be beneficial to see real world scenarios where these are successfully applied. Alternative methodologies or software may be developed to help improve issues of heterogeneity. 
+
+\subsection{\textcolor{DarkCyan}{Applications and packages}}
+Some methods and designs require a lot of input and are difficult to implement. Web applications allow both statisticians and clinicians a better understanding of how certain designs work and make them more accessible. These applications are generally limited in terms of making modifications to the design the app features. Packages are more robust and provide access to code in order to make modifications for complex trial designs. Due to the number of designs and modifications to those designs there are a large amount of packages available however, it makes trying to combine all of these things into one place difficult. Most web applications seem to be based on the CRM design so applications for more niche designs could be feasible.
+
+\subsection{\textcolor{DarkCyan}{Extension to the Wages and Tait design}}
+Wages and Tait \cite{Wages2015a} developed an adaptive phase\RN{1} /\RN{2} trial design which considers information on both toxicity and efficacy. The design aims to find the optimal biological dose (OBD) and assess toxicity in a similar way to the CRM to determine doses with DLTs probabilities under  the TTL. Using these subset of doses the model then selects the most efficacious of the doses, initially done with random allocation then by using estimates from the model. \\ 
+
+\noindent This design could be further extended by the inclusion of a zero dose/control dose to create a control group in order to compare efficacy outcomes. To begin the OBD is selected randomly from a subset of doses the model deems safe. At this point it should be possible to be  allocated to the control dose. Rules should be implemented to determine the probability of the control dose being selected however this would require further investigation to determine a logical answer. This will require  implementation, coding and estimation of performance. This design can also be thought of in the context of an early-phase platform trial and how it could be implemented.
+
+
+\subsection{\textcolor{DarkCyan}{Other areas of research}}
+\begin{enumerate}
+	\item Implementation of partial ordering into the ADePT-DDR trial
+		\begin{itemize}
+			\item Partial ordering methodology for scenarios where dose toxicity isn't monotonically increasing has been developed and extended to include a TITE component. However, this is perhaps the first instance of its implementation as such lessons learnt from this trial may be of value. 
+			\item Code had to be developed in order to conduct simulations and the trial itself. This may be of value to others hoping to conduct a trial using similar methodology. 
+		\end{itemize}
+	\item Optimising model specification/dose escalation/sample size
+		\begin{itemize}
+			\item Simulations are currently used as the main method of determining sample size. Model specifications are often based on clinical input, however it seems like most of this is guess work. Extensions to simulations could be investigated to see if these could be improved.
+			\item Some methods exist for calculating sample size but doesn't seem like they are widely implemented. These methods are based on CRM designs and it would be useful to extend them for other designs and consider their implementation into a real trial.    
+		\end{itemize}
+	\item Modifying trial design whilst its still open (inserting/removing dose levels)
+		\begin{itemize}
+			\item Initial guesses of the dose toxicity curve may be incorrect. Doses may be much closer/further in terms of toxicity which would motivate the removal/addition of dose levels. Could investigate the use of pre-specified criteria to establish rules of when new dose levels should be added/removed. Possibly use the dose toxicity curve to predict what the optimal dose level would be based on the target DLT rate. 
+			\item Simulations of trial designs which can alter dose levels would become more complex.
+			\item This could also be looked at for model-assisted based designs which model data around the current dose level. 
+			\item The feasibility of this could also be investigated in seamless phase \RN{1}/\RN{2} designs such as EffTox and Wages and Tait's design. 
+		\end{itemize} 
+\end{enumerate}
+
+
+
+
+
+\newpage
+
+\section{\textcolor{DarkCyan}{References}}
+\bibliography{References-Proposal}
+\bibliographystyle{unsrt}
+\end{document}

@@ -1,0 +1,114 @@
+\begin{thebibliography}{10}
+
+\bibitem{Zhou2018}
+Heng Zhou, Thomas~A. Murray, Haitao Pan, and Ying Yuan.
+\newblock {Comparative review of novel model-assisted designs for phase I
+  clinical trials}.
+\newblock {\em Statistics in Medicine}, 37(14):2208--2222, 2018.
+
+\bibitem{Love2017}
+Sharon~B. Love, Sarah Brown, Christopher~J. Weir, Chris Harbron, Christina Yap,
+  Birgit Gaschler-Markefski, James Matcham, Louise Caffrey, Christopher
+  McKevitt, Sally Clive, Charlie Craddock, James Spicer, and Victoria
+  Cornelius.
+\newblock {Embracing model-based designs for dose-finding trials}.
+\newblock {\em British Journal of Cancer}, 117(3):332--339, 2017.
+
+\bibitem{Ananthakrishnan2017}
+Revathi Ananthakrishnan, Stephanie Green, Mark Chang, Gheorghe Doros, Joseph
+  Massaro, and Michael LaValley.
+\newblock {Systematic comparison of the statistical operating characteristics
+  of various Phase I oncology designs}.
+\newblock {\em Contemporary Clinical Trials Communications}, 5:34--48, 2017.
+
+\bibitem{Rogatko2007}
+Andr{\'{e}} Rogatko, David Schoeneck, William Jonas, Mourad Tighiouart,
+  Fadlo~R. Khuri, and Alan Porter.
+\newblock {Translation of innovative designs into phase I trials}.
+\newblock {\em Journal of Clinical Oncology}, 25(31):4982--4986, 2007.
+
+\bibitem{Chiuzan2017}
+Cody Chiuzan, Jonathan Shtaynberger, Gulam~A. Manji, Jimmy~K. Duong, Gary~K.
+  Schwartz, Anastasia Ivanova, and Shing~M. Lee.
+\newblock {Dose-finding designs for trials of molecularly targeted agents and
+  immunotherapies}.
+\newblock {\em Journal of Biopharmaceutical Statistics}, 27(3):477--494, 2017.
+
+\bibitem{Wheeler2019}
+Graham~M. Wheeler, Adrian~P. Mander, Alun Bedding, Kristian Brock, Victoria
+  Cornelius, Andrew~P. Grieve, Thomas Jaki, Sharon~B. Love, Lang'O Odondi,
+  Christopher~J. Weir, Christina Yap, and Simon~J. Bond.
+\newblock {How to design a dose-finding study using the continual reassessment
+  method}.
+\newblock {\em BMC Medical Research Methodology}, 19(1):1--15, 2019.
+
+\bibitem{Cheung2000}
+Ying~Kuen Cheung and Rick Chappell.
+\newblock {Sequential Designs for Phase I Clinical Trials with Late-Onset
+  Toxicities}.
+\newblock {\em Biometrics}, 56(4):1177--1182, 2000.
+
+\bibitem{Polley2019}
+Mei-Yin~C. Polley and Ying~Kuen Cheung.
+\newblock {Early-Phase Platform Trials: A New Paradigm for Dose Finding and
+  Treatment Screening in the Era of Precision Oncology}.
+\newblock {\em JCO Precision Oncology}, (3):1--8, 2019.
+
+\bibitem{Braun2002}
+Thomas~M. Braun.
+\newblock {The bivariate continual reassessment method: Extending the CRM to
+  phase I trials of two competing outcomes}.
+\newblock {\em Controlled Clinical Trials}, 2002.
+
+\bibitem{Thall2004}
+Peter~F Thall and John~D Cook.
+\newblock {Dose-Finding Based on Efficacy – Toxicity Trade-Offs}.
+\newblock {\em Biometrics}, (September):684--693, 2004.
+
+\bibitem{Wages2013}
+Nolan~A. Wages, Mark~R. Conaway, and John O'Quigley.
+\newblock {Using the time-to-event continual reassessment method in the
+  presence of partial orders}.
+\newblock {\em Statistics in Medicine}, 32(1):131--141, 2013.
+
+\bibitem{OQuigley2003}
+John O'Quigley and Xavier Paoletti.
+\newblock {Continual reassessment method for ordered groups}.
+\newblock {\em Biometrics}, 59(2):430--440, 2003.
+
+\bibitem{OQuigley1999}
+J.~O'Quigley, L.~Z. Shen, and A.~Gamst.
+\newblock {Two-sample continual reassessment method}.
+\newblock {\em Journal of Biopharmaceutical Statistics}, 9(1):17--44, 1999.
+
+\bibitem{Conaway2018}
+Mark~R Conaway.
+\newblock {A design for phase I trials in completely or partially ordered
+  groups}.
+\newblock 36(15):2323--2332, 2018.
+
+\bibitem{Horton2019}
+Bethany~Jablonski Horton, Nolan~A. Wages, and Mark~R. Conaway.
+\newblock {Shift models for dose-finding in partially ordered groups}.
+\newblock {\em Clinical Trials}, 16(1):32--40, 2019.
+
+\bibitem{Cunanan2018}
+Kristen~M. Cunanan and Joseph~S. Koopmeiners.
+\newblock {Hierarchical models for sharing information across populations in
+  phase I dose-escalation studies}.
+\newblock {\em Statistical Methods in Medical Research}, 27(11):3447--3459,
+  2018.
+
+\bibitem{Cunanan2018a}
+Kristen~M. Cunanan and Joseph~S. Koopmeiners.
+\newblock {Efficacy/toxicity dose-finding using hierarchical modeling for
+  multiple populations}.
+\newblock {\em Contemporary Clinical Trials}, 71(June):162--172, 2018.
+
+\bibitem{Wages2015a}
+Nolan~A. Wages and Christopher Tait.
+\newblock {Seamless Phase I/II Adaptive Design for Oncology Trials of
+  Molecularly Targeted Agents}.
+\newblock {\em Journal of Biopharmaceutical Statistics}, 25(5):903--920, 2015.
+
+\end{thebibliography}
