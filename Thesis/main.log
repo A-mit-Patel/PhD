@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.21)  21 JUN 2020 19:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7440 64-bit) (preloaded format=pdflatex 2020.6.21)  14 JUL 2020 20:56
 entering extended mode
 **./main.tex
 (main.tex
@@ -892,55 +892,29 @@ File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 
 
 {C:/Users/Amit Dell i5/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-[2
-
-]
---------------------
- Declaration of Authorship
---------------------
-LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 1
-52.
-("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ts1ppl.fd"
-File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-)
-Underfull \hbox (badness 10000) in paragraph at lines 157--158
-
- []
-
-1: section
-[3] [4
-
-] [5] [6
-
-]
+[2]
 --------------------
  Abstract
 --------------------
 1: section
-[7] [8
+[3
+
+] [4
 
 ]
 --------------------
  Acknowledgements
 --------------------
 1: section
-[9] [10
+[5] [6
 
-] (main.toc
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-8.
- ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 18.
-)
+] (main.toc)
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
 
 1: section
-[11] [12
+[7] [8
 
 ] (main.lof)
 \tf@lof=\write6
@@ -948,7 +922,7 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
 
 
 1: section
-[13] [14
+[9] [10
 
 ] (main.lot)
 \tf@lot=\write7
@@ -956,26 +930,7 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
 
 
 1: section
-[15] [16
-
-]
-1: section
-[17] [18
-
-]
-1: section
-[19] [20
-
-]
-1: section
-[21] [22
-
-]
---------------------
- Dedicatory
---------------------
-1: section
-[23] [24
+[11] [12
 
 ]
 1: section
@@ -983,98 +938,73 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
 
 (Chapters/Chapter1.tex
 Chapter 1.
+LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 9
+.
+("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ts1ppl.fd"
+File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
+)
 1: section
 [1
 
 
-]
-Overfull \hbox (12.15245pt too wide) in paragraph at lines 72--74
-\T1/ppl/m/n/10.95 site, here: [][]$\T1/cmtt/m/n/10.95 http : / / www . ecs . so
-ton . ac . uk / ~srg / softwaretools / document / templates/$[][] 
- []
+])
 
-[2] [3]
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 136.
- [4] [5]
-Overfull \hbox (8.37132pt too wide) in paragraph at lines 180--181
-\T1/ppl/m/n/10.95 sided print-ing is as sim-ple as un-com-ment-ing the \T1/cmtt
-/m/it/10.95 oneside \T1/ppl/m/n/10.95 op-tion of the \T1/cmtt/m/n/10.95 documen
-tclass
- []
-
-[6] [7]
-<Figures/Electron.pdf, id=343, 398.3386pt x 284.52756pt>
-File: Figures/Electron.pdf Graphic file (type pdf)
-<use Figures/Electron.pdf>
-Package pdftex.def Info: Figures/Electron.pdf  used on input line 262.
-(pdftex.def)             Requested size: 398.33762pt x 284.52686pt.
- [8 <./Figures/Electron.pdf>]
-Overfull \hbox (0.90797pt too wide) in paragraph at lines 308--309
-\T1/ppl/m/n/10.95 au-to-mat-i-cally builds a ta-ble of Con-tents by look-ing at
- all the [][]\T1/cmtt/m/n/10.95 \chapter{}[]\T1/ppl/m/n/10.95 , [][]\T1/cmtt/m/
-n/10.95 \section{}
- []
+Package scrlayer-scrpage Warning: \headheight to low.
+(scrlayer-scrpage)                At least 27.2pt needed,
+(scrlayer-scrpage)                but only 18.85364pt found.
+(scrlayer-scrpage)                I'll enlarge \headheight, for further
+(scrlayer-scrpage)                processing, but you should do this yourself,
+(scrlayer-scrpage)                e.g., setting geometry's option
+(scrlayer-scrpage)                `head=27.2pt'.
+(scrlayer-scrpage)                I'll also decrease \topmargin on input line 2
+64.
 
 
-Overfull \hbox (0.45015pt too wide) in paragraph at lines 310--311
-[]\T1/ppl/m/n/10.95 The Ta-ble of Con-tents should only list the sec-tions to t
-hree (3) lev-els. A [][]\T1/cmtt/m/n/10.95 chapter{}
- []
+Overfull \vbox (8.34636pt too high) has occurred while \output is active []
 
-[9]) [10]
+
+[2]
 \openout2 = `Appendices/AppendixA.aux'.
 
  (Appendices/AppendixA.tex
 Appendix A.
 )
 1: section
-[11
+[3
 
-
-
-] [12
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 291.
 
-1: section
-[13]
+LaTeX Warning: Empty bibliography on input line 287.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 291.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 291.
- (main.aux (Chapters/Chapter1.aux) (Appendices/AppendixA.aux))
+(main.aux (Chapters/Chapter1.aux) (Appendices/AppendixA.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 291.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 291.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: F85D15E407410262D6B9B521A9EE5EA4;4910.
+(rerunfilecheck)             Checksum: 3D4AAB220C784DB5A2A75E2AB9726EAD;1461.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26916 strings out of 480763
- 554794 string characters out of 2904036
- 1010119 words of memory out of 3000000
- 42487 multiletter control sequences out of 15000+200000
- 604291 words of font info for 156 fonts, out of 3000000 for 9000
+ 26496 strings out of 480763
+ 547448 string characters out of 2904036
+ 1006523 words of memory out of 3000000
+ 42151 multiletter control sequences out of 15000+200000
+ 573356 words of font info for 87 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 61i,21n,87p,1115b,2015s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\Amit Dell i5\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/
-dpi600\ectt1000.pk> <C:\Users\Amit Dell i5\AppData\Local\MiKTeX\2.9\fonts/pk/lj
-four/jknappen/ec/dpi600\ecit1095.pk> <C:\Users\Amit Dell i5\AppData\Local\MiKTe
-X\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ecst1095.pk> <C:\Users\Amit Dell i5\Ap
-pData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1440.pk>{C:/Progr
-am Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc} <C:\Users\Amit Dell i5\AppData
-\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1095.pk><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fo
-nts/type1/public/mathpazo/fplmri.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/u
-rw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/up
-lr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (37 pages, 253319 bytes).
+ 54i,19n,77p,862b,1956s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
+KTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/pal
+atino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.
+pfb>
+Output written on main.pdf (15 pages, 94447 bytes).
 PDF statistics:
- 641 PDF objects out of 1000 (max. 8388607)
- 85 named destinations out of 1000 (max. 500000)
- 246 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 149 PDF objects out of 1000 (max. 8388607)
+ 28 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 
