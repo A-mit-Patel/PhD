@@ -16,5 +16,628 @@
   {}
 \endgroup
 
-\datalist[entry]{nyt/global//global/global}\enddatalist
+\datalist[entry]{none/global//global/global}
+  \entry{stransky_mutational_2011}{article}{}
+    \name{author}{39}{}{%
+      {{hash=SN}{%
+         family={Stransky},
+         familyi={S\bibinitperiod},
+         given={Nicolas},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=EAM}{%
+         family={Egloff},
+         familyi={E\bibinitperiod},
+         given={Ann\bibnamedelima Marie},
+         giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=TAD}{%
+         family={Tward},
+         familyi={T\bibinitperiod},
+         given={Aaron\bibnamedelima D.},
+         giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=KAD}{%
+         family={Kostic},
+         familyi={K\bibinitperiod},
+         given={Aleksandar\bibnamedelima D.},
+         giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=CK}{%
+         family={Cibulskis},
+         familyi={C\bibinitperiod},
+         given={Kristian},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Sivachenko},
+         familyi={S\bibinitperiod},
+         given={Andrey},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KGV}{%
+         family={Kryukov},
+         familyi={K\bibinitperiod},
+         given={Gregory\bibnamedelima V.},
+         giveni={G\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=LM}{%
+         family={Lawrence},
+         familyi={L\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Sougnez},
+         familyi={S\bibinitperiod},
+         given={Carrie},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=MA}{%
+         family={{McKenna}},
+         familyi={M\bibinitperiod},
+         given={Aaron},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SE}{%
+         family={Shefler},
+         familyi={S\bibinitperiod},
+         given={Erica},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=RAH}{%
+         family={Ramos},
+         familyi={R\bibinitperiod},
+         given={Alex\bibnamedelima H.},
+         giveni={A\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Stojanov},
+         familyi={S\bibinitperiod},
+         given={Petar},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=CSL}{%
+         family={Carter},
+         familyi={C\bibinitperiod},
+         given={Scott\bibnamedelima L.},
+         giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=VD}{%
+         family={Voet},
+         familyi={V\bibinitperiod},
+         given={Douglas},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=CML}{%
+         family={Cortés},
+         familyi={C\bibinitperiod},
+         given={Maria\bibnamedelima L},
+         giveni={M\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=AD}{%
+         family={Auclair},
+         familyi={A\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BMF}{%
+         family={Berger},
+         familyi={B\bibinitperiod},
+         given={Michael\bibnamedelima F.},
+         giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Saksena},
+         familyi={S\bibinitperiod},
+         given={Gordon},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=GC}{%
+         family={Guiducci},
+         familyi={G\bibinitperiod},
+         given={Candace},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=OR}{%
+         family={Onofrio},
+         familyi={O\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Parkin},
+         familyi={P\bibinitperiod},
+         given={Melissa},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=RM}{%
+         family={Romkes},
+         familyi={R\bibinitperiod},
+         given={Marjorie},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=WJL}{%
+         family={Weissfeld},
+         familyi={W\bibinitperiod},
+         given={Joel\bibnamedelima L.},
+         giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=SRR}{%
+         family={Seethala},
+         familyi={S\bibinitperiod},
+         given={Raja\bibnamedelima R.},
+         giveni={R\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=WL}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Lin},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=REC}{%
+         family={Rangel-Escareño},
+         familyi={R\bibinithyphendelim E\bibinitperiod},
+         given={Claudia},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=FLJC}{%
+         family={Fernandez-Lopez},
+         familyi={F\bibinithyphendelim L\bibinitperiod},
+         given={Juan\bibnamedelima Carlos},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+      {{hash=HMA}{%
+         family={Hidalgo-Miranda},
+         familyi={H\bibinithyphendelim M\bibinitperiod},
+         given={Alfredo},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MZJ}{%
+         family={Melendez-Zajgla},
+         familyi={M\bibinithyphendelim Z\bibinitperiod},
+         given={Jorge},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=WW}{%
+         family={Winckler},
+         familyi={W\bibinitperiod},
+         given={Wendy},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=AK}{%
+         family={Ardlie},
+         familyi={A\bibinitperiod},
+         given={Kristin},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=GSB}{%
+         family={Gabriel},
+         familyi={G\bibinitperiod},
+         given={Stacey\bibnamedelima B.},
+         giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Meyerson},
+         familyi={M\bibinitperiod},
+         given={Matthew},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LES}{%
+         family={Lander},
+         familyi={L\bibinitperiod},
+         given={Eric\bibnamedelima S.},
+         giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=GG}{%
+         family={Getz},
+         familyi={G\bibinitperiod},
+         given={Gad},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=GTR}{%
+         family={Golub},
+         familyi={G\bibinitperiod},
+         given={Todd\bibnamedelima R.},
+         giveni={T\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=GLA}{%
+         family={Garraway},
+         familyi={G\bibinitperiod},
+         given={Levi\bibnamedelima A.},
+         giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=GJR}{%
+         family={Grandis},
+         familyi={G\bibinitperiod},
+         given={Jennifer\bibnamedelima R.},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SNEAMTAD+1}
+  \strng{fullhash}{SNEAMTADKADCKSAKGVLMSCMASERAHSPCSLVDCMLADBMFSGGCORPMRMWJLSRRWLRECFLJCHMAMZJWWAKGSBMMLESGGGTRGLAGJR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Head and neck squamous cell carcinoma ({HNSCC}) is a common, morbid, and
+  frequently lethal malignancy. To uncover its mutational spectrum, we analyzed
+  whole-exome sequencing data from 74 tumor-normal pairs. The majority
+  exhibited a mutational profile consistent with tobacco exposure; human
+  papilloma virus was detectable by sequencing of {DNA} from infected tumors.
+  In addition to identifying previously known {HNSCC} genes ({TP}53, {CDKN}2A,
+  {PTEN}, {PIK}3CA, and {HRAS}), the analysis revealed many genes not
+  previously implicated in this malignancy. At least 30\% of cases harbored
+  mutations in genes that regulate squamous differentiation (e.g., {NOTCH}1,
+  {IRF}6, and {TP}63), implicating its dysregulation as a major driver of
+  {HNSCC} carcinogenesis. More generally, the results indicate the ability of
+  large-scale sequencing to reveal fundamental tumorigenic mechanisms.%
+    }
+    \verb{doi}
+    \verb 10.1126/science.1208130
+    \endverb
+    \field{issn}{0036-8075}
+    \field{number}{6046}
+    \field{pages}{1157\bibrangedash 1160}
+    \field{shortjournal}{Science}
+    \field{title}{The Mutational Landscape of Head and Neck Squamous Cell
+  Carcinoma}
+    \verb{url}
+    \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3415217/
+    \endverb
+    \field{volume}{333}
+    \verb{file}
+    \verb PubMed Central Full Text PDF:C\:\\Users\\PatelAL\\Zotero\\storage\\28
+    \verb L93KLM\\Stransky et al. - 2011 - The Mutational Landscape of Head and
+    \verb  Neck Squamous.pdf:application/pdf
+    \endverb
+    \field{journaltitle}{Science (New York, N.Y.)}
+    \field{day}{26}
+    \field{month}{08}
+    \field{year}{2011}
+    \field{urlday}{20}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{cancer_research_uk_head_2017}{online}{}
+    \name{author}{1}{}{%
+      {{hash=UCR}{%
+         family={{UK}},
+         familyi={U\bibinitperiod},
+         given={Cancer\bibnamedelima Research},
+         giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{UCR1}
+    \strng{fullhash}{UCR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    The latest Head and neck cancers statistics for the {UK} for Health
+  Professionals. See data for incidence, mortality, survival, risk and more.%
+    }
+    \field{note}{Library Catalog: www.cancerresearchuk.org}
+    \field{titleaddon}{Cancer Research {UK}}
+    \field{title}{Head and neck cancers statistics}
+    \verb{url}
+    \verb https://www.cancerresearchuk.org/health-professional/cancer-statistic
+    \verb s/statistics-by-cancer-type/head-and-neck-cancers
+    \endverb
+    \field{langid}{english}
+    \verb{file}
+    \verb Snapshot:C\:\\Users\\PatelAL\\Zotero\\storage\\JPKNM8NW\\head-and-nec
+    \verb k-cancers.html:text/html
+    \endverb
+    \field{day}{08}
+    \field{month}{02}
+    \field{year}{2017}
+    \field{urlday}{21}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{round_radiotherapy_2013}{article}{}
+    \name{author}{7}{}{%
+      {{hash=RCE}{%
+         family={Round},
+         familyi={R\bibinitperiod},
+         given={C.\bibnamedelima E.},
+         giveni={C\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=WMV}{%
+         family={Williams},
+         familyi={W\bibinitperiod},
+         given={M.\bibnamedelima V.},
+         giveni={M\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+      {{hash=MT}{%
+         family={Mee},
+         familyi={M\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=KNF}{%
+         family={Kirkby},
+         familyi={K\bibinitperiod},
+         given={N.\bibnamedelima F.},
+         giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=CT}{%
+         family={Cooper},
+         familyi={C\bibinitperiod},
+         given={T.},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=HP}{%
+         family={Hoskin},
+         familyi={H\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=JR}{%
+         family={Jena},
+         familyi={J\bibinitperiod},
+         given={R.},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \keyw{Access, capacity, demand, fractionation, modelling, radiotherapy}
+    \strng{namehash}{RCEWMVMT+1}
+    \strng{fullhash}{RCEWMVMTKNFCTHPJR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Aims This paper compares the predictions of radiotherapy demand for England
+  from the Malthus model with those from the earlier National Radiotherapy
+  Advisory Group ({NRAG}) model, from the international literature and also
+  with observed radiotherapy usage in England as a whole as recorded in the
+  English radiotherapy dataset ({RTDS}). Materials and methods We reviewed the
+  evidence base for radiotherapy for each type and stage of cancer using
+  national and international guidelines, meta-analyses, systematic reviews and
+  key clinical trials. Twenty-two decision trees were constructed and
+  radiotherapy demand was calculated using English cancer incidence data for
+  2007, 2008 and 2009, accurate to the Primary Care Trust ({PCT}) level
+  (population 91 500–1 282 384). The stage at presentation was obtained
+  from English cancer registry data. In predictive mode, the model can take
+  account of changes in cancer incidence as the population grows and ages.
+  Results The Malthus model indicates reduced indications for radiotherapy,
+  principally for lung cancer and rarer tumours. Our estimate of the proportion
+  of patients who should receive radiotherapy at some stage of their illness is
+  40.6\%. This is lower than previous estimates of about 50\%. Nevertheless,
+  the overall estimate of demand in terms of attendances is similar for the
+  {NRAG} and Malthus models. The latter models that 48 827 attendances should
+  have been delivered per million population in 2011. National data from {RTDS}
+  show 32 071 attendances per million in 2011. A 50\% increase in activity
+  would be required to match estimated demand. This underprovision extends
+  across all cancers and represents reduced access and the use of dose
+  fractionation at odds with international norms of evidence-based practice. By
+  2016, demand is predicted to grow to about 55 206 attendances per million
+  and by 2020 to 60 057. Discussion Services have increased their activity by
+  14\% between 2006 and 2011, but estimated demand has increased by 11\%.
+  Access remains low and English radiotherapy dose fractionation still does not
+  comply with international evidence-based practice.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.clon.2013.05.005
+    \endverb
+    \field{issn}{0936-6555}
+    \field{number}{9}
+    \field{pages}{522\bibrangedash 530}
+    \field{shortjournal}{Clinical Oncology}
+    \field{title}{Radiotherapy Demand and Activity in England 2006–2020}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/S0936655513002343
+    \endverb
+    \field{volume}{25}
+    \field{langid}{english}
+    \verb{file}
+    \verb ScienceDirect Snapshot:C\:\\Users\\PatelAL\\Zotero\\storage\\WZBWGA9P
+    \verb \\S0936655513002343.html:text/html;ScienceDirect Full Text PDF:C\:\\U
+    \verb sers\\PatelAL\\Zotero\\storage\\EJJXI7S9\\Round et al. - 2013 - Radio
+    \verb therapy Demand and Activity in England 2006–2.pdf:application/pdf
+    \endverb
+    \field{journaltitle}{Clinical Oncology}
+    \field{day}{01}
+    \field{month}{09}
+    \field{year}{2013}
+    \field{urlday}{21}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{cognetti_head_2008}{article}{}
+    \name{author}{3}{}{%
+      {{hash=CDM}{%
+         family={Cognetti},
+         familyi={C\bibinitperiod},
+         given={David\bibnamedelima M.},
+         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=WRS}{%
+         family={Weber},
+         familyi={W\bibinitperiod},
+         given={Randal\bibnamedelima S.},
+         giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=LSY}{%
+         family={Lai},
+         familyi={L\bibinitperiod},
+         given={Stephen\bibnamedelima Y.},
+         giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CDMWRSLSY1}
+    \strng{fullhash}{CDMWRSLSY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    Since the inception of this journal in 1948, the understanding of etiologic
+  factors that contribute to and the treatment of head and neck cancer has
+  evolved dramatically. Advances in surgery, radiation therapy, and
+  chemotherapy have improved locoregional control, survival, and quality of
+  life. The outcomes of these treatment modalities have shifted the focus of
+  curative efforts from radical ablation to preservation and restoration of
+  function. This evolution has been documented in the pages of Cancer for the
+  past 6 decades. This review focuses on the evolution of treatment approaches
+  for head and neck cancer and future directions while recognizing the historic
+  contributions recorded within this journal.%
+    }
+    \verb{doi}
+    \verb 10.1002/cncr.23654
+    \endverb
+    \field{issn}{0008-543X}
+    \field{number}{7}
+    \field{pages}{1911\bibrangedash 1932}
+    \field{shortjournal}{Cancer}
+    \field{shorttitle}{Head and Neck Cancer}
+    \field{title}{Head and Neck Cancer: An Evolving Treatment Paradigm}
+    \verb{url}
+    \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2751600/
+    \endverb
+    \field{volume}{113}
+    \verb{file}
+    \verb PubMed Central Full Text PDF:C\:\\Users\\PatelAL\\Zotero\\storage\\4C
+    \verb QHWE9S\\Cognetti et al. - 2008 - Head and Neck Cancer An Evolving Tre
+    \verb atment Paradi.pdf:application/pdf
+    \endverb
+    \field{journaltitle}{Cancer}
+    \field{day}{01}
+    \field{month}{10}
+    \field{year}{2008}
+    \field{urlday}{21}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{pignon_chemotherapy_2000}{article}{}
+    \name{author}{4}{}{%
+      {{hash=PJ}{%
+         family={Pignon},
+         familyi={P\bibinitperiod},
+         given={{JP}},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BJ}{%
+         family={Bourhis},
+         familyi={B\bibinitperiod},
+         given={J},
+         giveni={J},
+      }}%
+      {{hash=DC}{%
+         family={Domenge},
+         familyi={D\bibinitperiod},
+         given={C},
+         giveni={C},
+      }}%
+      {{hash=DL}{%
+         family={Designé},
+         familyi={D\bibinitperiod},
+         given={L},
+         giveni={L},
+      }}%
+    }
+    \strng{namehash}{PJBJDC+1}
+    \strng{fullhash}{PJBJDCDL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    Background Despite more than 70 randomised trials, the effect of
+  chemotherapy on non-metastatic head and neck squamous-cell carcinoma remains
+  uncertain. We did three meta-analyses of the impact of survival on
+  chemotherapy added to locoregional treatment. Methods We updated data on all
+  patients in randomised trials between 1965 and 1993. We included patients
+  with carcinoma of the oropharynx, oral cavity, larynx, or hypopharynx.
+  Findings The main meta-analysis of 63 trials (10 741 patients) of
+  locoregional treatment with or without chemotherapy yielded a pooled hazard
+  ratio of death of 0·90 (95\% {CI} 0·85–0·94, p{\textless}0·0001),
+  corresponding to an absolute survival benefit of 4\% at 2 and 5 years in
+  favour of chemotherapy. There was no significant benefit associated with
+  adjuvant or neoadjuvant chemotherapy. Chemotherapy given concomitantly to
+  radiotherapy gave significant benefits, but heterogeneity of the results
+  prohibits firm conclusions. Meta-analysis of six trials (861 patients)
+  comparing neoadjuvant chemotherapy plus radiotherapy with concomitant or
+  alternating radiochemotherapy yielded a hazard ratio of 0·91 (0·79–1·06)
+  in favour of concomitant or alternating radiochemotherapy. Three
+  larynx-preservation trails (602 patients) compared radical surgery plus
+  radiotherapy with neoadjuvant chemotherapy plus radiotherapy in responders or
+  radical surgery and radiotherapy in non responders. The hazard ratio of death
+  in the chemotherapy arm as compared with the control arm was 1·19
+  (0·97–1·46). Interpretation Because the main meta-analysis showed only a
+  small significant survival benefit in favour of chemotherapy, the routine use
+  of chemotherapy is debatable. For larynx preservation, the non-significant
+  negative effect of chemotherapy in the organ-preservation strategy indicates
+  that this procedure must remain investigational.%
+    }
+    \verb{doi}
+    \verb 10.1016/S0140-6736(00)90011-4
+    \endverb
+    \field{issn}{0140-6736}
+    \field{number}{9208}
+    \field{pages}{949\bibrangedash 955}
+    \field{shortjournal}{The Lancet}
+    \field{shorttitle}{Chemotherapy added to locoregional treatment for head
+  and neck squamous-cell carcinoma}
+    \field{title}{Chemotherapy added to locoregional treatment for head and
+  neck squamous-cell carcinoma: three meta-analyses of updated individual data}
+    \verb{url}
+    \verb http://www.sciencedirect.com/science/article/pii/S0140673600900114
+    \endverb
+    \field{volume}{355}
+    \field{langid}{english}
+    \verb{file}
+    \verb ScienceDirect Snapshot:C\:\\Users\\PatelAL\\Zotero\\storage\\XDNVEX63
+    \verb \\S0140673600900114.html:text/html;ScienceDirect Full Text PDF:C\:\\U
+    \verb sers\\PatelAL\\Zotero\\storage\\V5HS8A7Q\\Pignon et al. - 2000 - Chem
+    \verb otherapy added to locoregional treatment for h.pdf:application/pdf
+    \endverb
+    \field{journaltitle}{The Lancet}
+    \field{day}{18}
+    \field{month}{03}
+    \field{year}{2000}
+    \field{urlday}{20}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{chalmers_science_2016}{article}{}
+    \name{author}{1}{}{%
+      {{hash=CA}{%
+         family={Chalmers},
+         familyi={C\bibinitperiod},
+         given={A.J.},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CA1}
+    \strng{fullhash}{CA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \verb{doi}
+    \verb 10.1016/j.clon.2016.01.035
+    \endverb
+    \field{issn}{09366555}
+    \field{number}{5}
+    \field{pages}{279\bibrangedash 282}
+    \field{shortjournal}{Clinical Oncology}
+    \field{shorttitle}{Science in Focus}
+    \field{title}{Science in Focus: Combining Radiotherapy with Inhibitors of
+  the {DNA} Damage Response}
+    \verb{url}
+    \verb https://linkinghub.elsevier.com/retrieve/pii/S0936655516000649
+    \endverb
+    \field{volume}{28}
+    \field{langid}{english}
+    \verb{file}
+    \verb Chalmers - 2016 - Science in Focus Combining Radiotherapy with Inhi.p
+    \verb df:C\:\\Users\\PatelAL\\Zotero\\storage\\FLE7RAW4\\Chalmers - 2016 -
+    \verb Science in Focus Combining Radiotherapy with Inhi.pdf:application/pdf
+    \endverb
+    \field{journaltitle}{Clinical Oncology}
+    \field{month}{05}
+    \field{year}{2016}
+    \field{urlday}{21}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
+  \endentry
+\enddatalist
 \endinput
