@@ -639,5 +639,193 @@
     \field{urlmonth}{07}
     \field{urlyear}{2020}
   \endentry
+
+  \entry{mei_ataxia_2019}{article}{}
+    \name{author}{4}{}{%
+      {{hash=ML}{%
+         family={Mei},
+         familyi={M\bibinitperiod},
+         given={Lin},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Junran},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=HK}{%
+         family={He},
+         familyi={H\bibinitperiod},
+         given={Kai},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=ZJ}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Jingsong},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MLZJHK+1}
+    \strng{fullhash}{MLZJHKZJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    The ataxia telangiectasia and Rad3-related ({ATR}) checkpoint kinase 1
+  ({CHK}1) pathway plays an essential role in suppressing replication stress
+  from {DNA} damage and oncogene activation.%
+    }
+    \verb{doi}
+    \verb 10.1186/s13045-019-0733-6
+    \endverb
+    \field{issn}{1756-8722}
+    \field{number}{1}
+    \field{pages}{43}
+    \field{shortjournal}{Journal of Hematology \& Oncology}
+    \field{shorttitle}{Ataxia telangiectasia and Rad3-related inhibitors and
+  cancer therapy}
+    \field{title}{Ataxia telangiectasia and Rad3-related inhibitors and cancer
+  therapy: where we stand}
+    \verb{url}
+    \verb https://doi.org/10.1186/s13045-019-0733-6
+    \endverb
+    \field{volume}{12}
+    \verb{file}
+    \verb Snapshot:C\:\\Users\\PatelAL\\Zotero\\storage\\KLQ7AZUP\\s13045-019-0
+    \verb 733-6.html:text/html;Full Text:C\:\\Users\\PatelAL\\Zotero\\storage\\
+    \verb EAXGWNSQ\\Mei et al. - 2019 - Ataxia telangiectasia and Rad3-related
+    \verb inhibitors .pdf:application/pdf
+    \endverb
+    \field{journaltitle}{Journal of Hematology \& Oncology}
+    \field{day}{24}
+    \field{month}{04}
+    \field{year}{2019}
+    \field{urlday}{22}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{le_tourneau_dose_2009}{article}{}
+    \name{author}{3}{}{%
+      {{hash=LTC}{%
+         family={Le\bibnamedelima Tourneau},
+         familyi={L\bibinitperiod\bibinitdelim T\bibinitperiod},
+         given={Christophe},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=LJJ}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={J.\bibnamedelima Jack},
+         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=SLL}{%
+         family={Siu},
+         familyi={S\bibinitperiod},
+         given={Lillian\bibnamedelima L.},
+         giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LTCLJJSLL1}
+    \strng{fullhash}{LTCLJJSLL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Abstract. Phase I clinical trials are an essential step in the development
+  of anticancer drugs. The main goal of these studies is to establish the
+  recommended%
+    }
+    \verb{doi}
+    \verb 10.1093/jnci/djp079
+    \endverb
+    \field{issn}{0027-8874}
+    \field{note}{Publisher: Oxford Academic}
+    \field{number}{10}
+    \field{pages}{708\bibrangedash 720}
+    \field{shortjournal}{J Natl Cancer Inst}
+    \field{title}{Dose Escalation Methods in Phase I Cancer Clinical Trials}
+    \verb{url}
+    \verb https://academic.oup.com/jnci/article/101/10/708/969691
+    \endverb
+    \field{volume}{101}
+    \field{langid}{english}
+    \verb{file}
+    \verb Full Text PDF:C\:\\Users\\PatelAL\\Zotero\\storage\\39VNRPX9\\Le Tour
+    \verb neau et al. - 2009 - Dose Escalation Methods in Phase I Cancer Clinic
+    \verb al.pdf:application/pdf;Snapshot:C\:\\Users\\PatelAL\\Zotero\\storage\
+    \verb \EYUC2KFQ\\969691.html:text/html
+    \endverb
+    \field{journaltitle}{{JNCI}: Journal of the National Cancer Institute}
+    \field{day}{20}
+    \field{month}{05}
+    \field{year}{2009}
+    \field{urlday}{22}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{oquigley_continual_1990}{article}{}
+    \name{author}{3}{}{%
+      {{hash=OJ}{%
+         family={O'Quigley},
+         familyi={O\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Pepe},
+         familyi={P\bibinitperiod},
+         given={Margaret},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=FL}{%
+         family={Fisher},
+         familyi={F\bibinitperiod},
+         given={Lloyd},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{OJPMFL1}
+    \strng{fullhash}{OJPMFL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    This paper looks at a new approach to the design and analysis of Phase 1
+  clinical trials in cancer. The basic idea and motivation behind the approach
+  stem from an attempt to reconcile the needs of dose-finding experimentation
+  with the ethical demands of established medical practice. It is argued that
+  for these trials the particular shape of the dose toxicity curve is of little
+  interest. Attention focuses rather on identifying a dose with a given
+  targeted toxicity level and on concentrating experimentation at that which
+  all current available evidence indicates to be the best estimate of this
+  level. Such an approach not only makes an explicit attempt to meet ethical
+  requirements but also enables the use of models whose only requirements are
+  that locally (i.e., around the dose corresponding to the targeted toxicity
+  level) they reasonably well approximate the true probability of toxic
+  response. Although a large number of models could be contemplated, we look at
+  a particularly simple one. Extensive simulations show the model to have real
+  promise.%
+    }
+    \verb{doi}
+    \verb 10.2307/2531628
+    \endverb
+    \field{issn}{0006-341X}
+    \field{note}{Publisher: [Wiley, International Biometric Society]}
+    \field{number}{1}
+    \field{pages}{33\bibrangedash 48}
+    \field{shorttitle}{Continual Reassessment Method}
+    \field{title}{Continual Reassessment Method: A Practical Design for Phase 1
+  Clinical Trials in Cancer}
+    \verb{url}
+    \verb https://www.jstor.org/stable/2531628
+    \endverb
+    \field{volume}{46}
+    \field{journaltitle}{Biometrics}
+    \field{year}{1990}
+    \field{urlday}{22}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
+  \endentry
 \enddatalist
 \endinput
