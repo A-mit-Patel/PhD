@@ -2,8 +2,11 @@
 \babel@toc {english}{}
 \contentsline {chapter}{Abstract}{iii}{section*.1}% 
 \contentsline {chapter}{Acknowledgements}{v}{section*.2}% 
-\contentsline {chapter}{\numberline {1}Implementing the PO-TITE-CRM trial design into ADePT-DDR}{1}{chapter.6}% 
-\contentsline {section}{\numberline {1.1}Draft Structure}{1}{section.7}% 
-\contentsline {section}{\numberline {1.2}Introduction}{2}{section.8}% 
-\contentsline {chapter}{\numberline {A}Appendix Title Here}{5}{appendix.9}% 
-\contentsline {chapter}{Bibliography}{7}{appendix*.10}% 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.6}% 
+\contentsline {chapter}{\numberline {2}Implementing the PO-TITE-CRM trial design into ADePT-DDR}{3}{chapter.7}% 
+\contentsline {section}{\numberline {2.1}Draft Structure}{3}{section.8}% 
+\contentsline {section}{\numberline {2.2}Introduction}{4}{section.9}% 
+\contentsline {section}{\numberline {2.3}The PO-TITE-CRM Design}{6}{section.10}% 
+\contentsline {section}{\numberline {2.4}PO-TITE-CRM in ADePT-DDR}{6}{section.11}% 
+\contentsline {chapter}{\numberline {A}Appendix Title Here}{7}{appendix.12}% 
+\contentsline {chapter}{Bibliography}{9}{appendix*.13}% 

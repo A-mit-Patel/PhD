@@ -1,0 +1,58 @@
+% Chapter Template
+
+\chapter{Implementing the PO-TITE-CRM trial design into ADePT-DDR} % Main chapter title
+
+\label{Chapter2} % For referencing this chapter elsewhere, use \ref{Chapter2}
+
+\section{Draft Structure}
+\begin{itemize}
+	\item Introduction 
+		\begin{itemize}
+			\item Methodological issues which arise due to investigating combination of drugs/varying parameters (new concept by Piers)
+			\item Necessity of time-to-event components for DLTs which may occur later 
+			\item Other possible methodologies in this area which may be of use to solve this problem
+			\item Mini literature search will do a citation search for both methodology papers (potentially use a table/figure to summarise) 
+			\item Detail whats to come in the chapter
+		\end{itemize}
+	\item The PO-TITE-CRM Design
+	\item PO-TITE-CRM in ADePT-DDR 
+	\item Modifications to the specification to improve operating characteristics 
+	
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Introduction}
+
+Worldwide there are approximately 600,000 new cases of Head and Neck Squamous Cell Carcinoma (HNSCC) each year \cite{stransky_mutational_2011}. Of which, 12,000 occur in the UK with the most common forms of treatment being surgery, radiotherapy and/or chemotherapy \cite{cancer_research_uk_head_2017}. Radiotherapy is essential for the treatment of cancer, it has been estimated that more than 40\% of patients will receive radiotherapy at some point in their treatment \cite{round_radiotherapy_2013}. However, despite recent advancements in radiation techniques and the use of of concomitant chemo radiotherapy, patients with solid tumours such as head and neck cancer have suboptimal cure rates \cite{cancer_research_uk_head_2017,cognetti_head_2008}. For those with advance HNSCC primary radiotherapy with concurrent chemotherapy is often offered but, it has not been shown to improve survival in patients aged over 70 compared to radiotherapy alone \cite{pignon_chemotherapy_2000}. Therefore, any strategy to improve the efficacy of radiotherapy without increasing toxicity to normal tissue would have a significant impact for patients. DNA damage repair (DDR) inhibition is a potential technique which could be utilised as it potentiates the therapeutic effects of ionising radiation in cancer cells without a substantial increase in acute and late toxicity. Combining radiotherapy with DDR inhibition could improve clinical outcomes for these patients \cite{chalmers_science_2016}.  
+
+The ADePT-DDR trial is a platform trial which aims to evaluate the safety and efficacy of different DDR agents, or different immunotherapy agents and/or DDR and immunotherapy combinations, together with radiotherapy in patients with HNSCC. The initial component of this trial is a single arm dose-finding phase \RN{1}b/\RN{2}a trial investigating the Ataxia Telangiectasis and Rad3 Related (ATR) inhibitor AZD6738 in combination with radiotherapy. ATR inhibitors block DNA repair and AZD6738 has been shown to effectively kill cancer cells in preclinical models \cite{mei_ataxia_2019}. 
+
+Traditionally dose-finding trials aim to determine the maximum tolerated dose (MTD) of a treatment based on the cytotoxic assumption that the most toxic dose is the most efficacious. Rule-based or 'up and down' designs achieve this by escalating and de-escalating dose dependent on the observation of severe toxicity due to the drug,  commonly referred to as a dose limiting toxicity (DLT). In the case of the 3+3 design escalation continues till at least two patients in a cohort of three or six experience a DLT. More explicitly, the MTD is the dose at which $\geq$33\% of patients experience a DLT \cite{le_tourneau_dose_2009}. Model based designs such as the continual reassessment method (CRM) \cite{oquigley_continual_1990} work on a slightly different principle which assumes that the probability of toxicity monotonically increases with dose. One key difference with the CRM is that it iteratively changes dose, seeking some acceptable target probability of toxicity also referred to as the MTD. 
+
+Due to the historical use of rule-based designs the majority of terminology used to describe them, and the ambiguity they raise, have been inherited by modern designs such as the CRM. The MTD in the context of a CRM is not the 'maximum' dose patients could tolerate but rather a dose which there would be an acceptable target probability of a DLT occurring. For example, if the target is set at 25\% the MTD would be the dose at which there is a 25\% probability of experiencing a DLT. Rather than using MTD the dose to be found will be referred to as the target dose (TD\%\%, where the \%'s are replaced by the target probability), i.e. TD25 would be the dose expected to be toxic in 25\% of patients.
+
+The investigation of multiple-agent treatments, where the monotonicity assumption may not hold, is increasing in early phase trials. Finding the TD in combinations of treatments, compared to single-agents,  presents methodological challenges. Each drug individually may obey the monotonicity assumption, however, when combined, the ordering of  doses in terms of toxicity may not be fully apparent. An order for a subset of the combined doses could be identified resulting in a partial order. Without a fully understood ordering it is uncertain which dose should be chosen in decisions of escalation and de-escalation and ultimately as the TD. This issue is not exclusively reserved to just trials for multiple-agents. The monotonicity assumption may not hold for certain drugs in single-agent studies leading to partial orders of dose toxicity. This can occur in scenarios where multiple parameters of the treatment schedule are altered for each dose level. For example, either dose or treatment duration could be increased and even if patients  receive an equal dose it would remain unclear as to if prolonged exposure to a lower dose is more toxic than short exposure to a higher dose, which would lead to a partial ordering. 
+
+Further methodological challenges revolve around the issue of late onset toxicities. Typically, early phase trials implement a short window post treatment to observe DLTs. This works well in situations where toxicities are likely to occur rapidly after treatment. However, this is not optimal for treatments which could cause late-onset toxicities such as radiotherapy. The aim here would be to incorporate a larger observation window to account for potential late onset toxicities whilst also minimising the trial duration. 
+
+%----------------------------------------------------------------------------------------
+%	SECTION 2
+%----------------------------------------------------------------------------------------
+\section{The PO-TITE-CRM Design}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 3
+%----------------------------------------------------------------------------------------
+
+\section{PO-TITE-CRM in ADePT-DDR}
+
+%-----------------------------------
+%	SUBSECTION 1
+%-----------------------------------
+
+%-----------------------------------
+%	SUBSECTION 2
+%-----------------------------------
