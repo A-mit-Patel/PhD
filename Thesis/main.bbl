@@ -17,7 +17,7 @@
 \endgroup
 
 \datalist[entry]{none/global//global/global}
-  \entry{stransky_mutational_2011}{article}{}
+  \entry{stranskyMutationalLandscapeHead2011}{article}{}
     \name{author}{39}{}{%
       {{hash=SN}{%
          family={Stransky},
@@ -74,7 +74,7 @@
          giveni={C\bibinitperiod},
       }}%
       {{hash=MA}{%
-         family={{McKenna}},
+         family={McKenna},
          familyi={M\bibinitperiod},
          given={Aaron},
          giveni={A\bibinitperiod},
@@ -259,84 +259,77 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{abstract}{%
-    Head and neck squamous cell carcinoma ({HNSCC}) is a common, morbid, and
+    Head and neck squamous cell carcinoma (HNSCC) is a common, morbid, and
   frequently lethal malignancy. To uncover its mutational spectrum, we analyzed
   whole-exome sequencing data from 74 tumor-normal pairs. The majority
   exhibited a mutational profile consistent with tobacco exposure; human
-  papilloma virus was detectable by sequencing of {DNA} from infected tumors.
-  In addition to identifying previously known {HNSCC} genes ({TP}53, {CDKN}2A,
-  {PTEN}, {PIK}3CA, and {HRAS}), the analysis revealed many genes not
-  previously implicated in this malignancy. At least 30\% of cases harbored
-  mutations in genes that regulate squamous differentiation (e.g., {NOTCH}1,
-  {IRF}6, and {TP}63), implicating its dysregulation as a major driver of
-  {HNSCC} carcinogenesis. More generally, the results indicate the ability of
-  large-scale sequencing to reveal fundamental tumorigenic mechanisms.%
+  papilloma virus was detectable by sequencing of DNA from infected tumors. In
+  addition to identifying previously known HNSCC genes (TP53, CDKN2A, PTEN,
+  PIK3CA, and HRAS), the analysis revealed many genes not previously implicated
+  in this malignancy. At least 30\% of cases harbored mutations in genes that
+  regulate squamous differentiation (e.g., NOTCH1, IRF6, and TP63), implicating
+  its dysregulation as a major driver of HNSCC carcinogenesis. More generally,
+  the results indicate the ability of large-scale sequencing to reveal
+  fundamental tumorigenic mechanisms.%
     }
     \verb{doi}
     \verb 10.1126/science.1208130
+    \endverb
+    \verb{eprint}
+    \verb 21798893
     \endverb
     \field{issn}{0036-8075}
     \field{number}{6046}
     \field{pages}{1157\bibrangedash 1160}
     \field{shortjournal}{Science}
-    \field{title}{The Mutational Landscape of Head and Neck Squamous Cell
-  Carcinoma}
+    \field{title}{The {{Mutational Landscape}} of {{Head}} and {{Neck Squamous
+  Cell Carcinoma}}}
     \verb{url}
     \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3415217/
     \endverb
     \field{volume}{333}
     \verb{file}
-    \verb PubMed Central Full Text PDF:C\:\\Users\\PatelAL\\Zotero\\storage\\28
-    \verb L93KLM\\Stransky et al. - 2011 - The Mutational Landscape of Head and
-    \verb  Neck Squamous.pdf:application/pdf
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\28L93KLM\\Stransky et al. - 201
+    \verb 1 - The Mutational Landscape of Head and Neck Squamous.pdf
     \endverb
     \field{journaltitle}{Science (New York, N.Y.)}
+    \field{eprinttype}{pmid}
     \field{day}{26}
     \field{month}{08}
     \field{year}{2011}
-    \field{urlday}{20}
-    \field{urlmonth}{07}
-    \field{urlyear}{2020}
   \endentry
 
-  \entry{cancer_research_uk_head_2017}{online}{}
+  \entry{cancerreaserchukHeadNeckCancers2017}{online}{}
     \name{author}{1}{}{%
-      {{hash=UCR}{%
-         family={{UK}},
-         familyi={U\bibinitperiod},
-         given={Cancer\bibnamedelima Research},
-         giveni={C\bibinitperiod\bibinitdelim R\bibinitperiod},
+      {{hash=C}{%
+         family={{Cancer Reaserch UK}},
+         familyi={C\bibinitperiod},
       }}%
     }
-    \strng{namehash}{UCR1}
-    \strng{fullhash}{UCR1}
+    \strng{namehash}{C1}
+    \strng{fullhash}{C1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{abstract}{%
-    The latest Head and neck cancers statistics for the {UK} for Health
+    The latest Head and neck cancers statistics for the UK for Health
   Professionals. See data for incidence, mortality, survival, risk and more.%
     }
-    \field{note}{Library Catalog: www.cancerresearchuk.org}
-    \field{titleaddon}{Cancer Research {UK}}
-    \field{title}{Head and neck cancers statistics}
+    \field{title}{Head and Neck Cancers Statistics}
     \verb{url}
     \verb https://www.cancerresearchuk.org/health-professional/cancer-statistic
     \verb s/statistics-by-cancer-type/head-and-neck-cancers
     \endverb
     \field{langid}{english}
     \verb{file}
-    \verb Snapshot:C\:\\Users\\PatelAL\\Zotero\\storage\\JPKNM8NW\\head-and-nec
-    \verb k-cancers.html:text/html
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\JPKNM8NW\\head-and-neck-cancers
+    \verb .html
     \endverb
-    \field{day}{08}
-    \field{month}{02}
-    \field{year}{2017}
-    \field{urlday}{21}
-    \field{urlmonth}{07}
-    \field{urlyear}{2020}
+    \field{journaltitle}{Cancer Research UK}
+    \warn{\item Invalid format of field 'date' \item Invalid format of field
+  'date'}
   \endentry
 
-  \entry{round_radiotherapy_2013}{article}{}
+  \entry{roundRadiotherapyDemandActivity2013}{article}{}
     \name{author}{7}{}{%
       {{hash=RCE}{%
          family={Round},
@@ -381,7 +374,7 @@
          giveni={R\bibinitperiod},
       }}%
     }
-    \keyw{Access, capacity, demand, fractionation, modelling, radiotherapy}
+    \keyw{Access,capacity,demand,fractionation,modelling,radiotherapy}
     \strng{namehash}{RCEWMVMT+1}
     \strng{fullhash}{RCEWMVMTKNFCTHPJR1}
     \field{labelnamesource}{author}
@@ -389,33 +382,33 @@
     \field{abstract}{%
     Aims This paper compares the predictions of radiotherapy demand for England
   from the Malthus model with those from the earlier National Radiotherapy
-  Advisory Group ({NRAG}) model, from the international literature and also
-  with observed radiotherapy usage in England as a whole as recorded in the
-  English radiotherapy dataset ({RTDS}). Materials and methods We reviewed the
-  evidence base for radiotherapy for each type and stage of cancer using
-  national and international guidelines, meta-analyses, systematic reviews and
-  key clinical trials. Twenty-two decision trees were constructed and
-  radiotherapy demand was calculated using English cancer incidence data for
-  2007, 2008 and 2009, accurate to the Primary Care Trust ({PCT}) level
-  (population 91 500–1 282 384). The stage at presentation was obtained
-  from English cancer registry data. In predictive mode, the model can take
-  account of changes in cancer incidence as the population grows and ages.
-  Results The Malthus model indicates reduced indications for radiotherapy,
-  principally for lung cancer and rarer tumours. Our estimate of the proportion
-  of patients who should receive radiotherapy at some stage of their illness is
-  40.6\%. This is lower than previous estimates of about 50\%. Nevertheless,
-  the overall estimate of demand in terms of attendances is similar for the
-  {NRAG} and Malthus models. The latter models that 48 827 attendances should
-  have been delivered per million population in 2011. National data from {RTDS}
-  show 32 071 attendances per million in 2011. A 50\% increase in activity
-  would be required to match estimated demand. This underprovision extends
-  across all cancers and represents reduced access and the use of dose
-  fractionation at odds with international norms of evidence-based practice. By
-  2016, demand is predicted to grow to about 55 206 attendances per million
-  and by 2020 to 60 057. Discussion Services have increased their activity by
-  14\% between 2006 and 2011, but estimated demand has increased by 11\%.
-  Access remains low and English radiotherapy dose fractionation still does not
-  comply with international evidence-based practice.%
+  Advisory Group (NRAG) model, from the international literature and also with
+  observed radiotherapy usage in England as a whole as recorded in the English
+  radiotherapy dataset (RTDS). Materials and methods We reviewed the evidence
+  base for radiotherapy for each type and stage of cancer using national and
+  international guidelines, meta-analyses, systematic reviews and key clinical
+  trials. Twenty-two decision trees were constructed and radiotherapy demand
+  was calculated using English cancer incidence data for 2007, 2008 and 2009,
+  accurate to the Primary Care Trust (PCT) level (population
+  91~500–1~282~384). The stage at presentation was obtained from English
+  cancer registry data. In predictive mode, the model can take account of
+  changes in cancer incidence as the population grows and ages. Results The
+  Malthus model indicates reduced indications for radiotherapy, principally for
+  lung cancer and rarer tumours. Our estimate of the proportion of patients who
+  should receive radiotherapy at some stage of their illness is 40.6\%. This is
+  lower than previous estimates of about 50\%. Nevertheless, the overall
+  estimate of demand in terms of attendances is similar for the NRAG and
+  Malthus models. The latter models that 48~827 attendances should have been
+  delivered per million population in 2011. National data from RTDS show 32~071
+  attendances per million in 2011. A 50\% increase in activity would be
+  required to match estimated demand. This underprovision extends across all
+  cancers and represents reduced access and the use of dose fractionation at
+  odds with international norms of evidence-based practice. By 2016, demand is
+  predicted to grow to about 55~206 attendances per million and by 2020 to
+  60~057. Discussion Services have increased their activity by 14\% between
+  2006 and 2011, but estimated demand has increased by 11\%. Access remains low
+  and English radiotherapy dose fractionation still does not comply with
+  international evidence-based practice.%
     }
     \verb{doi}
     \verb 10.1016/j.clon.2013.05.005
@@ -424,28 +417,25 @@
     \field{number}{9}
     \field{pages}{522\bibrangedash 530}
     \field{shortjournal}{Clinical Oncology}
-    \field{title}{Radiotherapy Demand and Activity in England 2006–2020}
+    \field{title}{Radiotherapy {{Demand}} and {{Activity}} in {{England}}
+  2006–2020}
     \verb{url}
     \verb http://www.sciencedirect.com/science/article/pii/S0936655513002343
     \endverb
     \field{volume}{25}
     \field{langid}{english}
     \verb{file}
-    \verb ScienceDirect Snapshot:C\:\\Users\\PatelAL\\Zotero\\storage\\WZBWGA9P
-    \verb \\S0936655513002343.html:text/html;ScienceDirect Full Text PDF:C\:\\U
-    \verb sers\\PatelAL\\Zotero\\storage\\EJJXI7S9\\Round et al. - 2013 - Radio
-    \verb therapy Demand and Activity in England 2006–2.pdf:application/pdf
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\EJJXI7S9\\Round et al. - 2013 -
+    \verb  Radiotherapy Demand and Activity in England 2006–2.pdf;C\:\\Users\
+    \verb \PatelAL\\Zotero\\storage\\WZBWGA9P\\S0936655513002343.html
     \endverb
     \field{journaltitle}{Clinical Oncology}
     \field{day}{01}
     \field{month}{09}
     \field{year}{2013}
-    \field{urlday}{21}
-    \field{urlmonth}{07}
-    \field{urlyear}{2020}
   \endentry
 
-  \entry{cognetti_head_2008}{article}{}
+  \entry{cognettiHeadNeckCancer2008}{article}{}
     \name{author}{3}{}{%
       {{hash=CDM}{%
          family={Cognetti},
@@ -485,36 +475,36 @@
     \verb{doi}
     \verb 10.1002/cncr.23654
     \endverb
+    \verb{eprint}
+    \verb 18798532
+    \endverb
     \field{issn}{0008-543X}
-    \field{number}{7}
+    \field{issue}{7 0}
     \field{pages}{1911\bibrangedash 1932}
     \field{shortjournal}{Cancer}
-    \field{shorttitle}{Head and Neck Cancer}
-    \field{title}{Head and Neck Cancer: An Evolving Treatment Paradigm}
+    \field{shorttitle}{Head and {{Neck Cancer}}}
+    \field{title}{Head and {{Neck Cancer}}: {{An Evolving Treatment Paradigm}}}
     \verb{url}
     \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2751600/
     \endverb
     \field{volume}{113}
     \verb{file}
-    \verb PubMed Central Full Text PDF:C\:\\Users\\PatelAL\\Zotero\\storage\\4C
-    \verb QHWE9S\\Cognetti et al. - 2008 - Head and Neck Cancer An Evolving Tre
-    \verb atment Paradi.pdf:application/pdf
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\4CQHWE9S\\Cognetti et al. - 200
+    \verb 8 - Head and Neck Cancer An Evolving Treatment Paradi.pdf
     \endverb
     \field{journaltitle}{Cancer}
+    \field{eprinttype}{pmid}
     \field{day}{01}
     \field{month}{10}
     \field{year}{2008}
-    \field{urlday}{21}
-    \field{urlmonth}{07}
-    \field{urlyear}{2020}
   \endentry
 
-  \entry{pignon_chemotherapy_2000}{article}{}
+  \entry{pignonChemotherapyAddedLocoregional2000}{article}{}
     \name{author}{4}{}{%
       {{hash=PJ}{%
          family={Pignon},
          familyi={P\bibinitperiod},
-         given={{JP}},
+         given={JP},
          giveni={J\bibinitperiod},
       }}%
       {{hash=BJ}{%
@@ -547,26 +537,26 @@
   chemotherapy added to locoregional treatment. Methods We updated data on all
   patients in randomised trials between 1965 and 1993. We included patients
   with carcinoma of the oropharynx, oral cavity, larynx, or hypopharynx.
-  Findings The main meta-analysis of 63 trials (10 741 patients) of
+  Findings The main meta-analysis of 63 trials (10\hphantom{,}741 patients) of
   locoregional treatment with or without chemotherapy yielded a pooled hazard
-  ratio of death of 0·90 (95\% {CI} 0·85–0·94, p{\textless}0·0001),
-  corresponding to an absolute survival benefit of 4\% at 2 and 5 years in
-  favour of chemotherapy. There was no significant benefit associated with
-  adjuvant or neoadjuvant chemotherapy. Chemotherapy given concomitantly to
-  radiotherapy gave significant benefits, but heterogeneity of the results
-  prohibits firm conclusions. Meta-analysis of six trials (861 patients)
-  comparing neoadjuvant chemotherapy plus radiotherapy with concomitant or
-  alternating radiochemotherapy yielded a hazard ratio of 0·91 (0·79–1·06)
-  in favour of concomitant or alternating radiochemotherapy. Three
-  larynx-preservation trails (602 patients) compared radical surgery plus
-  radiotherapy with neoadjuvant chemotherapy plus radiotherapy in responders or
-  radical surgery and radiotherapy in non responders. The hazard ratio of death
-  in the chemotherapy arm as compared with the control arm was 1·19
-  (0·97–1·46). Interpretation Because the main meta-analysis showed only a
-  small significant survival benefit in favour of chemotherapy, the routine use
-  of chemotherapy is debatable. For larynx preservation, the non-significant
-  negative effect of chemotherapy in the organ-preservation strategy indicates
-  that this procedure must remain investigational.%
+  ratio of death of 0·90 (95\% CI 0·85–0·94, p{$<$}0·0001), corresponding
+  to an absolute survival benefit of 4\% at 2 and 5 years in favour of
+  chemotherapy. There was no significant benefit associated with adjuvant or
+  neoadjuvant chemotherapy. Chemotherapy given concomitantly to radiotherapy
+  gave significant benefits, but heterogeneity of the results prohibits firm
+  conclusions. Meta-analysis of six trials (861 patients) comparing neoadjuvant
+  chemotherapy plus radiotherapy with concomitant or alternating
+  radiochemotherapy yielded a hazard ratio of 0·91 (0·79–1·06) in favour
+  of concomitant or alternating radiochemotherapy. Three larynx-preservation
+  trails (602 patients) compared radical surgery plus radiotherapy with
+  neoadjuvant chemotherapy plus radiotherapy in responders or radical surgery
+  and radiotherapy in non responders. The hazard ratio of death in the
+  chemotherapy arm as compared with the control arm was 1·19 (0·97–1·46).
+  Interpretation Because the main meta-analysis showed only a small significant
+  survival benefit in favour of chemotherapy, the routine use of chemotherapy
+  is debatable. For larynx preservation, the non-significant negative effect of
+  chemotherapy in the organ-preservation strategy indicates that this procedure
+  must remain investigational.%
     }
     \verb{doi}
     \verb 10.1016/S0140-6736(00)90011-4
@@ -575,31 +565,27 @@
     \field{number}{9208}
     \field{pages}{949\bibrangedash 955}
     \field{shortjournal}{The Lancet}
-    \field{shorttitle}{Chemotherapy added to locoregional treatment for head
-  and neck squamous-cell carcinoma}
-    \field{title}{Chemotherapy added to locoregional treatment for head and
-  neck squamous-cell carcinoma: three meta-analyses of updated individual data}
+    \field{shorttitle}{Chemotherapy Added to Locoregional Treatment for Head
+  and Neck Squamous-Cell Carcinoma}
+    \field{title}{Chemotherapy Added to Locoregional Treatment for Head and
+  Neck Squamous-Cell Carcinoma: Three Meta-Analyses of Updated Individual Data}
     \verb{url}
     \verb http://www.sciencedirect.com/science/article/pii/S0140673600900114
     \endverb
     \field{volume}{355}
     \field{langid}{english}
     \verb{file}
-    \verb ScienceDirect Snapshot:C\:\\Users\\PatelAL\\Zotero\\storage\\XDNVEX63
-    \verb \\S0140673600900114.html:text/html;ScienceDirect Full Text PDF:C\:\\U
-    \verb sers\\PatelAL\\Zotero\\storage\\V5HS8A7Q\\Pignon et al. - 2000 - Chem
-    \verb otherapy added to locoregional treatment for h.pdf:application/pdf
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\V5HS8A7Q\\Pignon et al. - 2000
+    \verb - Chemotherapy added to locoregional treatment for h.pdf;C\:\\Users\\
+    \verb PatelAL\\Zotero\\storage\\XDNVEX63\\S0140673600900114.html
     \endverb
     \field{journaltitle}{The Lancet}
     \field{day}{18}
     \field{month}{03}
     \field{year}{2000}
-    \field{urlday}{20}
-    \field{urlmonth}{07}
-    \field{urlyear}{2020}
   \endentry
 
-  \entry{chalmers_science_2016}{article}{}
+  \entry{chalmersScienceFocusCombining2016}{article}{}
     \name{author}{1}{}{%
       {{hash=CA}{%
          family={Chalmers},
@@ -619,28 +605,24 @@
     \field{number}{5}
     \field{pages}{279\bibrangedash 282}
     \field{shortjournal}{Clinical Oncology}
-    \field{shorttitle}{Science in Focus}
-    \field{title}{Science in Focus: Combining Radiotherapy with Inhibitors of
-  the {DNA} Damage Response}
+    \field{shorttitle}{Science in {{Focus}}}
+    \field{title}{Science in {{Focus}}: {{Combining Radiotherapy}} with
+  {{Inhibitors}} of the {{DNA Damage Response}}}
     \verb{url}
     \verb https://linkinghub.elsevier.com/retrieve/pii/S0936655516000649
     \endverb
     \field{volume}{28}
     \field{langid}{english}
     \verb{file}
-    \verb Chalmers - 2016 - Science in Focus Combining Radiotherapy with Inhi.p
-    \verb df:C\:\\Users\\PatelAL\\Zotero\\storage\\FLE7RAW4\\Chalmers - 2016 -
-    \verb Science in Focus Combining Radiotherapy with Inhi.pdf:application/pdf
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\FLE7RAW4\\Chalmers - 2016 - Sci
+    \verb ence in Focus Combining Radiotherapy with Inhi.pdf
     \endverb
     \field{journaltitle}{Clinical Oncology}
     \field{month}{05}
     \field{year}{2016}
-    \field{urlday}{21}
-    \field{urlmonth}{07}
-    \field{urlyear}{2020}
   \endentry
 
-  \entry{mei_ataxia_2019}{article}{}
+  \entry{meiAtaxiaTelangiectasiaRad3related2019}{article}{}
     \name{author}{4}{}{%
       {{hash=ML}{%
          family={Mei},
@@ -672,9 +654,9 @@
     \field{labelnamesource}{author}
     \field{labeltitlesource}{shorttitle}
     \field{abstract}{%
-    The ataxia telangiectasia and Rad3-related ({ATR}) checkpoint kinase 1
-  ({CHK}1) pathway plays an essential role in suppressing replication stress
-  from {DNA} damage and oncogene activation.%
+    The ataxia telangiectasia and Rad3-related (ATR) checkpoint kinase 1 (CHK1)
+  pathway plays an essential role in suppressing replication stress from DNA
+  damage and oncogene activation.%
     }
     \verb{doi}
     \verb 10.1186/s13045-019-0733-6
@@ -683,30 +665,26 @@
     \field{number}{1}
     \field{pages}{43}
     \field{shortjournal}{Journal of Hematology \& Oncology}
-    \field{shorttitle}{Ataxia telangiectasia and Rad3-related inhibitors and
-  cancer therapy}
-    \field{title}{Ataxia telangiectasia and Rad3-related inhibitors and cancer
-  therapy: where we stand}
+    \field{shorttitle}{Ataxia Telangiectasia and {{Rad3}}-Related Inhibitors
+  and Cancer Therapy}
+    \field{title}{Ataxia Telangiectasia and {{Rad3}}-Related Inhibitors and
+  Cancer Therapy: Where We Stand}
     \verb{url}
     \verb https://doi.org/10.1186/s13045-019-0733-6
     \endverb
     \field{volume}{12}
     \verb{file}
-    \verb Snapshot:C\:\\Users\\PatelAL\\Zotero\\storage\\KLQ7AZUP\\s13045-019-0
-    \verb 733-6.html:text/html;Full Text:C\:\\Users\\PatelAL\\Zotero\\storage\\
-    \verb EAXGWNSQ\\Mei et al. - 2019 - Ataxia telangiectasia and Rad3-related
-    \verb inhibitors .pdf:application/pdf
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\EAXGWNSQ\\Mei et al. - 2019 - A
+    \verb taxia telangiectasia and Rad3-related inhibitors .pdf;C\:\\Users\\Pat
+    \verb elAL\\Zotero\\storage\\KLQ7AZUP\\s13045-019-0733-6.html
     \endverb
     \field{journaltitle}{Journal of Hematology \& Oncology}
     \field{day}{24}
     \field{month}{04}
     \field{year}{2019}
-    \field{urlday}{22}
-    \field{urlmonth}{07}
-    \field{urlyear}{2020}
   \endentry
 
-  \entry{le_tourneau_dose_2009}{article}{}
+  \entry{letourneauDoseEscalationMethods2009}{article}{}
     \name{author}{3}{}{%
       {{hash=LTC}{%
          family={Le\bibnamedelima Tourneau},
@@ -727,6 +705,9 @@
          giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod},
       }}%
     }
+    \list{publisher}{1}{%
+      {{Oxford Academic}}%
+    }
     \strng{namehash}{LTCLJJSLL1}
     \strng{fullhash}{LTCLJJSLL1}
     \field{labelnamesource}{author}
@@ -740,32 +721,28 @@
     \verb 10.1093/jnci/djp079
     \endverb
     \field{issn}{0027-8874}
-    \field{note}{Publisher: Oxford Academic}
     \field{number}{10}
     \field{pages}{708\bibrangedash 720}
     \field{shortjournal}{J Natl Cancer Inst}
-    \field{title}{Dose Escalation Methods in Phase I Cancer Clinical Trials}
+    \field{title}{Dose {{Escalation Methods}} in {{Phase I Cancer Clinical
+  Trials}}}
     \verb{url}
     \verb https://academic.oup.com/jnci/article/101/10/708/969691
     \endverb
     \field{volume}{101}
     \field{langid}{english}
     \verb{file}
-    \verb Full Text PDF:C\:\\Users\\PatelAL\\Zotero\\storage\\39VNRPX9\\Le Tour
-    \verb neau et al. - 2009 - Dose Escalation Methods in Phase I Cancer Clinic
-    \verb al.pdf:application/pdf;Snapshot:C\:\\Users\\PatelAL\\Zotero\\storage\
-    \verb \EYUC2KFQ\\969691.html:text/html
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\39VNRPX9\\Le Tourneau et al. -
+    \verb 2009 - Dose Escalation Methods in Phase I Cancer Clinical.pdf;C\:\\Us
+    \verb ers\\PatelAL\\Zotero\\storage\\EYUC2KFQ\\969691.html
     \endverb
-    \field{journaltitle}{{JNCI}: Journal of the National Cancer Institute}
+    \field{journaltitle}{JNCI: Journal of the National Cancer Institute}
     \field{day}{20}
     \field{month}{05}
     \field{year}{2009}
-    \field{urlday}{22}
-    \field{urlmonth}{07}
-    \field{urlyear}{2020}
   \endentry
 
-  \entry{oquigley_continual_1990}{article}{}
+  \entry{oquigleyContinualReassessmentMethod1990}{article}{}
     \name{author}{3}{}{%
       {{hash=OJ}{%
          family={O'Quigley},
@@ -785,6 +762,9 @@
          given={Lloyd},
          giveni={L\bibinitperiod},
       }}%
+    }
+    \list{publisher}{1}{%
+      {{[Wiley, International Biometric Society]}}%
     }
     \strng{namehash}{OJPMFL1}
     \strng{fullhash}{OJPMFL1}
@@ -810,22 +790,867 @@
     \verb{doi}
     \verb 10.2307/2531628
     \endverb
+    \verb{eprint}
+    \verb 2531628
+    \endverb
     \field{issn}{0006-341X}
-    \field{note}{Publisher: [Wiley, International Biometric Society]}
     \field{number}{1}
     \field{pages}{33\bibrangedash 48}
-    \field{shorttitle}{Continual Reassessment Method}
-    \field{title}{Continual Reassessment Method: A Practical Design for Phase 1
-  Clinical Trials in Cancer}
-    \verb{url}
-    \verb https://www.jstor.org/stable/2531628
-    \endverb
+    \field{shorttitle}{Continual {{Reassessment Method}}}
+    \field{title}{Continual {{Reassessment Method}}: {{A Practical Design}} for
+  {{Phase}} 1 {{Clinical Trials}} in {{Cancer}}}
     \field{volume}{46}
     \field{journaltitle}{Biometrics}
+    \field{eprinttype}{jstor}
     \field{year}{1990}
-    \field{urlday}{22}
-    \field{urlmonth}{07}
-    \field{urlyear}{2020}
+  \endentry
+
+  \entry{cheungSequentialDesignsPhase2000}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CYK}{%
+         family={Cheung},
+         familyi={C\bibinitperiod},
+         given={Ying\bibnamedelima Kuen},
+         giveni={Y\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=CR}{%
+         family={Chappell},
+         familyi={C\bibinitperiod},
+         given={Rick},
+         giveni={R\bibinitperiod},
+      }}%
+    }
+    \keyw{Continual reassessment method,Dose limiting,Late-onset
+  toxicities,Likelihood-based design,Phase I trial,Time-to-event}
+    \strng{namehash}{CYKCR1}
+    \strng{fullhash}{CYKCR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Summary. Traditional designs for phase I clinical trials require each
+  patient (or small group of patients) to be completely followed before the
+  next patient or group is assigned. In situations such as when evaluating
+  late-onset effects of radiation or toxicities from chemopreventive agents,
+  this may result in trials of impractically long duration. We propose a new
+  method, called the time-to-event continual reassessment method (TITE-CRM),
+  that allows patients to be entered in a staggered fashion. It is an extension
+  of the continual reassessment method (CRM; O'Quigley, Pepe, and Fisher, 1990,
+  Biometrics46, 33–48). We also note that this time-to-toxicity approach can
+  be applied to extend other designs for studies of short-term toxicities. We
+  prove that the recommended dose given by the TITE-CRM converges to the
+  correct level under certain conditions. A simulation study shows our method's
+  accuracy and safety are comparable with CRM's while the former takes a much
+  shorter trial duration: a trial that would take up to 12 years to complete by
+  the CRM could be reduced to 2–4 years by our method.%
+    }
+    \verb{doi}
+    \verb 10.1111/j.0006-341X.2000.01177.x
+    \endverb
+    \field{issn}{1541-0420}
+    \field{number}{4}
+    \field{pages}{1177\bibrangedash 1182}
+    \field{title}{Sequential {{Designs}} for {{Phase I Clinical Trials}} with
+  {{Late}}-{{Onset Toxicities}}}
+    \verb{url}
+    \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0006-341X.2000.0117
+    \verb 7.x
+    \endverb
+    \field{volume}{56}
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\KWQRXL4Q\\Cheung and Chappell -
+    \verb  2000 - Sequential Designs for Phase I Clinical Trials wit.pdf;C\:\\U
+    \verb sers\\PatelAL\\Zotero\\storage\\T9W8G7GT\\j.0006-341X.2000.01177.html
+    \endverb
+    \field{journaltitle}{Biometrics}
+    \field{year}{2000}
+  \endentry
+
+  \entry{thallDoseFindingTwoAgents2003}{article}{}
+    \name{author}{4}{}{%
+      {{hash=TPF}{%
+         family={Thall},
+         familyi={T\bibinitperiod},
+         given={Peter\bibnamedelima F.},
+         giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=MRE}{%
+         family={Millikan},
+         familyi={M\bibinitperiod},
+         given={Randall\bibnamedelima E.},
+         giveni={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=MP}{%
+         family={Mueller},
+         familyi={M\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=LSJ}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Sang-Joon},
+         giveni={S\bibinithyphendelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{Adaptive design,Bayesian design,Dose-finding,Phase I clinical trial}
+    \strng{namehash}{TPFMREMP+1}
+    \strng{fullhash}{TPFMREMPLSJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Summary. We propose an adaptive two-stage Bayesian design for finding one
+  or more acceptable dose combinations of two cytotoxic agents used together in
+  a Phase I clinical trial. The method requires that each of the two agents has
+  been studied previously as a single agent, which is almost invariably the
+  case in practice. A parametric model is assumed for the probability of
+  toxicity as a function of the two doses. Informative priors for parameters
+  characterizing the single-agent toxicity probability curves are either
+  elicited from the physician(s) planning the trial or obtained from historical
+  data, and vague priors are assumed for parameters characterizing two-agent
+  interactions. A method for eliciting the single-agent parameter priors is
+  described. The design is applied to a trial of gemcitabine and
+  cyclophosphamide, and a simulation study is presented.%
+    }
+    \verb{doi}
+    \verb 10.1111/1541-0420.00058
+    \endverb
+    \field{issn}{1541-0420}
+    \field{number}{3}
+    \field{pages}{487\bibrangedash 496}
+    \field{title}{Dose-{{Finding}} with {{Two Agents}} in {{Phase I Oncology
+  Trials}}}
+    \verb{url}
+    \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/1541-0420.00058
+    \endverb
+    \field{volume}{59}
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\MK4B3SMF\\Thall et al. - 2003 -
+    \verb  Dose-Finding with Two Agents in Phase I Oncology T.pdf
+    \endverb
+    \field{journaltitle}{Biometrics}
+    \field{year}{2003}
+  \endentry
+
+  \entry{yinBayesianDoseFinding2009}{article}{}
+    \name{author}{2}{}{%
+      {{hash=YG}{%
+         family={Yin},
+         familyi={Y\bibinitperiod},
+         given={Guosheng},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yuan},
+         familyi={Y\bibinitperiod},
+         given={Ying},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \keyw{Adaptive design,Bayesian inference,Combining drugs,Continual
+  reassessment method,Copula model,Maximum tolerated dose,Phase I
+  trial,Toxicity probability}
+    \strng{namehash}{YGYY1}
+    \strng{fullhash}{YGYY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Summary. Treating patients with a combination of agents is becoming
+  commonplace in cancer clinical trials, with biochemical synergism often the
+  primary focus. In a typical drug combination trial, the toxicity profile of
+  each individual drug has already been thoroughly studied in single-agent
+  trials, which naturally offers rich prior information. We propose a Bayesian
+  adaptive design for dose finding that is based on a copula-type model to
+  account for the synergistic effect of two or more drugs in combination. To
+  search for the maximum tolerated dose combination, we continuously update the
+  posterior estimates for the toxicity probabilities of the combined doses. By
+  reordering the dose toxicities in the two-dimensional probability space, we
+  adaptively assign each new cohort of patients to the most appropriate dose.
+  Dose escalation, de-escalation or staying at the same doses is determined by
+  comparing the posterior estimates of the probabilities of toxicity of
+  combined doses and the prespecified toxicity target. We conduct extensive
+  simulation studies to examine the operating characteristics of the design and
+  illustrate the proposed method under various practical scenarios.%
+    }
+    \verb{doi}
+    \verb 10.1111/j.1467-9876.2009.00649.x
+    \endverb
+    \field{issn}{1467-9876}
+    \field{number}{2}
+    \field{pages}{211\bibrangedash 224}
+    \field{title}{Bayesian Dose Finding in Oncology for Drug Combinations by
+  Copula Regression}
+    \verb{url}
+    \verb https://rss.onlinelibrary.wiley.com/doi/abs/10.1111/j.1467-9876.2009.
+    \verb 00649.x
+    \endverb
+    \field{volume}{58}
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\IWLKK8CV\\Yin and Yuan - 2009 -
+    \verb  Bayesian dose finding in oncology for drug combina.pdf;C\:\\Users\\P
+    \verb atelAL\\Zotero\\storage\\EFPK7TCU\\j.1467-9876.2009.00649.html
+    \endverb
+    \field{journaltitle}{Journal of the Royal Statistical Society: Series C
+  (Applied Statistics)}
+    \field{year}{2009}
+  \endentry
+
+  \entry{wagesContinualReassessmentMethod2011}{article}{}
+    \name{author}{3}{}{%
+      {{hash=WNA}{%
+         family={Wages},
+         familyi={W\bibinitperiod},
+         given={Nolan\bibnamedelima A.},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=CMR}{%
+         family={Conaway},
+         familyi={C\bibinitperiod},
+         given={Mark\bibnamedelima R.},
+         giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=OJ}{%
+         family={O'Quigley},
+         familyi={O\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{Antineoplastic Agents,Clinical Trials; Phase I as Topic,Data
+  Interpretation; Statistical,Drug-Related Side Effects and Adverse
+  Reactions,Humans,Maximum Tolerated Dose,Neoplasms,Outcome Assessment; Health
+  Care,Risk Assessment,Risk Factors,Treatment Outcome}
+    \strng{namehash}{WNACMROJ1}
+    \strng{fullhash}{WNACMROJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Much of the statistical methodology underlying the experimental design of
+  phase 1 trials in oncology is intended for studies involving a single
+  cytotoxic agent. The goal of these studies is to estimate the maximally
+  tolerated dose, the highest dose that can be administered with an acceptable
+  level of toxicity. A fundamental assumption of these methods is monotonicity
+  of the dose-toxicity curve. This is a reasonable assumption for single-agent
+  trials in which the administration of greater doses of the agent can be
+  expected to produce dose-limiting toxicities in increasing proportions of
+  patients. When studying multiple agents, the assumption may not hold because
+  the ordering of the toxicity probabilities could possibly be unknown for
+  several of the available drug combinations. At the same time, some of the
+  orderings are known and so we describe the whole situation as that of a
+  partial ordering. In this article, we propose a new two-dimensional
+  dose-finding method for multiple-agent trials that simplifies to the
+  continual reassessment method (CRM), introduced by O'Quigley, Pepe, and
+  Fisher (1990,\hspace{0.6em}Biometrics 46, 33-48), when the ordering is fully
+  known. This design enables us to relax the assumption of a monotonic
+  dose-toxicity curve. We compare our approach and some simulation results to a
+  CRM design in which the ordering is known as well as to other suggestions for
+  partial orders.%
+    }
+    \verb{doi}
+    \verb 10.1111/j.1541-0420.2011.01560.x
+    \endverb
+    \verb{eprint}
+    \verb 21361888
+    \endverb
+    \field{issn}{1541-0420}
+    \field{number}{4}
+    \field{pages}{1555\bibrangedash 1563}
+    \field{shortjournal}{Biometrics}
+    \field{title}{Continual Reassessment Method for Partial Ordering}
+    \field{volume}{67}
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\HTVDVWWU\\Wages et al. - 2011 -
+    \verb  Continual reassessment method for partial ordering.pdf
+    \endverb
+    \field{journaltitle}{Biometrics}
+    \field{eprinttype}{pmid}
+    \field{month}{12}
+    \field{year}{2011}
+  \endentry
+
+  \entry{wagesUsingTimetoeventContinual2013}{article}{}
+    \name{author}{3}{}{%
+      {{hash=WNA}{%
+         family={Wages},
+         familyi={W\bibinitperiod},
+         given={Nolan\bibnamedelima A.},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=CMR}{%
+         family={Conaway},
+         familyi={C\bibinitperiod},
+         given={Mark\bibnamedelima R.},
+         giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=OJ}{%
+         family={O'Quigley},
+         familyi={O\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \keyw{Clinical Trials; Phase I as Topic,Computer Simulation,Data
+  Interpretation; Statistical,Dose-Response Relationship; Drug,Humans,Maximum
+  Tolerated Dose}
+    \strng{namehash}{WNACMROJ1}
+    \strng{fullhash}{WNACMROJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    The time-to-event continual reassessment method (TITE-CRM) was proposed to
+  handle the problem of long trial duration in Phase\,1 trials as a result of
+  late-onset toxicities. Here, we implement the TITE-CRM in dose-finding trials
+  of combinations of agents. When studying multiple agents, monotonicity of the
+  dose-toxicity curve is not clearly defined. Therefore, the toxicity
+  probabilities follow a partial order, meaning that there are pairs of
+  treatments for which the ordering of the toxicity probabilities is not known
+  at the start of the trial. A CRM design for partially ordered trials (PO-CRM)
+  was recently proposed. Simulation studies show that extending the TITE-CRM to
+  the partial order setting produces results similar to those of the PO-CRM in
+  terms of maximum tolerated dose recommendation yet reduces the duration of
+  the trial.%
+    }
+    \verb{doi}
+    \verb 10.1002/sim.5491
+    \endverb
+    \verb{eprint}
+    \verb 22806898
+    \endverb
+    \field{issn}{1097-0258}
+    \field{number}{1}
+    \field{pages}{131\bibrangedash 141}
+    \field{shortjournal}{Stat Med}
+    \field{title}{Using the Time-to-Event Continual Reassessment Method in the
+  Presence of Partial Orders}
+    \field{volume}{32}
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\SRCAAVHP\\Wages et al. - 2013 -
+    \verb  Using the time-to-event continual reassessment met.pdf
+    \endverb
+    \field{journaltitle}{Statistics in Medicine}
+    \field{eprinttype}{pmid}
+    \field{day}{15}
+    \field{month}{01}
+    \field{year}{2013}
+  \endentry
+
+  \entry{liuBAYESIANDATAAUGMENTATION2013}{article}{}
+    \name{author}{3}{}{%
+      {{hash=LS}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Suyu},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=YG}{%
+         family={Yin},
+         familyi={Y\bibinitperiod},
+         given={Guosheng},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yuan},
+         familyi={Y\bibinitperiod},
+         given={Ying},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LSYGYY1}
+    \strng{fullhash}{LSYGYY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    A major practical impediment when implementing adaptive dose-finding
+  designs is that the toxicity outcome used by the decision rules may not be
+  observed shortly after the initiation of the treatment. To address this
+  issue, we propose the data augmentation continual re-assessment method
+  (DA-CRM) for dose finding. By naturally treating the unobserved toxicities as
+  missing data, we show that such missing data are nonignorable in the sense
+  that the missingness depends on the unobserved outcomes. The Bayesian data
+  augmentation approach is used to sample both the missing data and model
+  parameters from their posterior full conditional distributions. We evaluate
+  the performance of the DA-CRM through extensive simulation studies, and also
+  compare it with other existing methods. The results show that the proposed
+  design satisfactorily resolves the issues related to late-onset toxicities
+  and possesses desirable operating characteristics: treating patients more
+  safely, and also selecting the maximum tolerated dose with a higher
+  probability. The new DA-CRM is illustrated with two phase I cancer clinical
+  trials.%
+    }
+    \verb{doi}
+    \verb 10.1214/13-AOAS661
+    \endverb
+    \verb{eprint}
+    \verb 24707327
+    \endverb
+    \field{issn}{1932-6157}
+    \field{number}{4}
+    \field{pages}{1837\bibrangedash 2457}
+    \field{shortjournal}{Ann Appl Stat}
+    \field{title}{{{BAYESIAN DATA AUGMENTATION DOSE FINDING WITH CONTINUAL
+  REASSESSMENT METHOD AND DELAYED TOXICITY}}}
+    \verb{url}
+    \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3972824/
+    \endverb
+    \field{volume}{7}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\F9SL5LJA\\Liu et al. - 2013 - B
+    \verb AYESIAN DATA AUGMENTATION DOSE FINDING WITH CONTI.pdf
+    \endverb
+    \field{journaltitle}{The annals of applied statistics}
+    \field{eprinttype}{pmid}
+    \field{day}{01}
+    \field{month}{12}
+    \field{year}{2013}
+  \endentry
+
+  \entry{wheelerBayesianModelfreeApproach2019}{article}{}
+    \name{author}{3}{}{%
+      {{hash=WGM}{%
+         family={Wheeler},
+         familyi={W\bibinitperiod},
+         given={Graham\bibnamedelima M.},
+         giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=SMJ}{%
+         family={Sweeting},
+         familyi={S\bibinitperiod},
+         given={Michael\bibnamedelima J.},
+         giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MAP}{%
+         family={Mander},
+         familyi={M\bibinitperiod},
+         given={Adrian\bibnamedelima P.},
+         giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WGMSMJMAP1}
+    \strng{fullhash}{WGMSMJMAP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    The product of independent beta probabilities escalation (PIPE) design for
+  dual-agent phase I dose-escalation trials is a Bayesian model-free approach
+  for identifying multiple maximum tolerated dose combinations of novel
+  combination therapies. Despite only being published in 2015, the PIPE design
+  has been implemented in at least two oncology trials. However, these trials
+  require patients to have completed follow-up before clinicians can make
+  dose-escalation decisions. For trials of radiotherapy or advanced
+  therapeutics, this may lead to impractically long trial durations due to
+  late-onset treatment-related toxicities. In this paper, we extend the PIPE
+  design to use censored time-to-event (TITE) toxicity outcomes for making dose
+  escalation decisions. We show via comprehensive simulation studies and
+  sensitivity analyses that trial duration can be reduced by up to 35\%,
+  particularly when recruitment is faster than expected, without compromising
+  on other operating characteristics.%
+    }
+    \verb{doi}
+    \verb 10.1111/rssc.12323
+    \endverb
+    \verb{eprint}
+    \verb 30880843
+    \endverb
+    \field{issn}{0035-9254}
+    \field{number}{2}
+    \field{pages}{309\bibrangedash 329}
+    \field{shortjournal}{J R Stat Soc Ser C Appl Stat}
+    \field{title}{A {{Bayesian}} Model-Free Approach to Combination Therapy
+  Phase {{I}} Trials Using Censored Time-to-Toxicity Data}
+    \verb{url}
+    \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6420054/
+    \endverb
+    \field{volume}{68}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\TIDCH682\\Wheeler et al. - 2019
+    \verb  - A Bayesian model-free approach to combination ther.pdf
+    \endverb
+    \field{journaltitle}{Journal of the Royal Statistical Society. Series C,
+  Applied statistics}
+    \field{eprinttype}{pmid}
+    \field{month}{02}
+    \field{year}{2019}
+  \endentry
+
+  \entry{wagesSpecificationsContinualReassessment2013}{article}{}
+    \name{author}{2}{}{%
+      {{hash=WNA}{%
+         family={Wages},
+         familyi={W\bibinitperiod},
+         given={Nolan\bibnamedelima A.},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=CMR}{%
+         family={Conaway},
+         familyi={C\bibinitperiod},
+         given={Mark\bibnamedelima R.},
+         giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WNACMR1}
+    \strng{fullhash}{WNACMR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    In studies of combinations of agents in phase I oncology trials, the
+  dose–toxicity relationship may not be monotone for all combinations, in
+  which case the toxicity probabilities follow a partial order. The continual
+  reassessment method for partial orders (PO-CRM) is a design for phase I
+  trials of combinations that leans upon identifying possible complete orders
+  associated with the partial order. This article addresses some practical
+  design considerations not previously undertaken when describing the PO-CRM.
+  We describe an approach in choosing a proper subset of possible orderings,
+  formulated according to the known toxicity relationships within a matrix of
+  combination therapies. Other design issues, such as working model selection
+  and stopping rules, are also discussed. We demonstrate the practical ability
+  of PO-CRM as a phase I design for combinations through its use in a recent
+  trial designed at the University of Virginia Cancer Center.%
+    }
+    \verb{doi}
+    \verb 10.1002/pst.1575
+    \endverb
+    \verb{eprint}
+    \verb 23729323
+    \endverb
+    \field{issn}{1539-1604}
+    \field{number}{4}
+    \field{shortjournal}{Pharm Stat}
+    \field{title}{Specifications of a Continual Reassessment Method Design for
+  Phase {{I}} Trials of Combined Drugs}
+    \verb{url}
+    \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3771354/
+    \endverb
+    \field{volume}{12}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\Y847A7W6\\Wages and Conaway - 2
+    \verb 013 - Specifications of a continual reassessment method .pdf
+    \endverb
+    \field{journaltitle}{Pharmaceutical statistics}
+    \field{eprinttype}{pmid}
+    \field{year}{2013}
+  \endentry
+
+  \entry{wagesPocrmRpackagePhase2013}{article}{}
+    \name{author}{2}{}{%
+      {{hash=WNA}{%
+         family={Wages},
+         familyi={W\bibinitperiod},
+         given={Nolan\bibnamedelima A.},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=VN}{%
+         family={Varhegyi},
+         familyi={V\bibinitperiod},
+         given={Nikole},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \keyw{Antineoplastic Agents,Antineoplastic Combined Chemotherapy
+  Protocols,Cancer Vaccines,Clinical Trials; Phase I as Topic,Computer
+  Simulation,Continual reassessment method,Dose finding,Drug
+  combination,Freund's Adjuvant,Humans,Lipids,Maximum Tolerated
+  Dose,Melanoma,Neoplasms,Partial ordering,Phase I trials,Software,Toll-Like
+  Receptors}
+    \strng{namehash}{WNAVN1}
+    \strng{fullhash}{WNAVN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    This paper presents the R package pocrm for implementing and simulating the
+  partial order continual reassessment method (PO-CRM; [1,2]) in Phase I trials
+  of combinations of agents. The aim of this article is to illustrate, through
+  examples of the pocrm package, how the PO-CRM works and how its operating
+  characteristics can inform clinical trial investigators. This should promote
+  the use of the PO-CRM in designing and conducting dose-finding Phase I trials
+  of combinations of agents.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.cmpb.2013.05.020
+    \endverb
+    \verb{eprint}
+    \verb 23871691
+    \endverb
+    \field{issn}{1872-7565}
+    \field{number}{1}
+    \field{pages}{211\bibrangedash 218}
+    \field{shortjournal}{Comput Methods Programs Biomed}
+    \field{shorttitle}{Pocrm}
+    \field{title}{Pocrm: An {{R}}-Package for Phase {{I}} Trials of
+  Combinations of Agents}
+    \field{volume}{112}
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\SMA53VFZ\\Wages and Varhegyi -
+    \verb 2013 - pocrm an R-package for phase I trials of combinat.pdf
+    \endverb
+    \field{journaltitle}{Computer Methods and Programs in Biomedicine}
+    \field{eprinttype}{pmid}
+    \field{month}{10}
+    \field{year}{2013}
+  \endentry
+
+  \entry{wagesPracticalDesignsPhase2016}{article}{}
+    \name{author}{3}{}{%
+      {{hash=WNA}{%
+         family={Wages},
+         familyi={W\bibinitperiod},
+         given={Nolan\bibnamedelima A.},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=IA}{%
+         family={Ivanova},
+         familyi={I\bibinitperiod},
+         given={Anastasia},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MO}{%
+         family={Marchenko},
+         familyi={M\bibinitperiod},
+         given={Olga},
+         giveni={O\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WNAIAMO1}
+    \strng{fullhash}{WNAIAMO1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Phase I trials evaluating the safety of multi-drug combinations are
+  becoming more common in oncology. Despite the emergence of novel methodology
+  in the area, it is rare that innovative approaches are used in practice. In
+  this article, we review three methods for Phase I combination studies that
+  are easy to understand and straightforward to implement. We demonstrate the
+  operating characteristics of the designs through illustration in a single
+  trial, as well as through extensive simulation studies, with the aim of
+  increasing the use of novel approaches in phase I combination studies. Design
+  specifications and software capabilities are also discussed.%
+    }
+    \verb{doi}
+    \verb 10.1080/10543406.2015.1092029
+    \endverb
+    \verb{eprint}
+    \verb 26379085
+    \endverb
+    \field{issn}{1054-3406}
+    \field{number}{1}
+    \field{pages}{150\bibrangedash 166}
+    \field{shortjournal}{J Biopharm Stat}
+    \field{title}{Practical Designs for Phase {{I}} Combination Studies in
+  Oncology}
+    \verb{url}
+    \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4720553/
+    \endverb
+    \field{volume}{26}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\TGR4EFNQ\\Wages et al. - 2016 -
+    \verb  Practical designs for phase I combination studies .pdf
+    \endverb
+    \field{journaltitle}{Journal of biopharmaceutical statistics}
+    \field{eprinttype}{pmid}
+    \field{year}{2016}
+  \endentry
+
+  \entry{lesueurPhaseIIaStudy2019}{article}{}
+    \name{author}{21}{}{%
+      {{hash=LP}{%
+         family={Lesueur},
+         familyi={L\bibinitperiod},
+         given={Paul},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Lequesne},
+         familyi={L\bibinitperiod},
+         given={Justine},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GJM}{%
+         family={Grellard},
+         familyi={G\bibinitperiod},
+         given={Jean-Michel},
+         giveni={J\bibinithyphendelim M\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Dugué},
+         familyi={D\bibinitperiod},
+         given={Audrey},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CE}{%
+         family={Coquan},
+         familyi={C\bibinitperiod},
+         given={Elodie},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=BPE}{%
+         family={Brachet},
+         familyi={B\bibinitperiod},
+         given={Pierre-Emmanuel},
+         giveni={P\bibinithyphendelim E\bibinitperiod},
+      }}%
+      {{hash=GJ}{%
+         family={Geffrelot},
+         familyi={G\bibinitperiod},
+         given={Julien},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=KW}{%
+         family={Kao},
+         familyi={K\bibinitperiod},
+         given={William},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=EE}{%
+         family={Emery},
+         familyi={E\bibinitperiod},
+         given={Evelyne},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=BDH}{%
+         family={Berro},
+         familyi={B\bibinitperiod},
+         given={David\bibnamedelima Hassanein},
+         giveni={D\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=CL}{%
+         family={Castera},
+         familyi={C\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=GN}{%
+         family={Goardon},
+         familyi={G\bibinitperiod},
+         given={Nicolas},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=LJ}{%
+         family={Lacroix},
+         familyi={L\bibinitperiod},
+         given={Joëlle},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LM}{%
+         family={Lange},
+         familyi={L\bibinitperiod},
+         given={Marie},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CA}{%
+         family={Capel},
+         familyi={C\bibinitperiod},
+         given={Aurélie},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=LA}{%
+         family={Leconte},
+         familyi={L\bibinitperiod},
+         given={Alexandra},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=AB}{%
+         family={Andre},
+         familyi={A\bibinitperiod},
+         given={Benoit},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=LA}{%
+         family={Léger},
+         familyi={L\bibinitperiod},
+         given={Angélique},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=LA}{%
+         family={Lelaidier},
+         familyi={L\bibinitperiod},
+         given={Anaïs},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=CB}{%
+         family={Clarisse},
+         familyi={C\bibinitperiod},
+         given={Bénédicte},
+         giveni={B\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Stefan},
+         familyi={S\bibinitperiod},
+         given={Dinu},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LPLJGJM+1}
+    \strng{fullhash}{LPLJGJMDACEBPEGJKWEEBDHCLGNLJLMCALAABLALACBSD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    Background Despite multimodality treatments including neurosurgery,
+  radiotherapy and chemotherapy, glioblastoma (GBM) prognosis remains poor. GBM
+  is classically considered as a radioresistant tumor, because of its high
+  local recurrence rate, inside the irradiation field. The development of new
+  radiosensitizer is crucial to improve the patient outcomes. Pre-clinical data
+  showed that Poly (ADP-ribose) polymerase inhibitors (PARPi) could be
+  considered as a promising class of radiosensitizer., The aim of this study is
+  to evaluate Olaparib, a PARPi, as radiosensitizing agent, combined with the
+  Stupp protocol, namely temozolomide (TMZ) and intensity modulated
+  radiotherapy (IMRT) in first line treatment of partially or non-resected GBM.
+  Methods The OLA-TMZ-RTE-01 study is a multicenter non-randomized phase I/IIa
+  trial including unresectable or partially resectable GBM patients, from 18 to
+  70\,years old. A two-step dose-escalation phase I design will first determine
+  the recommended phase 2 dose (RP2D) of olaparib, delivered concomitantly with
+  TMZ plus conventional irradiation for 6\,weeks and as single agent for
+  4\,weeks (radiotherapy period), and second, the RP2D of olaparib combined
+  with adjuvant TMZ (maintenance period). Phase IIa will assess the 18-month
+  overall survival (OS) of this combination. In both phase I and IIa separately
+  considered, the progression-free survival, the objective response rate, the
+  neurocognitive functions of patients, emotional disorders among caregivers,
+  the survival without toxicity, degradation nor progression, the complications
+  onset and the morphologic and functional MRI (magnetic resonance imaging)
+  parameters will be also assessed as secondary objectives. Ancillary
+  objectives will explore alteration of the DNA repair pathways on biopsy
+  tumor, proton magnetic resonance spectroscopy parameters to differentiate
+  tumor relapse and radionecrosis, and an expanded cognition evaluation. Up to
+  79 patients will be enrolled: 30 patients in the phase I and 49 patients in
+  the phase IIa. Discussion Combining PARP inhibitors, such as olaparib, with
+  radiotherapy and chemotherapy in GBM may improve survival outcomes, while
+  sparing healthy tissue and preserving neurocognitive function, given the
+  replication-dependent efficacy of olaparib, and the increased PARP expression
+  in GBM as compared to non-neoplastic brain tissue. Ancillary studies will
+  help to identify genetic biomarkers predictive of PARPi efficacy as
+  radiosensitizer. Trial registration NCT03212742, registered June, 7, 2017.
+  Protocol version: Version 2.2 dated from 2017/08/18.%
+    }
+    \verb{doi}
+    \verb 10.1186/s12885-019-5413-y
+    \endverb
+    \verb{eprint}
+    \verb 30832617
+    \endverb
+    \field{issn}{1471-2407}
+    \field{shortjournal}{BMC Cancer}
+    \field{shorttitle}{Phase {{I}}/{{IIa}} Study of Concomitant Radiotherapy
+  with Olaparib and Temozolomide in Unresectable or Partially Resectable
+  Glioblastoma}
+    \field{title}{Phase {{I}}/{{IIa}} Study of Concomitant Radiotherapy with
+  Olaparib and Temozolomide in Unresectable or Partially Resectable
+  Glioblastoma: {{OLA}}-{{TMZ}}-{{RTE}}-01 Trial Protocol}
+    \verb{url}
+    \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6399862/
+    \endverb
+    \field{volume}{19}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\UQXUZS7F\\Lesueur et al. - 2019
+    \verb  - Phase IIIa study of concomitant radiotherapy with.pdf
+    \endverb
+    \field{journaltitle}{BMC Cancer}
+    \field{eprinttype}{pmid}
+    \field{day}{04}
+    \field{month}{03}
+    \field{year}{2019}
   \endentry
 \enddatalist
 \endinput
