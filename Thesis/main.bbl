@@ -1652,5 +1652,35 @@
     \field{month}{03}
     \field{year}{2019}
   \endentry
+
+  \entry{cheungDfcrmDoseFindingContinual2019}{software}{}
+    \name{author}{1}{}{%
+      {{hash=CK}{%
+         family={Cheung},
+         familyi={C\bibinitperiod},
+         given={Ken},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \keyw{ClinicalTrials,ExperimentalDesign}
+    \strng{namehash}{CK1}
+    \strng{fullhash}{CK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    Provides functions to run the CRM and TITE-CRM in phase I trials and
+  calibration tools for trial planning purposes.%
+    }
+    \field{shorttitle}{Dfcrm}
+    \field{title}{Dfcrm: {{Dose}}-{{Finding}} by the {{Continual Reassessment
+  Method}}}
+    \verb{url}
+    \verb https://CRAN.R-project.org/package=dfcrm
+    \endverb
+    \field{version}{0.2-2.1}
+    \field{day}{26}
+    \field{month}{01}
+    \field{year}{2019}
+  \endentry
 \enddatalist
 \endinput

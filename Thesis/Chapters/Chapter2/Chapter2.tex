@@ -111,6 +111,12 @@ The intended use of this design is for dose-finding in combinations of therapies
 
 A two-stage PO-TITE-CRM will be used to find the TD25 of AZD6783. This will be determined by dose-limiting toxicities evaluated by Common Terminology Criteria for Adverse Events (CTCAE) v5.0 and Radiation Therapy Oncology Group (RTOG) late toxicity score. The binary DLT events are pre-defined by a variety of grade 3-4 adverse events notably, haematological, cardiovascular and gastrointestinal/hepatic toxicities as well as significant non-haematological events and specific treatment-related toxicities. DLTs will be monitored for the duration of treatment (seven weeks) and up to a year post-treatment. 
 
+%-----------------------------------
+%	SUBSECTION 3.1
+%-----------------------------------
+\subsection{Trial Specification}
+\label{section2.3.1}%first number is the chapter number, second number is section number, third is subsection etc..
+
 A maximum of 60 patients will be recruited for the dose-finding aspect of this trial and up to 20 patients as controls. Controls will be utilised to make comparisons for secondary outcomes such as survival and efficacy. Cohorts of three patients will be recruited and assigned to dose levels chosen by the PO-TITE-CRM. Controls will be recruited in the interim period between the recruitment of the third patient in a cohort and the completion of the minimum follow-up period.    
 
 Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling 70 Gy in 35 fractions over seven weeks. For the dose-finding aspect we investigate six doses of AZD6783 detailed in table \ref{tab_adept:AZD_dose_levels}. Treatment dose and duration to be selected for dose level 3 will be determined based on a combination of data observed, adverse events and compliance. The issue of partial ordering stems from dose levels 2a and 2b, which can be seen in Figure \ref{fig_adept:AZD_dose_levels}. The increased duration of 2a and increased dose of 2b mean they are both more toxic than dose level 1. However, when comparing 2a and 2b it is unknown whether the increase in duration or dose will be more toxic. Hence there are two possible orderings for ADePT-DDR. 
@@ -148,18 +154,26 @@ Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling
 	\includegraphics[width=\textwidth]{AdeptDoseCombos}
 \end{figure}
 
-Preliminary designs of the trial included only five dose levels and planned to use dose level 0 as the starting dose. During the trial design phase it was decided a new lower dose (dose level -1) would be added to allow for de-escalation if the initial dose was found to be too toxic. 
+Preliminary designs of the trial included only five dose levels and planned to use dose level 0 as the starting dose. During the trial design phase it was decided a new lower dose (dose level -1) would be introduced to allow for de-escalation if the initial dose was found to be too toxic. Dose escalation/de-escalation for subsequent cohorts would be determined from the two-stage PO-TITE-CRM. A two-stage design allows for escalation according to a pre-defined escalation scheme similar to a '3+3' design. The first stage dictates that if no DLT's are observed in the current cohort the dose allocated to the next cohort is the following dose in the escalation scheme. Dose levels continue to be incremented in this fashion until the first DLT is observed. In stage two, dose levels are determined by the PO-TITE-CRM.
+
+Typically CRM designs begin by testing the first patient, or cohort, at the prior guess of TD. However, clinicians may have safety concerns beginning the trial at higher dose levels as well as escalating to higher dose levels without testing lower ones. Investigators in ADePT-DDR expressed similar concerns as such a two-stage design was adopted. The escalation scheme used in stage one of ADePT-DDR will follow that of the first ordering ($d_{-1} \rightarrow d_{0} \rightarrow d_{1} \rightarrow d_{2a} \rightarrow d_{2b} \rightarrow d_{3}$). If patients in the first cohort (assigned to dose level 0) don't experience a DLT the next cohort will be allocated to dose level 1 and then if no DLTs are observed again the third cohort will be allocated to dose level 2a and so on and so forth. The dose escalation scheme was determined based on the prior probabilities of toxicity generated for each dose level.  
+
+Information elicited from the investigators helped generate prior probabilities of toxicity for each dose level. They believed that dose level 2b would be the TD25 with 2a being less toxic. This was used in conjunction with the getprior function from the dfcrm R package \cite{cheungDfcrmDoseFindingContinual2019} which yielded priors of 0.012, 0.036, 0.084, 0.157, 0.25 and 0.355 for dose levels -1, 0, 1, 2a, 2b and 3 respectively. Prior probabilities are also required for the plausibility of each model and even though the clinicians think that 2b will be more toxic than 2a there is no clear evidence and still a lot of uncertainty. As such it is sensible to assume a plausibility probability of 0.5 for each ordering, implying both orders are equally likely to be the true ordering of these dose levels. 
+
+%Additional rules were implemented into the design for safety and early stopping.  
+%Additional 
+%
+%Further considerations were made
+
+The observation window for this trial will be longer as the combination of radiotherapy with AZD6738 is anticipated to cause late-onset toxicity. The Acute DLT observation period is 84 days (12 weeks) post radiotherapy end with a minimum of 56 days (8 weeks) for the last patient of each cohort. However, patients will continuously be monitored for occurrence of DLT for at least 84 days (12 weeks), i.e. at least 84 days (12 weeks) from the end of radiotherapy.
+
+The TITE component incorporates a weighting contribution for each patient dependent on how long that patient has been evaluable in the study. This allows a patient to be evaluated once they have been observed for the minimum DLT period of 56 days (8 weeks). The weighting at this point is 60\% rising to 80\% at 12 weeks. A patient will not contribute fully to the model until they have completed 52 weeks follow up (or have experienced a DLT at any stage in which case they will be weighted as a whole contribution). Linear weighting functions will weighting function to calculate weight from be employed for any patient with a length of follow up between these three time points. One 8-12 weeks and another for weights from 12-52 weeks.\\ 
 
 \newpage 
 \begin{itemize}
 	\item Finish section 2.3
 	\begin{itemize}
-		\item Two-stage design of the PO-TITE-CRM 
-		\item Initial dose-escalation scheme 
-		\item Prior probabilities of DLT 
-		\item Prior probabilities of ordering 
 		\item Stopping rules 
-		\item Weight function 
 		\item Operating characteristics - explain why we have two sets 
 	\end{itemize}
 	\item Think of how to split this section up - maybe justification, trial set up 
@@ -172,6 +186,11 @@ Preliminary designs of the trial included only five dose levels and planned to u
 \end{itemize}
 
 
+%-----------------------------------
+%	SUBSECTION 3.2
+%-----------------------------------
+\subsection{Operating Characteristics}
+\label{section2.3.2}%first number is the chapter number, second number is section number, third is subsection etc..
 
 %-----------------------------------
 %	SUBSECTION 1
