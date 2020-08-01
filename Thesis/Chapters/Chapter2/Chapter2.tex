@@ -109,9 +109,11 @@ The decision to implement PO-TITE-CRM into ADePT-DDR was made by Piers Gaunt (PG
 
 The intended use of this design is for dose-finding in combinations of therapies, as this is the source of the partial ordering issue. ADePT-DDR however, is a unique implementation of the design as even though it involves a combination of therapies (radiotherapy and AZD6783) the dose of radiotherapy is fixed and dose-finding is only planned for AZD6783. PO-TITE-CRM is still applicable in this case as the dose levels for AZD6783 are partially ordered. 
 
-A two-stage PO-TITE-CRM will be used to find the TD25 of AZD6783. This will be determined by dose-limiting toxicities evaluated by Common Terminology Criteria for Adverse Events (CTCAE) v5.0 and Radiation Therapy Oncology Group (RTOG) late toxicity score. The binary DLT events are pre-defined by a variety of grade 3-4 adverse events notably, haematological, cardiovascular and gastrointestinal/hepatic toxicities as well as significant non-haematological events and specific treatment-related toxicities. DLTs will be monitored for the duration of treatment (7 weeks) and up to a year post-treatment.  
+A two-stage PO-TITE-CRM will be used to find the TD25 of AZD6783. This will be determined by dose-limiting toxicities evaluated by Common Terminology Criteria for Adverse Events (CTCAE) v5.0 and Radiation Therapy Oncology Group (RTOG) late toxicity score. The binary DLT events are pre-defined by a variety of grade 3-4 adverse events notably, haematological, cardiovascular and gastrointestinal/hepatic toxicities as well as significant non-haematological events and specific treatment-related toxicities. DLTs will be monitored for the duration of treatment (seven weeks) and up to a year post-treatment. 
 
-Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling 70 Gy in 35 fractions over seven weeks. We then investigate six doses of AZD6783 detailed in table \ref{tab_adept:AZD_dose_levels}.  Treatment dose and duration to be selected for dose level 3 will be determined based on a combination of data observed, adverse events and compliance. The issue of partial ordering stems from dose levels 2a and 2b, which can be seen in Figure \ref{fig_adept:AZD_dose_levels}. The increased duration of 2a and increased dose of 2b mean they are both more toxic than dose level 1. However, when comparing 2a and 2b it is unknown whether the increase in duration or dose will be more toxic. Hence there are two possible orderings for ADePT-DDR. 
+A maximum of 60 patients will be recruited for the dose-finding aspect of this trial and up to 20 patients as controls. Controls will be utilised to make comparisons for secondary outcomes such as survival and efficacy. Cohorts of three patients will be recruited and assigned to dose levels chosen by the PO-TITE-CRM. Controls will be recruited in the interim period between the recruitment of the third patient in a cohort and the completion of the minimum follow-up period.    
+
+Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling 70 Gy in 35 fractions over seven weeks. For the dose-finding aspect we investigate six doses of AZD6783 detailed in table \ref{tab_adept:AZD_dose_levels}. Treatment dose and duration to be selected for dose level 3 will be determined based on a combination of data observed, adverse events and compliance. The issue of partial ordering stems from dose levels 2a and 2b, which can be seen in Figure \ref{fig_adept:AZD_dose_levels}. The increased duration of 2a and increased dose of 2b mean they are both more toxic than dose level 1. However, when comparing 2a and 2b it is unknown whether the increase in duration or dose will be more toxic. Hence there are two possible orderings for ADePT-DDR. 
 
 \begin{enumerate}
 	\centering
@@ -119,30 +121,36 @@ Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling
 	\item $d_{-1} \rightarrow d_{0} \rightarrow d_{1} \rightarrow d_{2b} \rightarrow d_{2a} \rightarrow d_{3}$
 \end{enumerate}
 
-\begin{table}[H]
-	\centering
+\begin{table}[h!]
+    \centering
 	\caption{ADePT-DDR dose levels and duration of treatment for AZD6783.}
 	\label{tab_adept:AZD_dose_levels}
-	\begin{tabular}{ccccc}
-		\hline
-		\multicolumn{1}{l}{\textbf{Dose}} & \textbf{\begin{tabular}[c]{@{}c@{}}AZD6783 Daily \\ dose (mg BD)\end{tabular}} & \textbf{Weeks} & \textbf{\begin{tabular}[c]{@{}c@{}}Duration \\ (days)\end{tabular}} & \textbf{RT} \\ \hline
-		-1 & 20 & 1 & 5 & 70 Gy/ 35 F \\
-		0 & 20 & 1\&4 & 10 & 70 Gy/ 35 F \\
-		1 & 40 & 1\&4 & 10 & 70 Gy/ 35 F \\
-		2a & 40 & 1,2,4\&5 & 20 & 70 Gy/ 35 F \\
-		2b & 80 & 1\&4 & 10 & 70 Gy/ 35 F \\
-		\multirow{2}{*}{3} & 120 & 1\&4 & 10 & 70 Gy/ 35 F \\
-		& 80 & 1,2,4\&5 & 20 & 70 Gy/ 35 F \\ \hline
-	\end{tabular}
+		\begin{tabular}{ccccc}
+			\hline 
+			\multicolumn{1}{p{1.5cm}}{\centering \textbf{Dose} \\ \textbf{Level}} & \multicolumn{1}{p{3cm}}{\centering \textbf{AZD6783 Daily} \\ \textbf{dose (mg BD)}} &
+		    \multicolumn{1}{p{1.5cm}}{\centering \textbf{Weeks} \\ } &
+			\multicolumn{1}{p{1.5cm}}{\centering \textbf{Duration} \\ \textbf{(days)}} &
+			\multicolumn{1}{p{3.5cm}}{\centering \textbf{Radiotherapy} \\ } 
+			\\\hline
+			-1 & 20 & 1 & 5 & 70 Gy/ 35 F \\
+			 0 & 20 & 1\&4 & 10 & 70 Gy/ 35 F \\
+			 1 & 40 & 1\&4 & 10 & 70 Gy/ 35 F \\
+			2a & 40 & 1,2,4\&5 & 20 & 70 Gy/ 35 F \\
+			2b & 80 & 1\&4 & 10 & 70 Gy/ 35 F \\
+			\multirow{2}{*}{3} & 120 & 1\&4 & 10 & 70 Gy/ 35 F \\
+			& 80 & 1,2,4\&5 & 20 & 70 Gy/ 35 F \\ \hline
+		\end{tabular}
 \end{table}
 
-\begin{figure}[H]
+\begin{figure}[h!]
 	\caption{ADePT-DDR dose levels across dose and duration.}
 	\label{fig_adept:AZD_dose_levels}
 	\includegraphics[width=\textwidth]{AdeptDoseCombos}
 \end{figure}
 
+Preliminary designs of the trial included only five dose levels and planned to use dose level 0 as the starting dose. During the trial design phase it was decided a new lower dose (dose level -1) would be added to allow for de-escalation if the initial dose was found to be too toxic. 
 
+\newpage 
 \begin{itemize}
 	\item Finish section 2.3
 	\begin{itemize}
@@ -161,9 +169,8 @@ Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling
 		\item Impact of removing practical limitations from the design. For example: cohort size, sample size 
 		\item Dose transition pathways in a TITE setting  
 	\end{itemize}
-
-	
 \end{itemize}
+
 
 
 %-----------------------------------
