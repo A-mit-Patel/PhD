@@ -7,6 +7,8 @@
 \contentsline {section}{\numberline {2.1}Introduction}{3}{section.8}% 
 \contentsline {section}{\numberline {2.2}The PO-TITE-CRM Design}{7}{section.9}% 
 \contentsline {section}{\numberline {2.3}PO-TITE-CRM in ADePT-DDR}{11}{section.24}% 
-\contentsline {subsection}{\numberline {2.3.1}Trial Specification}{12}{subsection.25}% 
-\contentsline {subsection}{\numberline {2.3.2}Operating Characteristics}{16}{subsection.30}% 
-\contentsline {chapter}{Bibliography}{17}{chapter*.31}% 
+\contentsline {subsection}{\numberline {2.3.1}Partial Ordering in Practice}{12}{subsection.25}% 
+\contentsline {subsection}{\numberline {2.3.2}The TITE component}{15}{subsection.30}% 
+\contentsline {subsection}{\numberline {2.3.3}Stopping Rules}{16}{subsection.32}% 
+\contentsline {subsection}{\numberline {2.3.4}Operating Characteristics}{17}{subsection.33}% 
+\contentsline {chapter}{Bibliography}{21}{chapter*.34}% 

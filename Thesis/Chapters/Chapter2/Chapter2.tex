@@ -26,7 +26,7 @@ Further methodological challenges revolve around the issue of late-onset toxicit
 
 Cheung and Chappel \cite{cheungSequentialDesignsPhase2000} introduced an extension to the CRM to deal with the issues of treatments that may cause late-onset toxicity. This design referred to as the time-to-event CRM (TITE-CRM), uses a weighted dose-response model to incorporate the time it takes for a DLT to occur in a patient. There have also been published trial designs to deal with the issues that arise from investigating combinations of treatments. Thall et al. \cite{thallDoseFindingTwoAgents2003} proposed an adaptive two-stage Bayesian design which utilises a parametric model of toxicity as a function of two doses. Yin and Yaun \cite{yinBayesianDoseFinding2009} present a Bayesian design that uses a copula regression model to evaluate the joint toxicity probabilities of combined drugs. The continual reassessment method for partial orders (PO-CRM) developed by Wages et al. \cite{wagesContinualReassessmentMethod2011} extends the CRM design by relaxing the assumption of monotonicity and by modelling different potential orders.  
 
-Wages et al. \cite{wagesContinualReassessmentMethod2011, wagesUsingTimetoeventContinual2013} further developed their work on the PO-CRM to deal with late-onset toxicities by implementing a TITE component. This trial design, referred to as the time-to-event continual reassessment method in the presence of partial orders (PO-TITE-CRM) by the authors, was chosen to be used in ADePT-DDR. A search of PubMed, conducted on the 25th of July 2020, found six articles that had cited the PO-TITE-CRM design by Wages et al. \cite{wagesUsingTimetoeventContinual2013}. Five of these papers were methodological in nature, two of which only include the PO-TITE-CRM design in a brief introduction to current methodology before going on to present new Bayesian trial designs \cite{liuBAYESIANDATAAUGMENTATION2013, wheelerBayesianModelfreeApproach2019}. The other three papers were authored by Wages. The first of which details practical considerations and specifications for the PO-CRM design, the TITE variant is only cited as the source of an example which is being used \cite{wagesSpecificationsContinualReassessment2013}. One paper presents an R package 'pocrm' \cite{wagesPocrmRpackagePhase2013}, the package is only capable of analysing the PO-CRM design, similarly, the TITE variant is only referenced as it illustrates the issue of partial ordering. The last methodological paper by Wages et al. \cite{wagesPracticalDesignsPhase2016} presents three different methods for phase \RN{1} studies of drug combinations one of which is the PO-CRM however, PO-TITE-CRM is only mentioned as an extension to this design. A key message in this paper is the fact that novel methodologies are constantly emerging but are rarely implemented in practice. The last paper is a protocol paper that is investigating a combination of treatments however, it is only escalating dose in one of the drugs \cite{lesueurPhaseIIaStudy2019}. The PO-TITE-CRM paper is cited but it appears as if another variant of the TITE-CRM is being used. This is just a brief review of the current literature but it seems that the PO-TITE-CRM has rarely been used or discussed since its inception. 
+Wages et al. \cite{wagesContinualReassessmentMethod2011, wagesUsingTimetoeventContinual2013} further developed their work on the PO-CRM to deal with late-onset toxicities by implementing a TITE component. This trial design, referred to as the time-to-event continual reassessment method in the presence of partial orders (PO-TITE-CRM) by the authors, was chosen to be used in ADePT-DDR. A search of PubMed, conducted on the 25th of July 2020, found six articles that had cited the PO-TITE-CRM design by Wages et al. \cite{wagesUsingTimetoeventContinual2013}. Five of these papers were methodological in nature, two of which only include the PO-TITE-CRM design in a brief introduction to current methodology before going on to present new Bayesian trial designs \cite{liuBAYESIANDATAAUGMENTATION2013, wheelerBayesianModelfreeApproach2019}. The other three papers were authored by Wages. The first of which details practical considerations and specifications for the PO-CRM design, the TITE variant is only cited as the source of an example which is being used \cite{wagesSpecificationsContinualReassessment2013}. One paper presents an R package 'pocrm' \cite{wagesPocrmRpackagePhase2013, wagesPocrmDoseFinding2019}, the package is only capable of analysing the PO-CRM design, similarly, the TITE variant is only referenced as it illustrates the issue of partial ordering. The last methodological paper by Wages et al. \cite{wagesPracticalDesignsPhase2016} presents three different methods for phase \RN{1} studies of drug combinations one of which is the PO-CRM however, PO-TITE-CRM is only mentioned as an extension to this design. A key message in this paper is the fact that novel methodologies are constantly emerging but are rarely implemented in practice. The last paper is a protocol paper that is investigating a combination of treatments however, it is only escalating dose in one of the drugs \cite{lesueurPhaseIIaStudy2019}. The PO-TITE-CRM paper is cited but it appears as if another variant of the TITE-CRM is being used. This is just a brief review of the current literature but it seems that the PO-TITE-CRM has rarely been used or discussed since its inception. 
 
 Section \ref{section2.2} will detail how the PO-TITE-CRM works. Section \ref{section2.3} discusses the justification for implementing the design into the ADePT-DDR trial and our experiences doing so.  
 
@@ -111,13 +111,14 @@ The intended use of this design is for dose-finding in combinations of therapies
 
 A two-stage PO-TITE-CRM will be used to find the TD25 of AZD6783. This will be determined by dose-limiting toxicities evaluated by Common Terminology Criteria for Adverse Events (CTCAE) v5.0 and Radiation Therapy Oncology Group (RTOG) late toxicity score. The binary DLT events are pre-defined by a variety of grade 3-4 adverse events notably, haematological, cardiovascular and gastrointestinal/hepatic toxicities as well as significant non-haematological events and specific treatment-related toxicities. DLTs will be monitored for the duration of treatment (seven weeks) and up to a year post-treatment. 
 
+
+A maximum of 60 patients will be recruited for the dose-finding aspect of this trial and up to 20 patients as controls. Controls will be utilised to make comparisons for secondary outcomes such as survival and efficacy. Cohorts of three patients will be recruited and assigned to dose levels chosen by the PO-TITE-CRM. Controls will be recruited in the interim period between the recruitment of the third patient in a cohort and the completion of the minimum follow-up period.    
+
 %-----------------------------------
 %	SUBSECTION 3.1
 %-----------------------------------
-\subsection{Trial Specification}
+\subsection{Partial Ordering in Practice}
 \label{section2.3.1}%first number is the chapter number, second number is section number, third is subsection etc..
-
-A maximum of 60 patients will be recruited for the dose-finding aspect of this trial and up to 20 patients as controls. Controls will be utilised to make comparisons for secondary outcomes such as survival and efficacy. Cohorts of three patients will be recruited and assigned to dose levels chosen by the PO-TITE-CRM. Controls will be recruited in the interim period between the recruitment of the third patient in a cohort and the completion of the minimum follow-up period.    
 
 Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling 70 Gy in 35 fractions over seven weeks. For the dose-finding aspect we investigate six doses of AZD6783 detailed in table \ref{tab_adept:AZD_dose_levels}. Treatment dose and duration to be selected for dose level 3 will be determined based on a combination of data observed, adverse events and compliance. The issue of partial ordering stems from dose levels 2a and 2b, which can be seen in Figure \ref{fig_adept:AZD_dose_levels}. The increased duration of 2a and increased dose of 2b mean they are both more toxic than dose level 1. However, when comparing 2a and 2b it is unknown whether the increase in duration or dose will be more toxic. Hence there are two possible orderings for ADePT-DDR. 
 
@@ -160,20 +161,55 @@ Typically CRM designs begin by testing the first patient, or cohort, at the prio
 
 Information elicited from the investigators helped generate prior probabilities of toxicity for each dose level. They believed that dose level 2b would be the TD25 with 2a being less toxic. This was used in conjunction with the getprior function from the dfcrm R package \cite{cheungDfcrmDoseFindingContinual2019} which yielded priors of 0.012, 0.036, 0.084, 0.157, 0.25 and 0.355 for dose levels -1, 0, 1, 2a, 2b and 3 respectively. Prior probabilities are also required for the plausibility of each model and even though the clinicians think that 2b will be more toxic than 2a there is no clear evidence and still a lot of uncertainty. As such it is sensible to assume a plausibility probability of 0.5 for each ordering, implying both orders are equally likely to be the true ordering of these dose levels. 
 
+%-----------------------------------
+%	SUBSECTION 3.2
+%-----------------------------------
+\subsection{The TITE component}
+\label{section2.3.2}%first number is the chapter number, second number is section number, third is subsection etc..
+
+The observation window for this trial will be longer as the combination of radiotherapy with AZD6738 is anticipated to cause late-onset toxicity. The Acute DLT observation period is 84 days (12 weeks) post radiotherapy end with a minimum of 56 days (8 weeks) for the last patient of each cohort. However, patients will continuously be monitored for occurrence of DLT for at least 84 days (12 weeks), i.e. at least 84 days (12 weeks) from the end of radiotherapy. Th full window will last for 365 days (52 weeks).
+
+The TITE component incorporates a weighting contribution for each patient dependent on how long that patient has been evaluable in the study. This allows a patient to be evaluated once they have been observed for the minimum DLT period of 56 days (8 weeks). The weighting at this point is 60\% rising to 80\% at 84 days (12 weeks). A patient will not contribute fully to the model until they have completed 365 days (52 weeks) follow up (or have experienced a DLT at any stage in which case they will be weighted as a whole contribution). Linear weighting functions will be employed for any patient with a length of follow up between these three time points. One weighting function to calculate weight from 56-84 days (8-12 weeks) and another for weights from 84-365 days (12-52 weeks). For the weighting function $w(u;T)$ where $u$ is the time-to-toxicity of patient $j$ and $T$ is the time period, let $t_1, t_2, t_3$ take values 56, 84 and 365 respectively such that $T \in (t_1, t_2, t_3)$. Then for $t_1 \leq u \leq t_3$
+\begin{equation}
+w(u;T) = 0.6 + 0.2\frac{min(u-t_1,t_2 - t_1)}{t_2 - t_1} + 0.2\frac{max(0, u - t_2)}{t_3-t_2}.
+\end{equation} 
+All patients will have a minimum weight of 60\% as that is the prescribed weighting to the  minimum follow up period before dose escalation/de-escalation decisions can be made. For each additional week the patient is observed, without a DLT occurring, between weeks 8 and 12 their weighting increases by 5\%. Similarly for each week between 12 and 52 weeks, without a DLT, weighting increases by 0.5\%.
+
+The TITE-CRM originally presented by Cheung and Chappel \cite{cheungSequentialDesignsPhase2000} did not incorporate a minimum follow-up period and their design allowed for the continual recruitment of patients whenever they became available. There are some practical considerations which make this infeasible. The model would need to be run each time a new patient entered the study which requires statistical input hence the introduction of cohorts. Clinicians may also have safety concerns if we see rapid recruitment at the start of the trial and the model keeps escalating so we impose a minimum follow-up period. Initially this was set at 12 weeks (at 80\% weighting) however, statisticians AP and PG  pointed out that dose escalation/de-escalation decisions would have to take place 19 weeks (7 weeks treatment and 12 weeks follow-up) after recruitment of the third patient in the cohort. Dependent on the recruitment rates this could extend the duration of the trial and negates the benefits of using a TITE design. The investigators aslo agreed this was too long and settled on lowering this period to 8 weeks (at 60\% weighting) whilst also including the original 12 week weighting of 80\%.
+
 %Additional rules were implemented into the design for safety and early stopping.  
 %Additional 
 %
 %Further considerations were made
 
-The observation window for this trial will be longer as the combination of radiotherapy with AZD6738 is anticipated to cause late-onset toxicity. The Acute DLT observation period is 84 days (12 weeks) post radiotherapy end with a minimum of 56 days (8 weeks) for the last patient of each cohort. However, patients will continuously be monitored for occurrence of DLT for at least 84 days (12 weeks), i.e. at least 84 days (12 weeks) from the end of radiotherapy.
+%-----------------------------------
+%	SUBSECTION 3.3
+%-----------------------------------
+\subsection{Stopping Rules}
+\label{section2.3.3}%first number is the chapter number, second number is section number, third is subsection etc..
 
-The TITE component incorporates a weighting contribution for each patient dependent on how long that patient has been evaluable in the study. This allows a patient to be evaluated once they have been observed for the minimum DLT period of 56 days (8 weeks). The weighting at this point is 60\% rising to 80\% at 12 weeks. A patient will not contribute fully to the model until they have completed 52 weeks follow up (or have experienced a DLT at any stage in which case they will be weighted as a whole contribution). Linear weighting functions will weighting function to calculate weight from be employed for any patient with a length of follow up between these three time points. One 8-12 weeks and another for weights from 12-52 weeks.\\ 
+A practical modification was included to allow for early stopping of the trial if there is sufficient evidence that the TD has been reached. Sufficient evidence is achieved once 15 patients (five cohorts) have been treated at the same dose level and the model allocates that dose level again to a sixth cohort. This rule evolved from the original designs of the trial which involved 30 patients with a dose expansion cohort to ensure at least 15 patients were treated at the TD. 
+
+Initial simulations highlighted the inadequacy of these design parameters as operating characteristics for various scenarios were poor, specifically in terms of correct TD selection. Clinicians explained the inclusion of the dose expansion cohort was to ensure the dose-finding aspect of the trial did not take a large amount of time whilst also allowing safety to be assessed at the TD. In order to ensure that a reasonable amount of patients would be treated at the TD, the trial wouldn't take longer than necessary and operating characteristics improved, the sample size was increase and this rule was introduced.
+
+A rule was also implemented to allow for early termination of the trial in the case of excess toxicity at the lowest dose. If the posterior probability of DLT at the lowest dose is higher than 0.35 with a probability of 80\% and has been tested the trials safety committee will be alerted and will recommend if the trial should be stopped. As the trial starts at dose level 0, which is not the lowest dose, it is possible for the trial to recommend terminating without ever allocating patients to the lowest dose level. As such it was decided early termination would only occur once at least 3 patients (1 cohort) have been allocated dose level -1. 
+
+%-----------------------------------
+%	SUBSECTION 3.
+%-----------------------------------
+\subsection{Operating Characteristics}
+\label{section2.3.4}%first number is the chapter number, second number is section number, third is subsection etc.. 
+
+Simulations were continually utilised during the design process of the trial to assess how various changes impact the overall performance. These changes to design features such as the sample size, weight function and stopping rules helped inform decisions which led to the final design. The simulations presented in this chapter are based on the finalised design detailed in section \ref{section2.3}. 
+
+Functions from pocrm package in R \cite{wagesPocrmRpackagePhase2013, wagesPocrmDoseFinding2019} were modified in order to perform simulations and conduct the trial. The majority of work involved integrating the TITE component and the stopping rules into the code. In standard CRM designs a binary outcome for toxicity is generated for each patient based on a pre-specified probability of toxicity for the dose they are assigned. Adding the TITE component means the time the toxicity occurs also has to be generated, the simulation must also track this time and incorporate this information into the PO-TITE-CRM model when it needs to make dose allocation decisions for the next cohort. We defined multiple scenarios by adjusting probabilities of toxicities to reflect various possible real life scenarios and assess how the design works.  
+
+Standard scenarios to run are those where each dose level could be the TD and where all dose levels are too toxic. 
 
 \newpage 
 \begin{itemize}
 	\item Finish section 2.3
 	\begin{itemize}
-		\item Stopping rules 
 		\item Operating characteristics - explain why we have two sets 
 	\end{itemize}
 	\item Think of how to split this section up - maybe justification, trial set up 
@@ -186,11 +222,7 @@ The TITE component incorporates a weighting contribution for each patient depend
 \end{itemize}
 
 
-%-----------------------------------
-%	SUBSECTION 3.2
-%-----------------------------------
-\subsection{Operating Characteristics}
-\label{section2.3.2}%first number is the chapter number, second number is section number, third is subsection etc..
+
 
 %-----------------------------------
 %	SUBSECTION 1
