@@ -1,0 +1,705 @@
+---
+title: "ADePT-DDR OC updated stopping rules"
+author: "Amit Patel"
+date: "15/01/2020"
+output: html_document
+  
+---
+
+v0.1 initially created after the inclusion of the new dose level -1. Previous simulations only used 5 dose levels. 
+
+v0.1.2 updated the weight function to allign with the protocol 60% at 8 weeks, 80% at 12 weeks and 100% at 1 year. 
+
+v0.1.3 created to include a rule of no skipping untried doses into the simulatiuons. Also built in a stopping rule for if the lowest dose is too toxic to stop the trial. 
+
+v0.1.4 updated to allign with the finalised protocol. New stopping rule when 15 patients already treated at the recommended dose. 
+
+v0.1.5 stopping rule for too much toxicity was coded wrong re-calculated to use asymptotic variance 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(pocrm)
+library(kableExtra)
+library(knitr)
+library(dplyr)
+
+titepocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                           tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+{
+  
+  sim <- sim1 <- apred <- lik <- pord <- ord <- ahat <- rpred <- next.lev <- n1 <- N <- NULL
+  d <- ncol(alpha)
+  s <- nrow(alpha)
+  if (nsim > 1) {
+    lpocrm <- function(r, alpha, prior.o, x0, stop, n, theta) {
+      if (is.vector(alpha)) 
+        alpha = t(as.matrix(alpha))
+      nord.tox = nrow(alpha)
+      mprior.tox = prior.o
+      # Function for calculating the likelihood
+      bcrml <- function(a, p1, y, w) {
+        lik = 0
+        for (j in 1:length(y)) {
+          lik = lik + y[j] * a * log(w[j]*p1[j]) + 
+            (1 - y[j]) * log((1 - w[j]*p1[j]^a))
+        }
+        return(lik)
+      }
+      # specifies the number of doses 
+      ncomb = ncol(alpha)
+      # Initialise empty vectors for use later on 
+      # y (number of dlt's per dose), npts(number of patients per dose)
+      y = npts = ptox.hat = numeric(ncomb)
+      # The dose level to be selected (add 1 to indicate position to stop)
+      comb.select = numeric(ncomb + 1)
+      # Starting dose taken from first element of the dose escalation scheme
+      comb.curr = x0[1]
+      stoprule = 0
+      # Specifies the dose escelation scheme 
+      stage1 <- c(x0, rep(ncol(alpha), n - length(x0)))
+      # Counter for the number of cohorts
+      cohort.count <- 1
+      # Empty vectors to store dose recived and if dlt was observed
+      dose <- dlt <- dlt_time <- fu <- tox <- weights <- vector()
+      # Time to recruit new patients
+      rectime <- obswin/recrate
+    
+      while(length(tox) < n){
+        # Takes draws from a binomial distribution to determine if patients in            the cohort had a toxic outcome
+        cohort_tox <- stats::rbinom(n = cohort, size = 1, prob = r[comb.curr])
+        # Dummy variable to store DLT which will be updated once the time for           DLT has passed
+        cohort_dlt <- rep(0, cohort)
+        # Patients in the same cohort recieve the same dose
+        cohort_comb <- rep(comb.curr, cohort)
+        # Follow up time based on the time taken to recruit a patient
+        # First patient assumed to be recruited instantly
+        # Add the min fu time to indicate when analysis is done
+        cohort_fu <- (rectime*(cohort-1)) - (rectime * 0:(cohort - 1)) + minfu
+        # Time of DLT is recorded and set to be at any time during the obswin
+        cohort_dlt_time <- vector()
+         for (i in 1:cohort) {
+          if(cohort_tox[i] == 0){ 
+            cohort_dlt_time[i] <- NA  
+          }
+          else {
+            cohort_dlt_time[i] <- runif(1,0, obswin)
+          }
+        } 
+        # Stores the time DLT occurs for new cohort
+        dlt_time <- c(dlt_time, cohort_dlt_time)
+        # Stores new cohorts toxicity 
+        tox <- c(tox, cohort_tox)
+        # Stores dose level for each new cohort  
+        dose <- c(dose, cohort_comb)
+        # Store dummy dlt for new cohort
+        dlt <- c(dlt, cohort_dlt)
+        # Add on follow up time and recruitment time for previous cohorts
+        fu <- fu + (cohort * rectime) + minfu 
+        # store new cohorts follow up time
+        fu <- c(fu, cohort_fu)
+        # Loop through all the patients who will have a DLT
+        for(i in 1:length(fu)){
+          if(tox[i] == 1){
+            # If the follow up time is greater than the time the dlt was                    determined to occur
+            if(fu[i] >= dlt_time[i]){
+              # Change the follow up time to the obswin to indicate the dlt                   has now happened
+              fu[i] <- obswin
+              # As the dlt has happened it should now be stored for                           calculation in the likelihood
+              dlt[i] <- 1
+            }
+          }
+        }
+        fu <- pmin(fu, obswin)
+        # Calculated weights where the min fu accounts for 60% and is 80% by            window 2
+        for (i in 1:length(fu)) {
+          weights[i] <- 0.6 + 
+                       0.2*(min(win2 - minfu, fu[i]-minfu)/(win2 - minfu))+                          0.2*(max(fu[i]- win2, 0)/(obswin-win2))
+        }
+        # These values are used to calculate patient allocation and %DLT
+        y[comb.curr] = y[comb.curr] + sum(cohort_tox)
+        npts[comb.curr] = npts[comb.curr] + cohort
+        
+        
+        if (sum(dlt) == length(dlt)) {
+          comb.curr <- ifelse(comb.curr == 1, comb.curr, 
+                              comb.curr - 1)
+        }
+        else if (sum(dlt) == 0) {
+          comb.curr <- ifelse(comb.curr == ncomb, comb.curr, 
+                              stage1[cohort.count + 1])
+        }
+        else {
+          break
+        }
+        
+        # Stopping rule ends stage 1 when the same dose is recommended to a sixth cohort. As this follows the escalation scheme only stops when the max dose is prescribed to sixth cohort. 
+        if(sum(dose == comb.curr) == mtd.lim ){
+          break
+        }
+
+        
+        cohort.count <- cohort.count +1
+        
+      } 
+      
+      
+      while (length(dlt) <= n) {
+        if (sum(dlt) == 0 ) {
+          stop = 0
+          break
+        }
+        else {
+          like.tox = est.tox = rep(0, nord.tox)
+          for (k in 1:nord.tox) {
+            beta <- alpha[k,][dose[1:length(dose)]]
+            est.tox[k] <- optimize(f = bcrml, interval = c(0,500), 
+                                   p1 = beta, y = dlt, w = weights, 
+                                   maximum = T)$maximum
+            like.tox[k] <- optimize(f = bcrml, interval = c(0,500), 
+                                    p1 = beta, y = dlt, w = weights,
+                                    maximum = T)$objective
+          }
+          
+          postprob.tox = (exp(like.tox) * mprior.tox)/sum(exp(like.tox) * mprior.tox)
+          
+          
+          if (nord.tox > 1) {
+            mtox.sel = which.is.max(round(postprob.tox,8))
+          }
+          else {
+            mtox.sel = 1
+          }
+          ptox.hat = alpha[mtox.sel, ]^est.tox[mtox.sel]
+          loss = abs(ptox.hat - theta)
+          comb.curr = which.is.max(round(-loss,8))
+          # obtain the last dose level from the data
+          last.lev <- tail(dose, n = 1) 
+          if (comb.curr %in% dose | comb.curr < last.lev){
+    # If the next recommended levl has already been tested or is lower than  
+    # the current dose level than recommend next level
+              comb.curr <- comb.curr
+          }
+           else {
+             comb.curr <- max(dose) + 1
+  }
+          
+          if (npts[comb.curr] == stop) {
+            stoprule <- 0
+            break
+          }
+          # Calculate asymptotic variance 
+          beta <- alpha[mtox.sel,][dose]
+          inverse.var <- 0
+          for (i in 1:length(dlt)) { 
+            inverse.var <- inverse.var + ((1-dlt[i])*(weights[i]*beta[i]^est.tox[mtox.sel])*(log((weights[i]*beta[i])))^2)/(1-((weights[i]*beta[i]^est.tox[mtox.sel])))^2
+          }
+          
+          post.alpha.mean <- est.tox[mtox.sel]
+          post.alpha.var <- 1/inverse.var
+          post.alpha.samp <- rnorm(n = 10000, mean = post.alpha.mean, 
+                                   sd = sqrt(post.alpha.var))
+          post.prob.tox.samp <- alpha[mtox.sel,1]^post.alpha.samp
+          prob.too.toxic <- mean(post.prob.tox.samp > tox.lim)
+          
+          # print(dose)
+          # print(prob.too.toxic)
+          # print(dlt)
+          
+          if(is.na(prob.too.toxic)) {
+            prob.too.toxic <- 1
+          }
+          
+          # stopping rule for when lowest dose is too toxic AND lowest dose has been tested ptox.hat[1] > 0.5 & 1 %in% dose
+          # 
+          # stopping rule if dose is being recommended for a xth time
+          if (length(dlt) == n |(prob.too.toxic > tox.cert) & 1 %in% dose |  sum(dose == comb.curr) == mtd.lim) {
+            stoprule = 0
+            
+            # once all patients recruited calculate likelihoods at max weight
+            like.tox = est.tox = rep(0, nord.tox)
+            for (k in 1:nord.tox) {
+              
+              #set all the weights at 1
+              weights <- rep(1, length(dlt))
+              #ensures that all those predicted to have toxic event is included in dlt data
+              # as we are assuming full follow up once the last patients are recruited
+              dlt <- tox
+              beta <- alpha[k,][dose[1:length(dose)]]
+              est.tox[k] <- optimize(f = bcrml, interval = c(0,500), 
+                                     p1 = beta, y = dlt, w = weights, 
+                                     maximum = T)$maximum
+              like.tox[k] <- optimize(f = bcrml, interval = c(0,500), 
+                                      p1 = beta, y = dlt, w = weights,
+                                      maximum = T)$objective
+            }
+            
+            postprob.tox = (exp(like.tox) * mprior.tox)/sum(exp(like.tox) * mprior.tox)
+            
+            
+            if (nord.tox > 1) {
+              mtox.sel = which.is.max(round(postprob.tox,8))
+            }
+            else {
+              mtox.sel = 1
+            }
+            ptox.hat = alpha[mtox.sel, ]^est.tox[mtox.sel]
+            loss = abs(ptox.hat - theta)
+            comb.curr = which.is.max(round(-loss,8))
+            
+            
+            break
+          }
+          
+          
+          else {
+            # Takes draws from a binomial distribution to determine if patients in the cohort had a toxic outcome
+            cohort_tox <- stats::rbinom(n = cohort, size = 1, prob = r[comb.curr])
+            cohort_dlt <- rep(0, cohort)
+            # Patients in the same cohort recieve the same dose
+            cohort_comb <- rep(comb.curr, cohort)
+            # Follow up time based on the time taken to recruit a patient
+            # First patient assumed to be recruited instantly
+            # Add the min fu time to indicate when analysis is done
+            cohort_fu <- (rectime*(cohort-1))-(rectime * 0:(cohort - 1))+minfu
+            # Time of DLT is recorded and set between the time the patient has been followed up and the remaining observation window
+            cohort_dlt_time <- vector()
+            for (i in 1:cohort) {
+              if(cohort_tox[i] == 0){ 
+                cohort_dlt_time[i] <- NA  
+              }
+              else {
+                cohort_dlt_time[i] <- runif(1,0, obswin)
+              }
+            } 
+            # Stores the time DLT occurs for new cohort
+            dlt_time <- c(dlt_time, cohort_dlt_time)
+            # Stores new cohorts toxicity 
+            tox <- c(tox, cohort_tox)
+            # Stores dose level for each new cohort  
+            dose <- c(dose, cohort_comb)
+            # Store dummy dlt for new cohort
+            dlt <- c(dlt, cohort_dlt)
+            # Add on follow up time and recruitment time for previous cohorts
+            fu <- fu + (cohort * rectime) + minfu 
+            # store new cohorts follow up time
+            fu <- c(fu, cohort_fu)
+            for(i in 1:length(fu)){
+              if(tox[i] == 1){
+                if(fu[i] >= dlt_time[i]){
+                  fu[i] <- obswin
+                  dlt[i] <- 1
+                }
+              }
+            }
+            
+            fu <- pmin(fu, obswin)
+            # Calculated weights where the min fu accounts for 60% and 80% by win2
+        for (i in 1:length(fu)) {
+          weights[i] <- 0.6 + 
+                       0.2*(min(win2 - minfu, fu[i]-minfu)/(win2 - minfu))+                          0.2*(max(fu[i]- win2, 0)/(obswin-win2))
+        }
+            
+            y[comb.curr] = y[comb.curr] + sum(cohort_tox)
+            npts[comb.curr] = npts[comb.curr] + cohort
+          }
+        }
+      }
+      if (stoprule == 0) {
+        if (!exists("prob.too.toxic")){prob.too.toxic <- 0}
+        if((prob.too.toxic > tox.cert)& 1 %in% dose){
+              comb.select[ncomb+1] <- 1
+        }
+        else {
+         comb.select[comb.curr] = comb.select[comb.curr] + 1
+
+        }
+      }
+      
+      # if(4 %in% dose){print(dose)
+      #   print(dlt)}
+      return(list(MTD.selection = comb.select, tox.data = y, 
+                  patient.allocation = npts))
+    }
+    
+    
+    
+
+  }
+  lpocrm.sim <- function(nsim) {
+    ncomb = length(r)
+    y <- npts <- matrix(nrow = nsim, ncol = ncomb)
+    comb.select <- matrix(nrow = nsim, ncol = ncomb + 1)
+    trialsize <- rep(0, nsim)
+    nstop = 0
+    for (i in 1:nsim) {
+      result <- lpocrm(r, alpha, prior.o, x0, stop, n, 
+                       theta)
+      comb.select[i, ] = result$MTD.selection
+      y[i, ] = result$tox.data
+      npts[i, ] = result$patient.allocation
+      trialsize[i] = sum(result$patient.allocation)
+    }
+    return(list(true.prob = r, 
+                MTD.selection = round(colMeans(comb.select),2),
+                patient.allocation = 100* round(colMeans(npts)/mean(trialsize),2), 
+                percent.DLT = sum(colMeans(y))/mean(trialsize), 
+                mean.n = mean(trialsize), 
+                mean.n.perdose = colMeans(npts),
+                acceptable = sum(colMeans(comb.select)[which(round(abs(r - theta), 2) <= tox.range)])))
+  }
+  if (nsim == 1) {
+    twostgcrm(r, x0, stop, n, theta)
+  }
+  else {
+    lpocrm.sim(nsim)
+  }
+}
+
+```
+
+# Stop when 15 at recommended dose 
+## Enter function specifications 
+
+N.B These are not all the required specifications for the simulation function to run, just those which won't be altered in all the scenarios simulated.
+
+```{r}
+# Specifiy the possible orderings.
+orders<-matrix(nrow=2,ncol=6)
+orders[1,]<-c(1,2,3,4,5,6)
+orders[2,]<-c(1,2,3,5,4,6)
+
+# Specify the skeleton values.
+skeleton <- getprior(0.05,0.25,5,6)
+skeleton
+# Initial guesses of toxicity probabilities for each ordering.
+alpha <- getwm(orders,skeleton)
+# We consider all orders to be equally likely prior to the study.
+prior.o <- rep(1/2,2)
+# Initial escalation scheme.
+x0 <- c(2,3,4,5,6)
+# Number of patients used to define stopping rule
+stop <- 61
+# Maximum sample size.
+n <- 60
+# The target toxicity rate
+theta <- 0.25
+# Number of simulations
+nsim <- 2000
+# Definition of acceptable DLT rates
+tox.range<-0.05 
+# The cohort size
+cohort <- 3
+# The Observation window specified in days add 49 due too 7 week treatment period
+obswin <- 365 + 49
+# The minimum follow up period specified in days
+minfu <- 56 + 49
+# The second observation window in days
+win2 <- 84 +49 
+# The number of patients recruited per observation window
+recrate <- 12
+# The number of patients we need to see at a dose to stop the trial early
+mtd.lim <- 15
+# The value for which the estimated toxicity at the lowest dose is not to exceed
+tox.lim <- 0.35
+# The probability value to be used when assessing the certainty required that toxicty at the specificed dose exceeds tox_lim
+tox.cert <- 0.8
+```
+
+
+## Initial Simulations
+
+### MTD at dose -1
+
+```{r}
+
+# True toxicity rates of Scenario 1
+r <- c(0.25, 0.40, 0.45, 0.50, 0.55, 0.60)
+set.seed(10)
+fit_s1 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+fit_s1
+```
+
+### MTD at dose 0
+
+```{r}
+
+# True toxicity rates of scenario 2
+r <- c(0.12 ,0.25, 0.40, 0.45, 0.50, 0.55)
+set.seed(10)
+fit_s2 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+fit_s2
+
+```
+
+###  MTD at dose 1
+
+```{r}
+# True toxicity rates of scenario 3
+r <- c(0.09 ,0.12 ,0.25, 0.40, 0.45, 0.50)
+set.seed(10)
+fit_s3 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+fit_s3
+
+```
+
+### MTD at dose 2a
+
+```{r}
+# True toxicity rates of Scenario 4
+r <- c(0.06, 0.09, 0.12, 0.25, 0.40, 0.45)
+set.seed(10)
+fit_s4 <-titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+fit_s4
+```
+
+### MTD at dose 2b
+
+```{r}
+# True toxicity rates of scenario 5
+r <- c(0.03, 0.06, 0.09, 0.12 ,0.25, 0.40)
+set.seed(10)
+fit_s5 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+fit_s5
+
+```
+
+### MTD at dose 3
+
+```{r}
+# True toxicity rates of scenario 6
+r <- c(0.01, 0.03, 0.06, 0.09, 0.12 ,0.25)
+set.seed(10)
+fit_s6 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+fit_s6
+
+```
+
+### Equal steps
+```{r}
+# True toxicity rates of scenario 7
+r <- c(0.05, 0.10, 0.15, 0.20 ,0.25 ,0.30)
+set.seed(10)
+fit_s7 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+fit_s7
+
+```
+
+### All too toxic 
+```{r}
+# True toxicity rates when all too toxic
+r <- c(0.50, 0.60, 0.65, 0.70 ,0.75 ,0.8)
+set.seed(10)
+fit_s8 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+fit_s8
+
+```
+
+
+```{r}
+
+OC_tab <- 
+  rbind(round(skeleton,2),
+        fit_s1$true.prob, fit_s1$MTD.selection, fit_s1$patient.allocation,           round(fit_s1$mean.n.perdose,2), 
+        fit_s2$true.prob, fit_s2$MTD.selection, fit_s2$patient.allocation,
+        round(fit_s2$mean.n.perdose,2),
+        fit_s3$true.prob, fit_s3$MTD.selection, fit_s3$patient.allocation,
+        round(fit_s3$mean.n.perdose,2),
+        fit_s4$true.prob, fit_s4$MTD.selection, fit_s4$patient.allocation,
+        round(fit_s4$mean.n.perdose,2),
+        fit_s5$true.prob, fit_s5$MTD.selection, fit_s5$patient.allocation,
+        round(fit_s5$mean.n.perdose,2),
+        fit_s6$true.prob, fit_s6$MTD.selection, fit_s6$patient.allocation,
+        round(fit_s6$mean.n.perdose,2),
+        fit_s7$true.prob, fit_s7$MTD.selection, fit_s7$patient.allocation,
+        round(fit_s7$mean.n.perdose,2),
+        fit_s8$true.prob, fit_s8$MTD.selection, fit_s8$patient.allocation,
+        round(fit_s8$mean.n.perdose,2))
+
+temp <- (OC_tab[,7]) 
+a <- 1:33
+a <- a[-c(3,7,11,15,19,23,27,31)]
+temp[a] <- " " 
+OC_tab[,7] <- temp
+colnames(OC_tab)<- c("-1", "0", "1", "2a", "2b", "3", "Stop")
+OC_tab <- as.matrix(cbind(c("Scenario", rep("1: MTD @-1",4), rep("2: MTD @0",4), rep("3: MTD @1",4), rep("4: MTD @2a",4), rep("5: MTD @2b",4),   rep("6: MTD @3",4), rep("7: Equal steps in DLT rate",4), rep("8: All  toxic",4)), c("Prior DLT", rep(c("True DLT rate", "P(select)", "% of patients", "Mean number of patients"),8)), OC_tab))
+OC_tab
+```
+
+
+
+```{r, comment=NA}
+code <-kable(OC_tab, "latex", booktabs = T, linesep = "", align = "c", 
+            caption = " Operating Characteristics of the two-stage PO TITE-CRM (using true DLT rates which imply dose level 2b is more toxic than 2a) in eight different scenarios based on 2000 simulated trials of 60 patients in cohorts of three. Definitions: DLT: Dose-limiting toxicity. P(select):
+Probability of selecting a dose as the MTD.") %>%
+        kable_styling(latex_options = c("striped", "HOLD_position"),
+                      position = "center",
+                      stripe_index = c(2:5, 10:13, 18:21, 26:29)) %>% 
+        add_header_above(c(" " = 2,"Dose Levels" = 6)) %>% 
+        collapse_rows(columns = 1:2, latex_hline = "major",  valign = "middle") 
+
+cat(code)
+
+```
+
+
+
+## Simulations for model 2 
+
+### MTD at dose -1
+
+```{r}
+
+# True toxicity rates of Scenario 1
+r <- c(0.25, 0.40, 0.45, 0.55, 0.50, 0.60)
+set.seed(10)
+fit2_s1 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+fit2_s1
+```
+
+### MTD at dose 0
+
+```{r}
+
+# True toxicity rates of scenario 2
+r <- c(0.12 ,0.25, 0.40, 0.50, 0.45, 0.55)
+set.seed(10)
+fit2_s2 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+fit2_s2
+
+```
+
+###  MTD at dose 1
+
+```{r}
+# True toxicity rates of scenario 3
+r <- c(0.09 ,0.12 ,0.25, 0.45, 0.40, 0.50)
+set.seed(10)
+fit2_s3 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+fit2_s3
+
+```
+
+### MTD at dose 2a
+
+```{r}
+# True toxicity rates of Scenario 4
+r <- c(0.06, 0.09, 0.12, 0.25, 0.15, 0.45)
+#r <- c(0.03, 0.06, 0.09, 0.25, 0.12, 0.40) # new for presentation
+set.seed(10)
+fit2_s4 <-titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+fit2_s4
+```
+
+### MTD at dose 2b
+
+```{r}
+# True toxicity rates of scenario 5
+r <- c(0.03, 0.06, 0.09, 0.35 ,0.25, 0.40)
+#r <- c(0.03, 0.06, 0.12, 0.4 ,0.25, 0.45) # new for presentation
+set.seed(10)
+fit2_s5 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+fit2_s5
+
+```
+
+### MTD at dose 3
+
+```{r}
+# True toxicity rates of scenario 6
+r <- c(0.01, 0.03, 0.06, 0.12, 0.09 ,0.25)
+set.seed(10)
+fit2_s6 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+fit2_s6
+
+```
+
+### Equal steps
+```{r}
+# True toxicity rates of scenario 7
+r <- c(0.05, 0.10, 0.15, 0.25 ,0.20 ,0.30)
+set.seed(10)
+fit2_s7 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+fit2_s7
+
+```
+
+### All too toxic 
+```{r}
+# True toxicity rates when all too toxic
+r <- c(0.5, 0.60, 0.65, 0.75 ,0.70 ,0.8)
+
+set.seed(10)
+fit2_s8 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                        tox.range, cohort, obswin, minfu, win2, recrate,
+                        mtd.lim, tox.lim, tox.cert)
+fit2_s8
+
+```
+
+
+```{r, comment=NA}
+
+OC_tab2 <- 
+  rbind(round(skeleton,2),
+        fit2_s1$true.prob, fit2_s1$MTD.selection, fit2_s1$patient.allocation,           round(fit2_s1$mean.n.perdose,2), 
+        fit2_s2$true.prob, fit2_s2$MTD.selection, fit2_s2$patient.allocation,
+        round(fit2_s2$mean.n.perdose,2),
+        fit2_s3$true.prob, fit2_s3$MTD.selection, fit2_s3$patient.allocation,
+        round(fit2_s3$mean.n.perdose,2),
+        fit2_s4$true.prob, fit2_s4$MTD.selection, fit2_s4$patient.allocation,
+        round(fit2_s4$mean.n.perdose,2),
+        fit2_s5$true.prob, fit2_s5$MTD.selection, fit2_s5$patient.allocation,
+        round(fit2_s5$mean.n.perdose,2),
+        fit2_s6$true.prob, fit2_s6$MTD.selection, fit2_s6$patient.allocation,
+        round(fit2_s6$mean.n.perdose,2),
+        fit2_s7$true.prob, fit2_s7$MTD.selection, fit2_s7$patient.allocation,
+        round(fit2_s7$mean.n.perdose,2),
+        fit2_s8$true.prob, fit2_s8$MTD.selection, fit2_s8$patient.allocation,
+        round(fit2_s8$mean.n.perdose,2))
+
+temp <- (OC_tab2[,7]) 
+a <- 1:33
+a <- a[-c(3,7,11,15,19,23,27,31)]
+temp[a] <- " " 
+OC_tab2[,7] <- temp
+colnames(OC_tab2)<- c("-1", "0", "1", "2a", "2b", "3", "Stop")
+OC_tab2 <- as.matrix(cbind(c("Scenario", rep("9: MTD @-1",4), rep("10: MTD @0",4), rep("11: MTD @1",4), rep("12: MTD @2a",4), rep("13: MTD @2b",4),   rep("14: MTD @3",4), rep("15: Equal steps in DLT rate",4), rep("16: All  toxic",4)), c("Prior DLT", rep(c("True DLT rate", "P(select)", "% of patients", "Mean number of patients"),8)), OC_tab2))
+OC_tab2
+```
+
+
+
+```{r, comment=NA}
+code <-kable(OC_tab2, "latex", booktabs = T, linesep = "", align = "c", 
+            caption = " Operating Characteristics of the two-stage PO TITE-CRM (using true DLT rates which imply dose level 2a is more toxic than 2b) in eight different scenarios based on 2000 simulated trials of 60 patients in cohorts of three. Definitions: DLT: Dose-limiting toxicity. P(select):
+Probability of selecting a dose as the MTD.") %>%
+        kable_styling(latex_options = c("striped", "HOLD_position"),
+                      position = "center",
+                      stripe_index = c(2:5, 10:13, 18:21, 26:29)) %>% 
+        add_header_above(c(" " = 2,"Dose Levels" = 6)) %>% 
+        collapse_rows(columns = 1:2, latex_hline = "major",  valign = "middle") 
+
+cat(code)
+
+```
+
+```{r}
+save.image(file = 'ADePT-DDR_OC.RData')
+```
+

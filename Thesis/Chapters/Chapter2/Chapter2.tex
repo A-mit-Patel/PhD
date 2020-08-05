@@ -202,9 +202,178 @@ A rule was also implemented to allow for early termination of the trial in the c
 
 Simulations were continually utilised during the design process of the trial to assess how various changes impact the overall performance. These changes to design features such as the sample size, weight function and stopping rules helped inform decisions which led to the final design. The simulations presented in this chapter are based on the finalised design detailed in section \ref{section2.3}. 
 
-Functions from pocrm package in R \cite{wagesPocrmRpackagePhase2013, wagesPocrmDoseFinding2019} were modified in order to perform simulations and conduct the trial. The majority of work involved integrating the TITE component and the stopping rules into the code. In standard CRM designs a binary outcome for toxicity is generated for each patient based on a pre-specified probability of toxicity for the dose they are assigned. Adding the TITE component means the time the toxicity occurs also has to be generated, the simulation must also track this time and incorporate this information into the PO-TITE-CRM model when it needs to make dose allocation decisions for the next cohort. We defined multiple scenarios by adjusting probabilities of toxicities to reflect various possible real life scenarios and assess how the design works.  
+Functions from pocrm package in R \cite{wagesPocrmRpackagePhase2013, wagesPocrmDoseFinding2019} were modified in order to perform simulations and conduct the trial. The majority of work involved integrating the TITE component and the stopping rules into the code. In standard CRM designs a binary outcome for toxicity is generated for each patient based on a pre-specified true DLT rates for the dose they are assigned. Adding the TITE component means the time the toxicity occurs also has to be generated, the simulation must also track this time and incorporate this information into the PO-TITE-CRM model when it needs to make dose allocation decisions for the next cohort. We defined multiple scenarios to reflect various real life possibilities in order to assess the designs performance.  
 
-Standard scenarios to run are those where each dose level could be the TD and where all dose levels are too toxic. 
+Standard scenarios to run involve adjusting the true DLT rates to reflect each dose being the TD25. For each of these we calculate the probability of selecting each dose as the TD25. It would be expected the dose with the highest probability of being selected has its true DLT rate set at 25\% to match the target rate. A high probability of selection for the correct dose implies the design works well in the specified scenario. Additional characteristics such as the average number of patients at each dose level are also investigated. This can be used to look at how many patients may potentially be allocated to a toxic dose. It is also necessary to consider performance when all doses are too toxic, here we would want the design to recommend stopping early. Usually the true DLT rates used to define these scenarios abide by the monotonicity assumption. Due to the partial ordering we consider scenarios in which the true DLT rates follow both orders. For trials with a large amount of orders it may be unfeasible to run so many simulations. However, as ADePT-DDR only has two orders we explored all scenarios for each ordering.
+
+Table \ref{tab_adept:OCorder1} details simulations of eight scenarios to test the performance of the PO-TITE-CRM design using true DLT rates which reflect the first ordering. We analyse scenarios where each dose is the TD25 (scenarios 1-6) and when all doses are too toxic(scenario 8). Additionally, we also investigate performance under conditions where the probability of DLT is fairly similar between doses (scenario 7). This is a notoriously difficult circumstance for CRM designs to deal with as the limited number of patients and events at each dose make it hard to accurately estimate toxicity probabilities if they are similar. Simulation results for ordering 2 are shown in Table \ref{tab_adept:OCorder2} where dose level 2a is considered more toxic than 2a. This is achieved by altering the true DLT rates so 2b has a lower probability of DLT compared to 2a.
+
+ 
+\begin{table}[H] % OC for order 1 
+	
+	\caption[Operating Characteristics for ordering 1]{\label{tab_adept:OCorder1} Operating Characteristics of the two-stage PO-TITE-CRM (with true DLT rates that imply 2b is more toxic than 2a) based on 2000 simulated trials. Definitions: DLT: Dose-limiting toxicity. P(select):
+	Probability of selecting a dose as the TD25.}
+	\centering
+	\begin{singlespace}
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}[t]{ccccccccc}
+			\toprule
+			\multicolumn{2}{c}{ } & \multicolumn{6}{c}{Dose Levels} \\
+			\cmidrule(l{3pt}r{3pt}){3-8}
+			&  & -1 & 0 & 1 & 2a & 2b & 3 & Stop\\
+			\midrule
+			Scenario & Prior DLT & 0.01 & 0.04 & 0.08 & 0.16 & 0.25 & 0.35 & \\
+			\cmidrule{1-9}
+			\rowcolor{gray!6}   & True DLT rate & \textbf{0.25} & 0.4 & 0.45 & 0.5 & 0.55 & 0.6 & \\
+			
+			\rowcolor{gray!6}   & P(select) & \textbf{0.62} & 0.19 & 0.05 & 0 & 0 & 0 & 0.12\\
+			
+			\rowcolor{gray!6}   & \% of patients & \textbf{39} & 32 & 21 & 6 & 2 & 0 & \\
+			
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 1: TD25 @-1} & Mean number of patients & \textbf{10.09} & 8.2 & 5.29 & 1.48 & 0.61 & 0.07 & \\
+			\cmidrule{1-9}
+			& True DLT rate & 0.12 & \textbf{0.25} & 0.4 & 0.45 & 0.5 & 0.55 & \\
+			
+			& P(select) & 0.21 & \textbf{0.51} & 0.21 & 0.03 & 0.02 & 0 & 0.02\\
+			
+			& \% of patients & 18 & \textbf{36} & 30 & 10 & 5 & 0 & \\
+			
+			\multirow{-4}{*}{\centering\arraybackslash 2: TD25 @0} & Mean number of patients & 5.46 & \textbf{10.66} & 8.77 & 3.01 & 1.49 & 0.15 & \\
+			\cmidrule{1-9}
+			\rowcolor{gray!6}   & True DLT rate & 0.09 & 0.12 & \textbf{0.25} & 0.4 & 0.45 & 0.5 & \\
+			
+			\rowcolor{gray!6}   & P(select) & 0.02 & 0.2 & \textbf{0.55} & 0.13 & 0.09 & 0.01 & 0\\
+			
+			\rowcolor{gray!6}   & \% of patients & 4 & 20 & \textbf{35} & 22 & 16 & 3 & \\
+			
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 3: TD25 @1} & Mean number of patients & 1.25 & 6.42 & \textbf{11.18} & 7.06 & 4.95 & 1.04 & \\
+			\cmidrule{1-9}
+			& True DLT rate & 0.06 & 0.09 & 0.12 & \textbf{0.25} & 0.4 & 0.45 & \\
+			
+			& P(select) & 0 & 0.02 & 0.23 & \textbf{0.47} & 0.22 & 0.06 & 0\\
+			
+			& \% of patients & 2 & 12 & 21 & \textbf{31} & 24 & 11 & \\
+			
+			\multirow{-4}{*}{\centering\arraybackslash 4: TD25 @2a} & Mean number of patients & 0.55 & 4.05 & 6.9 & \textbf{10.24} & 7.95 & 3.5 & \\
+			\cmidrule{1-9}
+			\rowcolor{gray!6}   & True DLT rate & 0.03 & 0.06 & 0.09 & 0.12 & \textbf{0.25} & 0.4 & \\
+			
+			\rowcolor{gray!6}   & P(select) & 0 & 0 & 0.03 & 0.28 & \textbf{0.43} & 0.26 & 0\\
+			
+			\rowcolor{gray!6}   & \% of patients & 1 & 10 & 13 & 24 & \textbf{28} & 24 & \\
+			
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 5: TD25 @2b} & Mean number of patients & 0.3 & 3.44 & 4.31 & 8.06 & \textbf{9.38} & 8.22 & \\
+			\cmidrule{1-9}
+			& True DLT rate & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 & \textbf{0.25} & \\
+			
+			& P(select) & 0 & 0 & 0 & 0.09 & 0.13 & \textbf{0.78} & 0\\
+			
+			& \% of patients & 0 & 10 & 11 & 18 & 18 & \textbf{42} & \\
+			
+			\multirow{-4}{*}{\centering\arraybackslash 6: TD25 @3} & Mean number of patients & 0.14 & 3.16 & 3.58 & 5.61 & 5.58 & \textbf{13.18} & \\
+			\cmidrule{1-9}
+			\rowcolor{gray!6}   & True DLT rate & 0.05 & 0.1 & 0.15 & 0.2 & \textbf{0.25} & 0.3 & \\
+			
+			\rowcolor{gray!6}   & P(select) & 0 & 0.02 & 0.12 & 0.32 & \textbf{0.28} & 0.26 & 0\\
+			
+			\rowcolor{gray!6}   & \% of patients & 2 & 13 & 18 & 26 & \textbf{23} & 19 & \\
+			
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 7: Equal steps in DLT rate} & Mean number of patients & 0.61 & 4.08 & 5.76 & 8.29 & \textbf{7.17} & 5.93 & \\
+			\cmidrule{1-9}
+			& True DLT rate & 0.5 & 0.6 & 0.65 & 0.7 & 0.75 & 0.8 & \\
+			
+			& P(select) & 0.26 & 0 & 0 & 0 & 0 & 0 & \textbf{0.74}\\
+			
+			& \% of patients & 56 & 27 & 15 & 2 & 0 & 0 & \\
+			
+			\multirow{-4}{*}{\centering\arraybackslash 8: All  toxic} & Mean number of patients & 8.55 & 4.12 & 2.33 & 0.28 & 0.03 & 0 & \\
+			\bottomrule
+	\end{tabular}}
+\end{singlespace}
+\end{table}
+
+\begin{table}[H] % OC for order 2
+	
+	\caption[Operating Characteristics for ordering 2]{\label{tab_adept:OCorder2}  Operating Characteristics of the two-stage PO-TITE-CRM (with true DLT rates that imply 2a is more toxic than 2b) based on 2000 simulated trials. Definitions: DLT: Dose-limiting toxicity. P(select): Probability of selecting a dose as the TD25.}
+	\centering
+	\begin{singlespace}
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}[t]{ccccccccc}
+			\toprule
+			\multicolumn{2}{c}{ } & \multicolumn{6}{c}{Dose Levels} \\
+			\cmidrule(l{3pt}r{3pt}){3-8}
+			&  & -1 & 0 & 1 & 2a & 2b & 3 & Stop\\
+			\midrule
+			Scenario & Prior DLT & 0.01 & 0.04 & 0.08 & 0.16 & 0.25 & 0.35 & \\
+			\cmidrule{1-9}
+			\rowcolor{gray!6}   & True DLT rate & \textbf{0.25} & 0.4 & 0.45 & 0.55 & 0.5 & 0.6 & \\
+			
+			\rowcolor{gray!6}   & P(select) & \textbf{0.63} & 0.18 & 0.04 & 0 & 0 & 0 & 0.14\\
+			
+			\rowcolor{gray!6}   & \% of patients & \textbf{41} & 32 & 20 & 5 & 2 & 0 & \\
+			
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 9: TD25 @-1} & Mean number of patients & \textbf{10.4} & 8.23 & 5.07 & 1.28 & 0.46 & 0.04 & \\
+			\cmidrule{1-9}
+			& True DLT rate & 0.12 & \textbf{0.25} & 0.4 & 0.5 & 0.45 & 0.55 & \\
+			
+			& P(select) & 0.21 & \textbf{0.51} & 0.21 & 0.01 & 0.02 & 0 & 0.02\\
+			
+			& \% of patients & 18 & \textbf{36} & 30 & 10 & 6 & 1 & \\
+			
+			\multirow{-4}{*}{\centering\arraybackslash 10: TD25 @0} & Mean number of patients & 5.42 & \textbf{10.61} & 8.83 & 2.83 & 1.74 & 0.18 & \\
+			\cmidrule{1-9}
+			\rowcolor{gray!6}   & True DLT rate & 0.09 & 0.12 & \textbf{0.25} & 0.45 & 0.4 & 0.5 & \\
+			
+			\rowcolor{gray!6}   & P(select) & 0.02 & 0.20 & \textbf{0.53} & 0.10 & 0.14 & 0.01 & 0\\
+			
+			\rowcolor{gray!6}   & \% of patients & 4 & 21 & \textbf{35} & 20 & 17 & 3 & \\
+			
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 11: TD25 @1} & Mean number of patients & 1.38 & 6.71 & \textbf{11.03} & 6.39 & 5.41 & 0.87 & \\
+			\cmidrule{1-9}
+			& True DLT rate & 0.06 & 0.09 & 0.12 & \textbf{0.25} & 0.15 & 0.45 & \\
+			
+			& P(select) & 0 & 0.02 & 0.08 & \textbf{0.42} & 0.34 & 0.14 & 0\\
+			
+			& \% of patients & 1 & 11 & 16 & \textbf{30} & 24 & 18 & \\
+			
+			\multirow{-4}{*}{\centering\arraybackslash 12: TD25 @2a} & Mean number of patients & 0.49 & 3.8 & 5.38 & \textbf{9.87} & 7.98 & 5.86 & \\
+			\cmidrule{1-9}
+			\rowcolor{gray!6}   & True DLT rate & 0.03 & 0.06 & 0.09 & 0.35 & \textbf{0.25} & 0.4 & \\
+			
+			\rowcolor{gray!6}   & P(select) & 0 & 0 & 0.14 & 0.31 & \textbf{0.44} & 0.11 & 0\\
+			
+			\rowcolor{gray!6}   & \% of patients & 1 & 10 & 18 & 30 & \textbf{28} & 13 & \\
+			
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 13: TD25 @2b} & Mean number of patients & 0.25 & 3.47 & 5.98 & 9.84 & \textbf{9.22} & 4.39 & \\
+			\cmidrule{1-9}
+			& True DLT rate & 0.01 & 0.03 & 0.06 & 0.12 & 0.09 & \textbf{0.25} & \\
+			
+			& P(select) & 0 & 0 & 0 & 0.14 & 0.08 & \textbf{0.78} & 0\\
+			
+			& \% of patients & 0 & 10 & 11 & 20 & 16 & \textbf{43} & \\
+			
+			\multirow{-4}{*}{\centering\arraybackslash 14: TD25 @3} & Mean number of patients & 0.11 & 3.11 & 3.48 & 6.03 & 4.9 & \textbf{13.15} & \\
+			\cmidrule{1-9}
+			\rowcolor{gray!6}   & True DLT rate & 0.05 & 0.1 & 0.15 & \textbf{0.25} & 0.2 & 0.3 & \\
+			
+			\rowcolor{gray!6}   & P(select) & 0 & 0.02 & 0.13 & \textbf{0.30} & 0.27 & 0.27 & 0\\
+			
+			\rowcolor{gray!6}   & \% of patients & 2 & 13 & 19 & \textbf{27} & 21 & 18 & \\
+			
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 15: Equal steps in DLT rate} & Mean number of patients & 0.62 & 4.09 & 5.92 & \textbf{8.43} & 6.59 & 5.82 & \\
+			\cmidrule{1-9}
+			& True DLT rate & 0.5 & 0.6 & 0.65 & 0.75 & 0.7 & 0.8 & \\
+			
+			& P(select) & 0.26 & 0 & 0 & 0 & 0 & 0 & \textbf{0.74}\\
+			
+			& \% of patients & 56 & 27 & 15 & 2 & 0 & 0 & \\
+			
+			\multirow{-4}{*}{\centering\arraybackslash 16: All  toxic} & Mean number of patients & 8.54 & 4.05 & 2.28 & 0.25 & 0.03 & 0 & \\
+			\bottomrule
+	\end{tabular}}
+\end{singlespace}
+\end{table}
+
 
 \newpage 
 \begin{itemize}
@@ -220,6 +389,7 @@ Standard scenarios to run are those where each dose level could be the TD and wh
 		\item Dose transition pathways in a TITE setting  
 	\end{itemize}
 \end{itemize}
+
 
 
 
