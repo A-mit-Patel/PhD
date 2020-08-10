@@ -11,4 +11,5 @@
 \contentsline {subsection}{\numberline {2.3.2}The TITE component}{15}{subsection.30}% 
 \contentsline {subsection}{\numberline {2.3.3}Stopping Rules}{16}{subsection.32}% 
 \contentsline {subsection}{\numberline {2.3.4}Operating Characteristics}{17}{subsection.33}% 
-\contentsline {chapter}{Bibliography}{23}{chapter*.36}% 
+\contentsline {section}{\numberline {2.4}Inspection of the operating characteristics}{22}{section.36}% 
+\contentsline {chapter}{Bibliography}{23}{chapter*.37}% 
