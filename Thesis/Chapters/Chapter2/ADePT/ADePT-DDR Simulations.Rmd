@@ -315,11 +315,10 @@ titepocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
 
         }
       }
-      
-      # if(4 %in% dose){print(dose)
-      #   print(dlt)}
+      # Calculate the duration of the trial 
+      duration <- (rectime*(length(dlt)-1))+ obswin
       return(list(MTD.selection = comb.select, tox.data = y, 
-                  patient.allocation = npts))
+                  patient.allocation = npts, duration = duration))
     }
     
     
@@ -330,7 +329,7 @@ titepocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
     ncomb = length(r)
     y <- npts <- matrix(nrow = nsim, ncol = ncomb)
     comb.select <- matrix(nrow = nsim, ncol = ncomb + 1)
-    trialsize <- rep(0, nsim)
+    duration <- trialsize <- rep(0, nsim)
     nstop = 0
     for (i in 1:nsim) {
       result <- lpocrm(r, alpha, prior.o, x0, stop, n, 
@@ -339,11 +338,13 @@ titepocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
       y[i, ] = result$tox.data
       npts[i, ] = result$patient.allocation
       trialsize[i] = sum(result$patient.allocation)
+      duration[i] = result$duration # convert duration to months
     }
     return(list(true.prob = r, 
                 MTD.selection = round(colMeans(comb.select),2),
                 patient.allocation = 100* round(colMeans(npts)/mean(trialsize),2), 
                 percent.DLT = sum(colMeans(y))/mean(trialsize), 
+                months = 12*mean(duration)/365, 
                 mean.n = mean(trialsize), 
                 mean.n.perdose = colMeans(npts),
                 acceptable = sum(colMeans(comb.select)[which(round(abs(r - theta), 2) <= tox.range)])))
@@ -397,7 +398,7 @@ minfu <- 56 + 49
 # The second observation window in days
 win2 <- 84 +49 
 # The number of patients recruited per observation window
-recrate <- 12
+recrate <- 14 # Roughly 1 patient every 30 days
 # The number of patients we need to see at a dose to stop the trial early
 mtd.lim <- 15
 # The value for which the estimated toxicity at the lowest dose is not to exceed
