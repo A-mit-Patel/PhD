@@ -418,7 +418,8 @@ tox.cert <- 0.8
 r <- c(0.25, 0.40, 0.45, 0.50, 0.55, 0.60)
 set.seed(10)
 fit_s1 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
-                        tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+                        tox.range, cohort, obswin, minfu, win2, recrate,
+                        mtd.lim, tox.lim, tox.cert)
 fit_s1
 ```
 

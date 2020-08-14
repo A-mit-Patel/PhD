@@ -28,9 +28,8 @@ applied_titecrmts_sim_v2 <- function (true_tox, prior, target, max_sample_size, 
     }
     ############################################
     if (any(tox == 1)) {
-      fu = (rectime * (length(tox) - 1)) - (rectime * c(0:(length(tox) - 
-                                                             1))) + minfu
-      
+      fu = (rectime * (length(tox) - 1)) - (rectime * c(0:(length(tox) - 1))) + 
+        minfu * (((length(tox)/cohort_size)):1)
       for (k in 1:length(tox)) {
         if(tox[k] == 1 & fu[k] >= dlt_time[k]){
           fu[k] <- obswin
@@ -44,7 +43,16 @@ applied_titecrmts_sim_v2 <- function (true_tox, prior, target, max_sample_size, 
       level <- level[1:pos]
       dlt <- dlt[1:pos]
       dlt_time <- dlt_time[1:pos]
-      fu <- fu[1:pos]
+      fu <- (rectime * (length(tox) - 1)) - (rectime * c(0:(length(tox) - 1))) + 
+        minfu * (((length(tox)/cohort_size)):1)
+      duration <- fu
+      for (a in 1:length(tox)) {
+        if(tox[a] == 1 & fu[a] >= dlt_time[a]){
+          fu[a] <- obswin
+          dlt[a] <- 1
+        }
+      }
+      
 
       #fu[tox == 1] <- obswin
       fu <- pmin(fu, obswin)
@@ -86,6 +94,8 @@ applied_titecrmts_sim_v2 <- function (true_tox, prior, target, max_sample_size, 
         level <- c(level, cohort_level)
         fu <- fu + (cohort_size * rectime) + minfu
         fu <- c(fu, cohort_fu)
+        duration <- duration + (cohort_size * rectime) + minfu
+       
         for (l in 1:length(tox)) {
           if(tox[l] == 1 & fu[l] >= dlt_time[l]){
             fu[l] <- obswin
@@ -113,18 +123,25 @@ applied_titecrmts_sim_v2 <- function (true_tox, prior, target, max_sample_size, 
       stop <- ifelse(is.null(x$stop), FALSE, x$stop)
     }
     print(i)
+    duration <- 12*duration[1]/365
     iterations[[i]] <- list(tox = tox, level = level, mtd = dose, 
-                            stop = stop, stop_reason = stop_reason)
+                            stop = stop, stop_reason = stop_reason, 
+                            duration = duration )
   }
   dose_selections = sapply(iterations, function(x) x$mtd)
   doses_given = unlist(sapply(iterations, function(x) x$level))
+  duration = sapply(iterations, function(x) x$duration)
   summary = list(true_tox = true_tox, prior = prior, target = target, 
                  max_sample_size = max_sample_size, initdes = initdes, 
-                 num_sims = num_sims, cohort_size = cohort_size, prob_stop = table(substr(unlist(sapply(iterations, 
-                                                                                                        function(x) x$stop_reason)), 1, 15))/num_sims, mtd = sapply(1:length(prior), 
-                                                                                                                                                                    function(d) sum(dose_selections == d, na.rm = TRUE)/num_sims), 
-                 doses_given = sapply(1:length(prior), function(d) sum(doses_given == 
-                                                                         d, na.rm = TRUE)/num_sims), prob_dose_given = sapply(1:length(prior), 
+                 months = sum(duration)/num_sims,
+                 num_sims = num_sims, cohort_size = cohort_size,
+                 prob_stop = table(substr(unlist(sapply(iterations,
+                                                        function(x) x$stop_reason)), 1, 15))/num_sims, 
+                 mtd = sapply(1:length(prior),  function(d)
+                   sum(dose_selections == d, na.rm = TRUE)/num_sims), 
+                 
+                 doses_given = sapply(1:length(prior), function(d)
+                   sum(doses_given == d, na.rm = TRUE)/num_sims), prob_dose_given = sapply(1:length(prior), 
                                                                                                                               function(d) sum(doses_given == d, na.rm = TRUE)/length(doses_given)))
   return(list(summary = summary, iterations = iterations))
 }

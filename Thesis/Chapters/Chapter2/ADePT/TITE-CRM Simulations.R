@@ -31,7 +31,7 @@ minfu <- 56 + 49
 # The second observation window in days
 win2 <- 84 +49 
 # The number of patients recruited per observation window
-recrate <- 12
+recrate <- 14
 # The value for which the estimated toxicity at the lowest dose is not to exceed
 x <- 0.1 
 tox_lim <- target + x 
