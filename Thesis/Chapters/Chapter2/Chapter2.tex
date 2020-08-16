@@ -212,7 +212,7 @@ Table \ref{tab_adept:OCorder1} details simulations for eight scenarios to test t
 
 Ideally we want the probability of selection for the dose allocated at TD25 to be as high as possible and greater than other dose levels. For scenarios 1-7 the TD25 is highlighted in bold along with results from the simulations. However, for scenario 8 where all doses are too toxic we expect the trial to terminate early, here 'stop' should be selected and its associated probability of stopping is shown in bold. 
 
-In scenarios 1 - 6 (Table \ref{tab_adept:OCorder1}), this design correctly selects the TD25 with probabilities between 43\% and 78\%, under the assumption 2b is more toxic than 2a. Likewise, for the ordering where 2a is more toxic than 2b, scenarios 9-14 (Table \ref{tab_adept:OCorder2}) have probabilities between 42\% and 78\% of correctly selecting the TD25. Correct selection probabilities are generally higher when the TD25 is at the first and last dose levels compared to dose levels 2a and 2b. However, these dose levels are still chosen with the highest probability as the TD25 in their given scenarios. For scenarios 7 and 15, the probabilities of toxicity are equally spaced, approximately 5\% apart. This is a relatively diffcult scenario for dose-finding studies to handle. The probability of selecting the TD25 is 28\% and 30\% for orderings 1 and 2 respectively. In scenarios 8 and 16, where all the doses are too toxic, the design very seldom allocates patients higher than the first three doses and there is a high chance (74\%) that the trial will recommend early stopping.
+In scenarios 1 - 6 (Table \ref{tab_adept:OCorder1}), this design correctly selects the TD25 with probabilities between 44\% and 79\%, under the assumption 2b is more toxic than 2a. Likewise, for the ordering where 2a is more toxic than 2b, scenarios 9-14 (Table \ref{tab_adept:OCorder2}) have probabilities between 43\% and 78\% of correctly selecting the TD25. Correct selection probabilities are generally higher when the TD25 is at the first and last dose levels compared to dose levels 2a and 2b. However, these dose levels are still chosen with the highest probability as the TD25 in their given scenarios. For scenarios 7 and 15, the probabilities of toxicity are equally spaced, approximately 5\% apart. This is a relatively diffcult scenario for dose-finding studies to handle. The probability of selecting the TD25 is 26\% and 30\% for orderings 1 and 2 respectively. In scenarios 8 and 16, where all the doses are too toxic, the design very seldom allocates patients higher than the first three doses and there is a high chance (73\%) that the trial will recommend early stopping.
 
 
 
@@ -231,69 +231,69 @@ In scenarios 1 - 6 (Table \ref{tab_adept:OCorder1}), this design correctly selec
 			\midrule
 			Scenario & Prior DLT & 0.01 & 0.04 & 0.08 & 0.16 & 0.25 & 0.35 & \\
 			\cmidrule{1-9}
-			\rowcolor{gray!6}   & True DLT rate & 0.25 & 0.4 & 0.45 & 0.5 & 0.55 & 0.6 & \\
+			\rowcolor{gray!6}   & True DLT rate & \textbf{0.25} & 0.4 & 0.45 & 0.5 & 0.55 & 0.6 & \\
 			
-			\rowcolor{gray!6}   & P(select) & 0.63 & 0.18 & 0.05 & 0 & 0 & 0 & 0.13\\
+			\rowcolor{gray!6}   & P(select) & \textbf{0.67} & 0.18 & 0.05 & 0 & 0 & 0 & 0.10\\
 			
-			\rowcolor{gray!6}   & \% of patients & 39 & 32 & 20 & 6 & 3 & 0 & \\
+			\rowcolor{gray!6}   & \% of patients & \textbf{39} & 32 & 21 & 6 & 3 & 0 & \\
 			
-			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 1: MTD @-1} & Mean number of patients & 10.08 & 8.32 & 5.3 & 1.56 & 0.67 & 0.08 & \\
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 1: TD25 @-1} & Mean number of patients & \textbf{10.03} & 8.26 & 5.34 & 1.65 & 0.68 & 0.06 & \\
 			\cmidrule{1-9}
-			& True DLT rate & 0.12 & 0.25 & 0.4 & 0.45 & 0.5 & 0.55 & \\
+			& True DLT rate & 0.12 & \textbf{0.25} & 0.4 & 0.45 & 0.5 & 0.55 & \\
 			
-			& P(select) & 0.21 & 0.53 & 0.19 & 0.02 & 0.02 & 0 & 0.03\\
+			& P(select) & 0.23 & \textbf{0.51} & 0.2 & 0.03 & 0.02 & 0 & 0.01\\
 			
-			& \% of patients & 18 & 36 & 30 & 11 & 5 & 1 & \\
+			& \% of patients & 17 & \textbf{35} & 29 & 11 & 6 & 1 & \\
 			
-			\multirow{-4}{*}{\centering\arraybackslash 2: MTD @0} & Mean number of patients & 5.33 & 10.52 & 8.74 & 3.22 & 1.57 & 0.23 & \\
+			\multirow{-4}{*}{\centering\arraybackslash 2: TD25 @0} & Mean number of patients & 5.19 & \textbf{10.49} & 8.74 & 3.31 & 1.77 & 0.28 & \\
 			\cmidrule{1-9}
-			\rowcolor{gray!6}   & True DLT rate & 0.09 & 0.12 & 0.25 & 0.4 & 0.45 & 0.5 & \\
+			\rowcolor{gray!6}   & True DLT rate & 0.09 & 0.12 & \textbf{0.25} & 0.4 & 0.45 & 0.5 & \\
 			
-			\rowcolor{gray!6}   & P(select) & 0.01 & 0.19 & 0.56 & 0.13 & 0.1 & 0.01 & 0\\
+			\rowcolor{gray!6}   & P(select) & 0.01 & 0.2 & \textbf{0.54} & 0.14 & 0.1 & 0.01 & 0\\
 			
-			\rowcolor{gray!6}   & \% of patients & 4 & 20 & 35 & 22 & 16 & 3 & \\
+			\rowcolor{gray!6}   & \% of patients & 4 & 21 & \textbf{35} & 22 & 16 & 3 & \\
 			
-			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 3: MTD @1} & Mean number of patients & 1.12 & 6.51 & 11.15 & 6.99 & 5.05 & 0.99 & \\
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 3: TD25 @1} & Mean number of patients & 1.2 & 6.63 & \textbf{10.99} & 7.08 & 4.93 & 0.97 & \\
 			\cmidrule{1-9}
-			& True DLT rate & 0.06 & 0.09 & 0.12 & 0.25 & 0.4 & 0.45 & \\
+			& True DLT rate & 0.06 & 0.09 & 0.12 & \textbf{0.25} & 0.4 & 0.45 & \\
 			
-			& P(select) & 0 & 0.02 & 0.23 & 0.47 & 0.24 & 0.04 & 0\\
+			& P(select) & 0 & 0.01 & 0.21 & \textbf{0.5} & 0.23 & 0.04 & 0\\
 			
-			& \% of patients & 1 & 12 & 20 & 31 & 25 & 10 & \\
+			& \% of patients & 2 & 12 & 20 & \textbf{32} & 25 & 11 & \\
 			
-			\multirow{-4}{*}{\centering\arraybackslash 4: MTD @2a} & Mean number of patients & 0.48 & 3.9 & 6.84 & 10.43 & 8.27 & 3.46 & \\
+			\multirow{-4}{*}{\centering\arraybackslash 4: TD25 @2a} & Mean number of patients & 0.5 & 3.84 & 6.61 & \textbf{10.66} & 8.16 & 3.5 & \\
 			\cmidrule{1-9}
-			\rowcolor{gray!6}   & True DLT rate & 0.03 & 0.06 & 0.09 & 0.12 & 0.25 & 0.4 & \\
+			\rowcolor{gray!6}   & True DLT rate & 0.03 & 0.06 & 0.09 & 0.12 & \textbf{0.25} & 0.4 & \\
 			
-			\rowcolor{gray!6}   & P(select) & 0 & 0 & 0.03 & 0.28 & 0.44 & 0.25 & 0\\
+			\rowcolor{gray!6}   & P(select) & 0 & 0 & 0.03 & 0.29 & \textbf{0.44} & 0.25 & 0\\
 			
-			\rowcolor{gray!6}   & \% of patients & 1 & 10 & 13 & 25 & 28 & 24 & \\
+			\rowcolor{gray!6}   & \% of patients & 1 & 10 & 12 & 24 & \textbf{28} & 25 & \\
 			
-			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 5: MTD @2b} & Mean number of patients & 0.25 & 3.37 & 4.29 & 8.24 & 9.36 & 8.14 & \\
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 5: TD25 @2b} & Mean number of patients & 0.22 & 3.39 & 4.18 & 8.13 & \textbf{9.42} & 8.33 & \\
 			\cmidrule{1-9}
-			& True DLT rate & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 & 0.25 & \\
+			& True DLT rate & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 & \textbf{0.25} & \\
 			
-			& P(select) & 0 & 0 & 0 & 0.08 & 0.13 & 0.79 & 0\\
+			& P(select) & 0 & 0 & 0 & 0.09 & 0.12 & \textbf{0.79} & 0\\
 			
-			& \% of patients & 0 & 10 & 11 & 17 & 18 & 42 & \\
+			& \% of patients & 0 & 10 & 11 & 17 & 18 & \textbf{43} & \\
 			
-			\multirow{-4}{*}{\centering\arraybackslash 6: MTD @3} & Mean number of patients & 0.12 & 3.16 & 3.51 & 5.44 & 5.68 & 13.21 & \\
+			\multirow{-4}{*}{\centering\arraybackslash 6: TD25 @3} & Mean number of patients & 0.1 & 3.12 & 3.49 & 5.35 & 5.51 & \textbf{13.48} & \\
 			\cmidrule{1-9}
-			\rowcolor{gray!6}   & True DLT rate & 0.05 & 0.1 & 0.15 & 0.2 & 0.25 & 0.3 & \\
+			\rowcolor{gray!6}   & True DLT rate & 0.05 & 0.1 & 0.15 & 0.2 & \textbf{0.25} & 0.3 & \\
 			
-			\rowcolor{gray!6}   & P(select) & 0 & 0.02 & 0.12 & 0.31 & 0.27 & 0.27 & 0\\
+			\rowcolor{gray!6}   & P(select) & 0 & 0.03 & 0.14 & 0.31 & \textbf{0.26} & 0.26 & 0\\
 			
-			\rowcolor{gray!6}   & \% of patients & 2 & 13 & 19 & 26 & 22 & 19 & \\
+			\rowcolor{gray!6}   & \% of patients & 2 & 13 & 19 & 25 & \textbf{22} & 19 & \\
 			
-			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 7: Equal steps in DLT rate} & Mean number of patients & 0.51 & 4.04 & 5.88 & 8.35 & 6.88 & 5.97 & \\
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 7: Equal steps in DLT rate} & Mean number of patients & 0.6 & 4.11 & 5.88 & 8.02 & \textbf{6.95} & 5.9 & \\
 			\cmidrule{1-9}
 			& True DLT rate & 0.5 & 0.6 & 0.65 & 0.7 & 0.75 & 0.8 & \\
 			
-			& P(select) & 0.29 & 0 & 0 & 0 & 0 & 0 & 0.71\\
+			& P(select) & 0.26 & 0 & 0 & 0 & 0 & 0 & \textbf{0.74}\\
 			
-			& \% of patients & 56 & 26 & 15 & 2 & 0 & 0 & \\
+			& \% of patients & 56 & 27 & 15 & 2 & 0 & 0 & \\
 			
-			\multirow{-4}{*}{\centering\arraybackslash 8: All  toxic} & Mean number of patients & 9.05 & 4.2 & 2.42 & 0.32 & 0.03 & 0 & \\
+			\multirow{-4}{*}{\centering\arraybackslash 8: All  toxic} & Mean number of patients & 8.61 & 4.17 & 2.28 & 0.28 & 0.03 & 0 & \\
 			\bottomrule
 	\end{tabular}}
 \end{singlespace}
@@ -313,69 +313,69 @@ In scenarios 1 - 6 (Table \ref{tab_adept:OCorder1}), this design correctly selec
 			\midrule
 			Scenario & Prior DLT & 0.01 & 0.04 & 0.08 & 0.16 & 0.25 & 0.35 & \\
 			\cmidrule{1-9}
-			\rowcolor{gray!6}   & True DLT rate & 0.25 & 0.4 & 0.45 & 0.55 & 0.5 & 0.6 & \\
+			\rowcolor{gray!6}   & True DLT rate & \textbf{0.25} & 0.4 & 0.45 & 0.55 & 0.5 & 0.6 & \\
 			
-			\rowcolor{gray!6}   & P(select) & 0.63 & 0.18 & 0.05 & 0 & 0 & 0 & 0.12\\
+			\rowcolor{gray!6}   & P(select) & \textbf{0.69} & 0.18 & 0.04 & 0 & 0 & 0 & 0.08\\
 			
-			\rowcolor{gray!6}   & \% of patients & 40 & 32 & 20 & 5 & 2 & 0 & \\
+			\rowcolor{gray!6}   & \% of patients & \textbf{39} & 33 & 20 & 6 & 2 & 0 & \\
 			
-			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 9: MTD @-1} & Mean number of patients & 10.3 & 8.26 & 5.14 & 1.38 & 0.58 & 0.04 & \\
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 9: TD25 @-1} & Mean number of patients & \textbf{10.29} & 8.57 & 5.24 & 1.44 & 0.51 & 0.04 & \\
 			\cmidrule{1-9}
-			& True DLT rate & 0.12 & 0.25 & 0.4 & 0.5 & 0.45 & 0.55 & \\
+			& True DLT rate & 0.12 & \textbf{0.25} & 0.4 & 0.5 & 0.45 & 0.55 & \\
 			
-			& P(select) & 0.22 & 0.52 & 0.21 & 0.02 & 0.02 & 0 & 0.02\\
+			& P(select) & 0.23 & \textbf{0.53} & 0.19 & 0.02 & 0.02 & 0 & 0.01\\
 			
-			& \% of patients & 18 & 36 & 29 & 10 & 6 & 1 & \\
+			& \% of patients & 18 & \textbf{36} & 30 & 10 & 6 & 1 & \\
 			
-			\multirow{-4}{*}{\centering\arraybackslash 10: MTD @0} & Mean number of patients & 5.28 & 10.67 & 8.76 & 3.1 & 1.73 & 0.2 & \\
+			\multirow{-4}{*}{\centering\arraybackslash 10: TD25 @0} & Mean number of patients & 5.17 & \textbf{10.77} & 8.76 & 2.99 & 1.66 & 0.18 & \\
 			\cmidrule{1-9}
-			\rowcolor{gray!6}   & True DLT rate & 0.09 & 0.12 & 0.25 & 0.45 & 0.4 & 0.5 & \\
+			\rowcolor{gray!6}   & True DLT rate & 0.09 & 0.12 & \textbf{0.25} & 0.45 & 0.4 & 0.5 & \\
 			
-			\rowcolor{gray!6}   & P(select) & 0.02 & 0.21 & 0.54 & 0.09 & 0.14 & 0.01 & 0\\
+			\rowcolor{gray!6}   & P(select) & 0.02 & 0.2 & \textbf{0.58} & 0.08 & 0.11 & 0.01 & 0\\
 			
-			\rowcolor{gray!6}   & \% of patients & 4 & 21 & 35 & 20 & 17 & 3 & \\
+			\rowcolor{gray!6}   & \% of patients & 4 & 21 & \textbf{36} & 20 & 16 & 3 & \\
 			
-			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 11: MTD @1} & Mean number of patients & 1.23 & 6.55 & 11.15 & 6.41 & 5.37 & 1.03 & \\
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 11: TD25 @1} & Mean number of patients & 1.25 & 6.55 & \textbf{11.48} & 6.48 & 5.12 & 0.82 & \\
 			\cmidrule{1-9}
-			& True DLT rate & 0.06 & 0.09 & 0.12 & 0.25 & 0.15 & 0.45 & \\
+			& True DLT rate & 0.06 & 0.09 & 0.12 & \textbf{0.25} & 0.15 & 0.45 & \\
 			
-			& P(select) & 0 & 0.02 & 0.08 & 0.44 & 0.31 & 0.14 & 0\\
+			& P(select) & 0 & 0.02 & 0.09 & \textbf{0.43} & 0.33 & 0.13 & 0\\
 			
-			& \% of patients & 2 & 12 & 16 & 31 & 22 & 18 & \\
+			& \% of patients & 1 & 11 & 16 & \textbf{30} & 23 & 18 & \\
 			
-			\multirow{-4}{*}{\centering\arraybackslash 12: MTD @2a} & Mean number of patients & 0.51 & 3.94 & 5.36 & 10.24 & 7.51 & 5.95 & \\
+			\multirow{-4}{*}{\centering\arraybackslash 12: TD25 @2a} & Mean number of patients & 0.42 & 3.84 & 5.32 & \textbf{10.22} & 7.9 & 6 & \\
 			\cmidrule{1-9}
-			\rowcolor{gray!6}   & True DLT rate & 0.03 & 0.06 & 0.09 & 0.35 & 0.25 & 0.4 & \\
+			\rowcolor{gray!6}   & True DLT rate & 0.03 & 0.06 & 0.09 & 0.35 & \textbf{0.25} & 0.4 & \\
 			
-			\rowcolor{gray!6}   & P(select) & 0 & 0 & 0.15 & 0.31 & 0.43 & 0.11 & 0\\
+			\rowcolor{gray!6}   & P(select) & 0 & 0 & 0.14 & 0.32 & \textbf{0.43} & 0.11 & 0\\
 			
-			\rowcolor{gray!6}   & \% of patients & 1 & 11 & 19 & 30 & 28 & 13 & \\
+			\rowcolor{gray!6}   & \% of patients & 1 & 11 & 18 & 29 & \textbf{27} & 14 & \\
 			
-			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 13: MTD @2b} & Mean number of patients & 0.25 & 3.51 & 6.15 & 9.84 & 9.1 & 4.2 & \\
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 13: TD25 @2b} & Mean number of patients & 0.28 & 3.57 & 6.06 & 9.72 & \textbf{9.01} & 4.48 & \\
 			\cmidrule{1-9}
-			& True DLT rate & 0.01 & 0.03 & 0.06 & 0.12 & 0.09 & 0.25 & \\
+			& True DLT rate & 0.01 & 0.03 & 0.06 & 0.12 & 0.09 & \textbf{0.25} & \\
 			
-			& P(select) & 0 & 0 & 0 & 0.13 & 0.09 & 0.78 & 0\\
+			& P(select) & 0 & 0 & 0 & 0.13 & 0.09 & \textbf{0.78} & 0\\
 			
-			& \% of patients & 0 & 10 & 11 & 19 & 17 & 42 & \\
+			& \% of patients & 0 & 10 & 11 & 20 & 16 & \textbf{42} & \\
 			
-			\multirow{-4}{*}{\centering\arraybackslash 14: MTD @3} & Mean number of patients & 0.13 & 3.15 & 3.54 & 5.95 & 5.17 & 13.11 & \\
+			\multirow{-4}{*}{\centering\arraybackslash 14: TD25 @3} & Mean number of patients & 0.08 & 3.11 & 3.46 & 6.04 & 5.04 & \textbf{13.05} & \\
 			\cmidrule{1-9}
-			\rowcolor{gray!6}   & True DLT rate & 0.05 & 0.1 & 0.15 & 0.25 & 0.2 & 0.3 & \\
+			\rowcolor{gray!6}   & True DLT rate & 0.05 & 0.1 & 0.15 & \textbf{0.25} & 0.2 & 0.3 & \\
 			
-			\rowcolor{gray!6}   & P(select) & 0 & 0.02 & 0.13 & 0.3 & 0.27 & 0.28 & 0\\
+			\rowcolor{gray!6}   & P(select) & 0 & 0.02 & 0.14 & \textbf{0.3} & 0.28 & 0.26 & 0\\
 			
-			\rowcolor{gray!6}   & \% of patients & 2 & 13 & 19 & 27 & 21 & 19 & \\
+			\rowcolor{gray!6}   & \% of patients & 2 & 13 & 19 & \textbf{27} & 22 & 18 & \\
 			
-			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 15: Equal steps in DLT rate} & Mean number of patients & 0.52 & 4.09 & 5.89 & 8.48 & 6.64 & 5.91 & \\
+			\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 15: Equal steps in DLT rate} & Mean number of patients & 0.61 & 4.11 & 6.13 & \textbf{8.56} & 6.88 & 5.59 & \\
 			\cmidrule{1-9}
 			& True DLT rate & 0.5 & 0.6 & 0.65 & 0.75 & 0.7 & 0.8 & \\
 			
-			& P(select) & 0.27 & 0 & 0 & 0 & 0 & 0 & 0.73\\
+			& P(select) & 0.27 & 0 & 0 & 0 & 0 & 0 & \textbf{0.73}\\
 			
 			& \% of patients & 56 & 27 & 15 & 2 & 0 & 0 & \\
 			
-			\multirow{-4}{*}{\centering\arraybackslash 16: All  toxic} & Mean number of patients & 8.66 & 4.15 & 2.23 & 0.27 & 0.04 & 0 & \\
+			\multirow{-4}{*}{\centering\arraybackslash 16: All  toxic} & Mean number of patients & 8.78 & 4.26 & 2.35 & 0.3 & 0.02 & 0 & \\
 			\bottomrule
 	\end{tabular}}
 \end{singlespace}
@@ -384,7 +384,7 @@ In scenarios 1 - 6 (Table \ref{tab_adept:OCorder1}), this design correctly selec
 
 Additionally, we assess designs based on how doses are allocated to patients. Designs may correctly select the TD however, this could be undesirable and unethical if the majority of patients are over dosed at the more toxic dose levels. The average number and the percentage of patients at each dose level, for each scenario, is recorded in Tables \ref{tab_adept:OCorder1} and \ref{tab_adept:OCorder2}. 
 
-The percentage of patients treated at the TD25 ranges between 23\% and 43\% for each scenario under both orderings. The design also allocates the most patients on average to the TD25 apart from in scenario 7. In this case more patients were allocated to the next lowest dose, we have already discussed the difficulties of this scenario so this characteristic is not too concerning. The mean number of patients recruited for scenarios 1-6 is 26, 30, 32, 33, 34 and 31 respectively. Similarly for scenarios 9-14 its 26, 30, 32, 34, 33 and 31. Even though we allow for up to 60 patients the majority of trials terminate early based on the pre-defined rules for selecting the TD25.
+The percentage of patients treated at the TD25 ranges between 27\% and 43\% for each scenario under both orderings. The design also allocates the most patients on average to the TD25 apart from in scenario 7. In this case more patients were allocated to the next lowest dose, we have already discussed the difficulties of this scenario so this characteristic is not too concerning. The mean number of patients recruited for scenarios 1-6 is 26, 30, 32, 33, 34 and 31 respectively. Similarly for scenarios 9-14 its 26, 30, 32, 34, 33 and 31. Even though we allow for up to 60 patients the majority of trials terminate early based on the pre-defined rules for selecting the TD25.
 
 Overall, the simulation results show the specification of this design performs relatively well in a number of scenarios. We have shown there is a high probability of the trial stopping early if all dose-levels are too toxic. We have also shown the design behaves in an appropriate manner when there is a lack of disparity between dose-levels in terms of toxicity. Finally, we have demonstrated that regardless of the ordering we observe the PO-TITE-CRM has a high probability of selecting the correct dose. There are a number of limitations to the operating characteristics presented here which are due to the specification of the simulations and trial design. Section \ref{section2.4} explores and discusses these limitations in more detail.
 
