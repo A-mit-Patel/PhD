@@ -5,14 +5,14 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.6}% 
 \contentsline {chapter}{\numberline {2}Implementing the PO-TITE-CRM trial design into ADePT-DDR}{3}{chapter.7}% 
 \contentsline {section}{\numberline {2.1}Introduction}{3}{section.8}% 
-\contentsline {section}{\numberline {2.2}The PO-TITE-CRM Design}{7}{section.9}% 
-\contentsline {section}{\numberline {2.3}PO-TITE-CRM in ADePT-DDR}{11}{section.24}% 
-\contentsline {subsection}{\numberline {2.3.1}Partial Ordering in Practice}{12}{subsection.25}% 
-\contentsline {subsection}{\numberline {2.3.2}The TITE component}{15}{subsection.30}% 
-\contentsline {subsection}{\numberline {2.3.3}Stopping Rules}{16}{subsection.32}% 
-\contentsline {subsection}{\numberline {2.3.4}Operating Characteristics}{17}{subsection.33}% 
-\contentsline {section}{\numberline {2.4}Inspection of the operating characteristics}{22}{section.36}% 
-\contentsline {section}{\numberline {2.5}Dose Transition Pathways in a TITE Setting}{23}{section.38}% 
-\contentsline {section}{\numberline {2.6}Discussion}{23}{section.39}% 
-\contentsline {section}{\numberline {2.7}Conclusion}{23}{section.40}% 
-\contentsline {chapter}{Bibliography}{25}{chapter*.41}% 
+\contentsline {section}{\numberline {2.2}The PO-TITE-CRM Design}{8}{section.9}% 
+\contentsline {section}{\numberline {2.3}PO-TITE-CRM in ADePT-DDR}{12}{section.24}% 
+\contentsline {subsection}{\numberline {2.3.1}Partial Ordering in Practice}{13}{subsection.25}% 
+\contentsline {subsection}{\numberline {2.3.2}The TITE component}{16}{subsection.30}% 
+\contentsline {subsection}{\numberline {2.3.3}Stopping Rules}{17}{subsection.32}% 
+\contentsline {subsection}{\numberline {2.3.4}Operating Characteristics}{18}{subsection.33}% 
+\contentsline {section}{\numberline {2.4}Inspection of the operating characteristics}{23}{section.36}% 
+\contentsline {section}{\numberline {2.5}Dose Transition Pathways in a TITE Setting}{24}{section.38}% 
+\contentsline {section}{\numberline {2.6}Discussion}{24}{section.39}% 
+\contentsline {section}{\numberline {2.7}Conclusion}{24}{section.40}% 
+\contentsline {chapter}{Bibliography}{27}{chapter*.41}% 
