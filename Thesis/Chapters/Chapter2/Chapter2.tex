@@ -24,7 +24,14 @@ The investigation of multiple-agent treatments, where the monotonicity assumptio
 
 Further methodological challenges revolve around the issue of late-onset toxicities. Typically, early phase trials implement a short window to observe DLTs. This works well in situations where toxicities are likely to occur rapidly after treatment. However, this is not optimal for treatments that could cause late-onset toxicities such as radiotherapy. The aim here would be to incorporate a larger observation window to account for potential late-onset toxicities whilst also minimising the trial duration. 
 
-Cheung and Chappel \cite{cheungSequentialDesignsPhase2000} introduced an extension to the CRM to deal with the issues of treatments that may cause late-onset toxicity. This design referred to as the time-to-event CRM (TITE-CRM), uses a weighted dose-response model to incorporate the time it takes for a DLT to occur in a patient. There have also been published trial designs to deal with the issues that arise from investigating combinations of treatments. Thall et al. \cite{thallDoseFindingTwoAgents2003} proposed an adaptive two-stage Bayesian design which utilises a parametric model of toxicity as a function of two doses. Yin and Yuan \cite{yinBayesianDoseFinding2009} present a Bayesian design that uses a copula regression model to evaluate the joint toxicity probabilities of combined drugs. The continual reassessment method for partial orders (PO-CRM) developed by Wages et al. \cite{wagesContinualReassessmentMethod2011} extends the CRM design by relaxing the assumption of monotonicity and by modelling different potential orders.  
+Cheung and Chappel \cite{cheungSequentialDesignsPhase2000} introduced an extension to the CRM to deal with the issues of treatments that may cause late-onset toxicity. This design referred to as the time-to-event CRM (TITE-CRM), uses a weighted dose-response model to incorporate the time it takes for a DLT to occur in a patient. There have also been published trial designs to deal with the issues that arise from investigating combinations of treatments. Thall et al. \cite{thallDoseFindingTwoAgents2003} proposed an adaptive two-stage Bayesian design which utilises a parametric model of toxicity as a function of two doses. Yin and Yuan \cite{yinBayesianDoseFinding2009} present a Bayesian design that uses a copula regression model to evaluate the joint toxicity probabilities of combined drugs. The continual reassessment method for partial orders (PO-CRM) developed by Wages et al. \cite{wagesContinualReassessmentMethod2011} extends the CRM design by relaxing the assumption of monotonicity and by modelling different potential orders. Figure \ref{fig_adept:example_dose_levels} shows a simple example of partial ordering where the order of two dose levels are unknown. 
+
+\begin{figure}[h!]
+	\centering
+	\caption{Example dose levels to illustrate partial ordering.}
+	\label{fig_adept:example_dose_levels}
+	\includegraphics[width=0.75\textwidth]{AdeptDoseExample}
+\end{figure}
 
 Wages et al. \cite{wagesContinualReassessmentMethod2011, wagesUsingTimetoeventContinual2013} further developed their work on the PO-CRM to deal with late-onset toxicities by implementing a TITE component. This trial design, referred to as the time-to-event continual reassessment method in the presence of partial orders (PO-TITE-CRM) by the authors, was chosen to be used in ADePT-DDR. A search of PubMed, conducted on the 25th of July 2020, found six articles that had cited the PO-TITE-CRM design by Wages et al. \cite{wagesUsingTimetoeventContinual2013}. Five of these papers were methodological in nature, two of which only include the PO-TITE-CRM design in a brief introduction to current methodology before going on to present new Bayesian trial designs \cite{liuBAYESIANDATAAUGMENTATION2013, wheelerBayesianModelfreeApproach2019}. The other three papers were authored by Wages. The first of which details practical considerations and specifications for the PO-CRM design, the TITE variant is only cited as the source of an example which is being used \cite{wagesSpecificationsContinualReassessment2013}. One paper presents an R package 'pocrm' \cite{wagesPocrmRpackagePhase2013, wagesPocrmDoseFinding2019}. The package is only capable of analysing the PO-CRM design. The TITE variant is only referenced here as it illustrates the issue of partial ordering. The last methodological paper by Wages et al. \cite{wagesPracticalDesignsPhase2016} presents three different methods for phase \RN{1} studies of drug combinations one of which is the PO-CRM however, PO-TITE-CRM is only mentioned as an extension to this design. A key message in this paper is the fact that novel methodologies are constantly emerging but are rarely implemented in practice. 
 
@@ -32,7 +39,7 @@ The last paper is a protocol paper for a phase \RN{1}/\RN{2} study, OLA-TMZ-RTE-
 
 This is just a brief review of the current literature but it seems that the PO-TITE-CRM has rarely been used or discussed since its inception. 
 
-Section \ref{section2.2} will detail how the PO-TITE-CRM works. Section \ref{section2.3} discusses the justification for implementing the design into the ADePT-DDR trial and our experiences doing so.  
+This chapter provides novel insight into the methodology of PO-TITE-CRM through application in a real-world scenario. Section \ref{section2.2} will detail how the PO-TITE-CRM works. Section \ref{section2.3} discusses the justification for implementing the design into the ADePT-DDR trial and our experiences doing so.  
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
@@ -41,17 +48,6 @@ Section \ref{section2.2} will detail how the PO-TITE-CRM works. Section \ref{sec
 \label{section2.2} %first number is the chapter number, second number is section number, third is subsection etc...
 
 Wages et al. \cite{wagesUsingTimetoeventContinual2013} introduced the PO-TITE-CRM design which builds directly upon the PO-CRM design by incorporating a TITE component into the dose toxicity model. The aim of which is to determine the target dose for combinations of drugs where the monotonicity assumption does not hold, in a setting where late-onset toxicities are possible.
-
-To help understand partial ordering consider an example of an early phase trial investigating the combination of two agents. Drug A which consists of three doses (0.25, 1.0, 1.5 mg/day) and drug B which consists of two doses (1.0, 1.5 mg/day), for a total of six drug combinations $d_{1}$, ..., $d_{6}$ (Table \ref{tab_adept:ex_drug_combo}). For each drug independently we assume they have a monotonic dose-toxicity curve however, the ordering of toxicity probabilities for some of the treatment combinations is unknown. Specifically, we can say $d_{1}$ is less toxic than $d_{2}$ as the dose of drug A increased whilst the dose of drug B stayed the same. This is also the case for $d_{2}$ and $d_{3}$. The order between $d_{4}$ and $d_{5}$ in comparison to $d_{3}$ is not known because the dose of drug A decreases whilst the dose of drug B increases. Assessing all these potential order toxicity relationships leaves 5 possible orderings. 
-
-\begin{enumerate}
-	\centering
-	\item $d_{1} \rightarrow d_{2} \rightarrow d_{3} \rightarrow d_{4} \rightarrow d_{5} \rightarrow d_{6}$
-	\item $d_{1} \rightarrow d_{2} \rightarrow d_{4} \rightarrow d_{3} \rightarrow d_{5} \rightarrow d_{6}$
-	\item $d_{1} \rightarrow d_{2} \rightarrow d_{4} \rightarrow d_{5} \rightarrow d_{3} \rightarrow d_{6}$
-	\item $d_{1} \rightarrow d_{4} \rightarrow d_{2} \rightarrow d_{3} \rightarrow d_{5} \rightarrow d_{6}$
-	\item $d_{1} \rightarrow d_{4} \rightarrow d_{2} \rightarrow d_{5} \rightarrow d_{3} \rightarrow d_{6}$
-\end{enumerate}
 
 \begin{table}[h!]
 	\centering
@@ -64,6 +60,18 @@ To help understand partial ordering consider an example of an early phase trial 
 		B (mg/day) & 1.0  & 1.0 & 1.0 & 1.5  & 1.5 & 1.5         \\ \hline
 	\end{tabular}
 \end{table}
+
+To help understand partial ordering consider an example of an early phase trial investigating the combination of two agents. Drug A which consists of three doses (0.25, 1.0, 1.5 mg/day) and drug B which consists of two doses (1.0, 1.5 mg/day), for a total of six drug combinations $d_{1}$, ..., $d_{6}$ (Table \ref{tab_adept:ex_drug_combo}). For each drug independently we assume they have a monotonic dose-toxicity curve however, the ordering of toxicity probabilities for some of the treatment combinations is unknown. Specifically, we can say $d_{1}$ is less toxic than $d_{2}$ as the dose of drug A increased whilst the dose of drug B stayed the same. This is also the case for $d_{2}$ and $d_{3}$. The order between $d_{4}$ and $d_{5}$ in comparison to $d_{3}$ is not known because the dose of drug A decreases whilst the dose of drug B increases. Assessing all these potential order toxicity relationships leaves five possible orderings. 
+
+\begin{enumerate}
+	\centering
+	\item $d_{1} \rightarrow d_{2} \rightarrow d_{3} \rightarrow d_{4} \rightarrow d_{5} \rightarrow d_{6}$
+	\item $d_{1} \rightarrow d_{2} \rightarrow d_{4} \rightarrow d_{3} \rightarrow d_{5} \rightarrow d_{6}$
+	\item $d_{1} \rightarrow d_{2} \rightarrow d_{4} \rightarrow d_{5} \rightarrow d_{3} \rightarrow d_{6}$
+	\item $d_{1} \rightarrow d_{4} \rightarrow d_{2} \rightarrow d_{3} \rightarrow d_{5} \rightarrow d_{6}$
+	\item $d_{1} \rightarrow d_{4} \rightarrow d_{2} \rightarrow d_{5} \rightarrow d_{3} \rightarrow d_{6}$
+\end{enumerate}
+
 
 Using the notation of Wages et al. \cite{wagesContinualReassessmentMethod2011,wagesUsingTimetoeventContinual2013}, let $M$ denote the number of possible orders and $Y$ be an indicator of a toxicity event. Then for a trial investigating $k$ combinations, $d_{1}$,...,$d_{k}$, the dose for the $j$th patient, $X_{j}$, $j$ = 1,...,$n$ can be thought of as random $x_{j} \in (d_{1}, ..., d_{k})$. For a specific ordering $m$, $m = 1,...,M$ the toxicity probability $R(x_{j})$ is modelled by 
 \begin{equation}
@@ -111,7 +119,7 @@ where $\theta$ is the target toxicity rate. Similarly, once all patients have be
 \label{section2.3}%first number is the chapter number, second number is section number, third is subsection etc..
 The decision to implement PO-TITE-CRM into ADePT-DDR was made by Piers Gaunt (PG) after discussions with other statisticians Kristian Brock (KB) and Daniel Slade (DS), as well as the chief investigator and other co-investigators. The design was chosen as the toxicity probabilities of the dose levels weren't monotonically increasing which restricts the use of most early phase designs such as the CRM. Additionally, the design also handles late-onset toxicities which would be an issue in ADePT-DDR due to the treatment involving radiotherapy. The availability of software to conduct the trial was also a factor that was considered. The R package 'pocrm' \cite{wagesPocrmRpackagePhase2013} only provides a means for implementing the PO-CRM design but the easy accessibility to this code meant that it could be extended to include the TITE component.  
 
-The intended use of this design is for dose-finding in combinations of therapies, as this is the source of the partial ordering issue. ADePT-DDR however, is a unique implementation of the design as even though it involves a combination of therapies (radiotherapy and AZD6783) the dose of radiotherapy is fixed and dose-finding is only planned for AZD6783. PO-TITE-CRM is still applicable in this case as the dose levels for AZD6783 are partially ordered. 
+The intended use of this design is for dose-finding in combinations of therapies, as this is the source of the partial ordering issue. ADePT-DDR however, is a unique implementation of the design as even though it involves a combination of therapies (radiotherapy and AZD6783) the dose of radiotherapy is fixed and dose-finding is only planned for AZD6783. PO-TITE-CRM is still applicable in this case as the design includes combinations of dose and duration for AZD6783 which are partially ordered. 
 
 A two-stage PO-TITE-CRM will be used to find the TD25 of AZD6783. This will be determined by dose-limiting toxicities evaluated by Common Terminology Criteria for Adverse Events (CTCAE) v5.0 and Radiation Therapy Oncology Group (RTOG) late toxicity score. The binary DLT events are pre-defined by a variety of grade 3-4 adverse events notably, haematological, cardiovascular and gastrointestinal/hepatic toxicities as well as significant non-haematological events and specific treatment-related toxicities. DLTs will be monitored for the duration of treatment (seven weeks) and up to a year post-treatment. 
 
@@ -154,6 +162,7 @@ Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling
 \end{table}
 
 \begin{figure}[h!]
+	\centering
 	\caption{ADePT-DDR dose levels across dose and duration.}
 	\label{fig_adept:AZD_dose_levels}
 	\includegraphics[width=\textwidth]{AdeptDoseCombos}
