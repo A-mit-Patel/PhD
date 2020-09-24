@@ -205,6 +205,8 @@ n <- 60
 cohort <- 1
 # The number of patients we need to see at a dose to stop the trial early
 mtd.lim <- 15
+# The number of patients recruited per observation window
+recrate <- 8 # Roughly 1 patient every 49 days (7 wseeks)
 
 r <- c(0.25, 0.40, 0.45, 0.50, 0.55, 0.60)
 set.seed(101)

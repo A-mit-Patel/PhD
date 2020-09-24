@@ -1045,10 +1045,104 @@
     \verb \PatelAL\\Zotero\\storage\\MQXKCFX2\\10543406.2017.html
     \endverb
     \field{journaltitle}{Journal of Biopharmaceutical Statistics}
+    \field{annotation}{%
+    \_eprint: https://doi.org/10.1080/10543406.2017.1289952%
+    }
     \field{eprinttype}{pmid}
     \field{day}{04}
     \field{month}{05}
     \field{year}{2017}
+  \endentry
+
+  \entry{brockMoreBetterAnalysis2020}{article}{}
+    \name{author}{6}{}{%
+      {{hash=BK}{%
+         family={Brock},
+         familyi={B\bibinitperiod},
+         given={Kristian},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=HV}{%
+         family={Homer},
+         familyi={H\bibinitperiod},
+         given={Victoria},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Soul},
+         familyi={S\bibinitperiod},
+         given={Gurjinder},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=PC}{%
+         family={Potter},
+         familyi={P\bibinitperiod},
+         given={Claire},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Chiuzan},
+         familyi={C\bibinitperiod},
+         given={Cody},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=LS}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Shing},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Cold Spring Harbor Laboratory Press}}%
+    }
+    \strng{namehash}{BKHVSG+1}
+    \strng{fullhash}{BKHVSGPCCCLS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    {$<$}p{$>$}The overwhelming majority of dose-escalation clinical trials use
+  methods that seek a maximum tolerable dose, including rule-based methods like
+  the 3+3, and model-based methods like CRM and EWOC. These methods assume that
+  the incidences of efficacy and toxicity always increase as dose is increased.
+  This assumption is widely accepted with cytotoxic therapies. In recent
+  decades, however, the search for novel cancer treatments has broadened,
+  increasingly focusing on inhibitors and antibodies. The rationale that higher
+  doses are always associated with superior efficacy is less clear for these
+  types of therapies. We extracted dose-level efficacy and toxicity outcomes
+  from 115 manuscripts reporting dose-finding clinical trials in cancer between
+  2008 and 2014. We analysed the outcomes from each manuscript using flexible
+  non-linear regression models to investigate the evidence supporting the
+  monotonic efficacy and toxicity assumptions. We found that the monotonic
+  toxicity assumption was well-supported across most treatment classes and
+  disease areas. In contrast, we found very little evidence supporting the
+  monotonic efficacy assumption. Our conclusion is that dose-escalation trials
+  routinely use methods whose assumptions are violated by the outcomes
+  observed. As a consequence, dose-finding trials risk recommending
+  unjustifiably high doses that are harmful to patients. We recommend that
+  trialists consider experimental designs that allow toxicity and efficacy
+  outcomes to jointly determine the doses given to patients and recommended for
+  further study.{$<$}/p{$>$}%
+    }
+    \verb{doi}
+    \verb 10.1101/2020.08.18.20177212
+    \endverb
+    \field{pages}{2020.08.18.20177212}
+    \field{shorttitle}{Is More Better?}
+    \field{title}{Is More Better? {{An}} Analysis of Toxicity and Response
+  Outcomes from Dose-Finding Clinical Trials in Cancer}
+    \verb{url}
+    \verb https://www.medrxiv.org/content/10.1101/2020.08.18.20177212v1
+    \endverb
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\DQC9DTZ6\\Brock et al. - 2020 -
+    \verb  Is more better An analysis of toxicity and respon.pdf
+    \endverb
+    \field{journaltitle}{medRxiv}
+    \field{day}{21}
+    \field{month}{08}
+    \field{year}{2020}
   \endentry
 
   \entry{cheungSequentialDesignsPhase2000}{article}{}
@@ -1109,6 +1203,10 @@
     \verb sers\\PatelAL\\Zotero\\storage\\T9W8G7GT\\j.0006-341X.2000.01177.html
     \endverb
     \field{journaltitle}{Biometrics}
+    \field{annotation}{%
+    \_eprint:
+  https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.0006-341X.2000.01177.x%
+    }
     \field{year}{2000}
   \endentry
 
@@ -1176,6 +1274,9 @@
     \verb  Dose-Finding with Two Agents in Phase I Oncology T.pdf
     \endverb
     \field{journaltitle}{Biometrics}
+    \field{annotation}{%
+    \_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/1541-0420.00058%
+    }
     \field{year}{2003}
   \endentry
 
@@ -1240,6 +1341,10 @@
     \endverb
     \field{journaltitle}{Journal of the Royal Statistical Society: Series C
   (Applied Statistics)}
+    \field{annotation}{%
+    \_eprint:
+  https://rss.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1467-9876.2009.00649.x%
+    }
     \field{year}{2009}
   \endentry
 
