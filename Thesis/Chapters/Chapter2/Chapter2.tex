@@ -51,7 +51,7 @@ Wages et al. \cite{wagesUsingTimetoeventContinual2013} introduced the PO-TITE-CR
 
 \begin{table}[h!]
 	\centering
-	\caption{Example of drug combinations for a trial investigating two agents.}
+	\caption[Example drug combinations with two agents.]{Example of drug combinations for a trial investigating two agents.}
 	\label{tab_adept:ex_drug_combo}
 	\begin{tabular}{lcccccc}
 		\hline  & \multicolumn{6}{c}{\textbf{Drug combinations}}  \\
@@ -73,35 +73,35 @@ To help understand partial ordering consider an example of an early phase trial 
 \end{enumerate}
 
 
-Using the notation of Wages et al. \cite{wagesContinualReassessmentMethod2011,wagesUsingTimetoeventContinual2013}, let $M$ denote the number of possible orders and $Y$ be an indicator of a toxicity event. Then for a trial investigating $k$ combinations, $d_{1}$,...,$d_{k}$, the dose for the $j$th patient, $X_{j}$, $j$ = 1,...,$n$ can be thought of as random $x_{j} \in (d_{1}, ..., d_{k})$. For a specific ordering $m$, $m = 1,...,M$ the toxicity probability $R(x_{j})$ is modelled by 
+Using the notation of Wages et al. \cite{wagesContinualReassessmentMethod2011,wagesUsingTimetoeventContinual2013}, let $M$ denote the number of possible orders and $Y$ be an indicator of a toxicity event. Then for a trial investigating $k$ combinations, $d_{1}$,...,$d_{k}$, the dose for the $j$th patient, $X_{j}$, $j$ = 1,...,$n$ can be thought of as random $x_{j} \in (d_{1}, ..., d_{k})$. For a specific ordering $m$, $m = 1,...,M$ the toxicity probability $R(d_{i})$ is modelled by 
 \begin{equation}
-R(x_{j}) = P(Y_{j} = 1 | X_j = x_j) = E(Y_j|x_j) \doteq \phi_m(d_i,w,a) = w\psi_m(d_i,a)
+R(d_{i}) =  \phi_m(d_i,w,\beta) = w\psi_m(d_i,\beta) \; i = 1, ..., k; \; m = 1, ...,M
 \end{equation}
-for  a weighted dose response model $\phi_m(d_i,w,a)$ and $a \in A$, where $A = (-\infty, \infty)$. The weight, $w$ as defined by Cheung and Chappel \cite{cheungSequentialDesignsPhase2000}, is a function of the time-to-event of each patient and is incorporated linearly with the dose toxicity model $\psi$ so that $0 \leq w \leq 1$. Each patient is followed for a fixed amount of time $T$. Let $U_j$ represent the time-to-toxicity of patient $j$. Then for $u \leq T$, 
+for  a weighted dose response model $\phi_m(d_i,w,\beta)$ where $\beta \in (-\infty, \infty)$. The weight, $w$ as defined by Cheung and Chappel \cite{cheungSequentialDesignsPhase2000}, is a function of the time-to-event of each patient and is incorporated linearly with the dose toxicity model $\psi$ so that $0 \leq w \leq 1$. Each patient is followed for a fixed amount of time $T$. Let $U_j$ represent the time-to-toxicity of patient $j$. Then for $u \leq T$, 
 \begin{equation}
-	P(U_j \leq u ) = P(U_j \leq u |U_j \leq T)P(U_j \leq T) \equiv w(u;T) \psi_m(d_i,a).
+	P(U_j \leq u ) = P(U_j \leq u |U_j \leq T)P(U_j \leq T) \equiv w(u;T) \psi_m(d_i,\beta).
 \end{equation}
 For simplicity we will refer to the weight function $w(u;T)$ as $w$. The weight function will have to be decided upon by the trials team, dependent on the scenario, a simple linear function or a more complex adaptive weights function could be utilised. There are also several working dose models which could be used for $\psi$, Wages et al. \cite{wagesUsingTimetoeventContinual2013} present their design with the power parameter model given by 
 \begin{equation}
-	\psi_m(d_i,a) = \alpha_{mi}^{exp(a)} i = 1,...,k; m = 1,...,M.
+	\psi_m(d_i,\beta) = \alpha_{mi}^{exp(\beta)} \; i = 1,...,k; \; m = 1,...,M.
 \end{equation}
 Here $0 < \alpha_{m1} < ... < \alpha_{mk} < 1$ are the prior estimates of toxicity probabilities, or skeleton, for each potential ordering. Furthermore, prior probabilities are assigned to each order $M$ to account for any prior information regarding the plausibility of each model such that, $p(m) = \{p(1),...,p(M)\}$, where $p(m) \geq 0$ and $\sum_mp(m)=1$. When all orders are equally likely or there is no prior information available on possible orderings the prior is discretely uniform and would be $p(m) = 1/M$. 
 
-A Bayesian framework is used and a prior probability distribution $g(a)$ is assigned to the parameter $a$. The ordering with the largest prior probability is selected as the starting ordering, in the scenario where all priors are equal an ordering is selected at random, subsequently a starting dose is also chosen. After $j$ patients have been entered into the trial data is collected in the form of $\Omega_j = \{x_1,y_1, ..., x_j,y_j\}$. A weighted likelihood for the parameter $a$ is used to establish running probabilities of toxicity for each treatment combination. The weighted likelihood under ordering $m$, is given by 
+A Bayesian framework is used and a prior probability distribution $g(\beta)$ is assigned to the parameter $\beta$. The ordering with the largest prior probability is selected as the starting ordering, in the scenario where all priors are equal an ordering is selected at random, subsequently a starting dose is also chosen. After $j$ patients have been entered into the trial data is collected in the form of $\Omega_j = \{x_1,y_1, ..., x_j,y_j\}$. A weighted likelihood for the parameter $\beta$ is used to establish running probabilities of toxicity for each treatment combination. The weighted likelihood under ordering $m$, is given by 
 \begin{equation}
-\tilde{L}_m(a|\Omega_j)=\prod_{l=1}^{j}\phi_m^{y_l}(d_l,w_l,a)\{1-\phi_m(d_l,w_l,a)\}^{(1-y_l)}
+\tilde{L}_m(\beta|\Omega_j)=\prod_{l=1}^{j}\phi_m^{y_l}(x_l,w_l,\beta)\{1-\phi_m(x_l,w_l,\beta)\}^{(1-y_l)}
 \end{equation} 
-which can be used to generate a summary value $\hat{a}_{mj}$, for $a$, for each ordering. With the likelihood and the data $\Omega_j$, the posterior density for $a$ can be calculated using 
+which can be used to generate a summary value $\hat{\beta}_{mj}$, for $\beta$, for each ordering. With the likelihood and the data $\Omega_j$, the posterior density for $\beta$ can be calculated using 
 \begin{equation}
-	\tilde{f}_m(a|\Omega_j)=\frac{\tilde{L}_m(a|\Omega_j)g(a)}{\int_{A}\tilde{L}_m(a|\Omega_j)g(a)da}
+	\tilde{f}_m(\beta|\Omega_j)=\frac{\tilde{L}_m(\beta|\Omega_j)g(\beta)}{\int_{\beta}\tilde{L}_m(\beta|\Omega_j)g(\beta)d\beta}
 \end{equation}
 This can then be used to establish posterior probabilities of the orderings given the data as 
 \begin{equation}
-\tilde{\pi}(m|\Omega_j)=\frac{p(m)\int_{A}\tilde{L}_m(a|\Omega_j)g(a)da}{\sum_{m=1}^{M}p(m)\int_{A}\tilde{L}_m(a|\Omega_j)g(a)da}.
+\tilde{\pi}(m|\Omega_j)=\frac{p(m)\int_{\beta}\tilde{L}_m(\beta|\Omega_j)g(\beta)d\beta}{\sum_{m=1}^{M}p(m)\int_{\beta}\tilde{L}_m(\beta|\Omega_j)g(\beta)d\beta}.
 \end{equation}
-We select the single ordering, $h$, with the largest posterior probability along with its associated working model $\psi_h(d_i,a)$ and generate toxicity probabilities for each dose level. Once the $j$th patient has been included the posterior probability of DLT can be calculated for $d_{i}$ so that
+We select the single ordering, $h$, with the largest posterior probability along with its associated working model $\psi_h(d_i,\beta)$ and generate toxicity probabilities for each dose level. Once the $j$th patient has been included the posterior probability of DLT can be calculated for $d_{i}$ so that
 \begin{equation}
-	\hat{R}(d_i) = \psi_h(d_i,\hat{a}_{hj}); \; \hat{a}_h = \int_{A}a\tilde{f}_h(a|\Omega_j)da.
+	\hat{R}(d_i) = \psi_h(d_i,\hat{\beta}_{hj}); \; \hat{\beta}_h = \int_{\beta}\beta\tilde{f}_h(\beta|\Omega_j)d\beta.
 \end{equation}
 
 In turn, the dose level $x_j \in \{d_1,...,d_k\}$ assigned to the ($j+$1)th patient is the dose, $d_i$, which minimises 
@@ -141,7 +141,7 @@ Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling
 
 \begin{table}[h!]
     \centering
-	\caption{ADePT-DDR dose levels and duration of treatment for AZD6783.}
+	\caption[ADePT-DDR dose-levels.]{ADePT-DDR dose-levels and duration of treatment for AZD6783.}
 	\label{tab_adept:AZD_dose_levels}
 		\begin{tabular}{ccccc}
 			\hline 
@@ -185,7 +185,15 @@ The TITE component incorporates a weighting contribution for each patient depend
 \begin{equation}
 w(u;T) = 0.6 + 0.2\frac{min(u-t_1,t_2 - t_1)}{t_2 - t_1} + 0.2\frac{max(0, u - t_2)}{t_3-t_2}.
 \end{equation} 
-All patients will have a minimum weight of 60\% as that is the prescribed weighting to the  minimum follow up period before dose escalation/de-escalation decisions can be made. For each additional week the patient is observed, without a DLT occurring, between weeks 8 and 12 their weighting increases by 5\%. Similarly for each week between 12 and 52 weeks, without a DLT, weighting increases by 0.5\%.
+All patients will have a minimum weight of 60\% as that is the prescribed weighting to the  minimum follow up period before dose escalation/de-escalation decisions can be made. For each additional week the patient is observed, without a DLT occurring, between weeks 8 and 12 their weighting increases by 5\%. Similarly for each week between 12 and 52 weeks, without a DLT, weighting increases by 0.5\%. Figure \ref{fig_adept:weight_function} illustrates the weight function and how the weight changes for patients dependent on how long they have been followed-up.   
+
+\begin{figure}[h!]
+	\centering
+	\caption[Weight function across the follow-up period.]{Weights of patients who have not experienced a DLT across the observation window.}
+	\label{fig_adept:weight_function}
+	\includegraphics[width=\textwidth]{AdeptWeightFunction}
+\end{figure}
+
 
 The TITE-CRM originally presented by Cheung and Chappel \cite{cheungSequentialDesignsPhase2000} did not incorporate a minimum follow-up period and their design allowed for the continual recruitment of patients whenever they became available. There are some practical considerations which make this infeasible. The model would need to be run each time a new patient entered the study which requires statistical input hence the introduction of cohorts. Clinicians may also have safety concerns if we see rapid recruitment at the start of the trial and the model keeps escalating so we impose a minimum follow-up period. Initially this was set at 12 weeks (at 80\% weighting) however, statisticians AP and PG  pointed out that dose escalation/de-escalation decisions would have to take place 19 weeks (7 weeks treatment and 12 weeks follow-up) after recruitment of the third patient in the cohort. Dependent on the recruitment rates this could extend the duration of the trial and negates the benefits of using a TITE design. The investigators aslo agreed this was too long and settled on lowering this period to 8 weeks (at 60\% weighting) whilst also including the original 12 week weighting of 80\%.
 
@@ -220,7 +228,7 @@ Standard scenarios to run involve adjusting the true DLT rates to reflect each d
 
 We simulated 2000 trials for each scenario using the finalised design detailed in section \ref{section2.3}. A fixed recruitment rate of one patient per month was utilised. The occurrence of DLT's were randomly generated for patients in each cohort using a Bernoulli distribution with the probability set at the true DLT rate for the cohorts assigned dose level in the specific scenario. For patients who had a DLT occur, the time at which the DLT occurred was randomly generated using a uniform distribution which spanned the start of treatment to the end of follow-up.  
 
-Table \ref{tab_adept:OCorder1} details simulations for eight scenarios to test the performance of the PO-TITE-CRM design using true DLT rates which reflect the first ordering. We analyse scenarios where each dose is the TD25 (scenarios 1-6) and when all doses are too toxic (scenario 8). Additionally, we also investigate performance under conditions where the probability of DLT is fairly similar between doses (scenario 7). This is a notoriously difficult circumstance for CRM designs to deal with as the limited number of patients and events at each dose make it hard to accurately estimate toxicity probabilities if they are similar. Simulation results for ordering 2 are shown in Table \ref{tab_adept:OCorder2} where dose level 2a is considered more toxic than 2a. This is achieved by altering the true DLT rates so 2b has a lower probability of DLT compared to 2a. 
+Table \ref{tab_adept:OCorder1} details simulations for eight scenarios to test the performance of the PO-TITE-CRM design using true DLT rates which reflect the first ordering. We analyse scenarios where each dose is the TD25 (scenarios 1-6) and when all doses are too toxic (scenario 8). Additionally, we also investigate performance under conditions where the probability of DLT is fairly similar between doses (scenario 7). This is a notoriously difficult circumstance for CRM designs to deal with as the limited number of patients and events at each dose make it hard to accurately estimate toxicity probabilities if they are similar. Simulation results for ordering 2 are shown in Table \ref{tab_adept:OCorder2} where dose level 2a is considered more toxic than 2b. This is achieved by altering the true DLT rates so 2b has a lower probability of DLT compared to 2a. 
 
 Ideally we want the probability of selection for the dose allocated at TD25 to be as high as possible and greater than other dose levels. For scenarios 1-7 the TD25 is highlighted in bold along with results from the simulations. However, for scenario 8 where all doses are too toxic we expect the trial to terminate early, here 'stop' should be selected and its associated probability of stopping is shown in bold. 
 
@@ -230,7 +238,7 @@ In scenarios 1 - 6 (Table \ref{tab_adept:OCorder1}), this design correctly selec
 
 \begin{table}[h!] % OC for order 1 
 	
-	\caption[Operating Characteristics for ordering 1]{\label{tab_adept:OCorder1} Operating Characteristics of the two-stage PO-TITE-CRM (with true DLT rates that imply 2b is more toxic than 2a) based on 2000 simulated trials. Definitions: DLT: Dose-limiting toxicity. P(select):
+	\caption[Operating Characteristics for ordering 1.]{\label{tab_adept:OCorder1} Operating Characteristics of the two-stage PO-TITE-CRM (with true DLT rates that imply 2b is more toxic than 2a) based on 2000 simulated trials. Definitions: DLT: Dose-limiting toxicity. P(select):
 	Probability of selecting a dose as the TD25.}
 	\centering
 	\begin{singlespace}
@@ -313,7 +321,7 @@ In scenarios 1 - 6 (Table \ref{tab_adept:OCorder1}), this design correctly selec
 
 \begin{table}[h!] % OC for order 2
 	
-	\caption[Operating Characteristics for ordering 2]{\label{tab_adept:OCorder2}  Operating Characteristics of the two-stage PO-TITE-CRM (with true DLT rates that imply 2a is more toxic than 2b) based on 2000 simulated trials. Definitions: DLT: Dose-limiting toxicity. P(select): Probability of selecting a dose as the TD25.}
+	\caption[Operating Characteristics for ordering 2.]{\label{tab_adept:OCorder2}  Operating Characteristics of the two-stage PO-TITE-CRM (with true DLT rates that imply 2a is more toxic than 2b) based on 2000 simulated trials. Definitions: DLT: Dose-limiting toxicity. P(select): Probability of selecting a dose as the TD25.}
 	\centering
 	\begin{singlespace}
 	\resizebox{\linewidth}{!}{
@@ -429,7 +437,7 @@ Overall, the simulation results show the specification of this design performs r
 
 \begin{table}
 	
-	\caption[Selection probabilities for alternative designs]{\label{tab_adept:Design_Comparison}Selection probabilities of the TD25 and expected trial duration (in months) for the PO-TITE, TITE and PO-CRM designs as well as modified PO-TITE-CRM designs for scenarios 1-8 based on 2000 simulated trials.}
+	\caption[Selection probabilities for alternative designs.]{\label{tab_adept:Design_Comparison}Selection probabilities of the TD25 and expected trial duration (in months) for the PO-TITE, TITE and PO-CRM designs as well as modified PO-TITE-CRM designs for scenarios 1-8 based on 2000 simulated trials.}
 	
 	\centering
 	\begin{singlespace}
