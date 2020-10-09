@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {2.3.3}Stopping Rules}{19}{subsection.34}% 
 \contentsline {subsection}{\numberline {2.3.4}Operating Characteristics}{20}{subsection.35}% 
 \contentsline {section}{\numberline {2.4}Inspection of the operating characteristics}{25}{section.38}% 
-\contentsline {section}{\numberline {2.5}Dose Transition Pathways in a TITE Setting}{29}{section.41}% 
-\contentsline {section}{\numberline {2.6}Discussion}{29}{section.42}% 
-\contentsline {section}{\numberline {2.7}Conclusion}{29}{section.43}% 
+\contentsline {section}{\numberline {2.5}Dose Transition Pathways in a TITE Setting}{28}{section.41}% 
+\contentsline {section}{\numberline {2.6}Discussion}{28}{section.42}% 
+\contentsline {section}{\numberline {2.7}Conclusion}{28}{section.43}% 
 \contentsline {chapter}{Bibliography}{31}{chapter*.44}% 

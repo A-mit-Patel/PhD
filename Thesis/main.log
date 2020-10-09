@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.11.27)  8 OCT 2020 20:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.11.27)  9 OCT 2020 18:19
 entering extended mode
 **./main.tex
 (main.tex
@@ -1477,12 +1477,12 @@ File: Figures/AdeptDLTRates.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figures/AdeptDLTRates.pdf  used on input line 426.
 (pdftex.def)             Requested size: 412.56499pt x 291.88948pt.
  [25] [26 <./Figures/AdeptDLTRates.pdf>]
-LaTeX Font Info:    Try loading font information for TS1+ppl on input line 435.
+LaTeX Font Info:    Try loading font information for TS1+ppl on input line 436.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ts1ppl.fd"
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-) [27] [28]) [29]
+) [27]) [28] [29]
 [30
 
 
@@ -1561,7 +1561,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  38148 strings out of 492895
  781823 string characters out of 3133472
- 1148708 words of memory out of 3000000
+ 1147708 words of memory out of 3000000
  41526 multiletter control sequences out of 15000+200000
  579038 words of font info for 105 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1577,7 +1577,7 @@ TeX/2.9/fonts/type1/public/mathpazo/fplmri.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/p
 alatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (48 pages, 393119 bytes).
+Output written on main.pdf (48 pages, 393753 bytes).
 PDF statistics:
  699 PDF objects out of 1000 (max. 8388607)
  120 named destinations out of 1000 (max. 500000)
