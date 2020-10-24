@@ -6,16 +6,6 @@ output: html_document
   
 ---
 
-v0.1 initially created after the inclusion of the new dose level -1. Previous simulations only used 5 dose levels. 
-
-v0.1.2 updated the weight function to allign with the protocol 60% at 8 weeks, 80% at 12 weeks and 100% at 1 year. 
-
-v0.1.3 created to include a rule of no skipping untried doses into the simulatiuons. Also built in a stopping rule for if the lowest dose is too toxic to stop the trial. 
-
-v0.1.4 updated to allign with the finalised protocol. New stopping rule when 15 patients already treated at the recommended dose. 
-
-v0.1.5 stopping rule for too much toxicity was coded wrong re-calculated to use asymptotic variance 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 

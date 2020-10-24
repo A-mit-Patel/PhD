@@ -71,7 +71,7 @@ titepocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
         # Store dummy dlt for new cohort
         dlt <- c(dlt, cohort_dlt)
         # Add on follow up time and recruitment time for previous cohorts
-        fu <- fu + (cohort * rectime) + minfu 
+        fu <- fu + (rectime*(cohort-1)) + minfu 
         #duration <- duration + (cohort * rectime) + minfu 
         # store new cohorts follow up time
         fu <- c(fu, cohort_fu)
@@ -292,7 +292,7 @@ titepocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
             # Store dummy dlt for new cohort
             dlt <- c(dlt, cohort_dlt)
             # Add on follow up time and recruitment time for previous cohorts
-            fu <- fu + (cohort * rectime) + minfu 
+            fu <- fu + (rectime*(cohort-1)) + minfu 
             #duration <- duration + (cohort * rectime) + minfu
             # store new cohorts follow up time
             fu <- c(fu, cohort_fu)
@@ -333,7 +333,7 @@ titepocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
       # Calculate the duration of the trial 
       
       num_cohorts <- length(tox) / cohort
-      duration <- cohort_fu[1] + (rectime*(cohort) + minfu) * (num_cohorts-1) + (obswin - minfu)
+      duration <- cohort_fu[1] + (rectime*(cohort-1) + minfu) * (num_cohorts-1) + (obswin - minfu)
       return(list(MTD.selection = comb.select, tox.data = y, 
                   patient.allocation = npts, duration = duration,
                   stop = stop.count))
@@ -718,7 +718,7 @@ applied_titecrmts_sim_v2 <- function (true_tox, prior, target, max_sample_size,
       # Store dummy dlt for new cohort
       dlt <- c(dlt, cohort_dlt)
       # Add on follow up time and recruitment time for previous cohorts
-      fu <- fu + (cohort * rectime) + minfu 
+      fu <- fu + (rectime*(cohort-1)) + minfu 
       #duration <- duration + (cohort * rectime) + minfu 
       # store new cohorts follow up time
       fu <- c(fu, cohort_fu)
@@ -860,7 +860,7 @@ applied_titecrmts_sim_v2 <- function (true_tox, prior, target, max_sample_size,
           dlt <- c(dlt, cohort_dlt) ##
           tox <- c(tox, cohort_tox)
           dose <- c(dose, cohort_level)
-          fu <- fu + (cohort * rectime) + minfu
+          fu <- fu + (rectime*(cohort-1)) + minfu
           fu <- c(fu, cohort_fu)
           #duration <- duration + (cohort * rectime) + minfu
           
@@ -937,7 +937,7 @@ applied_titecrmts_sim_v2 <- function (true_tox, prior, target, max_sample_size,
     # }
     print(s)
     num_cohorts <- length(tox) / cohort
-    duration <- cohort_fu[1] + (rectime*(cohort) + minfu) * (cohort.count-1) +(obswin - minfu)
+    duration <- cohort_fu[1] + (rectime*(cohort-1) + minfu) * (cohort.count-1) +(obswin - minfu)
     #print(duration)
     iterations[[s]] <- list(tox = tox, level = dose, mtd = fdose, 
                             stop = stop, stop_reason = stop_reason, 

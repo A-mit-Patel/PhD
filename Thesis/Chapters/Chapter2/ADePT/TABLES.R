@@ -113,7 +113,7 @@ SelectProbTab <- as.matrix(cbind(
     rep('4: TD25 @2a',7), rep('5: TD25 @2b',7), rep('6: TD25 @3',7), 
     rep('7: Equal steps',7), rep('8: All toxic',7)), 
   c('CRM details', rep(c(' ', 'PO-TITE', 'TITE', 'PO', 'N = 30', 'N = 60', 
-                   'No FU'),8)),
+                   'No cohorts'),8)),
   c('Prior DLT', rep(c('True DLT rate', rep('P(select)',6)),8)), 
   SelectProb))
 
