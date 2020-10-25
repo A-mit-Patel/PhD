@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.11.27)  24 OCT 2020 21:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.11.27)  25 OCT 2020 17:06
 entering extended mode
 **./main.tex
 (main.tex
@@ -1486,10 +1486,7 @@ LaTeX Font Info:    Try loading font information for TS1+ppl on input line 592.
 
 ("C:\Program Files\MiKTeX 2.9\tex/latex/psnfss\ts1ppl.fd"
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-)) [31] [32
-
-
-]
+)) [31] [32]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 295.
 
 
@@ -1515,7 +1512,10 @@ Overfull \hbox (1.15176pt too wide) in paragraph at lines 295--295
  []
 
 1: section
-[33]
+[33
+
+
+]
 Overfull \hbox (5.08871pt too wide) in paragraph at lines 295--295
 []\T1/ppl/m/n/12 M. J. O'Connor,   Tar-get-ing the DNA Dam-age Re-sponse in Ca
 n-cer, \T1/ppl/m/it/12 Molec-
@@ -1565,7 +1565,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  38155 strings out of 492895
  781872 string characters out of 3133472
- 1146773 words of memory out of 3000000
+ 1153773 words of memory out of 3000000
  41526 multiletter control sequences out of 15000+200000
  579038 words of font info for 105 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1581,7 +1581,7 @@ TeX/2.9/fonts/type1/public/mathpazo/fplmri.pfb><C:/Program Files/MiKTeX 2.9/fon
 ts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/p
 alatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a
 .pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (50 pages, 399983 bytes).
+Output written on main.pdf (50 pages, 401131 bytes).
 PDF statistics:
  718 PDF objects out of 1000 (max. 8388607)
  127 named destinations out of 1000 (max. 500000)

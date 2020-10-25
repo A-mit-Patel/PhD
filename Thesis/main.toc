@@ -13,6 +13,6 @@
 \contentsline {subsection}{\numberline {2.3.4}Operating Characteristics}{20}{subsection.35}% 
 \contentsline {section}{\numberline {2.4}Inspection of the operating characteristics}{25}{section.38}% 
 \contentsline {section}{\numberline {2.5}Dose Transition Pathways in a TITE Setting}{31}{section.46}% 
-\contentsline {section}{\numberline {2.6}Discussion}{31}{section.47}% 
-\contentsline {section}{\numberline {2.7}Conclusion}{31}{section.48}% 
+\contentsline {section}{\numberline {2.6}Discussion}{32}{section.47}% 
+\contentsline {section}{\numberline {2.7}Conclusion}{32}{section.48}% 
 \contentsline {chapter}{Bibliography}{33}{chapter*.49}% 

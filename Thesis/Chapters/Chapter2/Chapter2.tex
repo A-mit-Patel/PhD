@@ -430,14 +430,14 @@ The original methodological papers by Wages et al. \cite{wagesUsingTimetoeventCo
 
 Another limitation with the simulations is how the time-to-event data is generated. The time of DLTs is sampled from a uniform distribution $U(0, 413)$, where the time of the DLT can occur at any time between the patient beginning treatment and the end of follow-up (413 days). Using this uniform distribution implies that a DLT has an equal probability of occurring at any time-point in the observation window. This may not be an accurate representation of what happens in the actual trial. Similar comments can be made about the accrual rate used in the simulations. Here we specified the recruitment of one patient per month which is in no way guaranteed for the actual trial. The simulations are also able to instantaneously determine dose-levels for incoming cohorts with all available information. This does not fully reflect the process in which dose-escalation decisions would be made during the actual running of the trial. The analysis would require a data snapshot and time would have to be spent cleaning the data and determining the next dose-level. Meaning any data from the point of the snapshot would not be included in any dose escalation/de-escalation decisions. 
 
-There are various features in this trial design that impact how it performs. The partial ordering caused by dose levels 2a and 2b adds complexity to design. If one of these dose-levels were to be removed or a normal ordering was assumed a standard TITE-CRM design could be used instead. However, this would take away from what the trial was trying to discover. This trial also has a long follow-up period due to potential late-onset toxicities and in turn, will have a long duration. The TITE component will allow for the duration to be a lot shorter than it would be otherwise. TITE-CRM designs allow for patients to be recruited sequentially and allocated a dose based on available information from patients already in the trial. The design for ADePT-DDR uses cohorts of three and a minimum follow-up period. The dose-escalation decisions will only be made every third patient after a specific amount of time. This is done for safety and practicality reasons but means that some patients may not be able to enter the trial and it also loses some of the benefits of the TITE-CRM. We also have a sample size of 60 patients but include a stopping rule for when a consensus is reached which means we often don't recruit the maximum sample size. Further simulations were produced to investigate how these features affected the trial. Table \ref{tab_adept:Design_Comparison} compares selection probabilities from the ADePT-DDR trial design (Table \ref{tab_adept:OCorder1}) with five alternative designs. 
+There are various features in this trial design that impact how it performs. The partial ordering caused by dose levels 2a and 2b adds complexity to design. If one of these dose-levels were to be removed or a normal ordering was assumed a standard TITE-CRM design could be used instead. However, this would take away from what the trial is trying to discover. This trial also has a long follow-up period due to potential late-onset toxicities and in turn, will have a long duration. The TITE component will allow for the duration to be a lot shorter than it would be otherwise. TITE-CRM designs allow for patients to be recruited sequentially and allocated a dose based on available information from patients already in the trial. The design for ADePT-DDR uses cohorts of three and a minimum follow-up period. The dose-escalation decisions will only be made every third patient after a specific amount of time. This is done for safety and practicality reasons but means that some patients may not be able to enter the trial and it also loses some of the benefits of the TITE-CRM. We also have a sample size of 60 patients but include a stopping rule for when a consensus is reached which means we often don't recruit the maximum sample size. Further simulations were produced to investigate how these features affected the trial. Table \ref{tab_adept:Design_Comparison} compares selection probabilities from the ADePT-DDR trial design (Table \ref{tab_adept:OCorder1}) with five alternative designs. 
  
 \begin{enumerate}
 	\item TITE-CRM design. This design assumes that partial ordering doesn't exist and that dose-level 2b is more toxic than 2a. A TITE-CRM is used instead of a PO-TITE-CRM. All other stopping rules and details remain the same. 
 	\item PO (Partial Ordering design). This design removes the TITE component and uses a PO-CRM as detailed by \cite{wagesContinualReassessmentMethod2011}. This requires the removal of the minimum follow-up period so all dose allocation decisions are made once all 3 patients in a cohort have been observed for the full follow-up period of one year. All other stopping rules and details remain the same. 
 	\item N = 30. This design uses a fixed sample size of 30 patients and removes the stopping rule for reaching consensus. The analysis is still conducted using the PO-TITE-CRM. All other stopping rules and details remain the same. 
 	\item N = 60. This design uses a fixed sample size of 60 patients and removes the stopping rule for reaching consensus. The analysis is still conducted using the PO-TITE-CRM. All other stopping rules and details remain the same. 
-	\item No follow-up (No FU). This design uses a cohort size of 1 and removes the minimum follow-up period. All other stopping rules remain the same. \textbf{Simulation results for this design are incorrect. Please ignore this data in the table for now.}
+	\item No cohorts. This design uses a cohort size of one. All other stopping rules remain the same. 
 \end{enumerate} 
 
 \begin{table} % Table for alterative designs
@@ -448,125 +448,125 @@ There are various features in this trial design that impact how it performs. The
 	\begin{singlespace}
 		\resizebox{\linewidth}{!}{
 			\fontsize{12}{11}\selectfont
-			\begin{tabular}[t]{ccccccccccc}
+			\begin{tabular}[t]{cccccccccccc}
 				\toprule
 				\multicolumn{3}{c}{ } & \multicolumn{6}{c}{Dose Levels} \\
 				\cmidrule(l{3pt}r{3pt}){4-9}
-				&  &  & -1 & 0 & 1 & 2a & 2b & 3 & Stop & Duration\\
+				&  &  & -1 & 0 & 1 & 2a & 2b & 3 & Stop & Duration & Mean N\\
 				\midrule
-				Scenario & CRM details & Prior DLT & 0.01 & 0.04 & 0.08 & 0.16 & 0.25 & 0.35 &  & \\
-				\cmidrule{1-11}
-				\rowcolor{gray!6}   &  & True DLT rate & 0.25 & 0.4 & 0.45 & 0.5 & 0.55 & 0.6 &  & \\
+				Scenario & CRM details & Prior DLT & 0.01 & 0.04 & 0.08 & 0.16 & 0.25 & 0.35 &  &  & \\
+				\cmidrule{1-12}
+				\rowcolor{gray!6}   &  & True DLT rate & 0.25 & 0.4 & 0.45 & 0.5 & 0.55 & 0.6 &  &  & \\
 				
-				\rowcolor{gray!6}   & PO-TITE & P(select) & 0.67 & 0.19 & 0.06 & 0 & 0 & 0 & 0.08 & 57.95\\
+				\rowcolor{gray!6}   & PO-TITE & P(select) & 0.67 & 0.19 & 0.06 & 0 & 0 & 0 & 0.08 & 57.95 & 26.57\\
 				
-				\rowcolor{gray!6}   & TITE & P(select) & 0.71 & 0.21 & 0.05 & 0 & 0 & 0 & 0.03 & 59.84\\
+				\rowcolor{gray!6}   & TITE & P(select) & 0.71 & 0.21 & 0.05 & 0 & 0 & 0 & 0.03 & 59.84 & 27.62\\
 				
-				\rowcolor{gray!6}   & PO & P(select) & 0.57 & 0.18 & 0.04 & 0.01 & 0 & 0 & 0.2 & 131.02\\
+				\rowcolor{gray!6}   & PO & P(select) & 0.57 & 0.18 & 0.04 & 0.01 & 0 & 0 & 0.2 & 131.02 & 21.9\\
 				
-				\rowcolor{gray!6}   & N = 30 & P(select) & 0.65 & 0.21 & 0.05 & 0.01 & 0 & 0 & 0.08 & 60.27\\
+				\rowcolor{gray!6}   & N = 30 & P(select) & 0.65 & 0.21 & 0.05 & 0.01 & 0 & 0 & 0.08 & 60.27 & 27.86\\
 				
-				\rowcolor{gray!6}   & N = 60 & P(select) & 0.79 & 0.12 & 0.01 & 0 & 0 & 0 & 0.08 & 107.48\\
+				\rowcolor{gray!6}   & N = 60 & P(select) & 0.79 & 0.12 & 0.01 & 0 & 0 & 0 & 0.08 & 107.48 & 54.1\\
 				
-				\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 1: TD25 @-1} & No cohorts & P(select) & 0.63 & 0.16 & 0.04 & 0.01 & 0.01 & 0 & 0.15 & 86.77\\
-				\cmidrule{1-11}
-				&  & True DLT rate & 0.12 & 0.25 & 0.4 & 0.45 & 0.5 & 0.55 &  & \\
+				\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 1: TD25 @-1} & No cohorts & P(select) & 0.63 & 0.16 & 0.04 & 0.01 & 0.01 & 0 & 0.15 & 86.77 & 22.19\\
+				\cmidrule{1-12}
+				&  & True DLT rate & 0.12 & 0.25 & 0.4 & 0.45 & 0.5 & 0.55 &  &  & \\
 				
-				& PO-TITE & P(select) & 0.22 & 0.52 & 0.2 & 0.02 & 0.02 & 0 & 0.01 & 64.08\\
+				& PO-TITE & P(select) & 0.22 & 0.52 & 0.2 & 0.02 & 0.02 & 0 & 0.01 & 64.08 & 29.98\\
 				
-				& TITE & P(select) & 0.22 & 0.53 & 0.21 & 0.04 & 0 & 0 &  & 63.29\\
+				& TITE & P(select) & 0.22 & 0.53 & 0.21 & 0.04 & 0 & 0 &  & 63.29 & 29.54\\
 				
-				& PO & P(select) & 0.21 & 0.53 & 0.2 & 0.02 & 0.01 & 0 & 0.02 & 163.6\\
+				& PO & P(select) & 0.21 & 0.53 & 0.2 & 0.02 & 0.01 & 0 & 0.02 & 163.6 & 27.8\\
 				
-				& N = 30 & P(select) & 0.22 & 0.5 & 0.21 & 0.04 & 0.02 & 0 & 0.01 & 63.16\\
+				& N = 30 & P(select) & 0.22 & 0.5 & 0.21 & 0.04 & 0.02 & 0 & 0.01 & 63.16 & 29.46\\
 				
-				& N = 60 & P(select) & 0.15 & 0.69 & 0.14 & 0.01 & 0 & 0 & 0.01 & 115.96\\
+				& N = 60 & P(select) & 0.15 & 0.69 & 0.14 & 0.01 & 0 & 0 & 0.01 & 115.96 & 58.82\\
 				
-				\multirow{-7}{*}{\centering\arraybackslash 2: TD25 @0} & No cohorts & P(select) & 0.26 & 0.45 & 0.2 & 0.03 & 0.02 & 0.01 & 0.04 & 104.49\\
-				\cmidrule{1-11}
-				\rowcolor{gray!6}   &  & True DLT rate & 0.09 & 0.12 & 0.25 & 0.4 & 0.45 & 0.5 &  & \\
+				\multirow{-7}{*}{\centering\arraybackslash 2: TD25 @0} & No cohorts & P(select) & 0.26 & 0.45 & 0.2 & 0.03 & 0.02 & 0.01 & 0.04 & 104.49 & 27.32\\
+				\cmidrule{1-12}
+				\rowcolor{gray!6}   &  & True DLT rate & 0.09 & 0.12 & 0.25 & 0.4 & 0.45 & 0.5 &  &  & \\
 				
-				\rowcolor{gray!6}   & PO-TITE & P(select) & 0.02 & 0.2 & 0.55 & 0.14 & 0.1 & 0 &  & 67.37\\
+				\rowcolor{gray!6}   & PO-TITE & P(select) & 0.02 & 0.2 & 0.55 & 0.14 & 0.1 & 0 &  & 67.37 & 31.8\\
 				
-				\rowcolor{gray!6}   & TITE & P(select) & 0.01 & 0.19 & 0.56 & 0.2 & 0.03 & 0.01 &  & 64.17\\
+				\rowcolor{gray!6}   & TITE & P(select) & 0.01 & 0.19 & 0.56 & 0.2 & 0.03 & 0.01 &  & 64.17 & 30.03\\
 				
-				\rowcolor{gray!6}   & PO & P(select) & 0.02 & 0.16 & 0.59 & 0.14 & 0.08 & 0.01 &  & 179.11\\
+				\rowcolor{gray!6}   & PO & P(select) & 0.02 & 0.16 & 0.59 & 0.14 & 0.08 & 0.01 &  & 179.11 & 30.61\\
 				
-				\rowcolor{gray!6}   & N = 30 & P(select) & 0.02 & 0.17 & 0.53 & 0.15 & 0.13 & 0.01 &  & 64\\
+				\rowcolor{gray!6}   & N = 30 & P(select) & 0.02 & 0.17 & 0.53 & 0.15 & 0.13 & 0.01 &  & 64 & 29.93\\
 				
-				\rowcolor{gray!6}   & N = 60 & P(select) & 0 & 0.14 & 0.7 & 0.1 & 0.06 & 0 &  & 117.75\\
+				\rowcolor{gray!6}   & N = 60 & P(select) & 0 & 0.14 & 0.7 & 0.1 & 0.06 & 0 &  & 117.75 & 59.81\\
 				
-				\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 3: TD25 @1} & No cohorts & P(select) & 0.05 & 0.18 & 0.49 & 0.14 & 0.09 & 0.02 & 0.01 & 113.69\\
-				\cmidrule{1-11}
-				&  & True DLT rate & 0.06 & 0.09 & 0.12 & 0.25 & 0.4 & 0.45 &  & \\
+				\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 3: TD25 @1} & No cohorts & P(select) & 0.05 & 0.18 & 0.49 & 0.14 & 0.09 & 0.02 & 0.01 & 113.69 & 29.99\\
+				\cmidrule{1-12}
+				&  & True DLT rate & 0.06 & 0.09 & 0.12 & 0.25 & 0.4 & 0.45 &  &  & \\
 				
-				& PO-TITE & P(select) & 0 & 0.02 & 0.22 & 0.48 & 0.23 & 0.05 &  & 70\\
+				& PO-TITE & P(select) & 0 & 0.02 & 0.22 & 0.48 & 0.23 & 0.05 &  & 70 & 33.26\\
 				
-				& TITE & P(select) & 0 & 0.02 & 0.22 & 0.56 & 0.18 & 0.03 &  & 67.16\\
+				& TITE & P(select) & 0 & 0.02 & 0.22 & 0.56 & 0.18 & 0.03 &  & 67.16 & 31.69\\
 				
-				& PO & P(select) & 0 & 0.02 & 0.21 & 0.49 & 0.22 & 0.05 &  & 190.17\\
+				& PO & P(select) & 0 & 0.02 & 0.21 & 0.49 & 0.22 & 0.05 &  & 190.17 & 32.61\\
 				
-				& N = 30 & P(select) & 0 & 0.02 & 0.21 & 0.45 & 0.28 & 0.04 &  & 64.08\\
+				& N = 30 & P(select) & 0 & 0.02 & 0.21 & 0.45 & 0.28 & 0.04 &  & 64.08 & 29.98\\
 				
-				& N = 60 & P(select) & 0 & 0 & 0.18 & 0.62 & 0.19 & 0.01 &  & 117.99\\
+				& N = 60 & P(select) & 0 & 0 & 0.18 & 0.62 & 0.19 & 0.01 &  & 117.99 & 59.95\\
 				
-				\multirow{-7}{*}{\centering\arraybackslash 4: TD25 @2a} & No cohorts & P(select) & 0.02 & 0.02 & 0.21 & 0.46 & 0.2 & 0.09 &  & 114.11\\
-				\cmidrule{1-11}
-				\rowcolor{gray!6}   &  & True DLT rate & 0.03 & 0.06 & 0.09 & 0.12 & 0.25 & 0.4 &  & \\
+				\multirow{-7}{*}{\centering\arraybackslash 4: TD25 @2a} & No cohorts & P(select) & 0.02 & 0.02 & 0.21 & 0.46 & 0.2 & 0.09 &  & 114.11 & 30.11\\
+				\cmidrule{1-12}
+				\rowcolor{gray!6}   &  & True DLT rate & 0.03 & 0.06 & 0.09 & 0.12 & 0.25 & 0.4 &  &  & \\
 				
-				\rowcolor{gray!6}   & PO-TITE & P(select) & 0 & 0 & 0.02 & 0.31 & 0.42 & 0.24 &  & 70.78\\
+				\rowcolor{gray!6}   & PO-TITE & P(select) & 0 & 0 & 0.02 & 0.31 & 0.42 & 0.24 &  & 70.78 & 33.7\\
 				
-				\rowcolor{gray!6}   & TITE & P(select) & 0 & 0 & 0.02 & 0.22 & 0.58 & 0.18 &  & 68.35\\
+				\rowcolor{gray!6}   & TITE & P(select) & 0 & 0 & 0.02 & 0.22 & 0.58 & 0.18 &  & 68.35 & 32.35\\
 				
-				\rowcolor{gray!6}   & PO & P(select) & 0 & 0 & 0.03 & 0.25 & 0.44 & 0.28 &  & 195.1\\
+				\rowcolor{gray!6}   & PO & P(select) & 0 & 0 & 0.03 & 0.25 & 0.44 & 0.28 &  & 195.1 & 33.5\\
 				
-				\rowcolor{gray!6}   & N = 30 & P(select) & 0 & 0 & 0.03 & 0.31 & 0.41 & 0.25 &  & 64.12\\
+				\rowcolor{gray!6}   & N = 30 & P(select) & 0 & 0 & 0.03 & 0.31 & 0.41 & 0.25 &  & 64.12 & 30\\
 				
-				\rowcolor{gray!6}   & N = 60 & P(select) & 0 & 0 & 0 & 0.24 & 0.62 & 0.14 &  & 118.09\\
+				\rowcolor{gray!6}   & N = 60 & P(select) & 0 & 0 & 0 & 0.24 & 0.62 & 0.14 &  & 118.09 & 60\\
 				
-				\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 5: TD25 @2b} & No cohorts & P(select) & 0.01 & 0 & 0.02 & 0.25 & 0.41 & 0.3 &  & 110.25\\
-				\cmidrule{1-11}
-				&  & True DLT rate & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 & 0.25 &  & \\
+				\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 5: TD25 @2b} & No cohorts & P(select) & 0.01 & 0 & 0.02 & 0.25 & 0.41 & 0.3 &  & 110.25 & 28.99\\
+				\cmidrule{1-12}
+				&  & True DLT rate & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 & 0.25 &  &  & \\
 				
-				& PO-TITE & P(select) & 0 & 0 & 0 & 0.1 & 0.13 & 0.77 &  & 65.72\\
+				& PO-TITE & P(select) & 0 & 0 & 0 & 0.1 & 0.13 & 0.77 &  & 65.72 & 30.89\\
 				
-				& TITE & P(select) & 0 & 0 & 0 & 0.03 & 0.24 & 0.74 &  & 65.77\\
+				& TITE & P(select) & 0 & 0 & 0 & 0.03 & 0.24 & 0.74 &  & 65.77 & 30.91\\
 				
-				& PO & P(select) & 0 & 0 & 0 & 0.08 & 0.12 & 0.8 &  & 183.46\\
+				& PO & P(select) & 0 & 0 & 0 & 0.08 & 0.12 & 0.8 &  & 183.46 & 31.39\\
 				
-				& N = 30 & P(select) & 0 & 0 & 0 & 0.1 & 0.13 & 0.77 &  & 64.12\\
+				& N = 30 & P(select) & 0 & 0 & 0 & 0.1 & 0.13 & 0.77 &  & 64.12 & 30\\
 				
-				& N = 60 & P(select) & 0 & 0 & 0 & 0.06 & 0.1 & 0.85 &  & 118.09\\
+				& N = 60 & P(select) & 0 & 0 & 0 & 0.06 & 0.1 & 0.85 &  & 118.09 & 60\\
 				
-				\multirow{-7}{*}{\centering\arraybackslash 6: TD25 @3} & No cohorts & P(select) & 0 & 0 & 0 & 0.06 & 0.1 & 0.83 &  & 93.36\\
-				\cmidrule{1-11}
-				\rowcolor{gray!6}   &  & True DLT rate & 0.05 & 0.1 & 0.15 & 0.2 & 0.25 & 0.3 &  & \\
+				\multirow{-7}{*}{\centering\arraybackslash 6: TD25 @3} & No cohorts & P(select) & 0 & 0 & 0 & 0.06 & 0.1 & 0.83 &  & 93.36 & 24.1\\
+				\cmidrule{1-12}
+				\rowcolor{gray!6}   &  & True DLT rate & 0.05 & 0.1 & 0.15 & 0.2 & 0.25 & 0.3 &  &  & \\
 				
-				\rowcolor{gray!6}   & PO-TITE & P(select) & 0 & 0.03 & 0.11 & 0.3 & 0.29 & 0.27 &  & 67.49\\
+				\rowcolor{gray!6}   & PO-TITE & P(select) & 0 & 0.03 & 0.11 & 0.3 & 0.29 & 0.27 &  & 67.49 & 31.87\\
 				
-				\rowcolor{gray!6}   & TITE & P(select) & 0 & 0.03 & 0.14 & 0.32 & 0.29 & 0.21 &  & 64.54\\
+				\rowcolor{gray!6}   & TITE & P(select) & 0 & 0.03 & 0.14 & 0.32 & 0.29 & 0.21 &  & 64.54 & 30.23\\
 				
-				\rowcolor{gray!6}   & PO & P(select) & 0 & 0.03 & 0.15 & 0.3 & 0.26 & 0.26 &  & 185.84\\
+				\rowcolor{gray!6}   & PO & P(select) & 0 & 0.03 & 0.15 & 0.3 & 0.26 & 0.26 &  & 185.84 & 31.83\\
 				
-				\rowcolor{gray!6}   & N = 30 & P(select) & 0 & 0.01 & 0.12 & 0.29 & 0.32 & 0.25 &  & 64.08\\
+				\rowcolor{gray!6}   & N = 30 & P(select) & 0 & 0.01 & 0.12 & 0.29 & 0.32 & 0.25 &  & 64.08 & 29.98\\
 				
-				\rowcolor{gray!6}   & N = 60 & P(select) & 0 & 0 & 0.08 & 0.33 & 0.34 & 0.25 &  & 117.94\\
+				\rowcolor{gray!6}   & N = 60 & P(select) & 0 & 0 & 0.08 & 0.33 & 0.34 & 0.25 &  & 117.94 & 59.92\\
 				
-				\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 7: Equal steps} & No cohorts & P(select) & 0.03 & 0.02 & 0.09 & 0.24 & 0.24 & 0.37 &  & 102.15\\
-				\cmidrule{1-11}
-				&  & True DLT rate & 0.5 & 0.6 & 0.65 & 0.7 & 0.75 & 0.8 &  & \\
+				\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 7: Equal steps} & No cohorts & P(select) & 0.03 & 0.02 & 0.09 & 0.24 & 0.24 & 0.37 &  & 102.15 & 26.65\\
+				\cmidrule{1-12}
+				&  & True DLT rate & 0.5 & 0.6 & 0.65 & 0.7 & 0.75 & 0.8 &  &  & \\
 				
-				& PO-TITE & P(select) & 0.26 & 0 & 0 & 0 & 0 & 0 & 0.73 & 39.01\\
+				& PO-TITE & P(select) & 0.26 & 0 & 0 & 0 & 0 & 0 & 0.73 & 39.01 & 16.04\\
 				
-				& TITE & P(select) & 0.37 & 0 & 0 & 0 & 0 & 0 & 0.63 & 44.67\\
+				& TITE & P(select) & 0.37 & 0 & 0 & 0 & 0 & 0 & 0.63 & 44.67 & 19.19\\
 				
-				& PO & P(select) & 0.14 & 0 & 0 & 0 & 0 & 0 & 0.86 & 70.42\\
+				& PO & P(select) & 0.14 & 0 & 0 & 0 & 0 & 0 & 0.86 & 70.42 & 10.93\\
 				
-				& N = 30 & P(select) & 0.24 & 0 & 0 & 0 & 0 & 0 & 0.76 & 41.73\\
+				& N = 30 & P(select) & 0.24 & 0 & 0 & 0 & 0 & 0 & 0.76 & 41.73 & 17.55\\
 				
-				& N = 60 & P(select) & 0.14 & 0 & 0 & 0 & 0 & 0 & 0.86 & 48.2\\
+				& N = 60 & P(select) & 0.14 & 0 & 0 & 0 & 0 & 0 & 0.86 & 48.2 & 21.15\\
 				
-				\multirow{-7}{*}{\centering\arraybackslash 8: All toxic} & No cohorts & P(select) & 0.33 & 0 & 0 & 0 & 0 & 0 & 0.67 & 47.54\\
+				\multirow{-7}{*}{\centering\arraybackslash 8: All toxic} & No cohorts & P(select) & 0.33 & 0 & 0 & 0 & 0 & 0 & 0.67 & 47.54 & 10.83\\
 				\bottomrule
 		\end{tabular}}
 	\end{singlespace}
@@ -575,11 +575,11 @@ There are various features in this trial design that impact how it performs. The
 
 The TITE-CRM performs similarly to our original design. We see increases in probability selection for scenarios 4 and 5 where the target dose is at 2a and 2b respectively. This increase in performance can be attributed to the fact that the partial ordering no longer exists as we have assumed an ordering. The lower selection probabilities for the PO-TITE-CRM can be seen as the price to pay for the uncertainty of not knowing the order of 2a and 2b. 
 
-The PO-CRM design without a TITE component also performs similarly except for scenarios 1 and 8 where the trial stops more regularly for excess toxicity at the lowest dose. This would be because patients complete the full follow-up window before the next dose allocation decision is made. In a TITE setting a new cohort could be recruited before patients in previous cohorts experience a DLT. The man difference between these designs is with the trial duration. Without the TITE component the trial duration is significantly longer, with the average length ranging from 70 to 190 months compared to 41 to 80 months for PO-TITE-CRM. 
+The PO-CRM design without a TITE component also performs similarly except for scenarios 1 and 8 where the trial stops more regularly for excess toxicity at the lowest dose. This would be because patients complete the full follow-up window before the next dose allocation decision is made. In a TITE setting a new cohort could be recruited before patients in previous cohorts experience a DLT. The man difference between these designs is with the trial duration. Without the TITE component the trial duration is significantly longer, with the average length ranging from 70 to 195 months compared to 39 to 71 months for PO-TITE-CRM. 
 
-The design with a fixed sample size of 30 performs is comparable to our design with the sample size of 60 and the consensus stopping rule. With a sample size of 30 selection probabilities are only 2-5\% lower. For the design with 60 patients, we see much improved operating characteristics with selection probabilities ranging from 35\% to 85\% for the various scenarios. Even though our original design specifies a sample size of 60 we rarely ever reach it as we often stop for consensus hence why this design performs better. The trade-off here is trial duration. Recruitment and follow-up under the constraints of these simulations will take much longer compared to our specification which is not ideal for an early-phase trial. Originally our design for a sample size of 30 but as the clinicians wanted a dose expansion cohort we opted to use the consensus rule to ensure a minimum number of patients would be treated at the TD25. 
+The design with a fixed sample size of 30 performs is comparable to our design with the sample size of 60 and the consensus stopping rule. With a sample size of 30 selection probabilities are only 2-5\% lower. For the design with 60 patients, we see much improved operating characteristics with selection probabilities ranging from 34\% to 85\% for the various scenarios. Even though our original design specifies a sample size of 60 we rarely ever reach it as we often stop for consensus hence why this design performs better. The trade-off here is trial duration. Recruitment and follow-up under the constraints of these simulations will take much longer compared to our specification which is not ideal for an early-phase trial. Originally our design for a sample size of 30 but as the clinicians wanted a dose expansion cohort we opted to use the consensus rule to ensure a minimum number of patients would be treated at the TD25. 
 
-
+For the design with no cohorts, or cohort size of one, we see somewhat comparable performance to that of the PO-TITE-CRM design. The design performs similarly for scenarios where the TD25 is at the lowest or highest dose level but underperforms for the more complex scenarios in terms of selection probabilities. This discrepancy in performance may be related to the way in which the simulations recruit patients into the trial and the large DLT follow-up period. Meaning more frequent dose allocation decisions are being made each with less available information. This also leads to the no cohorts design having a longer duration. Patients entered into the trial in cohorts of three won't having to wait the full minimum follow-up period between patients within the cohort.
 
 %----------------------------------------------------------------------------------------
 %	SECTION 5
@@ -619,5 +619,3 @@ The design with a fixed sample size of 30 performs is comparable to our design w
 
 \section{Conclusion}  
 \label{section2.7}%first number is the chapter number, second number is section number, third is subsection etc.. 
-
-
