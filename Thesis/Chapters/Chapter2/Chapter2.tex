@@ -131,7 +131,7 @@ A maximum of 60 patients will be recruited for the dose-finding aspect of this t
 \subsection{Partial Ordering in Practice}
 \label{section2.3.1}%first number is the chapter number, second number is section number, third is subsection etc..
 
-Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling 70 Gy in 35 fractions over seven weeks. For the dose-finding aspect we investigate six doses of AZD6783 detailed in table \ref{tab_adept:AZD_dose_levels}. Treatment dose and duration to be selected for dose level 3 will be determined based on a combination of data observed, adverse events and compliance. The issue of partial ordering stems from dose levels 2a and 2b, which can be seen in Figure \ref{fig_adept:AZD_dose_levels}. The increased duration of 2a and increased dose of 2b mean they are both more toxic than dose level 1. However, when comparing 2a and 2b it is unknown whether the increase in duration or dose will be more toxic. Hence there are two possible orderings for ADePT-DDR. 
+Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling 70 Gy in 35 fractions over seven weeks. For the dose-finding aspect we investigate six doses of AZD6783 detailed in table \ref{tab_adept:AZD_dose_levels}. Treatment dose and duration to be selected for dose level 3 will be determined based on a combination of data observed, adverse events and compliance. The issue of partial ordering is illustrated in Figure \ref{fig_adept:AZD_dose_levels}. The doses to be used in this trial are detailed in their appropriate box. Additionally, each dot represents a potential dose combination which theoretically could be investigated. The combinations are colour coordinated to indicate where partial ordering exists in this dose combination space. Doses across the same colour (each diagonal) cannot be distinguished from each other in terms of probability of toxicity. However, it forms a hierarchy in which doses of the same colour can be thought of as less/more toxic that doses in another colour i.e the red dose levels would have a higher probability of toxicity than the yellow dose levels. It is clear that dose levels 2a and 2b would be considered more toxic than dose level 1 due to the increase in treatment duration and treatment dose respectively. When comparing 2a and 2b it is unknown whether the increase in dose or duration will be more toxic. Hence there are two possible orderings for ADePT-DDR. 
 
 \begin{enumerate}
 	\centering
@@ -167,6 +167,8 @@ Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling
 	\includegraphics[width=\textwidth]{AdeptDoseCombos}
 \end{figure}
 
+Traditionally, dose-finding trials for combinations would select dose levels to form a 'path' through the dose combination space such that each subsequent dose level was distinctively more toxic. This avoids the issue of partial ordering but means doses of interest or effective dose combinations may be missed or not investigated. Specifically, for ADePT-DDR this allows two 'paths' from dose level 1 extending to 2a and 2b. In terms of dose level 3 only one of the doses in that tier will be investigated, it was unclear as to which dose level would be best due to a lack of historical data. Even though dose level 3 is not yet specified in terms of modelling and simulations it was treated as singular dose. This was done as clinicians thought that it would be unlikely that we'd reach these doses and that the probability of toxicity between them would be similar.  
+
 Preliminary designs of the trial included only five dose levels and planned to use dose level 0 as the starting dose. During the trial design phase it was decided a new lower dose (dose level -1) would be introduced to allow for de-escalation if the initial dose was found to be too toxic. Dose escalation/de-escalation for subsequent cohorts would be determined from the two-stage PO-TITE-CRM. A two-stage design allows for escalation according to a pre-defined escalation scheme similar to a '3+3' design. The first stage dictates that if no DLT's are observed in the current cohort the dose allocated to the next cohort is the following dose in the escalation scheme. Dose levels continue to be incremented in this fashion until the first DLT is observed. In stage two, dose levels are determined by the PO-TITE-CRM.
 
 Typically CRM designs begin by testing the first patient, or cohort, at the prior guess of TD or at a lower dose to be safe. However, clinicians may have safety concerns beginning the trial at higher dose levels as well as escalating to higher dose levels without testing lower ones. Investigators in ADePT-DDR expressed similar concerns as such a two-stage design was adopted. The escalation scheme used in stage one of ADePT-DDR will follow that of the first ordering ($d_{-1} \rightarrow d_{0} \rightarrow d_{1} \rightarrow d_{2a} \rightarrow d_{2b} \rightarrow d_{3}$). If patients in the first cohort (assigned to dose level 0) don't experience a DLT the next cohort will be allocated to dose level 1 and then if no DLTs are observed again the third cohort will be allocated to dose level 2a and so on and so forth. The dose escalation scheme was determined based on the prior probabilities of toxicity generated for each dose level.  
@@ -197,10 +199,6 @@ All patients will have a minimum weight of 60\% as that is the prescribed weight
 
 The TITE-CRM originally presented by Cheung and Chappel \cite{cheungSequentialDesignsPhase2000} did not incorporate a minimum follow-up period and their design allowed for the continual recruitment of patients whenever they became available. There are some practical considerations which make this infeasible. The model would need to be run each time a new patient entered the study which requires statistical input hence the introduction of cohorts. Clinicians may also have safety concerns if we see rapid recruitment at the start of the trial and the model keeps escalating so we impose a minimum follow-up period. Initially this was set at 12 weeks (at 80\% weighting) however, statisticians AP and PG  pointed out that dose escalation/de-escalation decisions would have to take place 19 weeks (7 weeks treatment and 12 weeks follow-up) after recruitment of the third patient in the cohort. Dependent on the recruitment rates this could extend the duration of the trial and negates the benefits of using a TITE design. The investigators aslo agreed this was too long and settled on lowering this period to 8 weeks (at 60\% weighting) whilst also including the original 12 week weighting of 80\%.
 
-%Additional rules were implemented into the design for safety and early stopping.  
-%Additional 
-%
-%Further considerations were made
 
 %-----------------------------------
 %	SUBSECTION 3.3
@@ -214,8 +212,13 @@ Initial simulations highlighted the inadequacy of these design parameters as ope
 
 A rule was also implemented to allow for early termination of the trial in the case of excess toxicity at the lowest dose. If the posterior probability of DLT at the lowest dose is higher than 0.35 with a probability of 80\% and has been tested the trials safety committee will be alerted and will recommend if the trial should be stopped. As the trial starts at dose level 0, which is not the lowest dose, it is possible for the trial to recommend terminating without ever allocating patients to the lowest dose level. As such it was decided early termination would only occur once at least 3 patients (1 cohort) have been allocated dose level -1. 
 
+\begin{list}
+	\item Detail how the variance of the estimate is calculated
+	\item Cite the likelihood paper 
+\end{list}
+
 %-----------------------------------
-%	SUBSECTION 3.
+%	SUBSECTION 3.4 
 %-----------------------------------
 \subsection{Operating Characteristics}
 \label{section2.3.4}%first number is the chapter number, second number is section number, third is subsection etc.. 
@@ -581,37 +584,15 @@ The design with a fixed sample size of 30 performs is comparable to our design w
 
 For the design with no cohorts, or cohort size of one, we see somewhat comparable performance to that of the PO-TITE-CRM design. The design performs similarly for scenarios where the TD25 is at the lowest or highest dose level but underperforms for the more complex scenarios in terms of selection probabilities. This discrepancy in performance may be related to the way in which the simulations recruit patients into the trial and the large DLT follow-up period. Meaning more frequent dose allocation decisions are being made each with less available information. This also leads to the no cohorts design having a longer duration. Patients entered into the trial in cohorts of three won't having to wait the full minimum follow-up period between patients within the cohort.
 
+
+
 %----------------------------------------------------------------------------------------
 %	SECTION 5
 %-------------------------.
 
-\section{Dose Transition Pathways in a TITE Setting}  
+\section{Discussion}  
 \label{section2.5}%first number is the chapter number, second number is section number, third is subsection etc.. 
 
-\begin{itemize}
-	\item Explain dose transition pathways 
-	\item Issues with why they are difficult to utilise in a TITE-CRM 
-	\item Show examples of TITE-CRMs ???
-	\item Dose transition pathways for ADePT-DDR 
-\end{itemize}
-
-
-
-
-%-----------------------------------
-%	SUBSECTION 1
-%-----------------------------------
-
-%-----------------------------------
-%	SUBSECTION 2
-%-----------------------------------
-
-%----------------------------------------------------------------------------------------
-%	SECTION 6
-%-------------------------.
-
-\section{Discussion}  
-\label{section2.6}%first number is the chapter number, second number is section number, third is subsection etc.. 
 
 %----------------------------------------------------------------------------------------
 %	SECTION 7

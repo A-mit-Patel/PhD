@@ -9,10 +9,9 @@
 \contentsline {section}{\numberline {2.3}PO-TITE-CRM in ADePT-DDR}{12}{section.25}% 
 \contentsline {subsection}{\numberline {2.3.1}Partial Ordering in Practice}{14}{subsection.26}% 
 \contentsline {subsection}{\numberline {2.3.2}The TITE component}{17}{subsection.31}% 
-\contentsline {subsection}{\numberline {2.3.3}Stopping Rules}{19}{subsection.34}% 
-\contentsline {subsection}{\numberline {2.3.4}Operating Characteristics}{20}{subsection.35}% 
-\contentsline {section}{\numberline {2.4}Inspection of the operating characteristics}{25}{section.38}% 
-\contentsline {section}{\numberline {2.5}Dose Transition Pathways in a TITE Setting}{31}{section.46}% 
-\contentsline {section}{\numberline {2.6}Discussion}{32}{section.47}% 
-\contentsline {section}{\numberline {2.7}Conclusion}{32}{section.48}% 
-\contentsline {chapter}{Bibliography}{33}{chapter*.49}% 
+\contentsline {subsection}{\numberline {2.3.3}Stopping Rules}{20}{subsection.34}% 
+\contentsline {subsection}{\numberline {2.3.4}Operating Characteristics}{21}{subsection.35}% 
+\contentsline {section}{\numberline {2.4}Inspection of the operating characteristics}{26}{section.38}% 
+\contentsline {section}{\numberline {2.5}Discussion}{32}{section.46}% 
+\contentsline {section}{\numberline {2.6}Conclusion}{32}{section.47}% 
+\contentsline {chapter}{Bibliography}{33}{chapter*.48}% 
