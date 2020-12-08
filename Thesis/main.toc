@@ -13,5 +13,5 @@
 \contentsline {subsection}{\numberline {2.3.4}Operating Characteristics}{21}{subsection.35}% 
 \contentsline {section}{\numberline {2.4}Inspection of the operating characteristics}{26}{section.38}% 
 \contentsline {section}{\numberline {2.5}Discussion}{32}{section.46}% 
-\contentsline {section}{\numberline {2.6}Conclusion}{32}{section.47}% 
-\contentsline {chapter}{Bibliography}{33}{chapter*.48}% 
+\contentsline {section}{\numberline {2.6}Conclusion}{35}{section.47}% 
+\contentsline {chapter}{Bibliography}{37}{chapter*.48}% 

@@ -2132,5 +2132,63 @@
     \field{month}{01}
     \field{year}{2019}
   \endentry
+
+  \entry{oquigleyContinualReassessmentMethod1996}{article}{}
+    \name{author}{2}{}{%
+      {{hash=OJ}{%
+         family={O'Quigley},
+         familyi={O\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SLZ}{%
+         family={Shen},
+         familyi={S\bibinitperiod},
+         given={Larry\bibnamedelima Z.},
+         giveni={L\bibinitperiod\bibinitdelim Z\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{[Wiley, International Biometric Society]}}%
+    }
+    \strng{namehash}{OJSLZ1}
+    \strng{fullhash}{OJSLZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    The continual reassessment method as described by O'Quigley, Pepe, and
+  Fisher (1990, Biometrics 46, 33-48) leans to a large extent upon a Bayesian
+  methodology. Initial experimentation and sequential updating are carried out
+  in a natural way within the context of a Bayesian framework. In this paper we
+  argue that such a framework is easily changed to a more classic one leaning
+  upon likelihood theory. The essential features of the continual reassessment
+  method remain unchanged. In particular, large sample properties are the same
+  unless the prior is degenerate. For small samples, and as far as the final
+  recommended dose level is concerned, simulations indicate that there is not
+  much to choose between a likelihood approach and a Bayesian one. However, for
+  in-trial allocation of dose levels to patients, there are some differences
+  and these are discussed. In contrast to the Bayesian approach, a likelihood
+  one requires some extra effort to get off the ground. This is because the
+  likelihood equation has no solution until we observe a toxicity. Initially
+  then we suggest working with either a standard Up-and-Down scheme or standard
+  continual reassessment method until toxicity is observed and then switching
+  to the new scheme.%
+    }
+    \verb{doi}
+    \verb 10.2307/2532905
+    \endverb
+    \verb{eprint}
+    \verb 2532905
+    \endverb
+    \field{issn}{0006-341X}
+    \field{number}{2}
+    \field{pages}{673\bibrangedash 684}
+    \field{shorttitle}{Continual {{Reassessment Method}}}
+    \field{title}{Continual {{Reassessment Method}}: {{A Likelihood Approach}}}
+    \field{volume}{52}
+    \field{journaltitle}{Biometrics}
+    \field{eprinttype}{jstor}
+    \field{year}{1996}
+  \endentry
 \enddatalist
 \endinput
