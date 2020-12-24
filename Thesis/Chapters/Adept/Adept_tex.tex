@@ -2,13 +2,14 @@
 
 \chapter{Implementing the PO-TITE-CRM trial design into ADePT-DDR} % Main chapter title
 
-\label{Chapter2} % For referencing this chapter elsewhere, use \ref{Chapter2}
+\label{Adept} % For referencing this chapter elsewhere, use \ref{Chapter2}
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 
 \section{Introduction}
+\label{adept:Introduction}
 
 Worldwide there are approximately 600,000 new cases of Head and Neck Squamous Cell Carcinoma (HNSCC) each year \cite{stranskyMutationalLandscapeHead2011}. Of which, 12,000 occur in the UK with the most common forms of treatment being surgery, radiotherapy and/or chemotherapy \cite{cancerreaserchukHeadNeckCancers2017}. Radiotherapy is essential for the treatment of cancer. It has been estimated that more than 40\% of patients will receive radiotherapy at some point in their treatment \cite{roundRadiotherapyDemandActivity2013}. However, despite recent advancements in radiation techniques and the use of concomitant chemo radiotherapy, patients with solid tumours such as head and neck cancer have suboptimal cure rates \cite{cancerreaserchukHeadNeckCancers2017,cognettiHeadNeckCancer2008}. For those with advanced HNSCC primary radiotherapy with concurrent chemotherapy is often offered but, it has not been shown to improve survival in patients aged over 70 compared to radiotherapy alone \cite{pignonChemotherapyAddedLocoregional2000}. Therefore, any strategy to improve the efficacy of radiotherapy without increasing toxicity would have a significant impact on patient outcomes. 
 
@@ -30,7 +31,7 @@ Cheung and Chappel \cite{cheungSequentialDesignsPhase2000} introduced an extensi
 	\centering
 	\caption{Example dose levels to illustrate partial ordering.}
 	\label{fig_adept:example_dose_levels}
-	\includegraphics[width=0.75\textwidth]{AdeptDoseExample}
+	\includegraphics[width=0.75\textwidth]{Adept-DoseExample}
 \end{figure}
 
 Wages et al. \cite{wagesContinualReassessmentMethod2011, wagesUsingTimetoeventContinual2013} further developed their work on the PO-CRM to deal with late-onset toxicities by implementing a TITE component. This trial design, referred to as the time-to-event continual reassessment method in the presence of partial orders (PO-TITE-CRM) by the authors, was chosen to be used in ADePT-DDR. A search of PubMed, conducted on the 25th of July 2020, found six articles that had cited the PO-TITE-CRM design by Wages et al. \cite{wagesUsingTimetoeventContinual2013}. Five of these papers were methodological in nature, two of which only include the PO-TITE-CRM design in a brief introduction to current methodology before going on to present new Bayesian trial designs \cite{liuBAYESIANDATAAUGMENTATION2013, wheelerBayesianModelfreeApproach2019}. The other three papers were authored by Wages. The first of which details practical considerations and specifications for the PO-CRM design, the TITE variant is only cited as the source of an example which is being used \cite{wagesSpecificationsContinualReassessment2013}. One paper presents an R package 'pocrm' \cite{wagesPocrmRpackagePhase2013, wagesPocrmDoseFinding2019}. The package is only capable of analysing the PO-CRM design. The TITE variant is only referenced here as it illustrates the issue of partial ordering. The last methodological paper by Wages et al. \cite{wagesPracticalDesignsPhase2016} presents three different methods for phase \RN{1} studies of drug combinations one of which is the PO-CRM however, PO-TITE-CRM is only mentioned as an extension to this design. A key message in this paper is the fact that novel methodologies are constantly emerging but are rarely implemented in practice. 
@@ -39,13 +40,13 @@ The last paper is a protocol paper for a phase \RN{1}/\RN{2} study, OLA-TMZ-RTE-
 
 This is just a brief review of the current literature but it seems that the PO-TITE-CRM has rarely been used or discussed since its inception. 
 
-This chapter provides novel insight into the methodology of PO-TITE-CRM through application in a real-world scenario. Section \ref{section2.2} will detail how the PO-TITE-CRM works. Section \ref{section2.3} discusses the justification for implementing the design into the ADePT-DDR trial and our experiences doing so.  
+This chapter provides novel insight into the methodology of PO-TITE-CRM through application in a real-world scenario. Section \ref{adept:PO-TITE-CRM-Design} will detail how the PO-TITE-CRM works. Section \ref{adept:PO-TITE-CRM-in-Adept} discusses the justification for implementing the design into the ADePT-DDR trial and our experiences doing so.  
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
 %----------------------------------------------------------------------------------------
 \section{The PO-TITE-CRM Design}
-\label{section2.2} %first number is the chapter number, second number is section number, third is subsection etc...
+\label{adept:PO-TITE-CRM-Design} 
 
 Wages et al. \cite{wagesUsingTimetoeventContinual2013} introduced the PO-TITE-CRM design which builds directly upon the PO-CRM design by incorporating a TITE component into the dose toxicity model. The aim of which is to determine the target dose for combinations of drugs where the monotonicity assumption does not hold, in a setting where late-onset toxicities are possible.
 
@@ -89,7 +90,7 @@ Here $0 < \alpha_{m1} < ... < \alpha_{mk} < 1$ are the prior estimates of toxici
 
 A Bayesian framework is used and a prior probability distribution $g(\beta)$ is assigned to the parameter $\beta$. The ordering with the largest prior probability is selected as the starting ordering, in the scenario where all priors are equal an ordering is selected at random, subsequently a starting dose is also chosen. After $j$ patients have been entered into the trial data is collected in the form of $\Omega_j = \{x_1,y_1, ..., x_j,y_j\}$. A weighted likelihood for the parameter $\beta$ is used to establish running probabilities of toxicity for each treatment combination. The weighted likelihood under ordering $m$, is given by 
 \begin{equation}
-\label{Adept_likelihood_equation}
+\label{eq_adept:likelihood}
 \tilde{L}_m(\beta|\Omega_j)=\prod_{l=1}^{j}\phi_m^{y_l}(x_l,w_l,\beta)\{1-\phi_m(x_l,w_l,\beta)\}^{(1-y_l)}
 \end{equation} 
 which can be used to generate a summary value $\hat{\beta}_{mj}$, for $\beta$, for each ordering. With the likelihood and the data $\Omega_j$, the posterior density for $\beta$ can be calculated using 
@@ -117,7 +118,8 @@ where $\theta$ is the target toxicity rate. Similarly, once all patients have be
 %-------------------------.
 
 \section{PO-TITE-CRM in ADePT-DDR}  
-\label{section2.3}%first number is the chapter number, second number is section number, third is subsection etc..
+\label{adept:PO-TITE-CRM-in-Adept}
+
 The decision to implement PO-TITE-CRM into ADePT-DDR was made by Piers Gaunt (PG) after discussions with other statisticians Kristian Brock (KB) and Daniel Slade (DS), as well as the chief investigator and other co-investigators. The design was chosen as the toxicity probabilities of the dose levels weren't monotonically increasing which restricts the use of most early phase designs such as the CRM. Additionally, the design also handles late-onset toxicities which would be an issue in ADePT-DDR due to the treatment involving radiotherapy. The availability of software to conduct the trial was also a factor that was considered. The R package 'pocrm' \cite{wagesPocrmRpackagePhase2013} only provides a means for implementing the PO-CRM design but the easy accessibility to this code meant that it could be extended to include the TITE component.  
 
 The intended use of this design is for dose-finding in combinations of therapies, as this is the source of the partial ordering issue. ADePT-DDR however, is a unique implementation of the design as even though it involves a combination of therapies (radiotherapy and AZD6783) the dose of radiotherapy is fixed and dose-finding is only planned for AZD6783. PO-TITE-CRM is still applicable in this case as the design includes combinations of dose and duration for AZD6783 which are partially ordered. 
@@ -130,7 +132,7 @@ A maximum of 60 patients will be recruited for the dose-finding aspect of this t
 %	SUBSECTION 3.1
 %-----------------------------------
 \subsection{Partial Ordering in Practice}
-\label{section2.3.1}%first number is the chapter number, second number is section number, third is subsection etc..
+\label{adept:Partial-ordering-in-practice}%first number is the chapter number, second number is section number, third is subsection etc..
 
 Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling 70 Gy in 35 fractions over seven weeks. For the dose-finding aspect we investigate six doses of AZD6783 detailed in table \ref{tab_adept:AZD_dose_levels}. Treatment dose and duration to be selected for dose level 3 will be determined based on a combination of data observed, adverse events and compliance. The issue of partial ordering is illustrated in Figure \ref{fig_adept:AZD_dose_levels}. The doses to be used in this trial are detailed in their appropriate box. Additionally, each dot represents a potential dose combination which theoretically could be investigated. The combinations are colour coordinated to indicate where partial ordering exists in this dose combination space. Doses across the same colour (each diagonal) cannot be distinguished from each other in terms of probability of toxicity. However, it forms a hierarchy in which doses of the same colour can be thought of as less/more toxic that doses in another colour i.e the red dose levels would have a higher probability of toxicity than the yellow dose levels. It is clear that dose levels 2a and 2b would be considered more toxic than dose level 1 due to the increase in treatment duration and treatment dose respectively. When comparing 2a and 2b it is unknown whether the increase in dose or duration will be more toxic. Hence there are two possible orderings for ADePT-DDR. 
 
@@ -165,7 +167,7 @@ Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling
 	\centering
 	\caption{ADePT-DDR dose levels across dose and duration.}
 	\label{fig_adept:AZD_dose_levels}
-	\includegraphics[width=\textwidth]{AdeptDoseCombos}
+	\includegraphics[width=\textwidth]{Adept-DoseCombos}
 \end{figure}
 
 Traditionally, dose-finding trials for combinations would select dose levels to form a 'path' through the dose combination space such that each subsequent dose level was distinctively more toxic. This avoids the issue of partial ordering but means doses of interest or effective dose combinations may be missed or not investigated. Specifically, for ADePT-DDR this allows two 'paths' from dose level 1 extending to 2a and 2b. In terms of dose level 3 only one of the doses in that tier will be investigated, it was unclear as to which dose level would be best due to a lack of historical data. Even though dose level 3 is not yet specified in terms of modelling and simulations it was treated as singular dose. This was done as clinicians thought that it would be unlikely that we'd reach these doses and that the probability of toxicity between them would be similar.  
@@ -180,7 +182,7 @@ Information elicited from the investigators helped generate prior probabilities 
 %	SUBSECTION 3.2
 %-----------------------------------
 \subsection{The TITE component}
-\label{section2.3.2}%first number is the chapter number, second number is section number, third is subsection etc..
+\label{adept:The-TITE-component}
 
 The observation window for this trial will be up to a year post-treatment as the combination of radiotherapy with AZD6738 is anticipated to cause late-onset toxicity. The Acute DLT observation period is 84 days (12 weeks) post radiotherapy end with a minimum of 56 days (8 weeks) for the last patient of each cohort. However, patients will continuously be monitored for occurrence of DLT for at least 84 days (12 weeks), i.e. at least 84 days (12 weeks) from the end of radiotherapy. The full window will last for 365 days (52 weeks) post-treatment.
 
@@ -194,7 +196,7 @@ All patients will have a minimum weight of 60\% as that is the prescribed weight
 	\centering
 	\caption[Weight function across the follow-up period.]{Weights of patients who have not experienced a DLT across the observation window.}
 	\label{fig_adept:weight_function}
-	\includegraphics[width=\textwidth]{AdeptWeightFunction}
+	\includegraphics[width=\textwidth]{Adept-WeightFunction}
 \end{figure}
 
 
@@ -205,7 +207,7 @@ The TITE-CRM originally presented by Cheung and Chappel \cite{cheungSequentialDe
 %	SUBSECTION 3.3
 %-----------------------------------
 \subsection{Stopping Rules}
-\label{section2.3.3}%first number is the chapter number, second number is section number, third is subsection etc..
+\label{adept:Stopping-rules}
 
 A practical modification was included to allow for early stopping of the trial if there is sufficient evidence that the TD has been reached. Sufficient evidence is achieved once 15 patients (five cohorts) have been treated at the same dose level and the model allocates that dose level again to a sixth cohort. This rule evolved from the original designs of the trial which involved 30 patients with a dose expansion cohort to ensure at least 15 patients were treated at the TD. 
 
@@ -213,14 +215,14 @@ Initial simulations highlighted the inadequacy of these design parameters as ope
 
 A rule was also implemented to allow for early termination of the trial in the case of excess toxicity at the lowest dose. If the probability of DLT at the lowest dose is higher than 0.35 with a probability of 80\% and has been tested the trials safety committee will be alerted and will recommend if the trial should be stopped. As the trial starts at dose level 0, which is not the lowest dose, it is possible for the trial to recommend terminating without ever allocating patients to the lowest dose level. As such it was decided early termination would only occur once at least 3 patients (1 cohort) have been allocated dose level -1. 
 
-An approximate estimate of the variance was calculated using methodology presented by O'Quigley and Shen \cite{oquigleyContinualReassessmentMethod1996}. The observed information matrix is obtained by taking the second derivative of the likelihood (eq. \ref{Adept_likelihood_equation}) which is then used to calculate the variance $v(\hat{\beta_j})$, for estimate $\beta_j$ which becomes more accurate with larger sample sizes. After each cohort, we sample many times from a normal distribution with parameters based on the estimate of $\beta_j$ and its variance. These samples are then plugged into our dose-toxicity model to ascertain the probability of toxicity at the lowest dose. The trial will be recommended to stop if it breaks the rule based on the criteria above. 
+An approximate estimate of the variance was calculated using methodology presented by O'Quigley and Shen \cite{oquigleyContinualReassessmentMethod1996}. The observed information matrix is obtained by taking the second derivative of the likelihood (eq. \ref{eq_adept:likelihood}) which is then used to calculate the variance $v(\hat{\beta_j})$, for estimate $\beta_j$ which becomes more accurate with larger sample sizes. After each cohort, we sample many times from a normal distribution with parameters based on the estimate of $\beta_j$ and its variance. These samples are then plugged into our dose-toxicity model to ascertain the probability of toxicity at the lowest dose. The trial will be recommended to stop if it breaks the rule based on the criteria above. 
 
 
 %-----------------------------------
 %	SUBSECTION 3.4 
 %-----------------------------------
 \subsection{Operating Characteristics}
-\label{section2.3.4}%first number is the chapter number, second number is section number, third is subsection etc.. 
+\label{adept:OCs} 
 
 Simulations were continually utilised during the design process of the trial to assess how various changes impact the overall performance. These changes to design features such as the sample size, weight function and stopping rules helped inform decisions which led to the final design.  
 
@@ -228,7 +230,7 @@ Functions from pocrm package in R \cite{wagesPocrmRpackagePhase2013, wagesPocrmD
 
 Standard scenarios to run involve adjusting the true DLT rates to reflect each dose being the TD25. For each of these we calculate the probability of selecting each dose as the TD25. It would be expected the dose with the highest probability of being selected has its true DLT rate set at 25\% to match the target rate. A high probability of selection for the correct dose implies the design works well in the specified scenario. Additional characteristics such as the average number of patients at each dose level are also investigated. This can be used to look at how many patients may potentially be allocated to a toxic dose. It is also necessary to consider performance when all doses are too toxic, here we would want the design to recommend stopping early. Usually the true DLT rates used to define these scenarios abide by the monotonicity assumption. Due to the partial ordering we consider scenarios in which the true DLT rates follow both orders. For trials with a large amount of orders it may be unfeasible to run so many simulations. However, as ADePT-DDR only has two orders we explored all scenarios for each ordering.
 
-We simulated 2000 trials for each scenario using the finalised design detailed in section \ref{section2.3}. Simulations were based on the assumption that the trial would recruit one patient per month. The occurrence of DLT's were randomly generated for patients in each cohort using a Bernoulli distribution with the probability set at the true DLT rate for the cohorts assigned dose level in the specific scenario. For patients who had a DLT occur, the time at which the DLT occurred was randomly generated using a uniform distribution which spanned the start of treatment to the end of follow-up.  
+We simulated 2000 trials for each scenario using the finalised design detailed in section \ref{adept:PO-TITE-CRM-in-Adept}. Simulations were based on the assumption that the trial would recruit one patient per month. The occurrence of DLT's were randomly generated for patients in each cohort using a Bernoulli distribution with the probability set at the true DLT rate for the cohorts assigned dose level in the specific scenario. For patients who had a DLT occur, the time at which the DLT occurred was randomly generated using a uniform distribution which spanned the start of treatment to the end of follow-up.  
 
 Table \ref{tab_adept:OCorder1} details simulations for eight scenarios to test the performance of the PO-TITE-CRM design using true DLT rates which reflect the first ordering. We analyse scenarios where each dose is the TD25 (scenarios 1-6) and when all doses are too toxic (scenario 8). Additionally, we also investigate performance under conditions where the probability of DLT is fairly similar between doses (scenario 7). This is a notoriously difficult circumstance for CRM designs to deal with as the limited number of patients and events at each dose make it hard to accurately estimate toxicity probabilities if they are similar. Simulation results for ordering 2 are shown in Table \ref{tab_adept:OCorder2} where dose level 2a is considered more toxic than 2b. This is achieved by altering the true DLT rates so 2b has a lower probability of DLT compared to 2a. 
 
@@ -408,16 +410,16 @@ Additionally, we assess designs based on how doses are allocated to patients. De
 
 The percentage of patients treated at the TD25 ranges between 23\% and 43\% for each scenario under both orderings. The design also allocates the most patients on average to the TD25 apart from in scenario 7. In this case more patients were allocated to the next lowest dose, we have already discussed the difficulties of this scenario so this characteristic is not too concerning. The mean number of patients recruited for scenarios 1-6 is 26, 30, 32, 33, 34 and 31 respectively. Similarly for scenarios 9-14 its 26, 30, 32, 34, 33 and 31. Even though we allow for up to 60 patients the majority of trials terminate early based on the pre-defined rules for selecting the TD25.
 
-Overall, the simulation results show the specification of this design performs relatively well in a number of scenarios. We have shown there is a high probability of the trial stopping early if all dose-levels are too toxic. We have also shown the design behaves in an appropriate manner when there is a lack of disparity between dose-levels in terms of toxicity. Finally, we have demonstrated that regardless of the ordering we observe the PO-TITE-CRM has a high probability of selecting the correct dose. There are a number of limitations to the operating characteristics presented here which are due to the specification of the simulations and trial design. Section \ref{section2.4} explores and discusses these limitations in more detail.
+Overall, the simulation results show the specification of this design performs relatively well in a number of scenarios. We have shown there is a high probability of the trial stopping early if all dose-levels are too toxic. We have also shown the design behaves in an appropriate manner when there is a lack of disparity between dose-levels in terms of toxicity. Finally, we have demonstrated that regardless of the ordering we observe the PO-TITE-CRM has a high probability of selecting the correct dose. There are a number of limitations to the operating characteristics presented here which are due to the specification of the simulations and trial design. Section \ref{adept:Inspection-of-OCs} explores and discusses these limitations in more detail.
 
 %----------------------------------------------------------------------------------------
 %	SECTION 4
 %-------------------------.
 
 \section{Inspection of the operating characteristics}  
-\label{section2.4}%first number is the chapter number, second number is section number, third is subsection etc.. 
+\label{adept:Inspection-of-OCs}
 
-The operating characteristics presented in section \ref{section2.3.4} provide an insight into how the trial design operates and its effectiveness at selecting the TD25. However, several factors impact the results seen here. These factors can be grouped into two main categories, limitations with the simulations performed or the trial design.
+The operating characteristics presented in section \ref{adept:OCs} provide an insight into how the trial design operates and its effectiveness at selecting the TD25. However, several factors impact the results seen here. These factors can be grouped into two main categories, limitations with the simulations performed or the trial design.
 
 To simulate various scenarios the true DLT rates are adjusted to reflect the TD25 being at different dose levels. There is no formal process to select these values as such their selection is fairly arbitrary. We set one dose level as the TD25 with lower and higher dose levels set at lower and higher DLT rates respectively. Figure \ref{fig_adept:dlt_rates} illustrates the dose levels for scenarios in Table \ref{tab_adept:OCorder1} where dose level 2b is more toxic than 2a. The DLT rates cover some possible scenarios and account for a range of plausible values. However, these true DLT rates may not accurately reflect what we observe once the trial begins. Also, the relationship between the rates and the dose levels may not be similar to what we use in the simulations. Multiple other scenarios could be investigated but it would still be impossible to account for all possible variations which may occur. Hence when evaluating the performance of a design it is important to note the scenario in which it is being evaluated and whether or not the design performs as expected and to an adequate level. For ADePT-DDR, the design produces reasonable operating characteristics under each scenario. 
 
@@ -425,7 +427,7 @@ To simulate various scenarios the true DLT rates are adjusted to reflect the TD2
 	\centering
 	\caption[Illustration of true DLT rates used in simulations.]{True DLT rates used for each of the scenarios where dose level 2b is more toxic than 2a. The dotted red line represents the target dlt rate of 25\% (TD25).}
 	\label{fig_adept:dlt_rates}
-	\includegraphics[width=\textwidth]{AdeptDLTRates}
+	\includegraphics[width=\textwidth]{Adept-DLTRates}
 \end{figure}
  
 The original methodological papers by Wages et al. \cite{wagesUsingTimetoeventContinual2013,wagesContinualReassessmentMethod2011} only provide simulations for their examples using true DLT rates that are monotonically increasing which represented one of their possible orderings. We cannot tell how their design would perform under scenarios from different orderings. It is unclear as to why this wasn't examined. Initially, in ADePT-DDR we followed suit and only produced simulations under a monotonically increasing DLT rate (order where 2b is more toxic than 2a, Table \ref{tab_adept:OCorder1}). However, as we are unclear on the ordering of 2a and 2b there is a possibility that 2b is less toxic. So those initial simulations would not provide an accurate assessment of the design in that circumstance. This was the main motivation for running scenarios in Table \ref{tab_adept:OCorder2}, in which we see the design performs at a similar level regardless of the partial ordering. ADePT-DDR is a simple case of partial ordering as there are only two possible orderings and six dose-levels. For trials with higher numbers of orderings or dose-levels the number of scenarios that would have to be evaluated would increase which may be infeasible. Here it may be more beneficial to choose a handful of scenarios from multiple different orderings to cover a wider range of possible outcomes for the trial to assess the design. 
@@ -590,7 +592,7 @@ For the design with no cohorts, or cohort size of one, we see somewhat comparabl
 %-------------------------.
 
 \section{Discussion}  
-\label{section2.5}%first number is the chapter number, second number is section number, third is subsection etc.. 
+\label{adept:Discussion}
 
 The PO-CRM and PO-TITE-CRM designs offer solutions to the issue of partial ordering where the order of the treatments is only partially known. The original methodology details that this issue commonly arises in trials of multiple agents, where each drug individually may follow the monotonicity assumption but when combined at certain dose levels this may not hold. This issue is typically dealt with by fixing the dose of one of the agents and escalating in the other or escalating in both agents simultaneously. This means certain drug combinations that are clinically relevant may not be investigated or even considered.  
  
@@ -610,7 +612,7 @@ Similarly, there may also be limitations with some of the design choices made co
 %-------------------------.
 
 \section{Conclusion}  
-\label{section2.6}
+\label{adept:Conclusion}
 
 The monotonicity assumption may not hold in some dose-finding trials leading to the issue of partial ordering. This could be due to multiple-agents being investigated or varying factors in single-agent treatment. PO-CRM and PO-TITE-CRM are important trial designs as they address this core issue. ADePT-DDR is a platform trial with its initial component being a dose-finding trial investigating AZD6738 in combination with radiotherapy, of which the toxicity ordering for two of the dose levels for investigation is unknown. The PO-TITE-CRM design allows for us to deal with this issue of partial ordering as well as account for potential late-onset toxicities due to radiotherapy with its TITE component. 
 
