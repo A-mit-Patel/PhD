@@ -44,7 +44,7 @@ n <- 60
 # The target toxicity rate
 theta <- 0.25
 # Number of simulations
-nsim <- 2000
+nsim <- 10000
 # Definition of acceptable DLT rates
 tox.range<-0.05 
 # The cohort size
@@ -199,7 +199,7 @@ OC_tab
 
 ```{r, comment=NA}
 code <-kable(OC_tab, "latex", booktabs = T, linesep = "", align = "c", 
-            caption = " Operating Characteristics of the two-stage PO TITE-CRM (using true DLT rates which imply dose level 2b is more toxic than 2a) in eight different scenarios based on 2000 simulated trials of 60 patients in cohorts of three. Definitions: DLT: Dose-limiting toxicity. P(select):
+            caption = " Operating Characteristics of the two-stage PO TITE-CRM (using true DLT rates which imply dose level 2b is more toxic than 2a) in eight different scenarios based on 10000 simulated trials of 60 patients in cohorts of three. Definitions: DLT: Dose-limiting toxicity. P(select):
 Probability of selecting a dose as the MTD.") %>%
         kable_styling(latex_options = c("striped", "HOLD_position"),
                       position = "center",
@@ -350,7 +350,7 @@ OC_tab2
 
 ```{r, comment=NA}
 code2 <-kable(OC_tab2, "latex", booktabs = T, linesep = "", align = "c", 
-            caption = " Operating Characteristics of the two-stage PO TITE-CRM (using true DLT rates which imply dose level 2a is more toxic than 2b) in eight different scenarios based on 2000 simulated trials of 60 patients in cohorts of three. Definitions: DLT: Dose-limiting toxicity. P(select):
+            caption = " Operating Characteristics of the two-stage PO TITE-CRM (using true DLT rates which imply dose level 2a is more toxic than 2b) in eight different scenarios based on 1000 simulated trials of 60 patients in cohorts of three. Definitions: DLT: Dose-limiting toxicity. P(select):
 Probability of selecting a dose as the MTD.") %>%
         kable_styling(latex_options = c("striped", "HOLD_position"),
                       position = "center",

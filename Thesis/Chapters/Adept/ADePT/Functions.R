@@ -1,8 +1,9 @@
 # Simulation function for PO-TITE-CRMs
 titepocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim, 
-                           tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+                           tox.range, cohort, obswin, minfu, win2, recrate, 
+                           mtd.lim, tox.lim, tox.cert)
 {
-  
+  start_time <- Sys.time()
   sim <- sim1 <- apred <- lik <- pord <- ord <- ahat <- rpred <- next.lev <- n1 <- N <- NULL
   d <- ncol(alpha)
   s <- nrow(alpha)
@@ -361,11 +362,14 @@ titepocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
       stop.count[i] = result$stop
     }
     return(list(true.prob = r, 
+                time = Sys.time() - start_time,
                 MTD.selection = round(colMeans(comb.select),2),
                 patient.allocation = 100* round(colMeans(npts)/mean(trialsize),2), 
                 percent.DLT = sum(colMeans(y))/mean(trialsize), 
                 months = 12*mean(duration)/365, 
                 stop = mean(stop.count), 
+                max.n.count = length(trialsize[trialsize == max(trialsize)]),
+                summary.trialsize = summary(trialsize),
                 mean.n = mean(trialsize), 
                 mean.n.perdose = colMeans(npts),
                 acceptable = sum(colMeans(comb.select)[which(round(abs(r - theta), 2) <= tox.range)])))
@@ -384,7 +388,7 @@ pocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
                        tox.range, cohort, 
                        mtd.lim, tox.lim, tox.cert)
 {
-  
+  start_time <- Sys.time()
   sim <- sim1 <- apred <- lik <- pord <- ord <- ahat <- rpred <- next.lev <- n1 <- N <- NULL
   d <- ncol(alpha)
   s <- nrow(alpha)
@@ -647,6 +651,7 @@ pocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
       duration[i] = result$duration
     }
     return(list(true.prob = r, 
+                time = Sys.time()- start_time,
                 MTD.selection = round(colMeans(comb.select),2),
                 patient.allocation = 100* round(colMeans(npts)/mean(trialsize),2), 
                 percent.DLT = sum(colMeans(y))/mean(trialsize), 
@@ -671,6 +676,7 @@ applied_titecrmts_sim_v2 <- function (true_tox, prior, target, max_sample_size,
                                       dose_func = applied_titecrm, ...) 
 {
   iterations <- list()
+  start_time <- Sys.time()
   for (s in 1:num_sims) {
     # tox <- c()
     # level <- c()
@@ -949,6 +955,7 @@ applied_titecrmts_sim_v2 <- function (true_tox, prior, target, max_sample_size,
   summary = list(true_tox = true_tox, prior = prior, target = target, 
                  max_sample_size = max_sample_size, initdes = initdes, 
                  months = 12*mean(duration)/365,
+                 time = Sys.time()- start_time,
                  num_sims = num_sims, cohort = cohort,
                  prob_stop = table(substr(unlist(sapply(iterations, function(x) 
                    x$stop_reason)), 1, 15))/num_sims, 
@@ -963,8 +970,10 @@ applied_titecrmts_sim_v2 <- function (true_tox, prior, target, max_sample_size,
 
 
 # Simulations for no cohorts and removal of minimum followup 
+# Not used
 titepocrm_sim_nomin <- function (r, alpha, prior.o, x0, stop, n, theta, nsim, 
-                           tox.range, cohort, obswin, minfu, win2, recrate,                                mtd.lim, tox.lim, tox.cert)
+                           tox.range, cohort, obswin, minfu, win2, recrate, 
+                           mtd.lim, tox.lim, tox.cert)
 {
   
   sim <- sim1 <- apred <- lik <- pord <- ord <- ahat <- rpred <- next.lev <- n1 <- N <- NULL

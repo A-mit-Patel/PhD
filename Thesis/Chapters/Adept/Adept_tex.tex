@@ -19,9 +19,9 @@ The ADePT-DDR trial is a platform trial which aims to evaluate the safety and ef
 
 Traditionally dose-finding trials aim to determine the maximum tolerated dose (MTD) of a treatment based on the cytotoxic assumption that the most toxic dose is the most efficacious. Rule-based or 'up and down' designs achieve this by escalating and de-escalating doses dependent on the observation of severe toxicity due to the drug,  commonly referred to as a dose-limiting toxicity (DLT). In the case of the 3+3 design escalation continues until at least two patients in a cohort of three or six experience a DLT. More explicitly, the MTD is the dose level below the dose at which $\geq$33\% of patients experience a DLT \cite{letourneauDoseEscalationMethods2009}. Model-based designs such as the continual reassessment method (CRM) \cite{oquigleyContinualReassessmentMethod1990} work on the assumption that the probability of toxicity increases monotonically with increases in dose levels. The CRM aims to find the MTD which is a dose with specified target toxicity level. 
 
-Due to the historical use of rule-based designs  \cite{rogatkoTranslationInnovativeDesigns2007, chiuzanDosefindingDesignsTrials2017}, the majority of the terminology used to describe them, and the ambiguity they raise, has been inherited by modern designs such as the CRM. The MTD in the context of a CRM is not the 'maximum' dose patients could tolerate but rather a dose in which there would be an acceptable target probability of a DLT occurring. For example, if the target is set at 25\% the MTD would be the dose at which there is a 25\% probability of experiencing a DLT. Rather than using the term MTD, the dose to be found will be referred to as the target dose (TD\%\%, where the \%'s are replaced by the target probability), i.e. TD25 would be the dose expected to be toxic in 25\% of patients.
+Due to the historical use of rule-based designs  \cite{rogatkoTranslationInnovativeDesigns2007, chiuzanDosefindingDesignsTrials2017}, the majority of the terminology used to describe them, and the ambiguity they raise, have been inherited by modern designs such as the CRM. The MTD in the context of a CRM is not the 'maximum' dose patients could tolerate but rather a dose in which there would be an acceptable target probability of a DLT occurring. For example, if the target is set at 25\% the MTD would be the dose at which there is a 25\% probability of experiencing a DLT. Rather than using the term MTD, the dose to be found will be referred to as the target dose (TD\%\%, where the \%'s are replaced by the target probability), i.e. TD25 would be the dose expected to be toxic in 25\% of patients.
 
-The investigation of multiple-agent treatments, where the monotonicity assumption may not hold, is increasing in early phase trials. Finding the TD in combinations of treatments, compared to single-agents,  presents methodological challenges. Each drug individually may obey the monotonicity assumption, however, when combined, the ordering of doses in terms of toxicity may not be fully apparent. An order for a subset of the combined doses could be identified resulting in a partial order. Without a fully understood ordering it is uncertain which dose should be chosen in decisions of escalation and de-escalation and ultimately as the TD. This issue is not exclusively reserved for trials with multiple-agents. The monotonicity assumption may not hold for certain drugs in single-agent studies leading to partial orders of dose toxicity. Monotonicity is a very strong assumption. It requires that probability of toxicity always increases - staying the same is not enough. At high enough doses, this assumption is almost surely violated for all interventions when the event probability reaches its maximum. Thus, even when total ordering is possible, the monotonicity assumption could be violated \cite{brockMoreBetterAnalysis2020}. This can occur in scenarios where multiple parameters of the treatment schedule are altered for each dose level. For example, either dose or treatment duration could be increased and even if patients receive an equal dose it would remain unclear as to if prolonged exposure to a lower dose is more toxic than short exposure to a higher dose, which implies a partial ordering of toxicity probabilities. 
+The investigation of multiple-agent treatments, where the monotonicity assumption may not hold, is increasing in early phase trials. Finding the TD in combinations of treatments, compared to single-agents,  presents methodological challenges. Each drug individually may obey the monotonicity assumption, however, when combined, the ordering of doses in terms of toxicity may not be fully apparent. An order may be identified for a subset of the doses which would result in a partial order. Without a fully understood ordering it is uncertain which dose should be chosen in decisions of escalation and de-escalation and ultimately as the TD. This issue is not exclusively reserved for trials with multiple-agents. The monotonicity assumption may not hold for certain drugs in single-agent studies leading to partial orders of dose toxicity. For example, when dose and frequency of administration vary between dose levels. Monotonicity is a very strong assumption. It requires that probability of toxicity always increases - staying the same is not enough. At high enough doses, this assumption is almost surely violated for all interventions when the event probability reaches its maximum. Thus, even when total ordering is possible, the monotonicity assumption could be violated \cite{brockMoreBetterAnalysis2020}. This can occur in scenarios where multiple parameters of the treatment schedule are altered for each dose level. For example, either dose or treatment duration could be increased and even if patients receive an equal dose it would remain unclear as to if prolonged exposure to a lower dose is more toxic than short exposure to a higher dose, which implies a partial ordering of toxicity probabilities. 
 
 Further methodological challenges revolve around the issue of late-onset toxicities. Typically, early phase trials implement a short window to observe DLTs. This works well in situations where toxicities are likely to occur rapidly after treatment. However, this is not optimal for treatments that could cause late-onset toxicities such as radiotherapy. The aim here would be to incorporate a larger observation window to account for potential late-onset toxicities whilst also minimising the trial duration. 
 
@@ -34,13 +34,15 @@ Cheung and Chappel \cite{cheungSequentialDesignsPhase2000} introduced an extensi
 	\includegraphics[width=0.75\textwidth]{Adept-DoseExample}
 \end{figure}
 
-Wages et al. \cite{wagesContinualReassessmentMethod2011, wagesUsingTimetoeventContinual2013} further developed their work on the PO-CRM to deal with late-onset toxicities by implementing a TITE component. This trial design, referred to as the time-to-event continual reassessment method in the presence of partial orders (PO-TITE-CRM) by the authors, was chosen to be used in ADePT-DDR. A search of PubMed, conducted on the 25th of July 2020, found six articles that had cited the PO-TITE-CRM design by Wages et al. \cite{wagesUsingTimetoeventContinual2013}. Five of these papers were methodological in nature, two of which only include the PO-TITE-CRM design in a brief introduction to current methodology before going on to present new Bayesian trial designs \cite{liuBAYESIANDATAAUGMENTATION2013, wheelerBayesianModelfreeApproach2019}. The other three papers were authored by Wages. The first of which details practical considerations and specifications for the PO-CRM design, the TITE variant is only cited as the source of an example which is being used \cite{wagesSpecificationsContinualReassessment2013}. One paper presents an R package 'pocrm' \cite{wagesPocrmRpackagePhase2013, wagesPocrmDoseFinding2019}. The package is only capable of analysing the PO-CRM design. The TITE variant is only referenced here as it illustrates the issue of partial ordering. The last methodological paper by Wages et al. \cite{wagesPracticalDesignsPhase2016} presents three different methods for phase \RN{1} studies of drug combinations one of which is the PO-CRM however, PO-TITE-CRM is only mentioned as an extension to this design. A key message in this paper is the fact that novel methodologies are constantly emerging but are rarely implemented in practice. 
+Wages et al. \cite{wagesContinualReassessmentMethod2011, wagesUsingTimetoeventContinual2013} further developed their work on the PO-CRM to deal with late-onset toxicities by implementing a TITE component. This trial design, referred to as the time-to-event continual reassessment method in the presence of partial orders (PO-TITE-CRM) by the authors, was chosen to be used in ADePT-DDR. A search of PubMed, conducted on the 25th of July 2020, found six articles that had cited the PO-TITE-CRM design by Wages et al. \cite{wagesUsingTimetoeventContinual2013}. Of these six articles non actually implement the design into a trial. The following paragraphs provide more details. 
+
+Five of these papers were methodological in nature, two of which only include the PO-TITE-CRM design in a brief introduction to current methodology before going on to present new Bayesian trial designs \cite{liuBAYESIANDATAAUGMENTATION2013, wheelerBayesianModelfreeApproach2019}. The other three papers were authored by Wages. The first of which details practical considerations and specifications for the PO-CRM design, the TITE variant is only cited as the source of an example which is being used \cite{wagesSpecificationsContinualReassessment2013}. One paper presents an R package 'pocrm' \cite{wagesPocrmRpackagePhase2013, wagesPocrmDoseFinding2019}. The package is only capable of analysing the PO-CRM design. The TITE variant is only referenced here as it illustrates the issue of partial ordering. The last methodological paper by Wages et al. \cite{wagesPracticalDesignsPhase2016} presents three different methods for phase \RN{1} studies of drug combinations one of which is the PO-CRM however, PO-TITE-CRM is only mentioned as an extension to this design. A key message in this paper is the fact that novel methodologies are constantly emerging but are rarely implemented in practice. 
 
 The last paper is a protocol paper for a phase \RN{1}/\RN{2} study, OLA-TMZ-RTE-01 \cite{lesueurPhaseIIaStudy2019}. The phase \RN{1} component of the study aims to determine the recommended phase \RN{2} dose (RP2D) of olaparib combined with a standard schedule of radiotherapy and temozolomide (TMZ) as first line treatment for patients with unresectable glioblastoma (GBM). The treatment schedule is divided into a radiotherapy and maintenance period. They propose to conduct two sequential dose-escalations of seven different  olaparib dose-levels. Patients in the first escalation will be allocated to a dose level of olaparib for 10 weeks including radiotherapy for six weeks with TMZ given each day during radiotherapy and then for six cycles four weeks post radiotherapy during the maintenance period. They state the MTD1 will be determined using a TITE-CRM. Patients in the second escalation olaparib at the MTD1 during the radiotherapy period along with the same schedule of radiotherapy and TMZ. Those patients will then be allocated to one of the seven dose levels of olaparib during the maintenance period. Again, it is stated that the MTD2 will be determined using TITE-CRM modelling. The RP2D is the MTD1 and MTD2 during the radiotherapy and maintenance period respectively. Even though a combination of treatments is being investigated only olaparib is being escalated and doses for other treatments are fixed for all patients. Furthermore, the dose-levels for olaparib increase consistently in either amount or duration meaning there are no issues of partial ordering which would warrant the use of PO-TITE-CRM. The authors reference the TITE-CRM methodology with two papers. One of them being the paper detailing the PO-TITE-CRM design and the other being a paper by Huang and Kuan \cite{huangTimetoeventContinualReassessment2014} which proposes an adaptive weight function that incorporates cyclical data of treatment into the TITE-CRM. It is unclear as to why the PO-TITE-CRM is cited as its methodology is not mentioned anywhere in methods.       
 
 This is just a brief review of the current literature but it seems that the PO-TITE-CRM has rarely been used or discussed since its inception. 
 
-This chapter provides novel insight into the methodology of PO-TITE-CRM through application in a real-world scenario. Section \ref{adept:PO-TITE-CRM-Design} will detail how the PO-TITE-CRM works. Section \ref{adept:PO-TITE-CRM-in-Adept} discusses the justification for implementing the design into the ADePT-DDR trial and our experiences doing so.  
+This chapter provides novel insight into the methodology of PO-TITE-CRM through application in a real-world scenario. Section \ref{adept:PO-TITE-CRM-Design} will detail how the PO-TITE-CRM works. Section \ref{adept:PO-TITE-CRM-in-Adept} discusses the justification for implementing the design into the ADePT-DDR trial and our experiences doing so. Section \ref{adept:Exploring-other-designs} explores other alternative designs which could have been implemented and assess how they perform in comparison to the PO-TITE-CRM. We provide some discussion in Section \ref{adept:Discussion} and finally some conclusions in Section \ref{adept:Conclusion}.
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
@@ -62,7 +64,7 @@ Wages et al. \cite{wagesUsingTimetoeventContinual2013} introduced the PO-TITE-CR
 	\end{tabular}
 \end{table}
 
-To help understand partial ordering consider an example of an early phase trial investigating the combination of two agents. Drug A which consists of three doses (0.25, 0.5, 1.0 mg/day) and drug B which consists of two doses (1.0, 1.5 mg/day), for a total of six drug combinations $d_{1}$, ..., $d_{6}$ (Table \ref{tab_adept:ex_drug_combo}). For each drug independently we assume they have a monotonic dose-toxicity curve however, the ordering of toxicity probabilities for some of the treatment combinations is unknown. Specifically, we can say $d_{1}$ is less toxic than $d_{2}$ as the dose of drug A increased whilst the dose of drug B stayed the same. This is also the case for $d_{2}$ and $d_{3}$. The order between $d_{4}$ and $d_{5}$ in comparison to $d_{3}$ is not known because the dose of drug A decreases whilst the dose of drug B increases. Assessing all these potential order toxicity relationships leaves five possible orderings. 
+To help understand partial ordering consider an example of an early phase trial investigating the combination of two agents. Drug A which consists of three doses (0.25, 0.5, 1.0 mg/day) and drug B which consists of two doses (1.0, 1.5 mg/day), for a total of six drug combinations $d_{1}$, ..., $d_{6}$ (Table \ref{tab_adept:ex_drug_combo}). For each drug independently we assume they have a monotonic dose-toxicity curve however, the ordering of toxicity probabilities for some of the treatment combinations is unknown. Specifically, we can say $d_{1}$ is less toxic than $d_{2}$ as the dose of drug A increased whilst the dose of drug B stayed the same. This is also the case for $d_{2}$ and $d_{3}$. So, $d_{1}$ can always be considered less toxic than $d_{2}$ which is always less toxic than $d_{3}$. The same can be said for doses $d_{4}$, $d_{5}$ and $d_{6}$, these three doses are can also all be considered more toxic than $d_{1}$ as well.The order between $d_{4}$ and $d_{5}$ in comparison to $d_{3}$ is not known because the dose of drug A decreases whilst the dose of drug B increases. Similarly the order between $d_{2}$ and $d_{4}$ is unknown. Assessing all these potential order toxicity relationships leaves five possible orderings. 
 
 \begin{enumerate}
 	\centering
@@ -93,7 +95,7 @@ A Bayesian framework is used and a prior probability distribution $g(\beta)$ is 
 \label{eq_adept:likelihood}
 \tilde{L}_m(\beta|\Omega_j)=\prod_{l=1}^{j}\phi_m^{y_l}(x_l,w_l,\beta)\{1-\phi_m(x_l,w_l,\beta)\}^{(1-y_l)}
 \end{equation} 
-which can be used to generate a summary value $\hat{\beta}_{mj}$, for $\beta$, for each ordering. With the likelihood and the data $\Omega_j$, the posterior density for $\beta$ can be calculated using 
+which can be used to generate a summary value $\hat{\beta}_{mj}$ for each ordering. With the likelihood and the data $\Omega_j$, the posterior density for $\beta$ can be calculated using 
 \begin{equation}
 	\tilde{f}_m(\beta|\Omega_j)=\frac{\tilde{L}_m(\beta|\Omega_j)g(\beta)}{\int_{\beta}\tilde{L}_m(\beta|\Omega_j)g(\beta)d\beta}
 \end{equation}
@@ -124,7 +126,7 @@ The decision to implement PO-TITE-CRM into ADePT-DDR was made by Piers Gaunt (PG
 
 The intended use of this design is for dose-finding in combinations of therapies, as this is the source of the partial ordering issue. ADePT-DDR however, is a unique implementation of the design as even though it involves a combination of therapies (radiotherapy and AZD6783) the dose of radiotherapy is fixed and dose-finding is only planned for AZD6783. PO-TITE-CRM is still applicable in this case as the design includes combinations of dose and duration for AZD6783 which are partially ordered. 
 
-A two-stage PO-TITE-CRM will be used to find the TD25 of AZD6783. This will be determined by dose-limiting toxicities evaluated by Common Terminology Criteria for Adverse Events (CTCAE) v5.0 and Radiation Therapy Oncology Group (RTOG) late toxicity score. The binary DLT events are pre-defined by a variety of grade 3-4 adverse events notably, haematological, cardiovascular and gastrointestinal/hepatic toxicities as well as significant non-haematological events and specific treatment-related toxicities. DLTs will be monitored for the duration of treatment (seven weeks) and up to a year post-treatment. 
+A two-stage PO-TITE-CRM will be used to find the TD25 of AZD6783. This will be determined by dose-limiting toxicities evaluated by Common Terminology Criteria for Adverse Events (CTCAE) v5.0 and Radiation Therapy Oncology Group (RTOG) late toxicity score. The binary DLT events are pre-defined by a variety of grade 3-4 adverse events notably, haematological, cardiovascular and gastrointestinal/hepatic toxicities as well as significant non-haematological events and specific treatment-related toxicities. DLTs will be monitored for the duration of treatment (seven weeks) and throughout the follow-up period. The total follow-up period post treatment is 52 weeks, so patients will spend a total of 59 weeks in the trial.  
 
 A maximum of 60 patients will be recruited for the dose-finding aspect of this trial and up to 20 patients as controls. Controls will be utilised to make comparisons for secondary outcomes such as survival and efficacy. Control patients will only be receiving radiotherapy, the dose of which is fixed at 70Gy/35F. Cohorts of three patients will be recruited and assigned to dose levels chosen by the PO-TITE-CRM. Controls will be recruited in the interim period between the recruitment of the third patient in a cohort and the completion of the minimum follow-up period.    
 
@@ -134,7 +136,7 @@ A maximum of 60 patients will be recruited for the dose-finding aspect of this t
 \subsection{Partial Ordering in Practice}
 \label{adept:Partial-ordering-in-practice}%first number is the chapter number, second number is section number, third is subsection etc..
 
-Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling 70 Gy in 35 fractions over seven weeks. For the dose-finding aspect we investigate six doses of AZD6783 detailed in table \ref{tab_adept:AZD_dose_levels}. Treatment dose and duration to be selected for dose level 3 will be determined based on a combination of data observed, adverse events and compliance. The issue of partial ordering is illustrated in Figure \ref{fig_adept:AZD_dose_levels}. The doses to be used in this trial are detailed in their appropriate box. Additionally, each dot represents a potential dose combination which theoretically could be investigated. The combinations are colour coordinated to indicate where partial ordering exists in this dose combination space. Doses across the same colour (each diagonal) cannot be distinguished from each other in terms of probability of toxicity. However, it forms a hierarchy in which doses of the same colour can be thought of as less/more toxic that doses in another colour i.e the red dose levels would have a higher probability of toxicity than the yellow dose levels. It is clear that dose levels 2a and 2b would be considered more toxic than dose level 1 due to the increase in treatment duration and treatment dose respectively. When comparing 2a and 2b it is unknown whether the increase in dose or duration will be more toxic. Hence there are two possible orderings for ADePT-DDR. 
+Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling 70 Gy in 35 fractions over seven weeks. For the dose-finding aspect we investigate six doses of AZD6783 detailed in table \ref{tab_adept:AZD_dose_levels}. Treatment dose and duration to be selected for dose level 3 will be determined based on a combination of data observed, adverse events and compliance. The issue of partial ordering is illustrated in Figure \ref{fig_adept:AZD_dose_levels} inspired from plots by Wages et al. \cite{wagesUsingTimetoeventContinual2013}. The doses to be used in this trial are detailed in their appropriate box. Additionally, each dot represents a potential dose combination which theoretically could be investigated. The combinations are colour coordinated to indicate where partial ordering exists in this dose combination space. Doses across the same colour (each diagonal) cannot be distinguished from each other in terms of probability of toxicity. However, it forms a hierarchy in which doses of the same colour can be thought of as less/more toxic that doses in another colour i.e the red dose levels would have a higher probability of toxicity than the yellow dose levels. It is clear that dose levels 2a and 2b would be considered more toxic than dose level 1 due to the increase in treatment duration and treatment dose respectively. When comparing 2a and 2b it is unknown whether the increase in dose or duration will be more toxic. Hence there are two possible orderings for ADePT-DDR. 
 
 \begin{enumerate}
 	\centering
@@ -170,13 +172,13 @@ Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling
 	\includegraphics[width=\textwidth]{Adept-DoseCombos}
 \end{figure}
 
-Traditionally, dose-finding trials for combinations would select dose levels to form a 'path' through the dose combination space such that each subsequent dose level was distinctively more toxic. This avoids the issue of partial ordering but means doses of interest or effective dose combinations may be missed or not investigated. Specifically, for ADePT-DDR this allows two 'paths' from dose level 1 extending to 2a and 2b. In terms of dose level 3 only one of the doses in that tier will be investigated, it was unclear as to which dose level would be best due to a lack of historical data. Even though dose level 3 is not yet specified in terms of modelling and simulations it was treated as singular dose. This was done as clinicians thought that it would be unlikely that we'd reach these doses and that the probability of toxicity between them would be similar.  
+Traditionally, dose-finding trials for combinations would select dose levels to form a 'path' through the dose combination space such that each subsequent dose level was logically more toxic. This avoids the issue of partial ordering but means doses of interest or effective dose combinations may be missed or not investigated. Specifically, for ADePT-DDR this allows two 'paths' from dose level 1 extending to 2a and 2b. In terms of dose level 3 only one of the doses in that tier will be investigated, it was unclear as to which dose level would be best due to a lack of historical data. Even though dose level 3 is not yet specified in terms of modelling and simulations it was treated as singular dose. This was done as clinicians thought that it would be unlikely that we'd reach these doses and that the probability of toxicity between them would be similar.  
 
 Preliminary designs of the trial included only five dose levels and planned to use dose level 0 as the starting dose. During the trial design phase it was decided a new lower dose (dose level -1) would be introduced to allow for de-escalation if the initial dose was found to be too toxic. Dose escalation/de-escalation for subsequent cohorts would be determined from the two-stage PO-TITE-CRM. A two-stage design allows for escalation according to a pre-defined escalation scheme similar to a '3+3' design. The first stage dictates that if no DLT's are observed in the current cohort the dose allocated to the next cohort is the following dose in the escalation scheme. Dose levels continue to be incremented in this fashion until the first DLT is observed. In stage two, dose levels are determined by the PO-TITE-CRM.
 
 Typically CRM designs begin by testing the first patient, or cohort, at the prior guess of TD or at a lower dose to be safe. However, clinicians may have safety concerns beginning the trial at higher dose levels as well as escalating to higher dose levels without testing lower ones. Investigators in ADePT-DDR expressed similar concerns as such a two-stage design was adopted. The escalation scheme used in stage one of ADePT-DDR will follow that of the first ordering ($d_{-1} \rightarrow d_{0} \rightarrow d_{1} \rightarrow d_{2a} \rightarrow d_{2b} \rightarrow d_{3}$). If patients in the first cohort (assigned to dose level 0) don't experience a DLT the next cohort will be allocated to dose level 1 and then if no DLTs are observed again the third cohort will be allocated to dose level 2a and so on and so forth. The dose escalation scheme was determined based on the prior probabilities of toxicity generated for each dose level.  
 
-Information elicited from the investigators helped generate prior probabilities of toxicity for each dose level. They believed that dose level 2b would be the TD25 with 2a being less toxic. This was used in conjunction with the getprior function from the dfcrm R package \cite{cheungDfcrmDoseFindingContinual2019} which yielded priors of 0.012, 0.036, 0.084, 0.157, 0.25 and 0.355 for dose levels -1, 0, 1, 2a, 2b and 3 respectively. A half-width of 0.05 was used. Prior probabilities are also required for the plausibility of each model and even though the clinicians think that 2b will be more toxic than 2a there is no clear evidence and still a lot of uncertainty. As such it is sensible to assume a plausibility probability of 0.5 for each ordering, implying both orders are equally likely to be the true ordering of these dose levels. 
+Information elicited from the investigators helped generate prior probabilities of toxicity for each dose level. They believed that dose level 2b would be the TD25 with 2a being less toxic. This was used in conjunction with the getprior function from the dfcrm R package \cite{cheungDfcrmDoseFindingContinual2019} which yielded priors of 0.012, 0.036, 0.084, 0.157, 0.25 and 0.355 for dose levels -1, 0, 1, 2a, 2b and 3 respectively. The half-width of the indifference interval was set at 0.05. The indifference interval is an interval in which the toxicity probability of the selected dose will eventually fall. Prior probabilities are also required for the plausibility of each model and even though the clinicians think that 2b will be more toxic than 2a there is no clear evidence and still a lot of uncertainty. As such it is sensible to assume a plausibility probability of 0.5 for each ordering, implying both orders are equally likely to be the true ordering of these dose levels. 
 
 %-----------------------------------
 %	SUBSECTION 3.2
@@ -184,11 +186,11 @@ Information elicited from the investigators helped generate prior probabilities 
 \subsection{The TITE component}
 \label{adept:The-TITE-component}
 
-The observation window for this trial will be up to a year post-treatment as the combination of radiotherapy with AZD6738 is anticipated to cause late-onset toxicity. The Acute DLT observation period is 84 days (12 weeks) post radiotherapy end with a minimum of 56 days (8 weeks) for the last patient of each cohort. However, patients will continuously be monitored for occurrence of DLT for at least 84 days (12 weeks), i.e. at least 84 days (12 weeks) from the end of radiotherapy. The full window will last for 365 days (52 weeks) post-treatment.
+The observation window for this trial will be up to a year post-treatment as the combination of radiotherapy with AZD6738 is anticipated to cause late-onset toxicity. The Acute DLT observation period is 12 weeks (84 days) post radiotherapy end with a minimum of 8 weeks (56 days) for the last patient of each cohort. However, patients will continuously be monitored for occurrence of DLT for at least12 weeks (84 days), i.e. at least 12 weeks (84 days) from the end of radiotherapy. The full window will last for 52 weeks (365 days) post-treatment.
 
-The TITE component incorporates a weighting contribution for each patient dependent on how long that patient has been evaluable in the study. This allows a patient to be evaluated once they have been observed for the minimum DLT period of 56 days (8 weeks). The weighting at this point is 60\% rising to 80\% at 84 days (12 weeks). A patient will not contribute fully to the model until they have completed 365 days (52 weeks) follow up (or have experienced a DLT at any stage in which case they will be weighted as a whole contribution). Linear weighting functions will be employed for any patient with a length of follow up between these three time points. One weighting function to calculate weight from 56-84 days (8-12 weeks) and another for weights from 84-365 days (12-52 weeks). For the weighting function $w(u;T)$ where $u$ is the time-to-toxicity of patient $j$ and $T$ is the time period, let $t_1, t_2, t_3$ take values 56, 84 and 365 respectively such that $T \in (t_1, t_2, t_3)$. Then for $t_1 \leq u \leq t_3$
+The TITE component incorporates a weighting contribution for each patient dependent on how long that patient has been evaluable in the study. This allows a patient to be evaluated once they have been observed for the minimum DLT period of 8 weeks (56 days). The weighting at this point is 60\% rising to 80\% at 12 weeks (84 days). A patient will not contribute fully to the model until they have completed 52 weeks (365 days) follow up (or have experienced a DLT at any stage in which case they will be weighted as a whole contribution). Linear weighting functions will be employed for any patient with a length of follow up between these three time points. One weight function to calculate weights between 8-12 weeks and another for weights between 12-52 weeks. For the weighting function $w(u;t_1, t_2, t_3)$ where $u$ is the time-to-toxicity of patient $j$ and $t_1, t_2, t_3$ is the time time period with values 8, 12 and 52 respectively. Then for $t_1 \leq u \leq t_3$
 \begin{equation}
-w(u;T) = 0.6 + 0.2\frac{min(u-t_1,t_2 - t_1)}{t_2 - t_1} + 0.2\frac{max(0, u - t_2)}{t_3-t_2}.
+w(u;t_1,t_2,t_3) = 0.6 + 0.2\frac{min(0, min(u, t_2) - t_1)}{t_2 - t_1} + 0.2\frac{max(0, u - t_2)}{t_3-t_2}.
 \end{equation} 
 All patients will have a minimum weight of 60\% as that is the prescribed weighting to the  minimum follow up period before dose escalation/de-escalation decisions can be made. For each additional week the patient is observed, without a DLT occurring, between weeks 8 and 12 their weighting increases by 5\%. Similarly for each week between 12 and 52 weeks, without a DLT, weighting increases by 0.5\%. Figure \ref{fig_adept:weight_function} illustrates the weight function and how the weight changes for patients dependent on how long they have been followed-up.   
 
@@ -200,7 +202,7 @@ All patients will have a minimum weight of 60\% as that is the prescribed weight
 \end{figure}
 
 
-The TITE-CRM originally presented by Cheung and Chappel \cite{cheungSequentialDesignsPhase2000} did not incorporate a minimum follow-up period and their design allowed for the continual recruitment of patients whenever they became available. There are some practical considerations which make this infeasible. The model would need to be run each time a new patient entered the study which requires statistical input hence the introduction of cohorts. Clinicians may also have safety concerns if we see rapid recruitment at the start of the trial and the model keeps escalating so we impose a minimum follow-up period. Initially this was set at 12 weeks (at 80\% weighting) however, statisticians AP and PG  pointed out that dose escalation/de-escalation decisions would have to take place 19 weeks (7 weeks treatment and 12 weeks follow-up) after recruitment of the third patient in the cohort. Dependent on the recruitment rates this could extend the duration of the trial and negates the benefits of using a TITE design. The investigators aslo agreed this was too long and settled on lowering this period to 8 weeks (at 60\% weighting) whilst also including the original 12 week weighting of 80\%.
+The TITE-CRM originally presented by Cheung and Chappel \cite{cheungSequentialDesignsPhase2000} did not incorporate a minimum follow-up period and their design allowed for the continual recruitment of patients whenever they became available. There are some practical considerations which make this infeasible in ADePT-DDR. The model would need to be run each time a new patient entered the study which requires statistical input hence the introduction of cohorts. Clinicians may also have safety concerns if we see rapid recruitment at the start of the trial and the model keeps escalating so we impose a minimum follow-up period. Initially this was set at 12 weeks (at 80\% weighting) however, statisticians AP and PG  pointed out that dose escalation/de-escalation decisions would have to take place 19 weeks (7 weeks treatment and 12 weeks follow-up) after recruitment of the third patient in the cohort. Dependent on the recruitment rates this could extend the duration of the trial and negates the benefits of using a TITE design. The investigators aslo agreed this was too long and settled on lowering this period to 8 weeks (at 60\% weighting) whilst also including the original 12 week weighting of 80\%.
 
 
 %-----------------------------------
@@ -230,18 +232,15 @@ Functions from pocrm package in R \cite{wagesPocrmRpackagePhase2013, wagesPocrmD
 
 Standard scenarios to run involve adjusting the true DLT rates to reflect each dose being the TD25. For each of these we calculate the probability of selecting each dose as the TD25. It would be expected the dose with the highest probability of being selected has its true DLT rate set at 25\% to match the target rate. A high probability of selection for the correct dose implies the design works well in the specified scenario. Additional characteristics such as the average number of patients at each dose level are also investigated. This can be used to look at how many patients may potentially be allocated to a toxic dose. It is also necessary to consider performance when all doses are too toxic, here we would want the design to recommend stopping early. Usually the true DLT rates used to define these scenarios abide by the monotonicity assumption. Due to the partial ordering we consider scenarios in which the true DLT rates follow both orders. For trials with a large amount of orders it may be unfeasible to run so many simulations. However, as ADePT-DDR only has two orders we explored all scenarios for each ordering.
 
-We simulated 2000 trials for each scenario using the finalised design detailed in section \ref{adept:PO-TITE-CRM-in-Adept}. Simulations were based on the assumption that the trial would recruit one patient per month. The occurrence of DLT's were randomly generated for patients in each cohort using a Bernoulli distribution with the probability set at the true DLT rate for the cohorts assigned dose level in the specific scenario. For patients who had a DLT occur, the time at which the DLT occurred was randomly generated using a uniform distribution which spanned the start of treatment to the end of follow-up.  
+We simulated 10000 trials for each scenario using the finalised design detailed in section \ref{adept:PO-TITE-CRM-in-Adept}. Simulations were based on the assumption that the trial would recruit one patient per month. The occurrence of DLT's were randomly generated for patients in each cohort using a Bernoulli distribution with the probability set at the true DLT rate for the cohorts assigned dose level in the specific scenario. For patients who had a DLT occur, the time at which the DLT occurred was randomly generated using a uniform distribution which spanned the start of treatment to the end of follow-up. The simulations presented in Tables \ref{tab_adept:OCorder1} and \ref{tab_adept:OCorder2} took approximately 5 hours and 53 minutes to run. The Monte Carlo standard error for probabilities estimated by 10000 simulations is $\sqrt{0.5 \times 0.5/10000} = 0.5\%$.
 
 Table \ref{tab_adept:OCorder1} details simulations for eight scenarios to test the performance of the PO-TITE-CRM design using true DLT rates which reflect the first ordering. We analyse scenarios where each dose is the TD25 (scenarios 1-6) and when all doses are too toxic (scenario 8). Additionally, we also investigate performance under conditions where the probability of DLT is fairly similar between doses (scenario 7). This is a notoriously difficult circumstance for CRM designs to deal with as the limited number of patients and events at each dose make it hard to accurately estimate toxicity probabilities if they are similar. Simulation results for ordering 2 are shown in Table \ref{tab_adept:OCorder2} where dose level 2a is considered more toxic than 2b. This is achieved by altering the true DLT rates so 2b has a lower probability of DLT compared to 2a. 
 
 Ideally we want the probability of selection for the dose allocated at TD25 to be as high as possible and greater than other dose levels. For scenarios 1-7 the TD25 is highlighted in bold along with results from the simulations. However, for scenario 8 where all doses are too toxic we expect the trial to terminate early, here 'stop' should be selected and its associated probability of stopping is shown in bold. 
 
-In scenarios 1 - 6 (Table \ref{tab_adept:OCorder1}), this design correctly selects the TD25 with probabilities between 42\% and 77\%, under the assumption 2b is more toxic than 2a. Likewise, for the ordering where 2a is more toxic than 2b, scenarios 9-14 (Table \ref{tab_adept:OCorder2}) have probabilities between 43\% and 80\% of correctly selecting the TD25. Correct selection probabilities are generally higher when the TD25 is at the first and last dose levels compared to dose levels 2a and 2b. However, these dose levels are still chosen with the highest probability as the TD25 in their given scenarios. For scenarios 7 and 15, the probabilities of toxicity are equally spaced, approximately 5\% apart. This is a relatively diffcult scenario for dose-finding studies to handle. The probability of selecting the TD25 is 29\% and 31\% for orderings 1 and 2 respectively. In scenarios 8 and 16, where all the doses are too toxic, the design very seldom allocates patients higher than the first three doses and there is a high chance (73\%) that the trial will recommend early stopping.
-
-
 \begin{table}[h!] % OC for order 1 
 	
-	\caption[Operating Characteristics for ordering 1.]{\label{tab_adept:OCorder1} Operating Characteristics of the two-stage PO-TITE-CRM (with true DLT rates that imply 2b is more toxic than 2a) based on 2000 simulated trials. Definitions: DLT: Dose-limiting toxicity. P(select):
+	\caption[Operating Characteristics for ordering 1.]{\label{tab_adept:OCorder1} Operating Characteristics of the two-stage PO-TITE-CRM (with true DLT rates that imply 2b is more toxic than 2a) based on 10000 simulated trials. Definitions: DLT: Dose-limiting toxicity. P(select):
 		Probability of selecting a dose as the TD25.}
 	\centering
 	\begin{singlespace}
@@ -254,69 +253,69 @@ In scenarios 1 - 6 (Table \ref{tab_adept:OCorder1}), this design correctly selec
 				\midrule
 				Scenario & Prior DLT & 0.01 & 0.04 & 0.08 & 0.16 & 0.25 & 0.35 & \\
 				\cmidrule{1-9}
-				\rowcolor{gray!6}   & True DLT rate & \textbf{0.25} & 0.4 & 0.45 & 0.5 & 0.55 & 0.6 & \\
+				\rowcolor{gray!6}   & True DLT rate & 0.25 & 0.4 & 0.45 & 0.5 & 0.55 & 0.6 & \\
 				
-				\rowcolor{gray!6}   & P(select) & \textbf{0.67} & 0.19 & 0.06 & 0 & 0 & 0 & 0.0825\\
+				\rowcolor{gray!6}   & P(select) & 0.68 & 0.18 & 0.05 & 0.01 & 0 & 0 & 0.0849\\
 				
-				\rowcolor{gray!6}   & \% of patients & \textbf{38} & 32 & 21 & 7 & 3 & 0 & \\
+				\rowcolor{gray!6}   & \% of patients & 39 & 32 & 20 & 6 & 3 & 0 & \\
 				
-				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 1: TD25 @-1} & Mean number of patients & \textbf{10.05} & 8.38 & 5.48 & 1.8 & 0.78 & 0.09 & \\
+				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 1: TD25 @-1} & Mean number of patients & 10.17 & 8.46 & 5.33 & 1.67 & 0.69 & 0.07 & \\
 				\cmidrule{1-9}
-				& True DLT rate & 0.12 & \textbf{0.25} & 0.4 & 0.45 & 0.5 & 0.55 & \\
+				& True DLT rate & 0.12 & 0.25 & 0.4 & 0.45 & 0.5 & 0.55 & \\
 				
-				& P(select) & 0.22 & \textbf{0.52} & 0.2 & 0.02 & 0.02 & 0 & 0.0105\\
+				& P(select) & 0.23 & 0.51 & 0.2 & 0.03 & 0.02 & 0 & 0.0079\\
 				
-				& \% of patients & 17 & \textbf{35} & 29 & 11 & 6 & 1 & \\
+				& \% of patients & 17 & 35 & 29 & 11 & 6 & 1 & \\
 				
-				\multirow{-4}{*}{\centering\arraybackslash 2: TD25 @0} & Mean number of patients & 5.16 & \textbf{10.55} & 8.79 & 3.36 & 1.88 & 0.24 & \\
+				\multirow{-4}{*}{\centering\arraybackslash 2: TD25 @0} & Mean number of patients & 5.24 & 10.48 & 8.75 & 3.4 & 1.83 & 0.26 & \\
 				\cmidrule{1-9}
-				\rowcolor{gray!6}   & True DLT rate & 0.09 & 0.12 & \textbf{0.25} & 0.4 & 0.45 & 0.5 & \\
+				\rowcolor{gray!6}   & True DLT rate & 0.09 & 0.12 & 0.25 & 0.4 & 0.45 & 0.5 & \\
 				
-				\rowcolor{gray!6}   & P(select) & 0.02 & 0.2 & \textbf{0.55} & 0.14 & 0.1 & 0 & 5e-04\\
+				\rowcolor{gray!6}   & P(select) & 0.02 & 0.2 & 0.55 & 0.14 & 0.09 & 0.01 & 4e-04\\
 				
-				\rowcolor{gray!6}   & \% of patients & 4 & 20 & \textbf{35} & 23 & 16 & 3 & \\
+				\rowcolor{gray!6}   & \% of patients & 4 & 20 & 34 & 23 & 16 & 3 & \\
 				
-				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 3: TD25 @1} & Mean number of patients & 1.24 & 6.43 & \textbf{11.03} & 7.19 & 4.95 & 0.96 & \\
+				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 3: TD25 @1} & Mean number of patients & 1.22 & 6.41 & 10.97 & 7.23 & 5.14 & 1.02 & \\
 				\cmidrule{1-9}
-				& True DLT rate & 0.06 & 0.09 & 0.12 & \textbf{0.25} & 0.4 & 0.45 & \\
+				& True DLT rate & 0.06 & 0.09 & 0.12 & 0.25 & 0.4 & 0.45 & \\
 				
-				& P(select) & 0 & 0.02 & 0.22 & \textbf{0.48} & 0.23 & 0.05 & 0\\
+				& P(select) & 0 & 0.02 & 0.22 & 0.48 & 0.23 & 0.05 & 1e-04\\
 				
-				& \% of patients & 1 & 11 & 20 & \textbf{31} & 25 & 11 & \\
+				& \% of patients & 1 & 12 & 20 & 31 & 25 & 11 & \\
 				
-				\multirow{-4}{*}{\centering\arraybackslash 4: TD25 @2a} & Mean number of patients & 0.45 & 3.81 & 6.77 & \textbf{10.26} & 8.37 & 3.6 & \\
+				\multirow{-4}{*}{\centering\arraybackslash 4: TD25 @2a} & Mean number of patients & 0.47 & 3.88 & 6.74 & 10.43 & 8.2 & 3.5 & \\
 				\cmidrule{1-9}
-				\rowcolor{gray!6}   & True DLT rate & 0.03 & 0.06 & 0.09 & 0.12 & \textbf{0.25} & 0.4 & \\
+				\rowcolor{gray!6}   & True DLT rate & 0.03 & 0.06 & 0.09 & 0.12 & 0.25 & 0.4 & \\
 				
-				\rowcolor{gray!6}   & P(select) & 0 & 0 & 0.02 & 0.31 & \textbf{0.42} & 0.24 & 0\\
+				\rowcolor{gray!6}   & P(select) & 0 & 0 & 0.02 & 0.3 & 0.43 & 0.25 & 0\\
 				
-				\rowcolor{gray!6}   & \% of patients & 1 & 10 & 12 & 24 & \textbf{28} & 25 & \\
+				\rowcolor{gray!6}   & \% of patients & 1 & 10 & 12 & 24 & 28 & 25 & \\
 				
-				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 5: TD25 @2b} & Mean number of patients & 0.24 & 3.31 & 4.11 & 8.22 & \textbf{9.35} & 8.46 & \\
+				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 5: TD25 @2b} & Mean number of patients & 0.25 & 3.36 & 4.15 & 8.17 & 9.33 & 8.33 & \\
 				\cmidrule{1-9}
-				& True DLT rate & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 & \textbf{0.25} & \\
+				& True DLT rate & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 & 0.25 & \\
 				
-				& P(select) & 0 & 0 & 0 & 0.1 & 0.13 & \textbf{0.77} & 0\\
+				& P(select) & 0 & 0 & 0 & 0.09 & 0.13 & 0.78 & 0\\
 				
-				& \% of patients & 0 & 10 & 11 & 18 & 18 & \textbf{42} & \\
+				& \% of patients & 0 & 10 & 11 & 18 & 18 & 42 & \\
 				
-				\multirow{-4}{*}{\centering\arraybackslash 6: TD25 @3} & Mean number of patients & 0.11 & 3.13 & 3.51 & 5.46 & 5.57 & \textbf{13.1} & \\
+				\multirow{-4}{*}{\centering\arraybackslash 6: TD25 @3} & Mean number of patients & 0.1 & 3.13 & 3.49 & 5.46 & 5.6 & 13.14 & \\
 				\cmidrule{1-9}
-				\rowcolor{gray!6}   & True DLT rate & 0.05 & 0.1 & 0.15 & 0.2 & \textbf{0.25} & 0.3 & \\
+				\rowcolor{gray!6}   & True DLT rate & 0.05 & 0.1 & 0.15 & 0.2 & 0.25 & 0.3 & \\
 				
-				\rowcolor{gray!6}   & P(select) & 0 & 0.03 & 0.11 & 0.3 & \textbf{0.29} & 0.27 & 0\\
+				\rowcolor{gray!6}   & P(select) & 0 & 0.03 & 0.12 & 0.31 & 0.28 & 0.26 & 3e-04\\
 				
-				\rowcolor{gray!6}   & \% of patients & 2 & 13 & 17 & 26 & \textbf{23} & 19 & \\
+				\rowcolor{gray!6}   & \% of patients & 2 & 13 & 18 & 26 & 23 & 19 & \\
 				
-				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 7: Equal steps in DLT rate} & Mean number of patients & 0.57 & 4.04 & 5.57 & 8.26 & \textbf{7.22} & 6.21 & \\
+				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 7: Equal steps in DLT rate} & Mean number of patients & 0.55 & 4.03 & 5.72 & 8.32 & 7.15 & 5.96 & \\
 				\cmidrule{1-9}
 				& True DLT rate & 0.5 & 0.6 & 0.65 & 0.7 & 0.75 & 0.8 & \\
 				
-				& P(select) & 0.26 & 0 & 0 & 0 & 0 & 0 & 0.734\\
+				& P(select) & 0.26 & 0 & 0 & 0 & 0 & 0 & 0.7404\\
 				
-				& \% of patients & 56 & 27 & 15 & 2 & 0 & 0 & \\
+				& \% of patients & 56 & 26 & 15 & 2 & 0 & 0 & \\
 				
-				\multirow{-4}{*}{\centering\arraybackslash 8: All  toxic} & Mean number of patients & 9.04 & 4.29 & 2.34 & 0.33 & 0.03 & 0 & \\
+				\multirow{-4}{*}{\centering\arraybackslash 8: All  toxic} & Mean number of patients & 9.05 & 4.27 & 2.4 & 0.37 & 0.04 & 0 & \\
 				\bottomrule
 			\end{tabular}
 		}
@@ -325,7 +324,7 @@ In scenarios 1 - 6 (Table \ref{tab_adept:OCorder1}), this design correctly selec
 
 \begin{table}[h!] % OC for order 2
 	
-	\caption[Operating Characteristics for ordering 2.]{\label{tab_adept:OCorder2}  Operating Characteristics of the two-stage PO-TITE-CRM (with true DLT rates that imply 2a is more toxic than 2b) based on 2000 simulated trials. Definitions: DLT: Dose-limiting toxicity. P(select): Probability of selecting a dose as the TD25.}
+	\caption[Operating Characteristics for ordering 2.]{\label{tab_adept:OCorder2}  Operating Characteristics of the two-stage PO-TITE-CRM (with true DLT rates that imply 2a is more toxic than 2b) based on 10000 simulated trials. Definitions: DLT: Dose-limiting toxicity. P(select): Probability of selecting a dose as the TD25.}
 	\centering
 	\begin{singlespace}
 		\resizebox{\linewidth}{!}{
@@ -337,87 +336,120 @@ In scenarios 1 - 6 (Table \ref{tab_adept:OCorder1}), this design correctly selec
 				\midrule
 				Scenario & Prior DLT & 0.01 & 0.04 & 0.08 & 0.16 & 0.25 & 0.35 & \\
 				\cmidrule{1-9}
-				\rowcolor{gray!6}   & True DLT rate & \textbf{0.25} & 0.4 & 0.45 & 0.55 & 0.5 & 0.6 & \\
+				\rowcolor{gray!6}   & True DLT rate & 0.25 & 0.4 & 0.45 & 0.55 & 0.5 & 0.6 & \\
 				
-				\rowcolor{gray!6}   & P(select) & \textbf{0.67} & 0.19 & 0.04 & 0 & 0.01 & 0 & 0.0865\\
+				\rowcolor{gray!6}   & P(select) & 0.67 & 0.19 & 0.05 & 0 & 0.01 & 0 & 0.0827\\
 				
-				\rowcolor{gray!6}   & \% of patients & \textbf{39} & 32 & 20 & 6 & 3 & 0 & \\
+				\rowcolor{gray!6}   & \% of patients & 39 & 32 & 20 & 6 & 3 & 0 & \\
 				
-				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 9: TD25 @-1} & Mean number of patients & \textbf{10.22} & 8.25 & 5.15 & 1.62 & 0.72 & 0.04 & \\
+				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 9: TD25 @-1} & Mean number of patients & 10.19 & 8.43 & 5.27 & 1.6 & 0.68 & 0.07 & \\
 				\cmidrule{1-9}
-				& True DLT rate & 0.12 & \textbf{0.25} & 0.4 & 0.5 & 0.45 & 0.55 & \\
+				& True DLT rate & 0.12 & 0.25 & 0.4 & 0.5 & 0.45 & 0.55 & \\
 				
-				& P(select) & 0.22 & \textbf{0.53} & 0.19 & 0.02 & 0.03 & 0 & 0.0065\\
+				& P(select) & 0.23 & 0.52 & 0.2 & 0.02 & 0.02 & 0 & 0.0074\\
 				
-				& \% of patients & 18 & \textbf{35} & 29 & 11 & 6 & 1 & \\
+				& \% of patients & 18 & 36 & 29 & 11 & 6 & 1 & \\
 				
-				\multirow{-4}{*}{\centering\arraybackslash 10: TD25 @0} & Mean number of patients & 5.25 & \textbf{10.49} & 8.73 & 3.32 & 1.84 & 0.3 & \\
+				\multirow{-4}{*}{\centering\arraybackslash 10: TD25 @0} & Mean number of patients & 5.24 & 10.64 & 8.82 & 3.16 & 1.85 & 0.24 & \\
 				\cmidrule{1-9}
-				\rowcolor{gray!6}   & True DLT rate & 0.09 & 0.12 & \textbf{0.25} & 0.45 & 0.4 & 0.5 & \\
+				\rowcolor{gray!6}   & True DLT rate & 0.09 & 0.12 & 0.25 & 0.45 & 0.4 & 0.5 & \\
 				
-				\rowcolor{gray!6}   & P(select) & 0.02 & 0.2 & \textbf{0.54} & 0.09 & 0.15 & 0.01 & 0\\
+				\rowcolor{gray!6}   & P(select) & 0.02 & 0.2 & 0.55 & 0.09 & 0.14 & 0.01 & 4e-04\\
 				
-				\rowcolor{gray!6}   & \% of patients & 4 & 20 & \textbf{34} & 21 & 18 & 3 & \\
+				\rowcolor{gray!6}   & \% of patients & 4 & 20 & 34 & 21 & 17 & 3 & \\
 				
-				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 11: TD25 @1} & Mean number of patients & 1.16 & 6.41 & \textbf{11.09} & 6.95 & 5.72 & 1.01 & \\
+				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 11: TD25 @1} & Mean number of patients & 1.16 & 6.43 & 11.07 & 6.83 & 5.6 & 1.07 & \\
 				\cmidrule{1-9}
-				& True DLT rate & 0.06 & 0.09 & 0.12 & \textbf{0.25} & 0.15 & 0.45 & \\
+				& True DLT rate & 0.06 & 0.09 & 0.12 & 0.25 & 0.15 & 0.45 & \\
 				
-				& P(select) & 0 & 0.01 & 0.08 & \textbf{0.43} & 0.33 & 0.14 & 0\\
+				& P(select) & 0 & 0.01 & 0.08 & 0.44 & 0.33 & 0.14 & 2e-04\\
 				
-				& \% of patients & 2 & 11 & 16 & \textbf{30} & 23 & 18 & \\
+				& \% of patients & 1 & 11 & 16 & 30 & 24 & 18 & \\
 				
-				\multirow{-4}{*}{\centering\arraybackslash 12: TD25 @2a} & Mean number of patients & 0.51 & 3.8 & 5.25 & \textbf{10.17} & 7.74 & 5.99 & \\
+				\multirow{-4}{*}{\centering\arraybackslash 12: TD25 @2a} & Mean number of patients & 0.48 & 3.78 & 5.24 & 10.1 & 7.9 & 6.07 & \\
 				\cmidrule{1-9}
-				\rowcolor{gray!6}   & True DLT rate & 0.03 & 0.06 & 0.09 & 0.35 & \textbf{0.25} & 0.4 & \\
+				\rowcolor{gray!6}   & True DLT rate & 0.03 & 0.06 & 0.09 & 0.35 & 0.25 & 0.4 & \\
 				
-				\rowcolor{gray!6}   & P(select) & 0 & 0 & 0.15 & 0.3 & \textbf{0.43} & 0.12 & 0\\
+				\rowcolor{gray!6}   & P(select) & 0 & 0 & 0.15 & 0.31 & 0.43 & 0.11 & 0\\
 				
-				\rowcolor{gray!6}   & \% of patients & 1 & 10 & 17 & 29 & \textbf{28} & 14 & \\
+				\rowcolor{gray!6}   & \% of patients & 1 & 11 & 18 & 30 & 28 & 14 & \\
 				
-				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 13: TD25 @2b} & Mean number of patients & 0.23 & 3.43 & 5.72 & 9.73 & \textbf{9.26} & 4.71 & \\
+				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 13: TD25 @2b} & Mean number of patients & 0.25 & 3.5 & 5.9 & 9.82 & 9.14 & 4.54 & \\
 				\cmidrule{1-9}
-				& True DLT rate & 0.01 & 0.03 & 0.06 & 0.12 & 0.09 & \textbf{0.25} & \\
+				& True DLT rate & 0.01 & 0.03 & 0.06 & 0.12 & 0.09 & 0.25 & \\
 				
-				& P(select) & 0 & 0 & 0 & 0.12 & 0.08 & \textbf{0.8} & 0\\
+				& P(select) & 0 & 0 & 0 & 0.13 & 0.09 & 0.78 & 0\\
 				
-				& \% of patients & 0 & 10 & 11 & 19 & 16 & \textbf{43} & \\
+				& \% of patients & 0 & 10 & 11 & 19 & 16 & 43 & \\
 				
-				\multirow{-4}{*}{\centering\arraybackslash 14: TD25 @3} & Mean number of patients & 0.09 & 3.12 & 3.45 & 5.7 & 5.01 & \textbf{13.27} & \\
+				\multirow{-4}{*}{\centering\arraybackslash 14: TD25 @3} & Mean number of patients & 0.1 & 3.13 & 3.51 & 5.88 & 5.06 & 13.13 & \\
 				\cmidrule{1-9}
-				\rowcolor{gray!6}   & True DLT rate & 0.05 & 0.1 & 0.15 & \textbf{0.25} & 0.2 & 0.3 & \\
+				\rowcolor{gray!6}   & True DLT rate & 0.05 & 0.1 & 0.15 & 0.25 & 0.2 & 0.3 & \\
 				
-				\rowcolor{gray!6}   & P(select) & 0 & 0.02 & 0.12 & \textbf{0.31} & 0.28 & 0.27 & 5e-04\\
+				\rowcolor{gray!6}   & P(select) & 0 & 0.02 & 0.12 & 0.32 & 0.27 & 0.26 & 2e-04\\
 				
-				\rowcolor{gray!6}   & \% of patients & 2 & 13 & 18 & \textbf{27} & 22 & 18 & \\
+				\rowcolor{gray!6}   & \% of patients & 2 & 13 & 19 & 27 & 22 & 18 & \\
 				
-				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 15: Equal steps in DLT rate} & Mean number of patients & 0.51 & 3.99 & 5.83 & \textbf{8.56} & 7.07 & 5.77 & \\
+				\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 15: Equal steps in DLT rate} & Mean number of patients & 0.54 & 4.02 & 5.93 & 8.56 & 6.89 & 5.75 & \\
 				\cmidrule{1-9}
 				& True DLT rate & 0.5 & 0.6 & 0.65 & 0.75 & 0.7 & 0.8 & \\
 				
-				& P(select) & 0.26 & 0 & 0 & 0 & 0 & 0 & 0.735\\
+				& P(select) & 0.27 & 0 & 0 & 0 & 0 & 0 & 0.7273\\
 				
-				& \% of patients & 56 & 26 & 15 & 2 & 0 & 0 & \\
+				& \% of patients & 56 & 27 & 15 & 2 & 0 & 0 & \\
 				
-				\multirow{-4}{*}{\centering\arraybackslash 16: All  toxic} & Mean number of patients & 9.14 & 4.26 & 2.4 & 0.37 & 0.05 & 0 & \\
+				\multirow{-4}{*}{\centering\arraybackslash 16: All  toxic} & Mean number of patients & 9.01 & 4.28 & 2.39 & 0.38 & 0.05 & 0 & \\
 				\bottomrule
 		\end{tabular}}
 	\end{singlespace}
 \end{table}
 
+In scenarios 1 - 6 (Table \ref{tab_adept:OCorder1}), this design correctly selects the TD25 with probabilities between 43\% and 78\%, under the assumption 2b is more toxic than 2a. Likewise, for the ordering where 2a is more toxic than 2b, scenarios 9-14 (Table \ref{tab_adept:OCorder2}) have probabilities between 43\% and 78\% of correctly selecting the TD25. Correct selection probabilities are generally higher when the TD25 is at the first and last dose levels compared to dose levels 2a and 2b. However, these dose levels are still chosen with the highest probability as the TD25 in their given scenarios. For scenarios 7 and 15, the probabilities of toxicity are equally spaced, approximately 5\% apart. This is a relatively diffcult scenario for dose-finding studies to handle. The probability of selecting the TD25 is 28\% and 32\% for orderings 1 and 2 respectively and even if the performance is poor the correct dose is still likely to be selected. In scenarios 8 and 16, where all the doses are too toxic, the design very seldom allocates patients higher than the first three doses and there is a high chance (74\% and 73\% respectively) that the trial will recommend early stopping.
 
 Additionally, we assess designs based on how doses are allocated to patients. Designs may correctly select the TD however, this could be undesirable and unethical if the majority of patients are over dosed at the more toxic dose levels. The average number and the percentage of patients at each dose level, for each scenario, is recorded in Tables \ref{tab_adept:OCorder1} and \ref{tab_adept:OCorder2}. 
 
-The percentage of patients treated at the TD25 ranges between 23\% and 43\% for each scenario under both orderings. The design also allocates the most patients on average to the TD25 apart from in scenario 7. In this case more patients were allocated to the next lowest dose, we have already discussed the difficulties of this scenario so this characteristic is not too concerning. The mean number of patients recruited for scenarios 1-6 is 26, 30, 32, 33, 34 and 31 respectively. Similarly for scenarios 9-14 its 26, 30, 32, 34, 33 and 31. Even though we allow for up to 60 patients the majority of trials terminate early based on the pre-defined rules for selecting the TD25.
+The percentage of patients treated at the TD25 ranges between 23\% and 43\% for each scenario under both orderings. The design also allocates the most patients on average to the TD25 apart from in scenario 7. In this case more patients were allocated to the next lowest dose, we have already discussed the difficulties of this scenario so this characteristic is not too concerning. The mean number of patients recruited for scenarios 1-6 is 26, 30, 32, 33, 34 and 31 respectively. Similarly for scenarios 9-14 its 26, 30, 32, 34, 33 and 31. Even though we allow for up to 60 patients the majority of trials terminate early based on the pre-defined rules for selecting the TD25. This information is presented in Table \ref{tab_adept:SummaryN_POTITESims} which also shows how often the max sample size is reached from the 10000 trials for each scenario. 
 
-Overall, the simulation results show the specification of this design performs relatively well in a number of scenarios. We have shown there is a high probability of the trial stopping early if all dose-levels are too toxic. We have also shown the design behaves in an appropriate manner when there is a lack of disparity between dose-levels in terms of toxicity. Finally, we have demonstrated that regardless of the ordering we observe the PO-TITE-CRM has a high probability of selecting the correct dose. There are a number of limitations to the operating characteristics presented here which are due to the specification of the simulations and trial design. Section \ref{adept:Inspection-of-OCs} explores and discusses these limitations in more detail.
+\begin{table}[h!]
+	
+	\caption{\label{tab_adept:SummaryN_POTITESims}Summary of simulated patient numbers for each scenario.}
+	\centering
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}[t]{cccc}
+			\toprule
+			Scenario & Max no. of patients & No. of times max reached & Mean no. of patients\\
+			\midrule
+			\rowcolor{gray!6}  1: TD25 @-1 & 60 & 21 & 26.38\\
+			2: TD25 @0 & 60 & 8 & 29.97\\
+			\rowcolor{gray!6}  3: TD25 @1 & 60 & 5 & 32.01\\
+			4: TD25 @2a & 60 & 12 & 33.22\\
+			\rowcolor{gray!6}  5: TD25 @2b & 60 & 6 & 33.60\\
+			6: TD25 @3 & 60 & 2 & 30.92\\
+			\rowcolor{gray!6}  7: Equal steps & 60 & 1 & 31.74\\
+			8: All toxic & 54 & 1 & 16.14\\
+			\rowcolor{gray!6}  9: TD25 @-1 & 60 & 17 & 26.23\\
+			10: TD25 @0 & 60 & 11 & 29.95\\
+			\rowcolor{gray!6}  11: TD25 @1 & 60 & 6 & 32.15\\
+			12: TD25 @2a & 60 & 7 & 33.56\\
+			\rowcolor{gray!6}  13: TD25 @2b & 60 & 3 & 33.16\\
+			14: TD25 @3 & 60 & 8 & 30.81\\
+			\rowcolor{gray!6}  15: Equal steps & 60 & 2 & 31.69\\
+			16: All toxic & 51 & 1 & 16.11\\
+			\bottomrule
+	\end{tabular}}
+\end{table}
+
+
+
+
+Overall, the simulation results show the specification of this design performs relatively well in a number of scenarios. We have shown there is a high probability of the trial stopping early if all dose-levels are too toxic. We have also shown the design behaves in an appropriate manner when there is a lack of disparity between dose-levels in terms of toxicity. Finally, we have demonstrated that regardless of the ordering we observe the PO-TITE-CRM has a high probability of selecting the correct dose. There are a number of limitations to the operating characteristics presented here which are due to the specification of the simulations and trial design. Section \ref{adept:Exploring-other-designs} explores and discusses these limitations in more detail.
 
 %----------------------------------------------------------------------------------------
 %	SECTION 4
 %-------------------------.
 
-\section{Inspection of the operating characteristics}  
-\label{adept:Inspection-of-OCs}
+\section{Exploring other designs}  
+\label{adept:Exploring-other-designs}
 
 The operating characteristics presented in section \ref{adept:OCs} provide an insight into how the trial design operates and its effectiveness at selecting the TD25. However, several factors impact the results seen here. These factors can be grouped into two main categories, limitations with the simulations performed or the trial design.
 
@@ -432,156 +464,299 @@ To simulate various scenarios the true DLT rates are adjusted to reflect the TD2
  
 The original methodological papers by Wages et al. \cite{wagesUsingTimetoeventContinual2013,wagesContinualReassessmentMethod2011} only provide simulations for their examples using true DLT rates that are monotonically increasing which represented one of their possible orderings. We cannot tell how their design would perform under scenarios from different orderings. It is unclear as to why this wasn't examined. Initially, in ADePT-DDR we followed suit and only produced simulations under a monotonically increasing DLT rate (order where 2b is more toxic than 2a, Table \ref{tab_adept:OCorder1}). However, as we are unclear on the ordering of 2a and 2b there is a possibility that 2b is less toxic. So those initial simulations would not provide an accurate assessment of the design in that circumstance. This was the main motivation for running scenarios in Table \ref{tab_adept:OCorder2}, in which we see the design performs at a similar level regardless of the partial ordering. ADePT-DDR is a simple case of partial ordering as there are only two possible orderings and six dose-levels. For trials with higher numbers of orderings or dose-levels the number of scenarios that would have to be evaluated would increase which may be infeasible. Here it may be more beneficial to choose a handful of scenarios from multiple different orderings to cover a wider range of possible outcomes for the trial to assess the design. 
 
-Another limitation of the simulations is how the time-to-event data is generated. The time of DLTs is sampled from a uniform distribution $U(0, 413)$, where the time of the DLT can occur at any time between the patient beginning treatment and the end of follow-up (413 days). Using this uniform distribution implies that a DLT has an equal probability of occurring at any time-point in the observation window. This may not be an accurate representation of what happens in the actual trial. Similar comments can be made about the accrual rate used in the simulations. Here we specified the recruitment of one patient per month which is in no way guaranteed for the actual trial. The simulations are also able to instantaneously determine dose-levels for incoming cohorts with all available information. This does not fully reflect the process in which dose-escalation decisions would be made during the actual running of the trial. The analysis would require a data snapshot and time would have to be spent cleaning the data and determining the next dose-level. Meaning any data from the point of the snapshot would not be included in any dose escalation/de-escalation decisions. 
-
-There are various features in this trial design that impact how it performs. The partial ordering caused by dose levels 2a and 2b adds complexity to design. If one of these dose-levels were to be removed or a normal ordering was assumed a standard TITE-CRM design could be used instead. However, this would take away from what the trial is trying to discover. This trial also has a long follow-up period due to potential late-onset toxicities and in turn, will have a long duration. The TITE component will allow for the duration to be a lot shorter than it would be otherwise. TITE-CRM designs allow for patients to be recruited sequentially and allocated a dose based on available information from patients already in the trial. The design for ADePT-DDR uses cohorts of three and a minimum follow-up period. The dose-escalation decisions will only be made every third patient after a specific amount of time. This is done for safety and practicality reasons but means that some patients may not be able to enter the trial and it also loses some of the benefits of the TITE-CRM. We also have a sample size of 60 patients but include a stopping rule for when a consensus is reached which means we often don't recruit the maximum sample size. Further simulations were produced to investigate how these features affected the trial. Table \ref{tab_adept:Design_Comparison} compares selection probabilities from the ADePT-DDR trial design (Table \ref{tab_adept:OCorder1}) with five alternative designs. 
+There are various features in this trial design that impact how it performs. The partial ordering caused by dose levels 2a and 2b adds complexity to design. If one of these dose-levels were to be removed or a normal ordering was assumed a standard TITE-CRM design could be used instead. However, this would take away from what the trial is trying to discover. This trial also has a long follow-up period due to potential late-onset toxicities and in turn, will have a long duration. The TITE component will allow for the duration to be a lot shorter than it would be otherwise. TITE-CRM designs allow for patients to be recruited sequentially and allocated a dose based on available information from patients already in the trial. The design for ADePT-DDR uses cohorts of three and a minimum follow-up period. The dose-escalation decisions will only be made every third patient after a specific amount of time. This is done for safety and practicality reasons but means that some patients may not be able to enter the trial and it also loses some of the benefits of the TITE-CRM. We also have a sample size of 60 patients but include a stopping rule for when a consensus is reached which means we often don't recruit the maximum sample size. Further simulations were produced to investigate how these features affected the trial. Tables \ref{tab_adept:Design_Comparison1} and \ref{tab_adept:Design_Comparison2} compares selection probabilities from the ADePT-DDR trial design with five alternative designs based on the two different orderings. Figures \ref{fig_adept:sims_order1} and \ref{fig_adept:sims_order2} visualise the result from each of these tables respectively. 10000 trials were simulated for each scenario which took 62 hours and 22 minutes to complete.  
  
 \begin{enumerate}
 	\item TITE-CRM design. This design assumes that partial ordering doesn't exist and that dose-level 2b is more toxic than 2a. A TITE-CRM is used instead of a PO-TITE-CRM. All other stopping rules and details remain the same. 
 	\item PO (Partial Ordering design). This design removes the TITE component and uses a PO-CRM as detailed by \cite{wagesContinualReassessmentMethod2011}. This requires the removal of the minimum follow-up period so all dose allocation decisions are made once all 3 patients in a cohort have been observed for the full follow-up period of one year. All other stopping rules and details remain the same. 
 	\item N = 30. This design uses a fixed sample size of 30 patients and removes the stopping rule for reaching consensus. The analysis is still conducted using the PO-TITE-CRM. All other stopping rules and details remain the same. 
 	\item N = 60. This design uses a fixed sample size of 60 patients and removes the stopping rule for reaching consensus. The analysis is still conducted using the PO-TITE-CRM. All other stopping rules and details remain the same. 
-	\item No cohorts. This design uses a cohort size of one. All other stopping rules remain the same.  
+	\item CS = 1. This design uses a cohort size (CS) of one. All other stopping rules remain the same.  
 \end{enumerate} 
 
-\begin{table} % Table for alterative designs
+\begin{table} % Table for alterative designs scenarios 1-8
 	
-	\caption[Selection probabilities for alternative designs.]{\label{tab_adept:Design_Comparison}Selection probabilities of the TD25 and expected trial duration (in months) for the PO-TITE, TITE and PO-CRM designs as well as modified PO-TITE-CRM designs for scenarios 1-8 based on 2000 simulated trials.}
+	\caption[Alternative designs selection probabilities for ordering 1.]{\label{tab_adept:Design_Comparison1}Selection probabilities of the TD25 and expected trial duration (in months) for the PO-TITE, TITE and PO-CRM designs as well as modified PO-TITE-CRM designs for scenarios 1-8 (where 2b is considered more toxic than 2a) based on 10000 simulated trials.}
 	
 	\centering
 	\begin{singlespace}
 		\resizebox{\linewidth}{!}{
 			\fontsize{12}{11}\selectfont
 			\begin{tabular}[t]{cccccccccccc}
-				\toprule
-				\multicolumn{3}{c}{ } & \multicolumn{6}{c}{Dose Levels} \\
-				\cmidrule(l{3pt}r{3pt}){4-9}
-				&  &  & -1 & 0 & 1 & 2a & 2b & 3 & Stop & Duration & Mean N\\
-				\midrule
-				Scenario & CRM details & Prior DLT & 0.01 & 0.04 & 0.08 & 0.16 & 0.25 & 0.35 &  &  & \\
-				\cmidrule{1-12}
-				\rowcolor{gray!6}   &  & True DLT rate & 0.25 & 0.4 & 0.45 & 0.5 & 0.55 & 0.6 &  &  & \\
-				
-				\rowcolor{gray!6}   & PO-TITE & P(select) & 0.67 & 0.19 & 0.06 & 0 & 0 & 0 & 0.08 & 57.95 & 26.57\\
-				
-				\rowcolor{gray!6}   & TITE & P(select) & 0.71 & 0.21 & 0.05 & 0 & 0 & 0 & 0.03 & 59.84 & 27.62\\
-				
-				\rowcolor{gray!6}   & PO & P(select) & 0.57 & 0.18 & 0.04 & 0.01 & 0 & 0 & 0.2 & 131.02 & 21.9\\
-				
-				\rowcolor{gray!6}   & N = 30 & P(select) & 0.65 & 0.21 & 0.05 & 0.01 & 0 & 0 & 0.08 & 60.27 & 27.86\\
-				
-				\rowcolor{gray!6}   & N = 60 & P(select) & 0.79 & 0.12 & 0.01 & 0 & 0 & 0 & 0.08 & 107.48 & 54.1\\
-				
-				\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 1: TD25 @-1} & No cohorts & P(select) & 0.63 & 0.16 & 0.04 & 0.01 & 0.01 & 0 & 0.15 & 86.77 & 22.19\\
-				\cmidrule{1-12}
-				&  & True DLT rate & 0.12 & 0.25 & 0.4 & 0.45 & 0.5 & 0.55 &  &  & \\
-				
-				& PO-TITE & P(select) & 0.22 & 0.52 & 0.2 & 0.02 & 0.02 & 0 & 0.01 & 64.08 & 29.98\\
-				
-				& TITE & P(select) & 0.22 & 0.53 & 0.21 & 0.04 & 0 & 0 &  & 63.29 & 29.54\\
-				
-				& PO & P(select) & 0.21 & 0.53 & 0.2 & 0.02 & 0.01 & 0 & 0.02 & 163.6 & 27.8\\
-				
-				& N = 30 & P(select) & 0.22 & 0.5 & 0.21 & 0.04 & 0.02 & 0 & 0.01 & 63.16 & 29.46\\
-				
-				& N = 60 & P(select) & 0.15 & 0.69 & 0.14 & 0.01 & 0 & 0 & 0.01 & 115.96 & 58.82\\
-				
-				\multirow{-7}{*}{\centering\arraybackslash 2: TD25 @0} & No cohorts & P(select) & 0.26 & 0.45 & 0.2 & 0.03 & 0.02 & 0.01 & 0.04 & 104.49 & 27.32\\
-				\cmidrule{1-12}
-				\rowcolor{gray!6}   &  & True DLT rate & 0.09 & 0.12 & 0.25 & 0.4 & 0.45 & 0.5 &  &  & \\
-				
-				\rowcolor{gray!6}   & PO-TITE & P(select) & 0.02 & 0.2 & 0.55 & 0.14 & 0.1 & 0 &  & 67.37 & 31.8\\
-				
-				\rowcolor{gray!6}   & TITE & P(select) & 0.01 & 0.19 & 0.56 & 0.2 & 0.03 & 0.01 &  & 64.17 & 30.03\\
-				
-				\rowcolor{gray!6}   & PO & P(select) & 0.02 & 0.16 & 0.59 & 0.14 & 0.08 & 0.01 &  & 179.11 & 30.61\\
-				
-				\rowcolor{gray!6}   & N = 30 & P(select) & 0.02 & 0.17 & 0.53 & 0.15 & 0.13 & 0.01 &  & 64 & 29.93\\
-				
-				\rowcolor{gray!6}   & N = 60 & P(select) & 0 & 0.14 & 0.7 & 0.1 & 0.06 & 0 &  & 117.75 & 59.81\\
-				
-				\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 3: TD25 @1} & No cohorts & P(select) & 0.05 & 0.18 & 0.49 & 0.14 & 0.09 & 0.02 & 0.01 & 113.69 & 29.99\\
-				\cmidrule{1-12}
-				&  & True DLT rate & 0.06 & 0.09 & 0.12 & 0.25 & 0.4 & 0.45 &  &  & \\
-				
-				& PO-TITE & P(select) & 0 & 0.02 & 0.22 & 0.48 & 0.23 & 0.05 &  & 70 & 33.26\\
-				
-				& TITE & P(select) & 0 & 0.02 & 0.22 & 0.56 & 0.18 & 0.03 &  & 67.16 & 31.69\\
-				
-				& PO & P(select) & 0 & 0.02 & 0.21 & 0.49 & 0.22 & 0.05 &  & 190.17 & 32.61\\
-				
-				& N = 30 & P(select) & 0 & 0.02 & 0.21 & 0.45 & 0.28 & 0.04 &  & 64.08 & 29.98\\
-				
-				& N = 60 & P(select) & 0 & 0 & 0.18 & 0.62 & 0.19 & 0.01 &  & 117.99 & 59.95\\
-				
-				\multirow{-7}{*}{\centering\arraybackslash 4: TD25 @2a} & No cohorts & P(select) & 0.02 & 0.02 & 0.21 & 0.46 & 0.2 & 0.09 &  & 114.11 & 30.11\\
-				\cmidrule{1-12}
-				\rowcolor{gray!6}   &  & True DLT rate & 0.03 & 0.06 & 0.09 & 0.12 & 0.25 & 0.4 &  &  & \\
-				
-				\rowcolor{gray!6}   & PO-TITE & P(select) & 0 & 0 & 0.02 & 0.31 & 0.42 & 0.24 &  & 70.78 & 33.7\\
-				
-				\rowcolor{gray!6}   & TITE & P(select) & 0 & 0 & 0.02 & 0.22 & 0.58 & 0.18 &  & 68.35 & 32.35\\
-				
-				\rowcolor{gray!6}   & PO & P(select) & 0 & 0 & 0.03 & 0.25 & 0.44 & 0.28 &  & 195.1 & 33.5\\
-				
-				\rowcolor{gray!6}   & N = 30 & P(select) & 0 & 0 & 0.03 & 0.31 & 0.41 & 0.25 &  & 64.12 & 30\\
-				
-				\rowcolor{gray!6}   & N = 60 & P(select) & 0 & 0 & 0 & 0.24 & 0.62 & 0.14 &  & 118.09 & 60\\
-				
-				\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 5: TD25 @2b} & No cohorts & P(select) & 0.01 & 0 & 0.02 & 0.25 & 0.41 & 0.3 &  & 110.25 & 28.99\\
-				\cmidrule{1-12}
-				&  & True DLT rate & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 & 0.25 &  &  & \\
-				
-				& PO-TITE & P(select) & 0 & 0 & 0 & 0.1 & 0.13 & 0.77 &  & 65.72 & 30.89\\
-				
-				& TITE & P(select) & 0 & 0 & 0 & 0.03 & 0.24 & 0.74 &  & 65.77 & 30.91\\
-				
-				& PO & P(select) & 0 & 0 & 0 & 0.08 & 0.12 & 0.8 &  & 183.46 & 31.39\\
-				
-				& N = 30 & P(select) & 0 & 0 & 0 & 0.1 & 0.13 & 0.77 &  & 64.12 & 30\\
-				
-				& N = 60 & P(select) & 0 & 0 & 0 & 0.06 & 0.1 & 0.85 &  & 118.09 & 60\\
-				
-				\multirow{-7}{*}{\centering\arraybackslash 6: TD25 @3} & No cohorts & P(select) & 0 & 0 & 0 & 0.06 & 0.1 & 0.83 &  & 93.36 & 24.1\\
-				\cmidrule{1-12}
-				\rowcolor{gray!6}   &  & True DLT rate & 0.05 & 0.1 & 0.15 & 0.2 & 0.25 & 0.3 &  &  & \\
-				
-				\rowcolor{gray!6}   & PO-TITE & P(select) & 0 & 0.03 & 0.11 & 0.3 & 0.29 & 0.27 &  & 67.49 & 31.87\\
-				
-				\rowcolor{gray!6}   & TITE & P(select) & 0 & 0.03 & 0.14 & 0.32 & 0.29 & 0.21 &  & 64.54 & 30.23\\
-				
-				\rowcolor{gray!6}   & PO & P(select) & 0 & 0.03 & 0.15 & 0.3 & 0.26 & 0.26 &  & 185.84 & 31.83\\
-				
-				\rowcolor{gray!6}   & N = 30 & P(select) & 0 & 0.01 & 0.12 & 0.29 & 0.32 & 0.25 &  & 64.08 & 29.98\\
-				
-				\rowcolor{gray!6}   & N = 60 & P(select) & 0 & 0 & 0.08 & 0.33 & 0.34 & 0.25 &  & 117.94 & 59.92\\
-				
-				\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 7: Equal steps} & No cohorts & P(select) & 0.03 & 0.02 & 0.09 & 0.24 & 0.24 & 0.37 &  & 102.15 & 26.65\\
-				\cmidrule{1-12}
-				&  & True DLT rate & 0.5 & 0.6 & 0.65 & 0.7 & 0.75 & 0.8 &  &  & \\
-				
-				& PO-TITE & P(select) & 0.26 & 0 & 0 & 0 & 0 & 0 & 0.73 & 39.01 & 16.04\\
-				
-				& TITE & P(select) & 0.37 & 0 & 0 & 0 & 0 & 0 & 0.63 & 44.67 & 19.19\\
-				
-				& PO & P(select) & 0.14 & 0 & 0 & 0 & 0 & 0 & 0.86 & 70.42 & 10.93\\
-				
-				& N = 30 & P(select) & 0.24 & 0 & 0 & 0 & 0 & 0 & 0.76 & 41.73 & 17.55\\
-				
-				& N = 60 & P(select) & 0.14 & 0 & 0 & 0 & 0 & 0 & 0.86 & 48.2 & 21.15\\
-				
-				\multirow{-7}{*}{\centering\arraybackslash 8: All toxic} & No cohorts & P(select) & 0.33 & 0 & 0 & 0 & 0 & 0 & 0.67 & 47.54 & 10.83\\
-				\bottomrule
+			\toprule
+			\multicolumn{3}{c}{ } & \multicolumn{6}{c}{Dose Levels} \\
+			\cmidrule(l{3pt}r{3pt}){4-9}
+			&  &  & -1 & 0 & 1 & 2a & 2b & 3 & Stop & Duration & Mean N\\
+			\midrule
+			Scenario & CRM details & Prior DLT & 0.01 & 0.04 & 0.08 & 0.16 & 0.25 & 0.35 &  &  & \\
+			\cmidrule{1-12}
+			\rowcolor{gray!6}   &  & True DLT rate & 0.25 & 0.4 & 0.45 & 0.5 & 0.55 & 0.6 &  &  & \\
+			
+			\rowcolor{gray!6}   & PO-TITE & P(select) & 0.68 & 0.18 & 0.05 & 0.01 & 0 & 0 & 0.08 & 57.61 & 26.38\\
+			
+			\rowcolor{gray!6}   & TITE & P(select) & 0.7 & 0.21 & 0.05 & 0.01 & 0 & 0 & 0.03 & 59.55 & 27.46\\
+			
+			\rowcolor{gray!6}   & PO & P(select) & 0.59 & 0.18 & 0.04 & 0.01 & 0 & 0 & 0.19 & 132.19 & 22.11\\
+			
+			\rowcolor{gray!6}   & N = 30 & P(select) & 0.67 & 0.19 & 0.05 & 0.01 & 0 & 0 & 0.08 & 60.02 & 27.72\\
+			
+			\rowcolor{gray!6}   & N = 60 & P(select) & 0.78 & 0.12 & 0.01 & 0 & 0 & 0 & 0.09 & 106.61 & 53.62\\
+			
+			\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 1: TD25 @-1} & CS = 1 & P(select) & 0.63 & 0.17 & 0.04 & 0.01 & 0.01 & 0 & 0.15 & 87.62 & 22.44\\
+			\cmidrule{1-12}
+			&  & True DLT rate & 0.12 & 0.25 & 0.4 & 0.45 & 0.5 & 0.55 &  &  & \\
+			
+			& PO-TITE & P(select) & 0.23 & 0.51 & 0.2 & 0.03 & 0.02 & 0 & 0.01 & 64.06 & 29.97\\
+			
+			& TITE & P(select) & 0.22 & 0.54 & 0.2 & 0.04 & 0.01 & 0 &  & 63.5 & 29.65\\
+			
+			& PO & P(select) & 0.2 & 0.54 & 0.21 & 0.02 & 0.01 & 0 & 0.02 & 163.53 & 27.79\\
+			
+			& N = 30 & P(select) & 0.23 & 0.5 & 0.21 & 0.03 & 0.02 & 0 & 0.01 & 63.26 & 29.52\\
+			
+			& N = 60 & P(select) & 0.15 & 0.69 & 0.14 & 0.01 & 0 & 0 & 0.01 & 116.29 & 59\\
+			
+			\multirow{-7}{*}{\centering\arraybackslash 2: TD25 @0} & CS = 1 & P(select) & 0.25 & 0.46 & 0.19 & 0.03 & 0.02 & 0.01 & 0.04 & 105.41 & 27.59\\
+			\cmidrule{1-12}
+			\rowcolor{gray!6}   &  & True DLT rate & 0.09 & 0.12 & 0.25 & 0.4 & 0.45 & 0.5 &  &  & \\
+			
+			\rowcolor{gray!6}   & PO-TITE & P(select) & 0.02 & 0.2 & 0.55 & 0.14 & 0.09 & 0.01 &  & 67.74 & 32.01\\
+			
+			\rowcolor{gray!6}   & TITE & P(select) & 0.01 & 0.2 & 0.54 & 0.2 & 0.04 & 0 &  & 64.44 & 30.18\\
+			
+			\rowcolor{gray!6}   & PO & P(select) & 0.02 & 0.16 & 0.59 & 0.14 & 0.07 & 0.01 &  & 178.12 & 30.43\\
+			
+			\rowcolor{gray!6}   & N = 30 & P(select) & 0.01 & 0.19 & 0.52 & 0.15 & 0.12 & 0.01 &  & 64.04 & 29.96\\
+			
+			\rowcolor{gray!6}   & N = 60 & P(select) & 0 & 0.14 & 0.7 & 0.1 & 0.06 & 0 &  & 117.89 & 59.89\\
+			
+			\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 3: TD25 @1} & CS = 1 & P(select) & 0.05 & 0.18 & 0.51 & 0.14 & 0.09 & 0.02 & 0.01 & 114.18 & 30.13\\
+			\cmidrule{1-12}
+			&  & True DLT rate & 0.06 & 0.09 & 0.12 & 0.25 & 0.4 & 0.45 &  &  & \\
+			
+			& PO-TITE & P(select) & 0 & 0.02 & 0.22 & 0.48 & 0.23 & 0.05 &  & 69.91 & 33.22\\
+			
+			& TITE & P(select) & 0 & 0.02 & 0.21 & 0.56 & 0.18 & 0.03 &  & 66.99 & 31.59\\
+			
+			& PO & P(select) & 0 & 0.02 & 0.22 & 0.49 & 0.22 & 0.05 &  & 189.69 & 32.52\\
+			
+			& N = 30 & P(select) & 0 & 0.01 & 0.22 & 0.45 & 0.27 & 0.05 &  & 64.1 & 29.99\\
+			
+			& N = 60 & P(select) & 0 & 0 & 0.18 & 0.64 & 0.18 & 0.01 &  & 118.01 & 59.96\\
+			
+			\multirow{-7}{*}{\centering\arraybackslash 4: TD25 @2a} & CS = 1 & P(select) & 0.03 & 0.02 & 0.22 & 0.45 & 0.2 & 0.08 &  & 113.77 & 30.01\\
+			\cmidrule{1-12}
+			\rowcolor{gray!6}   &  & True DLT rate & 0.03 & 0.06 & 0.09 & 0.12 & 0.25 & 0.4 &  &  & \\
+			
+			\rowcolor{gray!6}   & PO-TITE & P(select) & 0 & 0 & 0.02 & 0.3 & 0.43 & 0.25 &  & 70.6 & 33.6\\
+			
+			\rowcolor{gray!6}   & TITE & P(select) & 0 & 0 & 0.02 & 0.22 & 0.56 & 0.19 &  & 68.34 & 32.34\\
+			
+			\rowcolor{gray!6}   & PO & P(select) & 0 & 0 & 0.03 & 0.26 & 0.44 & 0.27 &  & 194.41 & 33.38\\
+			
+			\rowcolor{gray!6}   & N = 30 & P(select) & 0 & 0 & 0.03 & 0.3 & 0.43 & 0.24 &  & 64.11 & 29.99\\
+			
+			\rowcolor{gray!6}   & N = 60 & P(select) & 0 & 0 & 0 & 0.24 & 0.61 & 0.14 &  & 118.08 & 59.99\\
+			
+			\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 5: TD25 @2b} & CS = 1 & P(select) & 0.01 & 0 & 0.02 & 0.26 & 0.4 & 0.3 &  & 110.26 & 29\\
+			\cmidrule{1-12}
+			&  & True DLT rate & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 & 0.25 &  &  & \\
+			
+			& PO-TITE & P(select) & 0 & 0 & 0 & 0.09 & 0.13 & 0.78 &  & 65.78 & 30.92\\
+			
+			& TITE & P(select) & 0 & 0 & 0 & 0.03 & 0.23 & 0.73 &  & 65.6 & 30.82\\
+			
+			& PO & P(select) & 0 & 0 & 0 & 0.08 & 0.12 & 0.8 &  & 183.48 & 31.4\\
+			
+			& N = 30 & P(select) & 0 & 0 & 0 & 0.1 & 0.14 & 0.75 &  & 64.12 & 30\\
+			
+			& N = 60 & P(select) & 0 & 0 & 0 & 0.06 & 0.1 & 0.85 &  & 118.09 & 60\\
+			
+			\multirow{-7}{*}{\centering\arraybackslash 6: TD25 @3} & CS = 1 & P(select) & 0.01 & 0 & 0 & 0.06 & 0.1 & 0.83 &  & 92.92 & 23.98\\
+			\cmidrule{1-12}
+			\rowcolor{gray!6}   &  & True DLT rate & 0.05 & 0.1 & 0.15 & 0.2 & 0.25 & 0.3 &  &  & \\
+			
+			\rowcolor{gray!6}   & PO-TITE & P(select) & 0 & 0.03 & 0.12 & 0.31 & 0.28 & 0.26 &  & 67.25 & 31.74\\
+			
+			\rowcolor{gray!6}   & TITE & P(select) & 0 & 0.03 & 0.14 & 0.3 & 0.32 & 0.21 &  & 65.22 & 30.61\\
+			
+			\rowcolor{gray!6}   & PO & P(select) & 0.01 & 0.03 & 0.14 & 0.3 & 0.27 & 0.25 &  & 186.6 & 31.96\\
+			
+			\rowcolor{gray!6}   & N = 30 & P(select) & 0 & 0.02 & 0.12 & 0.3 & 0.3 & 0.25 &  & 64.07 & 29.97\\
+			
+			\rowcolor{gray!6}   & N = 60 & P(select) & 0 & 0 & 0.07 & 0.33 & 0.35 & 0.25 &  & 118.04 & 59.97\\
+			
+			\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 7: Equal steps} & CS = 1 & P(select) & 0.03 & 0.02 & 0.09 & 0.24 & 0.23 & 0.39 &  & 101.81 & 26.55\\
+			\cmidrule{1-12}
+			&  & True DLT rate & 0.5 & 0.6 & 0.65 & 0.7 & 0.75 & 0.8 &  &  & \\
+			
+			& PO-TITE & P(select) & 0.26 & 0 & 0 & 0 & 0 & 0 & 0.74 & 39.19 & 16.14\\
+			
+			& TITE & P(select) & 0.37 & 0 & 0 & 0 & 0 & 0 & 0.63 & 44.65 & 19.17\\
+			
+			& PO & P(select) & 0.13 & 0 & 0 & 0 & 0 & 0 & 0.86 & 70.38 & 10.92\\
+			
+			& N = 30 & P(select) & 0.23 & 0 & 0 & 0 & 0 & 0 & 0.77 & 41.35 & 17.34\\
+			
+			& N = 60 & P(select) & 0.13 & 0 & 0 & 0 & 0 & 0 & 0.87 & 47.35 & 20.68\\
+			
+			\multirow{-7}{*}{\centering\arraybackslash 8: All toxic} & CS = 1 & P(select) & 0.33 & 0 & 0 & 0 & 0 & 0 & 0.67 & 46.43 & 10.51\\
+			\bottomrule
 		\end{tabular}}
 	\end{singlespace}
 \end{table}
 
+\begin{table} % Table for alterative designs scenarios 9-16
+	
+	\caption[Alternative designs selection probabilities for ordering 2.]{\label{tab_adept:Design_Comparison2}Selection probabilities of the TD25 and expected trial duration (in months) for the PO-TITE, TITE and PO-CRM designs as well as modified PO-TITE-CRM designs for scenarios 9-16 (where 2a is considered more toxic than 2b) based on 10000 simulated trials.}
+	
+	\centering
+	\begin{singlespace}
+		\resizebox{\linewidth}{!}{
+			\fontsize{12}{11}\selectfont
+			\begin{tabular}[t]{cccccccccccc}
+			\toprule
+			\multicolumn{3}{c}{ } & \multicolumn{6}{c}{Dose Levels} \\
+			\cmidrule(l{3pt}r{3pt}){4-9}
+			&  &  & -1 & 0 & 1 & 2a & 2b & 3 & Stop & Duration & Mean N\\
+			\midrule
+			Scenario & CRM details & Prior DLT & 0.01 & 0.04 & 0.08 & 0.16 & 0.25 & 0.35 &  &  & \\
+			\cmidrule{1-12}
+			\rowcolor{gray!6}   &  & True DLT rate & 0.25 & 0.4 & 0.45 & 0.55 & 0.5 & 0.6 &  &  & \\
+			
+			\rowcolor{gray!6}   & PO-TITE & P(select) & 0.67 & 0.19 & 0.05 & 0 & 0.01 & 0 & 0.08 & 57.35 & 26.23\\
+			
+			\rowcolor{gray!6}   & TITE & P(select) & 0.7 & 0.21 & 0.05 & 0 & 0 & 0 & 0.03 & 59.34 & 27.34\\
+			
+			\rowcolor{gray!6}   & PO & P(select) & 0.58 & 0.17 & 0.04 & 0 & 0 & 0 & 0.2 & 131.46 & 21.98\\
+			
+			\rowcolor{gray!6}   & N = 30 & P(select) & 0.68 & 0.18 & 0.04 & 0 & 0.01 & 0 & 0.09 & 59.85 & 27.62\\
+			
+			\rowcolor{gray!6}   & N = 60 & P(select) & 0.78 & 0.13 & 0.01 & 0 & 0 & 0 & 0.09 & 106.5 & 53.56\\
+			
+			\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 9: TD25 @-1} & CS = 1 & P(select) & 0.62 & 0.16 & 0.05 & 0 & 0.01 & 0 & 0.15 & 87.6 & 22.43\\
+			\cmidrule{1-12}
+			&  & True DLT rate & 0.12 & 0.25 & 0.4 & 0.5 & 0.45 & 0.55 &  &  & \\
+			
+			& PO-TITE & P(select) & 0.23 & 0.52 & 0.2 & 0.02 & 0.02 & 0 & 0.01 & 64.02 & 29.95\\
+			
+			& TITE & P(select) & 0.21 & 0.56 & 0.19 & 0.02 & 0.01 & 0 &  & 63.57 & 29.69\\
+			
+			& PO & P(select) & 0.2 & 0.54 & 0.2 & 0.01 & 0.02 & 0 & 0.02 & 163.06 & 27.7\\
+			
+			& N = 30 & P(select) & 0.24 & 0.51 & 0.2 & 0.02 & 0.03 & 0 & 0.01 & 63.35 & 29.57\\
+			
+			& N = 60 & P(select) & 0.15 & 0.7 & 0.13 & 0 & 0.01 & 0 & 0.01 & 116.22 & 58.96\\
+			
+			\multirow{-7}{*}{\centering\arraybackslash 10: TD25 @0} & CS = 1 & P(select) & 0.25 & 0.47 & 0.19 & 0.02 & 0.03 & 0.01 & 0.04 & 105.04 & 27.49\\
+			\cmidrule{1-12}
+			\rowcolor{gray!6}   &  & True DLT rate & 0.09 & 0.12 & 0.25 & 0.45 & 0.4 & 0.5 &  &  & \\
+			
+			\rowcolor{gray!6}   & PO-TITE & P(select) & 0.02 & 0.2 & 0.55 & 0.09 & 0.14 & 0.01 &  & 68 & 32.15\\
+			
+			\rowcolor{gray!6}   & TITE & P(select) & 0.01 & 0.22 & 0.58 & 0.14 & 0.04 & 0 &  & 64.86 & 30.41\\
+			
+			\rowcolor{gray!6}   & PO & P(select) & 0.03 & 0.17 & 0.59 & 0.09 & 0.12 & 0.01 &  & 177.68 & 30.35\\
+			
+			\rowcolor{gray!6}   & N = 30 & P(select) & 0.02 & 0.2 & 0.51 & 0.1 & 0.16 & 0.01 &  & 64.03 & 29.95\\
+			
+			\rowcolor{gray!6}   & N = 60 & P(select) & 0 & 0.14 & 0.71 & 0.05 & 0.1 & 0 &  & 117.88 & 59.88\\
+			
+			\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 11: TD25 @1} & CS = 1 & P(select) & 0.05 & 0.17 & 0.53 & 0.09 & 0.13 & 0.02 & 0.01 & 113.98 & 30.07\\
+			\cmidrule{1-12}
+			&  & True DLT rate & 0.06 & 0.09 & 0.12 & 0.25 & 0.15 & 0.45 &  &  & \\
+			
+			& PO-TITE & P(select) & 0 & 0.01 & 0.08 & 0.44 & 0.33 & 0.14 &  & 70.52 & 33.56\\
+			
+			& TITE & P(select) & 0 & 0.02 & 0.14 & 0.26 & 0.45 & 0.14 &  & 67.23 & 31.73\\
+			
+			& PO & P(select) & 0.01 & 0.02 & 0.09 & 0.45 & 0.28 & 0.15 &  & 194.42 & 33.38\\
+			
+			& N = 30 & P(select) & 0 & 0.01 & 0.08 & 0.42 & 0.35 & 0.14 &  & 64.09 & 29.98\\
+			
+			& N = 60 & P(select) & 0 & 0 & 0.03 & 0.57 & 0.33 & 0.07 &  & 117.98 & 59.94\\
+			
+			\multirow{-7}{*}{\centering\arraybackslash 12: TD25 @2a} & CS = 1 & P(select) & 0.02 & 0.01 & 0.07 & 0.4 & 0.32 & 0.18 &  & 113.02 & 29.8\\
+			\cmidrule{1-12}
+			\rowcolor{gray!6}   &  & True DLT rate & 0.03 & 0.06 & 0.09 & 0.35 & 0.25 & 0.4 &  &  & \\
+			
+			\rowcolor{gray!6}   & PO-TITE & P(select) & 0 & 0 & 0.15 & 0.31 & 0.43 & 0.11 &  & 69.8 & 33.16\\
+			
+			\rowcolor{gray!6}   & TITE & P(select) & 0 & 0.01 & 0.26 & 0.36 & 0.28 & 0.1 &  & 65.95 & 31.02\\
+			
+			\rowcolor{gray!6}   & PO & P(select) & 0 & 0.01 & 0.14 & 0.34 & 0.43 & 0.1 &  & 190.68 & 32.7\\
+			
+			\rowcolor{gray!6}   & N = 30 & P(select) & 0 & 0 & 0.15 & 0.3 & 0.44 & 0.11 &  & 64.12 & 30\\
+			
+			\rowcolor{gray!6}   & N = 60 & P(select) & 0 & 0 & 0.1 & 0.29 & 0.57 & 0.04 &  & 118.07 & 59.99\\
+			
+			\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 13: TD25 @2b} & CS = 1 & P(select) & 0.02 & 0 & 0.14 & 0.27 & 0.4 & 0.17 &  & 112.27 & 29.58\\
+			\cmidrule{1-12}
+			&  & True DLT rate & 0.01 & 0.03 & 0.06 & 0.12 & 0.09 & 0.25 &  &  & \\
+			
+			& PO-TITE & P(select) & 0 & 0 & 0 & 0.13 & 0.09 & 0.78 &  & 65.58 & 30.81\\
+			
+			& TITE & P(select) & 0 & 0 & 0 & 0.04 & 0.21 & 0.74 &  & 65.66 & 30.86\\
+			
+			& PO & P(select) & 0 & 0 & 0 & 0.13 & 0.07 & 0.8 &  & 183.9 & 31.47\\
+			
+			& N = 30 & P(select) & 0 & 0 & 0 & 0.13 & 0.11 & 0.75 &  & 64.12 & 30\\
+			
+			& N = 60 & P(select) & 0 & 0 & 0 & 0.09 & 0.06 & 0.85 &  & 118.09 & 60\\
+			
+			\multirow{-7}{*}{\centering\arraybackslash 14: TD25 @3} & CS = 1 & P(select) & 0.01 & 0 & 0 & 0.1 & 0.07 & 0.82 &  & 93.1 & 24.03\\
+			\cmidrule{1-12}
+			\rowcolor{gray!6}   &  & True DLT rate & 0.05 & 0.1 & 0.15 & 0.25 & 0.2 & 0.3 &  &  & \\
+			
+			\rowcolor{gray!6}   & PO-TITE & P(select) & 0 & 0.02 & 0.12 & 0.32 & 0.27 & 0.26 &  & 67.17 & 31.69\\
+			
+			\rowcolor{gray!6}   & TITE & P(select) & 0 & 0.03 & 0.19 & 0.27 & 0.28 & 0.24 &  & 65.01 & 30.49\\
+			
+			\rowcolor{gray!6}   & PO & P(select) & 0 & 0.03 & 0.16 & 0.32 & 0.26 & 0.23 &  & 186.35 & 31.92\\
+			
+			\rowcolor{gray!6}   & N = 30 & P(select) & 0 & 0.02 & 0.13 & 0.3 & 0.29 & 0.25 &  & 64.1 & 29.99\\
+			
+			\rowcolor{gray!6}   & N = 60 & P(select) & 0 & 0 & 0.07 & 0.36 & 0.31 & 0.25 &  & 117.97 & 59.94\\
+			
+			\rowcolor{gray!6}  \multirow{-7}{*}{\centering\arraybackslash 15: Equal steps} & CS = 1 & P(select) & 0.03 & 0.02 & 0.09 & 0.23 & 0.23 & 0.4 &  & 102.22 & 26.67\\
+			\cmidrule{1-12}
+			&  & True DLT rate & 0.5 & 0.6 & 0.65 & 0.75 & 0.7 & 0.8 &  &  & \\
+			
+			& PO-TITE & P(select) & 0.27 & 0 & 0 & 0 & 0 & 0 & 0.73 & 39.14 & 16.11\\
+			
+			& TITE & P(select) & 0.37 & 0 & 0 & 0 & 0 & 0 & 0.63 & 44.23 & 18.94\\
+			
+			& PO & P(select) & 0.13 & 0 & 0 & 0 & 0 & 0 & 0.87 & 69.79 & 10.81\\
+			
+			& N = 30 & P(select) & 0.23 & 0 & 0 & 0 & 0 & 0 & 0.77 & 41.18 & 17.24\\
+			
+			& N = 60 & P(select) & 0.13 & 0 & 0 & 0 & 0 & 0 & 0.87 & 47.29 & 20.64\\
+			
+			\multirow{-7}{*}{\centering\arraybackslash 16: All toxic} & CS = 1 & P(select) & 0.33 & 0 & 0 & 0 & 0 & 0 & 0.67 & 45.76 & 10.31\\
+			\bottomrule
+	\end{tabular}}
+\end{singlespace}
+\end{table}
 
-The TITE-CRM performs similarly to our original design. We see increases in probability selection for scenarios 4 and 5 where the target dose is at 2a and 2b respectively. This increase in performance can be attributed to the fact that the partial ordering no longer exists as we have assumed an ordering. The lower selection probabilities for the PO-TITE-CRM can be seen as the price to pay for the uncertainty of not knowing the order of 2a and 2b. 
+\begin{figure}[h!]
+	\centering
+	\caption[Plot of simulations comparing designs for ordering 1.]{Plot of the simulation results presented in Table \ref{tab_adept:Design_Comparison1} detailing selection probabilities for multiple designs across scenarios 1-8 (where 2b is considered more toxic than 2a).}
+	\label{fig_adept:sims_order1}
+	\includegraphics[width=\textwidth]{Adept-SimsOrder1}
+\end{figure}
 
-The PO-CRM design without a TITE component also performs similarly except for scenarios 1 and 8 where the trial stops more regularly for excess toxicity at the lowest dose. This would be because patients complete the full follow-up window before the next dose allocation decision is made. In a TITE setting a new cohort could be recruited before patients in previous cohorts experience a DLT. The main difference between these designs is the trial duration. Without the TITE component the trial duration is significantly longer, with the average length ranging from 70 to 195 months compared to 39 to 71 months for PO-TITE-CRM. 
+\begin{figure}[h!]
+	\centering
+	\caption[Plot of simulations comparing designs for ordering 2.]{Plot of the simulation results presented in Table \ref{tab_adept:Design_Comparison2} detailing selection probabilities for multiple designs across scenarios 9-16 (where 2a is considered more toxic than 2b).}
+	\label{fig_adept:sims_order2}
+	\includegraphics[width=\textwidth]{Adept-SimsOrder2}
+\end{figure}
 
-The design with a fixed sample size of 30 performs is comparable to our design with the sample size of 60 and the consensus stopping rule. With a sample size of 30 selection probabilities are only 2-5\% lower. For the design with 60 patients, we see much improved operating characteristics with selection probabilities ranging from 34\% to 85\% for the various scenarios. Even though our original design specifies a sample size of 60 we rarely ever reach it as we often stop for consensus hence why this design performs better. The trade-off here is trial duration. Recruitment and follow-up under the constraints of these simulations will take much longer compared to our specification which is not ideal for an early-phase trial. Originally our design for a sample size of 30 but as the clinicians wanted a dose expansion cohort we opted to use the consensus rule to ensure a minimum number of patients would be treated at the TD25. 
+The TITE-CRM performs similarly to our original design for scenarios 1-8 where 2a is assumed less toxic than 2b (Table \ref{tab_adept:OCorder1}). We see increases in probability selection for scenarios 4 and 5 where the target dose is at 2a and 2b respectively. This increase in performance can be attributed to the fact that the partial ordering no longer exists as we have assumed an ordering. The lower selection probabilities for the PO-TITE-CRM can be seen as the price to pay for the uncertainty of not knowing the order of 2a and 2b. However, the TITE-CRM underperforms in scenarios 9-16 where 2a is assumed more toxic than 2b. Specifically, scenarios 12 and 13 where it fails to identify the TD25 the majority of the time. 
+
+The PO-CRM design without a TITE component also performs similarly except for scenarios 1, 8, 9 and 16 where the trial stops more regularly for excess toxicity at the lowest dose. This would be because patients complete the full follow-up window before the next dose allocation decision is made. In a TITE setting a new cohort could be recruited before patients in previous cohorts experience a DLT. The main difference between these designs is the trial duration. Without the TITE component the trial duration is significantly longer, with the average length ranging from 70 to 195 months compared to 39 to 71 months for PO-TITE-CRM. 
+
+The design with a fixed sample size of 30 performs is comparable to our design with the sample size of 60 and the consensus stopping rule. With a sample size of 30 selection probabilities are only 2-5\% lower. For the design with 60 patients, we see much improved operating characteristics with selection probabilities ranging from 31\% to 85\% for the various scenarios. Even though our original design specifies a sample size of 60 we rarely ever reach it as we often stop for consensus hence why this design performs better. The trade-off here is trial duration. Recruitment and follow-up under the constraints of these simulations will take much longer compared to our specification which is not ideal for an early-phase trial. Originally our design for a sample size of 30 but as the clinicians wanted a dose expansion cohort we opted to use the consensus rule to ensure a minimum number of patients would be treated at the TD25. 
 
 For the design with no cohorts, or cohort size of one, we see somewhat comparable performance to that of the PO-TITE-CRM design. The design performs similarly for scenarios where the TD25 is at the lowest or highest dose level but underperforms for the more complex scenarios in terms of selection probabilities. This discrepancy in performance may be related to how the simulations recruit patients into the trial and the large DLT follow-up period. Meaning more frequent dose allocation decisions are being made each with less available information. This also leads to the no cohorts design having a longer duration. Patients entered into the trial in cohorts of three won't having to wait the full minimum follow-up period between patients within the cohort.
 
@@ -602,7 +777,11 @@ Compared to other CRM based designs only a few additional pieces of information 
 
 In terms of ADePT-DDR, dose combinations were decided upon by the clinical investigators. The issue of partial ordering was due to the dose-levels 2a and 2b as such this methodology was employed to deal with that scenario. Meaning that this is a very simple example of partial ordering as we only have two possible orderings and six dose levels. The necessity of implementing this methodology was discussed and whether or not adopting an easier solution by simply altering the dose levels would have been better. Ultimately, the dose levels selected by the clinicians were deemed the most relevant with the TD25 likely to be one of these doses.     
  
-Simulations and operating characteristics were the main tools used to assess the designs performance as well as help understand the impact of sample size and stopping rules. This was an iterative process that involved running multiple iterations of simulations under various scenarios until the design was finalised. A key point is that scenarios from simulations should account for each of the possible orderings. ADePT-DDR only has two orderings, we ran scenarios for both. For a trial with a greater number of orderings, this may be unfeasible but at least some scenarios should be assessed to ensure the design is behaving as expected. Overall, the design operating characteristics performed reasonably well even in difficult scenarios. One limitation of our simulations is that we make assumptions about factors such as recruitment time, DLT occurrence and true DLT rates. These factors will likely differ in the actual trial or not be as consistent. Also, the scenarios which were used may not be reflective of what we observe in the trial. 
+Simulations and operating characteristics were the main tools used to assess the designs performance as well as help understand the impact of sample size and stopping rules. This was an iterative process that involved running multiple iterations of simulations under various scenarios until the design was finalised. A key point is that scenarios from simulations should account for each of the possible orderings. ADePT-DDR only has two orderings, we ran scenarios for both. For a trial with a greater number of orderings, this may be unfeasible but at least some scenarios should be assessed to ensure the design is behaving as expected. Overall, the design operating characteristics performed reasonably well even in difficult scenarios. 
+
+One limitation of the simulations is how the time-to-event data is generated. The time of DLTs is sampled from a uniform distribution $U(0, 413)$, where the time of the DLT can occur at any time between the patient beginning treatment and the end of follow-up (413 days). Using this uniform distribution implies that a DLT has an equal probability of occurring at any time-point in the observation window. This may not be an accurate representation of what happens in the actual trial. Similar comments can be made about the accrual rate used in the simulations. Here we specified the recruitment of one patient per month which is in no way guaranteed for the actual trial. Wages et al. \cite{wagesUsingTimetoeventContinual2013}, when presenting this methodology investigated four different applications of the PO-TITE-CRM which used different models to enroll patients and allocate DLTs. Results across these four applications were comparable. 
+
+The simulations are also able to instantaneously determine dose-levels for incoming cohorts with all available information. This does not fully reflect the process in which dose-escalation decisions would be made during the actual running of the trial. The analysis would require a data snapshot and time would have to be spent cleaning the data and determining the next dose-level. Meaning any data from the point of the snapshot would not be included in any dose escalation/de-escalation decisions. 
 
 Similarly, there may also be limitations with some of the design choices made concerning to cohort size and sample size. These were investigated alongside a variety of other trial designs that could have been implemented. This was done to validate the choices we made with the design and highlight the differences in operating characteristics due to the varying assumptions and components in the designs. The standard PO-CRM had a much longer average duration due to the lack of TITE component whereas a standard TITE-CRM overall performs better but assumes the ordering of toxicity is known. 
 

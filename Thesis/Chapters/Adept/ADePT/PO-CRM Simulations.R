@@ -92,5 +92,61 @@ po_s8 <- pocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim,
                         tox.range, cohort, mtd.lim, tox.lim, tox.cert)
 po_s8
 
+# True toxicity rates of scenario 9
+r <- c(0.25, 0.40, 0.45, 0.55, 0.50, 0.60)
+set.seed(109)
+po_s9 <- pocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                   tox.range, cohort, mtd.lim, tox.lim, tox.cert)
+po_s9
+
+# True toxicity rates of scenario 10
+r <- c(0.12 ,0.25, 0.40, 0.50, 0.45, 0.55)
+set.seed(110)
+po_s10 <- pocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                    tox.range, cohort, mtd.lim, tox.lim, tox.cert)
+po_s10
+
+# True toxicity rates of scenario 11
+r <- c(0.09 ,0.12 ,0.25, 0.45, 0.40, 0.50)
+set.seed(111)
+po_s11 <- pocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                    tox.range, cohort, mtd.lim, tox.lim, tox.cert)
+po_s11
+
+# True toxicity rates of Scenario 12
+r <-  c(0.06, 0.09, 0.12, 0.25, 0.15, 0.45)
+set.seed(112)
+po_s12 <- pocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                   tox.range, cohort, mtd.lim, tox.lim, tox.cert)
+po_s12
+
+# True toxicity rates of scenario 13
+r <- c(0.03, 0.06, 0.09, 0.35 ,0.25, 0.40)
+set.seed(113)
+po_s13 <- pocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                    tox.range, cohort, mtd.lim, tox.lim, tox.cert)
+po_s13
+
+# True toxicity rates of scenario 14
+r <- c(0.01, 0.03, 0.06, 0.12, 0.09 ,0.25)
+set.seed(114)
+po_s14 <- pocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                    tox.range, cohort, mtd.lim, tox.lim, tox.cert)
+po_s14
+
+# True toxicity rates of scenario 15
+r <-  c(0.05, 0.10, 0.15, 0.25 ,0.20 ,0.30)
+set.seed(115)
+po_s15 <- pocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                    tox.range, cohort, mtd.lim, tox.lim, tox.cert)
+po_s15
+
+# True toxicity rates when all too toxic (scenario 16)
+r <- c(0.5, 0.60, 0.65, 0.75 ,0.70 ,0.8)
+set.seed(116)
+po_s16 <- pocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                    tox.range, cohort, mtd.lim, tox.lim, tox.cert)
+po_s16
+
 save.image(file = 'PO-CRM_sims.RData')
 

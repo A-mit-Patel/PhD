@@ -60,6 +60,15 @@ true_tox3 <- c(0.01, 0.03, 0.06, 0.09, 0.12 ,0.25)
 true_toxEq <-  c(0.05, 0.10, 0.15, 0.20 ,0.25 ,0.30)
 true_toxAll <- c(0.50, 0.60, 0.65, 0.70 ,0.75 ,0.8)
 
+true_tox_2 <- c(0.25, 0.40, 0.45, 0.55, 0.50, 0.60)
+true_tox0_2 <- c(0.12 ,0.25, 0.40, 0.50, 0.45, 0.55)
+true_tox1_2 <- c(0.09 ,0.12 ,0.25, 0.45, 0.40, 0.50)
+true_tox2a_2 <- c(0.06, 0.09, 0.12, 0.25, 0.15, 0.45)
+true_tox2b_2<- c(0.03, 0.06, 0.09, 0.35 ,0.25, 0.40)
+true_tox3_2 <- c(0.01, 0.03, 0.06, 0.12, 0.09 ,0.25)
+true_toxEq_2 <- c(0.05, 0.10, 0.15, 0.25 ,0.20 ,0.30)
+true_toxAll_2 <- c(0.5, 0.60, 0.65, 0.75 ,0.70 ,0.8)
+
 set.seed(101)
 s1 <- applied_titecrmts_sim_v2(true_tox = true_tox, prior = prior, target = target,
                                max_sample_size = max_sample_size, num_sims = num_sims,
@@ -117,5 +126,63 @@ s8 <- applied_titecrmts_sim_v2(true_tox = true_toxAll, prior = prior, target = t
                                minfu = minfu, win2 = win2, recrate = recrate, 
                                initdes = initdes, no_skip_esc = TRUE, 
                                no_skip_deesc = TRUE, stop_func = stop_func)
+set.seed(109)
+s9 <- applied_titecrmts_sim_v2(true_tox = true_tox_2, prior = prior, target = target,
+                               max_sample_size = max_sample_size, num_sims = num_sims,
+                               cohort = cohort, obswin = obswin, n.mtd = n.mtd,
+                               minfu = minfu, win2 = win2, recrate = recrate, 
+                               initdes = initdes, no_skip_esc = TRUE, 
+                               no_skip_deesc = TRUE, stop_func = stop_func)
+set.seed(110)
+s10 <- applied_titecrmts_sim_v2(true_tox = true_tox0_2, prior = prior, target = target,
+                                max_sample_size = max_sample_size, num_sims = num_sims,
+                                cohort = cohort, obswin = obswin, n.mtd = n.mtd,
+                                minfu = minfu, win2 = win2, recrate = recrate, 
+                                initdes = initdes, no_skip_esc = TRUE, 
+                                no_skip_deesc = TRUE, stop_func = stop_func)
+set.seed(111)
+s11 <- applied_titecrmts_sim_v2(true_tox = true_tox1_2, prior = prior, target = target,
+                                max_sample_size = max_sample_size, num_sims = num_sims,
+                                cohort = cohort, obswin = obswin, n.mtd = n.mtd,
+                                minfu = minfu, win2 = win2, recrate = recrate, 
+                                initdes = initdes, no_skip_esc = TRUE, 
+                                no_skip_deesc = TRUE, stop_func = stop_func)
+set.seed(112)
+s12 <- applied_titecrmts_sim_v2(true_tox = true_tox2a_2, prior = prior, target = target,
+                                max_sample_size = max_sample_size, num_sims = num_sims,
+                                cohort = cohort, obswin = obswin, n.mtd = n.mtd,
+                                minfu = minfu, win2 = win2, recrate = recrate, 
+                                initdes = initdes, no_skip_esc = TRUE, 
+                                no_skip_deesc = TRUE, stop_func = stop_func)
+
+set.seed(113)
+s13 <- applied_titecrmts_sim_v2(true_tox = true_tox2b_2, prior = prior, target = target,
+                                max_sample_size = max_sample_size, num_sims = num_sims,
+                                cohort = cohort, obswin = obswin, n.mtd = n.mtd,
+                                minfu = minfu, win2 = win2, recrate = recrate, 
+                                initdes = initdes, no_skip_esc = TRUE, 
+                                no_skip_deesc = TRUE, stop_func = stop_func)
+set.seed(114)
+s14 <- applied_titecrmts_sim_v2(true_tox = true_tox3_2, prior = prior, target = target,
+                                max_sample_size = max_sample_size, num_sims = num_sims,
+                                cohort = cohort, obswin = obswin, n.mtd = n.mtd, 
+                                minfu = minfu, win2 = win2, recrate = recrate, 
+                                initdes = initdes, no_skip_esc = TRUE, 
+                                no_skip_deesc = TRUE, stop_func = stop_func)
+set.seed(115)
+s15 <- applied_titecrmts_sim_v2(true_tox = true_toxEq_2, prior = prior, target = target,
+                                max_sample_size = max_sample_size, num_sims = num_sims,
+                                cohort = cohort, obswin = obswin, n.mtd = n.mtd, 
+                                minfu = minfu, win2 = win2, recrate = recrate, 
+                                initdes = initdes, no_skip_esc = TRUE, 
+                                no_skip_deesc = TRUE, stop_func = stop_func)
+set.seed(116)
+s16 <- applied_titecrmts_sim_v2(true_tox = true_toxAll_2, prior = prior, target = target,
+                                max_sample_size = max_sample_size, num_sims = num_sims,
+                                cohort = cohort, obswin = obswin, n.mtd = n.mtd, 
+                                minfu = minfu, win2 = win2, recrate = recrate, 
+                                initdes = initdes, no_skip_esc = TRUE, 
+                                no_skip_deesc = TRUE, stop_func = stop_func)
+
 
 save.image(file = 'TITE_sims.RData')

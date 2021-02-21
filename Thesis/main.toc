@@ -6,12 +6,12 @@
 \contentsline {chapter}{\numberline {2}Implementing the PO-TITE-CRM trial design into ADePT-DDR}{3}{chapter.7}% 
 \contentsline {section}{\numberline {2.1}Introduction}{3}{section.8}% 
 \contentsline {section}{\numberline {2.2}The PO-TITE-CRM Design}{9}{section.10}% 
-\contentsline {section}{\numberline {2.3}PO-TITE-CRM in ADePT-DDR}{12}{section.25}% 
+\contentsline {section}{\numberline {2.3}PO-TITE-CRM in ADePT-DDR}{13}{section.25}% 
 \contentsline {subsection}{\numberline {2.3.1}Partial Ordering in Practice}{14}{subsection.26}% 
-\contentsline {subsection}{\numberline {2.3.2}The TITE component}{17}{subsection.31}% 
+\contentsline {subsection}{\numberline {2.3.2}The TITE component}{18}{subsection.31}% 
 \contentsline {subsection}{\numberline {2.3.3}Stopping Rules}{20}{subsection.34}% 
 \contentsline {subsection}{\numberline {2.3.4}Operating Characteristics}{21}{subsection.35}% 
-\contentsline {section}{\numberline {2.4}Inspection of the operating characteristics}{26}{section.38}% 
-\contentsline {section}{\numberline {2.5}Discussion}{32}{section.46}% 
-\contentsline {section}{\numberline {2.6}Conclusion}{35}{section.47}% 
-\contentsline {chapter}{Bibliography}{37}{chapter*.48}% 
+\contentsline {section}{\numberline {2.4}Exploring other designs}{27}{section.39}% 
+\contentsline {section}{\numberline {2.5}Discussion}{35}{section.50}% 
+\contentsline {section}{\numberline {2.6}Conclusion}{38}{section.51}% 
+\contentsline {chapter}{Bibliography}{41}{chapter*.52}% 

@@ -19,7 +19,7 @@ x0 <- c(2,3,4,5,6)
 # The target toxicity rate
 theta <- 0.25
 # Number of simulations
-nsim <- 2000
+nsim <- 10000
 # The Observation window specified in days add 49 due too 7 week treatment period
 obswin <- 365 + 49
 # The minimum follow up period specified in days
@@ -105,13 +105,78 @@ mod30_s7 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim,
                         mtd.lim, tox.lim, tox.cert)
 mod30_s7
 
-# True toxicity rates when all too toxic
+# True toxicity rates when all too toxic Scenario 8
 r <- c(0.50, 0.60, 0.65, 0.70 ,0.75 ,0.8)
 set.seed(108)
 mod30_s8 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
                         tox.range, cohort, obswin, minfu, win2, recrate, 
                         mtd.lim, tox.lim, tox.cert)
 mod30_s8
+
+# True toxicity rates of scenario 9
+r <- c(0.25, 0.40, 0.45, 0.55, 0.50, 0.60)
+set.seed(109)
+mod30_s9 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                          tox.range, cohort, obswin, minfu, win2, recrate,
+                          mtd.lim, tox.lim, tox.cert)
+mod30_s9
+
+# True toxicity rates of scenario 10
+r <- c(0.12 ,0.25, 0.40, 0.50, 0.45, 0.55)
+set.seed(110)
+mod30_s10 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                          tox.range, cohort, obswin, minfu, win2, recrate,
+                          mtd.lim, tox.lim, tox.cert)
+mod30_s10
+
+# True toxicity rates of scenario 11
+r <- c(0.09 ,0.12 ,0.25, 0.45, 0.40, 0.50)
+set.seed(111)
+mod30_s11 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                          tox.range, cohort, obswin, minfu, win2, recrate,
+                          mtd.lim, tox.lim, tox.cert)
+mod30_s11
+
+# True toxicity rates of Scenario 12
+r <-  c(0.06, 0.09, 0.12, 0.25, 0.15, 0.45)
+set.seed(112)
+mod30_s12 <-titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                         tox.range, cohort, obswin, minfu, win2, recrate,                                
+                         mtd.lim, tox.lim, tox.cert)
+mod30_s12
+
+# True toxicity rates of scenario 13
+r <- c(0.03, 0.06, 0.09, 0.35 ,0.25, 0.40)
+set.seed(113)
+mod30_s13 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                          tox.range, cohort, obswin, minfu, win2, recrate,
+                          mtd.lim, tox.lim, tox.cert)
+mod30_s13
+
+# True toxicity rates of scenario 14
+r <- c(0.01, 0.03, 0.06, 0.12, 0.09 ,0.25)
+set.seed(114)
+mod30_s14 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                          tox.range, cohort, obswin, minfu, win2, recrate,
+                          mtd.lim, tox.lim, tox.cert)
+mod30_s14
+
+# True toxicity rates of scenario 15
+r <-  c(0.05, 0.10, 0.15, 0.25 ,0.20 ,0.30)
+set.seed(115)
+mod30_s15 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                          tox.range, cohort, obswin, minfu, win2, recrate,
+                          mtd.lim, tox.lim, tox.cert)
+mod30_s15
+
+# True toxicity rates when all too toxic (scenario 16)
+r <- c(0.5, 0.60, 0.65, 0.75 ,0.70 ,0.8)
+set.seed(116)
+mod30_s16 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                          tox.range, cohort, obswin, minfu, win2, recrate, 
+                          mtd.lim, tox.lim, tox.cert)
+mod30_s16
+
 
 ################################################################################
 ################################################################################
@@ -184,13 +249,77 @@ mod60_s7 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim,
                           mtd.lim, tox.lim, tox.cert)
 mod60_s7
 
-# True toxicity rates when all too toxic
+# True toxicity rates when all too toxic (scenario 8)
 r <- c(0.50, 0.60, 0.65, 0.70 ,0.75 ,0.8)
 set.seed(108)
 mod60_s8 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
                           tox.range, cohort, obswin, minfu, win2, recrate, 
                           mtd.lim, tox.lim, tox.cert)
 mod60_s8
+
+# True toxicity rates of scenario 9
+r <- c(0.25, 0.40, 0.45, 0.55, 0.50, 0.60)
+set.seed(109)
+mod60_s9 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                          tox.range, cohort, obswin, minfu, win2, recrate,
+                          mtd.lim, tox.lim, tox.cert)
+mod60_s9
+
+# True toxicity rates of scenario 10
+r <- c(0.12 ,0.25, 0.40, 0.50, 0.45, 0.55)
+set.seed(110)
+mod60_s10 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                           tox.range, cohort, obswin, minfu, win2, recrate,
+                           mtd.lim, tox.lim, tox.cert)
+mod60_s10
+
+# True toxicity rates of scenario 11
+r <- c(0.09 ,0.12 ,0.25, 0.45, 0.40, 0.50)
+set.seed(111)
+mod60_s11 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                           tox.range, cohort, obswin, minfu, win2, recrate,
+                           mtd.lim, tox.lim, tox.cert)
+mod60_s11
+
+# True toxicity rates of Scenario 12
+r <-  c(0.06, 0.09, 0.12, 0.25, 0.15, 0.45)
+set.seed(112)
+mod60_s12 <-titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                          tox.range, cohort, obswin, minfu, win2, recrate,                                
+                          mtd.lim, tox.lim, tox.cert)
+mod60_s12
+
+# True toxicity rates of scenario 13
+r <- c(0.03, 0.06, 0.09, 0.35 ,0.25, 0.40)
+set.seed(113)
+mod60_s13 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                           tox.range, cohort, obswin, minfu, win2, recrate,
+                           mtd.lim, tox.lim, tox.cert)
+mod60_s13
+
+# True toxicity rates of scenario 14
+r <- c(0.01, 0.03, 0.06, 0.12, 0.09 ,0.25)
+set.seed(114)
+mod60_s14 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                           tox.range, cohort, obswin, minfu, win2, recrate,
+                           mtd.lim, tox.lim, tox.cert)
+mod60_s14
+
+# True toxicity rates of scenario 15
+r <-  c(0.05, 0.10, 0.15, 0.25 ,0.20 ,0.30)
+set.seed(115)
+mod60_s15 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                           tox.range, cohort, obswin, minfu, win2, recrate,
+                           mtd.lim, tox.lim, tox.cert)
+mod60_s15
+
+# True toxicity rates when all too toxic (scenario 16)
+r <- c(0.5, 0.60, 0.65, 0.75 ,0.70 ,0.8)
+set.seed(116)
+mod60_s16 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                           tox.range, cohort, obswin, minfu, win2, recrate, 
+                           mtd.lim, tox.lim, tox.cert)
+mod60_s16
 
 ################################################################################
 ################################################################################
@@ -265,13 +394,77 @@ modco_s7 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim,
                           mtd.lim, tox.lim, tox.cert)
 modco_s7
 
-# True toxicity rates when all too toxic
+# True toxicity rates when all too toxic (scenario 8)
 r <- c(0.50, 0.60, 0.65, 0.70 ,0.75 ,0.8)
 set.seed(108)
 modco_s8 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
                           tox.range, cohort, obswin, minfu, win2, recrate, 
                           mtd.lim, tox.lim, tox.cert)
 modco_s8
+
+# True toxicity rates of scenario 9
+r <- c(0.25, 0.40, 0.45, 0.55, 0.50, 0.60)
+set.seed(109)
+modco_s9 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                          tox.range, cohort, obswin, minfu, win2, recrate,
+                          mtd.lim, tox.lim, tox.cert)
+modco_s9
+
+# True toxicity rates of scenario 10
+r <- c(0.12 ,0.25, 0.40, 0.50, 0.45, 0.55)
+set.seed(110)
+modco_s10 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                           tox.range, cohort, obswin, minfu, win2, recrate,
+                           mtd.lim, tox.lim, tox.cert)
+modco_s10
+
+# True toxicity rates of scenario 11
+r <- c(0.09 ,0.12 ,0.25, 0.45, 0.40, 0.50)
+set.seed(111)
+modco_s11 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                           tox.range, cohort, obswin, minfu, win2, recrate,
+                           mtd.lim, tox.lim, tox.cert)
+modco_s11
+
+# True toxicity rates of Scenario 12
+r <-  c(0.06, 0.09, 0.12, 0.25, 0.15, 0.45)
+set.seed(112)
+modco_s12 <-titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                          tox.range, cohort, obswin, minfu, win2, recrate,                                
+                          mtd.lim, tox.lim, tox.cert)
+modco_s12
+
+# True toxicity rates of scenario 13
+r <- c(0.03, 0.06, 0.09, 0.35 ,0.25, 0.40)
+set.seed(113)
+modco_s13 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                           tox.range, cohort, obswin, minfu, win2, recrate,
+                           mtd.lim, tox.lim, tox.cert)
+modco_s13
+
+# True toxicity rates of scenario 14
+r <- c(0.01, 0.03, 0.06, 0.12, 0.09 ,0.25)
+set.seed(114)
+modco_s14 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                           tox.range, cohort, obswin, minfu, win2, recrate,
+                           mtd.lim, tox.lim, tox.cert)
+modco_s14
+
+# True toxicity rates of scenario 15
+r <-  c(0.05, 0.10, 0.15, 0.25 ,0.20 ,0.30)
+set.seed(115)
+modco_s15 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                           tox.range, cohort, obswin, minfu, win2, recrate,
+                           mtd.lim, tox.lim, tox.cert)
+modco_s15
+
+# True toxicity rates when all too toxic (scenario 16)
+r <- c(0.5, 0.60, 0.65, 0.75 ,0.70 ,0.8)
+set.seed(116)
+modco_s16 <- titepocrm_sim(r, alpha, prior.o, x0, stop, n, theta, nsim, 
+                           tox.range, cohort, obswin, minfu, win2, recrate, 
+                           mtd.lim, tox.lim, tox.cert)
+modco_s16
 
 
 save.image(file = 'Modified_sims.RData')

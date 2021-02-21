@@ -1,5 +1,6 @@
-
+################################################################################
 # Plot of the weight function. 
+################################################################################
 Weight <- c(0.6,0.8,1)
 Weeks <- c(8+7,12+7,52+7)
 plot(Weeks, Weight)
@@ -28,9 +29,9 @@ ggplot(data, aes(x = Weeks, y = Weight))+
   ggtitle('Weight function across follow-up period')+
   theme_bw()
   
-
+################################################################################
 # Plot of TRUE DLT Rates 
-
+################################################################################
 dltrate <- c(0.25, 0.40, 0.45, 0.50, 0.55, 0.60,
              0.12, 0.25, 0.40, 0.45, 0.50, 0.55,
              0.09, 0.12, 0.25, 0.40, 0.45, 0.50, 
@@ -44,7 +45,7 @@ dose <- rep(1:6, times = 8)
 doselabel <- c(-1,0,1,'2a','2b',3)
 
 scenario <- rep(c('TD25@-1','TD25@0', 'TD25@1','TD25@2a','TD25@2b','TD25@3',
-                  'Equal','All toxic'), each = 6)
+                  'Equal Steps','All toxic'), each = 6)
 data <- data.frame(dltrate, dose, scenario)
 
 ggplot(data, aes(x = dose, y = dltrate, group=scenario)) +
@@ -55,8 +56,10 @@ ggplot(data, aes(x = dose, y = dltrate, group=scenario)) +
   geom_hline(yintercept = 0.25, linetype = 'longdash', col = 'red') +
   theme_bw() 
 
-# Plot of simulation results comparing multiple designs 
+################################################################################
+# Plot of simulation results comparing multiple designs order 1
 # Load all data
+################################################################################
 load('ADePT-DDR_OC.RData')
 load('TITE_sims.RData')
 load('PO-CRM_sims.RData')
@@ -125,40 +128,136 @@ data <-
 
 
 
-colnames(data)<- c("minusone", "zero", "one", "twoa", "twob", "three", "stop", "duration", 
+colnames(data)<- c("-1", "0", "1", "2a", "2b", "3", "Stop", "duration", 
                          "meann")
 data <- data.frame(data)%>% 
   mutate(scenario = rep(c(1,2,3,4,5,6,7,8), each = 6),
-         method = rep(c('PO-TITE', 'TITE', 'PO', 'N = 30', 'N = 60',
-                        'No cohorts'), times = 8),
-         stop = ifelse(is.na(stop), 0, stop)) %>% 
-  select("minusone", "zero", "one",  "twoa", "twob", "three", "stop", scenario,
-         method)
+         Method = rep(c('PO-TITE', 'TITE', 'PO', 'N = 30', 'N = 60',
+                        'CS = 1'), times = 8),
+         Stop = ifelse(is.na(Stop), 0, Stop)) %>% 
+  select(X.1, X0, X1, X2a, X2b, X3, Stop , scenario,
+         Method)
 
+doselabs <- c("Stop", "-1", "0", "1", "2a", "2b", "3")
 longdata <- data %>% 
-  gather(key = 'measurement', value = 'Probability', "minusone", "zero", "one", 
-         "twoa", "twob", "three", 'stop' )
+  gather(key = 'measurement', value = 'Probability', X.1, X0, X1, X2a, X2b, X3, Stop) %>% 
+  mutate(scenario = factor(scenario, levels = c(1,2,3,4,5,6,7,8),
+                           labels = c('Scenario 1 TD25 @-1','Scenario 2 TD25 @0',
+                                      'Scenario 3 TD25 @1','Scenario 4 TD25 @2a',
+                                      'Scenario 5 TD25 @2b','Scenario 6 TD25 @3',
+                                      'Scenario 7 Equal Steps',
+                                      'Scenario 8 All toxic'))
+  )
 
-ggplot(longdata, aes(x=measurement, y= Probability, col = method )) +
+ggplot(longdata, aes(x = measurement,  y = Probability, col = Method, 
+                     group = Method )) +
   geom_point() +
-  facet_wrap(~scenario)
+  geom_line()+
+  xlab('Dose Levels')+
+  ylab('Selection Probability')+
+  scale_x_discrete(labels = doselabs)+
+  facet_wrap(~scenario, ncol = 2)+
+  theme_bw()
 
+rm(list = ls(all.names = TRUE))
 
-sprob <- c(0.67, 0.71, 0.57, 0.65, 0.79, 0.63, 
-           0.52, 0.53, 0.53, 0.50, 0.69, 0.45, 
-           0.55, 0.56, 0.59, 0.53, 0.70, 0.49,
-           0.48, 0.56, 0.49, 0.45, 0.62, 0.46, 
-           0.42, 0.58, 0.44, 0.41, 0.62, 0.41, 
-           0.77, 0.74, 0.80, 0.77, 0.85, 0.83,
-           0.29, 0.29, 0.26, 0.32, 0.34, 0.24, 
-           0.73, 0.63, 0.86, 0.76, 0.86, 0.67)
-scenario <- rep(c(1,2,3,4,5,6,7,8), each = 6)
-scenario
-method <- rep(c('PO-TITE', 'TITE', 'PO', 'N = 30', 'N = 60',
-               'No cohorts'), times = 8)
-method
-data2 <- data.frame(cbind(as.numeric(sprob), scenario, method))
-data2
+###############################################################################
+# Plot of simulation results comparing multiple designs order 2
+# Load all data
+################################################################################
+load('ADePT-DDR_OC.RData')
+load('TITE_sims.RData')
+load('PO-CRM_sims.RData')
+load('Modified_sims.RData')
 
-ggplot(data2, aes(x = scenario, y = sprob, col = method)) +
-  geom_point()
+data <- 
+  round(
+    rbind(
+      c(fit2_s1$MTD.selection, fit2_s1$stop, fit2_s1$months, fit2_s1$mean.n ),
+      c(s9$summary$mtd, as.numeric(s9$summary$prob_stop[2]), s9$summary$months, sum(s9$summary$doses_given)),
+      c(po_s9$MTD.selection, po_s9$stop, po_s9$months, po_s9$mean.n),
+      c(mod30_s9$MTD.selection, mod30_s9$stop, mod30_s9$months,  mod30_s9$mean.n),
+      c(mod60_s9$MTD.selection, mod60_s9$stop, mod60_s9$months,  mod60_s9$mean.n),
+      c(modco_s9$MTD.selection, modco_s9$stop, modco_s9$months,  modco_s9$mean.n), 
+      
+      c(fit2_s2$MTD.selection, fit2_s2$stop, fit2_s2$months, fit2_s2$mean.n ), 
+      c(s10$summary$mtd, as.numeric(s10$summary$prob_stop[2]), s10$summary$months, sum(s10$summary$doses_given)),
+      c(po_s10$MTD.selection, po_s10$stop, po_s10$months, po_s10$mean.n), 
+      c(mod30_s10$MTD.selection, mod30_s10$stop, mod30_s10$months,  mod30_s10$mean.n),
+      c(mod60_s10$MTD.selection, mod60_s10$stop, mod60_s10$months,  mod60_s10$mean.n),
+      c(modco_s10$MTD.selection, modco_s10$stop, modco_s10$months,  modco_s10$mean.n),
+      
+      c(fit2_s3$MTD.selection, fit2_s3$stop, fit2_s3$months, fit2_s3$mean.n), 
+      c(s11$summary$mtd, as.numeric(s11$summary$prob_stop[2]), s11$summary$months, sum(s11$summary$doses_given)),
+      c(po_s11$MTD.selection, po_s11$stop, po_s11$months, po_s11$mean.n), 
+      c(mod30_s11$MTD.selection, mod30_s11$stop, mod30_s11$months,  mod30_s11$mean.n),
+      c(mod60_s11$MTD.selection, mod60_s11$stop, mod60_s11$months,  mod60_s11$mean.n),
+      c(modco_s11$MTD.selection, modco_s11$stop, modco_s11$months,  modco_s11$mean.n),
+      
+      c(fit2_s4$MTD.selection, fit2_s4$stop, fit2_s4$months, fit2_s4$mean.n), 
+      c(s12$summary$mtd, as.numeric(s12$summary$prob_stop[2]), s12$summary$months, sum(s12$summary$doses_given)),
+      c(po_s12$MTD.selection, po_s12$stop, po_s12$months, po_s12$mean.n), 
+      c(mod30_s12$MTD.selection, mod30_s12$stop, mod30_s12$months,  mod30_s12$mean.n),
+      c(mod60_s12$MTD.selection, mod60_s12$stop, mod60_s12$months,  mod60_s12$mean.n),
+      c(modco_s12$MTD.selection, modco_s12$stop, modco_s12$months,  modco_s12$mean.n),
+      
+      c(fit2_s5$MTD.selection, fit2_s5$stop, fit2_s5$months, fit2_s5$mean.n), 
+      c(s13$summary$mtd, as.numeric(s13$summary$prob_stop[2]), s13$summary$months, sum(s13$summary$doses_given)),
+      c(po_s13$MTD.selection, po_s13$stop, po_s13$months, po_s13$mean.n),
+      c(mod30_s13$MTD.selection, mod30_s13$stop, mod30_s13$months,  mod30_s13$mean.n),
+      c(mod60_s13$MTD.selection, mod60_s13$stop, mod60_s13$months,  mod60_s13$mean.n),
+      c(modco_s13$MTD.selection, modco_s13$stop, modco_s13$months,  modco_s13$mean.n),
+      
+      c(fit2_s6$MTD.selection, fit2_s6$stop, fit2_s6$months, fit2_s6$mean.n), 
+      c(s14$summary$mtd, as.numeric(s14$summary$prob_stop[2]), s14$summary$months, sum(s14$summary$doses_given)),
+      c(po_s14$MTD.selection, po_s14$stop, po_s14$months, po_s14$mean.n), 
+      c(mod30_s14$MTD.selection, mod30_s14$stop, mod30_s14$months,  mod30_s14$mean.n),
+      c(mod60_s14$MTD.selection, mod60_s14$stop, mod60_s14$months,  mod60_s14$mean.n),
+      c(modco_s14$MTD.selection, modco_s14$stop, modco_s14$months,  modco_s14$mean.n),
+      
+      c(fit2_s7$MTD.selection, fit2_s7$stop, fit2_s7$months, fit2_s7$mean.n),
+      c(s15$summary$mtd, as.numeric(s15$summary$prob_stop[2]), s15$summary$months, sum(s15$summary$doses_given)),
+      c(po_s15$MTD.selection, po_s15$stop, po_s15$months, po_s15$mean.n), 
+      c(mod30_s15$MTD.selection, mod30_s15$stop, mod30_s15$months,  mod30_s15$mean.n),
+      c(mod60_s15$MTD.selection, mod60_s15$stop, mod60_s15$months,  mod60_s15$mean.n),
+      c(modco_s15$MTD.selection, modco_s15$stop, modco_s15$months,  modco_s15$mean.n),
+      
+      c(fit2_s8$MTD.selection, fit2_s8$stop, fit2_s8$months, fit2_s8$mean.n), 
+      c(s16$summary$mtd, as.numeric(s16$summary$prob_stop[2]), s16$summary$months, sum(s16$summary$doses_given)),
+      c(po_s16$MTD.selection, po_s16$stop, po_s16$months, po_s16$mean.n), 
+      c(mod30_s16$MTD.selection, mod30_s16$stop, mod30_s16$months,  mod30_s16$mean.n),
+      c(mod60_s16$MTD.selection, mod60_s16$stop, mod60_s16$months,  mod60_s16$mean.n),
+      c(modco_s16$MTD.selection, modco_s16$stop, modco_s16$months,  modco_s16$mean.n)),2)
+
+colnames(data)<- c("-1", "0", "1", "2a", "2b", "3", "Stop", "duration", 
+                   "meann")
+data <- data.frame(data)%>% 
+  mutate(scenario = rep(c(1,2,3,4,5,6,7,8), each = 6),
+         Method = rep(c('PO-TITE', 'TITE', 'PO', 'N = 30', 'N = 60',
+                        'CS = 1'), times = 8),
+         Stop = ifelse(is.na(Stop), 0, Stop)) %>% 
+  select(X.1, X0, X1, X2a, X2b, X3, Stop , scenario,
+         Method)
+
+doselabs <- c("Stop", "-1", "0", "1", "2a", "2b", "3")
+longdata <- data %>% 
+  gather(key = 'measurement', value = 'Probability', X.1, X0, X1, X2a, X2b, X3, Stop) %>% 
+  mutate(scenario = factor(scenario, levels = c(1,2,3,4,5,6,7,8),
+                           labels = c('Scenario 9 TD25 @-1','Scenario 10 TD25 @0',
+                                      'Scenario 11 TD25 @1','Scenario 12 TD25 @2a',
+                                      'Scenario 13 TD25 @2b','Scenario 14 TD25 @3',
+                                      'Scenario 15 Equal Steps',
+                                      'Scenario 16 All toxic'))
+  )
+
+ggplot(longdata, aes(x = measurement,  y = Probability, col = Method, 
+                     group = Method )) +
+  geom_point() +
+  geom_line()+
+  xlab('Dose Levels')+
+  ylab('Selection Probability')+
+  scale_x_discrete(labels = doselabs)+
+  facet_wrap(~scenario, ncol = 2)+
+  theme_bw()
+
+rm(list = ls(all.names = TRUE))

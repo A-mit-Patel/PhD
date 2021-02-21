@@ -396,7 +396,7 @@ n &lt;- 60
 # The target toxicity rate
 theta &lt;- 0.25
 # Number of simulations
-nsim &lt;- 2000
+nsim &lt;- 10000
 # Definition of acceptable DLT rates
 tox.range&lt;-0.05 
 # The cohort size
@@ -430,29 +430,39 @@ fit_s1</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.25 0.40 0.45 0.50 0.55 0.60
 ## 
+## $time
+## Time difference of 22.50623 mins
+## 
 ## $MTD.selection
-## [1] 0.67 0.19 0.06 0.00 0.00 0.00
+## [1] 0.68 0.18 0.05 0.01 0.00 0.00
 ## 
 ## $patient.allocation
-## [1] 38 32 21  7  3  0
+## [1] 39 32 20  6  3  0
 ## 
 ## $percent.DLT
-## [1] 0.3625054
+## [1] 0.3635685
 ## 
 ## $months
-## [1] 57.94741
+## [1] 57.61175
 ## 
 ## $stop
-## [1] 0.0825
+## [1] 0.0849
+## 
+## $max.n.count
+## [1] 21
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    6.00   21.00   27.00   26.38   33.00   60.00 
 ## 
 ## $mean.n
-## [1] 26.5665
+## [1] 26.3799
 ## 
 ## $mean.n.perdose
-## [1] 10.0455  8.3790  5.4780  1.7955  0.7800  0.0885
+## [1] 10.1694  8.4624  5.3253  1.6677  0.6882  0.0669
 ## 
 ## $acceptable
-## [1] 0.667</code></pre>
+## [1] 0.6769</code></pre>
 </div>
 <div id="mtd-at-dose-0" class="section level3">
 <h3>MTD at dose 0</h3>
@@ -465,29 +475,39 @@ fit_s2</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.12 0.25 0.40 0.45 0.50 0.55
 ## 
+## $time
+## Time difference of 24.66059 mins
+## 
 ## $MTD.selection
-## [1] 0.22 0.52 0.20 0.02 0.02 0.00
+## [1] 0.23 0.51 0.20 0.03 0.02 0.00
 ## 
 ## $patient.allocation
 ## [1] 17 35 29 11  6  1
 ## 
 ## $percent.DLT
-## [1] 0.3109988
+## [1] 0.3114517
 ## 
 ## $months
-## [1] 64.08051
+## [1] 64.06216
 ## 
 ## $stop
-## [1] 0.0105
+## [1] 0.0079
+## 
+## $max.n.count
+## [1] 8
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    6.00   24.00   30.00   29.97   33.00   60.00 
 ## 
 ## $mean.n
-## [1] 29.976
+## [1] 29.9658
 ## 
 ## $mean.n.perdose
-## [1]  5.1555 10.5495  8.7945  3.3630  1.8750  0.2385
+## [1]  5.2434 10.4835  8.7531  3.3996  1.8303  0.2559
 ## 
 ## $acceptable
-## [1] 0.525</code></pre>
+## [1] 0.5126</code></pre>
 </div>
 <div id="mtd-at-dose-1" class="section level3">
 <h3>MTD at dose 1</h3>
@@ -500,29 +520,39 @@ fit_s3</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.09 0.12 0.25 0.40 0.45 0.50
 ## 
+## $time
+## Time difference of 24.95843 mins
+## 
 ## $MTD.selection
-## [1] 0.02 0.20 0.55 0.14 0.10 0.00
+## [1] 0.02 0.20 0.55 0.14 0.09 0.01
 ## 
 ## $patient.allocation
-## [1]  4 20 35 23 16  3
+## [1]  4 20 34 23 16  3
 ## 
 ## $percent.DLT
-## [1] 0.2918927
+## [1] 0.2932092
 ## 
 ## $months
-## [1] 67.36966
+## [1] 67.73608
 ## 
 ## $stop
-## [1] 5e-04
+## [1] 4e-04
+## 
+## $max.n.count
+## [1] 5
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    6.00   27.00   30.00   32.01   36.00   60.00 
 ## 
 ## $mean.n
-## [1] 31.8045
+## [1] 32.0082
 ## 
 ## $mean.n.perdose
-## [1]  1.2360  6.4305 11.0310  7.1925  4.9515  0.9630
+## [1]  1.2219  6.4143 10.9725  7.2348  5.1411  1.0236
 ## 
 ## $acceptable
-## [1] 0.5485</code></pre>
+## [1] 0.5496</code></pre>
 </div>
 <div id="mtd-at-dose-2a" class="section level3">
 <h3>MTD at dose 2a</h3>
@@ -535,29 +565,39 @@ fit_s4</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.06 0.09 0.12 0.25 0.40 0.45
 ## 
+## $time
+## Time difference of 24.7645 mins
+## 
 ## $MTD.selection
 ## [1] 0.00 0.02 0.22 0.48 0.23 0.05
 ## 
 ## $patient.allocation
-## [1]  1 11 20 31 25 11
+## [1]  1 12 20 31 25 11
 ## 
 ## $percent.DLT
-## [1] 0.2614087
+## [1] 0.260243
 ## 
 ## $months
-## [1] 69.99505
+## [1] 69.91194
 ## 
 ## $stop
-## [1] 0
+## [1] 1e-04
+## 
+## $max.n.count
+## [1] 12
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    6.00   27.00   33.00   33.22   36.00   60.00 
 ## 
 ## $mean.n
-## [1] 33.264
+## [1] 33.2178
 ## 
 ## $mean.n.perdose
-## [1]  0.4545  3.8085  6.7680 10.2615  8.3730  3.5985
+## [1]  0.4749  3.8805  6.7386 10.4250  8.1978  3.5010
 ## 
 ## $acceptable
-## [1] 0.478</code></pre>
+## [1] 0.4795</code></pre>
 </div>
 <div id="mtd-at-dose-2b" class="section level3">
 <h3>MTD at dose 2b</h3>
@@ -570,29 +610,39 @@ fit_s5</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.03 0.06 0.09 0.12 0.25 0.40
 ## 
+## $time
+## Time difference of 23.66441 mins
+## 
 ## $MTD.selection
-## [1] 0.00 0.00 0.02 0.31 0.42 0.24
+## [1] 0.00 0.00 0.02 0.30 0.43 0.25
 ## 
 ## $patient.allocation
 ## [1]  1 10 12 24 28 25
 ## 
 ## $percent.DLT
-## [1] 0.2177319
+## [1] 0.2162125
 ## 
 ## $months
-## [1] 70.78293
+## [1] 70.60161
 ## 
 ## $stop
 ## [1] 0
 ## 
+## $max.n.count
+## [1] 6
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    18.0    27.0    33.0    33.6    39.0    60.0 
+## 
 ## $mean.n
-## [1] 33.702
+## [1] 33.6012
 ## 
 ## $mean.n.perdose
-## [1] 0.2370 3.3150 4.1070 8.2245 9.3540 8.4645
+## [1] 0.2502 3.3594 4.1517 8.1735 9.3327 8.3337
 ## 
 ## $acceptable
-## [1] 0.4205</code></pre>
+## [1] 0.429</code></pre>
 </div>
 <div id="mtd-at-dose-3" class="section level3">
 <h3>MTD at dose 3</h3>
@@ -605,29 +655,39 @@ fit_s6</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.01 0.03 0.06 0.09 0.12 0.25
 ## 
+## $time
+## Time difference of 19.15926 mins
+## 
 ## $MTD.selection
-## [1] 0.00 0.00 0.00 0.10 0.13 0.77
+## [1] 0.00 0.00 0.00 0.09 0.13 0.78
 ## 
 ## $patient.allocation
 ## [1]  0 10 11 18 18 42
 ## 
 ## $percent.DLT
-## [1] 0.1548648
+## [1] 0.1545649
 ## 
 ## $months
-## [1] 65.71564
+## [1] 65.7804
 ## 
 ## $stop
 ## [1] 0
 ## 
+## $max.n.count
+## [1] 2
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   18.00   27.00   27.00   30.92   33.00   60.00 
+## 
 ## $mean.n
-## [1] 30.885
+## [1] 30.921
 ## 
 ## $mean.n.perdose
-## [1]  0.1080  3.1350  3.5130  5.4645  5.5650 13.0995
+## [1]  0.1032  3.1296  3.4941  5.4597  5.5989 13.1355
 ## 
 ## $acceptable
-## [1] 0.7695</code></pre>
+## [1] 0.7752</code></pre>
 </div>
 <div id="equal-steps" class="section level3">
 <h3>Equal steps</h3>
@@ -640,29 +700,39 @@ fit_s7</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.05 0.10 0.15 0.20 0.25 0.30
 ## 
+## $time
+## Time difference of 23.27274 mins
+## 
 ## $MTD.selection
-## [1] 0.00 0.03 0.11 0.30 0.29 0.27
+## [1] 0.00 0.03 0.12 0.31 0.28 0.26
 ## 
 ## $patient.allocation
-## [1]  2 13 17 26 23 19
+## [1]  2 13 18 26 23 19
 ## 
 ## $percent.DLT
-## [1] 0.2073136
+## [1] 0.2066001
 ## 
 ## $months
-## [1] 67.49108
+## [1] 67.25202
 ## 
 ## $stop
-## [1] 0
+## [1] 3e-04
+## 
+## $max.n.count
+## [1] 1
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    6.00   27.00   30.00   31.74   36.00   60.00 
 ## 
 ## $mean.n
-## [1] 31.872
+## [1] 31.7391
 ## 
 ## $mean.n.perdose
-## [1] 0.5685 4.0365 5.5710 8.2635 7.2240 6.2085
+## [1] 0.5532 4.0338 5.7162 8.3172 7.1538 5.9649
 ## 
 ## $acceptable
-## [1] 0.8595</code></pre>
+## [1] 0.8532</code></pre>
 </div>
 <div id="all-too-toxic" class="section level3">
 <h3>All too toxic</h3>
@@ -675,26 +745,36 @@ fit_s8</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.50 0.60 0.65 0.70 0.75 0.80
 ## 
+## $time
+## Time difference of 14.8491 mins
+## 
 ## $MTD.selection
 ## [1] 0.26 0.00 0.00 0.00 0.00 0.00
 ## 
 ## $patient.allocation
-## [1] 56 27 15  2  0  0
+## [1] 56 26 15  2  0  0
 ## 
 ## $percent.DLT
-## [1] 0.5534044
+## [1] 0.5555969
 ## 
 ## $months
-## [1] 39.00847
+## [1] 39.18602
 ## 
 ## $stop
-## [1] 0.734
+## [1] 0.7404
+## 
+## $max.n.count
+## [1] 1
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    6.00    9.00   15.00   16.14   21.00   54.00 
 ## 
 ## $mean.n
-## [1] 16.038
+## [1] 16.1367
 ## 
 ## $mean.n.perdose
-## [1] 9.0420 4.2915 2.3445 0.3315 0.0285 0.0000
+## [1] 9.0537 4.2696 2.3982 0.3729 0.0408 0.0015
 ## 
 ## $acceptable
 ## [1] 0</code></pre>
@@ -716,9 +796,8 @@ fit_s8</code></pre>
         fit_s7$patient.allocation,round(fit_s7$mean.n.perdose,2),
         fit_s8$true.prob,  c(fit_s8$MTD.selection, fit_s8$stop), 
         fit_s8$patient.allocation, round(fit_s8$mean.n.perdose,2))</code></pre>
-<pre><code>## Warning in rbind(round(skeleton, 2), fit_s1$true.prob,
-## c(fit_s1$MTD.selection, : number of columns of result is not a multiple of
-## vector length (arg 1)</code></pre>
+<pre><code>## Warning in rbind(round(skeleton, 2), fit_s1$true.prob, c(fit_s1$MTD.selection, :
+## number of columns of result is not a multiple of vector length (arg 1)</code></pre>
 <pre class="r"><code>temp &lt;- (OC_tab[,7]) 
 a &lt;- 1:33
 a &lt;- a[-c(3,7,11,15,19,23,27,31)]
@@ -727,76 +806,76 @@ OC_tab[,7] &lt;- temp
 colnames(OC_tab)&lt;- c(&quot;-1&quot;, &quot;0&quot;, &quot;1&quot;, &quot;2a&quot;, &quot;2b&quot;, &quot;3&quot;, &quot;Stop&quot;)
 OC_tab &lt;- as.matrix(cbind(c(&quot;Scenario&quot;, rep(&quot;1: TD25 @-1&quot;,4), rep(&quot;2: TD25 @0&quot;,4), rep(&quot;3: TD25 @1&quot;,4), rep(&quot;4: TD25 @2a&quot;,4), rep(&quot;5: TD25 @2b&quot;,4),   rep(&quot;6: TD25 @3&quot;,4), rep(&quot;7: Equal steps in DLT rate&quot;,4), rep(&quot;8: All  toxic&quot;,4)), c(&quot;Prior DLT&quot;, rep(c(&quot;True DLT rate&quot;, &quot;P(select)&quot;, &quot;% of patients&quot;, &quot;Mean number of patients&quot;),8)), OC_tab))
 OC_tab</code></pre>
-<pre><code>##                                                              -1     
-##  [1,] &quot;Scenario&quot;                   &quot;Prior DLT&quot;               &quot;0.01&quot; 
-##  [2,] &quot;1: TD25 @-1&quot;                &quot;True DLT rate&quot;           &quot;0.25&quot; 
-##  [3,] &quot;1: TD25 @-1&quot;                &quot;P(select)&quot;               &quot;0.67&quot; 
-##  [4,] &quot;1: TD25 @-1&quot;                &quot;% of patients&quot;           &quot;38&quot;   
-##  [5,] &quot;1: TD25 @-1&quot;                &quot;Mean number of patients&quot; &quot;10.05&quot;
-##  [6,] &quot;2: TD25 @0&quot;                 &quot;True DLT rate&quot;           &quot;0.12&quot; 
-##  [7,] &quot;2: TD25 @0&quot;                 &quot;P(select)&quot;               &quot;0.22&quot; 
-##  [8,] &quot;2: TD25 @0&quot;                 &quot;% of patients&quot;           &quot;17&quot;   
-##  [9,] &quot;2: TD25 @0&quot;                 &quot;Mean number of patients&quot; &quot;5.16&quot; 
-## [10,] &quot;3: TD25 @1&quot;                 &quot;True DLT rate&quot;           &quot;0.09&quot; 
-## [11,] &quot;3: TD25 @1&quot;                 &quot;P(select)&quot;               &quot;0.02&quot; 
-## [12,] &quot;3: TD25 @1&quot;                 &quot;% of patients&quot;           &quot;4&quot;    
-## [13,] &quot;3: TD25 @1&quot;                 &quot;Mean number of patients&quot; &quot;1.24&quot; 
-## [14,] &quot;4: TD25 @2a&quot;                &quot;True DLT rate&quot;           &quot;0.06&quot; 
-## [15,] &quot;4: TD25 @2a&quot;                &quot;P(select)&quot;               &quot;0&quot;    
-## [16,] &quot;4: TD25 @2a&quot;                &quot;% of patients&quot;           &quot;1&quot;    
-## [17,] &quot;4: TD25 @2a&quot;                &quot;Mean number of patients&quot; &quot;0.45&quot; 
-## [18,] &quot;5: TD25 @2b&quot;                &quot;True DLT rate&quot;           &quot;0.03&quot; 
-## [19,] &quot;5: TD25 @2b&quot;                &quot;P(select)&quot;               &quot;0&quot;    
-## [20,] &quot;5: TD25 @2b&quot;                &quot;% of patients&quot;           &quot;1&quot;    
-## [21,] &quot;5: TD25 @2b&quot;                &quot;Mean number of patients&quot; &quot;0.24&quot; 
-## [22,] &quot;6: TD25 @3&quot;                 &quot;True DLT rate&quot;           &quot;0.01&quot; 
-## [23,] &quot;6: TD25 @3&quot;                 &quot;P(select)&quot;               &quot;0&quot;    
-## [24,] &quot;6: TD25 @3&quot;                 &quot;% of patients&quot;           &quot;0&quot;    
-## [25,] &quot;6: TD25 @3&quot;                 &quot;Mean number of patients&quot; &quot;0.11&quot; 
-## [26,] &quot;7: Equal steps in DLT rate&quot; &quot;True DLT rate&quot;           &quot;0.05&quot; 
-## [27,] &quot;7: Equal steps in DLT rate&quot; &quot;P(select)&quot;               &quot;0&quot;    
-## [28,] &quot;7: Equal steps in DLT rate&quot; &quot;% of patients&quot;           &quot;2&quot;    
-## [29,] &quot;7: Equal steps in DLT rate&quot; &quot;Mean number of patients&quot; &quot;0.57&quot; 
-## [30,] &quot;8: All  toxic&quot;              &quot;True DLT rate&quot;           &quot;0.5&quot;  
-## [31,] &quot;8: All  toxic&quot;              &quot;P(select)&quot;               &quot;0.26&quot; 
-## [32,] &quot;8: All  toxic&quot;              &quot;% of patients&quot;           &quot;56&quot;   
-## [33,] &quot;8: All  toxic&quot;              &quot;Mean number of patients&quot; &quot;9.04&quot; 
-##       0       1       2a      2b     3      Stop    
-##  [1,] &quot;0.04&quot;  &quot;0.08&quot;  &quot;0.16&quot;  &quot;0.25&quot; &quot;0.35&quot; &quot; &quot;     
-##  [2,] &quot;0.4&quot;   &quot;0.45&quot;  &quot;0.5&quot;   &quot;0.55&quot; &quot;0.6&quot;  &quot; &quot;     
-##  [3,] &quot;0.19&quot;  &quot;0.06&quot;  &quot;0&quot;     &quot;0&quot;    &quot;0&quot;    &quot;0.0825&quot;
-##  [4,] &quot;32&quot;    &quot;21&quot;    &quot;7&quot;     &quot;3&quot;    &quot;0&quot;    &quot; &quot;     
-##  [5,] &quot;8.38&quot;  &quot;5.48&quot;  &quot;1.8&quot;   &quot;0.78&quot; &quot;0.09&quot; &quot; &quot;     
-##  [6,] &quot;0.25&quot;  &quot;0.4&quot;   &quot;0.45&quot;  &quot;0.5&quot;  &quot;0.55&quot; &quot; &quot;     
-##  [7,] &quot;0.52&quot;  &quot;0.2&quot;   &quot;0.02&quot;  &quot;0.02&quot; &quot;0&quot;    &quot;0.0105&quot;
-##  [8,] &quot;35&quot;    &quot;29&quot;    &quot;11&quot;    &quot;6&quot;    &quot;1&quot;    &quot; &quot;     
-##  [9,] &quot;10.55&quot; &quot;8.79&quot;  &quot;3.36&quot;  &quot;1.88&quot; &quot;0.24&quot; &quot; &quot;     
-## [10,] &quot;0.12&quot;  &quot;0.25&quot;  &quot;0.4&quot;   &quot;0.45&quot; &quot;0.5&quot;  &quot; &quot;     
-## [11,] &quot;0.2&quot;   &quot;0.55&quot;  &quot;0.14&quot;  &quot;0.1&quot;  &quot;0&quot;    &quot;5e-04&quot; 
-## [12,] &quot;20&quot;    &quot;35&quot;    &quot;23&quot;    &quot;16&quot;   &quot;3&quot;    &quot; &quot;     
-## [13,] &quot;6.43&quot;  &quot;11.03&quot; &quot;7.19&quot;  &quot;4.95&quot; &quot;0.96&quot; &quot; &quot;     
-## [14,] &quot;0.09&quot;  &quot;0.12&quot;  &quot;0.25&quot;  &quot;0.4&quot;  &quot;0.45&quot; &quot; &quot;     
-## [15,] &quot;0.02&quot;  &quot;0.22&quot;  &quot;0.48&quot;  &quot;0.23&quot; &quot;0.05&quot; &quot;0&quot;     
-## [16,] &quot;11&quot;    &quot;20&quot;    &quot;31&quot;    &quot;25&quot;   &quot;11&quot;   &quot; &quot;     
-## [17,] &quot;3.81&quot;  &quot;6.77&quot;  &quot;10.26&quot; &quot;8.37&quot; &quot;3.6&quot;  &quot; &quot;     
-## [18,] &quot;0.06&quot;  &quot;0.09&quot;  &quot;0.12&quot;  &quot;0.25&quot; &quot;0.4&quot;  &quot; &quot;     
-## [19,] &quot;0&quot;     &quot;0.02&quot;  &quot;0.31&quot;  &quot;0.42&quot; &quot;0.24&quot; &quot;0&quot;     
-## [20,] &quot;10&quot;    &quot;12&quot;    &quot;24&quot;    &quot;28&quot;   &quot;25&quot;   &quot; &quot;     
-## [21,] &quot;3.31&quot;  &quot;4.11&quot;  &quot;8.22&quot;  &quot;9.35&quot; &quot;8.46&quot; &quot; &quot;     
-## [22,] &quot;0.03&quot;  &quot;0.06&quot;  &quot;0.09&quot;  &quot;0.12&quot; &quot;0.25&quot; &quot; &quot;     
-## [23,] &quot;0&quot;     &quot;0&quot;     &quot;0.1&quot;   &quot;0.13&quot; &quot;0.77&quot; &quot;0&quot;     
-## [24,] &quot;10&quot;    &quot;11&quot;    &quot;18&quot;    &quot;18&quot;   &quot;42&quot;   &quot; &quot;     
-## [25,] &quot;3.13&quot;  &quot;3.51&quot;  &quot;5.46&quot;  &quot;5.57&quot; &quot;13.1&quot; &quot; &quot;     
-## [26,] &quot;0.1&quot;   &quot;0.15&quot;  &quot;0.2&quot;   &quot;0.25&quot; &quot;0.3&quot;  &quot; &quot;     
-## [27,] &quot;0.03&quot;  &quot;0.11&quot;  &quot;0.3&quot;   &quot;0.29&quot; &quot;0.27&quot; &quot;0&quot;     
-## [28,] &quot;13&quot;    &quot;17&quot;    &quot;26&quot;    &quot;23&quot;   &quot;19&quot;   &quot; &quot;     
-## [29,] &quot;4.04&quot;  &quot;5.57&quot;  &quot;8.26&quot;  &quot;7.22&quot; &quot;6.21&quot; &quot; &quot;     
-## [30,] &quot;0.6&quot;   &quot;0.65&quot;  &quot;0.7&quot;   &quot;0.75&quot; &quot;0.8&quot;  &quot; &quot;     
-## [31,] &quot;0&quot;     &quot;0&quot;     &quot;0&quot;     &quot;0&quot;    &quot;0&quot;    &quot;0.734&quot; 
-## [32,] &quot;27&quot;    &quot;15&quot;    &quot;2&quot;     &quot;0&quot;    &quot;0&quot;    &quot; &quot;     
-## [33,] &quot;4.29&quot;  &quot;2.34&quot;  &quot;0.33&quot;  &quot;0.03&quot; &quot;0&quot;    &quot; &quot;</code></pre>
+<pre><code>##                                                              -1      0      
+##  [1,] &quot;Scenario&quot;                   &quot;Prior DLT&quot;               &quot;0.01&quot;  &quot;0.04&quot; 
+##  [2,] &quot;1: TD25 @-1&quot;                &quot;True DLT rate&quot;           &quot;0.25&quot;  &quot;0.4&quot;  
+##  [3,] &quot;1: TD25 @-1&quot;                &quot;P(select)&quot;               &quot;0.68&quot;  &quot;0.18&quot; 
+##  [4,] &quot;1: TD25 @-1&quot;                &quot;% of patients&quot;           &quot;39&quot;    &quot;32&quot;   
+##  [5,] &quot;1: TD25 @-1&quot;                &quot;Mean number of patients&quot; &quot;10.17&quot; &quot;8.46&quot; 
+##  [6,] &quot;2: TD25 @0&quot;                 &quot;True DLT rate&quot;           &quot;0.12&quot;  &quot;0.25&quot; 
+##  [7,] &quot;2: TD25 @0&quot;                 &quot;P(select)&quot;               &quot;0.23&quot;  &quot;0.51&quot; 
+##  [8,] &quot;2: TD25 @0&quot;                 &quot;% of patients&quot;           &quot;17&quot;    &quot;35&quot;   
+##  [9,] &quot;2: TD25 @0&quot;                 &quot;Mean number of patients&quot; &quot;5.24&quot;  &quot;10.48&quot;
+## [10,] &quot;3: TD25 @1&quot;                 &quot;True DLT rate&quot;           &quot;0.09&quot;  &quot;0.12&quot; 
+## [11,] &quot;3: TD25 @1&quot;                 &quot;P(select)&quot;               &quot;0.02&quot;  &quot;0.2&quot;  
+## [12,] &quot;3: TD25 @1&quot;                 &quot;% of patients&quot;           &quot;4&quot;     &quot;20&quot;   
+## [13,] &quot;3: TD25 @1&quot;                 &quot;Mean number of patients&quot; &quot;1.22&quot;  &quot;6.41&quot; 
+## [14,] &quot;4: TD25 @2a&quot;                &quot;True DLT rate&quot;           &quot;0.06&quot;  &quot;0.09&quot; 
+## [15,] &quot;4: TD25 @2a&quot;                &quot;P(select)&quot;               &quot;0&quot;     &quot;0.02&quot; 
+## [16,] &quot;4: TD25 @2a&quot;                &quot;% of patients&quot;           &quot;1&quot;     &quot;12&quot;   
+## [17,] &quot;4: TD25 @2a&quot;                &quot;Mean number of patients&quot; &quot;0.47&quot;  &quot;3.88&quot; 
+## [18,] &quot;5: TD25 @2b&quot;                &quot;True DLT rate&quot;           &quot;0.03&quot;  &quot;0.06&quot; 
+## [19,] &quot;5: TD25 @2b&quot;                &quot;P(select)&quot;               &quot;0&quot;     &quot;0&quot;    
+## [20,] &quot;5: TD25 @2b&quot;                &quot;% of patients&quot;           &quot;1&quot;     &quot;10&quot;   
+## [21,] &quot;5: TD25 @2b&quot;                &quot;Mean number of patients&quot; &quot;0.25&quot;  &quot;3.36&quot; 
+## [22,] &quot;6: TD25 @3&quot;                 &quot;True DLT rate&quot;           &quot;0.01&quot;  &quot;0.03&quot; 
+## [23,] &quot;6: TD25 @3&quot;                 &quot;P(select)&quot;               &quot;0&quot;     &quot;0&quot;    
+## [24,] &quot;6: TD25 @3&quot;                 &quot;% of patients&quot;           &quot;0&quot;     &quot;10&quot;   
+## [25,] &quot;6: TD25 @3&quot;                 &quot;Mean number of patients&quot; &quot;0.1&quot;   &quot;3.13&quot; 
+## [26,] &quot;7: Equal steps in DLT rate&quot; &quot;True DLT rate&quot;           &quot;0.05&quot;  &quot;0.1&quot;  
+## [27,] &quot;7: Equal steps in DLT rate&quot; &quot;P(select)&quot;               &quot;0&quot;     &quot;0.03&quot; 
+## [28,] &quot;7: Equal steps in DLT rate&quot; &quot;% of patients&quot;           &quot;2&quot;     &quot;13&quot;   
+## [29,] &quot;7: Equal steps in DLT rate&quot; &quot;Mean number of patients&quot; &quot;0.55&quot;  &quot;4.03&quot; 
+## [30,] &quot;8: All  toxic&quot;              &quot;True DLT rate&quot;           &quot;0.5&quot;   &quot;0.6&quot;  
+## [31,] &quot;8: All  toxic&quot;              &quot;P(select)&quot;               &quot;0.26&quot;  &quot;0&quot;    
+## [32,] &quot;8: All  toxic&quot;              &quot;% of patients&quot;           &quot;56&quot;    &quot;26&quot;   
+## [33,] &quot;8: All  toxic&quot;              &quot;Mean number of patients&quot; &quot;9.05&quot;  &quot;4.27&quot; 
+##       1       2a      2b     3       Stop    
+##  [1,] &quot;0.08&quot;  &quot;0.16&quot;  &quot;0.25&quot; &quot;0.35&quot;  &quot; &quot;     
+##  [2,] &quot;0.45&quot;  &quot;0.5&quot;   &quot;0.55&quot; &quot;0.6&quot;   &quot; &quot;     
+##  [3,] &quot;0.05&quot;  &quot;0.01&quot;  &quot;0&quot;    &quot;0&quot;     &quot;0.0849&quot;
+##  [4,] &quot;20&quot;    &quot;6&quot;     &quot;3&quot;    &quot;0&quot;     &quot; &quot;     
+##  [5,] &quot;5.33&quot;  &quot;1.67&quot;  &quot;0.69&quot; &quot;0.07&quot;  &quot; &quot;     
+##  [6,] &quot;0.4&quot;   &quot;0.45&quot;  &quot;0.5&quot;  &quot;0.55&quot;  &quot; &quot;     
+##  [7,] &quot;0.2&quot;   &quot;0.03&quot;  &quot;0.02&quot; &quot;0&quot;     &quot;0.0079&quot;
+##  [8,] &quot;29&quot;    &quot;11&quot;    &quot;6&quot;    &quot;1&quot;     &quot; &quot;     
+##  [9,] &quot;8.75&quot;  &quot;3.4&quot;   &quot;1.83&quot; &quot;0.26&quot;  &quot; &quot;     
+## [10,] &quot;0.25&quot;  &quot;0.4&quot;   &quot;0.45&quot; &quot;0.5&quot;   &quot; &quot;     
+## [11,] &quot;0.55&quot;  &quot;0.14&quot;  &quot;0.09&quot; &quot;0.01&quot;  &quot;4e-04&quot; 
+## [12,] &quot;34&quot;    &quot;23&quot;    &quot;16&quot;   &quot;3&quot;     &quot; &quot;     
+## [13,] &quot;10.97&quot; &quot;7.23&quot;  &quot;5.14&quot; &quot;1.02&quot;  &quot; &quot;     
+## [14,] &quot;0.12&quot;  &quot;0.25&quot;  &quot;0.4&quot;  &quot;0.45&quot;  &quot; &quot;     
+## [15,] &quot;0.22&quot;  &quot;0.48&quot;  &quot;0.23&quot; &quot;0.05&quot;  &quot;1e-04&quot; 
+## [16,] &quot;20&quot;    &quot;31&quot;    &quot;25&quot;   &quot;11&quot;    &quot; &quot;     
+## [17,] &quot;6.74&quot;  &quot;10.43&quot; &quot;8.2&quot;  &quot;3.5&quot;   &quot; &quot;     
+## [18,] &quot;0.09&quot;  &quot;0.12&quot;  &quot;0.25&quot; &quot;0.4&quot;   &quot; &quot;     
+## [19,] &quot;0.02&quot;  &quot;0.3&quot;   &quot;0.43&quot; &quot;0.25&quot;  &quot;0&quot;     
+## [20,] &quot;12&quot;    &quot;24&quot;    &quot;28&quot;   &quot;25&quot;    &quot; &quot;     
+## [21,] &quot;4.15&quot;  &quot;8.17&quot;  &quot;9.33&quot; &quot;8.33&quot;  &quot; &quot;     
+## [22,] &quot;0.06&quot;  &quot;0.09&quot;  &quot;0.12&quot; &quot;0.25&quot;  &quot; &quot;     
+## [23,] &quot;0&quot;     &quot;0.09&quot;  &quot;0.13&quot; &quot;0.78&quot;  &quot;0&quot;     
+## [24,] &quot;11&quot;    &quot;18&quot;    &quot;18&quot;   &quot;42&quot;    &quot; &quot;     
+## [25,] &quot;3.49&quot;  &quot;5.46&quot;  &quot;5.6&quot;  &quot;13.14&quot; &quot; &quot;     
+## [26,] &quot;0.15&quot;  &quot;0.2&quot;   &quot;0.25&quot; &quot;0.3&quot;   &quot; &quot;     
+## [27,] &quot;0.12&quot;  &quot;0.31&quot;  &quot;0.28&quot; &quot;0.26&quot;  &quot;3e-04&quot; 
+## [28,] &quot;18&quot;    &quot;26&quot;    &quot;23&quot;   &quot;19&quot;    &quot; &quot;     
+## [29,] &quot;5.72&quot;  &quot;8.32&quot;  &quot;7.15&quot; &quot;5.96&quot;  &quot; &quot;     
+## [30,] &quot;0.65&quot;  &quot;0.7&quot;   &quot;0.75&quot; &quot;0.8&quot;   &quot; &quot;     
+## [31,] &quot;0&quot;     &quot;0&quot;     &quot;0&quot;    &quot;0&quot;     &quot;0.7404&quot;
+## [32,] &quot;15&quot;    &quot;2&quot;     &quot;0&quot;    &quot;0&quot;     &quot; &quot;     
+## [33,] &quot;2.4&quot;   &quot;0.37&quot;  &quot;0.04&quot; &quot;0&quot;     &quot; &quot;</code></pre>
 <pre class="r"><code>code &lt;-kable(OC_tab, &quot;latex&quot;, booktabs = T, linesep = &quot;&quot;, align = &quot;c&quot;, 
-            caption = &quot; Operating Characteristics of the two-stage PO TITE-CRM (using true DLT rates which imply dose level 2b is more toxic than 2a) in eight different scenarios based on 2000 simulated trials of 60 patients in cohorts of three. Definitions: DLT: Dose-limiting toxicity. P(select):
+            caption = &quot; Operating Characteristics of the two-stage PO TITE-CRM (using true DLT rates which imply dose level 2b is more toxic than 2a) in eight different scenarios based on 10000 simulated trials of 60 patients in cohorts of three. Definitions: DLT: Dose-limiting toxicity. P(select):
 Probability of selecting a dose as the MTD.&quot;) %&gt;%
         kable_styling(latex_options = c(&quot;striped&quot;, &quot;HOLD_position&quot;),
                       position = &quot;center&quot;,
@@ -807,7 +886,7 @@ Probability of selecting a dose as the MTD.&quot;) %&gt;%
 cat(code)</code></pre>
 <pre><code>\begin{table}[H]
 
-\caption{\label{tab:unnamed-chunk-11} Operating Characteristics of the two-stage PO TITE-CRM (using true DLT rates which imply dose level 2b is more toxic than 2a) in eight different scenarios based on 2000 simulated trials of 60 patients in cohorts of three. Definitions: DLT: Dose-limiting toxicity. P(select):
+\caption{\label{tab:unnamed-chunk-11} Operating Characteristics of the two-stage PO TITE-CRM (using true DLT rates which imply dose level 2b is more toxic than 2a) in eight different scenarios based on 10000 simulated trials of 60 patients in cohorts of three. Definitions: DLT: Dose-limiting toxicity. P(select):
 Probability of selecting a dose as the MTD.}
 \centering
 \begin{tabular}[t]{ccccccccc}
@@ -820,67 +899,67 @@ Scenario &amp; Prior DLT &amp; 0.01 &amp; 0.04 &amp; 0.08 &amp; 0.16 &amp; 0.25 
 \cmidrule{1-9}
 \rowcolor{gray!6}   &amp; True DLT rate &amp; 0.25 &amp; 0.4 &amp; 0.45 &amp; 0.5 &amp; 0.55 &amp; 0.6 &amp; \\
 
-\rowcolor{gray!6}   &amp; P(select) &amp; 0.67 &amp; 0.19 &amp; 0.06 &amp; 0 &amp; 0 &amp; 0 &amp; 0.0825\\
+\rowcolor{gray!6}   &amp; P(select) &amp; 0.68 &amp; 0.18 &amp; 0.05 &amp; 0.01 &amp; 0 &amp; 0 &amp; 0.0849\\
 
-\rowcolor{gray!6}   &amp; \% of patients &amp; 38 &amp; 32 &amp; 21 &amp; 7 &amp; 3 &amp; 0 &amp; \\
+\rowcolor{gray!6}   &amp; \% of patients &amp; 39 &amp; 32 &amp; 20 &amp; 6 &amp; 3 &amp; 0 &amp; \\
 
-\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 1: TD25 @-1} &amp; Mean number of patients &amp; 10.05 &amp; 8.38 &amp; 5.48 &amp; 1.8 &amp; 0.78 &amp; 0.09 &amp; \\
+\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 1: TD25 @-1} &amp; Mean number of patients &amp; 10.17 &amp; 8.46 &amp; 5.33 &amp; 1.67 &amp; 0.69 &amp; 0.07 &amp; \\
 \cmidrule{1-9}
  &amp; True DLT rate &amp; 0.12 &amp; 0.25 &amp; 0.4 &amp; 0.45 &amp; 0.5 &amp; 0.55 &amp; \\
 
- &amp; P(select) &amp; 0.22 &amp; 0.52 &amp; 0.2 &amp; 0.02 &amp; 0.02 &amp; 0 &amp; 0.0105\\
+ &amp; P(select) &amp; 0.23 &amp; 0.51 &amp; 0.2 &amp; 0.03 &amp; 0.02 &amp; 0 &amp; 0.0079\\
 
  &amp; \% of patients &amp; 17 &amp; 35 &amp; 29 &amp; 11 &amp; 6 &amp; 1 &amp; \\
 
-\multirow{-4}{*}{\centering\arraybackslash 2: TD25 @0} &amp; Mean number of patients &amp; 5.16 &amp; 10.55 &amp; 8.79 &amp; 3.36 &amp; 1.88 &amp; 0.24 &amp; \\
+\multirow{-4}{*}{\centering\arraybackslash 2: TD25 @0} &amp; Mean number of patients &amp; 5.24 &amp; 10.48 &amp; 8.75 &amp; 3.4 &amp; 1.83 &amp; 0.26 &amp; \\
 \cmidrule{1-9}
 \rowcolor{gray!6}   &amp; True DLT rate &amp; 0.09 &amp; 0.12 &amp; 0.25 &amp; 0.4 &amp; 0.45 &amp; 0.5 &amp; \\
 
-\rowcolor{gray!6}   &amp; P(select) &amp; 0.02 &amp; 0.2 &amp; 0.55 &amp; 0.14 &amp; 0.1 &amp; 0 &amp; 5e-04\\
+\rowcolor{gray!6}   &amp; P(select) &amp; 0.02 &amp; 0.2 &amp; 0.55 &amp; 0.14 &amp; 0.09 &amp; 0.01 &amp; 4e-04\\
 
-\rowcolor{gray!6}   &amp; \% of patients &amp; 4 &amp; 20 &amp; 35 &amp; 23 &amp; 16 &amp; 3 &amp; \\
+\rowcolor{gray!6}   &amp; \% of patients &amp; 4 &amp; 20 &amp; 34 &amp; 23 &amp; 16 &amp; 3 &amp; \\
 
-\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 3: TD25 @1} &amp; Mean number of patients &amp; 1.24 &amp; 6.43 &amp; 11.03 &amp; 7.19 &amp; 4.95 &amp; 0.96 &amp; \\
+\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 3: TD25 @1} &amp; Mean number of patients &amp; 1.22 &amp; 6.41 &amp; 10.97 &amp; 7.23 &amp; 5.14 &amp; 1.02 &amp; \\
 \cmidrule{1-9}
  &amp; True DLT rate &amp; 0.06 &amp; 0.09 &amp; 0.12 &amp; 0.25 &amp; 0.4 &amp; 0.45 &amp; \\
 
- &amp; P(select) &amp; 0 &amp; 0.02 &amp; 0.22 &amp; 0.48 &amp; 0.23 &amp; 0.05 &amp; 0\\
+ &amp; P(select) &amp; 0 &amp; 0.02 &amp; 0.22 &amp; 0.48 &amp; 0.23 &amp; 0.05 &amp; 1e-04\\
 
- &amp; \% of patients &amp; 1 &amp; 11 &amp; 20 &amp; 31 &amp; 25 &amp; 11 &amp; \\
+ &amp; \% of patients &amp; 1 &amp; 12 &amp; 20 &amp; 31 &amp; 25 &amp; 11 &amp; \\
 
-\multirow{-4}{*}{\centering\arraybackslash 4: TD25 @2a} &amp; Mean number of patients &amp; 0.45 &amp; 3.81 &amp; 6.77 &amp; 10.26 &amp; 8.37 &amp; 3.6 &amp; \\
+\multirow{-4}{*}{\centering\arraybackslash 4: TD25 @2a} &amp; Mean number of patients &amp; 0.47 &amp; 3.88 &amp; 6.74 &amp; 10.43 &amp; 8.2 &amp; 3.5 &amp; \\
 \cmidrule{1-9}
 \rowcolor{gray!6}   &amp; True DLT rate &amp; 0.03 &amp; 0.06 &amp; 0.09 &amp; 0.12 &amp; 0.25 &amp; 0.4 &amp; \\
 
-\rowcolor{gray!6}   &amp; P(select) &amp; 0 &amp; 0 &amp; 0.02 &amp; 0.31 &amp; 0.42 &amp; 0.24 &amp; 0\\
+\rowcolor{gray!6}   &amp; P(select) &amp; 0 &amp; 0 &amp; 0.02 &amp; 0.3 &amp; 0.43 &amp; 0.25 &amp; 0\\
 
 \rowcolor{gray!6}   &amp; \% of patients &amp; 1 &amp; 10 &amp; 12 &amp; 24 &amp; 28 &amp; 25 &amp; \\
 
-\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 5: TD25 @2b} &amp; Mean number of patients &amp; 0.24 &amp; 3.31 &amp; 4.11 &amp; 8.22 &amp; 9.35 &amp; 8.46 &amp; \\
+\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 5: TD25 @2b} &amp; Mean number of patients &amp; 0.25 &amp; 3.36 &amp; 4.15 &amp; 8.17 &amp; 9.33 &amp; 8.33 &amp; \\
 \cmidrule{1-9}
  &amp; True DLT rate &amp; 0.01 &amp; 0.03 &amp; 0.06 &amp; 0.09 &amp; 0.12 &amp; 0.25 &amp; \\
 
- &amp; P(select) &amp; 0 &amp; 0 &amp; 0 &amp; 0.1 &amp; 0.13 &amp; 0.77 &amp; 0\\
+ &amp; P(select) &amp; 0 &amp; 0 &amp; 0 &amp; 0.09 &amp; 0.13 &amp; 0.78 &amp; 0\\
 
  &amp; \% of patients &amp; 0 &amp; 10 &amp; 11 &amp; 18 &amp; 18 &amp; 42 &amp; \\
 
-\multirow{-4}{*}{\centering\arraybackslash 6: TD25 @3} &amp; Mean number of patients &amp; 0.11 &amp; 3.13 &amp; 3.51 &amp; 5.46 &amp; 5.57 &amp; 13.1 &amp; \\
+\multirow{-4}{*}{\centering\arraybackslash 6: TD25 @3} &amp; Mean number of patients &amp; 0.1 &amp; 3.13 &amp; 3.49 &amp; 5.46 &amp; 5.6 &amp; 13.14 &amp; \\
 \cmidrule{1-9}
 \rowcolor{gray!6}   &amp; True DLT rate &amp; 0.05 &amp; 0.1 &amp; 0.15 &amp; 0.2 &amp; 0.25 &amp; 0.3 &amp; \\
 
-\rowcolor{gray!6}   &amp; P(select) &amp; 0 &amp; 0.03 &amp; 0.11 &amp; 0.3 &amp; 0.29 &amp; 0.27 &amp; 0\\
+\rowcolor{gray!6}   &amp; P(select) &amp; 0 &amp; 0.03 &amp; 0.12 &amp; 0.31 &amp; 0.28 &amp; 0.26 &amp; 3e-04\\
 
-\rowcolor{gray!6}   &amp; \% of patients &amp; 2 &amp; 13 &amp; 17 &amp; 26 &amp; 23 &amp; 19 &amp; \\
+\rowcolor{gray!6}   &amp; \% of patients &amp; 2 &amp; 13 &amp; 18 &amp; 26 &amp; 23 &amp; 19 &amp; \\
 
-\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 7: Equal steps in DLT rate} &amp; Mean number of patients &amp; 0.57 &amp; 4.04 &amp; 5.57 &amp; 8.26 &amp; 7.22 &amp; 6.21 &amp; \\
+\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 7: Equal steps in DLT rate} &amp; Mean number of patients &amp; 0.55 &amp; 4.03 &amp; 5.72 &amp; 8.32 &amp; 7.15 &amp; 5.96 &amp; \\
 \cmidrule{1-9}
  &amp; True DLT rate &amp; 0.5 &amp; 0.6 &amp; 0.65 &amp; 0.7 &amp; 0.75 &amp; 0.8 &amp; \\
 
- &amp; P(select) &amp; 0.26 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0.734\\
+ &amp; P(select) &amp; 0.26 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0.7404\\
 
- &amp; \% of patients &amp; 56 &amp; 27 &amp; 15 &amp; 2 &amp; 0 &amp; 0 &amp; \\
+ &amp; \% of patients &amp; 56 &amp; 26 &amp; 15 &amp; 2 &amp; 0 &amp; 0 &amp; \\
 
-\multirow{-4}{*}{\centering\arraybackslash 8: All  toxic} &amp; Mean number of patients &amp; 9.04 &amp; 4.29 &amp; 2.34 &amp; 0.33 &amp; 0.03 &amp; 0 &amp; \\
+\multirow{-4}{*}{\centering\arraybackslash 8: All  toxic} &amp; Mean number of patients &amp; 9.05 &amp; 4.27 &amp; 2.4 &amp; 0.37 &amp; 0.04 &amp; 0 &amp; \\
 \bottomrule
 \end{tabular}
 \end{table}</code></pre>
@@ -899,29 +978,39 @@ fit2_s1</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.25 0.40 0.45 0.55 0.50 0.60
 ## 
+## $time
+## Time difference of 22.24559 mins
+## 
 ## $MTD.selection
-## [1] 0.67 0.19 0.04 0.00 0.01 0.00
+## [1] 0.67 0.19 0.05 0.00 0.01 0.00
 ## 
 ## $patient.allocation
 ## [1] 39 32 20  6  3  0
 ## 
 ## $percent.DLT
-## [1] 0.3652112
+## [1] 0.3635373
 ## 
 ## $months
-## [1] 56.93827
+## [1] 57.3511
 ## 
 ## $stop
-## [1] 0.0865
+## [1] 0.0827
+## 
+## $max.n.count
+## [1] 17
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    6.00   21.00   27.00   26.23   33.00   60.00 
 ## 
 ## $mean.n
-## [1] 26.0055
+## [1] 26.235
 ## 
 ## $mean.n.perdose
-## [1] 10.2195  8.2530  5.1540  1.6155  0.7245  0.0390
+## [1] 10.1895  8.4255  5.2719  1.5975  0.6810  0.0696
 ## 
 ## $acceptable
-## [1] 0.672</code></pre>
+## [1] 0.6712</code></pre>
 </div>
 <div id="mtd-at-dose-0-1" class="section level3">
 <h3>MTD at dose 0</h3>
@@ -934,29 +1023,39 @@ fit2_s2</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.12 0.25 0.40 0.50 0.45 0.55
 ## 
+## $time
+## Time difference of 24.53144 mins
+## 
 ## $MTD.selection
-## [1] 0.22 0.53 0.19 0.02 0.03 0.00
+## [1] 0.23 0.52 0.20 0.02 0.02 0.00
 ## 
 ## $patient.allocation
-## [1] 18 35 29 11  6  1
+## [1] 18 36 29 11  6  1
 ## 
 ## $percent.DLT
-## [1] 0.3120741
+## [1] 0.3113631
 ## 
 ## $months
-## [1] 64.01575
+## [1] 64.02492
 ## 
 ## $stop
-## [1] 0.0065
+## [1] 0.0074
+## 
+## $max.n.count
+## [1] 11
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    6.00   24.00   30.00   29.95   33.00   60.00 
 ## 
 ## $mean.n
-## [1] 29.94
+## [1] 29.9451
 ## 
 ## $mean.n.perdose
-## [1]  5.2470 10.4865  8.7345  3.3240  1.8450  0.3030
+## [1]  5.2413 10.6368  8.8185  3.1599  1.8534  0.2352
 ## 
 ## $acceptable
-## [1] 0.53</code></pre>
+## [1] 0.524</code></pre>
 </div>
 <div id="mtd-at-dose-1-1" class="section level3">
 <h3>MTD at dose 1</h3>
@@ -969,29 +1068,39 @@ fit2_s3</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.09 0.12 0.25 0.45 0.40 0.50
 ## 
+## $time
+## Time difference of 25.04579 mins
+## 
 ## $MTD.selection
-## [1] 0.02 0.20 0.54 0.09 0.15 0.01
+## [1] 0.02 0.20 0.55 0.09 0.14 0.01
 ## 
 ## $patient.allocation
-## [1]  4 20 34 21 18  3
+## [1]  4 20 34 21 17  3
 ## 
 ## $percent.DLT
-## [1] 0.2937921
+## [1] 0.2944641
 ## 
 ## $months
-## [1] 68.34372
+## [1] 67.99835
 ## 
 ## $stop
-## [1] 0
+## [1] 4e-04
+## 
+## $max.n.count
+## [1] 6
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    6.00   27.00   31.50   32.15   36.00   60.00 
 ## 
 ## $mean.n
-## [1] 32.346
+## [1] 32.154
 ## 
 ## $mean.n.perdose
-## [1]  1.1640  6.4110 11.0895  6.9495  5.7180  1.0140
+## [1]  1.1634  6.4266 11.0697  6.8304  5.5968  1.0671
 ## 
 ## $acceptable
-## [1] 0.5425</code></pre>
+## [1] 0.5486</code></pre>
 </div>
 <div id="mtd-at-dose-2a-1" class="section level3">
 <h3>MTD at dose 2a</h3>
@@ -1005,29 +1114,39 @@ fit2_s4</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.06 0.09 0.12 0.25 0.15 0.45
 ## 
+## $time
+## Time difference of 24.11843 mins
+## 
 ## $MTD.selection
-## [1] 0.00 0.01 0.08 0.43 0.33 0.14
+## [1] 0.00 0.01 0.08 0.44 0.33 0.14
 ## 
 ## $patient.allocation
-## [1]  2 11 16 30 23 18
+## [1]  1 11 16 30 24 18
 ## 
 ## $percent.DLT
-## [1] 0.2207924
+## [1] 0.2220951
 ## 
 ## $months
-## [1] 70.33772
+## [1] 70.52336
 ## 
 ## $stop
-## [1] 0
+## [1] 2e-04
+## 
+## $max.n.count
+## [1] 7
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    6.00   27.00   33.00   33.56   39.00   60.00 
 ## 
 ## $mean.n
-## [1] 33.4545
+## [1] 33.5577
 ## 
 ## $mean.n.perdose
-## [1]  0.5100  3.7965  5.2515 10.1715  7.7370  5.9880
+## [1]  0.4791  3.7785  5.2356 10.0956  7.8954  6.0735
 ## 
 ## $acceptable
-## [1] 0.4335</code></pre>
+## [1] 0.4378</code></pre>
 </div>
 <div id="mtd-at-dose-2b-1" class="section level3">
 <h3>MTD at dose 2b</h3>
@@ -1041,29 +1160,39 @@ fit2_s5</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.03 0.06 0.09 0.35 0.25 0.40
 ## 
+## $time
+## Time difference of 23.60029 mins
+## 
 ## $MTD.selection
-## [1] 0.00 0.00 0.15 0.30 0.43 0.12
+## [1] 0.00 0.00 0.15 0.31 0.43 0.11
 ## 
 ## $patient.allocation
-## [1]  1 10 17 29 28 14
+## [1]  1 11 18 30 28 14
 ## 
 ## $percent.DLT
-## [1] 0.2512207
+## [1] 0.2512962
 ## 
 ## $months
-## [1] 69.65777
+## [1] 69.80023
 ## 
 ## $stop
 ## [1] 0
 ## 
+## $max.n.count
+## [1] 3
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    6.00   27.00   33.00   33.16   36.00   60.00 
+## 
 ## $mean.n
-## [1] 33.0765
+## [1] 33.1557
 ## 
 ## $mean.n.perdose
-## [1] 0.2310 3.4305 5.7180 9.7320 9.2580 4.7070
+## [1] 0.2538 3.4956 5.9037 9.8205 9.1434 4.5387
 ## 
 ## $acceptable
-## [1] 0.4255</code></pre>
+## [1] 0.4304</code></pre>
 </div>
 <div id="mtd-at-dose-3-1" class="section level3">
 <h3>MTD at dose 3</h3>
@@ -1076,29 +1205,39 @@ fit2_s6</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.01 0.03 0.06 0.12 0.09 0.25
 ## 
+## $time
+## Time difference of 18.63574 mins
+## 
 ## $MTD.selection
-## [1] 0.00 0.00 0.00 0.12 0.08 0.80
+## [1] 0.00 0.00 0.00 0.13 0.09 0.78
 ## 
 ## $patient.allocation
 ## [1]  0 10 11 19 16 43
 ## 
 ## $percent.DLT
-## [1] 0.1520253
+## [1] 0.1532739
 ## 
 ## $months
-## [1] 65.29202
+## [1] 65.58343
 ## 
 ## $stop
 ## [1] 0
 ## 
+## $max.n.count
+## [1] 8
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##   18.00   27.00   27.00   30.81   33.00   60.00 
+## 
 ## $mean.n
-## [1] 30.6495
+## [1] 30.8115
 ## 
 ## $mean.n.perdose
-## [1]  0.0900  3.1245  3.4500  5.6985  5.0145 13.2720
+## [1]  0.0984  3.1287  3.5118  5.8788  5.0640 13.1298
 ## 
 ## $acceptable
-## [1] 0.796</code></pre>
+## [1] 0.782</code></pre>
 </div>
 <div id="equal-steps-1" class="section level3">
 <h3>Equal steps</h3>
@@ -1111,29 +1250,39 @@ fit2_s7</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.05 0.10 0.15 0.25 0.20 0.30
 ## 
+## $time
+## Time difference of 22.77236 mins
+## 
 ## $MTD.selection
-## [1] 0.00 0.02 0.12 0.31 0.28 0.27
+## [1] 0.00 0.02 0.12 0.32 0.27 0.26
 ## 
 ## $patient.allocation
-## [1]  2 13 18 27 22 18
+## [1]  2 13 19 27 22 18
 ## 
 ## $percent.DLT
-## [1] 0.2054155
+## [1] 0.2058956
 ## 
 ## $months
-## [1] 67.22396
+## [1] 67.17215
 ## 
 ## $stop
-## [1] 5e-04
+## [1] 2e-04
+## 
+## $max.n.count
+## [1] 2
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    6.00   27.00   30.00   31.69   36.00   60.00 
 ## 
 ## $mean.n
-## [1] 31.7235
+## [1] 31.6947
 ## 
 ## $mean.n.perdose
-## [1] 0.5070 3.9930 5.8320 8.5560 7.0695 5.7660
+## [1] 0.5382 4.0227 5.9319 8.5608 6.8895 5.7516
 ## 
 ## $acceptable
-## [1] 0.854</code></pre>
+## [1] 0.8508</code></pre>
 </div>
 <div id="all-too-toxic-1" class="section level3">
 <h3>All too toxic</h3>
@@ -1148,26 +1297,36 @@ fit2_s8</code></pre>
 <pre><code>## $true.prob
 ## [1] 0.50 0.60 0.65 0.75 0.70 0.80
 ## 
+## $time
+## Time difference of 14.39776 mins
+## 
 ## $MTD.selection
-## [1] 0.26 0.00 0.00 0.00 0.00 0.00
+## [1] 0.27 0.00 0.00 0.00 0.00 0.00
 ## 
 ## $patient.allocation
-## [1] 56 26 15  2  0  0
+## [1] 56 27 15  2  0  0
 ## 
 ## $percent.DLT
-## [1] 0.5552474
+## [1] 0.5540161
 ## 
 ## $months
-## [1] 39.34845
+## [1] 39.13637
 ## 
 ## $stop
-## [1] 0.735
+## [1] 0.7273
+## 
+## $max.n.count
+## [1] 1
+## 
+## $summary.trialsize
+##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+##    6.00    9.00   15.00   16.11   21.00   51.00 
 ## 
 ## $mean.n
-## [1] 16.227
+## [1] 16.1091
 ## 
 ## $mean.n.perdose
-## [1] 9.1425 4.2630 2.4000 0.3690 0.0510 0.0015
+## [1] 9.0060 4.2762 2.3943 0.3804 0.0504 0.0018
 ## 
 ## $acceptable
 ## [1] 0</code></pre>
@@ -1200,76 +1359,76 @@ OC_tab2[,7] &lt;- temp
 colnames(OC_tab2)&lt;- c(&quot;-1&quot;, &quot;0&quot;, &quot;1&quot;, &quot;2a&quot;, &quot;2b&quot;, &quot;3&quot;, &quot;Stop&quot;)
 OC_tab2 &lt;- as.matrix(cbind(c(&quot;Scenario&quot;, rep(&quot;9: TD25 @-1&quot;,4), rep(&quot;10: TD25 @0&quot;,4), rep(&quot;11: TD25 @1&quot;,4), rep(&quot;12: TD25 @2a&quot;,4), rep(&quot;13: TD25 @2b&quot;,4),   rep(&quot;14: TD25 @3&quot;,4), rep(&quot;15: Equal steps in DLT rate&quot;,4), rep(&quot;16: All  toxic&quot;,4)), c(&quot;Prior DLT&quot;, rep(c(&quot;True DLT rate&quot;, &quot;P(select)&quot;, &quot;% of patients&quot;, &quot;Mean number of patients&quot;),8)), OC_tab2))
 OC_tab2</code></pre>
-<pre><code>                                                              -1     
- [1,] &quot;Scenario&quot;                    &quot;Prior DLT&quot;               &quot;0.01&quot; 
- [2,] &quot;9: TD25 @-1&quot;                 &quot;True DLT rate&quot;           &quot;0.25&quot; 
- [3,] &quot;9: TD25 @-1&quot;                 &quot;P(select)&quot;               &quot;0.67&quot; 
- [4,] &quot;9: TD25 @-1&quot;                 &quot;% of patients&quot;           &quot;39&quot;   
- [5,] &quot;9: TD25 @-1&quot;                 &quot;Mean number of patients&quot; &quot;10.22&quot;
- [6,] &quot;10: TD25 @0&quot;                 &quot;True DLT rate&quot;           &quot;0.12&quot; 
- [7,] &quot;10: TD25 @0&quot;                 &quot;P(select)&quot;               &quot;0.22&quot; 
- [8,] &quot;10: TD25 @0&quot;                 &quot;% of patients&quot;           &quot;18&quot;   
- [9,] &quot;10: TD25 @0&quot;                 &quot;Mean number of patients&quot; &quot;5.25&quot; 
-[10,] &quot;11: TD25 @1&quot;                 &quot;True DLT rate&quot;           &quot;0.09&quot; 
-[11,] &quot;11: TD25 @1&quot;                 &quot;P(select)&quot;               &quot;0.02&quot; 
-[12,] &quot;11: TD25 @1&quot;                 &quot;% of patients&quot;           &quot;4&quot;    
-[13,] &quot;11: TD25 @1&quot;                 &quot;Mean number of patients&quot; &quot;1.16&quot; 
-[14,] &quot;12: TD25 @2a&quot;                &quot;True DLT rate&quot;           &quot;0.06&quot; 
-[15,] &quot;12: TD25 @2a&quot;                &quot;P(select)&quot;               &quot;0&quot;    
-[16,] &quot;12: TD25 @2a&quot;                &quot;% of patients&quot;           &quot;2&quot;    
-[17,] &quot;12: TD25 @2a&quot;                &quot;Mean number of patients&quot; &quot;0.51&quot; 
-[18,] &quot;13: TD25 @2b&quot;                &quot;True DLT rate&quot;           &quot;0.03&quot; 
-[19,] &quot;13: TD25 @2b&quot;                &quot;P(select)&quot;               &quot;0&quot;    
-[20,] &quot;13: TD25 @2b&quot;                &quot;% of patients&quot;           &quot;1&quot;    
-[21,] &quot;13: TD25 @2b&quot;                &quot;Mean number of patients&quot; &quot;0.23&quot; 
-[22,] &quot;14: TD25 @3&quot;                 &quot;True DLT rate&quot;           &quot;0.01&quot; 
-[23,] &quot;14: TD25 @3&quot;                 &quot;P(select)&quot;               &quot;0&quot;    
-[24,] &quot;14: TD25 @3&quot;                 &quot;% of patients&quot;           &quot;0&quot;    
-[25,] &quot;14: TD25 @3&quot;                 &quot;Mean number of patients&quot; &quot;0.09&quot; 
-[26,] &quot;15: Equal steps in DLT rate&quot; &quot;True DLT rate&quot;           &quot;0.05&quot; 
-[27,] &quot;15: Equal steps in DLT rate&quot; &quot;P(select)&quot;               &quot;0&quot;    
-[28,] &quot;15: Equal steps in DLT rate&quot; &quot;% of patients&quot;           &quot;2&quot;    
-[29,] &quot;15: Equal steps in DLT rate&quot; &quot;Mean number of patients&quot; &quot;0.51&quot; 
-[30,] &quot;16: All  toxic&quot;              &quot;True DLT rate&quot;           &quot;0.5&quot;  
-[31,] &quot;16: All  toxic&quot;              &quot;P(select)&quot;               &quot;0.26&quot; 
-[32,] &quot;16: All  toxic&quot;              &quot;% of patients&quot;           &quot;56&quot;   
-[33,] &quot;16: All  toxic&quot;              &quot;Mean number of patients&quot; &quot;9.14&quot; 
-      0       1       2a      2b     3       Stop    
- [1,] &quot;0.04&quot;  &quot;0.08&quot;  &quot;0.16&quot;  &quot;0.25&quot; &quot;0.35&quot;  &quot; &quot;     
- [2,] &quot;0.4&quot;   &quot;0.45&quot;  &quot;0.55&quot;  &quot;0.5&quot;  &quot;0.6&quot;   &quot; &quot;     
- [3,] &quot;0.19&quot;  &quot;0.04&quot;  &quot;0&quot;     &quot;0.01&quot; &quot;0&quot;     &quot;0.0865&quot;
- [4,] &quot;32&quot;    &quot;20&quot;    &quot;6&quot;     &quot;3&quot;    &quot;0&quot;     &quot; &quot;     
- [5,] &quot;8.25&quot;  &quot;5.15&quot;  &quot;1.62&quot;  &quot;0.72&quot; &quot;0.04&quot;  &quot; &quot;     
- [6,] &quot;0.25&quot;  &quot;0.4&quot;   &quot;0.5&quot;   &quot;0.45&quot; &quot;0.55&quot;  &quot; &quot;     
- [7,] &quot;0.53&quot;  &quot;0.19&quot;  &quot;0.02&quot;  &quot;0.03&quot; &quot;0&quot;     &quot;0.0065&quot;
- [8,] &quot;35&quot;    &quot;29&quot;    &quot;11&quot;    &quot;6&quot;    &quot;1&quot;     &quot; &quot;     
- [9,] &quot;10.49&quot; &quot;8.73&quot;  &quot;3.32&quot;  &quot;1.84&quot; &quot;0.3&quot;   &quot; &quot;     
-[10,] &quot;0.12&quot;  &quot;0.25&quot;  &quot;0.45&quot;  &quot;0.4&quot;  &quot;0.5&quot;   &quot; &quot;     
-[11,] &quot;0.2&quot;   &quot;0.54&quot;  &quot;0.09&quot;  &quot;0.15&quot; &quot;0.01&quot;  &quot;0&quot;     
-[12,] &quot;20&quot;    &quot;34&quot;    &quot;21&quot;    &quot;18&quot;   &quot;3&quot;     &quot; &quot;     
-[13,] &quot;6.41&quot;  &quot;11.09&quot; &quot;6.95&quot;  &quot;5.72&quot; &quot;1.01&quot;  &quot; &quot;     
-[14,] &quot;0.09&quot;  &quot;0.12&quot;  &quot;0.25&quot;  &quot;0.15&quot; &quot;0.45&quot;  &quot; &quot;     
-[15,] &quot;0.01&quot;  &quot;0.08&quot;  &quot;0.43&quot;  &quot;0.33&quot; &quot;0.14&quot;  &quot;0&quot;     
-[16,] &quot;11&quot;    &quot;16&quot;    &quot;30&quot;    &quot;23&quot;   &quot;18&quot;    &quot; &quot;     
-[17,] &quot;3.8&quot;   &quot;5.25&quot;  &quot;10.17&quot; &quot;7.74&quot; &quot;5.99&quot;  &quot; &quot;     
-[18,] &quot;0.06&quot;  &quot;0.09&quot;  &quot;0.35&quot;  &quot;0.25&quot; &quot;0.4&quot;   &quot; &quot;     
-[19,] &quot;0&quot;     &quot;0.15&quot;  &quot;0.3&quot;   &quot;0.43&quot; &quot;0.12&quot;  &quot;0&quot;     
-[20,] &quot;10&quot;    &quot;17&quot;    &quot;29&quot;    &quot;28&quot;   &quot;14&quot;    &quot; &quot;     
-[21,] &quot;3.43&quot;  &quot;5.72&quot;  &quot;9.73&quot;  &quot;9.26&quot; &quot;4.71&quot;  &quot; &quot;     
-[22,] &quot;0.03&quot;  &quot;0.06&quot;  &quot;0.12&quot;  &quot;0.09&quot; &quot;0.25&quot;  &quot; &quot;     
-[23,] &quot;0&quot;     &quot;0&quot;     &quot;0.12&quot;  &quot;0.08&quot; &quot;0.8&quot;   &quot;0&quot;     
-[24,] &quot;10&quot;    &quot;11&quot;    &quot;19&quot;    &quot;16&quot;   &quot;43&quot;    &quot; &quot;     
-[25,] &quot;3.12&quot;  &quot;3.45&quot;  &quot;5.7&quot;   &quot;5.01&quot; &quot;13.27&quot; &quot; &quot;     
-[26,] &quot;0.1&quot;   &quot;0.15&quot;  &quot;0.25&quot;  &quot;0.2&quot;  &quot;0.3&quot;   &quot; &quot;     
-[27,] &quot;0.02&quot;  &quot;0.12&quot;  &quot;0.31&quot;  &quot;0.28&quot; &quot;0.27&quot;  &quot;5e-04&quot; 
-[28,] &quot;13&quot;    &quot;18&quot;    &quot;27&quot;    &quot;22&quot;   &quot;18&quot;    &quot; &quot;     
-[29,] &quot;3.99&quot;  &quot;5.83&quot;  &quot;8.56&quot;  &quot;7.07&quot; &quot;5.77&quot;  &quot; &quot;     
-[30,] &quot;0.6&quot;   &quot;0.65&quot;  &quot;0.75&quot;  &quot;0.7&quot;  &quot;0.8&quot;   &quot; &quot;     
-[31,] &quot;0&quot;     &quot;0&quot;     &quot;0&quot;     &quot;0&quot;    &quot;0&quot;     &quot;0.735&quot; 
-[32,] &quot;26&quot;    &quot;15&quot;    &quot;2&quot;     &quot;0&quot;    &quot;0&quot;     &quot; &quot;     
-[33,] &quot;4.26&quot;  &quot;2.4&quot;   &quot;0.37&quot;  &quot;0.05&quot; &quot;0&quot;     &quot; &quot;     </code></pre>
+<pre><code>                                                              -1      0      
+ [1,] &quot;Scenario&quot;                    &quot;Prior DLT&quot;               &quot;0.01&quot;  &quot;0.04&quot; 
+ [2,] &quot;9: TD25 @-1&quot;                 &quot;True DLT rate&quot;           &quot;0.25&quot;  &quot;0.4&quot;  
+ [3,] &quot;9: TD25 @-1&quot;                 &quot;P(select)&quot;               &quot;0.67&quot;  &quot;0.19&quot; 
+ [4,] &quot;9: TD25 @-1&quot;                 &quot;% of patients&quot;           &quot;39&quot;    &quot;32&quot;   
+ [5,] &quot;9: TD25 @-1&quot;                 &quot;Mean number of patients&quot; &quot;10.19&quot; &quot;8.43&quot; 
+ [6,] &quot;10: TD25 @0&quot;                 &quot;True DLT rate&quot;           &quot;0.12&quot;  &quot;0.25&quot; 
+ [7,] &quot;10: TD25 @0&quot;                 &quot;P(select)&quot;               &quot;0.23&quot;  &quot;0.52&quot; 
+ [8,] &quot;10: TD25 @0&quot;                 &quot;% of patients&quot;           &quot;18&quot;    &quot;36&quot;   
+ [9,] &quot;10: TD25 @0&quot;                 &quot;Mean number of patients&quot; &quot;5.24&quot;  &quot;10.64&quot;
+[10,] &quot;11: TD25 @1&quot;                 &quot;True DLT rate&quot;           &quot;0.09&quot;  &quot;0.12&quot; 
+[11,] &quot;11: TD25 @1&quot;                 &quot;P(select)&quot;               &quot;0.02&quot;  &quot;0.2&quot;  
+[12,] &quot;11: TD25 @1&quot;                 &quot;% of patients&quot;           &quot;4&quot;     &quot;20&quot;   
+[13,] &quot;11: TD25 @1&quot;                 &quot;Mean number of patients&quot; &quot;1.16&quot;  &quot;6.43&quot; 
+[14,] &quot;12: TD25 @2a&quot;                &quot;True DLT rate&quot;           &quot;0.06&quot;  &quot;0.09&quot; 
+[15,] &quot;12: TD25 @2a&quot;                &quot;P(select)&quot;               &quot;0&quot;     &quot;0.01&quot; 
+[16,] &quot;12: TD25 @2a&quot;                &quot;% of patients&quot;           &quot;1&quot;     &quot;11&quot;   
+[17,] &quot;12: TD25 @2a&quot;                &quot;Mean number of patients&quot; &quot;0.48&quot;  &quot;3.78&quot; 
+[18,] &quot;13: TD25 @2b&quot;                &quot;True DLT rate&quot;           &quot;0.03&quot;  &quot;0.06&quot; 
+[19,] &quot;13: TD25 @2b&quot;                &quot;P(select)&quot;               &quot;0&quot;     &quot;0&quot;    
+[20,] &quot;13: TD25 @2b&quot;                &quot;% of patients&quot;           &quot;1&quot;     &quot;11&quot;   
+[21,] &quot;13: TD25 @2b&quot;                &quot;Mean number of patients&quot; &quot;0.25&quot;  &quot;3.5&quot;  
+[22,] &quot;14: TD25 @3&quot;                 &quot;True DLT rate&quot;           &quot;0.01&quot;  &quot;0.03&quot; 
+[23,] &quot;14: TD25 @3&quot;                 &quot;P(select)&quot;               &quot;0&quot;     &quot;0&quot;    
+[24,] &quot;14: TD25 @3&quot;                 &quot;% of patients&quot;           &quot;0&quot;     &quot;10&quot;   
+[25,] &quot;14: TD25 @3&quot;                 &quot;Mean number of patients&quot; &quot;0.1&quot;   &quot;3.13&quot; 
+[26,] &quot;15: Equal steps in DLT rate&quot; &quot;True DLT rate&quot;           &quot;0.05&quot;  &quot;0.1&quot;  
+[27,] &quot;15: Equal steps in DLT rate&quot; &quot;P(select)&quot;               &quot;0&quot;     &quot;0.02&quot; 
+[28,] &quot;15: Equal steps in DLT rate&quot; &quot;% of patients&quot;           &quot;2&quot;     &quot;13&quot;   
+[29,] &quot;15: Equal steps in DLT rate&quot; &quot;Mean number of patients&quot; &quot;0.54&quot;  &quot;4.02&quot; 
+[30,] &quot;16: All  toxic&quot;              &quot;True DLT rate&quot;           &quot;0.5&quot;   &quot;0.6&quot;  
+[31,] &quot;16: All  toxic&quot;              &quot;P(select)&quot;               &quot;0.27&quot;  &quot;0&quot;    
+[32,] &quot;16: All  toxic&quot;              &quot;% of patients&quot;           &quot;56&quot;    &quot;27&quot;   
+[33,] &quot;16: All  toxic&quot;              &quot;Mean number of patients&quot; &quot;9.01&quot;  &quot;4.28&quot; 
+      1       2a     2b     3       Stop    
+ [1,] &quot;0.08&quot;  &quot;0.16&quot; &quot;0.25&quot; &quot;0.35&quot;  &quot; &quot;     
+ [2,] &quot;0.45&quot;  &quot;0.55&quot; &quot;0.5&quot;  &quot;0.6&quot;   &quot; &quot;     
+ [3,] &quot;0.05&quot;  &quot;0&quot;    &quot;0.01&quot; &quot;0&quot;     &quot;0.0827&quot;
+ [4,] &quot;20&quot;    &quot;6&quot;    &quot;3&quot;    &quot;0&quot;     &quot; &quot;     
+ [5,] &quot;5.27&quot;  &quot;1.6&quot;  &quot;0.68&quot; &quot;0.07&quot;  &quot; &quot;     
+ [6,] &quot;0.4&quot;   &quot;0.5&quot;  &quot;0.45&quot; &quot;0.55&quot;  &quot; &quot;     
+ [7,] &quot;0.2&quot;   &quot;0.02&quot; &quot;0.02&quot; &quot;0&quot;     &quot;0.0074&quot;
+ [8,] &quot;29&quot;    &quot;11&quot;   &quot;6&quot;    &quot;1&quot;     &quot; &quot;     
+ [9,] &quot;8.82&quot;  &quot;3.16&quot; &quot;1.85&quot; &quot;0.24&quot;  &quot; &quot;     
+[10,] &quot;0.25&quot;  &quot;0.45&quot; &quot;0.4&quot;  &quot;0.5&quot;   &quot; &quot;     
+[11,] &quot;0.55&quot;  &quot;0.09&quot; &quot;0.14&quot; &quot;0.01&quot;  &quot;4e-04&quot; 
+[12,] &quot;34&quot;    &quot;21&quot;   &quot;17&quot;   &quot;3&quot;     &quot; &quot;     
+[13,] &quot;11.07&quot; &quot;6.83&quot; &quot;5.6&quot;  &quot;1.07&quot;  &quot; &quot;     
+[14,] &quot;0.12&quot;  &quot;0.25&quot; &quot;0.15&quot; &quot;0.45&quot;  &quot; &quot;     
+[15,] &quot;0.08&quot;  &quot;0.44&quot; &quot;0.33&quot; &quot;0.14&quot;  &quot;2e-04&quot; 
+[16,] &quot;16&quot;    &quot;30&quot;   &quot;24&quot;   &quot;18&quot;    &quot; &quot;     
+[17,] &quot;5.24&quot;  &quot;10.1&quot; &quot;7.9&quot;  &quot;6.07&quot;  &quot; &quot;     
+[18,] &quot;0.09&quot;  &quot;0.35&quot; &quot;0.25&quot; &quot;0.4&quot;   &quot; &quot;     
+[19,] &quot;0.15&quot;  &quot;0.31&quot; &quot;0.43&quot; &quot;0.11&quot;  &quot;0&quot;     
+[20,] &quot;18&quot;    &quot;30&quot;   &quot;28&quot;   &quot;14&quot;    &quot; &quot;     
+[21,] &quot;5.9&quot;   &quot;9.82&quot; &quot;9.14&quot; &quot;4.54&quot;  &quot; &quot;     
+[22,] &quot;0.06&quot;  &quot;0.12&quot; &quot;0.09&quot; &quot;0.25&quot;  &quot; &quot;     
+[23,] &quot;0&quot;     &quot;0.13&quot; &quot;0.09&quot; &quot;0.78&quot;  &quot;0&quot;     
+[24,] &quot;11&quot;    &quot;19&quot;   &quot;16&quot;   &quot;43&quot;    &quot; &quot;     
+[25,] &quot;3.51&quot;  &quot;5.88&quot; &quot;5.06&quot; &quot;13.13&quot; &quot; &quot;     
+[26,] &quot;0.15&quot;  &quot;0.25&quot; &quot;0.2&quot;  &quot;0.3&quot;   &quot; &quot;     
+[27,] &quot;0.12&quot;  &quot;0.32&quot; &quot;0.27&quot; &quot;0.26&quot;  &quot;2e-04&quot; 
+[28,] &quot;19&quot;    &quot;27&quot;   &quot;22&quot;   &quot;18&quot;    &quot; &quot;     
+[29,] &quot;5.93&quot;  &quot;8.56&quot; &quot;6.89&quot; &quot;5.75&quot;  &quot; &quot;     
+[30,] &quot;0.65&quot;  &quot;0.75&quot; &quot;0.7&quot;  &quot;0.8&quot;   &quot; &quot;     
+[31,] &quot;0&quot;     &quot;0&quot;    &quot;0&quot;    &quot;0&quot;     &quot;0.7273&quot;
+[32,] &quot;15&quot;    &quot;2&quot;    &quot;0&quot;    &quot;0&quot;     &quot; &quot;     
+[33,] &quot;2.39&quot;  &quot;0.38&quot; &quot;0.05&quot; &quot;0&quot;     &quot; &quot;     </code></pre>
 <pre class="r"><code>code2 &lt;-kable(OC_tab2, &quot;latex&quot;, booktabs = T, linesep = &quot;&quot;, align = &quot;c&quot;, 
-            caption = &quot; Operating Characteristics of the two-stage PO TITE-CRM (using true DLT rates which imply dose level 2a is more toxic than 2b) in eight different scenarios based on 2000 simulated trials of 60 patients in cohorts of three. Definitions: DLT: Dose-limiting toxicity. P(select):
+            caption = &quot; Operating Characteristics of the two-stage PO TITE-CRM (using true DLT rates which imply dose level 2a is more toxic than 2b) in eight different scenarios based on 1000 simulated trials of 60 patients in cohorts of three. Definitions: DLT: Dose-limiting toxicity. P(select):
 Probability of selecting a dose as the MTD.&quot;) %&gt;%
         kable_styling(latex_options = c(&quot;striped&quot;, &quot;HOLD_position&quot;),
                       position = &quot;center&quot;,
@@ -1280,7 +1439,7 @@ Probability of selecting a dose as the MTD.&quot;) %&gt;%
 cat(code2)</code></pre>
 <pre><code>\begin{table}[H]
 
-\caption{\label{tab:unnamed-chunk-21} Operating Characteristics of the two-stage PO TITE-CRM (using true DLT rates which imply dose level 2a is more toxic than 2b) in eight different scenarios based on 2000 simulated trials of 60 patients in cohorts of three. Definitions: DLT: Dose-limiting toxicity. P(select):
+\caption{\label{tab:unnamed-chunk-21} Operating Characteristics of the two-stage PO TITE-CRM (using true DLT rates which imply dose level 2a is more toxic than 2b) in eight different scenarios based on 1000 simulated trials of 60 patients in cohorts of three. Definitions: DLT: Dose-limiting toxicity. P(select):
 Probability of selecting a dose as the MTD.}
 \centering
 \begin{tabular}[t]{ccccccccc}
@@ -1293,67 +1452,67 @@ Scenario &amp; Prior DLT &amp; 0.01 &amp; 0.04 &amp; 0.08 &amp; 0.16 &amp; 0.25 
 \cmidrule{1-9}
 \rowcolor{gray!6}   &amp; True DLT rate &amp; 0.25 &amp; 0.4 &amp; 0.45 &amp; 0.55 &amp; 0.5 &amp; 0.6 &amp; \\
 
-\rowcolor{gray!6}   &amp; P(select) &amp; 0.67 &amp; 0.19 &amp; 0.04 &amp; 0 &amp; 0.01 &amp; 0 &amp; 0.0865\\
+\rowcolor{gray!6}   &amp; P(select) &amp; 0.67 &amp; 0.19 &amp; 0.05 &amp; 0 &amp; 0.01 &amp; 0 &amp; 0.0827\\
 
 \rowcolor{gray!6}   &amp; \% of patients &amp; 39 &amp; 32 &amp; 20 &amp; 6 &amp; 3 &amp; 0 &amp; \\
 
-\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 9: TD25 @-1} &amp; Mean number of patients &amp; 10.22 &amp; 8.25 &amp; 5.15 &amp; 1.62 &amp; 0.72 &amp; 0.04 &amp; \\
+\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 9: TD25 @-1} &amp; Mean number of patients &amp; 10.19 &amp; 8.43 &amp; 5.27 &amp; 1.6 &amp; 0.68 &amp; 0.07 &amp; \\
 \cmidrule{1-9}
  &amp; True DLT rate &amp; 0.12 &amp; 0.25 &amp; 0.4 &amp; 0.5 &amp; 0.45 &amp; 0.55 &amp; \\
 
- &amp; P(select) &amp; 0.22 &amp; 0.53 &amp; 0.19 &amp; 0.02 &amp; 0.03 &amp; 0 &amp; 0.0065\\
+ &amp; P(select) &amp; 0.23 &amp; 0.52 &amp; 0.2 &amp; 0.02 &amp; 0.02 &amp; 0 &amp; 0.0074\\
 
- &amp; \% of patients &amp; 18 &amp; 35 &amp; 29 &amp; 11 &amp; 6 &amp; 1 &amp; \\
+ &amp; \% of patients &amp; 18 &amp; 36 &amp; 29 &amp; 11 &amp; 6 &amp; 1 &amp; \\
 
-\multirow{-4}{*}{\centering\arraybackslash 10: TD25 @0} &amp; Mean number of patients &amp; 5.25 &amp; 10.49 &amp; 8.73 &amp; 3.32 &amp; 1.84 &amp; 0.3 &amp; \\
+\multirow{-4}{*}{\centering\arraybackslash 10: TD25 @0} &amp; Mean number of patients &amp; 5.24 &amp; 10.64 &amp; 8.82 &amp; 3.16 &amp; 1.85 &amp; 0.24 &amp; \\
 \cmidrule{1-9}
 \rowcolor{gray!6}   &amp; True DLT rate &amp; 0.09 &amp; 0.12 &amp; 0.25 &amp; 0.45 &amp; 0.4 &amp; 0.5 &amp; \\
 
-\rowcolor{gray!6}   &amp; P(select) &amp; 0.02 &amp; 0.2 &amp; 0.54 &amp; 0.09 &amp; 0.15 &amp; 0.01 &amp; 0\\
+\rowcolor{gray!6}   &amp; P(select) &amp; 0.02 &amp; 0.2 &amp; 0.55 &amp; 0.09 &amp; 0.14 &amp; 0.01 &amp; 4e-04\\
 
-\rowcolor{gray!6}   &amp; \% of patients &amp; 4 &amp; 20 &amp; 34 &amp; 21 &amp; 18 &amp; 3 &amp; \\
+\rowcolor{gray!6}   &amp; \% of patients &amp; 4 &amp; 20 &amp; 34 &amp; 21 &amp; 17 &amp; 3 &amp; \\
 
-\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 11: TD25 @1} &amp; Mean number of patients &amp; 1.16 &amp; 6.41 &amp; 11.09 &amp; 6.95 &amp; 5.72 &amp; 1.01 &amp; \\
+\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 11: TD25 @1} &amp; Mean number of patients &amp; 1.16 &amp; 6.43 &amp; 11.07 &amp; 6.83 &amp; 5.6 &amp; 1.07 &amp; \\
 \cmidrule{1-9}
  &amp; True DLT rate &amp; 0.06 &amp; 0.09 &amp; 0.12 &amp; 0.25 &amp; 0.15 &amp; 0.45 &amp; \\
 
- &amp; P(select) &amp; 0 &amp; 0.01 &amp; 0.08 &amp; 0.43 &amp; 0.33 &amp; 0.14 &amp; 0\\
+ &amp; P(select) &amp; 0 &amp; 0.01 &amp; 0.08 &amp; 0.44 &amp; 0.33 &amp; 0.14 &amp; 2e-04\\
 
- &amp; \% of patients &amp; 2 &amp; 11 &amp; 16 &amp; 30 &amp; 23 &amp; 18 &amp; \\
+ &amp; \% of patients &amp; 1 &amp; 11 &amp; 16 &amp; 30 &amp; 24 &amp; 18 &amp; \\
 
-\multirow{-4}{*}{\centering\arraybackslash 12: TD25 @2a} &amp; Mean number of patients &amp; 0.51 &amp; 3.8 &amp; 5.25 &amp; 10.17 &amp; 7.74 &amp; 5.99 &amp; \\
+\multirow{-4}{*}{\centering\arraybackslash 12: TD25 @2a} &amp; Mean number of patients &amp; 0.48 &amp; 3.78 &amp; 5.24 &amp; 10.1 &amp; 7.9 &amp; 6.07 &amp; \\
 \cmidrule{1-9}
 \rowcolor{gray!6}   &amp; True DLT rate &amp; 0.03 &amp; 0.06 &amp; 0.09 &amp; 0.35 &amp; 0.25 &amp; 0.4 &amp; \\
 
-\rowcolor{gray!6}   &amp; P(select) &amp; 0 &amp; 0 &amp; 0.15 &amp; 0.3 &amp; 0.43 &amp; 0.12 &amp; 0\\
+\rowcolor{gray!6}   &amp; P(select) &amp; 0 &amp; 0 &amp; 0.15 &amp; 0.31 &amp; 0.43 &amp; 0.11 &amp; 0\\
 
-\rowcolor{gray!6}   &amp; \% of patients &amp; 1 &amp; 10 &amp; 17 &amp; 29 &amp; 28 &amp; 14 &amp; \\
+\rowcolor{gray!6}   &amp; \% of patients &amp; 1 &amp; 11 &amp; 18 &amp; 30 &amp; 28 &amp; 14 &amp; \\
 
-\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 13: TD25 @2b} &amp; Mean number of patients &amp; 0.23 &amp; 3.43 &amp; 5.72 &amp; 9.73 &amp; 9.26 &amp; 4.71 &amp; \\
+\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 13: TD25 @2b} &amp; Mean number of patients &amp; 0.25 &amp; 3.5 &amp; 5.9 &amp; 9.82 &amp; 9.14 &amp; 4.54 &amp; \\
 \cmidrule{1-9}
  &amp; True DLT rate &amp; 0.01 &amp; 0.03 &amp; 0.06 &amp; 0.12 &amp; 0.09 &amp; 0.25 &amp; \\
 
- &amp; P(select) &amp; 0 &amp; 0 &amp; 0 &amp; 0.12 &amp; 0.08 &amp; 0.8 &amp; 0\\
+ &amp; P(select) &amp; 0 &amp; 0 &amp; 0 &amp; 0.13 &amp; 0.09 &amp; 0.78 &amp; 0\\
 
  &amp; \% of patients &amp; 0 &amp; 10 &amp; 11 &amp; 19 &amp; 16 &amp; 43 &amp; \\
 
-\multirow{-4}{*}{\centering\arraybackslash 14: TD25 @3} &amp; Mean number of patients &amp; 0.09 &amp; 3.12 &amp; 3.45 &amp; 5.7 &amp; 5.01 &amp; 13.27 &amp; \\
+\multirow{-4}{*}{\centering\arraybackslash 14: TD25 @3} &amp; Mean number of patients &amp; 0.1 &amp; 3.13 &amp; 3.51 &amp; 5.88 &amp; 5.06 &amp; 13.13 &amp; \\
 \cmidrule{1-9}
 \rowcolor{gray!6}   &amp; True DLT rate &amp; 0.05 &amp; 0.1 &amp; 0.15 &amp; 0.25 &amp; 0.2 &amp; 0.3 &amp; \\
 
-\rowcolor{gray!6}   &amp; P(select) &amp; 0 &amp; 0.02 &amp; 0.12 &amp; 0.31 &amp; 0.28 &amp; 0.27 &amp; 5e-04\\
+\rowcolor{gray!6}   &amp; P(select) &amp; 0 &amp; 0.02 &amp; 0.12 &amp; 0.32 &amp; 0.27 &amp; 0.26 &amp; 2e-04\\
 
-\rowcolor{gray!6}   &amp; \% of patients &amp; 2 &amp; 13 &amp; 18 &amp; 27 &amp; 22 &amp; 18 &amp; \\
+\rowcolor{gray!6}   &amp; \% of patients &amp; 2 &amp; 13 &amp; 19 &amp; 27 &amp; 22 &amp; 18 &amp; \\
 
-\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 15: Equal steps in DLT rate} &amp; Mean number of patients &amp; 0.51 &amp; 3.99 &amp; 5.83 &amp; 8.56 &amp; 7.07 &amp; 5.77 &amp; \\
+\rowcolor{gray!6}  \multirow{-4}{*}{\centering\arraybackslash 15: Equal steps in DLT rate} &amp; Mean number of patients &amp; 0.54 &amp; 4.02 &amp; 5.93 &amp; 8.56 &amp; 6.89 &amp; 5.75 &amp; \\
 \cmidrule{1-9}
  &amp; True DLT rate &amp; 0.5 &amp; 0.6 &amp; 0.65 &amp; 0.75 &amp; 0.7 &amp; 0.8 &amp; \\
 
- &amp; P(select) &amp; 0.26 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0.735\\
+ &amp; P(select) &amp; 0.27 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 0.7273\\
 
- &amp; \% of patients &amp; 56 &amp; 26 &amp; 15 &amp; 2 &amp; 0 &amp; 0 &amp; \\
+ &amp; \% of patients &amp; 56 &amp; 27 &amp; 15 &amp; 2 &amp; 0 &amp; 0 &amp; \\
 
-\multirow{-4}{*}{\centering\arraybackslash 16: All  toxic} &amp; Mean number of patients &amp; 9.14 &amp; 4.26 &amp; 2.4 &amp; 0.37 &amp; 0.05 &amp; 0 &amp; \\
+\multirow{-4}{*}{\centering\arraybackslash 16: All  toxic} &amp; Mean number of patients &amp; 9.01 &amp; 4.28 &amp; 2.39 &amp; 0.38 &amp; 0.05 &amp; 0 &amp; \\
 \bottomrule
 \end{tabular}
 \end{table}</code></pre>
