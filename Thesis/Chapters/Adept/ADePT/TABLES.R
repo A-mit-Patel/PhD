@@ -49,6 +49,27 @@ Ndata <- rbind(
   c(fit2_s8$max.n.count, fit2_s8$summary.trialsize[6], fit2_s8$summary.trialsize[4])
 )
 
+# Kristian recommended using percentages instead of raw numbers so will do that 
+
+Ndata <- rbind(
+  c(fit_s1$max.n.count/100, fit_s1$summary.trialsize[6], fit_s1$summary.trialsize[4]),
+  c(fit_s2$max.n.count/100, fit_s2$summary.trialsize[6], fit_s2$summary.trialsize[4]),
+  c(fit_s3$max.n.count/100, fit_s3$summary.trialsize[6], fit_s3$summary.trialsize[4]),
+  c(fit_s4$max.n.count/100, fit_s4$summary.trialsize[6], fit_s4$summary.trialsize[4]),
+  c(fit_s5$max.n.count/100, fit_s5$summary.trialsize[6], fit_s5$summary.trialsize[4]),
+  c(fit_s6$max.n.count/100, fit_s6$summary.trialsize[6], fit_s6$summary.trialsize[4]),
+  c(fit_s7$max.n.count/100, fit_s7$summary.trialsize[6], fit_s7$summary.trialsize[4]),
+  c(fit_s8$max.n.count/100, fit_s8$summary.trialsize[6], fit_s8$summary.trialsize[4]), 
+  c(fit2_s1$max.n.count/100, fit2_s1$summary.trialsize[6], fit2_s1$summary.trialsize[4]),
+  c(fit2_s2$max.n.count/100, fit2_s2$summary.trialsize[6], fit2_s2$summary.trialsize[4]),
+  c(fit2_s3$max.n.count/100, fit2_s3$summary.trialsize[6], fit2_s3$summary.trialsize[4]),
+  c(fit2_s4$max.n.count/100, fit2_s4$summary.trialsize[6], fit2_s4$summary.trialsize[4]),
+  c(fit2_s5$max.n.count/100, fit2_s5$summary.trialsize[6], fit2_s5$summary.trialsize[4]),
+  c(fit2_s6$max.n.count/100, fit2_s6$summary.trialsize[6], fit2_s6$summary.trialsize[4]),
+  c(fit2_s7$max.n.count/100, fit2_s7$summary.trialsize[6], fit2_s7$summary.trialsize[4]),
+  c(fit2_s8$max.n.count/100, fit2_s8$summary.trialsize[6], fit2_s8$summary.trialsize[4])
+)
+
 library(dplyr)
 Ndata <- Ndata %>%  
   data.frame() %>% 
@@ -57,7 +78,7 @@ Ndata <- Ndata %>%
                       '9: TD25 @-1', '10: TD25 @0', '11: TD25 @1', '12: TD25 @2a',
                       '13: TD25 @2b', '14: TD25 @3', '15: Equal steps', '16: All toxic'),
          Mean = round(Mean, digits = 2)) %>% 
-  select(Scenario, 'Max no. of patients' = Max., 'No. of times max reached' = V1,
+  select(Scenario, 'Max no. of patients' = Max., '% max reached' = V1,
          'Mean no. of patients' = Mean)
   
 temp3 <- kable(Ndata, "latex", booktabs = T, linesep = "", align = "c", 

@@ -62,7 +62,7 @@ wages.tait = function(y, z, n, p.skel, q.skel, n.ar, comb.curr = NULL,
                       mprior.tox = NULL, mprior.eff = NULL, 
                       safety.confidence = 0.95, futility.confidence = 0.95,
                       check.tox.at.dose.level = 1, 
-                      lowest.is.control = FALSE) {
+                      lowest.is.placebo = FALSE, placebo.rand.prob = NULL) {
   
   # y, number of toxicity events at each dose
   # z, number of efficacy events at each dose
@@ -83,6 +83,11 @@ wages.tait = function(y, z, n, p.skel, q.skel, n.ar, comb.curr = NULL,
   #   so that toxicity is nearly impossible, you will want to check for excess
   #   tox at dose 2 instead (lest you short-circuit the early stopping criteria)
   #   This is KB's embellishment.
+  
+  # lowest.is.placebo is an indicator to identify if the lowest dose is set to 
+  #   be a control/placebo dose 
+  # placebo.rand.prob is the probability of allocating to the placebo/control 
+  #   dose level
   
   comb.curr = NULL
   
@@ -141,13 +146,22 @@ wages.tait = function(y, z, n, p.skel, q.skel, n.ar, comb.curr = NULL,
                             z, n, j)$value / marginal.eff[meff.sel]; 
   }
   
+  # determine set of safe doses based on toxicity 
   aset = which(ptox.hat <= tul)
   if(length(aset)==0) { 
     aset = which.min(ptox.hat) 
   }
+  
   peff.hat.aset = rep(0, ncomb)
   peff.hat.aset[aset] = peff.hat[aset]
+  # deterimine randomisation probabilities based on efficacy 
   ar.prob = peff.hat.aset / sum(peff.hat.aset)
+  
+  if(lowest.is.placebo == TRUE){
+    ar.prob = c(placebo.rand.prob, 
+                ar.prob[-1]*(1-placebo.rand.prob)/sum(ar.prob[-1]))
+  }
+
   
   if(length(aset) == 1) {
     # The best and recommended dose can only be this
@@ -228,7 +242,8 @@ wages.tait = function(y, z, n, p.skel, q.skel, n.ar, comb.curr = NULL,
 wt.sim.one <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort, 
                        start.comb, n.ar, mprior.tox = NULL, mprior.eff = NULL, 
                        safety.confidence = 0.95, futility.confidence = 0.95,
-                       check.tox.at.dose.level = 1) {
+                       check.tox.at.dose.level = 1,
+                       lowest.is.placebo = FALSE, placebo.rand.prob = NULL) {
   
   # p0, true toxicity probabilities
   # q0, true efficacy probabilities
@@ -284,7 +299,9 @@ wt.sim.one <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort,
                                mprior.tox = mprior.tox, mprior.eff = mprior.eff,
                                safety.confidence = safety.confidence, 
                                futility.confidence = futility.confidence,
-                               check.tox.at.dose.level = check.tox.at.dose.level
+                               check.tox.at.dose.level = check.tox.at.dose.level,
+                               lowest.is.placebo = lowest.is.placebo, 
+                               placebo.rand.prob = placebo.rand.prob
     )
     # cat('ToxSkel', cohort.update$ToxSkeleton, '\n')
     # cat('EffSkel', cohort.update$EffSkeleton, '\n')
@@ -321,7 +338,8 @@ wt.sim <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort,
                    safety.confidence = 0.95, futility.confidence = 0.95,
                    check.tox.at.dose.level = 1, 
                    verbose = TRUE, really.verbose = FALSE,
-                   full_output = FALSE) {
+                   full_output = FALSE, 
+                   lowest.is.placebo = FALSE, placebo.rand.prob = NULL) {
   
   # p0, true toxicity probabilities
   # q0, true efficacy probabilities
@@ -347,6 +365,8 @@ wt.sim <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort,
   #   tox at dose 2 instead (lest you short-circuit the early stopping criteria)
   #   This is KB's embellishment.
   
+  StartTime = Sys.time()
+  
   # if a single ordering is inputed as a vector, convert it to a matrix
   if(is.vector(p.skel)) p.skel = t(as.matrix(p.skel));
   # if a single ordering is inputed as a vector, convert it to a matrix
@@ -368,7 +388,9 @@ wt.sim <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort,
                      mprior.eff = mprior.eff,
                      safety.confidence = safety.confidence, 
                      futility.confidence = futility.confidence,
-                     check.tox.at.dose.level = check.tox.at.dose.level)
+                     check.tox.at.dose.level = check.tox.at.dose.level,
+                     lowest.is.placebo = lowest.is.placebo, 
+                     placebo.rand.prob = placebo.rand.prob)
     if(result$stop == 0) {
       comb.select[i,] = result$comb.select
     } else {
@@ -382,6 +404,7 @@ wt.sim <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort,
     eff.skel[i, ] <- result$EffSkel
     final.eff.skel[result$FinalEffSkel] <- final.eff.skel[result$FinalEffSkel]+1
     nstop <- nstop + result$stop
+
   }
   
   if(really.verbose) {
@@ -424,7 +447,8 @@ wt.sim <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort,
     CohortToxSkel = tox.skel,
     ProbFinalToxSkel = final.tox.skel / ntrial,
     CohortEffSkel = eff.skel,
-    ProbFinalEffSkel = final.eff.skel / ntrial
+    ProbFinalEffSkel = final.eff.skel / ntrial,
+    SimulationTime = Sys.time()- StartTime
   )
   
   # Full output includes patients
@@ -440,6 +464,7 @@ wt.sim <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort,
 }
 # Nolan originally called this bpocrm.sim
 bpocrm.sim = wt.sim
+ 
 
 
 

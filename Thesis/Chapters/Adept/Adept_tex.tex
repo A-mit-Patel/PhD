@@ -2,7 +2,7 @@
 
 \chapter{Implementing the PO-TITE-CRM trial design into ADePT-DDR} % Main chapter title
 
-\label{Adept} % For referencing this chapter elsewhere, use \ref{Chapter2}
+\label{Adept} % For referencing this chapter elsewhere, use \ref{Adept}
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
@@ -417,24 +417,24 @@ The percentage of patients treated at the TD25 ranges between 23\% and 43\% for 
 	\resizebox{\linewidth}{!}{
 		\begin{tabular}[t]{cccc}
 			\toprule
-			Scenario & Max no. of patients & No. of times max reached & Mean no. of patients\\
-			\midrule
-			\rowcolor{gray!6}  1: TD25 @-1 & 60 & 21 & 26.38\\
-			2: TD25 @0 & 60 & 8 & 29.97\\
-			\rowcolor{gray!6}  3: TD25 @1 & 60 & 5 & 32.01\\
-			4: TD25 @2a & 60 & 12 & 33.22\\
-			\rowcolor{gray!6}  5: TD25 @2b & 60 & 6 & 33.60\\
-			6: TD25 @3 & 60 & 2 & 30.92\\
-			\rowcolor{gray!6}  7: Equal steps & 60 & 1 & 31.74\\
-			8: All toxic & 54 & 1 & 16.14\\
-			\rowcolor{gray!6}  9: TD25 @-1 & 60 & 17 & 26.23\\
-			10: TD25 @0 & 60 & 11 & 29.95\\
-			\rowcolor{gray!6}  11: TD25 @1 & 60 & 6 & 32.15\\
-			12: TD25 @2a & 60 & 7 & 33.56\\
-			\rowcolor{gray!6}  13: TD25 @2b & 60 & 3 & 33.16\\
-			14: TD25 @3 & 60 & 8 & 30.81\\
-			\rowcolor{gray!6}  15: Equal steps & 60 & 2 & 31.69\\
-			16: All toxic & 51 & 1 & 16.11\\
+				Scenario & Max no. of patients & \% max reached & Mean no. of patients\\
+				\midrule
+				\cellcolor{gray!6}{1: TD25 @-1} & \cellcolor{gray!6}{60} & \cellcolor{gray!6}{0.21} & \cellcolor{gray!6}{26.38}\\
+				2: TD25 @0 & 60 & 0.08 & 29.97\\
+				\cellcolor{gray!6}{3: TD25 @1} & \cellcolor{gray!6}{60} & \cellcolor{gray!6}{0.05} & \cellcolor{gray!6}{32.01}\\
+				4: TD25 @2a & 60 & 0.12 & 33.22\\
+				\cellcolor{gray!6}{5: TD25 @2b} & \cellcolor{gray!6}{60} & \cellcolor{gray!6}{0.06} & \cellcolor{gray!6}{33.60}\\
+				6: TD25 @3 & 60 & 0.02 & 30.92\\
+				\cellcolor{gray!6}{7: Equal steps} & \cellcolor{gray!6}{60} & \cellcolor{gray!6}{0.01} & \cellcolor{gray!6}{31.74}\\
+				8: All toxic & 54 & 0.01 & 16.14\\
+				\cellcolor{gray!6}{9: TD25 @-1} & \cellcolor{gray!6}{60} & \cellcolor{gray!6}{0.17} & \cellcolor{gray!6}{26.24}\\
+				10: TD25 @0 & 60 & 0.11 & 29.95\\
+				\cellcolor{gray!6}{11: TD25 @1} & \cellcolor{gray!6}{60} & \cellcolor{gray!6}{0.06} & \cellcolor{gray!6}{32.15}\\
+				12: TD25 @2a & 60 & 0.07 & 33.56\\
+				\cellcolor{gray!6}{13: TD25 @2b} & \cellcolor{gray!6}{60} & \cellcolor{gray!6}{0.03} & \cellcolor{gray!6}{33.16}\\
+				14: TD25 @3 & 60 & 0.08 & 30.81\\
+				\cellcolor{gray!6}{15: Equal steps} & \cellcolor{gray!6}{60} & \cellcolor{gray!6}{0.02} & \cellcolor{gray!6}{31.69}\\
+				16: All toxic & 51 & 0.01 & 16.11\\
 			\bottomrule
 	\end{tabular}}
 \end{table}
@@ -752,11 +752,11 @@ There are various features in this trial design that impact how it performs. The
 	\includegraphics[width=\textwidth]{Adept-SimsOrder2}
 \end{figure}
 
-The TITE-CRM performs similarly to our original design for scenarios 1-8 where 2a is assumed less toxic than 2b (Table \ref{tab_adept:OCorder1}). We see increases in probability selection for scenarios 4 and 5 where the target dose is at 2a and 2b respectively. This increase in performance can be attributed to the fact that the partial ordering no longer exists as we have assumed an ordering. The lower selection probabilities for the PO-TITE-CRM can be seen as the price to pay for the uncertainty of not knowing the order of 2a and 2b. However, the TITE-CRM underperforms in scenarios 9-16 where 2a is assumed more toxic than 2b. Specifically, scenarios 12 and 13 where it fails to identify the TD25 the majority of the time. 
+The TITE-CRM performs similarly to our original design for scenarios 1-8 where 2a is assumed less toxic than 2b (Table \ref{tab_adept:OCorder1}). Compared to the PO-TITE design we see increases in probability selection for scenarios 4 and 5 where the target dose is at 2a and 2b respectively. This increase in performance can be attributed to the fact that the partial ordering no longer exists as we have assumed an ordering. The lower selection probabilities for the PO-TITE-CRM can be seen as the price to pay for the uncertainty of not knowing the order of 2a and 2b. However, the TITE-CRM underperforms in scenarios 9-16 where 2a is assumed more toxic than 2b. Specifically, scenarios 12 and 13 where it fails to identify the TD25 the majority of the time. 
 
 The PO-CRM design without a TITE component also performs similarly except for scenarios 1, 8, 9 and 16 where the trial stops more regularly for excess toxicity at the lowest dose. This would be because patients complete the full follow-up window before the next dose allocation decision is made. In a TITE setting a new cohort could be recruited before patients in previous cohorts experience a DLT. The main difference between these designs is the trial duration. Without the TITE component the trial duration is significantly longer, with the average length ranging from 70 to 195 months compared to 39 to 71 months for PO-TITE-CRM. 
 
-The design with a fixed sample size of 30 performs is comparable to our design with the sample size of 60 and the consensus stopping rule. With a sample size of 30 selection probabilities are only 2-5\% lower. For the design with 60 patients, we see much improved operating characteristics with selection probabilities ranging from 31\% to 85\% for the various scenarios. Even though our original design specifies a sample size of 60 we rarely ever reach it as we often stop for consensus hence why this design performs better. The trade-off here is trial duration. Recruitment and follow-up under the constraints of these simulations will take much longer compared to our specification which is not ideal for an early-phase trial. Originally our design for a sample size of 30 but as the clinicians wanted a dose expansion cohort we opted to use the consensus rule to ensure a minimum number of patients would be treated at the TD25. 
+The design with a fixed sample size of 30 performs is comparable to our design with the sample size of 60 and the consensus stopping rule. With a sample size of 30 selection probabilities are only 2-5\% lower. For the design with 60 patients, we see much improved operating characteristics with selection probabilities ranging from 31\% to 85\% for the various scenarios. Even though our original design specifies a sample size of 60 we rarely ever reach it as we often stop for consensus hence why this design performs better. The trade-off here is trial duration. Recruitment and follow-up under the constraints of these simulations will take much longer compared to our specification which is not ideal for an early-phase trial. Originally our design had a fixed sample size of 30 but as the clinicians wanted a dose expansion cohort we opted to use the consensus rule to ensure a minimum number of patients would be treated at the TD25. 
 
 For the design with no cohorts, or cohort size of one, we see somewhat comparable performance to that of the PO-TITE-CRM design. The design performs similarly for scenarios where the TD25 is at the lowest or highest dose level but underperforms for the more complex scenarios in terms of selection probabilities. This discrepancy in performance may be related to how the simulations recruit patients into the trial and the large DLT follow-up period. Meaning more frequent dose allocation decisions are being made each with less available information. This also leads to the no cohorts design having a longer duration. Patients entered into the trial in cohorts of three won't having to wait the full minimum follow-up period between patients within the cohort.
 
@@ -771,9 +771,9 @@ For the design with no cohorts, or cohort size of one, we see somewhat comparabl
 
 The PO-CRM and PO-TITE-CRM designs offer solutions to the issue of partial ordering where the order of the treatments is only partially known. The original methodology details that this issue commonly arises in trials of multiple agents, where each drug individually may follow the monotonicity assumption but when combined at certain dose levels this may not hold. This issue is typically dealt with by fixing the dose of one of the agents and escalating in the other or escalating in both agents simultaneously. This means certain drug combinations that are clinically relevant may not be investigated or even considered.  
  
-Here we have shown that these issues can also arise in other situations. Even though the ADePT-DDR trial uses multiple agents the issue of partial ordering still occurs due to the varying treatment dose and schedule for one of its agents AZD6738. Implementing the PO-TITE-CRM design allowed us to deal with this issue effectively. There may be other factors or variables in single-agent dose-finding trials that would lead to the issue of partial ordering and would warrant the use of either PO-CRM or PO-TITE-CRM. The small literature review conducted highlighted this may be the first instance of the PO-TITE-CRM design being applied. It is important to note that although this methodology takes into account all the various orderings the main aim is to identify the TD and does not attempt to identify the most correct order. 
+Here we have shown that these issues can also arise in other situations. Even though the ADePT-DDR trial uses multiple agents the issue of partial ordering still occurs due to the varying treatment dose and schedule for one of its agents AZD6738. Implementing the PO-TITE-CRM design allowed us to deal with this issue effectively. There may be other factors or variables in single-agent dose-finding trials that would lead to the issue of partial ordering and would warrant the use of either PO-CRM or PO-TITE-CRM. The small literature review conducted highlighted this may be the first instance of the PO-TITE-CRM design being applied. It is important to note that although this methodology takes into account all the various orderings the main aim is to identify the TD and does not attempt to identify the order that is more correct. 
 
-Compared to other CRM based designs only a few additional pieces of information are required to implement the PO-CRM design. Most importantly is the number of toxicity orderings and prior probabilities for the orders. Dependent on how many dose combinations are available it may not be feasible to investigate all combinations and all orderings. Careful thought and consideration should be given to the combinations and orderings selected which would require input from all relevant investigators. In terms of priors for orderings if no prior information is available all orders should be treated as equally likely to occur. Extending this design to the PO-TITE-CRM requires a fit for purpose weight function and is applied similarly to the TITE-CRM methodology. There is an R package available with functions that can be used to run and simulate a PO-CRM trial. These functions were extended to included weighted dose toxicity models as described in this chapter to implement PO-TITE-CRM into ADePT-DDR. The lack of available software for PO-TITE-CRM specifically may be one of the reasons for its lack of use.
+Compared to other CRM based designs only a few additional pieces of information are required to implement the PO-CRM design. More importantly is the number of toxicity orderings and prior probabilities for the orders. Dependent on how many dose combinations are available it may not be feasible to investigate all combinations and all orderings. Careful thought and consideration should be given to the combinations and orderings selected which would require input from all relevant investigators. In terms of priors for orderings if no prior information is available all orders should be treated as equally likely to occur. Extending this design to the PO-TITE-CRM requires a fit for purpose weight function and is applied similarly to the TITE-CRM methodology. There is an R package available with functions that can be used to run and simulate a PO-CRM trial. These functions were extended to included weighted dose toxicity models as described in this chapter to implement PO-TITE-CRM into ADePT-DDR. The lack of available software for PO-TITE-CRM specifically may be one of the reasons for its lack of use.
 
 In terms of ADePT-DDR, dose combinations were decided upon by the clinical investigators. The issue of partial ordering was due to the dose-levels 2a and 2b as such this methodology was employed to deal with that scenario. Meaning that this is a very simple example of partial ordering as we only have two possible orderings and six dose levels. The necessity of implementing this methodology was discussed and whether or not adopting an easier solution by simply altering the dose levels would have been better. Ultimately, the dose levels selected by the clinicians were deemed the most relevant with the TD25 likely to be one of these doses.     
  

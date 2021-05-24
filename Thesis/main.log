@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.11.27)  21 FEB 2021 16:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.11.27)  24 MAY 2021 21:19
 entering extended mode
 **./main.tex
 (main.tex
@@ -953,7 +953,8 @@ Package hyperref Info: Option `breaklinks' set `true' on input line 100.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
  (main.aux
-(Chapters/Chapter1/Chapter1.aux) (Chapters/Adept/Adept_tex.aux))
+(Chapters/Chapter1/Chapter1.aux) (Chapters/Adept/Adept_tex.aux)
+(Chapters/WT/WT_tex.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 100.
@@ -1351,21 +1352,21 @@ Overfull \vbox (3.33585pt too high) has occurred while \output is active []
 ]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 209.
- (main.toc)
+ (main.toc
+1: section
+[7])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
-
-1: section
-[7] [8
-
-] (main.lof)
+ [8] (main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
 
 1: section
-[9] [10
+[9
+
+] [10
 
 ] (main.lot)
 \tf@lot=\write7
@@ -1410,7 +1411,7 @@ Overfull \hbox (5.0661pt too wide) in paragraph at lines 28--29
 ponse model
  []
 
-<Figures/Adept-DoseExample.pdf, id=221, 160.6803pt x 146.4672pt>
+<Figures/Adept-DoseExample.pdf, id=246, 160.6803pt x 146.4672pt>
 File: Figures/Adept-DoseExample.pdf Graphic file (type pdf)
 <use Figures/Adept-DoseExample.pdf>
 Package pdftex.def Info: Figures/Adept-DoseExample.pdf  used on input line 34.
@@ -1437,7 +1438,7 @@ Overfull \hbox (7.31252pt too wide) in paragraph at lines 155--155
  []|\T1/ppl/b/n/12 Duration 
  []
 
-<Figures/Adept-DoseCombos.pdf, id=349, 491.91779pt x 570.21031pt>
+<Figures/Adept-DoseCombos.pdf, id=374, 491.91779pt x 570.21031pt>
 File: Figures/Adept-DoseCombos.pdf Graphic file (type pdf)
 <use Figures/Adept-DoseCombos.pdf>
 Package pdftex.def Info: Figures/Adept-DoseCombos.pdf  used on input line 172.
@@ -1457,7 +1458,7 @@ lation/de-escalation
  []
 
 [18]
-<Figures/Adept-WeightFunction.pdf, id=390, 844.15375pt x 597.23125pt>
+<Figures/Adept-WeightFunction.pdf, id=415, 844.15375pt x 597.23125pt>
 File: Figures/Adept-WeightFunction.pdf Graphic file (type pdf)
 <use Figures/Adept-WeightFunction.pdf>
 Package pdftex.def Info: Figures/Adept-WeightFunction.pdf  used on input line 2
@@ -1471,13 +1472,13 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [23] [24] [25] [26] [27]
-<Figures/Adept-DLTRates.pdf, id=457, 844.15375pt x 597.23125pt>
+<Figures/Adept-DLTRates.pdf, id=482, 844.15375pt x 597.23125pt>
 File: Figures/Adept-DLTRates.pdf Graphic file (type pdf)
 <use Figures/Adept-DLTRates.pdf>
 Package pdftex.def Info: Figures/Adept-DLTRates.pdf  used on input line 462.
 (pdftex.def)             Requested size: 412.56499pt x 291.88948pt.
  [28 <./Figures/Adept-DLTRates.pdf>] [29]
-<Figures/Adept-SimsOrder1.pdf, id=482, 844.15375pt x 597.23125pt>
+<Figures/Adept-SimsOrder1.pdf, id=507, 844.15375pt x 597.23125pt>
 File: Figures/Adept-SimsOrder1.pdf Graphic file (type pdf)
 <use Figures/Adept-SimsOrder1.pdf>
 Package pdftex.def Info: Figures/Adept-SimsOrder1.pdf  used on input line 745.
@@ -1486,7 +1487,7 @@ Package pdftex.def Info: Figures/Adept-SimsOrder1.pdf  used on input line 745.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/Adept-SimsOrder2.pdf, id=485, 844.15375pt x 597.23125pt>
+<Figures/Adept-SimsOrder2.pdf, id=510, 844.15375pt x 597.23125pt>
 File: Figures/Adept-SimsOrder2.pdf Graphic file (type pdf)
 <use Figures/Adept-SimsOrder2.pdf>
 Package pdftex.def Info: Figures/Adept-SimsOrder2.pdf  used on input line 752.
@@ -1495,104 +1496,129 @@ Package pdftex.def Info: Figures/Adept-SimsOrder2.pdf  used on input line 752.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [30] [31] [32] [33 <./Figures/Adept-SimsOrder1.pdf>] [34 <./Figures/Adept-SimsO
-rder2.pdf>] [35] [36] [37] [38]) [39] [40
+rder2.pdf>] [35] [36] [37] [38]) [39]
+\openout2 = `Chapters/WT/WT_tex.aux'.
+
+ (Chapters/WT/WT_tex.tex [40
+
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 295.
+Chapter 3.
+1: section
+[41] [42]) [43] [44
 
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
+]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 296.
+
+ ("C:\Program Files\MiKTeX 2.9\tex/latex/base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (2.0268pt too wide) in paragraph at lines 295--295
+Overfull \hbox (2.0268pt too wide) in paragraph at lines 296--296
 \T1/ppl/m/n/12 Avail-able: [][]$\T1/cmtt/m/n/12 https : / / www . cancerresearc
 huk . org / health -[] professional /
  []
 
 
-Overfull \hbox (7.04141pt too wide) in paragraph at lines 295--295
+Overfull \hbox (7.04141pt too wide) in paragraph at lines 296--296
 \T1/ppl/m/n/12 pp. 949955, Mar. 18, 2000, \T1/ppl/m/sc/12 issn\T1/ppl/m/n/12 :
  0140-6736. \T1/ppl/m/sc/12 doi\T1/ppl/m/n/12 : [][]$\T1/cmtt/m/n/12 10 . 1016 
 / S0140 -[] 6736(00 )
  []
 
 
-Overfull \hbox (1.15176pt too wide) in paragraph at lines 295--295
+Overfull \hbox (1.15176pt too wide) in paragraph at lines 296--296
 \T1/cmtt/m/n/12 90011 -[] 4$[][]\T1/ppl/m/n/12 . [On-line]. Avail-able: [][]$\T
 1/cmtt/m/n/12 http : / / www . sciencedirect . com / science /
  []
 
 1: section
-[41]
-Overfull \hbox (5.08871pt too wide) in paragraph at lines 295--295
+[45]
+Overfull \hbox (5.08871pt too wide) in paragraph at lines 296--296
 []\T1/ppl/m/n/12 M. J. O'Connor,   Tar-get-ing the DNA Dam-age Re-sponse in Ca
 n-cer, \T1/ppl/m/it/12 Molec-
  []
 
 
-Overfull \hbox (2.08783pt too wide) in paragraph at lines 295--295
+Overfull \hbox (2.08783pt too wide) in paragraph at lines 296--296
 []\T1/ppl/m/n/12 A. Chalmers,   Sci-ence in Fo-cus: Com-bin-ing Ra-dio-ther-ap
 y with In-hibitors
  []
 
 
-Overfull \hbox (6.1905pt too wide) in paragraph at lines 295--295
+Overfull \hbox (6.1905pt too wide) in paragraph at lines 296--296
 \T1/ppl/m/n/12 A Prac-ti-cal De-sign for Phase 1 Clin-i-cal Tri-als in Can-cer,
  \T1/ppl/m/it/12 Bio-met-rics\T1/ppl/m/n/12 , vol. 46,
  []
 
-[42] [43]
-Overfull \hbox (13.15598pt too wide) in paragraph at lines 295--295
+[46] [47]
+Overfull \hbox (13.15598pt too wide) in paragraph at lines 296--296
 \T1/ppl/m/n/12 141, Jan. 15, 2013, \T1/ppl/m/sc/12 issn\T1/ppl/m/n/12 : 1097-02
 58. \T1/ppl/m/sc/12 doi\T1/ppl/m/n/12 : [][]$\T1/cmtt/m/n/12 10 . 1002 / sim . 
 5491$[][]\T1/ppl/m/n/12 . pmid: [][]$\T1/cmtt/m/n/12 22806898$[][]\T1/ppl/m/n/1
 2 . 
  []
 
-[44]
-Overfull \hbox (1.39478pt too wide) in paragraph at lines 295--295
+[48]
+Overfull \hbox (1.39478pt too wide) in paragraph at lines 296--296
 \T1/ppl/m/n/12 vol. 26, no. 1, pp. 150166, 2016, \T1/ppl/m/sc/12 issn\T1/ppl/m
 /n/12 : 1054-3406. \T1/ppl/m/sc/12 doi\T1/ppl/m/n/12 : [][]$\T1/cmtt/m/n/12 10 
 . 1080 / 10543406 .
  []
 
-[45]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 299.
- [46]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 299.
+[49]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 300.
+ [50]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
  (main.aux (Chapters/Chapter1/Chapter1.aux)
-(Chapters/Adept/Adept_tex.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 299.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 299.
-Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0AFCFA3D30429C9DAE6B3B9CA9413663;2292.
+(Chapters/Adept/Adept_tex.aux) (Chapters/WT/WT_tex.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 300.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
+
+
+Package rerunfilecheck Warning: File `main.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `main.out':
+(rerunfilecheck)             Before: E5BBFD132CA65AAE291305F756099498;3092
+(rerunfilecheck)             After:  142E1138B9EC49322C8520E2F7913AD4;3457.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 38160 strings out of 492895
- 782461 string characters out of 3133472
- 1215215 words of memory out of 3000000
- 41521 multiletter control sequences out of 15000+200000
+ 38205 strings out of 492895
+ 783189 string characters out of 3133472
+ 1219044 words of memory out of 3000000
+ 41533 multiletter control sequences out of 15000+200000
  578725 words of font info for 104 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  62i,20n,83p,2187b,2999s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\PatelAL\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi60
-0\ectt1200.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/PatelAL/AppData/Roaming/MiKTeX/
-2.9/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/PatelAL/AppData/Roaming/MiK
-TeX/2.9/fonts/type1/public/mathpazo/fplmri.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/p
-alatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (58 pages, 480757 bytes).
+pdfTeX warning (dest): name{chapter*.57} has been referenced but does not exi
+st, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.56} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.55} has been referenced but does not exi
+st, replaced by a fixed one
+
+ <C:\Users\PatelAL\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dpi600\
+ectt1200.pk>{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Progra
+m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/PatelAL/AppData/Roaming/MiKTeX/2.
+9/fonts/type1/public/mathpazo/fplmr.pfb><C:/Users/PatelAL/AppData/Roaming/MiKTe
+X/2.9/fonts/type1/public/mathpazo/fplmri.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/pal
+atino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on main.pdf (62 pages, 491480 bytes).
 PDF statistics:
- 788 PDF objects out of 1000 (max. 8388607)
- 139 named destinations out of 1000 (max. 500000)
- 151 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 850 PDF objects out of 1000 (max. 8388607)
+ 163 named destinations out of 1000 (max. 500000)
+ 191 words of extra memory for PDF output out of 10000 (max. 10000000)
 
