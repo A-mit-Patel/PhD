@@ -254,6 +254,7 @@
          giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
       }}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{SNEAMTAD+1}
   \strng{fullhash}{SNEAMTADKADCKSAKGVLMSCMASERAHSPCSLVDCMLADBMFSGGCORPMRMWJLSRRWLRECFLJCHMAMZJWWAKGSBMMLESGGGTRGLAGJR1}
     \field{labelnamesource}{author}
@@ -306,6 +307,10 @@
          familyi={C\bibinitperiod},
       }}%
     }
+    \list{organization}{1}{%
+      {{Cancer Research UK}}%
+    }
+    \keyw{Adept Chapter}
     \strng{namehash}{C1}
     \strng{fullhash}{C1}
     \field{labelnamesource}{author}
@@ -324,7 +329,6 @@
     \verb C\:\\Users\\PatelAL\\Zotero\\storage\\JPKNM8NW\\head-and-neck-cancers
     \verb .html
     \endverb
-    \field{journaltitle}{Cancer Research UK}
     \warn{\item Invalid format of field 'date' \item Invalid format of field
   'date'}
   \endentry
@@ -374,7 +378,8 @@
          giveni={R\bibinitperiod},
       }}%
     }
-    \keyw{Access,capacity,demand,fractionation,modelling,radiotherapy}
+    \keyw{Access,Adept
+  Chapter,capacity,demand,fractionation,modelling,radiotherapy}
     \strng{namehash}{RCEWMVMT+1}
     \strng{fullhash}{RCEWMVMTKNFCTHPJR1}
     \field{labelnamesource}{author}
@@ -456,6 +461,7 @@
          giveni={S\bibinitperiod\bibinitdelim Y\bibinitperiod},
       }}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{CDMWRSLSY1}
     \strng{fullhash}{CDMWRSLSY1}
     \field{labelnamesource}{author}
@@ -526,6 +532,7 @@
          giveni={L},
       }}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{PJBJDC+1}
     \strng{fullhash}{PJBJDCDL1}
     \field{labelnamesource}{author}
@@ -594,6 +601,7 @@
          giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
       }}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{OMJ1}
     \strng{fullhash}{OMJ1}
     \field{labelnamesource}{author}
@@ -647,6 +655,7 @@
          giveni={A\bibinitperiod},
       }}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{CA1}
     \strng{fullhash}{CA1}
     \field{labelnamesource}{author}
@@ -702,6 +711,7 @@
          giveni={J\bibinitperiod},
       }}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{MLZJHK+1}
     \strng{fullhash}{MLZJHKZJ1}
     \field{labelnamesource}{author}
@@ -761,6 +771,7 @@
     \list{publisher}{1}{%
       {{Oxford Academic}}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{LTCLJJSLL1}
     \strng{fullhash}{LTCLJJSLL1}
     \field{labelnamesource}{author}
@@ -819,6 +830,7 @@
     \list{publisher}{1}{%
       {{[Wiley, International Biometric Society]}}%
     }
+    \keyw{Adept Chapter,WT Chapter}
     \strng{namehash}{OJPMFL1}
     \strng{fullhash}{OJPMFL1}
     \field{labelnamesource}{author}
@@ -900,6 +912,7 @@
     \list{publisher}{1}{%
       {{American Society of Clinical Oncology}}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{RASDJW+1}
     \strng{fullhash}{RASDJWTMKFRPA1}
     \field{labelnamesource}{author}
@@ -999,8 +1012,8 @@
     \list{publisher}{1}{%
       {{Taylor \& Francis}}%
     }
-    \keyw{Dose-finding methods,immunotherapy,maximum tolerated dose,optimal
-  dose,phase 1 designs,targeted therapy}
+    \keyw{Adept Chapter,Dose-finding methods,immunotherapy,maximum tolerated
+  dose,optimal dose,phase 1 designs,targeted therapy}
     \strng{namehash}{CCSJMGA+1}
     \strng{fullhash}{CCSJMGADJKSGKIALSM1}
     \field{labelnamesource}{author}
@@ -1096,6 +1109,7 @@
     \list{publisher}{1}{%
       {{Cold Spring Harbor Laboratory Press}}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{BKHVSG+1}
     \strng{fullhash}{BKHVSGPCCCLS1}
     \field{labelnamesource}{author}
@@ -1161,7 +1175,7 @@
          giveni={R\bibinitperiod},
       }}%
     }
-    \keyw{Continual reassessment method,Dose limiting,Late-onset
+    \keyw{Adept Chapter,Continual reassessment method,Dose limiting,Late-onset
   toxicities,Likelihood-based design,Phase I trial,Time-to-event}
     \strng{namehash}{CYKCR1}
     \strng{fullhash}{CYKCR1}
@@ -1238,7 +1252,8 @@
          giveni={S\bibinithyphendelim J\bibinitperiod},
       }}%
     }
-    \keyw{Adaptive design,Bayesian design,Dose-finding,Phase I clinical trial}
+    \keyw{Adaptive design,Adept Chapter,Bayesian design,Dose-finding,Phase I
+  clinical trial}
     \strng{namehash}{TPFMREMP+1}
     \strng{fullhash}{TPFMREMPLSJ1}
     \field{labelnamesource}{author}
@@ -1296,9 +1311,9 @@
          giveni={Y\bibinitperiod},
       }}%
     }
-    \keyw{Adaptive design,Bayesian inference,Combining drugs,Continual
-  reassessment method,Copula model,Maximum tolerated dose,Phase I
-  trial,Toxicity probability}
+    \keyw{Adaptive design,Adept Chapter,Bayesian inference,Combining
+  drugs,Continual reassessment method,Copula model,Maximum tolerated dose,Phase
+  I trial,Toxicity probability}
     \strng{namehash}{YGYY1}
     \strng{fullhash}{YGYY1}
     \field{labelnamesource}{author}
@@ -1370,8 +1385,8 @@
          giveni={J\bibinitperiod},
       }}%
     }
-    \keyw{Antineoplastic Agents,Clinical Trials; Phase I as Topic,Data
-  Interpretation; Statistical,Drug-Related Side Effects and Adverse
+    \keyw{Adept Chapter,Antineoplastic Agents,Clinical Trials; Phase I as
+  Topic,Data Interpretation; Statistical,Drug-Related Side Effects and Adverse
   Reactions,Humans,Maximum Tolerated Dose,Neoplasms,Outcome Assessment; Health
   Care,Risk Assessment,Risk Factors,Treatment Outcome}
     \strng{namehash}{WNACMROJ1}
@@ -1444,9 +1459,9 @@
          giveni={J\bibinitperiod},
       }}%
     }
-    \keyw{Clinical Trials; Phase I as Topic,Computer Simulation,Data
-  Interpretation; Statistical,Dose-Response Relationship; Drug,Humans,Maximum
-  Tolerated Dose}
+    \keyw{Adept Chapter,Clinical Trials; Phase I as Topic,Computer
+  Simulation,Data Interpretation; Statistical,Dose-Response Relationship;
+  Drug,Humans,Maximum Tolerated Dose}
     \strng{namehash}{WNACMROJ1}
     \strng{fullhash}{WNACMROJ1}
     \field{labelnamesource}{author}
@@ -1511,6 +1526,7 @@
          giveni={Y\bibinitperiod},
       }}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{LSYGYY1}
     \strng{fullhash}{LSYGYY1}
     \field{labelnamesource}{author}
@@ -1581,6 +1597,7 @@
          giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
       }}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{WGMSMJMAP1}
     \strng{fullhash}{WGMSMJMAP1}
     \field{labelnamesource}{author}
@@ -1643,6 +1660,7 @@
          giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
       }}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{WNACMR1}
     \strng{fullhash}{WNACMR1}
     \field{labelnamesource}{author}
@@ -1701,9 +1719,9 @@
          giveni={N\bibinitperiod},
       }}%
     }
-    \keyw{Antineoplastic Agents,Antineoplastic Combined Chemotherapy
-  Protocols,Cancer Vaccines,Clinical Trials; Phase I as Topic,Computer
-  Simulation,Continual reassessment method,Dose finding,Drug
+    \keyw{Adept Chapter,Antineoplastic Agents,Antineoplastic Combined
+  Chemotherapy Protocols,Cancer Vaccines,Clinical Trials; Phase I as
+  Topic,Computer Simulation,Continual reassessment method,Dose finding,Drug
   combination,Freund's Adjuvant,Humans,Lipids,Maximum Tolerated
   Dose,Melanoma,Neoplasms,Partial ordering,Phase I trials,Software,Toll-Like
   Receptors}
@@ -1754,6 +1772,7 @@
          giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
       }}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{WNA1}
     \strng{fullhash}{WNA1}
     \field{labelnamesource}{author}
@@ -1800,6 +1819,7 @@
          giveni={O\bibinitperiod},
       }}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{WNAIAMO1}
     \strng{fullhash}{WNAIAMO1}
     \field{labelnamesource}{author}
@@ -1969,6 +1989,7 @@
          giveni={D\bibinitperiod},
       }}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{LPLJGJM+1}
     \strng{fullhash}{LPLJGJMDACEBPEGJKWEEBDHCLGNLJLMCALAABLALACBSD1}
     \field{labelnamesource}{author}
@@ -2054,7 +2075,7 @@
          giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
       }}%
     }
-    \keyw{Adaptive weight,Antibodies; Monoclonal,Bayes
+    \keyw{Adaptive weight,Adept Chapter,Antibodies; Monoclonal,Bayes
   Theorem,Biometry,Calibration,Clinical Trials; Phase I as Topic,Dose
   finding,Humans,MTD,Neoplasms,Oncology,Time Factors,Time-to-event}
     \strng{namehash}{HBKPF1}
@@ -2112,7 +2133,7 @@
          giveni={K\bibinitperiod},
       }}%
     }
-    \keyw{ClinicalTrials,ExperimentalDesign}
+    \keyw{Adept Chapter,ClinicalTrials,ExperimentalDesign}
     \strng{namehash}{CK1}
     \strng{fullhash}{CK1}
     \field{labelnamesource}{author}
@@ -2151,6 +2172,7 @@
     \list{publisher}{1}{%
       {{[Wiley, International Biometric Society]}}%
     }
+    \keyw{Adept Chapter}
     \strng{namehash}{OJSLZ1}
     \strng{fullhash}{OJSLZ1}
     \field{labelnamesource}{author}
@@ -2189,6 +2211,710 @@
     \field{journaltitle}{Biometrics}
     \field{eprinttype}{jstor}
     \field{year}{1996}
+  \endentry
+
+  \entry{ahnOptimalBiologicalDose2016}{incollection}{}
+    \name{author}{4}{}{%
+      {{hash=AC}{%
+         family={Ahn},
+         familyi={A\bibinitperiod},
+         given={Chul},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=KSH}{%
+         family={Kang},
+         familyi={K\bibinitperiod},
+         given={Seung-Ho},
+         giveni={S\bibinithyphendelim H\bibinitperiod},
+      }}%
+      {{hash=XY}{%
+         family={Xie},
+         familyi={X\bibinitperiod},
+         given={Yang},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=ZS}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Song},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{American Cancer Society}}%
+    }
+    \keyw{cytostatic drug,dose-finding approach,drug development,optimal
+  biological dose,phase I clinical trials,WT Chapter}
+    \strng{namehash}{ACKSHXY+1}
+    \strng{fullhash}{ACKSHXYZS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Phase I cancer clinical trials are small dose-finding studies designed to
+  rapidly identify the optimal dose of a new anticancer agent. The optimal dose
+  has been defined as the maximum tolerated dose (MTD) for conventional
+  cytotoxic anticancer drugs, and this dose is typically recommended as the
+  phase II dose. In the past two decades, a new approach for cancer treatment
+  has emerged. This approach, now widely referred to as molecularly targeted
+  therapy is designed a priori, based on the knowledge of various physiological
+  molecules that have been obtained by the development of molecular biology.
+  Most molecularly targeted agents slow or stop the growth of tumors. Such
+  agents are, in general, less toxic than conventional cytotoxic agents; as a
+  result, the maximum therapeutic effect may occur at doses well below the MTD.
+  With the emergence of a growing number of molecularly targeted agents,
+  approaches to early drug development are changing. We present dose-finding
+  designs for phase I clinical trials of molecularly targeted drugs. There is
+  an increasing need to develop designs to find the optimal biological dose
+  (OBD) for molecularly targeted agents, and the utility of designs needs to be
+  prospectively evaluated in future clinical dose-finding trials for a variety
+  of molecularly targeted agents.%
+    }
+    \field{booktitle}{Wiley {{StatsRef}}: {{Statistics Reference Online}}}
+    \verb{doi}
+    \verb 10.1002/9781118445112.stat07078.pub2
+    \endverb
+    \field{isbn}{978-1-118-44511-2}
+    \field{pages}{1\bibrangedash 12}
+    \field{title}{Optimal {{Biological Dose}} for {{Molecularly Targeted
+  Therapies}}}
+    \verb{url}
+    \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/9781118445112.stat070
+    \verb 78.pub2
+    \endverb
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\5IN5VL64\\9781118445112.stat070
+    \verb 78.html
+    \endverb
+    \field{annotation}{%
+    \_eprint:
+  https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781118445112.stat07078.pub2%
+    }
+    \field{year}{2016}
+  \endentry
+
+  \entry{braunBivariateContinualReassessment2002}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BTM}{%
+         family={Braun},
+         familyi={B\bibinitperiod},
+         given={Thomas\bibnamedelima M.},
+         giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \keyw{Bayesian inference,Bone marrow transplant,Clinical trial,Correlated
+  binary data,WT Chapter}
+    \strng{namehash}{BTM1}
+    \strng{fullhash}{BTM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    Traditional phase I studies find the therapeutic dose of an investigational
+  drug based solely on toxicity and without regard to the drug's efficacy. We
+  propose extending the continual reassessment method (CRM) to a bivariate
+  trial design in which the maximum tolerated dose is based jointly on both
+  toxicity and disease progression. We call our study design bCRM, for
+  bivariate CRM, which we apply to a study of bone marrow patients seeking to
+  find the optimal time after bone marrow transplant at which to taper immune
+  suppression and eventually begin donor leukocyte infusions. We demonstrate
+  through simulation that bCRM has excellent operating characteristics and
+  compare the performance of bCRM in a bone marrow transplantation study to
+  designs proposed by previous investigators. We also attempt to provide some
+  direction to future investigators with regard to plausible models and
+  distributions to use with a bivariate study design.%
+    }
+    \verb{doi}
+    \verb 10.1016/S0197-2456(01)00205-7
+    \endverb
+    \field{issn}{0197-2456}
+    \field{number}{3}
+    \field{pages}{240\bibrangedash 256}
+    \field{shortjournal}{Controlled Clinical Trials}
+    \field{shorttitle}{The Bivariate Continual Reassessment Method}
+    \field{title}{The Bivariate Continual Reassessment Method: Extending the
+  {{CRM}} to Phase {{I}} Trials of Two Competing Outcomes}
+    \verb{url}
+    \verb https://www.sciencedirect.com/science/article/pii/S0197245601002057
+    \endverb
+    \field{volume}{23}
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\NG5Q28TP\\Braun - 2002 - The bi
+    \verb variate continual reassessment method exten.pdf;C\:\\Users\\PatelAL\\
+    \verb Zotero\\storage\\WXD6K6QR\\S0197245601002057.html
+    \endverb
+    \field{journaltitle}{Controlled Clinical Trials}
+    \field{day}{01}
+    \field{month}{06}
+    \field{year}{2002}
+  \endentry
+
+  \entry{thallDosefindingBasedEfficacytoxicity2004}{article}{}
+    \name{author}{2}{}{%
+      {{hash=TPF}{%
+         family={Thall},
+         familyi={T\bibinitperiod},
+         given={Peter\bibnamedelima F.},
+         giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=CJD}{%
+         family={Cook},
+         familyi={C\bibinitperiod},
+         given={John\bibnamedelima D.},
+         giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \keyw{Abciximab,Algorithms,Antibodies; Monoclonal,Bayes
+  Theorem,Biometry,Clinical Trials; Phase I as Topic,Clinical Trials; Phase II
+  as Topic,Dose-Response Relationship; Drug,Graft vs Host
+  Disease,Humans,Immunoglobulin Fab Fragments,Models;
+  Statistical,Pentostatin,Platelet Glycoprotein GPIIb-IIIa Complex,Recombinant
+  Proteins,Stroke,Tissue Plasminogen Activator,WT Chapter}
+    \strng{namehash}{TPFCJD1}
+    \strng{fullhash}{TPFCJD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    We present an adaptive Bayesian method for dose-finding in phase I/II
+  clinical trials based on trade-offs between the probabilities of treatment
+  efficacy and toxicity. The method accommodates either trinary or bivariate
+  binary outcomes, as well as efficacy probabilities that possibly are
+  nonmonotone in dose. Doses are selected for successive patient cohorts based
+  on a set of efficacy-toxicity trade-off contours that partition the
+  two-dimensional outcome probability domain. Priors are established by solving
+  for hyperparameters that optimize the fit of the model to elicited mean
+  outcome probabilities. For trinary outcomes, the new algorithm is compared to
+  the method of Thall and Russell (1998, Biometrics 54, 251-264) by application
+  to a trial of rapid treatment for ischemic stroke. The bivariate binary
+  outcome case is illustrated by a trial of graft-versus-host disease treatment
+  in allogeneic bone marrow transplantation. Computer simulations show that,
+  under a wide rage of dose-outcome scenarios, the new method has high
+  probabilities of making correct decisions and treats most patients at doses
+  with desirable efficacy-toxicity trade-offs.%
+    }
+    \verb{doi}
+    \verb 10.1111/j.0006-341X.2004.00218.x
+    \endverb
+    \verb{eprint}
+    \verb 15339291
+    \endverb
+    \field{issn}{0006-341X}
+    \field{number}{3}
+    \field{pages}{684\bibrangedash 693}
+    \field{shortjournal}{Biometrics}
+    \field{title}{Dose-Finding Based on Efficacy-Toxicity Trade-Offs}
+    \field{volume}{60}
+    \field{langid}{english}
+    \field{journaltitle}{Biometrics}
+    \field{eprinttype}{pmid}
+    \field{month}{09}
+    \field{year}{2004}
+  \endentry
+
+  \entry{brockImplementingEffToxDosefinding2017}{article}{}
+    \name{author}{6}{}{%
+      {{hash=BK}{%
+         family={Brock},
+         familyi={B\bibinitperiod},
+         given={Kristian},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=BL}{%
+         family={Billingham},
+         familyi={B\bibinitperiod},
+         given={Lucinda},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Copland},
+         familyi={C\bibinitperiod},
+         given={Mhairi},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SS}{%
+         family={Siddique},
+         familyi={S\bibinitperiod},
+         given={Shamyla},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Sirovica},
+         familyi={S\bibinitperiod},
+         given={Mirjana},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=YC}{%
+         family={Yap},
+         familyi={Y\bibinitperiod},
+         given={Christina},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \keyw{CML,Dose-finding,Efficacy,EffTox,Phase I/II,Toxicity,WT Chapter}
+    \strng{namehash}{BKBLCM+1}
+    \strng{fullhash}{BKBLCMSSSMYC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    The Matchpoint trial aims to identify the optimal dose of ponatinib to give
+  with conventional chemotherapy consisting of fludarabine, cytarabine and
+  idarubicin to chronic myeloid leukaemia patients in blastic transformation
+  phase. The dose should be both tolerable and efficacious. This paper
+  describes our experience implementing EffTox in the Matchpoint trial.%
+    }
+    \verb{doi}
+    \verb 10.1186/s12874-017-0381-x
+    \endverb
+    \field{issn}{1471-2288}
+    \field{number}{1}
+    \field{pages}{112}
+    \field{shortjournal}{BMC Medical Research Methodology}
+    \field{title}{Implementing the {{EffTox}} Dose-Finding Design in the
+  {{Matchpoint}} Trial}
+    \verb{url}
+    \verb https://doi.org/10.1186/s12874-017-0381-x
+    \endverb
+    \field{volume}{17}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\LC2CJGCN\\Brock et al. - 2017 -
+    \verb  Implementing the EffTox dose-finding design in the.pdf;C\:\\Users\\P
+    \verb atelAL\\Zotero\\storage\\A6FCDVSY\\s12874-017-0381-x.html
+    \endverb
+    \field{journaltitle}{BMC Medical Research Methodology}
+    \field{day}{20}
+    \field{month}{07}
+    \field{year}{2017}
+  \endentry
+
+  \entry{zhouUtilitybasedBayesianOptimal2019}{article}{}
+    \name{author}{3}{}{%
+      {{hash=ZY}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Yanhong},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LJJ}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={J.\bibnamedelima Jack},
+         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yuan},
+         familyi={Y\bibinitperiod},
+         given={Ying},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \keyw{immunotherapy,optimal biological dose,phase I/II,targeted
+  therapy,utility-based design,WT Chapter}
+    \strng{namehash}{ZYLJJYY1}
+    \strng{fullhash}{ZYLJJYY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    In the era of targeted therapy and immunotherapy, the objective of dose
+  finding is often to identify the optimal biological dose (OBD), rather than
+  the maximum tolerated dose. We develop a utility-based Bayesian optimal
+  interval (U-BOIN) phase I/II design to find the OBD. We jointly model
+  toxicity and efficacy using a multinomial-Dirichlet model, and employ a
+  utility function to measure dose risk-benefit trade-off. The U-BOIN design
+  consists of two seamless stages. In stage I, the Bayesian optimal interval
+  design is used to quickly explore the dose space and collect preliminary
+  toxicity and efficacy data. In stage II, we continuously update the posterior
+  estimate of the utility for each dose after each cohort, using accumulating
+  efficacy and toxicity from both stages I and II, and then use the posterior
+  estimate to direct the dose assignment and selection. Compared to existing
+  phase I/II designs, one prominent advantage of the U-BOIN design is its
+  simplicity for implementation. Once the trial is designed, it can be easily
+  applied using predetermined decision tables, without complex model fitting
+  and estimation. Our simulation study shows that, despite its simplicity, the
+  U-BOIN design is robust and has high accuracy to identify the OBD. We extend
+  the design to accommodate delayed efficacy by leveraging the short-term
+  endpoint (eg, immune activity or other biological activity of targeted
+  agents), and using it to predict the delayed efficacy outcome to facilitate
+  real-time decision making. A user-friendly software to implement the U-BOIN
+  is freely available at www.trialdesign.org.%
+    }
+    \verb{doi}
+    \verb 10.1002/sim.8361
+    \endverb
+    \field{issn}{1097-0258}
+    \field{number}{28}
+    \field{pages}{S5299\bibrangedash S5316}
+    \field{title}{A Utility-Based {{Bayesian}} Optimal Interval
+  ({{U}}-{{BOIN}}) Phase {{I}}/{{II}} Design to Identify the Optimal Biological
+  Dose for Targeted and Immune Therapies}
+    \verb{url}
+    \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.8361
+    \endverb
+    \field{volume}{38}
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\IJYBITYV\\Zhou et al. - 2019 -
+    \verb A utility-based Bayesian optimal interval (U-BOIN).pdf;C\:\\Users\\Pa
+    \verb telAL\\Zotero\\storage\\2QCI4CIU\\sim.html
+    \endverb
+    \field{journaltitle}{Statistics in Medicine}
+    \field{annotation}{%
+    \_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/sim.8361%
+    }
+    \field{year}{2019}
+  \endentry
+
+  \entry{zhangAdaptiveDosefindingDesign2006}{article}{}
+    \name{author}{3}{}{%
+      {{hash=ZW}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Wei},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=SDJ}{%
+         family={Sargent},
+         familyi={S\bibinitperiod},
+         given={Daniel\bibnamedelima J.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MS}{%
+         family={Mandrekar},
+         familyi={M\bibinitperiod},
+         given={Sumithra},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \keyw{Bayesian method,continual reassessment method,continuation-ratio
+  model,phase I trial,proportional odds model,trinomial,WT Chapter}
+    \strng{namehash}{ZWSDJMS1}
+    \strng{fullhash}{ZWSDJMS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Novel therapies are challenging the standards of drug development. Agents
+  with specific biologic targets and limited toxicity require novel designs to
+  determine doses to be taken forward into larger studies. In this paper, we
+  describe an approach that incorporates both toxicity and efficacy data into
+  the estimation of the biologically optimal dose of an agent in a phase I
+  trial. The approach is based on the flexible continuation-ratio model, and
+  uses straightforward optimal dose selection criteria. Dose selection is based
+  on all patients treated up until that time point, using a continual
+  reassessment method approach. Dose–outcome curves considered include
+  monotonically increasing, monotonically decreasing, and unimodal curves. Our
+  simulation studies demonstrate that the proposed design, which we call
+  TriCRM, has favourable operating characteristics. Copyright © 2005 John
+  Wiley \& Sons, Ltd.%
+    }
+    \verb{doi}
+    \verb 10.1002/sim.2325
+    \endverb
+    \field{issn}{1097-0258}
+    \field{number}{14}
+    \field{pages}{2365\bibrangedash 2383}
+    \field{title}{An Adaptive Dose-Finding Design Incorporating Both Toxicity
+  and Efficacy}
+    \verb{url}
+    \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.2325
+    \endverb
+    \field{volume}{25}
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\5H52J6MB\\Zhang et al. - 2006 -
+    \verb  An adaptive dose-finding design incorporating both.pdf;C\:\\Users\\P
+    \verb atelAL\\Zotero\\storage\\DVYYCPAL\\sim.html
+    \endverb
+    \field{journaltitle}{Statistics in Medicine}
+    \field{annotation}{%
+    \_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/sim.2325%
+    }
+    \field{year}{2006}
+  \endentry
+
+  \entry{ananthakrishnanExtensionsMTPITEQR2018}{article}{}
+    \name{author}{4}{}{%
+      {{hash=AR}{%
+         family={Ananthakrishnan},
+         familyi={A\bibinitperiod},
+         given={Revathi},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Green},
+         familyi={G\bibinitperiod},
+         given={Stephanie},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=LD}{%
+         family={Li},
+         familyi={L\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=LM}{%
+         family={LaValley},
+         familyi={L\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \keyw{Early phase immunooncology design considering efficacy and
+  safety,Eff-Tox design,Extended mTPI design,Extended TEQR design,Optimal
+  biological dose isotonic design,Umbrella-shaped dose-response curve,WT
+  Chapter}
+    \strng{namehash}{ARGSLD+1}
+    \strng{fullhash}{ARGSLDLM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    With the emergence of immunotherapy and other novel therapies, the
+  traditional assumption that the efficacy of the study drug increases
+  monotonically with dose levels is not always true. Therefore, dose-finding
+  methods evaluating only toxicity data may not be adequate. In this paper, we
+  have first compared the Modified Toxicity Probability Interval (mTPI) and
+  Toxicity Equivalence Range (TEQR) dose-finding oncology designs for safety
+  with identical stopping rules; we have then extended both designs to include
+  efficacy in addition to safety – we determine the optimal dose for safety
+  and efficacy using these designs by applying isotonic regression to the
+  observed toxicity and efficacy rates, once the early phase trial is
+  completed. We consider multiple types of underlying dose response curves,
+  i.e., monotonically increasing, plateau, or umbrella-shaped. We conduct
+  simulation studies to investigate the operating characteristics of the two
+  proposed designs and compare them to existing designs. We found that the
+  extended mTPI design selects the optimal dose for safety and efficacy more
+  accurately than the other designs for most of the scenarios considered.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.conctc.2018.01.006
+    \endverb
+    \field{issn}{2451-8654}
+    \field{pages}{62\bibrangedash 76}
+    \field{shortjournal}{Contemporary Clinical Trials Communications}
+    \field{title}{Extensions of the {{mTPI}} and {{TEQR}} Designs to Include
+  Non-Monotone Efficacy in Addition to Toxicity for Optimal Dose Determination
+  for Early Phase Immunotherapy Oncology Trials}
+    \verb{url}
+    \verb https://www.sciencedirect.com/science/article/pii/S2451865417301734
+    \endverb
+    \field{volume}{10}
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\IACNGL96\\Ananthakrishnan et al
+    \verb . - 2018 - Extensions of the mTPI and TEQR designs to include.pdf;C\:
+    \verb \\Users\\PatelAL\\Zotero\\storage\\L55S2XJ6\\S2451865417301734.html
+    \endverb
+    \field{journaltitle}{Contemporary Clinical Trials Communications}
+    \field{day}{01}
+    \field{month}{06}
+    \field{year}{2018}
+  \endentry
+
+  \entry{jiModifiedToxicityProbability2013}{article}{}
+    \name{author}{2}{}{%
+      {{hash=JY}{%
+         family={Ji},
+         familyi={J\bibinitperiod},
+         given={Yuan},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=WSJ}{%
+         family={Wang},
+         familyi={W\bibinitperiod},
+         given={Sue-Jane},
+         giveni={S\bibinithyphendelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Wolters Kluwer}}%
+    }
+    \keyw{WT Chapter}
+    \strng{namehash}{JYWSJ1}
+    \strng{fullhash}{JYWSJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    The 3 + 3 design is the most common choice among clinicians for phase I
+  dose-escalation oncology trials. In recent reviews, more than 95\% of phase I
+  trials have been based on the 3 + 3 design. Given that it is intuitive and
+  its implementation does not require a computer program, clinicians can
+  conduct 3 + 3 dose escalations in practice with virtually no logistic cost,
+  and trial protocols based on the 3 + 3 design pass institutional review board
+  and biostatistics reviews quickly. However, the performance of the 3 + 3
+  design has rarely been compared with model-based designs in simulation
+  studies with matched sample sizes. In the vast majority of statistical
+  literature, the 3 + 3 design has been shown to be inferior in identifying
+  true maximum-tolerated doses (MTDs), although the sample size required by the
+  3 + 3 design is often orders-of-magnitude smaller than model-based designs.
+  In this article, through comparative simulation studies with matched sample
+  sizes, we demonstrate that the 3 + 3 design has higher risks of exposing
+  patients to toxic doses above the MTD than the modified toxicity probability
+  interval (mTPI) design, a newly developed adaptive method. In addition,
+  compared with the mTPI design, the 3 + 3 design does not yield higher
+  probabilities in identifying the correct MTD, even when the sample size is
+  matched. Given that the mTPI design is equally transparent, costless to
+  implement with free software, and more flexible in practical situations, we
+  highly encourage its adoption in early dose-escalation studies whenever the 3
+  + 3 design is also considered. We provide free software to allow direct
+  comparisons of the 3 + 3 design with other model-based designs in simulation
+  studies with matched sample sizes.%
+    }
+    \verb{doi}
+    \verb 10.1200/JCO.2012.45.7903
+    \endverb
+    \field{issn}{0732-183X}
+    \field{number}{14}
+    \field{pages}{1785\bibrangedash 1791}
+    \field{shortjournal}{JCO}
+    \field{shorttitle}{Modified {{Toxicity Probability Interval Design}}}
+    \field{title}{Modified {{Toxicity Probability Interval Design}}: {{A
+  Safer}} and {{More Reliable Method Than}} the 3 + 3 {{Design}} for
+  {{Practical Phase I Trials}}}
+    \verb{url}
+    \verb https://ascopubs.org/doi/10.1200/JCO.2012.45.7903
+    \endverb
+    \field{volume}{31}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\8IGGUNL4\\Ji and Wang - 2013 -
+    \verb Modified Toxicity Probability Interval Design A S.pdf;C\:\\Users\\Pat
+    \verb elAL\\Zotero\\storage\\DYNNZEFB\\JCO.2012.45.html
+    \endverb
+    \field{journaltitle}{Journal of Clinical Oncology}
+    \field{day}{10}
+    \field{month}{05}
+    \field{year}{2013}
+  \endentry
+
+  \entry{blanchardToxicityEquivalenceRange2011}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BMS}{%
+         family={Blanchard},
+         familyi={B\bibinitperiod},
+         given={M.\bibnamedelima Suzette},
+         giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=LJA}{%
+         family={Longmate},
+         familyi={L\bibinitperiod},
+         given={Jeffrey\bibnamedelima A.},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \keyw{Isotonic regression,Maximum tolerated dose,Phase I design,WT Chapter}
+    \strng{namehash}{BMSLJA1}
+    \strng{fullhash}{BMSLJA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    Purpose This paper introduces the target equivalence range (TEQR) design, a
+  frequentist implementation of the modified toxicity probability interval
+  (mTPI) design, as a competitor to the standard 3+3 design (3+3). The 3+3 is
+  the work horse design in Phase I. It is good at determining if a safe dose
+  exits, but provides poor accuracy and precision in estimating the level of
+  toxicity at the maximum tolerated dose (MTD). Its main competitor, the
+  continual reassessment method (CRM) has not found a true niche in the Phase I
+  armamentarium resulting from statistical and implementation complexities.
+  Methods We describe the four competing designs (3+3, mTPI, CRM, and TEQR),
+  comparing them based on i) operating characteristics from simulated trials,
+  and ii) ease of implementation. Results The TEQR is better than the 3+3 when
+  compared on; 1) number of times the dose at or nearest the target toxicity
+  level was selected as the MTD, 2) number of patients assigned to dose levels
+  at or nearest the MTD, 3) overall trial dose limiting toxicity rate and 4)
+  accuracy and precision of estimates for the rate of toxicity at the MTD.
+  Further it is reasonably comparable to the CRM and mTPI on 1–3. Conclusion
+  The TEQR offers trial designers a competitor to the 3+3 for ease of
+  implementation with better operating characteristics and the added attraction
+  of a glimpse of activity at the MTD. The R package TEQR, freely available
+  from the comprehensive R archive network, includes functions to calculate
+  dose escalation guidelines and operating characteristics.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.cct.2010.09.011
+    \endverb
+    \field{issn}{1551-7144}
+    \field{number}{1}
+    \field{pages}{114\bibrangedash 121}
+    \field{shortjournal}{Contemporary Clinical Trials}
+    \field{shorttitle}{Toxicity Equivalence Range Design ({{TEQR}})}
+    \field{title}{Toxicity Equivalence Range Design ({{TEQR}}): {{A}} Practical
+  {{Phase I}} Design}
+    \verb{url}
+    \verb https://www.sciencedirect.com/science/article/pii/S1551714410001710
+    \endverb
+    \field{volume}{32}
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\3TCTVRC7\\Blanchard and Longmat
+    \verb e - 2011 - Toxicity equivalence range design (TEQR) A practi.pdf;C\:\
+    \verb \Users\\PatelAL\\Zotero\\storage\\HDLY9TRT\\S1551714410001710.html
+    \endverb
+    \field{journaltitle}{Contemporary Clinical Trials}
+    \field{day}{01}
+    \field{month}{01}
+    \field{year}{2011}
+  \endentry
+
+  \entry{wagesSeamlessPhaseII2015}{article}{}
+    \name{author}{2}{}{%
+      {{hash=WNA}{%
+         family={Wages},
+         familyi={W\bibinitperiod},
+         given={Nolan\bibnamedelima A.},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=TC}{%
+         family={Tait},
+         familyi={T\bibinitperiod},
+         given={Christopher},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Taylor \& Francis}}%
+    }
+    \keyw{Continual reassessment method,Dose finding,Molecularly targeted
+  agent,Optimal biological dose,WT Chapter}
+    \strng{namehash}{WNATC1}
+    \strng{fullhash}{WNATC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    In dose-finding trials of chemotherapeutic agents, the goal of identifying
+  the maximum tolerated dose is usually determined by considering information
+  on toxicity only, with the assumption that the highest safe dose also
+  provides the most promising outlook for efficacy. Trials of molecularly
+  targeted agents challenge accepted dose-finding methods because minimal
+  toxicity may arise over all doses under consideration and higher doses may
+  not result in greater response. In this article, we propose a new early-phase
+  method for trials investigating targeted agents. We provide simulation
+  results illustrating the operating characteristics of our design.%
+    }
+    \verb{doi}
+    \verb 10.1080/10543406.2014.920873
+    \endverb
+    \verb{eprint}
+    \verb 24904956
+    \endverb
+    \field{issn}{1054-3406}
+    \field{number}{5}
+    \field{pages}{903\bibrangedash 920}
+    \field{title}{Seamless {{Phase I}}/{{II Adaptive Design}} for {{Oncology
+  Trials}} of {{Molecularly Targeted Agents}}}
+    \verb{url}
+    \verb https://doi.org/10.1080/10543406.2014.920873
+    \endverb
+    \field{volume}{25}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\S4BLGANP\\Wages and Tait - 2015
+    \verb  - Seamless Phase III Adaptive Design for Oncology T.pdf;C\:\\Users\\
+    \verb PatelAL\\Zotero\\storage\\HWM37JFA\\10543406.2014.html
+    \endverb
+    \field{journaltitle}{Journal of Biopharmaceutical Statistics}
+    \field{annotation}{%
+    \_eprint: https://doi.org/10.1080/10543406.2014.920873%
+    }
+    \field{eprinttype}{pmid}
+    \field{day}{03}
+    \field{month}{09}
+    \field{year}{2015}
   \endentry
 \enddatalist
 \endinput
