@@ -62,6 +62,7 @@ This should be more straight forward. Will probably have to work more on the cod
 %----------------------------------------------------------------------------------------
 
 \section{Introduction}
+\label{WT:Introduction}
 
 Typically the main aim of Phase \RN{1} clinical trials is to identify the maximum tolerated dose (MTD) of the treatment being investigated. The MTD is usually determined under the cytotoxic assumption which assumes the most toxic dose is the most efficacious. With model based designs such as the continual reassessment method (CRM) \cite{oquigleyContinualReassessmentMethod1990} escalation occurs to identify the dose with an associated probability of toxicity based on a pre-defined target. Dose selection and escalation decisions do not consider efficacy rather they are determined based on the occurrence of toxicities. The cytotoxic assumption here implies that rate of efficacy increases monotonically with the probability of toxicity and dose level. Subsequent Phase \RN{2} trials aim to assess the efficacy of the treatment at the recommended dose (MTD). Usually these two phases are conducted independently of each other and as such the ability to share information across the phases is somewhat lost. 
 
@@ -82,6 +83,140 @@ This design models toxicity and efficacy independently. To model the probability
 
 The incorporation of an AR phase early on into the trial is beneficial since there may be a lack of data in order to rely on decisions made by the maximisation of efficacy probabilities. Also there may be doses that haven't been tested and randomisation allows for information to be collected from these. It also helps avoid getting stuck repeatedly recruiting to the same dose and allows for a more broad understanding of the dose-efficacy and toxicity relationships. One extension we propose is the inclusion of randomisation to a control arm into the design. This would provide a set of patients who receive standard of care to act as controls and allow for comparisons to be made with outcomes from patients receiving the OBD. There is also the added benefit of being able to include standard of care into the models to get a better understanding of the dose-efficacy and toxicity relationships.  
 
-\textcolor{red}{Include paragraph here to specify whats in each section of this chapter.}
+In Section \ref{WT:Wages-and-Tait-design}, details the statistical aspects of the WT design and how it works. We introduce our extension to the design to include randomisation to control in Section \ref{WT:Wages-and-Tait-design-RTC}. Section \ref{WT:Evaluation-of-the-extension} evaluates the performance of the new design with a simulation study. Finally, discussions and conclusions are presented in Sections \ref{WT:Discussion} and \ref{WT:Conclusion} respectively.  
 
+
+%----------------------------------------------------------------------------------------
+%	SECTION 2
+%----------------------------------------------------------------------------------------
+\section{The Wages and Tait design}
+\label{WT:Wages-and-Tait-design}
+
+In this section we detail the Wages and Tait design following the introduction of some notation. A set of $I$ doses under investigation can be denoted as $\mathscrsfs{D} = \{d_1, ...,d_i\}$. For each patient $j$ entered into the trial they are allocated to a dose level and joint outcomes for toxicity and efficacy are measured. The dose for the $j$th patient, $X_j$, $j = 1,...n$ can be thought of as random, taking values $x_j \in  \mathscrsfs{D}$. Let $Y_j$ and $Z_j$ be the random variables for binary toxicity and efficacy events respectively. For an individual patient $j$ toxicity and efficacy outcomes can take values $y_j, z_j \in \{0,1\}$ where 0 indicates and event didn't happen and 1 indicates that it did. 
+
+Wages and Tait \cite{wagesSeamlessPhaseII2015} utilise the CRM approach of O'Quigley et al. \cite{oquigleyContinualReassessmentMethod1990} to model toxicity. A univariate Bayesian method is used which begins by assuming a monotonically increasing dose-toxicity curve. The DLT probabilities, $\pi_T(d_i)$, are modelled at each dose level $i$ where $i= 1, ..., I$. The power model is specifically used by Wages and Tait in this design given by 
+
+\begin{equation}
+\label{WT:eq_power-model}
+F(d_i, \beta) = p_i^{exp(\beta)}
+\end{equation}
+
+A working model or skeleton containing the prior beliefs of toxicity at each dose level are provided by investigators in the form $0 < p_1 < ... <p_I <1$. For the single parameter in the power model $\beta$ we assume it has a prior distribution $g(\beta)$. After the inclusion of $j$ subjects into the trial, we have  data in the form of $\Omega_j = \{(x_1,y_1,z_1), ..., (x_j,y_j,z_j)\}$. The toxicity data can be used with Equation \ref{WT:eq_power-model} to give the likelihood for $\beta$
+
+\begin{equation}
+L(\beta|\Omega_j)=\prod_{l=1}^{j}\{F(x_l,\beta)\}^{y_l}\{1-F(x_l,\beta)\}^{1-y_l}  
+\end{equation}
+
+the posterior density for $\beta$ can be calculated using  
+
+\begin{equation}
+P(\beta|\Omega_j) = \frac{L(\beta|\Omega_j)g(\beta)}{\int_{-\infty}^{\infty}L(\beta|\Omega_j)g(\beta)d\beta}. 
+\end{equation}
+
+This can then be use to establish the posterior mean of $\beta$
+
+\begin{equation}
+\hat{\beta}_j = \int_{-\infty}^{\infty}\beta P(\beta|\Omega_j)d\beta
+\end{equation} 
+
+Using $\hat{\beta}_j$ estimates of DLT probabilities at each dose level can be obtained via 
+
+\begin{equation}
+\hat{\pi}_T(d_i) = F(d_i, \hat{\beta}_j) = p_i^{exp(\hat{\beta}_j)}. 
+\end{equation}
+
+For a specific maximum acceptable toxicity rate $\phi_T$ a set of acceptable or admissible doses can be declared as follows
+
+\begin{equation}
+\mathscrsfs{A}_j = \{d_i : \hat{\pi}_T(d_i)  \leq \phi_T ; i = 1,...,I \}.
+\end{equation} 
+
+To model efficacy a Bayesian approach is taken similar to how toxicity was modelled but rather than using a singular working model a class of working models are considered. They use a class of skeletons which correspond to various dose-efficacy relationships. These relationships might be monotonically increasing (as dose increases efficacy increases), unimodal (initially increasing then decreasing) or plateau (initially increase then level off). As a guide it is suggested that $(2I-1)$ working models should be specified. The probability of an efficacious response at dose $d_i$ is denoted as $\pi_E(d_i)$. The primary aim of the trial is to identify the optimal dose $d_v \in \mathscrsfs{D}$ which is defined such  that 
+
+\begin{equation}
+\pi_E(d_1) \leq ... \leq \pi_E(d_v) \geq ... \geq \pi_E(d_I). 
+\end{equation}
+
+Let $K$ denote the number of efficacy skeletons being used. Then for each skeleton $k$ we have $0 < q_{1k} < ... <q_{Ik} <1$ and for a particular skeleton $k; k = 1,...,K$ the true probability of efficacious response $\pi_E(d_i)$ at $d_i$ is modelled by 
+
+\begin{equation}
+\pi_E(d_i) = Pr(Z_j = 1|d_i) \approx G_k(d_i,\theta) = q_{ik} ^{exp(\theta)}
+\end{equation}
+
+As with the modelling of toxicity the power model is used again. Similarly as with $\beta$ a prior distribution $h(\theta)$ is assumed for $\theta$. For both the toxicity and efficacy models a Normal prior is used as first suggested by O'Quigley and Shen \cite{oquigleyContinualReassessmentMethod1996} such that $\beta, \theta \sim N(0,1.34)$. Additionally for the modelling of efficacy prior information regarding the plausibility of each model is taken into account using a weight function $\upsilon(k) = \{\upsilon(1), ..., \upsilon(K)\}$, where $\upsilon(k) \geq 0$ and where $\sum_k \upsilon(k) = 1$. If no information is available a discrete uniform distribution can be specified for $\upsilon(k)$. After $j$ patients have been included and observed in the study we have efficacy data from $\Omega_j$ and the likelihood model under $k$ is given by 
+
+\begin{equation}
+L(\theta|\Omega_j)=\prod_{l=1}^{j}\{G_k(x_l,\theta)\}^{z_l}\{1-G_k(x_l,\theta)\}^{1-z_l}  
+\end{equation}
+
+the posterior density is 
+
+\begin{equation}
+P(\theta|\Omega_j) = \frac{L(\theta|\Omega_j)h(\theta)}{\int_{-\infty}^{\infty}L(\theta|\Omega_j)h(\theta)d\theta}
+\end{equation}
+
+and under skeleton $k$ the posterior mean is given by 
+
+\begin{equation}
+\hat{\theta}_{jk} = \int_{-\infty}^{\infty}\theta P(\theta|\Omega_j)d\theta.
+\end{equation} 
+
+This information can be used to establish posterior model probabilities 
+
+\begin{equation}
+w(k|\Omega_j) = \frac{\upsilon(k)\int_{-\infty}^{\infty}L_k(\theta|\Omega_j)h(\theta)d\theta}{\sum_{k=1}^{K}\upsilon(k)\int_{-\infty}^{\infty}L_k(\theta|\Omega_j)h(\theta)d\theta}
+\end{equation}
+
+The posterior model probabilities are then used to determine which skeleton will be selected to model the dose-efficacy relationship. Each time a new patient is to be entered into the study and a dose-escalation decision needs to be a made, the skeleton $k^*$ with the largest posterior probability is selected such that
+
+\begin{equation}
+k^* = arg \; \underset{k}{max}w(k|\Omega_j).
+\end{equation}
+
+After determining the best skeleton and calculating the posterior mean of $\theta$ estimates of efficacy probabilities are then generated for each dose. 
+\begin{equation}
+\hat{\pi}_E(d_i) = G_{k^*} (d_i, \hat{\theta}_{jk^*})
+\end{equation}
+
+Dose-finding is conducted in two stages. The first stage begins with the adaptive randomisation (AR) phase. Here the next dose is randomly selected from the set of admissible doses. Randomisation probabilities for each dose are proportional to $\hat{\pi}_E(d_i)$ so that doses with higher estimated efficacy are more likely to be assigned to patients. For doses in $\mathscrsfs{A}_j$ their adaptive randomisation probability $R_i$ is 
+
+\begin{equation}
+R_i = \frac{\hat{\pi}_E(d_i)}{\sum_{d_i \in \mathscrsfs{A}_j}\hat{\pi}_E(d_i)}. 
+\end{equation}
+
+The AR phase lasts for a subset of $j_R$ patients such that $j_R \leq J$, where $J$ is the total number of patients to be entered into the trial. Wages and Tait suggest as a general rule of thumb to allocate 50\% of patients to both stages. It was shown that this approach works well in a variety of scenarios. However, this can be easily be adapted to suit individual trials. 
+
+Once the AR phase has been completed the design switches to the second stage called the maximisation phase. Here the next dose is the dose from the admissible set with the highest estimated probability of efficacy. For a dose-escalation decision that needs to be made in the maximisation phase for the $(j+1)$th patient the dose $x_{j+1}$ is selected from the admissible set of doses $\mathscrsfs{A}_j$ with the highest estimated efficacy probability $\hat{\pi}_E(d_i)$ i.e. 
+
+\begin{equation}
+x_{j+1} = arg \; \underset{d_i \in \mathscrsfs{A}_j}{max}\hat{\pi}_E(d_i)
+\end{equation}
+
+The design also incorporates stopping rules for safety and futility. The safety rule stops the trial if too much toxicity is observed at the lowest dose level. This rule is applied throughout the trial for each dose-escalation decision. Exact binomial 95\% confidence intervals are calculated for the lowest dose. The lower bound of the interval is then compared to the acceptable toxicity rate $\phi_T$. If the lower bound interval is greater than the acceptable rate it can be said that the treatment is too toxic to warrant further investigation. Patients need to have been observed at the lowest dose in order for this rule to trigger, if there is no data available at the lowest dose the binomial confidence interval is effectively 0. 
+
+The futility rule stops the trial if there are too few observed efficacy events. This rule only comes into play during the maximisation phase. This rule uses a similar method to the stopping rule by utilising binomial 95\% confidence intervals. During the maximisation phase the dose with the highest probability of efficacy is selected. At this point the 95\% binomial confidence interval is calculated for the current dose and if the upper bound is less than the futility threshold $\phi_E$ the trial is stopped as the treatment is inefficacious at all doses. Although 95\% confidence intervals are used by Wages and Tait these can be altered accordingly. 
+
+
+ %----------------------------------------------------------------------------------------
+ %	SECTION 3
+ %----------------------------------------------------------------------------------------
+ \section{The Wages and Tait design with randomisation to control}
+ \label{WT:Wages-and-Tait-design-RTC}
  
+ %----------------------------------------------------------------------------------------
+ %	SECTION 4
+ %----------------------------------------------------------------------------------------
+ \section{Evaluation of the extension via simulations}
+ \label{WT:Evaluation-of-the-extension}
+ 
+ %----------------------------------------------------------------------------------------
+ %	SECTION 5
+ %----------------------------------------------------------------------------------------
+ \section{Discussion}
+ \label{WT:Discussion}
+ 
+ %----------------------------------------------------------------------------------------
+ %	SECTION 6
+ %----------------------------------------------------------------------------------------
+ \section{Conclusion}
+ \label{WT:Conclusion}
