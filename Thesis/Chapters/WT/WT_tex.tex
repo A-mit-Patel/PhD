@@ -8,53 +8,53 @@
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 
-\section{Plan for this Chapter}
+%\section{Plan for this Chapter}
 
-The main plan for this chapter will be as follows. It will comprise of three sections an Introduction / background then two section on the each of the Wages and Tait modifications. One for the randomisation and one for the time-to-event component. 
+%The main plan for this chapter will be as follows. It will comprise of three sections an Introduction / background then two section on the each of the Wages and Tait modifications. One for the randomisation and one for the time-to-event component. 
 
 %-----------------------------------
 %	SUBSECTION 1
 %-----------------------------------
-\subsection{Introduction Plan}
+%\subsection{Introduction Plan}
 
-I say Introduction but this can most likely be split into 2 sections. It can serve as an introduction to Phase I/II trials and an introduction to Wages and Tait specifically, which will include the maths. 
+%I say Introduction but this can most likely be split into 2 sections. It can serve as an introduction to Phase I/II trials and an introduction to Wages and Tait specifically, which will include the maths. 
 
-\begin{enumerate}
-	\item A background on adaptive phase I/II designs - mainly a motivation / rationale for why they are used.
-	\item Some examples of these types of designs obviously can use efftox and wages and tait here. Can look at Kristian's PhD here as he has some examples. It may also be worthwhile to do a literature review to look into other designs. 
-	\item Include a paragraph stating aims of the chapter or whats included.
-	\item Include further details on wages and tait which will then lead to the specific maths for an un modified design.
-\end{enumerate}
+%\begin{enumerate}
+%	\item A background on adaptive phase I/II designs - mainly a motivation / rationale for why they are used.
+%	\item Some examples of these types of designs obviously can use efftox and wages and tait here. Can look at Kristian's PhD here as he has some examples. It may also be worthwhile to do a literature review to look into other designs. 
+%	\item Include a paragraph stating aims of the chapter or whats included.
+%	\item Include further details on wages and tait which will then lead to the specific maths for an un modified design.
+%\end{enumerate}
 
 
 %-----------------------------------
 %	SUBSECTION 2
 %-----------------------------------
 
-\subsection{Randomisation Modification Plan}
-Not sure what this section should be called. Perhaps something along the lines of Randomisation to control modification. 
+%\subsection{Randomisation Modification Plan}
+%Not sure what this section should be called. Perhaps something along the lines of Randomisation to control modification. 
 
-\begin{enumerate}
-	\item Start off with rational, why we would want to include randomisation to control 
-	\item Point out that this could already be done by including a dose as control. However, point out that it is unlikely to recruit or more so you can't guarantee that patients will be allocated that dose as it will be relatively low on efficacy in the AR phase. This is the main distinction with this modification we fix some randomisation. 
-	\item Go into the maths. Should only be a small modification in the adaptive randomisation phase. 
-	\item Simulations. Need to present a basic design then contrast it something. A quick idea is to have the same trial but then change the percentage that are allocated to placebo. Then contrast this with a trial that does randomisation AT recruitment i.e. 2:1 then enter Wages and Tait. So compare 2:1 to a 33\% fixed, 3:1 to 25\%, 4:1 to a 20\% etc ... Should be easy to make some plots for this. Can also investigate the impact of altering the number of patients in the adaptive randomisation phase, like I did for those quick simulations where I had it set at 26 then 52. 
-	\item Observations from running SPIN-SCI simulations. Running a shortened adaptive randomisation phase and front-loading patients onto control seems to result in better operating characteristics when compared to a standard Wages and Tait design. Another comparison to look at hear would be a wages and tait design with a further reduced adaptive randomisation phase. One point to make could be that this front loading could be used in normal wages and tait designs where you want to be extra careful with recruitment and for safety reasons want to fix recruitment at the lowest dose-level before escalating. 
-\end{enumerate}
+%\begin{enumerate}
+%	\item Start off with rational, why we would want to include randomisation to control 
+%	\item Point out that this could already be done by including a dose as control. However, point out that it is unlikely to recruit or more so you can't guarantee that patients will be allocated that dose as it will be relatively low on efficacy in the AR phase. This is the main distinction with this modification we fix some randomisation. 
+%	\item Go into the maths. Should only be a small modification in the adaptive randomisation phase. 
+%	\item Simulations. Need to present a basic design then contrast it something. A quick idea is to have the same trial but then change the percentage that are allocated to placebo. Then contrast this with a trial that does randomisation AT recruitment i.e. 2:1 then enter Wages and Tait. So compare 2:1 to a 33\% fixed, 3:1 to 25\%, 4:1 to a 20\% etc ... Should be easy to make some plots for this. Can also investigate the impact of altering the number of patients in the adaptive randomisation phase, like I did for those quick simulations where I had it set at 26 then 52. 
+%	\item Observations from running SPIN-SCI simulations. Running a shortened adaptive randomisation phase and front-loading patients onto control seems to result in better operating characteristics when compared to a standard Wages and Tait design. Another comparison to look at hear would be a wages and tait design with a further reduced adaptive randomisation phase. One point to make could be that this front loading could be used in normal wages and tait designs where you want to be extra careful with recruitment and for safety reasons want to fix recruitment at the lowest dose-level before escalating. 
+%\end{enumerate}
 
 
 %-----------------------------------
 %	SUBSECTION 3
 %-----------------------------------
 
-\subsection{Time-to-event Modification Plan}
-This should be more straight forward. Will probably have to work more on the code for this one. 
+%\subsection{Time-to-event Modification Plan}
+%This should be more straight forward. Will probably have to work more on the code for this one. 
 
-\begin{enumerate}
-	\item Again start with rational for why this modification might be useful. Can elude to some stuff mentioned in the Adept chapter. 
-	\item How this impacts the maths what equations are altered etc. 
-	\item Simulations. Consider a simple trial with a long follow-up period and then simulate using normal wages and tait and then the TITE modification. Can look at the original TITE paper to look how they made comparisons between the designs. May be beneficial to track things like duration also. 
-\end{enumerate}
+%\begin{enumerate}
+%	\item Again start with rational for why this modification might be useful. Can elude to some stuff mentioned in the Adept chapter. 
+%	\item How this impacts the maths what equations are altered etc. 
+%	\item Simulations. Consider a simple trial with a long follow-up period and then simulate using normal wages and tait and then the TITE modification. Can look at the original TITE paper to look how they made comparisons between the designs. May be beneficial to track things like duration also. 
+%\end{enumerate}
 
 
 %----------------------------------------------------------------------------------------
@@ -83,14 +83,14 @@ This design models toxicity and efficacy independently. To model the probability
 
 The incorporation of an AR phase early on into the trial is beneficial since there may be a lack of data in order to rely on decisions made by the maximisation of efficacy probabilities. Also there may be doses that haven't been tested and randomisation allows for information to be collected from these. It also helps avoid getting stuck repeatedly recruiting to the same dose and allows for a more broad understanding of the dose-efficacy and toxicity relationships. One extension we propose is the inclusion of randomisation to a control arm into the design. This would provide a set of patients who receive standard of care to act as controls and allow for comparisons to be made with outcomes from patients receiving the OBD. There is also the added benefit of being able to include standard of care into the models to get a better understanding of the dose-efficacy and toxicity relationships.  
 
-In Section \ref{WT:Wages-and-Tait-design}, details the statistical aspects of the WT design and how it works. We introduce our extension to the design to include randomisation to control in Section \ref{WT:Wages-and-Tait-design-RTC}. Section \ref{WT:Evaluation-of-the-extension} evaluates the performance of the new design with a simulation study. Finally, discussions and conclusions are presented in Sections \ref{WT:Discussion} and \ref{WT:Conclusion} respectively.  
+In Section \ref{WT:Wages-and-Tait-Design}, details the statistical aspects of the WT design and how it works. We introduce our extension to the design to include randomisation to control in Section \ref{WT:RtC-WT}. Section \ref{WT:Evaluation-of-the-Extension} evaluates the performance of the new design with a simulation study. Finally, discussions and conclusions are presented in Sections \ref{WT:Discussion} and \ref{WT:Conclusion} respectively.  
 
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
 %----------------------------------------------------------------------------------------
-\section{The Wages and Tait design}
-\label{WT:Wages-and-Tait-design}
+\section{The Wages and Tait Design}
+\label{WT:Wages-and-Tait-Design}
 
 In this section we detail the Wages and Tait design following the introduction of some notation. A set of $I$ doses under investigation can be denoted as $\mathscrsfs{D} = \{d_1, ...,d_i\}$. For each patient $j$ entered into the trial they are allocated to a dose level and joint outcomes for toxicity and efficacy are measured. The dose for the $j$th patient, $X_j$, $j = 1,...n$ can be thought of as random, taking values $x_j \in  \mathscrsfs{D}$. Let $Y_j$ and $Z_j$ be the random variables for binary toxicity and efficacy events respectively. For an individual patient $j$ toxicity and efficacy outcomes can take values $y_j, z_j \in \{0,1\}$ where 0 indicates and event didn't happen and 1 indicates that it did. 
 
@@ -181,6 +181,7 @@ After determining the best skeleton and calculating the posterior mean of $\thet
 Dose-finding is conducted in two stages. The first stage begins with the adaptive randomisation (AR) phase. Here the next dose is randomly selected from the set of admissible doses. Randomisation probabilities for each dose are proportional to $\hat{\pi}_E(d_i)$ so that doses with higher estimated efficacy are more likely to be assigned to patients. For doses in $\mathscrsfs{A}_j$ their adaptive randomisation probability $R_i$ is 
 
 \begin{equation}
+\label{WT:eq_WT-ARprob}
 R_i = \frac{\hat{\pi}_E(d_i)}{\sum_{d_i \in \mathscrsfs{A}_j}\hat{\pi}_E(d_i)}. 
 \end{equation}
 
@@ -200,14 +201,64 @@ The futility rule stops the trial if there are too few observed efficacy events.
  %----------------------------------------------------------------------------------------
  %	SECTION 3
  %----------------------------------------------------------------------------------------
- \section{The Wages and Tait design with randomisation to control}
- \label{WT:Wages-and-Tait-design-RTC}
+ \section{RtC-WT: An extension to the Wages and Tait Design}
+ \label{WT:RtC-WT}
+ 
+ In this section we introduce our proposed extension to the Wages and Tait (WT) design named Randomisation to Control Wages and Tait (RtC-WT). As the name states, the design will allow investigators to utilise the WT design with the ability to recruit patients to a control arm. This idea was initially conceived by Kristian Brock (KB) whilst working on the design of a new dose-finding trial.  
+ 
+ %-----------------------------------
+ %	SUBSECTION 3.1
+ %-----------------------------------
+ \subsection{The Rationale for Incorporating Randomisation to Control}
+ \label{WT:Rationale-for-RtC-WT}
+ 
+ 
+As a seamless phase \RN{1}/\RN{2} design WT is relatively simple and effective. The familiarity of using a CRM design to model toxicity and naturally extending that methodology to model efficacy with multiple working models mean the design is not particularly difficult to implement. The mathematics behind the design is also not too intense so extensive computation won't be necessary. Given some effort this design could be implemented in a variety of programming languages although KB offers an easy implementation of this design in his R package escalation \cite{brockModularApproachDose2020}. Considering all these factors extensions to this design can be executed without too many obstacles.
+
+The WT design can be considered fairly unique due to its use of adaptive randomisation. Whilst the adaptive randomisation is not the core focus of the design it is still a distinguishing factor which could be leveraged to help investigators answer questions other designs can't. Specifically, the randomisation allows for more dose-levels to be explored and perhaps obtain a better understanding of the dose-toxicity and efficacy relationships. 
+
+Conceptually the WT design could include a control arm without any modification to the design. All that this would require is the addition of a new dose-level at which patients receive control treatment / standard of care. This would need to be implemented as the lowest dose-level as dose-levels still need to obey the monotonicity assumption for toxicity. The issue with taking this approach is that the design is unlikely to allocate patients to the control dose-level. Even though adaptive randomisation is in play the randomisation probabilities are based on estimates of efficacy probabilities and control patients may be unexpected to have an efficacious event. This is a desirable characteristic when investigating treatments as we don't want to allocate too many patients to inefficacious doses. However, if the aim is to establish a cohort of patients as controls to facilitate comparisons to the OBD this is not an optimal characteristic. 
+
+There is another approach which could also be used to include a control arm rather than our proposed design RtC-WT. A two arm randomised design could be used where patients are allocated to either the control arm or the dose-finding arm. Those patients allocated in the dose-finding arm will then be apart of the WT design see Figure \ref{fig_wt:TwoArmExample}. This approach maintains many of the traditional qualities of a two-arm randomised trial. The number of patients in each arm can be specified this way we guarantee a minimum number of patients in our control arm. Also, the characteristics of patients in both arms are likely to be similar which would be beneficial when making comparisons between the two arms. A downside of this method is that the data for control patients is no longer included in the modelling process. Whilst control patients may still be observed for efficacious and toxic events these won't be included in the modelling as such the ability to make inferences on the dose-toxicity and efficacy relationships in reference to a control/ standard of care dose is lost. 
+
+\begin{figure}[!h]
+	\centering
+	\caption[Flowchart of a two arm randomised dose-finding trial.]{Flowchart of how a two arm randomised dose-finding design would operate using the Wages and Tait design.}
+	\label{fig_wt:TwoArmExample}
+	\includegraphics[width=0.77\textwidth]{WT-TwoArmExample}
+\end{figure}
+
+Both of these approaches have their own merit but also have flaws as well. RtC-WT is somewhat of a middle ground which aims to recruit patients to a control dose and include the control patients data in the modelling process all whilst maintaining reasonable operating characteristics. We detail RtC-WT in Section \ref{WT:Design-RtC-WT} and explore the operating characteristics of this design in Section \ref{WT:Evaluation-of-the-Extension}.
+
+
+%-----------------------------------
+%	SUBSECTION 3.2
+%-----------------------------------
+\subsection{Design of the Proposed Extension RtC-WT}
+\label{WT:Design-RtC-WT}
+
+With this extension much of the Wages and Tait design stays the same. The modification only impacts the adaptive randomisation (AR) phase and requires some additional specification at the start of the trial. Firstly, we set the lowest dose-level $d_1$ to be the control dose-level. This dose-level should be included in the working models for efficacy and toxicity and should be treated like any other dose-level. Even if toxicity and efficacy events are expected to be non-existent for control its important that their corresponding skeleton values are non-zero. Investigators also need to consider a randomisation probability $\phi_R$ for the control dose. During the AR phase $\phi_R$ represents the probability of selecting the control dose as the next dose level. The probability of randomisation $R_i$ for other dose in $\mathscrsfs{A}_j$ is scaled accordingly such that the $\sum_{d_i \in \mathscrsfs{A}_j} R_i = 1$. The adaptive randomisation probabilities can now be expressed as 
+
+\begin{equation}
+R_1 = \phi_R
+\end{equation}
+
+\begin{equation}
+R_i = (1-\phi_R)\frac{\hat{\pi}_E(d_i)}{\sum_{d_i \in \mathscrsfs{A}_j}\hat{\pi}_E(d_i)}, \; \; i=2,...,I. 
+\end{equation}
+
+Compared to Equation \ref{WT:eq_WT-ARprob} the adaptive randomisation probability is fixed to $\phi_R$ at the lowest dose (the control dose) and for all other dose levels in the admissible set $\mathscrsfs{A}_j$ a scaled randomisation probability is calculated. By fixing the probability for the control dose we guarantee a greater chance of patients being allocated to this dose-level. Although estimates of efficacy at the control dose-level $\hat{\pi}_E(d_1)$ do not directly impact its associated randomisation probability the efficacy data that generated the estimate is still included in the efficacy modelling and impacts probabilities for the remaining dose-levels. Also, by scaling the remaining probabilities of dose-levels in the admissible set we ensure that those doses with high estimates of efficacy maintain their proportional advantage of selection over the other non-control doses.
+
+Some adjustments were made to the stopping rule for safety. The WT design assess the lower bound of the 95\% binomial confidence interval of the lowest dose to determine whether or not the trial should be stopped. However, with the RtC-WT design since the lowest dose is the control it makes little sense to surmise treatment is toxic here since non of the patients on control would have received the experimental treatment. It is also likely the trial would never recommend stopping even if the treatment is toxic since patients on control are likely to experience a toxic event. The RtC-WT design stops for safety by checking for excess toxicity at the second lowest dose-level (the first no contol dose-level). 
+
+Once the AR phase ends dose-levels are no longer selected by adaptive randomisation. At this point it will be difficult for patients to be recruited to the control dose since recommended doses will be based on those with the greatest estimates of efficacy. As such it is important to consider the values set for both your randomisation probability for control $\phi_R$ and the size of the AR phase $j_R$. Wages and Tait simply suggest a 50:50 split between both the AR phase and the maximisation phase and show relatively good performance at this level. However, for RtC-WT the AR phase is the main component and more thought should be given here. In the next section we explore multiple combinations to better understand how these choices impact the operating characteristics of the design. We also compare RtC-WT to the two alternative designs mentioned in section  \ref{WT:Rationale-for-RtC-WT} via simulations and the inspection of operating characteristics specifically, selection probability of the OBD and patient allocation numbers at each dose-level. 
+ 
  
  %----------------------------------------------------------------------------------------
  %	SECTION 4
  %----------------------------------------------------------------------------------------
  \section{Evaluation of the extension via simulations}
- \label{WT:Evaluation-of-the-extension}
+ \label{WT:Evaluation-of-the-Extension}
  
  %----------------------------------------------------------------------------------------
  %	SECTION 5
