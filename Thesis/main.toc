@@ -20,7 +20,9 @@
 \contentsline {section}{\numberline {3.3}RtC-WT: An extension to the Wages and Tait Design}{50}{section.72}% 
 \contentsline {subsection}{\numberline {3.3.1}The Rationale for Incorporating Randomisation to Control}{50}{subsection.73}% 
 \contentsline {subsection}{\numberline {3.3.2}Design of the Proposed Extension RtC-WT}{53}{subsection.75}% 
-\contentsline {section}{\numberline {3.4}Evaluation of the extension via simulations}{55}{section.78}% 
-\contentsline {section}{\numberline {3.5}Discussion}{55}{section.79}% 
-\contentsline {section}{\numberline {3.6}Conclusion}{55}{section.80}% 
-\contentsline {chapter}{Bibliography}{57}{chapter*.81}% 
+\contentsline {section}{\numberline {3.4}Evaluation and Exploration of the Extension via Simulations}{55}{section.78}% 
+\contentsline {subsection}{\numberline {3.4.1}Design Specification}{56}{subsection.79}% 
+\contentsline {subsection}{\numberline {3.4.2}Impact of AR phase size and probability of randomisation to control on RtC-WT}{58}{subsection.81}% 
+\contentsline {section}{\numberline {3.5}Discussion}{59}{section.82}% 
+\contentsline {section}{\numberline {3.6}Conclusion}{59}{section.83}% 
+\contentsline {chapter}{Bibliography}{61}{chapter*.84}% 

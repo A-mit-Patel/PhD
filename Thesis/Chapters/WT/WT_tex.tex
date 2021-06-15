@@ -78,8 +78,9 @@ Zhang et al. \cite{zhangAdaptiveDosefindingDesign2006} introduced the trivariate
 
 Anathakrishnan et al. \cite{ananthakrishnanExtensionsMTPITEQR2018} produced extensions to the modified Toxicity Probability Interval (mTPI) design by Ji \& Wang \cite{jiModifiedToxicityProbability2013} and Toxicity Equivalent Range (TEQR) design by Blanchard \& Longmate \cite{blanchardToxicityEquivalenceRange2011} to include efficacy outcomes. In both designs isotonic regression is applied to the observed DLT rates at the end of the trial. Dependent on the shapes of the dose-response curves and the underlying response rates isotonic regression is applied on the observed response rates or the differences in observed response rates to determine the optimal dose. 
 
-This chapter revolves around the seamless phase \RN{1}/\RN{2} dose-finding adaptive design by Wages and Tait \cite{wagesSeamlessPhaseII2015}, that we will refer to as the WT design.
-This design models toxicity and efficacy independently. To model the probability of efficacy a set of possible efficacy skeletons are considered which would correspond to plausible dose-efficacy relationships. For the class of dose-efficacy models a single parameter model is used similar to the empiric model of the CRM. The authors recommend that ($2n - 1$) efficacy skeletons are specified where $n$ is the number of doses being investigated. Toxicity is modelled using a CRM approach with an empiric model. As such a skeleton for toxicity is also required for this design. The dose-finding operates in two stages the adaptive randomisation (AR) phase and the maximisation phase. In the AR phase patients are adaptively randomised amongst a set of tolerable doses, where probabilities of randomisation to each dose are proportional to their posterior probabilities of efficacy. A pre-defined number of patients enter the AR phase and once recruitment has completed we move to the maximisation phase. In this phase patients are allocated to the dose in the tolerable set which maximises probability of efficacy.  
+Riviere et al. \cite{rivierePhaseIIDosefinding2018} developed a Bayesian dose-finding design for MTA. The design works on the premise that for MTA efficacy initialy increases with dose then eventually plateaus. They use a logistic model with a plateau parameter to capture the dose-level at which plateaus begin in  the dose-efficacy relationship. A weighted likelihood approach is also used to accommodate for any potential late-onset toxicities. This methodology incorporates adaptive randomisation to allocate dose-levels close to the likely plateau point.
+
+This chapter revolves around the seamless phase \RN{1}/\RN{2} dose-finding adaptive design by Wages and Tait \cite{wagesSeamlessPhaseII2015}, that we will refer to as the WT design. This design models toxicity and efficacy independently. To model the probability of efficacy a set of possible efficacy skeletons are considered which would correspond to plausible dose-efficacy relationships. For the class of dose-efficacy models a single parameter model is used similar to the empiric model of the CRM. The authors recommend that ($2n - 1$) efficacy skeletons are specified where $n$ is the number of doses being investigated. Toxicity is modelled using a CRM approach with an empiric model. As such a skeleton for toxicity is also required for this design. The dose-finding operates in two stages the adaptive randomisation (AR) phase and the maximisation phase. In the AR phase patients are adaptively randomised amongst a set of tolerable doses, where probabilities of randomisation to each dose are proportional to their posterior probabilities of efficacy. A pre-defined number of patients enter the AR phase and once recruitment has completed we move to the maximisation phase. In this phase patients are allocated to the dose in the tolerable set which maximises probability of efficacy.  
 
 The incorporation of an AR phase early on into the trial is beneficial since there may be a lack of data in order to rely on decisions made by the maximisation of efficacy probabilities. Also there may be doses that haven't been tested and randomisation allows for information to be collected from these. It also helps avoid getting stuck repeatedly recruiting to the same dose and allows for a more broad understanding of the dose-efficacy and toxicity relationships. One extension we propose is the inclusion of randomisation to a control arm into the design. This would provide a set of patients who receive standard of care to act as controls and allow for comparisons to be made with outcomes from patients receiving the OBD. There is also the added benefit of being able to include standard of care into the models to get a better understanding of the dose-efficacy and toxicity relationships.  
 
@@ -219,14 +220,16 @@ The WT design can be considered fairly unique due to its use of adaptive randomi
 
 Conceptually the WT design could include a control arm without any modification to the design. All that this would require is the addition of a new dose-level at which patients receive control treatment / standard of care. This would need to be implemented as the lowest dose-level as dose-levels still need to obey the monotonicity assumption for toxicity. The issue with taking this approach is that the design is unlikely to allocate patients to the control dose-level. Even though adaptive randomisation is in play the randomisation probabilities are based on estimates of efficacy probabilities and control patients may be unexpected to have an efficacious event. This is a desirable characteristic when investigating treatments as we don't want to allocate too many patients to inefficacious doses. However, if the aim is to establish a cohort of patients as controls to facilitate comparisons to the OBD this is not an optimal characteristic. 
 
-There is another approach which could also be used to include a control arm rather than our proposed design RtC-WT. A two arm randomised design could be used where patients are allocated to either the control arm or the dose-finding arm. Those patients allocated in the dose-finding arm will then be apart of the WT design see Figure \ref{fig_wt:TwoArmExample}. This approach maintains many of the traditional qualities of a two-arm randomised trial. The number of patients in each arm can be specified this way we guarantee a minimum number of patients in our control arm. Also, the characteristics of patients in both arms are likely to be similar which would be beneficial when making comparisons between the two arms. A downside of this method is that the data for control patients is no longer included in the modelling process. Whilst control patients may still be observed for efficacious and toxic events these won't be included in the modelling as such the ability to make inferences on the dose-toxicity and efficacy relationships in reference to a control/ standard of care dose is lost. 
-
 \begin{figure}[!h]
 	\centering
 	\caption[Flowchart of a two arm randomised dose-finding trial.]{Flowchart of how a two arm randomised dose-finding design would operate using the Wages and Tait design.}
 	\label{fig_wt:TwoArmExample}
 	\includegraphics[width=0.77\textwidth]{WT-TwoArmExample}
 \end{figure}
+
+There is another approach which could also be used to include a control arm rather than our proposed design RtC-WT. A two arm randomised design could be used where patients are allocated to either the control arm or the dose-finding arm. Those patients allocated in the dose-finding arm will then be apart of the WT design see Figure \ref{fig_wt:TwoArmExample}. This approach maintains many of the traditional qualities of a two-arm randomised trial. The number of patients in each arm can be specified this way we guarantee a minimum number of patients in our control arm. Also, the characteristics of patients in both arms are likely to be similar which would be beneficial when making comparisons between the two arms. A downside of this method is that the data for control patients is no longer included in the modelling process. Whilst control patients may still be observed for efficacious and toxic events these won't be included in the modelling as such the ability to make inferences on the dose-toxicity and efficacy relationships in reference to a control/ standard of care dose is lost. 
+
+
 
 Both of these approaches have their own merit but also have flaws as well. RtC-WT is somewhat of a middle ground which aims to recruit patients to a control dose and include the control patients data in the modelling process all whilst maintaining reasonable operating characteristics. We detail RtC-WT in Section \ref{WT:Design-RtC-WT} and explore the operating characteristics of this design in Section \ref{WT:Evaluation-of-the-Extension}.
 
@@ -257,8 +260,62 @@ Once the AR phase ends dose-levels are no longer selected by adaptive randomisat
  %----------------------------------------------------------------------------------------
  %	SECTION 4
  %----------------------------------------------------------------------------------------
- \section{Evaluation of the extension via simulations}
+ \section{Evaluation and Exploration of the Extension via Simulations}
  \label{WT:Evaluation-of-the-Extension}
+ 
+ In this section we evaluate the performance of RtC-WT in comparison to the two alternative designs mentioned in Section \ref{WT:Rationale-for-RtC-WT}. We also explore the impact of changing the probability of randomisation to control and the number of patients included in the adaptive randomisation phase. These will both be assessed via simulation and inspection of their operating characteristics. To facilitate simulations a generic trial example will be utilised along with a variety of scenarios. Skeletons for the working models for toxicity and efficacy are provided in table \
+ 
+ %-----------------------------------
+ %	SUBSECTION 4.1
+ %-----------------------------------
+ \subsection{Design Specification}
+ \label{WT:Design-Spec}
+ 
+ Here we detail the design specifications for RtC-WT that we will be using throughout this section. We assume five dose-levels, where the lowest dose is considered to be the control dose-level. The maximum sample size of the trial is set at 60 with patients recruited in cohorts of three and the first cohort starting at dose-level two (the first treatment dose-level). The pre-specified toxicity upper bound and efficacy lower bound are set at $\phi_T = 0.35$ and $\phi_E = 0.15$ respectively. Toxicity and efficacy skeletons are presented in table \ref{tab_wt:tox-eff-skeleton}. In terms of efficacy-relationships monotonic, unimodal and plateau skeletons were all used. We assume that each of the seven efficacy skeletons are equally likely and set $\upsilon(k) = \frac{1}{7}$. 
+ 
+
+ \begin{table}[!h]
+ 	\centering
+ 	\caption{Toxicity and Efficacy skeletons for RtC-WT in the example trial setting. }
+ 	\label{tab_wt:tox-eff-skeleton}
+ 	\begin{tabular}{c|ccccc}
+ 		\hline
+ 		\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{Skeleton}}} & \multicolumn{5}{c}{\textbf{Dose-levels}}                       \\
+ 		\multicolumn{1}{c|}{}                                   & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\ \hline
+ 		$p_i$    & 0.01 & 0.1 & 0.2 & 0.3 & 0.4 \\
+ 		$q_{i1}$ & 0.01 & 0.4 & 0.3 & 0.2 & 0.1 \\
+ 		$q_{i2}$ & 0.01 & 0.3 & 0.4 & 0.3 & 0.2 \\
+ 		$q_{i3}$ & 0.01 & 0.2 & 0.3 & 0.4 & 0.3 \\
+ 		$q_{i4}$ & 0.01 & 0.1 & 0.2 & 0.3 & 0.4 \\
+ 		$q_{i5}$ & 0.01 & 0.2 & 0.3 & 0.4 & 0.4 \\
+ 		$q_{i6}$ & 0.01 & 0.3 & 0.4 & 0.4 & 0.4 \\
+ 		$q_{i7}$ & 0.01 & 0.4 & 0.4 & 0.4 & 0.4 \\ \hline
+ 	\end{tabular}
+ \end{table}
+ 
+ For the control dose we have set our prior beliefs to be very low for both toxicity and efficacy. This can of course be adapted if there is reason to believe that the control dose may be slightly more effective or toxic. Wages and Tait recommend $(2I-1)$ efficacy skeletons be used which in this example would be nine, however we have only considered seven. Since we don't expect many efficacy events from our lowest dose we dismiss the two extra efficacy skeletons as the dose-efficacy relationship they represent would be unlikely to occur. For completeness the first extra skeleton would be unimodal with the highest efficacy occurring at dose-level one and the second skeleton would be a plateau relationship with the plateau beginning at dose-level one as well. As with the values we've used for control these additional skeletons can also be incorporated if there is reason to believe so. 
+ 
+ We also include the same stopping rules for safety and futility with the safety rule assessing toxicity at dose-level two. A rule will also be implemented to prevent the skipping of untried doses when escalating. This rule does not apply when de-escalating. 
+ 
+ The two parameters we have left to specify are the fixed adaptive randomisation probability for control $\phi_R$ and the number of patients included in the adaptive randomisation phase $j_R$. In Section \ref{WT:Design-RtC-WT} we briefly the discus the importance of giving thought when setting these values. This is due to the fact they are the main things driving how RtC-WT works comparatively to the WT design. For example one could set the AR phase to last for the whole trial and keep a relative low probability to randomise to control. Alternatively, the AR phase can be set for half the patients in the trial and a double the probability of randomisation could be used. These two approaches could allocate the same number of patients in the control arm but have differing operating characteristics. It could be hypothesised that by setting the AR phase for the whole trial you miss out on the maximisation phase where patients are allocated to the estimated most efficacious dose which could yield slightly worse operating characteristics. We explore different combinations of these parameters in the next section. 
+ 
+ %-----------------------------------
+ %	SUBSECTION 4.2
+ %-----------------------------------
+ \subsection{Impact of AR phase size and probability of randomisation to control on RtC-WT}
+ \label{WT:Impact-ARandRTCon-RtC-WT}
+ 
+ The impact of the probability of control to randomisation is fairly intuitive as $\phi_R$ increases the number of patients allocated in the control dose-level is likely to increase. However, this is is only in isolation without considering the size of the AR phase. Increasing the AR phase would also mean more patients are likely allocated to the control dose-level since the randomisation only occurs in the AR phase. The interest lies within the interaction of both of these components and their impacts on operating characteristics. In order to gain a better understanding of this impact on RtC-WT we consider multiple of their possible combinations. 
+ 
+ We look at two different probabilities for randomisation to control, $\phi_R = 0.2$ and $\phi_R = 0.4$ i.e. 20\% and 40\% probability of patients being allocated to the control dose-level during the AR phase of the trial. We also consider varying AR phase sizes, specifically $j_R = 0, 15, 30, 45 ,60$ essentially looking at when the AR phase lasts 0\%, 25\%, 50\%, 75\% and 100\% of the trial. The inclusion of setting the AR phase as 0 is somewhat counter-intuitive since the trial will just be run using the maximisation phase where the most efficacious doses are allocated. As such it is unlikely that the control dose-level would ever be the most efficacious specifically in our scenario here. However its inclusion will serve as a benchmark as the design most likely to achieve optimal performance in terms of locating the OBD since there will be no randomisation and the most efficacious dose will always be the one being tested. Although, many more combinations could be explored this set of 10 provide a good basis for us to gain a better understanding of how RtC-WT works. It also helps us understand how best to optimise RtC-WT for comparisons with alternative designs later on.  
+ 
+ To compare these different combinations we use simulations covering a wide range of scenarios. For each scenario we simulate 10000 trials each consisting of 60 patients recruited in cohorts of three. Patient outcomes for toxicity and efficacy are randomly sampled using true toxicity and true efficacy probabilities, these are assumed to be independent of each other. Dose-allocation decisions are made after each cohort of patients is simulated and then the subsequent cohort is allocated the recommended dose or the trial is stopped when recruitment is reached and if stopping rules are triggered. The rest of the design specification is as defined in Section \ref{WT:Design-Spec}. 
+ 
+ These true toxicity and efficacy probabilities are manipulated to produce each scenario. Scenario 1 to 4 look at monotonically increasing efficacy and toxicity curves. Scenarios 1 and 2 consider effective doses whereas scenarios 3 and 4 concern ineffective doses. Similarly, scenarios 1 and 3 contain all tolerable doses whereas 2 and 4 doses are considered too toxic. Scenarios 5 to 8 show plateau efficacy curves with 5-6 plateauing at dose level three and 7-8 plateauing at dose level four. Scenarios 6 and 8 doses are also considered too toxic, whereas 5 and 7 are tolerable. Scenarios 9 to 12 show unimodal efficacy curves with 9-10 peaking at dose level three and 11-12 peaking at four. Scenarios 9 and 11 consider tolerable doses and 10 and 12 are toxic. 
+ 
+  
+ 
+ 
  
  %----------------------------------------------------------------------------------------
  %	SECTION 5
