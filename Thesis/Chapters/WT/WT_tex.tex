@@ -263,7 +263,7 @@ Once the AR phase ends dose-levels are no longer selected by adaptive randomisat
  \section{Evaluation and Exploration of the Extension via Simulations}
  \label{WT:Evaluation-of-the-Extension}
  
- In this section we evaluate the performance of RtC-WT in comparison to the two alternative designs mentioned in Section \ref{WT:Rationale-for-RtC-WT}. We also explore the impact of changing the probability of randomisation to control and the number of patients included in the adaptive randomisation phase. These will both be assessed via simulation and inspection of their operating characteristics. To facilitate simulations a generic trial example will be utilised along with a variety of scenarios. Skeletons for the working models for toxicity and efficacy are provided in table \
+ In this section we evaluate the performance of RtC-WT in comparison to the two alternative designs mentioned in Section \ref{WT:Rationale-for-RtC-WT}. We also explore the impact of changing the probability of randomisation to control and the number of patients included in the adaptive randomisation phase. These will both be assessed via simulation and inspection of their operating characteristics. To facilitate simulations a generic trial example will be utilised along with a variety of scenarios. 
  
  %-----------------------------------
  %	SUBSECTION 4.1
@@ -276,7 +276,7 @@ Once the AR phase ends dose-levels are no longer selected by adaptive randomisat
 
  \begin{table}[!h]
  	\centering
- 	\caption{Toxicity and Efficacy skeletons for RtC-WT in the example trial setting. }
+ 	\caption{Toxicity and Efficacy skeletons for RtC-WT in the example trial.}
  	\label{tab_wt:tox-eff-skeleton}
  	\begin{tabular}{c|ccccc}
  		\hline
@@ -311,11 +311,518 @@ Once the AR phase ends dose-levels are no longer selected by adaptive randomisat
  
  To compare these different combinations we use simulations covering a wide range of scenarios. For each scenario we simulate 10000 trials each consisting of 60 patients recruited in cohorts of three. Patient outcomes for toxicity and efficacy are randomly sampled using true toxicity and true efficacy probabilities, these are assumed to be independent of each other. Dose-allocation decisions are made after each cohort of patients is simulated and then the subsequent cohort is allocated the recommended dose or the trial is stopped when recruitment is reached and if stopping rules are triggered. The rest of the design specification is as defined in Section \ref{WT:Design-Spec}. 
  
- These true toxicity and efficacy probabilities are manipulated to produce each scenario. Scenario 1 to 4 look at monotonically increasing efficacy and toxicity curves. Scenarios 1 and 2 consider effective doses whereas scenarios 3 and 4 concern ineffective doses. Similarly, scenarios 1 and 3 contain all tolerable doses whereas 2 and 4 doses are considered too toxic. Scenarios 5 to 8 show plateau efficacy curves with 5-6 plateauing at dose level three and 7-8 plateauing at dose level four. Scenarios 6 and 8 doses are also considered too toxic, whereas 5 and 7 are tolerable. Scenarios 9 to 12 show unimodal efficacy curves with 9-10 peaking at dose level three and 11-12 peaking at four. Scenarios 9 and 11 consider tolerable doses and 10 and 12 are toxic. 
+ These true toxicity and efficacy probabilities are manipulated to produce each scenario. Scenario 1 to 4 look at monotonically increasing efficacy and toxicity curves. Scenarios 1 and 2 consider effective doses whereas scenarios 3 and 4 concern ineffective doses. Similarly, scenarios 1 and 3 contain all tolerable doses whereas 2 and 4 doses are considered too toxic. Scenarios 5 to 8 show plateau efficacy curves with 5 and 6 plateauing at dose level three and 7 and 8 plateauing at dose level four. Scenarios 6 and 8 doses are also considered too toxic, whereas 5 and 7 are tolerable. Scenarios 9 to 12 show unimodal efficacy curves with 9 and 10 peaking at dose level three and 11 and 12 peaking at four. Scenarios 9 and 11 consider tolerable doses and 10 and 12 are toxic. Operating characteristics and the scenarios under investigation are given in Tables \ref{tab_wt:SelectProbCombos} and \ref{tab_wt:MeanNCombos}. The selection probabilities of each combination under each scenario are also given in Table \ref{tab_wt:SelectProbCombos}. The mean number of patients recruited to each dose-level for each scenario and combination is provided in Table \ref{tab_wt:MeanNCombos}.  
  
-  
+\begin{table}
+	
+	\caption[Selection probabilities for multiple combinations of parameters.]{\label{tab_wt:SelectProbCombos}Selection probabilities for multiple combinations of AR phase size and probabilities for randomisation to control.}
+	\centering
+	\resizebox{\linewidth}{!}{
+		\fontsize{9}{11}\selectfont
+		\begin{tabular}[t]{cccccccc>{}c|ccccccccc}
+			\toprule
+			Scenario & $\phi_R$ & $j_R$ & Dose 1 & Dose 2 & Dose 3 & Dose 4 & Dose 5 & Stop & Scenario & $\phi_R$ & $j_R$ & Dose 1 & Dose 2 & Dose 3 & Dose 4 & Dose 5 & Stop\\
+			\midrule
+			P(tox) &  &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 \vphantom{2} & \\
+			\cmidrule{1-18}
+			P(eff) &  &  & 0.01 & 0.25 & 0.35 & 0.45 & 0.55 &  & P(eff) &  &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.55 \vphantom{1} & \\
+			\cmidrule{1-18}
+			& 0.2 & 0 & 0 & 0.28 & 0.28 & 0.21 & 0.23 & 0 &  & 0.2 & 0 & 0 & 0.28 & 0.2 & 0.3 & 0.22 & 0\\
+			
+			& 0.2 & 15 & 0 & 0.25 & 0.3 & 0.27 & 0.17 & 0 &  & 0.2 & 15 & 0 & 0.23 & 0.23 & 0.39 & 0.16 & 0\\
+			
+			& 0.2 & 30 & 0 & 0.18 & 0.28 & 0.34 & 0.21 & 0 &  & 0.2 & 30 & 0 & 0.14 & 0.18 & 0.5 & 0.18 & 0\\
+			
+			& 0.2 & 45 & 0 & 0.15 & 0.24 & 0.37 & 0.24 & 0 &  & 0.2 & 45 & 0 & 0.1 & 0.15 & 0.55 & 0.2 & 0\\
+			
+			& 0.2 & 60 & 0 & 0.15 & 0.2 & 0.36 & 0.29 & 0 &  & 0.2 & 60 & 0 & 0.09 & 0.13 & 0.51 & 0.26 & 0\\
+			
+			& 0.33 & 0 & 0 & 0.28 & 0.28 & 0.21 & 0.23 & 0 &  & 0.33 & 0 & 0 & 0.28 & 0.2 & 0.3 & 0.22 & 0\\
+			
+			& 0.33 & 15 & 0 & 0.26 & 0.33 & 0.25 & 0.16 & 0 &  & 0.33 & 15 & 0 & 0.25 & 0.25 & 0.36 & 0.13 & 0\\
+			
+			& 0.33 & 30 & 0 & 0.2 & 0.3 & 0.33 & 0.17 & 0 &  & 0.33 & 30 & 0 & 0.16 & 0.21 & 0.48 & 0.14 & 0\\
+			
+			& 0.33 & 45 & 0 & 0.16 & 0.27 & 0.37 & 0.2 & 0 &  & 0.33 & 45 & 0 & 0.12 & 0.18 & 0.53 & 0.16 & 0\\
+			
+			\multirow{-10}{*}{\centering\arraybackslash 1} & 0.33 & 60 & 0 & 0.18 & 0.23 & 0.38 & 0.22 & 0 & \multirow{-10}{*}{\centering\arraybackslash 7} & 0.33 & 60 & 0 & 0.14 & 0.17 & 0.51 & 0.19 & 0\\
+			\cmidrule{1-18}
+			P(tox) &  &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 \vphantom{2} & \\
+			\cmidrule{1-18}
+			P(eff) &  &  & 0.01 & 0.25 & 0.35 & 0.45 & 0.55 &  & P(eff) &  &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.55 & \\
+			\cmidrule{1-18}
+			& 0.2 & 0 & 0.07 & 0.15 & 0 & 0 & 0 & 0.77 &  & 0.2 & 0 & 0.07 & 0.15 & 0 & 0 & 0 & 0.78\\
+			
+			& 0.2 & 15 & 0.07 & 0.15 & 0 & 0 & 0 & 0.78 &  & 0.2 & 15 & 0.07 & 0.16 & 0 & 0 & 0 & 0.77\\
+			
+			& 0.2 & 30 & 0.07 & 0.16 & 0 & 0 & 0 & 0.78 &  & 0.2 & 30 & 0.07 & 0.15 & 0 & 0 & 0 & 0.78\\
+			
+			& 0.2 & 45 & 0.06 & 0.18 & 0 & 0 & 0 & 0.76 &  & 0.2 & 45 & 0.06 & 0.18 & 0 & 0 & 0 & 0.76\\
+			
+			& 0.2 & 60 & 0.08 & 0.31 & 0 & 0 & 0 & 0.61 &  & 0.2 & 60 & 0.08 & 0.32 & 0 & 0 & 0 & 0.6\\
+			
+			& 0.33 & 0 & 0.07 & 0.15 & 0 & 0 & 0 & 0.77 &  & 0.33 & 0 & 0.07 & 0.15 & 0 & 0 & 0 & 0.78\\
+			
+			& 0.33 & 15 & 0.07 & 0.16 & 0 & 0 & 0 & 0.77 &  & 0.33 & 15 & 0.06 & 0.16 & 0 & 0 & 0 & 0.77\\
+			
+			& 0.33 & 30 & 0.06 & 0.17 & 0 & 0 & 0 & 0.77 &  & 0.33 & 30 & 0.06 & 0.16 & 0 & 0 & 0 & 0.78\\
+			
+			& 0.33 & 45 & 0.04 & 0.21 & 0 & 0 & 0 & 0.74 &  & 0.33 & 45 & 0.04 & 0.22 & 0 & 0 & 0 & 0.74\\
+			
+			\multirow{-10}{*}{\centering\arraybackslash 2} & 0.33 & 60 & 0.04 & 0.38 & 0.01 & 0 & 0 & 0.57 & \multirow{-10}{*}{\centering\arraybackslash 8} & 0.33 & 60 & 0.04 & 0.37 & 0.01 & 0 & 0 & 0.58\\
+			\cmidrule{1-18}
+			P(tox) &  &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 \vphantom{1} & \\
+			\cmidrule{1-18}
+			P(eff) &  &  & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 &  & P(eff) &  &  & 0.01 & 0.35 & 0.55 & 0.35 & 0.25 \vphantom{1} & \\
+			\cmidrule{1-18}
+			& 0.2 & 0 & 0 & 0.03 & 0.12 & 0.28 & 0.36 & 0.21 &  & 0.2 & 0 & 0 & 0.32 & 0.58 & 0.09 & 0.01 & 0\\
+			
+			& 0.2 & 15 & 0 & 0.05 & 0.15 & 0.27 & 0.34 & 0.19 &  & 0.2 & 15 & 0 & 0.24 & 0.69 & 0.06 & 0.01 & 0\\
+			
+			& 0.2 & 30 & 0 & 0.08 & 0.19 & 0.31 & 0.31 & 0.12 &  & 0.2 & 30 & 0 & 0.19 & 0.74 & 0.06 & 0.01 & 0\\
+			
+			& 0.2 & 45 & 0 & 0.1 & 0.2 & 0.33 & 0.32 & 0.06 &  & 0.2 & 45 & 0 & 0.18 & 0.75 & 0.06 & 0 & 0\\
+			
+			& 0.2 & 60 & 0 & 0.13 & 0.18 & 0.31 & 0.37 & 0 &  & 0.2 & 60 & 0 & 0.23 & 0.7 & 0.07 & 0.01 & 0\\
+			
+			& 0.33 & 0 & 0 & 0.03 & 0.12 & 0.28 & 0.36 & 0.21 &  & 0.33 & 0 & 0 & 0.32 & 0.58 & 0.09 & 0.01 & 0\\
+			
+			& 0.33 & 15 & 0 & 0.05 & 0.15 & 0.29 & 0.34 & 0.17 &  & 0.33 & 15 & 0 & 0.27 & 0.66 & 0.06 & 0.01 & 0\\
+			
+			& 0.33 & 30 & 0 & 0.08 & 0.17 & 0.32 & 0.32 & 0.11 &  & 0.33 & 30 & 0 & 0.22 & 0.72 & 0.05 & 0.01 & 0\\
+			
+			& 0.33 & 45 & 0 & 0.12 & 0.19 & 0.33 & 0.32 & 0.05 &  & 0.33 & 45 & 0 & 0.22 & 0.71 & 0.06 & 0.01 & 0\\
+			
+			\multirow{-10}{*}{\centering\arraybackslash 3} & 0.33 & 60 & 0 & 0.14 & 0.18 & 0.32 & 0.36 & 0 & \multirow{-10}{*}{\centering\arraybackslash 9} & 0.33 & 60 & 0 & 0.26 & 0.66 & 0.07 & 0.01 & 0\\
+			\cmidrule{1-18}
+			P(tox) &  &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 \vphantom{1} & \\
+			\cmidrule{1-18}
+			P(eff) &  &  & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 &  & P(eff) &  &  & 0.01 & 0.35 & 0.55 & 0.35 & 0.25 & \\
+			\cmidrule{1-18}
+			& 0.2 & 0 & 0.01 & 0.03 & 0 & 0 & 0 & 0.96 &  & 0.2 & 0 & 0.07 & 0.15 & 0 & 0 & 0 & 0.78\\
+			
+			& 0.2 & 15 & 0.01 & 0.03 & 0 & 0 & 0 & 0.96 &  & 0.2 & 15 & 0.07 & 0.16 & 0 & 0 & 0 & 0.77\\
+			
+			& 0.2 & 30 & 0.01 & 0.03 & 0 & 0 & 0 & 0.95 &  & 0.2 & 30 & 0.07 & 0.16 & 0 & 0 & 0 & 0.78\\
+			
+			& 0.2 & 45 & 0.01 & 0.04 & 0 & 0 & 0 & 0.94 &  & 0.2 & 45 & 0.05 & 0.19 & 0 & 0 & 0 & 0.76\\
+			
+			& 0.2 & 60 & 0.08 & 0.32 & 0 & 0 & 0 & 0.6 &  & 0.2 & 60 & 0.07 & 0.31 & 0 & 0 & 0 & 0.61\\
+			
+			& 0.33 & 0 & 0.01 & 0.03 & 0 & 0 & 0 & 0.96 &  & 0.33 & 0 & 0.07 & 0.15 & 0 & 0 & 0 & 0.78\\
+			
+			& 0.33 & 15 & 0.02 & 0.03 & 0 & 0 & 0 & 0.95 &  & 0.33 & 15 & 0.07 & 0.16 & 0 & 0 & 0 & 0.77\\
+			
+			& 0.33 & 30 & 0.01 & 0.04 & 0 & 0 & 0 & 0.95 &  & 0.33 & 30 & 0.06 & 0.17 & 0 & 0 & 0 & 0.77\\
+			
+			& 0.33 & 45 & 0.01 & 0.05 & 0 & 0 & 0 & 0.93 &  & 0.33 & 45 & 0.04 & 0.22 & 0 & 0 & 0 & 0.74\\
+			
+			\multirow{-10}{*}{\centering\arraybackslash 4} & 0.33 & 60 & 0.05 & 0.37 & 0.01 & 0 & 0 & 0.57 & \multirow{-10}{*}{\centering\arraybackslash 10} & 0.33 & 60 & 0.04 & 0.37 & 0 & 0 & 0 & 0.58\\
+			\cmidrule{1-18}
+			P(tox) &  &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 & \\
+			\cmidrule{1-18}
+			P(eff) &  &  & 0.01 & 0.35 & 0.55 & 0.55 & 0.55 &  & P(eff) &  &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.35 \vphantom{1} & \\
+			\cmidrule{1-18}
+			& 0.2 & 0 & 0 & 0.31 & 0.44 & 0.16 & 0.09 & 0 &  & 0.2 & 0 & 0 & 0.29 & 0.21 & 0.45 & 0.05 & 0\\
+			
+			& 0.2 & 15 & 0 & 0.21 & 0.54 & 0.2 & 0.05 & 0 &  & 0.2 & 15 & 0 & 0.23 & 0.23 & 0.5 & 0.04 & 0\\
+			
+			& 0.2 & 30 & 0 & 0.13 & 0.53 & 0.28 & 0.06 & 0 &  & 0.2 & 30 & 0 & 0.15 & 0.2 & 0.62 & 0.04 & 0\\
+			
+			& 0.2 & 45 & 0 & 0.11 & 0.52 & 0.31 & 0.06 & 0 &  & 0.2 & 45 & 0 & 0.11 & 0.18 & 0.66 & 0.04 & 0\\
+			
+			& 0.2 & 60 & 0 & 0.15 & 0.45 & 0.33 & 0.08 & 0 &  & 0.2 & 60 & 0 & 0.11 & 0.17 & 0.63 & 0.09 & 0\\
+			
+			& 0.33 & 0 & 0 & 0.31 & 0.44 & 0.16 & 0.09 & 0 &  & 0.33 & 0 & 0 & 0.29 & 0.21 & 0.45 & 0.05 & 0\\
+			
+			& 0.33 & 15 & 0 & 0.23 & 0.55 & 0.17 & 0.04 & 0 &  & 0.33 & 15 & 0 & 0.26 & 0.26 & 0.44 & 0.04 & 0\\
+			
+			& 0.33 & 30 & 0 & 0.16 & 0.56 & 0.23 & 0.05 & 0 &  & 0.33 & 30 & 0 & 0.17 & 0.23 & 0.56 & 0.04 & 0\\
+			
+			& 0.33 & 45 & 0 & 0.14 & 0.55 & 0.26 & 0.05 & 0 &  & 0.33 & 45 & 0 & 0.13 & 0.22 & 0.6 & 0.04 & 0\\
+			
+			\multirow{-10}{*}{\centering\arraybackslash 5} & 0.33 & 60 & 0 & 0.21 & 0.48 & 0.26 & 0.05 & 0 & \multirow{-10}{*}{\centering\arraybackslash 11} & 0.33 & 60 & 0 & 0.15 & 0.2 & 0.57 & 0.08 & 0\\
+			\cmidrule{1-18}
+			P(tox) &  &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 & \\
+			\cmidrule{1-18}
+			P(eff) &  &  & 0.01 & 0.35 & 0.55 & 0.55 & 0.55 &  & P(eff) &  &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.35 & \\
+			\cmidrule{1-18}
+			& 0.2 & 0 & 0.07 & 0.15 & 0 & 0 & 0 & 0.78 &  & 0.2 & 0 & 0.07 & 0.15 & 0 & 0 & 0 & 0.78\\
+			
+			& 0.2 & 15 & 0.07 & 0.16 & 0 & 0 & 0 & 0.77 &  & 0.2 & 15 & 0.07 & 0.16 & 0 & 0 & 0 & 0.77\\
+			
+			& 0.2 & 30 & 0.07 & 0.16 & 0 & 0 & 0 & 0.77 &  & 0.2 & 30 & 0.07 & 0.15 & 0 & 0 & 0 & 0.78\\
+			
+			& 0.2 & 45 & 0.05 & 0.19 & 0 & 0 & 0 & 0.76 &  & 0.2 & 45 & 0.06 & 0.18 & 0 & 0 & 0 & 0.76\\
+			
+			& 0.2 & 60 & 0.07 & 0.32 & 0 & 0 & 0 & 0.61 &  & 0.2 & 60 & 0.08 & 0.32 & 0 & 0 & 0 & 0.6\\
+			
+			& 0.33 & 0 & 0.07 & 0.15 & 0 & 0 & 0 & 0.78 &  & 0.33 & 0 & 0.07 & 0.15 & 0 & 0 & 0 & 0.78\\
+			
+			& 0.33 & 15 & 0.07 & 0.16 & 0 & 0 & 0 & 0.77 &  & 0.33 & 15 & 0.06 & 0.16 & 0 & 0 & 0 & 0.77\\
+			
+			& 0.33 & 30 & 0.06 & 0.17 & 0 & 0 & 0 & 0.77 &  & 0.33 & 30 & 0.06 & 0.16 & 0 & 0 & 0 & 0.78\\
+			
+			& 0.33 & 45 & 0.04 & 0.22 & 0 & 0 & 0 & 0.74 &  & 0.33 & 45 & 0.04 & 0.22 & 0 & 0 & 0 & 0.74\\
+			
+			\multirow{-10}{*}{\centering\arraybackslash 6} & 0.33 & 60 & 0.04 & 0.37 & 0.01 & 0 & 0 & 0.58 & \multirow{-10}{*}{\centering\arraybackslash 12} & 0.33 & 60 & 0.04 & 0.37 & 0.01 & 0 & 0 & 0.58\\
+			\bottomrule
+	\end{tabular}}
+\end{table}
+
+\begin{table}
+	
+	\caption[Mean No. of patients for multiple combinations of parameters.]{\label{tab_wt:MeanNCombos}Mean number of patients treated at each dose for multiple combinations of AR phase size and probabilities for randomisation to control.}
+	\centering
+	\resizebox{\linewidth}{!}{
+		\fontsize{9}{11}\selectfont
+		\begin{tabular}[t]{cccccccc>{}c|ccccccccc}
+			\toprule
+			Scenario & $\phi_R$ & $j_R$ & Dose 1 & Dose 2 & Dose 3 & Dose 4 & Dose 5 & Total & Scenario & $\phi_R$ & $j_R$ & Dose 1 & Dose 2 & Dose 3 & Dose 4 & Dose 5 & Total\\
+			\midrule
+			P(tox) &  &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 \vphantom{2} & \\
+			\cmidrule{1-18}
+			P(eff) &  &  & 0.01 & 0.25 & 0.35 & 0.45 & 0.55 &  & P(eff) &  &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.55 \vphantom{1} & \\
+			\cmidrule{1-18}
+			& 0.2 & 0 & 0.1 & 21.1 & 16.9 & 11.2 & 10.7 & 60 &  & 0.2 & 0 & 0.1 & 20.9 & 13.9 & 14.3 & 10.8 & 60\\
+			
+			& 0.2 & 15 & 2.4 & 18.3 & 18 & 13.6 & 7.6 & 59.9 &  & 0.2 & 15 & 2.4 & 17.1 & 15.3 & 17.9 & 7.2 & 59.9\\
+			
+			& 0.2 & 30 & 5.5 & 14.9 & 16 & 15.4 & 8.2 & 60 &  & 0.2 & 30 & 5.4 & 13.9 & 13.5 & 19.5 & 7.7 & 60\\
+			
+			& 0.2 & 45 & 8.5 & 14.2 & 14.7 & 14.4 & 8.2 & 60 &  & 0.2 & 45 & 8.5 & 13.4 & 13.5 & 16.9 & 7.7 & 60\\
+			
+			& 0.2 & 60 & 11.4 & 14.3 & 14.4 & 12.6 & 7.3 & 60 &  & 0.2 & 60 & 11.4 & 13.9 & 14.3 & 12.9 & 7.5 & 60\\
+			
+			& 0.33 & 0 & 0.1 & 21.1 & 16.9 & 11.2 & 10.7 & 60 &  & 0.33 & 0 & 0.1 & 20.9 & 13.9 & 14.3 & 10.8 & 60\\
+			
+			& 0.33 & 15 & 4 & 18.4 & 18.4 & 12.6 & 6.6 & 60 &  & 0.33 & 15 & 4 & 18 & 16 & 16.1 & 5.9 & 60\\
+			
+			& 0.33 & 30 & 9 & 14.9 & 15.7 & 13.9 & 6.4 & 59.9 &  & 0.33 & 30 & 9 & 13.8 & 13.7 & 17.7 & 5.8 & 60\\
+			
+			& 0.33 & 45 & 13.9 & 13.2 & 13.8 & 12.7 & 6.3 & 59.9 &  & 0.33 & 45 & 13.9 & 12.4 & 12.6 & 15.1 & 6 & 60\\
+			
+			\multirow{-10}{*}{\centering\arraybackslash 1} & 0.33 & 60 & 19 & 12.7 & 12.6 & 10.4 & 5.4 & 60.1 & \multirow{-10}{*}{\centering\arraybackslash 7} & 0.33 & 60 & 18.9 & 12.5 & 12.5 & 10.6 & 5.5 & 60\\
+			\cmidrule{1-18}
+			P(tox) &  &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 \vphantom{2} & \\
+			\cmidrule{1-18}
+			P(eff) &  &  & 0.01 & 0.25 & 0.35 & 0.45 & 0.55 &  & P(eff) &  &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.55 & \\
+			\cmidrule{1-18}
+			& 0.2 & 0 & 15.3 & 23.2 & 0.7 & 0.1 & 0 & 39.3 &  & 0.2 & 0 & 15.2 & 23.1 & 0.7 & 0.1 & 0 & 39.1\\
+			
+			& 0.2 & 15 & 15.3 & 22.8 & 1 & 0.1 & 0 & 39.2 &  & 0.2 & 15 & 15.3 & 22.8 & 1 & 0.1 & 0 & 39.2\\
+			
+			& 0.2 & 30 & 15.5 & 22.6 & 1 & 0.1 & 0 & 39.2 &  & 0.2 & 30 & 15.4 & 22.4 & 0.9 & 0.1 & 0 & 38.8\\
+			
+			& 0.2 & 45 & 16.5 & 23 & 1 & 0.1 & 0 & 40.6 &  & 0.2 & 45 & 16.5 & 22.9 & 1 & 0.1 & 0 & 40.5\\
+			
+			& 0.2 & 60 & 17.8 & 22.6 & 1 & 0.1 & 0 & 41.5 &  & 0.2 & 60 & 17.9 & 22.8 & 1 & 0.1 & 0 & 41.8\\
+			
+			& 0.33 & 0 & 15.3 & 23.2 & 0.7 & 0.1 & 0 & 39.3 &  & 0.33 & 0 & 15.2 & 23.1 & 0.7 & 0.1 & 0 & 39.1\\
+			
+			& 0.33 & 15 & 15.5 & 22.7 & 1.1 & 0.1 & 0 & 39.4 &  & 0.33 & 15 & 15.5 & 22.7 & 1.2 & 0.1 & 0 & 39.5\\
+			
+			& 0.33 & 30 & 16 & 22.5 & 1.4 & 0.1 & 0 & 40 &  & 0.33 & 30 & 15.9 & 22.3 & 1.3 & 0.1 & 0 & 39.6\\
+			
+			& 0.33 & 45 & 17.5 & 22.2 & 1.3 & 0.1 & 0 & 41.1 &  & 0.33 & 45 & 17.3 & 22.1 & 1.3 & 0.1 & 0 & 40.8\\
+			
+			\multirow{-10}{*}{\centering\arraybackslash 2} & 0.33 & 60 & 20 & 21.4 & 1.3 & 0.1 & 0 & 42.8 & \multirow{-10}{*}{\centering\arraybackslash 8} & 0.33 & 60 & 19.9 & 21.4 & 1.3 & 0.1 & 0 & 42.7\\
+			\cmidrule{1-18}
+			P(tox) &  &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 \vphantom{1} & \\
+			\cmidrule{1-18}
+			P(eff) &  &  & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 &  & P(eff) &  &  & 0.01 & 0.35 & 0.55 & 0.35 & 0.25 \vphantom{1} & \\
+			\cmidrule{1-18}
+			& 0.2 & 0 & 0.1 & 9.7 & 11.3 & 17.5 & 18.9 & 57.5 &  & 0.2 & 0 & 0.1 & 26.4 & 27.1 & 5.2 & 1.2 & 60\\
+			
+			& 0.2 & 15 & 2.4 & 10.7 & 12.3 & 16.2 & 16.3 & 57.9 &  & 0.2 & 15 & 2.4 & 18.7 & 32.5 & 5.4 & 0.9 & 59.9\\
+			
+			& 0.2 & 30 & 5.4 & 11.1 & 13.7 & 15.9 & 12.9 & 59 &  & 0.2 & 30 & 5.4 & 16.6 & 28.3 & 7.6 & 2 & 59.9\\
+			
+			& 0.2 & 45 & 8.4 & 11.3 & 13.6 & 15.2 & 11.2 & 59.7 &  & 0.2 & 45 & 8.4 & 16.2 & 22.3 & 9.5 & 3.5 & 59.9\\
+			
+			& 0.2 & 60 & 11.5 & 11.1 & 13.7 & 14.3 & 9.4 & 60 &  & 0.2 & 60 & 11.5 & 16.1 & 15.6 & 11.6 & 5.3 & 60.1\\
+			
+			& 0.33 & 0 & 0.1 & 9.7 & 11.3 & 17.5 & 18.9 & 57.5 &  & 0.33 & 0 & 0.1 & 26.4 & 27.1 & 5.2 & 1.2 & 60\\
+			
+			& 0.33 & 15 & 4 & 10.2 & 11.8 & 15.9 & 16.3 & 58.2 &  & 0.33 & 15 & 4 & 19.6 & 30.8 & 4.9 & 0.8 & 60.1\\
+			
+			& 0.33 & 30 & 9 & 10.4 & 12.2 & 15.2 & 12.4 & 59.2 &  & 0.33 & 30 & 8.9 & 16.4 & 26.6 & 6.5 & 1.6 & 60\\
+			
+			& 0.33 & 45 & 13.8 & 10.4 & 12.3 & 13.6 & 9.8 & 59.9 &  & 0.33 & 45 & 13.9 & 15.3 & 20 & 8.1 & 2.7 & 60\\
+			
+			\multirow{-10}{*}{\centering\arraybackslash 3} & 0.33 & 60 & 19 & 10 & 12.1 & 11.8 & 7.1 & 60 & \multirow{-10}{*}{\centering\arraybackslash 9} & 0.33 & 60 & 19 & 14.1 & 13.3 & 9.6 & 4 & 60\\
+			\cmidrule{1-18}
+			P(tox) &  &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 \vphantom{1} & \\
+			\cmidrule{1-18}
+			P(eff) &  &  & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 &  & P(eff) &  &  & 0.01 & 0.35 & 0.55 & 0.35 & 0.25 & \\
+			\cmidrule{1-18}
+			& 0.2 & 0 & 13.3 & 18.4 & 1.1 & 0.2 & 0 & 33 &  & 0.2 & 0 & 15.3 & 23.3 & 0.5 & 0 & 0 & 39.1\\
+			
+			& 0.2 & 15 & 13.3 & 18.2 & 1.3 & 0.2 & 0 & 33 &  & 0.2 & 15 & 15.2 & 22.9 & 1 & 0.1 & 0 & 39.2\\
+			
+			& 0.2 & 30 & 14.2 & 18.7 & 1.2 & 0.1 & 0 & 34.2 &  & 0.2 & 30 & 15.6 & 22.7 & 0.9 & 0.1 & 0 & 39.3\\
+			
+			& 0.2 & 45 & 16.2 & 20.9 & 1.2 & 0.2 & 0 & 38.5 &  & 0.2 & 45 & 16.5 & 23 & 1 & 0.1 & 0 & 40.6\\
+			
+			& 0.2 & 60 & 18.1 & 22.8 & 1.2 & 0.1 & 0 & 42.2 &  & 0.2 & 60 & 17.9 & 22.7 & 0.9 & 0.1 & 0 & 41.6\\
+			
+			& 0.33 & 0 & 13.3 & 18.4 & 1.1 & 0.2 & 0 & 33 &  & 0.33 & 0 & 15.3 & 23.3 & 0.5 & 0 & 0 & 39.1\\
+			
+			& 0.33 & 15 & 13.6 & 18.3 & 1.5 & 0.2 & 0 & 33.6 &  & 0.33 & 15 & 15.4 & 23 & 1 & 0.1 & 0 & 39.5\\
+			
+			& 0.33 & 30 & 14.8 & 18.5 & 1.6 & 0.2 & 0 & 35.1 &  & 0.33 & 30 & 16 & 22.5 & 1.3 & 0.1 & 0 & 39.9\\
+			
+			& 0.33 & 45 & 17.1 & 19.8 & 1.5 & 0.2 & 0 & 38.6 &  & 0.33 & 45 & 17.6 & 22.4 & 1.3 & 0.1 & 0 & 41.4\\
+			
+			\multirow{-10}{*}{\centering\arraybackslash 4} & 0.33 & 60 & 19.9 & 21 & 1.5 & 0.2 & 0 & 42.6 & \multirow{-10}{*}{\centering\arraybackslash 10} & 0.33 & 60 & 19.9 & 21.5 & 1.2 & 0.1 & 0 & 42.7\\
+			\cmidrule{1-18}
+			P(tox) &  &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 & \\
+			\cmidrule{1-18}
+			P(eff) &  &  & 0.01 & 0.35 & 0.55 & 0.55 & 0.55 &  & P(eff) &  &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.35 \vphantom{1} & \\
+			\cmidrule{1-18}
+			& 0.2 & 0 & 0.1 & 26.1 & 21.7 & 7.4 & 4.8 & 60.1 &  & 0.2 & 0 & 0.1 & 21.3 & 14.4 & 19.5 & 4.8 & 60.1\\
+			
+			& 0.2 & 15 & 2.5 & 17.2 & 27 & 10.6 & 2.7 & 60 &  & 0.2 & 15 & 2.4 & 17.1 & 15.6 & 21.4 & 3.4 & 59.9\\
+			
+			& 0.2 & 30 & 5.4 & 14.3 & 22.6 & 13.7 & 4 & 60 &  & 0.2 & 30 & 5.4 & 13.9 & 14.3 & 22.4 & 4 & 60\\
+			
+			& 0.2 & 45 & 8.5 & 14.3 & 18.6 & 13.4 & 5.2 & 60 &  & 0.2 & 45 & 8.4 & 13.7 & 14.1 & 18.4 & 5.3 & 59.9\\
+			
+			& 0.2 & 60 & 11.4 & 14.9 & 14.7 & 12.3 & 6.6 & 59.9 &  & 0.2 & 60 & 11.5 & 14.3 & 14.5 & 12.8 & 6.8 & 59.9\\
+			
+			& 0.33 & 0 & 0.1 & 26.1 & 21.7 & 7.4 & 4.8 & 60.1 &  & 0.33 & 0 & 0.1 & 21.3 & 14.4 & 19.5 & 4.8 & 60.1\\
+			
+			& 0.33 & 15 & 4 & 17.8 & 27 & 9 & 2.2 & 60 &  & 0.33 & 15 & 4 & 18.2 & 16.3 & 18.5 & 3 & 60\\
+			
+			& 0.33 & 30 & 9 & 14.4 & 22.5 & 11.3 & 2.9 & 60.1 &  & 0.33 & 30 & 9 & 13.9 & 14.3 & 19.5 & 3.3 & 60\\
+			
+			& 0.33 & 45 & 13.8 & 13.7 & 17.5 & 11.1 & 3.9 & 60 &  & 0.33 & 45 & 13.9 & 12.9 & 13 & 15.9 & 4.3 & 60\\
+			
+			\multirow{-10}{*}{\centering\arraybackslash 5} & 0.33 & 60 & 18.9 & 13.3 & 12.7 & 10 & 5 & 59.9 & \multirow{-10}{*}{\centering\arraybackslash 11} & 0.33 & 60 & 18.9 & 12.6 & 12.6 & 10.6 & 5.3 & 60\\
+			\cmidrule{1-18}
+			P(tox) &  &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 & \\
+			\cmidrule{1-18}
+			P(eff) &  &  & 0.01 & 0.35 & 0.55 & 0.55 & 0.55 &  & P(eff) &  &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.35 & \\
+			\cmidrule{1-18}
+			& 0.2 & 0 & 15.4 & 23.3 & 0.5 & 0.1 & 0 & 39.3 &  & 0.2 & 0 & 15.3 & 23.1 & 0.7 & 0.1 & 0 & 39.2\\
+			
+			& 0.2 & 15 & 15.2 & 22.8 & 1 & 0.1 & 0 & 39.1 &  & 0.2 & 15 & 15.3 & 22.8 & 1 & 0.1 & 0 & 39.2\\
+			
+			& 0.2 & 30 & 15.6 & 22.8 & 1 & 0.1 & 0 & 39.5 &  & 0.2 & 30 & 15.4 & 22.4 & 0.9 & 0.1 & 0 & 38.8\\
+			
+			& 0.2 & 45 & 16.4 & 23 & 0.9 & 0.1 & 0 & 40.4 &  & 0.2 & 45 & 16.5 & 22.9 & 1 & 0.1 & 0 & 40.5\\
+			
+			& 0.2 & 60 & 18 & 22.8 & 0.9 & 0.1 & 0 & 41.8 &  & 0.2 & 60 & 17.9 & 22.8 & 1 & 0.1 & 0 & 41.8\\
+			
+			& 0.33 & 0 & 15.4 & 23.3 & 0.5 & 0.1 & 0 & 39.3 &  & 0.33 & 0 & 15.3 & 23.1 & 0.7 & 0.1 & 0 & 39.2\\
+			
+			& 0.33 & 15 & 15.3 & 22.9 & 1 & 0.1 & 0 & 39.3 &  & 0.33 & 15 & 15.5 & 22.7 & 1.2 & 0.1 & 0 & 39.5\\
+			
+			& 0.33 & 30 & 15.9 & 22.5 & 1.2 & 0.1 & 0 & 39.7 &  & 0.33 & 30 & 15.9 & 22.3 & 1.3 & 0.1 & 0 & 39.6\\
+			
+			& 0.33 & 45 & 17.7 & 22.6 & 1.3 & 0.1 & 0 & 41.7 &  & 0.33 & 45 & 17.3 & 22.1 & 1.3 & 0.1 & 0 & 40.8\\
+			
+			\multirow{-10}{*}{\centering\arraybackslash 6} & 0.33 & 60 & 19.9 & 21.5 & 1.2 & 0.1 & 0 & 42.7 & \multirow{-10}{*}{\centering\arraybackslash 12} & 0.33 & 60 & 19.9 & 21.4 & 1.3 & 0.1 & 0 & 42.7\\
+			\bottomrule
+	\end{tabular}}
+\end{table}
+
+For scenario 1 it is relatively simple to select an admissible dose since all doses are tolerable and efficacy increases monotonically. The difficulty is locating the OBD. All of these combinations fail to identify the OBD (dose-level 5) more than 30\% of the time. As the size of the AR phase increases from 15 to 60 so do the selection probabilities, going from 17\% to 29\% and 16\% to 22\% for randomisation probabilities of 0.2 and 0.33 respectively. Overall, the designs with higher probability of randomising to control fair slightly worse. In the case of no AR phase, $j_R =0$, the design is roughly selects all active doses (dose-levels 2 to 5) at a similar rate, slightly preferring the lower dose levels. It should be noted that the two designs with no AR phase are identical since the randomisation probabilities are never used. In terms of numbers of patients treated we see more patients in the control arm as AR phase size and randomisation probability increase. This is expected since if you increase the amount of time available for cohorts to be randomised or the probability in which that is done so more patients will be recruited to control. By increasing the probability of randomising to control we can also see that less patients are being treated at the optimal dose. Also, the $\phi_R$ figure does not guarantee that exact percentage of patients in the control dose. On average these values seem to be less than one patient off. 
+
+Scenario 2 has no OBD as all treatment doses are considered toxic. For most of the combinations stopping occurs 74-78\% of the time. Slightly concerning is the case where the AR phase lasts the whole trial. Here stopping is less frequent at 61\% and 57\% for doses $\phi_R = 0.2$ and $\phi_R = 0.33$ respectively. One reason why this may occur is that early on during the trial it will be difficult to discern the toxic dose-levels with low numbers of patients and since these designs don't activate the maximisation phase they will constonatly be allocating patients to control. As such it may be the case that not enough toxicity events are being collected to recommend to stop. Interestingly when you look at the average number of patients allocated to control this is similar across the board, even for the case where no adaptive randomisation si taking place. This probably happens since non of the treatment dose-levels make it into the admissible set. If there is only one dose-level in the admissible set after modelling toxicity the design will automatically allocate to that dose.  
+
+In scenario 3, the treatment is tolerable but the treatment effect is weak. Again there is no OBD and the trial should recommend stopping for futility. For designs where $j_R$ is set to the max sample size, in this case 60, stopping will never occur here. this is due to the fact there is no maximisation phase and consequently the futility stopping rule doesn't come into play. We can see those with smaller AR phase stop more often although not enough. Most of the time these designs are selecting dose-level 5 as the OBD since its true efficacy rate is somewhat close to the lower bound of efficacy. We can see the majority of patients being allocated to this dose-level as well. Since this dose is not toxic this seems reasonable but ideally it would be preferable if the designs recommended stopping. 
+
+Scenario 4 is where the treatment is considered toxic and inefficacious. Compared to scenario 2 we see high probability of stopping (93\% - 96\%) approximately 20 \% higher for all of the combinations except where the size of the AR phase is the same as the whole trial. This will be due to the futility rule stopping the trial in instances where toxicity events aren't occurring but doses are still ineffective. 
+
+Scenario 5 looks at a plateau relationship where dose-efficacy stops increasing after dose 3. Except for when the AR phase size is 0 or 60 the OBD is selected more than 50\% of the time. When the AR phase lasts the whole trial the design seems to run into the issue where dose levels 3, 4 and 5 are all admissible and equally efficacious as such the probability of randomising between these will be somewhat similar. The designs with no AR phase seem to get stuck at lower dose-levels since there is also some efficacious effect there. For both of these combinations we can see this reflected in the average patient numbers for each dose. Looking at the differences between the randomisation to control probabilities we see a minimal increase, approximately 1\% in selection of the OBD for $\phi_R = 0.33$. We also see slightly more patients treated at the OBD for lower numbers of $j_R$. This is most likely due to there being less randomisation and more allocation based on efficacy data once an initial set of data has been collected. 
+
+Scenario 6 looks at a similar efficacy curve as scenario 5 but all doses are toxic. Once again, this behaves similarly to other toxic scenarios 2 and 4 where stopping occurs well except in the case where adaptive randomisation lasts the whole trial. 
+
+Scenario 7 is similar to scenario 5 except the plateau begins at dose 4. Here the selection probabilities for small AR phases(0-15) fall off but increase fo 60 in comparison to scenario 5. For an AR phase size of 0 the design still gets stuck at the lower doses. Now with the plateau at 4 the OBD is one dose-level further away from the starting dose. Thus the designs with small AR phases are unable to randomise enough patients to higher dose levels and get stuck during their maximisation phase. Inversely this improved the performance for $j_R = 60$ as there is one less dose level with similar efficacy so the design has an easier time locating the OBD via randomisation. Scenario 8 involves the same efficacy relationship as scenario 7 except when all doses are toxic. Here we see similar performance as prior scenarios with toxic doses.  
+
+Scenarios 9 and 11 look at unimodal efficacy relationships where the mos efficacious dose is at doses 3 and 4 respectively. Overall, we see much higher selection probabilities in these scenarios with those in 9 being slightly higher than those in 11. Similar to the plateau relationships we see less performance for those designs with $j_R = 0$ and  $j_R = 60$. With these scenarios we also see a slight increase in the average number of patients treated at the OBD. The increase in performance may be due to the fact that there is only one dose with a high level of efficacy whereas previous dose had multiple highly efficacious doses to allocate to. The impact of randomisation probabilities appear to be more apparent in scenario 11 where $\phi_R = 0.33$ designs have slightly lower performance. As with scenario 7 since the OBD is one dose further from the starting dose and more patients are being randomised to control there's less chance to obtain data on those higher doses through the initial randomisation in the AR phase. 
+
+Finally, scenarios 10 and 12 look at the versions of scenario 9 and 11 respectively where all doses are toxic. Once again, similar characteristics are observed to other toxic scenarios. 
+
+In general these scenarios show us that there are some issues with certain specifications of $\phi_R$ and $j_R$ in some of the scenarios presented. Specifically, in the case of stopping for toxicity, having the AR phase being the same as the sample size causes some issues. Also, an AR phase size of 0 does not perform well if the dose-efficacy relationship plateaus. For the randomisation probabilities performance was mostly similar between the two values we chose. Some difficulties were observed for higher probabilities of randomisation when the OBD is further away from the starting dose-level. In terms of patient numbers at the control dose we see on average a similar number, if not slightly lower, to what would be expected i.e. for $\phi_R = 0.2$ and  $j_R = 45$ you would expect 9 control patients (20\% of 45) our simulations yielded about 8.5 on average dependent on scenario. 
+
+Based on these simulations it would be best to use an AR phase size between 25\% and 75\% of the total sample size and a randomisation to control probability that will produce the number of control patients you are interested in. However, it may be beneficial to investigate various values of $\phi_R$ as there does appear to be some trade-off in terms of performance and the number of patients recruited to th the control dose.
+
+
+
+
+ %-----------------------------------
+ %	SUBSECTION 4.3
+ %-----------------------------------
+ \subsection{Comparison of RtC-WT against Alternative Designs }
+ \label{WT:CompAltDesigns}
  
+ The simulations in the previous section were about exploring the impact of varying the parameters controlling the randomisation in RtC-WT. In this section we investigate two alternative trial approaches which could be used to achieve the same aims as RtC-WT, that is to conduct a dose-finding study locating the ODB whilst recruiting patients to a control arm. Simulations will be conducted for these two alternatives across a variety of scenarios and operating characteristics will be compared against those for RtC-WT.       
  
+ The first alternative approach would be just to use a standard Wages and Tait design and include the lowest dose-level as control. We will refer to this approach as the standard Wages and Tait (WT). Technically this design doesn't aim to recruit control patients but by including it as a dose-level there is still a small probability during the AR phase that this occurs. Either way this will be a good comparator for RtC-WT as we will be able to directly compare how our extension impacts performance compared to a traditional Wages and Tait design. Theoretically since the standard Wages and Tait design won't be forced to allocate patients to the control dose-level you would expect more patients too be allocated at the experimental treatment dose-levels leading to more data on efficacy and toxicity relationships making it easier to locate the ODB. The differences in performance between these two designs could be considered as the cost for including a control dose. 
+ 
+ The second design is one which uses a two-arm randomised approach. Patients once recruited are randomised to either a control arm or a dose-finding study arm. The dose-finding study-arm will use the method of Wages and Tait to identify a OBD. We will refer to this method as the two-arm approach. One of the benefits of this approach is that it is fairly simplistic. This could be considered as a straight-forward way of including a control arm into complex designs without having to figure out any complicated mathematics. For example, the EffTox design could be used for the dose-finding arm and due to the two-arm approach we now have a cohort of control patients without building that methodology directly into the design. For the dose-finding study any methodology could be used here to locate an OBD, however we selected WT to provide more comparisons for RtC-WT. Since the randomisation occurs up front a guaranteed number of patients can be expected in the control arm, which may be a desirable characteristic of this design. In terms of comparisons to RtC-WT this design will allow us to see if it is worth including the control patients directly in the dose-finding aspect of the design and if there's any benefit in terms of operating characteristics.  
+ 
+ For RtC-WT we will be using the same design specification as detailed in Section \ref{WT:Design-Spec}. In terms of parameters for the number of patients in the AR phase and the probability of randomising to control these will be set at $j_R = 45 $ and $\phi_R = 0.2 $ respectively. These values were selected based on the work done in the previous section. This combination of parameters seemed to perform consistently across all the scenarios explored. The standard Wages and Tait approach will also be using the same specification except for the fixed probability of randomisation to control.
+ 
+ For the two-arm approach things are slightly different since patients are being randomised first. Looking at the RtC-WT design we have specified a sample size of 60, an AR phase size of 45 and probability of randomising to control at 20\%. Here we would expect roughly nine patients to be allocated to the control arm (20\% of 45), looking at Table for this combo we see on average we achieve around 8.5 patients at the control dose-level. To mimic this behaviour for the two-arm approach we would need to specify a randomisation ratio upfront. Based on the parameters set for RtC-WT this can be done generally using the formula:
+ 
+ \begin{equation}
+ 1 : \frac{J}{\phi_R j_r} - 1
+ \end{equation}
+ 
+ where $J$ is the maximum sample size. In this scenario this corresponds to a 1:5.67 (3:17) randomisation. So for the two-arm approach we will have 9 patients in control and 51 patients in the dose-finding study. 
+ 
+ The specifications for the dose-finding study will be somewhat similar as well. Here there will only be four dose levels (no control dose-level) i.e doses 2-5 in Section \ref{WT:Design-Spec}. We also adjust the toxicity and efficacy skeletons accordingly in Table \ref{tab_wt:tox-eff-skeleton} as well by removing the values from dose-level 1. Since there is no control dose-level in the design we will just be using approximately 50\% of the patients in the AR phase, as recommended by Wages and Tait. As there will be 51 patients in the dose-finding study we set the AR phase to 24, slightly less than 50\% as we are using cohorts of three and 51 patients can't be evenly split up between the two phases. All other design specifications remain the same such as the stopping rules and the pre-specified toxicity upper bound and lower bound. 
+ 
+ To compare these different approaches simulations will be used covering the same scenarios as in section \ref{WT:Impact-ARandRTCon-RtC-WT}. For each scenario we simulate 10000 trials each using the specifications mentioned above. Table \ref{tab_wt:SelectProbAlt} contains the results for scenarios 1 to 12 comparing selection probabilities. Table \ref{tab_wt:MeanNAlt} presents the results for the same scenarios looking at the average number of patients treated at each dose.  
+ 
+ \begin{table}
+ 	
+ 	\caption{\label{tab_wt:SelectProbAlt}Selection probabilities for alternative trial designs.}
+ 	\centering
+ 	\resizebox{\linewidth}{!}{
+ 		\fontsize{12}{14}\selectfont
+ 		\begin{tabular}[t]{ccccccc>{}c|cccccccc}
+ 			\toprule
+ 			Scenario & Design & Dose 1 & Dose 2 & Dose 3 & Dose 4 & Dose 5 & Stop & Scenario & Design & Dose 1 & Dose 2 & Dose 3 & Dose 4 & Dose 5 & Stop\\
+ 			\midrule
+ 			P(tox) &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 \vphantom{2} & \\
+ 			\cmidrule{1-16}
+ 			P(eff) &  & 0.01 & 0.25 & 0.35 & 0.45 & 0.55 &  & P(eff) &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.55 \vphantom{1} & \\
+ 			\cmidrule{1-16}
+ 			& RtC-WT & 0 & 0.15 & 0.24 & 0.37 & 0.24 & 0 &  & RtC-WT & 0 & 0.1 & 0.15 & 0.55 & 0.2 & 0\\
+ 			
+ 			& WT & 0 & 0.11 & 0.21 & 0.36 & 0.31 & 0 &  & WT & 0 & 0.07 & 0.11 & 0.53 & 0.29 & 0\\
+ 			
+ 			\multirow{-3}{*}{\centering\arraybackslash 1} & TwoArm &  & 0.18 & 0.25 & 0.32 & 0.24 & 0 & \multirow{-3}{*}{\centering\arraybackslash 7} & TwoArm &  & 0.13 & 0.16 & 0.47 & 0.24 & 0\\
+ 			\cmidrule{1-16}
+ 			P(tox) &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 \vphantom{2} & \\
+ 			\cmidrule{1-16}
+ 			P(eff) &  & 0.01 & 0.25 & 0.35 & 0.45 & 0.55 &  & P(eff) &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.55 & \\
+ 			\cmidrule{1-16}
+ 			& RtC-WT & 0.06 & 0.18 & 0 & 0 & 0 & 0.76 &  & RtC-WT & 0.06 & 0.18 & 0 & 0 & 0 & 0.76\\
+ 			
+ 			& WT & 0.07 & 0.16 & 0 & 0 & 0 & 0.77 &  & WT & 0.07 & 0.16 & 0 & 0 & 0 & 0.77\\
+ 			
+ 			\multirow{-3}{*}{\centering\arraybackslash 2} & TwoArm &  & 0.23 & 0 & 0 & 0 & 0.77 & \multirow{-3}{*}{\centering\arraybackslash 8} & TwoArm &  & 0.23 & 0 & 0 & 0 & 0.77\\
+ 			\cmidrule{1-16}
+ 			P(tox) &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 \vphantom{1} & \\
+ 			\cmidrule{1-16}
+ 			P(eff) &  & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 &  & P(eff) &  & 0.01 & 0.35 & 0.55 & 0.35 & 0.25 & \\
+ 			\cmidrule{1-16}
+ 			& RtC-WT & 0 & 0.1 & 0.2 & 0.33 & 0.32 & 0.06 &  & RtC-WT & 0 & 0.18 & 0.75 & 0.06 & 0 & 0\\
+ 			
+ 			& WT & 0 & 0.08 & 0.21 & 0.33 & 0.3 & 0.08 &  & WT & 0 & 0.16 & 0.79 & 0.05 & 0 & 0\\
+ 			
+ 			\multirow{-3}{*}{\centering\arraybackslash 3} & TwoArm &  & 0.09 & 0.2 & 0.3 & 0.3 & 0.1 & \multirow{-3}{*}{\centering\arraybackslash 9} & TwoArm &  & 0.19 & 0.74 & 0.06 & 0 & 0\\
+ 			\cmidrule{1-16}
+ 			P(tox) &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 \vphantom{1} & \\
+ 			\cmidrule{1-16}
+ 			P(eff) &  & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 &  & P(eff) &  & 0.01 & 0.25 & 0.35 & 0.45 & 0.55 & \\
+ 			\cmidrule{1-16}
+ 			& RtC-WT & 0.01 & 0.04 & 0 & 0 & 0 & 0.94 &  & RtC-WT & 0.05 & 0.19 & 0 & 0 & 0 & 0.76\\
+ 			
+ 			& WT & 0.02 & 0.03 & 0 & 0 & 0 & 0.95 &  & WT & 0.06 & 0.16 & 0 & 0 & 0 & 0.77\\
+ 			
+ 			\multirow{-3}{*}{\centering\arraybackslash 4} & TwoArm &  & 0.02 & 0 & 0 & 0 & 0.98 & \multirow{-3}{*}{\centering\arraybackslash 10} & TwoArm &  & 0.23 & 0 & 0 & 0 & 0.76\\
+ 			\cmidrule{1-16}
+ 			P(tox) &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 & \\
+ 			\cmidrule{1-16}
+ 			P(eff) &  & 0.01 & 0.35 & 0.55 & 0.55 & 0.55 &  & P(eff) &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.35 \vphantom{1} & \\
+ 			\cmidrule{1-16}
+ 			& RtC-WT & 0 & 0.11 & 0.52 & 0.31 & 0.06 & 0 &  & RtC-WT & 0 & 0.11 & 0.18 & 0.66 & 0.04 & 0\\
+ 			
+ 			& WT & 0 & 0.08 & 0.46 & 0.35 & 0.1 & 0 &  & WT & 0 & 0.09 & 0.16 & 0.7 & 0.05 & 0\\
+ 			
+ 			\multirow{-3}{*}{\centering\arraybackslash 5} & TwoArm &  & 0.12 & 0.49 & 0.3 & 0.09 & 0 & \multirow{-3}{*}{\centering\arraybackslash 11} & TwoArm &  & 0.14 & 0.19 & 0.62 & 0.05 & 0\\
+ 			\cmidrule{1-16}
+ 			P(tox) &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 & \\
+ 			\cmidrule{1-16}
+ 			P(eff) &  & 0.01 & 0.35 & 0.55 & 0.55 & 0.55 &  & P(eff) &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.35 & \\
+ 			\cmidrule{1-16}
+ 			& RtC-WT & 0.05 & 0.19 & 0 & 0 & 0 & 0.76 &  & RtC-WT & 0.06 & 0.18 & 0 & 0 & 0 & 0.76\\
+ 			
+ 			& WT & 0.06 & 0.17 & 0 & 0 & 0 & 0.77 &  & WT & 0.07 & 0.16 & 0 & 0 & 0 & 0.77\\
+ 			
+ 			\multirow{-3}{*}{\centering\arraybackslash 6} & TwoArm &  & 0.23 & 0 & 0 & 0 & 0.77 & \multirow{-3}{*}{\centering\arraybackslash 12} & TwoArm &  & 0.23 & 0 & 0 & 0 & 0.77\\
+ 			\bottomrule
+ 	\end{tabular}}
+ \end{table}
+
+\begin{table}
+	
+	\caption{\label{tab_wt:MeanNAlt}Mean number of patients allocated to each dose-level for alternative trial designs.}
+	\centering
+	\resizebox{\linewidth}{!}{
+		\fontsize{12}{14}\selectfont
+		\begin{tabular}[t]{ccccccc>{}c|cccccccc}
+			\toprule
+			Scenario & Design & Dose 1 & Dose 2 & Dose 3 & Dose 4 & Dose 5 & Total & Scenario & Design & Dose 1 & Dose 2 & Dose 3 & Dose 4 & Dose 5 & Total\\
+			\midrule
+			P(tox) &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 \vphantom{2} & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.01 & 0.25 & 0.35 & 0.45 & 0.55 &  & P(eff) &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.55 \vphantom{1} & \\
+			\cmidrule{1-16}
+			& RtC-WT & 8.5 & 14.2 & 14.7 & 14.4 & 8.2 & 60 &  & RtC-WT & 8.5 & 13.4 & 13.5 & 16.9 & 7.7 & 60\\
+			
+			& WT & 1.3 & 14.9 & 16.1 & 16.3 & 11.4 & 60 &  & WT & 1.4 & 14.2 & 14.7 & 18.5 & 11.2 & 60\\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 1} & TwoArm &  & 14.2 & 14.4 & 13.6 & 8.8 & 51 & \multirow{-3}{*}{\centering\arraybackslash 7} & TwoArm &  & 12.7 & 12.1 & 17.2 & 8.9 & 50.9\\
+			\cmidrule{1-16}
+			P(tox) &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 \vphantom{2} & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.01 & 0.25 & 0.35 & 0.45 & 0.55 &  & P(eff) &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.55 & \\
+			\cmidrule{1-16}
+			& RtC-WT & 16.5 & 23 & 1 & 0.1 & 0 & 40.6 &  & RtC-WT & 16.5 & 22.9 & 1 & 0.1 & 0 & 40.5\\
+			
+			& WT & 15.8 & 23.4 & 0.9 & 0.1 & 0 & 40.2 &  & WT & 15.8 & 23.3 & 0.9 & 0.1 & 0 & 40.1\\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 2} & TwoArm &  & 27 & 0.7 & 0.1 & 0 & 27.8 & \multirow{-3}{*}{\centering\arraybackslash 8} & TwoArm &  & 27 & 0.7 & 0.1 & 0 & 27.8\\
+			\cmidrule{1-16}
+			P(tox) &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 \vphantom{1} & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 &  & P(eff) &  & 0.01 & 0.35 & 0.55 & 0.35 & 0.25 & \\
+			\cmidrule{1-16}
+			& RtC-WT & 8.4 & 11.3 & 13.6 & 15.2 & 11.2 & 59.7 &  & RtC-WT & 8.4 & 16.2 & 22.3 & 9.5 & 3.5 & 59.9\\
+			
+			& WT & 0.5 & 12.2 & 15.9 & 17.9 & 13 & 59.5 &  & WT & 1.4 & 17.5 & 25 & 11.4 & 4.7 & 60\\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 3} & TwoArm &  & 10.6 & 13.2 & 14.8 & 11.7 & 50.3 & \multirow{-3}{*}{\centering\arraybackslash 9} & TwoArm &  & 15.6 & 26 & 7.5 & 1.9 & 51\\
+			\cmidrule{1-16}
+			P(tox) &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 \vphantom{1} & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 &  & P(eff) &  & 0.01 & 0.25 & 0.35 & 0.45 & 0.55 & \\
+			\cmidrule{1-16}
+			& RtC-WT & 16.2 & 20.9 & 1.2 & 0.2 & 0 & 38.5 &  & RtC-WT & 16.5 & 23 & 1 & 0.1 & 0 & 40.6\\
+			
+			& WT & 15.6 & 21.4 & 1 & 0.1 & 0 & 38.1 &  & WT & 15.8 & 23.2 & 0.8 & 0.1 & 0 & 39.9\\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 4} & TwoArm &  & 21.1 & 0.9 & 0.1 & 0 & 22.1 & \multirow{-3}{*}{\centering\arraybackslash 10} & TwoArm &  & 27.1 & 0.7 & 0.1 & 0 & 27.9\\
+			\cmidrule{1-16}
+			P(tox) &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  & 0.01 & 0.05 & 0.1 & 0.2 & 0.25 & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.01 & 0.35 & 0.55 & 0.55 & 0.55 &  & P(eff) &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.35 \vphantom{1} & \\
+			\cmidrule{1-16}
+			& RtC-WT & 8.5 & 14.3 & 18.6 & 13.4 & 5.2 & 60 &  & RtC-WT & 8.4 & 13.7 & 14.1 & 18.4 & 5.3 & 59.9\\
+			
+			& WT & 1.8 & 15.1 & 19.4 & 15.9 & 7.7 & 59.9 &  & WT & 1.2 & 14.7 & 15.7 & 21.1 & 7.3 & 60\\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 5} & TwoArm &  & 13.2 & 19.7 & 13.4 & 4.7 & 51 & \multirow{-3}{*}{\centering\arraybackslash 11} & TwoArm &  & 13 & 13.1 & 20.4 & 4.5 & 51\\
+			\cmidrule{1-16}
+			P(tox) &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  & 0.01 & 0.5 & 0.55 & 0.65 & 0.75 & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.01 & 0.35 & 0.55 & 0.55 & 0.55 &  & P(eff) &  & 0.01 & 0.25 & 0.35 & 0.55 & 0.35 & \\
+			\cmidrule{1-16}
+			& RtC-WT & 16.4 & 23 & 0.9 & 0.1 & 0 & 40.4 &  & RtC-WT & 16.5 & 22.9 & 1 & 0.1 & 0 & 40.5\\
+			
+			& WT & 15.7 & 23.1 & 0.8 & 0.1 & 0 & 39.7 &  & WT & 15.8 & 23.3 & 0.9 & 0.1 & 0 & 40.1\\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 6} & TwoArm &  & 27.1 & 0.7 & 0.1 & 0 & 27.9 & \multirow{-3}{*}{\centering\arraybackslash 12} & TwoArm &  & 27 & 0.7 & 0.1 & 0 & 27.8\\
+			\bottomrule
+	\end{tabular}}
+\end{table}
  
  %----------------------------------------------------------------------------------------
  %	SECTION 5
