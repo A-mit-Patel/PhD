@@ -84,7 +84,7 @@ This chapter revolves around the seamless phase \RN{1}/\RN{2} dose-finding adapt
 
 The incorporation of an AR phase early on into the trial is beneficial since there may be a lack of data in order to rely on decisions made by the maximisation of efficacy probabilities. Also there may be doses that haven't been tested and randomisation allows for information to be collected from these. It also helps avoid getting stuck repeatedly recruiting to the same dose and allows for a more broad understanding of the dose-efficacy and toxicity relationships. One extension we propose is the inclusion of randomisation to a control arm into the design. This would provide a set of patients who receive standard of care to act as controls and allow for comparisons to be made with outcomes from patients receiving the OBD. There is also the added benefit of being able to include standard of care into the models to get a better understanding of the dose-efficacy and toxicity relationships.  
 
-In Section \ref{WT:Wages-and-Tait-Design}, details the statistical aspects of the WT design and how it works. We introduce our extension to the design to include randomisation to control in Section \ref{WT:RtC-WT}. Section \ref{WT:Evaluation-of-the-Extension} evaluates the performance of the new design with a simulation study. Finally, discussions and conclusions are presented in Sections \ref{WT:Discussion} and \ref{WT:Conclusion} respectively.  
+In Section \ref{WT:Wages-and-Tait-Design}, details the statistical aspects of the WT design and how it works. We introduce our extension to the design to include randomisation to control in Section \ref{WT:RtC-WT}. Section \ref{WT:Evaluation-of-the-Extension} evaluates the performance of the new design with a simulation study. Finally, we finish with a discussion in Section \ref{WT:Discussion}.  
 
 
 %----------------------------------------------------------------------------------------
@@ -199,20 +199,21 @@ The design also incorporates stopping rules for safety and futility. The safety 
 The futility rule stops the trial if there are too few observed efficacy events. This rule only comes into play during the maximisation phase. This rule uses a similar method to the stopping rule by utilising binomial 95\% confidence intervals. During the maximisation phase the dose with the highest probability of efficacy is selected. At this point the 95\% binomial confidence interval is calculated for the current dose and if the upper bound is less than the futility threshold $\phi_E$ the trial is stopped as the treatment is inefficacious at all doses. Although 95\% confidence intervals are used by Wages and Tait these can be altered accordingly. 
 
 
- %----------------------------------------------------------------------------------------
- %	SECTION 3
- %----------------------------------------------------------------------------------------
- \section{RtC-WT: An extension to the Wages and Tait Design}
- \label{WT:RtC-WT}
+%----------------------------------------------------------------------------------------
+%	SECTION 3
+%----------------------------------------------------------------------------------------
+\section{RtC-WT: An extension to the Wages and Tait Design}
+\label{WT:RtC-WT}
  
- In this section we introduce our proposed extension to the Wages and Tait (WT) design named Randomisation to Control Wages and Tait (RtC-WT). As the name states, the design will allow investigators to utilise the WT design with the ability to recruit patients to a control arm. This idea was initially conceived by Kristian Brock (KB) whilst working on the design of a new dose-finding trial.  
+In this section we introduce our proposed extension to the Wages and Tait (WT) design named Randomisation to Control Wages and Tait (RtC-WT). As the name states, the design will allow investigators to utilise the WT design with the ability to recruit patients to a control arm. This idea was initially conceived by Kristian Brock (KB) whilst working on the design of a new dose-finding trial.  
+
+%-----------------------------------
+%	SUBSECTION 3.1
+%-----------------------------------
+\subsection{The Rationale for Incorporating Randomisation to Control}
+\label{WT:Rationale-for-RtC-WT}
  
- %-----------------------------------
- %	SUBSECTION 3.1
- %-----------------------------------
- \subsection{The Rationale for Incorporating Randomisation to Control}
- \label{WT:Rationale-for-RtC-WT}
- 
+Typically, seamless phase \RN{1}/\RN{2} trial designs perform the tasks of phase \RN{1} and phase \RN{2} trials. However, they do not replace the need for randomised phase \RN{2} trials entirely where preliminary efficacy data is collected on an experimental treatment versus control to determine the need for a larger phase \RN{3} study. This is our main motivation for introducing RtC-WT. By introducing the ability to randomise to a control in the Wages and Tait method we can achieve similar objectives to randomised phase \RN{2} studies. 
  
 As a seamless phase \RN{1}/\RN{2} design WT is relatively simple and effective. The familiarity of using a CRM design to model toxicity and naturally extending that methodology to model efficacy with multiple working models mean the design is not particularly difficult to implement. The mathematics behind the design is also not too intense so extensive computation won't be necessary. Given some effort this design could be implemented in a variety of programming languages although KB offers an easy implementation of this design in his R package escalation \cite{brockModularApproachDose2020}. Considering all these factors extensions to this design can be executed without too many obstacles.
 
@@ -263,7 +264,7 @@ Once the AR phase ends dose-levels are no longer selected by adaptive randomisat
  \section{Evaluation and Exploration of the Extension via Simulations}
  \label{WT:Evaluation-of-the-Extension}
  
- In this section we evaluate the performance of RtC-WT in comparison to the two alternative designs mentioned in Section \ref{WT:Rationale-for-RtC-WT}. We also explore the impact of changing the probability of randomisation to control and the number of patients included in the adaptive randomisation phase. These will both be assessed via simulation and inspection of their operating characteristics. To facilitate simulations a generic trial example will be utilised along with a variety of scenarios. 
+ In this section we evaluate the performance of RtC-WT in comparison to the two alternative designs mentioned in Section \ref{WT:Rationale-for-RtC-WT}. We also explore the impact of changing the probability of randomisation to control and the number of patients included in the adaptive randomisation phase. Finally, we investigate the impact of including an active control. These will all be assessed via simulation and inspection of their operating characteristics. To facilitate simulations a generic trial example will be utilised along with a variety of scenarios. 
  
  %-----------------------------------
  %	SUBSECTION 4.1
@@ -276,7 +277,7 @@ Once the AR phase ends dose-levels are no longer selected by adaptive randomisat
 
  \begin{table}[!h]
  	\centering
- 	\caption{Toxicity and Efficacy skeletons for RtC-WT in the example trial.}
+ 	\caption{Toxicity and efficacy skeletons for RtC-WT in the example trial.}
  	\label{tab_wt:tox-eff-skeleton}
  	\begin{tabular}{c|ccccc}
  		\hline
@@ -823,15 +824,206 @@ Based on these simulations it would be best to use an AR phase size between 25\%
 			\bottomrule
 	\end{tabular}}
 \end{table}
+
+ In Table \ref{tab_wt:MeanNAlt} we have not included the number of patients recruited to control (dose-level 1). This was done as the dose-finding study is considered independent of the control arm. We can assume the average number of patients in control to be 9 in the scenarios where full recruitment is reached i.e. total is equal to 51. However, for scenarios where the trial stops early we do not know how many patients would have been randomised to control before the dose-finding study is stopped. Based on our randomisation ratio we could assume the number in control would be the Total/5.67 but as we did not simulate this it was excluded from the table. 
  
+ For scenarios 2, 6, 8, 10 and 12 where all treatment doses are considered toxic each of the designs consistently stop 76-77\% of the time regardless of the efficacy relationship. We can also see when the designs aren't stopping they are most likely to recommend dose level 2 as the OBD, with the RtC-WT and WT designs selecting dose level 1 a small percentage of the time. This is a slight downfall of the Two-Arm approach since it means in toxicity scenarios it will be more likely to recommend an incorrect dose and treat more patients at this dose-level. On average at least 4 more patients would be exposed when dose-level 2 is toxic. 
+ 
+ Scenario 3 where dose-levels are ineffective stopping is unlikely to occur in all three designs. The Two-Arm approach is slightly better but this can be explained by its larger maximisation phase of 27 patients compared to the 15 of RtC-WT and WT. We showed in Table \ref{tab_wt:SelectProbCombos} that reducing the AR phase in scenario 3 would lead to more stopping. With scenario 4 where all treatment dose-levels are ineffective and toxic all designs perform equally well when stopping. 
+ 
+ The remaining scenarios look at different possible efficacy relationships. Consistently the RtC-WT and WT designs out perform the Two-Arm approach in terms of selection of the OBD if only by a few percentage points in certain scenarios. Since the Two-Arm approach is essentially the same as the standard WT design but with fewer patients it is expected to be slightly inferior as with most dose-finding studies a higher number of patients yield better operating characteristics. However, with the RtC-WT design actively recruiting to the control dose there should be an equal number of patients receiving control and treatment dose-levels to equate to similar operating characteristics. We can see from the mean number of patients at each dose approximately the same amount are receiving doses 2-5 between the two designs (compare total for Two-Arm to Total - Dose 1 for RtC-WT). There appears to be some added benefit in terms of modelling for including control as a dose-level rather than using the Two-Arm approach when it comes to selecting the OBD. It should be mentioned that the differences in selection are only slight between 1\% and 8\%. Also, the Two-Arm approach also manages to allocate more patients to the OBD in certain scenarios (1,5,9 and 11). It's possible an alternative specification of the Two-Arm approach would lead to better performance overall. 
+ 
+ The key differences between RtC-WT and WT can be seen in the number of patients recruited to the control dose-level. The WT design barely ever recruits patients here as expected since the control dose is assumed to have low efficacy. This usually results in more patients being allocated to the OBD. RtC-WT would experience situations where it would allocate a cohort to the control dose-level but the standard WT in the same situation would be able to randomise between the efficacious doses. This advantage however does not consistently yield better selection probabilities. As specified earlier the WT design is clearly not ideal if the aim of a trial is to recruit patients whilst conducting a dose-finding study. However, we can see the trade-off between allowing for this recruitment to control and overall performance. Based on these simulations and scenarios it seems RtC-WT performs relatively well. 
+ 
+   
+ %-----------------------------------
+ %	SUBSECTION 4.4
+ %-----------------------------------
+ \subsection{Investigating an Active Control}
+ \label{WT:InvesActiveCon}
+ 
+ Throughout all the simulations conducted so far in Sections \ref{WT:Impact-ARandRTCon-RtC-WT} and \ref{WT:CompAltDesigns} we have made an assumption that the control dose is ineffective and not toxic. There may arise cases where a standard of care or control is used which has some benefits in terms of efficacy as well as a low amount of toxicity. This section investigates how the RtC-WT design would handle such a scenario.  
+ 
+ Previously when specifying our toxicity and efficacy skeletons in Section \ref{WT:Design-Spec} we set values at dose-level 1 to be 1\%. This implies our prior beliefs about the control dose are that that 1\% of patients receiving control are likely to experience a toxic event and similarly 1\% are likely to experience an efficacious event. Then whilst running various scenarios we set the true toxicity and efficacy rates for the control dose to also be 1\%. So when sampling for toxic/efficacy events at the control dose-level they had a 1\% chance of occurring.  
+ 
+ Consider our original scenario in Section \ref{WT:Design-Spec} but now control is a well known standard of care which is understood relatively well in terms of efficacy and toxicity outcomes. Here we'll assume that for standard of care there's a 5\% chance of an efficacy event and toxicity event occurring independently of each other. A new experimental treatment in combination with standard of care could be introduced such that the doses under investigation would be standard of care/control (dose-level 1) and escalating experimental treatment in combination with standard of care (dose-levels 2 to 5). In order to account for the data we have assumed about standard of care we would need to update our toxicity and efficacy skeletons in Table \ref{tab_wt:tox-eff-skeleton}. Updated skeletons are provided in Table \ref{tab_wt:tox-eff-skel-AC}.    
+ 
+  \begin{table}[!h]
+ 	\centering
+ 	\caption{Updated toxicity and efficacy skeletons for RtC-WT where control is active.}
+ 	\label{tab_wt:tox-eff-skel-AC}
+ 	\begin{tabular}{c|ccccc}
+ 		\hline
+ 		\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{Skeleton}}} & \multicolumn{5}{c}{\textbf{Dose-levels}}                       \\
+ 		\multicolumn{1}{c|}{}                                   & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\ \hline
+ 		$p_i$    & 0.05 & 0.1 & 0.2 & 0.3 & 0.4 \\
+ 		$q_{i1}$ & 0.05 & 0.4 & 0.3 & 0.2 & 0.1 \\
+ 		$q_{i2}$ & 0.05 & 0.3 & 0.4 & 0.3 & 0.2 \\
+ 		$q_{i3}$ & 0.05 & 0.2 & 0.3 & 0.4 & 0.3 \\
+ 		$q_{i4}$ & 0.05 & 0.1 & 0.2 & 0.3 & 0.4 \\
+ 		$q_{i5}$ & 0.05 & 0.2 & 0.3 & 0.4 & 0.4 \\
+ 		$q_{i6}$ & 0.05 & 0.3 & 0.4 & 0.4 & 0.4 \\
+ 		$q_{i7}$ & 0.05 & 0.4 & 0.4 & 0.4 & 0.4 \\ \hline
+ 	\end{tabular}
+ \end{table}
+ 
+ Since we are allowing for standard of care to have some potential efficacy and toxicity it may be reasonable to consider additional skeletons that were previously dismissed. Specifically, skeletons which have the control dose as the most effective dose or close in terms of efficacy to the most effective dose. These skeletons would be much similar to what Wages and Tait originally recommend. We present what these skeletons would look like in Table \ref{tab_wt:tox-eff-skel-ACadditional}. There are two additional skeletons one which considers all doses to be equal in terms of efficacy and one that assumes the control dose is most efficacious. Furthermore the other skeletons were adjusted such that control dose has similar efficacy probabilities to the lowest treatment dose-level. 
+ 
+   \begin{table}[!h]
+ 	\centering
+ 	\caption{Updated toxicity and efficacy skeletons for RtC-WT where control is active.}
+ 	\label{tab_wt:tox-eff-skel-ACadditional}
+ 	\begin{tabular}{c|ccccc}
+ 		\hline
+ 		\multicolumn{1}{c|}{\multirow{2}{*}{\textbf{Skeleton}}} & \multicolumn{5}{c}{\textbf{Dose-levels}}                       \\
+ 		\multicolumn{1}{c|}{}                                   & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} \\ \hline
+ 		$p_i$    & 0.05 & 0.1 & 0.2 & 0.3 & 0.4 \\
+ 		$q_{i1}$ & 0.4 & 0.3 & 0.2 & 0.1 & 0.05 \\
+ 		$q_{i2}$ & 0.3 & 0.4 & 0.3 & 0.2 & 0.1 \\
+ 		$q_{i3}$ & 0.2 & 0.3 & 0.4 & 0.3 & 0.2 \\
+ 		$q_{i4}$ & 0.1 & 0.2 & 0.3 & 0.4 & 0.3 \\
+ 		$q_{i5}$ & 0.05 & 0.1 & 0.2 & 0.3 & 0.4 \\
+ 		$q_{i6}$ & 0.1 & 0.2 & 0.3 & 0.4 & 0.4 \\
+ 		$q_{i7}$ & 0.2 & 0.3 & 0.4 & 0.4 & 0.4 \\
+ 		$q_{i8}$ & 0.3 & 0.4 & 0.4 & 0.4 & 0.4 \\
+ 		$q_{i9}$ & 0.4 & 0.4 & 0.4 & 0.4 & 0.4 \\ \hline
+ 	\end{tabular}
+ \end{table}
+ 
+In order to understand how best to specify skeletons for the RtC-WT design under these circumstances we will investigate both sets presented in Tables \ref{tab_wt:tox-eff-skel-AC} and \ref{tab_wt:tox-eff-skel-ACadditional}, we will refer to them as set A and B respectively. The key distinction is that set B includes additional efficacy skeletons and allows for scenarios where control can be considered the most efficacious dose. For simplicity we will keep the rest of the specification of RtC-WT similar to before. That means a sample size of 60, cohort size of 3, efficacy lower bound of 0.15, upper toxicity bound of 0.35, AR phase size of 45 and a 20\% randomisation to control probability. It should be noted that for set B we still assume each skeleton equally likely such that $\upsilon(k) = \frac{1}{9}$. Simulations will be used to evaluate both sets of efficacy skeletons, the same scenarios presented in previous sections will be used here with 10,000 trials being simulated for each. Selection probabilities and mean number of patients allocated to each dose are presented in Tables \ref{tab_wt:SelectProbEffSkel} and \ref{tab_wt:MeanNEffSkel} respectively. 
+
+\begin{table}
+	
+	\caption{\label{tab_wt:SelectProbEffSkel}Selection probabilities for an active control with different sets of efficacy skeletons.}
+	\centering
+	\resizebox{\linewidth}{!}{
+		\fontsize{12}{14}\selectfont
+		\begin{tabular}[t]{ccccccc>{}c|cccccccc}
+			\toprule
+			Scenario & Set & Dose 1 & Dose 2 & Dose 3 & Dose 4 & Dose 5 & Stop & Scenario & Set & Dose 1 & Dose 2 & Dose 3 & Dose 4 & Dose 5 & Stop\\
+			\midrule
+			P(tox) &  & 0.05 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  & 0.05 & 0.05 & 0.1 & 0.2 & 0.25 \vphantom{2} & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.05 & 0.25 & 0.35 & 0.45 & 0.55 &  & P(eff) &  & 0.05 & 0.25 & 0.35 & 0.55 & 0.55 \vphantom{1} & \\
+			\cmidrule{1-16}
+			& A & 0 & 0.14 & 0.25 & 0.38 & 0.23 & 0 &  & A & 0 & 0.1 & 0.16 & 0.55 & 0.19 & 0\\
+			
+			\multirow{-2}{*}{\centering\arraybackslash 1} & B & 0 & 0.07 & 0.18 & 0.45 & 0.29 & 0 & \multirow{-2}{*}{\centering\arraybackslash 7} & B & 0 & 0.05 & 0.09 & 0.58 & 0.28 & 0\\
+			\cmidrule{1-16}
+			P(tox) &  & 0.05 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  & 0.05 & 0.5 & 0.55 & 0.65 & 0.75 \vphantom{2} & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.05 & 0.25 & 0.35 & 0.45 & 0.55 &  & P(eff) &  & 0.05 & 0.25 & 0.35 & 0.55 & 0.55 & \\
+			\cmidrule{1-16}
+			& A & 0.07 & 0.24 & 0 & 0 & 0 & 0.68 &  & A & 0.07 & 0.24 & 0 & 0 & 0 & 0.68\\
+			
+			\multirow{-2}{*}{\centering\arraybackslash 2} & B & 0.07 & 0.26 & 0 & 0 & 0 & 0.67 & \multirow{-2}{*}{\centering\arraybackslash 8} & B & 0.07 & 0.25 & 0 & 0 & 0 & 0.67\\
+			\cmidrule{1-16}
+			P(tox) &  & 0.05 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  & 0.05 & 0.05 & 0.1 & 0.2 & 0.25 \vphantom{1} & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.05 & 0.03 & 0.06 & 0.09 & 0.12 &  & P(eff) &  & 0.05 & 0.35 & 0.55 & 0.35 & 0.25 & \\
+			\cmidrule{1-16}
+			& A & 0 & 0.1 & 0.17 & 0.32 & 0.36 & 0.05 &  & A & 0 & 0.2 & 0.74 & 0.06 & 0.01 & 0\\
+			
+			\multirow{-2}{*}{\centering\arraybackslash 3} & B & 0.24 & 0.09 & 0.18 & 0.25 & 0.19 & 0.05 & \multirow{-2}{*}{\centering\arraybackslash 9} & B & 0 & 0.06 & 0.77 & 0.16 & 0.01 & 0\\
+			\cmidrule{1-16}
+			P(tox) &  & 0.05 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  & 0.05 & 0.5 & 0.55 & 0.65 & 0.75 \vphantom{1} & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.05 & 0.03 & 0.06 & 0.09 & 0.12 &  & P(eff) &  & 0.05 & 0.25 & 0.35 & 0.45 & 0.55 & \\
+			\cmidrule{1-16}
+			& A & 0.02 & 0.05 & 0 & 0 & 0 & 0.92 &  & A & 0.07 & 0.25 & 0 & 0 & 0 & 0.68\\
+			
+			\multirow{-2}{*}{\centering\arraybackslash 4} & B & 0.16 & 0.05 & 0 & 0 & 0 & 0.79 & \multirow{-2}{*}{\centering\arraybackslash 10} & B & 0.07 & 0.25 & 0 & 0 & 0 & 0.68\\
+			\cmidrule{1-16}
+			P(tox) &  & 0.05 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  & 0.05 & 0.05 & 0.1 & 0.2 & 0.25 & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.05 & 0.35 & 0.55 & 0.55 & 0.55 &  & P(eff) &  & 0.05 & 0.25 & 0.35 & 0.55 & 0.35 \vphantom{1} & \\
+			\cmidrule{1-16}
+			& A & 0 & 0.12 & 0.53 & 0.29 & 0.06 & 0 &  & A & 0 & 0.11 & 0.2 & 0.64 & 0.05 & 0\\
+			
+			\multirow{-2}{*}{\centering\arraybackslash 5} & B & 0 & 0.03 & 0.28 & 0.57 & 0.13 & 0 & \multirow{-2}{*}{\centering\arraybackslash 11} & B & 0 & 0.05 & 0.12 & 0.77 & 0.05 & 0\\
+			\cmidrule{1-16}
+			P(tox) &  & 0.05 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  & 0.05 & 0.5 & 0.55 & 0.65 & 0.75 & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.05 & 0.35 & 0.55 & 0.55 & 0.55 &  & P(eff) &  & 0.05 & 0.25 & 0.35 & 0.55 & 0.35 & \\
+			\cmidrule{1-16}
+			& A & 0.07 & 0.25 & 0 & 0 & 0 & 0.68 &  & A & 0.07 & 0.24 & 0 & 0 & 0 & 0.68\\
+			
+			\multirow{-2}{*}{\centering\arraybackslash 6} & B & 0.07 & 0.25 & 0 & 0 & 0 & 0.68 & \multirow{-2}{*}{\centering\arraybackslash 12} & B & 0.07 & 0.25 & 0 & 0 & 0 & 0.67\\
+			\bottomrule
+	\end{tabular}}
+\end{table}
+
+\begin{table}
+	
+	\caption{\label{tab_wt:MeanNEffSkel}Mean number of patients allocated to each dose-level for for an active control with different sets of efficacy skeletons.}
+	\centering
+	\resizebox{\linewidth}{!}{
+		\fontsize{12}{14}\selectfont
+		\begin{tabular}[t]{ccccccc>{}c|cccccccc}
+			\toprule
+			Scenario & Set & Dose 1 & Dose 2 & Dose 3 & Dose 4 & Dose 5 & Total & Scenario & Set & Dose 1 & Dose 2 & Dose 3 & Dose 4 & Dose 5 & Total\\
+			\midrule
+			P(tox) &  & 0.05 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  & 0.05 & 0.05 & 0.1 & 0.2 & 0.25 \vphantom{2} & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.05 & 0.25 & 0.35 & 0.45 & 0.55 &  & P(eff) &  & 0.05 & 0.25 & 0.35 & 0.55 & 0.55 \vphantom{1} & \\
+			\cmidrule{1-16}
+			& A & 8.5 & 14.1 & 15 & 14.5 & 7.9 & 60 &  & A & 8.5 & 13.3 & 13.8 & 16.8 & 7.5 & 59.9\\
+			
+			\multirow{-2}{*}{\centering\arraybackslash 1} & B & 8.6 & 12.3 & 13.9 & 16 & 9.2 & 60 & \multirow{-2}{*}{\centering\arraybackslash 7} & B & 8.5 & 11.9 & 12.5 & 17.8 & 9.3 & 60\\
+			\cmidrule{1-16}
+			P(tox) &  & 0.05 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  & 0.05 & 0.5 & 0.55 & 0.65 & 0.75 \vphantom{2} & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.05 & 0.25 & 0.35 & 0.45 & 0.55 &  & P(eff) &  & 0.05 & 0.25 & 0.35 & 0.55 & 0.55 & \\
+			\cmidrule{1-16}
+			& A & 14.2 & 24.3 & 1.4 & 0.1 & 0 & 40 &  & A & 14.2 & 24.2 & 1.3 & 0.1 & 0 & 39.8\\
+			
+			\multirow{-2}{*}{\centering\arraybackslash 2} & B & 14.4 & 24.4 & 1.5 & 0.1 & 0 & 40.4 & \multirow{-2}{*}{\centering\arraybackslash 8} & B & 14.4 & 24.3 & 1.4 & 0.1 & 0 & 40.2\\
+			\cmidrule{1-16}
+			P(tox) &  & 0.05 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  & 0.05 & 0.05 & 0.1 & 0.2 & 0.25 \vphantom{1} & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.05 & 0.03 & 0.06 & 0.09 & 0.12 &  & P(eff) &  & 0.05 & 0.35 & 0.55 & 0.35 & 0.25 & \\
+			\cmidrule{1-16}
+			& A & 8.5 & 11 & 13.4 & 15.1 & 11.7 & 59.7 &  & A & 8.5 & 16.5 & 22.1 & 9.4 & 3.5 & 60\\
+			
+			\multirow{-2}{*}{\centering\arraybackslash 3} & B & 12.3 & 13 & 13.7 & 12.9 & 7.9 & 59.8 & \multirow{-2}{*}{\centering\arraybackslash 9} & B & 8.4 & 13.2 & 22.3 & 12.2 & 3.8 & 59.9\\
+			\cmidrule{1-16}
+			P(tox) &  & 0.05 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  & 0.05 & 0.5 & 0.55 & 0.65 & 0.75 \vphantom{1} & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.05 & 0.03 & 0.06 & 0.09 & 0.12 &  & P(eff) &  & 0.05 & 0.25 & 0.35 & 0.45 & 0.55 & \\
+			\cmidrule{1-16}
+			& A & 13.9 & 21.7 & 1.7 & 0.2 & 0 & 37.5 &  & A & 14.3 & 24.5 & 1.3 & 0.1 & 0 & 40.2\\
+			
+			\multirow{-2}{*}{\centering\arraybackslash 4} & B & 16.3 & 20.8 & 1.5 & 0.1 & 0 & 38.7 & \multirow{-2}{*}{\centering\arraybackslash 10} & B & 14.2 & 24.1 & 1.4 & 0.1 & 0 & 39.8\\
+			\cmidrule{1-16}
+			P(tox) &  & 0.05 & 0.05 & 0.1 & 0.2 & 0.25 &  & P(tox) &  & 0.05 & 0.05 & 0.1 & 0.2 & 0.25 & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.05 & 0.35 & 0.55 & 0.55 & 0.55 &  & P(eff) &  & 0.05 & 0.25 & 0.35 & 0.55 & 0.35 \vphantom{1} & \\
+			\cmidrule{1-16}
+			& A & 8.5 & 14.7 & 18.8 & 13 & 5.1 & 60.1 &  & A & 8.4 & 13.7 & 14.4 & 18.1 & 5.3 & 59.9\\
+			
+			\multirow{-2}{*}{\centering\arraybackslash 5} & B & 8.4 & 12 & 15 & 17.8 & 6.7 & 59.9 & \multirow{-2}{*}{\centering\arraybackslash 11} & B & 8.4 & 12.1 & 13.1 & 20.5 & 5.9 & 60\\
+			\cmidrule{1-16}
+			P(tox) &  & 0.05 & 0.5 & 0.55 & 0.65 & 0.75 &  & P(tox) &  & 0.05 & 0.5 & 0.55 & 0.65 & 0.75 & \\
+			\cmidrule{1-16}
+			P(eff) &  & 0.05 & 0.35 & 0.55 & 0.55 & 0.55 &  & P(eff) &  & 0.05 & 0.25 & 0.35 & 0.55 & 0.35 & \\
+			\cmidrule{1-16}
+			& A & 14.3 & 24.5 & 1.3 & 0.1 & 0 & 40.2 &  & A & 14.2 & 24.2 & 1.3 & 0.1 & 0 & 39.8\\
+			
+			\multirow{-2}{*}{\centering\arraybackslash 6} & B & 14.2 & 24.2 & 1.4 & 0.1 & 0 & 39.9 & \multirow{-2}{*}{\centering\arraybackslash 12} & B & 14.4 & 24.3 & 1.5 & 0.1 & 0 & 40.3\\
+			\bottomrule
+	\end{tabular}}
+\end{table}
  %----------------------------------------------------------------------------------------
  %	SECTION 5
  %----------------------------------------------------------------------------------------
  \section{Discussion}
  \label{WT:Discussion}
- 
- %----------------------------------------------------------------------------------------
- %	SECTION 6
- %----------------------------------------------------------------------------------------
- \section{Conclusion}
- \label{WT:Conclusion}
+
+In this chapter we proposed RtC-WT, an extension to the seamless Phase \RN{1}/\RN{2} Wages \& Tait trial design to allow for the ability to randomise patients to a control dose. The main motivation was to add a control arm as a dose level in order to achieve similar objectives as a randomised phase \RN{2} study whilst maintaining efficiency in the dose-finding process. We examined the impact of various combinations of the AR phase size and the probability of randomising to control. We then compared RtC-WT to alternative approaches. We also assessed the impact of different efficacy skeletons and assumptions we made about the control dose on the designs operating characteristics. In summary, we found that RtC-WT maintains reasonable operating characteristics when randomising patients to a control dose, although this depends on the parametrisation of the design.   
+
+When examining the various combinations of AR phase sizes and randomisation to control probabilities we consistently saw a number of issues with the extreme values of AR phase sizes. For instance when the AR phase lasts the whole trial the design had some issues stopping for excess toxicity. There was also problems generally for the design when attempting to stop for futility. It may be necessary to employ alternative stopping rules to achieve acceptable probabilities of stopping in certain scenarios. Also, when there was no AR phase the design had issues locating the OBD. This lead to the recommendation of using 25-75\% of the trial size as the AR phase as these were the values we investigated. 
+
+In terms of randomisation probabilities we looked at two different possibilities in conjunction with the various AR phase sizes. There are practically countless combinations that could have been investigated and different combinations may have led to alternative conclusions. What can be said however is that in a practical clinical trial setting thought should be given to how many patients investigators want to recruit to control then using that determine the optimal sample size and AR phase size. For example if 20 control patients are desired from a maximum sample size of 60 a randomisation to control probability of 0.66 for an AR phase size of 30 could be used or a 0.5 randomisation provability with an AR size of 40. Also, here it may be unfeasible to look at every combination but a sample should be investigated to see how it impacts the design. 
+
+Furthermore, the scenarios we presented in our simulations are again only a small handful of all possible scenarios that could be investigated. The scenarios we chose represent a variety of dose-efficacy curves which may be plausible in this trial setting. Another limitation of the simulations is the way in which toxicity and efficacy data was generated. We have assumed that both of these events are independent but in a practical scenario this may not be the case. A patient may withdraw from the trial after having a toxicity meaning no efficacy data can be observed for that individual. Further work could be done to look at the impact of sampling dependent toxicity and efficacy data. 
+

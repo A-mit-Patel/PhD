@@ -21,9 +21,9 @@
 \contentsline {subsection}{\numberline {3.3.1}The Rationale for Incorporating Randomisation to Control}{50}{subsection.73}% 
 \contentsline {subsection}{\numberline {3.3.2}Design of the Proposed Extension RtC-WT}{53}{subsection.75}% 
 \contentsline {section}{\numberline {3.4}Evaluation and Exploration of the Extension via Simulations}{55}{section.78}% 
-\contentsline {subsection}{\numberline {3.4.1}Design Specification}{55}{subsection.79}% 
-\contentsline {subsection}{\numberline {3.4.2}Impact of AR phase size and probability of randomisation to control on RtC-WT}{57}{subsection.81}% 
-\contentsline {subsection}{\numberline {3.4.3}Comparison of RtC-WT against Alternative Designs }{65}{subsection.84}% 
-\contentsline {section}{\numberline {3.5}Discussion}{68}{section.88}% 
-\contentsline {section}{\numberline {3.6}Conclusion}{68}{section.89}% 
-\contentsline {chapter}{Bibliography}{71}{chapter*.90}% 
+\contentsline {subsection}{\numberline {3.4.1}Design Specification}{56}{subsection.79}% 
+\contentsline {subsection}{\numberline {3.4.2}Impact of AR phase size and probability of randomisation to control on RtC-WT}{58}{subsection.81}% 
+\contentsline {subsection}{\numberline {3.4.3}Comparison of RtC-WT against Alternative Designs }{66}{subsection.84}% 
+\contentsline {subsection}{\numberline {3.4.4}Investigating an Active Control}{71}{subsection.88}% 
+\contentsline {section}{\numberline {3.5}Discussion}{74}{section.93}% 
+\contentsline {chapter}{Bibliography}{77}{chapter*.94}% 

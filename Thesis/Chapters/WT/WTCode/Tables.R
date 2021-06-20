@@ -601,3 +601,197 @@ datacode <- kable(data, "latex", booktabs = T, linesep = "", align = "c",
 cat(datacode)
 
 rm(list = ls(all.names = TRUE))
+
+# Table of selection probabilities comparing the different efficacy skeletons 
+# for an active control 
+load("H:/PhD/Thesis/Chapters/WT/WTCode/ActiveControlSimsData.RData")
+
+data <- rbind(
+  c(s1tox, 0, s7tox, 0),
+  c(s1eff, 0, s7eff, 0),
+  c(RtCWTAsims1$ProbSelect, RtCWTAsims1$ProbStop,
+    RtCWTAsims7$ProbSelect, RtCWTAsims7$ProbStop),
+  c(RtCWTBsims1$ProbSelect, RtCWTBsims1$ProbStop,
+    RtCWTBsims7$ProbSelect, RtCWTBsims7$ProbStop),
+
+  
+  c(s2tox, 0, s8tox, 0),
+  c(s2eff, 0, s8eff, 0),
+  c(RtCWTAsims2$ProbSelect, RtCWTAsims2$ProbStop,
+    RtCWTAsims8$ProbSelect, RtCWTAsims8$ProbStop),
+  c(RtCWTBsims2$ProbSelect, RtCWTBsims2$ProbStop,
+    RtCWTBsims8$ProbSelect, RtCWTBsims8$ProbStop),
+
+  
+  c(s3tox, 0, s9tox, 0),
+  c(s3eff, 0, s9eff, 0),
+  c(RtCWTAsims3$ProbSelect, RtCWTAsims3$ProbStop,
+    RtCWTAsims9$ProbSelect, RtCWTAsims9$ProbStop),
+  c(RtCWTBsims3$ProbSelect, RtCWTBsims3$ProbStop,
+    RtCWTBsims9$ProbSelect, RtCWTBsims9$ProbStop),
+
+  
+  c(s4tox, 0, s10tox, 0),
+  c(s4eff, 0, s1eff, 0),
+  c(RtCWTAsims4$ProbSelect, RtCWTAsims4$ProbStop,
+    RtCWTAsims10$ProbSelect, RtCWTAsims10$ProbStop),
+  c(RtCWTBsims4$ProbSelect, RtCWTBsims4$ProbStop,
+    RtCWTBsims10$ProbSelect, RtCWTBsims10$ProbStop),
+
+  
+  c(s5tox, 0, s11tox, 0),
+  c(s5eff, 0, s11eff, 0),
+  c(RtCWTAsims5$ProbSelect, RtCWTAsims5$ProbStop,
+    RtCWTAsims11$ProbSelect, RtCWTAsims11$ProbStop),
+  c(RtCWTBsims5$ProbSelect, RtCWTBsims5$ProbStop,
+    RtCWTBsims11$ProbSelect, RtCWTBsims11$ProbStop),
+
+  
+  c(s6tox, 0, s12tox, 0),
+  c(s6eff, 0, s12eff, 0),
+  c(RtCWTAsims6$ProbSelect, RtCWTAsims6$ProbStop,
+    RtCWTAsims12$ProbSelect, RtCWTAsims12$ProbStop),
+  c(RtCWTBsims6$ProbSelect, RtCWTBsims6$ProbStop,
+    RtCWTBsims12$ProbSelect, RtCWTBsims12$ProbStop)
+)
+
+data <- round(data, digits = 2)
+
+Set <- rep(c(99, 99, 'A', 'B'), times = 6) 
+
+scenarioL <- c('P(tox)', 'P(eff)', rep(1, times = 2),
+               'P(tox)', 'P(eff)', rep(2, times = 2),
+               'P(tox)', 'P(eff)', rep(3, times = 2),
+               'P(tox)', 'P(eff)', rep(4, times = 2),
+               'P(tox)', 'P(eff)', rep(5, times = 2),
+               'P(tox)', 'P(eff)', rep(6, times = 2))
+
+scenarioR <- c('P(tox)', 'P(eff)', rep(7, times = 2),
+               'P(tox)', 'P(eff)', rep(8, times = 2),
+               'P(tox)', 'P(eff)', rep(9, times = 2),
+               'P(tox)', 'P(eff)', rep(10, times = 2),
+               'P(tox)', 'P(eff)', rep(11, times = 2),
+               'P(tox)', 'P(eff)', rep(12, times = 2))
+
+data <- data.frame(cbind(scenarioL, Set, data))
+data <- add_column(data, Set = Set, .after = 8 )
+data <- add_column(data, scenarioR = scenarioR, .after = 8 )
+
+data <- data %>% 
+  mutate(V8 = if_else(scenarioL == 'P(eff)', ' ', V8),
+         V8 = if_else(scenarioL == 'P(tox)', ' ', V8),
+         V14 = if_else(scenarioL == 'P(eff)', ' ', V14),
+         V14 = if_else(scenarioL == 'P(tox)', ' ', V14)
+  )
+data[data == 99] <- c(' ')
+
+colnames(data) <- c('Scenario', 'Set', 'Dose 1', 'Dose 2', 'Dose 3', 'Dose 4', 'Dose 5', 'Stop',
+                    'Scenario', 'Set', 'Dose 1', 'Dose 2', 'Dose 3', 'Dose 4', 'Dose 5', 'Stop')
+#View(data)
+
+datacode <- kable(data, "latex", booktabs = T, linesep = "", align = "c", 
+                  caption = '\\label{tab_wt:SelectProbEffSkel}Selection probabilities for an active control with different sets of efficacy skeletons.')%>%
+  column_spec(8, border_right = T) %>% 
+  kable_styling(latex_options = c('scale_down'), position = 'center',
+                font_size = 12 ) %>%
+  collapse_rows(columns = c(1,9), latex_hline = "major",  valign = "middle")
+
+cat(datacode)
+
+rm(list = ls(all.names = TRUE))
+
+# Table of selection probabilities comparing the different efficacy skeletons 
+# for an active control 
+load("H:/PhD/Thesis/Chapters/WT/WTCode/ActiveControlSimsData.RData")
+
+data <- rbind(
+  c(s1tox, 0, s7tox, 0),
+  c(s1eff, 0, s7eff, 0),
+  c(RtCWTAsims1$TreatedAtDose, sum(RtCWTAsims1$TreatedAtDose),
+    RtCWTAsims7$TreatedAtDose, sum(RtCWTAsims7$TreatedAtDose)),
+  c(RtCWTBsims1$TreatedAtDose, sum(RtCWTBsims1$TreatedAtDose),
+    RtCWTBsims7$TreatedAtDose, sum(RtCWTBsims7$TreatedAtDose)),
+
+  
+  c(s2tox, 0, s8tox, 0),
+  c(s2eff, 0, s8eff, 0),
+  c(RtCWTAsims2$TreatedAtDose, sum(RtCWTAsims2$TreatedAtDose),
+    RtCWTAsims8$TreatedAtDose, sum(RtCWTAsims8$TreatedAtDose)),
+  c(RtCWTBsims2$TreatedAtDose, sum(RtCWTBsims2$TreatedAtDose),
+    RtCWTBsims8$TreatedAtDose, sum(RtCWTBsims8$TreatedAtDose)),
+
+  
+  c(s3tox, 0, s9tox, 0),
+  c(s3eff, 0, s9eff, 0),
+  c(RtCWTAsims3$TreatedAtDose, sum(RtCWTAsims3$TreatedAtDose),
+    RtCWTAsims9$TreatedAtDose, sum(RtCWTAsims9$TreatedAtDose)),
+  c(RtCWTBsims3$TreatedAtDose, sum(RtCWTBsims3$TreatedAtDose),
+    RtCWTBsims9$TreatedAtDose, sum(RtCWTBsims9$TreatedAtDose)),
+
+  c(s4tox, 0, s10tox, 0),
+  c(s4eff, 0, s1eff, 0),
+  c(RtCWTAsims4$TreatedAtDose, sum(RtCWTAsims4$TreatedAtDose),
+    RtCWTAsims10$TreatedAtDose, sum(RtCWTAsims10$TreatedAtDose)),
+  c(RtCWTBsims4$TreatedAtDose, sum(RtCWTBsims4$TreatedAtDose),
+    RtCWTBsims10$TreatedAtDose, sum(RtCWTBsims10$TreatedAtDose)),
+
+  
+  c(s5tox, 0, s11tox, 0),
+  c(s5eff, 0, s11eff, 0),
+  c(RtCWTAsims5$TreatedAtDose, sum(RtCWTAsims5$TreatedAtDose),
+    RtCWTAsims11$TreatedAtDose, sum(RtCWTAsims11$TreatedAtDose)),
+  c(RtCWTBsims5$TreatedAtDose, sum(RtCWTBsims5$TreatedAtDose),
+    RtCWTBsims11$TreatedAtDose, sum(RtCWTBsims11$TreatedAtDose)),
+
+  
+  c(s6tox, 0, s12tox, 0),
+  c(s6eff, 0, s12eff, 0),
+  c(RtCWTAsims6$TreatedAtDose, sum(RtCWTAsims6$TreatedAtDose),
+    RtCWTAsims12$TreatedAtDose, sum(RtCWTAsims12$TreatedAtDose)),
+  c(RtCWTBsims6$TreatedAtDose, sum(RtCWTBsims6$TreatedAtDose),
+    RtCWTBsims12$TreatedAtDose, sum(RtCWTBsims12$TreatedAtDose))
+  
+)
+
+Set <- rep(c(99, 99, 'A', 'B'), times = 6) 
+
+scenarioL <- c('P(tox)', 'P(eff)', rep(1, times = 3),
+               'P(tox)', 'P(eff)', rep(2, times = 3),
+               'P(tox)', 'P(eff)', rep(3, times = 3),
+               'P(tox)', 'P(eff)', rep(4, times = 3),
+               'P(tox)', 'P(eff)', rep(5, times = 3),
+               'P(tox)', 'P(eff)', rep(6, times = 3))
+
+scenarioR <- c('P(tox)', 'P(eff)', rep(7, times = 3),
+               'P(tox)', 'P(eff)', rep(8, times = 3),
+               'P(tox)', 'P(eff)', rep(9, times = 3),
+               'P(tox)', 'P(eff)', rep(10, times = 3),
+               'P(tox)', 'P(eff)', rep(11, times = 3),
+               'P(tox)', 'P(eff)', rep(12, times = 3))
+
+data <- data.frame(cbind(scenarioL, Set, data))
+data <- add_column(data, Set = Set, .after = 8 )
+data <- add_column(data, scenarioR = scenarioR, .after = 8 )
+
+data <- data %>% 
+  mutate(V8 = if_else(scenarioL == 'P(eff)', ' ', V8),
+         V8 = if_else(scenarioL == 'P(tox)', ' ', V8),
+         V14 = if_else(scenarioL == 'P(eff)', ' ', V14),
+         V14 = if_else(scenarioL == 'P(tox)', ' ', V14)
+  )
+data[data == 99] <- c(' ')
+
+colnames(data) <- c('Scenario', 'Set', 'Dose 1', 'Dose 2', 'Dose 3', 'Dose 4', 'Dose 5', 'Total',
+                    'Scenario', 'Set', 'Dose 1', 'Dose 2', 'Dose 3', 'Dose 4', 'Dose 5', 'Total')
+#View(data)
+
+datacode <- kable(data, "latex", booktabs = T, linesep = "", align = "c", 
+                  caption = '\\label{tab_wt:MeanNEffSkel}Mean number of patients allocated to each dose-level for for an active control with different sets of efficacy skeletons.')%>%
+  column_spec(8, border_right = T) %>% 
+  kable_styling(latex_options = c('scale_down'), position = 'center',
+                font_size = 12 ) %>%
+  collapse_rows(columns = c(1,9), latex_hline = "major",  valign = "middle")
+
+cat(datacode)
+
+rm(list = ls(all.names = TRUE))
