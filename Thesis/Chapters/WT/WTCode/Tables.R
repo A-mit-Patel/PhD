@@ -755,19 +755,19 @@ data <- rbind(
 
 Set <- rep(c(99, 99, 'A', 'B'), times = 6) 
 
-scenarioL <- c('P(tox)', 'P(eff)', rep(1, times = 3),
-               'P(tox)', 'P(eff)', rep(2, times = 3),
-               'P(tox)', 'P(eff)', rep(3, times = 3),
-               'P(tox)', 'P(eff)', rep(4, times = 3),
-               'P(tox)', 'P(eff)', rep(5, times = 3),
-               'P(tox)', 'P(eff)', rep(6, times = 3))
+scenarioL <- c('P(tox)', 'P(eff)', rep(1, times = 2),
+               'P(tox)', 'P(eff)', rep(2, times = 2),
+               'P(tox)', 'P(eff)', rep(3, times = 2),
+               'P(tox)', 'P(eff)', rep(4, times = 2),
+               'P(tox)', 'P(eff)', rep(5, times = 2),
+               'P(tox)', 'P(eff)', rep(6, times = 2))
 
-scenarioR <- c('P(tox)', 'P(eff)', rep(7, times = 3),
-               'P(tox)', 'P(eff)', rep(8, times = 3),
-               'P(tox)', 'P(eff)', rep(9, times = 3),
-               'P(tox)', 'P(eff)', rep(10, times = 3),
-               'P(tox)', 'P(eff)', rep(11, times = 3),
-               'P(tox)', 'P(eff)', rep(12, times = 3))
+scenarioR <- c('P(tox)', 'P(eff)', rep(7, times = 2),
+               'P(tox)', 'P(eff)', rep(8, times = 2),
+               'P(tox)', 'P(eff)', rep(9, times = 2),
+               'P(tox)', 'P(eff)', rep(10, times = 2),
+               'P(tox)', 'P(eff)', rep(11, times = 2),
+               'P(tox)', 'P(eff)', rep(12, times = 2))
 
 data <- data.frame(cbind(scenarioL, Set, data))
 data <- add_column(data, Set = Set, .after = 8 )

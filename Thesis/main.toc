@@ -25,5 +25,5 @@
 \contentsline {subsection}{\numberline {3.4.2}Impact of AR phase size and probability of randomisation to control on RtC-WT}{58}{subsection.81}% 
 \contentsline {subsection}{\numberline {3.4.3}Comparison of RtC-WT against Alternative Designs }{66}{subsection.84}% 
 \contentsline {subsection}{\numberline {3.4.4}Investigating an Active Control}{71}{subsection.88}% 
-\contentsline {section}{\numberline {3.5}Discussion}{74}{section.93}% 
-\contentsline {chapter}{Bibliography}{77}{chapter*.94}% 
+\contentsline {section}{\numberline {3.5}Discussion}{76}{section.93}% 
+\contentsline {chapter}{Bibliography}{81}{chapter*.94}% 
