@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.11.27)  21 JUN 2021 21:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7050 64-bit) (preloaded format=pdflatex 2019.11.27)  22 JUN 2021 12:04
 entering extended mode
 **./main.tex
 (main.tex
@@ -1505,7 +1505,7 @@ Overfull \hbox (5.0661pt too wide) in paragraph at lines 28--29
 ponse model
  []
 
-<Figures/Adept-DoseExample.pdf, id=309, 160.6803pt x 146.4672pt>
+<Figures/Adept-DoseExample.pdf, id=304, 160.6803pt x 146.4672pt>
 File: Figures/Adept-DoseExample.pdf Graphic file (type pdf)
 <use Figures/Adept-DoseExample.pdf>
 Package pdftex.def Info: Figures/Adept-DoseExample.pdf  used on input line 34.
@@ -1532,7 +1532,7 @@ Overfull \hbox (7.31252pt too wide) in paragraph at lines 155--155
  []|\T1/ppl/b/n/12 Duration 
  []
 
-<Figures/Adept-DoseCombos.pdf, id=437, 491.91779pt x 570.21031pt>
+<Figures/Adept-DoseCombos.pdf, id=432, 491.91779pt x 570.21031pt>
 File: Figures/Adept-DoseCombos.pdf Graphic file (type pdf)
 <use Figures/Adept-DoseCombos.pdf>
 Package pdftex.def Info: Figures/Adept-DoseCombos.pdf  used on input line 172.
@@ -1551,7 +1551,7 @@ Overfull \hbox (13.09404pt too wide) in paragraph at lines 194--196
 lation/de-escalation
  []
 
-<Figures/Adept-WeightFunction.pdf, id=477, 844.15375pt x 597.23125pt>
+<Figures/Adept-WeightFunction.pdf, id=472, 844.15375pt x 597.23125pt>
 File: Figures/Adept-WeightFunction.pdf Graphic file (type pdf)
 <use Figures/Adept-WeightFunction.pdf>
 Package pdftex.def Info: Figures/Adept-WeightFunction.pdf  used on input line 2
@@ -1569,18 +1569,18 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [26] [27]
-<Figures/Adept-DLTRates.pdf, id=545, 844.15375pt x 597.23125pt>
+<Figures/Adept-DLTRates.pdf, id=540, 844.15375pt x 597.23125pt>
 File: Figures/Adept-DLTRates.pdf Graphic file (type pdf)
 <use Figures/Adept-DLTRates.pdf>
 Package pdftex.def Info: Figures/Adept-DLTRates.pdf  used on input line 462.
 (pdftex.def)             Requested size: 412.56499pt x 291.88948pt.
  [28 <./Figures/Adept-DLTRates.pdf>] [29] [30]
-<Figures/Adept-SimsOrder1.pdf, id=578, 844.15375pt x 597.23125pt>
+<Figures/Adept-SimsOrder1.pdf, id=573, 844.15375pt x 597.23125pt>
 File: Figures/Adept-SimsOrder1.pdf Graphic file (type pdf)
 <use Figures/Adept-SimsOrder1.pdf>
 Package pdftex.def Info: Figures/Adept-SimsOrder1.pdf  used on input line 745.
 (pdftex.def)             Requested size: 412.56499pt x 291.88948pt.
-<Figures/Adept-SimsOrder2.pdf, id=581, 844.15375pt x 597.23125pt>
+<Figures/Adept-SimsOrder2.pdf, id=576, 844.15375pt x 597.23125pt>
 File: Figures/Adept-SimsOrder2.pdf Graphic file (type pdf)
 <use Figures/Adept-SimsOrder2.pdf>
 Package pdftex.def Info: Figures/Adept-SimsOrder2.pdf  used on input line 752.
@@ -1600,26 +1600,32 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 ]
 Chapter 3.
 
-Overfull \hbox (7.25073pt too wide) in paragraph at lines 69--70
-\T1/ppl/m/n/12 gres-sion of can-cer. The mono-tonic as-sump-tion of dose-toxici
-ty and dose-efficacy
+Overfull \hbox (0.57481pt too wide) in paragraph at lines 16--17
+[]\T1/ppl/m/n/12 For treat-ments like chemother-apy which kills all cells in-cl
+ud-ing can-cer cells,
  []
 
 1: section
 [41] [42]
-Overfull \hbox (1.21432pt too wide) in paragraph at lines 75--76
+Overfull \hbox (1.21432pt too wide) in paragraph at lines 22--23
 \T1/ppl/m/n/12 and Yuan [[][]19[][]]. U-BOIN jointly mod-els tox-i-c-ity and ef
 -fi-cacy with a multinomial-
  []
 
-[43] [44] [45] [46] [47] [48] [49] [50] [51]
-<Figures/WT-TwoArmExample.pdf, id=734, 389.5353pt x 608.2725pt>
+[43] [44]
+Overfull \hbox (0.1431pt too wide) in paragraph at lines 34--35
+[]\T1/ppl/m/n/12 Section [][]3.2[][], de-tails the sta-tis-ti-cal as-pects of t
+he WT de-sign and how it works.
+ []
+
+[45] [46] [47] [48] [49] [50] [51]
+<Figures/WT-TwoArmExample.pdf, id=729, 389.5353pt x 608.2725pt>
 File: Figures/WT-TwoArmExample.pdf Graphic file (type pdf)
 <use Figures/WT-TwoArmExample.pdf>
-Package pdftex.def Info: Figures/WT-TwoArmExample.pdf  used on input line 228.
+Package pdftex.def Info: Figures/WT-TwoArmExample.pdf  used on input line 176.
 (pdftex.def)             Requested size: 317.67679pt x 496.05794pt.
  [52 <./Figures/WT-TwoArmExample.pdf>]
-Overfull \hbox (1.39406pt too wide) in paragraph at lines 244--245
+Overfull \hbox (1.39406pt too wide) in paragraph at lines 189--190
 \T1/ppl/m/n/12 mod-i-fi-ca-tion only im-pacts the adap-tive ran-domi-sa-tion (A
 R) phase and re-quires
  []
@@ -1715,7 +1721,7 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Here is how much of TeX's memory you used:
  39377 strings out of 492895
  801753 string characters out of 3133472
- 1349577 words of memory out of 3000000
+ 1349022 words of memory out of 3000000
  42595 multiletter control sequences out of 15000+200000
  593957 words of font info for 146 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1732,9 +1738,9 @@ ts/type1/public/rsfs/rsfs10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/pa
 latino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Progra
 m Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (100 pages, 682416 bytes).
+Output written on main.pdf (100 pages, 680623 bytes).
 PDF statistics:
- 1231 PDF objects out of 1440 (max. 8388607)
+ 1226 PDF objects out of 1440 (max. 8388607)
  236 named destinations out of 1000 (max. 500000)
  252 words of extra memory for PDF output out of 10000 (max. 10000000)
 
