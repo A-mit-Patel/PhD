@@ -26,4 +26,10 @@
 \contentsline {subsection}{\numberline {3.4.3}Comparison of RtC-WT against Alternative Designs }{66}{subsection.84}% 
 \contentsline {subsection}{\numberline {3.4.4}Investigating an Active Control}{72}{subsection.88}% 
 \contentsline {section}{\numberline {3.5}Discussion}{76}{section.93}% 
-\contentsline {chapter}{Bibliography}{81}{chapter*.94}% 
+\contentsline {chapter}{\numberline {4}Extending Dose Transition Pathways for use in TITE-CRMs}{81}{chapter.94}% 
+\contentsline {section}{\numberline {4.1}Introduction}{81}{section.95}% 
+\contentsline {section}{\numberline {4.2}Dose Transition Pathways}{84}{section.96}% 
+\contentsline {subsection}{\numberline {4.2.1}Example trial to illustrate DTPs}{86}{subsection.97}% 
+\contentsline {subsection}{\numberline {4.2.2}Using DTPs to calibrate the CRM}{87}{subsection.99}% 
+\contentsline {subsection}{\numberline {4.2.3}DTPs as an analysis tool}{95}{subsection.106}% 
+\contentsline {chapter}{Bibliography}{97}{chapter*.107}% 

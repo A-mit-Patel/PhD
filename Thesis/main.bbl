@@ -728,9 +728,9 @@
     \field{number}{1}
     \field{pages}{43}
     \field{shortjournal}{Journal of Hematology \& Oncology}
-    \field{shorttitle}{Ataxia Telangiectasia and {{Rad3}}-Related Inhibitors
+    \field{shorttitle}{Ataxia Telangiectasia and {{Rad3-related}} Inhibitors
   and Cancer Therapy}
-    \field{title}{Ataxia Telangiectasia and {{Rad3}}-Related Inhibitors and
+    \field{title}{Ataxia Telangiectasia and {{Rad3-related}} Inhibitors and
   Cancer Therapy: Where We Stand}
     \verb{url}
     \verb https://doi.org/10.1186/s13045-019-0733-6
@@ -912,7 +912,7 @@
     \list{publisher}{1}{%
       {{American Society of Clinical Oncology}}%
     }
-    \keyw{Adept Chapter}
+    \keyw{Adept Chapter,TITE-DTP Chapter}
     \strng{namehash}{RASDJW+1}
     \strng{fullhash}{RASDJWTMKFRPA1}
     \field{labelnamesource}{author}
@@ -1013,7 +1013,7 @@
       {{Taylor \& Francis}}%
     }
     \keyw{Adept Chapter,Dose-finding methods,immunotherapy,maximum tolerated
-  dose,optimal dose,phase 1 designs,targeted therapy}
+  dose,optimal dose,phase 1 designs,targeted therapy,TITE-DTP Chapter}
     \strng{namehash}{CCSJMGA+1}
     \strng{fullhash}{CCSJMGADJKSGKIALSM1}
     \field{labelnamesource}{author}
@@ -1067,7 +1067,7 @@
     \field{year}{2017}
   \endentry
 
-  \entry{brockMoreBetterAnalysis2020}{article}{}
+  \entry{brockMoreBetterAnalysis2021}{article}{}
     \name{author}{6}{}{%
       {{hash=BK}{%
          family={Brock},
@@ -1106,58 +1106,45 @@
          giveni={S\bibinitperiod},
       }}%
     }
-    \list{publisher}{1}{%
-      {{Cold Spring Harbor Laboratory Press}}%
-    }
-    \keyw{Adept Chapter}
+    \keyw{Cancer,Dose finding,Efficacy,Monotone,Phase I,Response,Toxicity}
     \strng{namehash}{BKHVSG+1}
     \strng{fullhash}{BKHVSGPCCCLS1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{shorttitle}
     \field{abstract}{%
-    {$<$}p{$>$}The overwhelming majority of dose-escalation clinical trials use
-  methods that seek a maximum tolerable dose, including rule-based methods like
-  the 3+3, and model-based methods like CRM and EWOC. These methods assume that
-  the incidences of efficacy and toxicity always increase as dose is increased.
+    The overwhelming majority of dose-escalation clinical trials use methods
+  that seek a maximum tolerable dose, including rule-based methods like the
+  3+3, and model-based methods like CRM and EWOC. These methods assume that the
+  incidences of efficacy and toxicity always increase as dose is increased.
   This assumption is widely accepted with cytotoxic therapies. In recent
   decades, however, the search for novel cancer treatments has broadened,
   increasingly focusing on inhibitors and antibodies. The rationale that higher
   doses are always associated with superior efficacy is less clear for these
-  types of therapies. We extracted dose-level efficacy and toxicity outcomes
-  from 115 manuscripts reporting dose-finding clinical trials in cancer between
-  2008 and 2014. We analysed the outcomes from each manuscript using flexible
-  non-linear regression models to investigate the evidence supporting the
-  monotonic efficacy and toxicity assumptions. We found that the monotonic
-  toxicity assumption was well-supported across most treatment classes and
-  disease areas. In contrast, we found very little evidence supporting the
-  monotonic efficacy assumption. Our conclusion is that dose-escalation trials
-  routinely use methods whose assumptions are violated by the outcomes
-  observed. As a consequence, dose-finding trials risk recommending
-  unjustifiably high doses that are harmful to patients. We recommend that
-  trialists consider experimental designs that allow toxicity and efficacy
-  outcomes to jointly determine the doses given to patients and recommended for
-  further study.{$<$}/p{$>$}%
+  types of therapies.%
     }
     \verb{doi}
-    \verb 10.1101/2020.08.18.20177212
+    \verb 10.1186/s12885-021-08440-0
     \endverb
-    \field{pages}{2020.08.18.20177212}
+    \field{issn}{1471-2407}
+    \field{number}{1}
+    \field{pages}{777}
+    \field{shortjournal}{BMC Cancer}
     \field{shorttitle}{Is More Better?}
     \field{title}{Is More Better? {{An}} Analysis of Toxicity and Response
   Outcomes from Dose-Finding Clinical Trials in Cancer}
     \verb{url}
-    \verb https://www.medrxiv.org/content/10.1101/2020.08.18.20177212v1
+    \verb https://doi.org/10.1186/s12885-021-08440-0
     \endverb
-    \field{langid}{english}
+    \field{volume}{21}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\DQC9DTZ6\\Brock et al. - 2020 -
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\J4CRA3LC\\Brock et al. - 2021 -
     \verb  Is more better An analysis of toxicity and respon.pdf;C\:\\Users\\Pa
-    \verb telAL\\Zotero\\storage\\HTVA3V8U\\2020.08.18.html
+    \verb telAL\\Zotero\\storage\\8PQAAIAP\\s12885-021-08440-0.html
     \endverb
-    \field{journaltitle}{medRxiv}
-    \field{day}{21}
-    \field{month}{08}
-    \field{year}{2020}
+    \field{journaltitle}{BMC Cancer}
+    \field{day}{05}
+    \field{month}{07}
+    \field{year}{2021}
   \endentry
 
   \entry{cheungSequentialDesignsPhase2000}{article}{}
@@ -1205,7 +1192,7 @@
     \field{number}{4}
     \field{pages}{1177\bibrangedash 1182}
     \field{title}{Sequential {{Designs}} for {{Phase I Clinical Trials}} with
-  {{Late}}-{{Onset Toxicities}}}
+  {{Late-Onset Toxicities}}}
     \verb{url}
     \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.0006-341X.2000.0117
     \verb 7.x
@@ -1749,7 +1736,7 @@
     \field{pages}{211\bibrangedash 218}
     \field{shortjournal}{Comput Methods Programs Biomed}
     \field{shorttitle}{Pocrm}
-    \field{title}{Pocrm: An {{R}}-Package for Phase {{I}} Trials of
+    \field{title}{Pocrm: An {{R-package}} for Phase {{I}} Trials of
   Combinations of Agents}
     \field{volume}{112}
     \field{langid}{english}
@@ -1788,7 +1775,7 @@
     }
     \field{shorttitle}{Pocrm}
     \field{title}{Pocrm: {{Dose Finding}} in {{Drug Combination Phase I Trials
-  Using PO}}-{{CRM}}}
+  Using PO-CRM}}}
     \verb{url}
     \verb https://CRAN.R-project.org/package=pocrm
     \endverb
@@ -2044,7 +2031,7 @@
   Glioblastoma}
     \field{title}{Phase {{I}}/{{IIa}} Study of Concomitant Radiotherapy with
   Olaparib and Temozolomide in Unresectable or Partially Resectable
-  Glioblastoma: {{OLA}}-{{TMZ}}-{{RTE}}-01 Trial Protocol}
+  Glioblastoma: {{OLA-TMZ-RTE-01}} Trial Protocol}
     \verb{url}
     \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6399862/
     \endverb
@@ -2143,7 +2130,7 @@
   calibration tools for trial planning purposes.%
     }
     \field{shorttitle}{Dfcrm}
-    \field{title}{Dfcrm: {{Dose}}-{{Finding}} by the {{Continual Reassessment
+    \field{title}{Dfcrm: {{Dose-Finding}} by the {{Continual Reassessment
   Method}}}
     \verb{url}
     \verb https://CRAN.R-project.org/package=dfcrm
@@ -2244,7 +2231,7 @@
       {{American Cancer Society}}%
     }
     \keyw{cytostatic drug,dose-finding approach,drug development,optimal
-  biological dose,phase I clinical trials,WT Chapter}
+  biological dose,phase I clinical trials,TITE-DTP Chapter,WT Chapter}
     \strng{namehash}{ACKSHXY+1}
     \strng{fullhash}{ACKSHXYZS1}
     \field{labelnamesource}{author}
@@ -2543,9 +2530,9 @@
     \field{issn}{1097-0258}
     \field{number}{28}
     \field{pages}{S5299\bibrangedash S5316}
-    \field{title}{A Utility-Based {{Bayesian}} Optimal Interval
-  ({{U}}-{{BOIN}}) Phase {{I}}/{{II}} Design to Identify the Optimal Biological
-  Dose for Targeted and Immune Therapies}
+    \field{title}{A Utility-Based {{Bayesian}} Optimal Interval ({{U-BOIN}})
+  Phase {{I}}/{{II}} Design to Identify the Optimal Biological Dose for
+  Targeted and Immune Therapies}
     \verb{url}
     \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.8361
     \endverb
@@ -3143,6 +3130,288 @@
     \field{day}{04}
     \field{month}{03}
     \field{year}{2019}
+  \endentry
+
+  \entry{yapDoseTransitionPathways2017}{article}{}
+    \name{author}{5}{}{%
+      {{hash=YC}{%
+         family={Yap},
+         familyi={Y\bibinitperiod},
+         given={Christina},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BLJ}{%
+         family={Billingham},
+         familyi={B\bibinitperiod},
+         given={Lucinda\bibnamedelima J.},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=CYK}{%
+         family={Cheung},
+         familyi={C\bibinitperiod},
+         given={Ying\bibnamedelima Kuen},
+         giveni={Y\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Craddock},
+         familyi={C\bibinitperiod},
+         given={Charlie},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=OJ}{%
+         family={O'Quigley},
+         familyi={O\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{American Association for Cancer Research}}%
+    }
+    \strng{namehash}{YCBLJCYK+1}
+    \strng{fullhash}{YCBLJCYKCCOJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    The ever-increasing pace of development of novel therapies mandates
+  efficient methodologies for assessment of their tolerability and activity.
+  Evidence increasingly support the merits of model-based dose-finding designs
+  in identifying the recommended phase II dose compared with conventional
+  rule-based designs such as the 3 + 3 but despite this, their use remains
+  limited. Here, we propose a useful tool, dose transition pathways (DTP),
+  which helps overcome several commonly faced practical and methodologic
+  challenges in the implementation of model-based designs. DTP projects in
+  advance the doses recommended by a model-based design for subsequent patients
+  (stay, escalate, de-escalate, or stop early), using all the accumulated
+  information. After specifying a model with favorable statistical properties,
+  we utilize the DTP to fine-tune the model to tailor it to the trial's
+  specific requirements that reflect important clinical judgments. In
+  particular, it can help to determine how stringent the stopping rules should
+  be if the investigated therapy is too toxic. Its use to design and implement
+  a modified continual reassessment method is illustrated in an acute myeloid
+  leukemia trial. DTP removes the fears of model-based designs as unknown,
+  complex systems and can serve as a handbook, guiding decision-making for each
+  dose update. In the illustrated trial, the seamless, clear transition for
+  each dose recommendation aided the investigators' understanding of the design
+  and facilitated decision-making to enable finer calibration of a tailored
+  model. We advocate the use of the DTP as an integral procedure in the
+  co-development and successful implementation of practical model-based designs
+  by statisticians and investigators. Clin Cancer Res; 23(24); 7440–7. ©2017
+  AACR.%
+    }
+    \verb{doi}
+    \verb 10.1158/1078-0432.CCR-17-0582
+    \endverb
+    \verb{eprint}
+    \verb 28733440
+    \endverb
+    \field{issn}{1078-0432, 1557-3265}
+    \field{number}{24}
+    \field{pages}{7440\bibrangedash 7447}
+    \field{shortjournal}{Clin Cancer Res}
+    \field{shorttitle}{Dose {{Transition Pathways}}}
+    \field{title}{Dose {{Transition Pathways}}: {{The Missing Link Between
+  Complex Dose-Finding Designs}} and {{Simple Decision-Making}}}
+    \verb{url}
+    \verb https://clincancerres.aacrjournals.org/content/23/24/7440
+    \endverb
+    \field{volume}{23}
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\BW8KF43M\\Yap et al. - 2017 - D
+    \verb ose Transition Pathways The Missing Link Between.pdf;C\:\\Users\\Pate
+    \verb lAL\\Zotero\\storage\\QY2K4YNY\\7440.full-text.html
+    \endverb
+    \field{journaltitle}{Clinical Cancer Research}
+    \field{eprinttype}{pmid}
+    \field{day}{15}
+    \field{month}{12}
+    \field{year}{2017}
+  \endentry
+
+  \entry{wheelerHowDesignDosefinding2019}{article}{}
+    \name{author}{12}{}{%
+      {{hash=WGM}{%
+         family={Wheeler},
+         familyi={W\bibinitperiod},
+         given={Graham\bibnamedelima M.},
+         giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MAP}{%
+         family={Mander},
+         familyi={M\bibinitperiod},
+         given={Adrian\bibnamedelima P.},
+         giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Bedding},
+         familyi={B\bibinitperiod},
+         given={Alun},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BK}{%
+         family={Brock},
+         familyi={B\bibinitperiod},
+         given={Kristian},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=CV}{%
+         family={Cornelius},
+         familyi={C\bibinitperiod},
+         given={Victoria},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=GAP}{%
+         family={Grieve},
+         familyi={G\bibinitperiod},
+         given={Andrew\bibnamedelima P.},
+         giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=JT}{%
+         family={Jaki},
+         familyi={J\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=LSB}{%
+         family={Love},
+         familyi={L\bibinitperiod},
+         given={Sharon\bibnamedelima B.},
+         giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=OL}{%
+         family={Odondi},
+         familyi={O\bibinitperiod},
+         given={Lang’o},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=WCJ}{%
+         family={Weir},
+         familyi={W\bibinitperiod},
+         given={Christopher\bibnamedelima J.},
+         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=YC}{%
+         family={Yap},
+         familyi={Y\bibinitperiod},
+         given={Christina},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BSJ}{%
+         family={Bond},
+         familyi={B\bibinitperiod},
+         given={Simon\bibnamedelima J.},
+         giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{Adaptive designs,Continual reassessment method,Dose
+  escalation,Dose-finding,Maximum tolerated dose,Phase I trials,TITE-DTP
+  Chapter}
+    \strng{namehash}{WGMMAPBA+1}
+    \strng{fullhash}{WGMMAPBABKCVGAPJTLSBOLWCJYCBSJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    The continual reassessment method (CRM) is a model-based design for phase I
+  trials, which aims to find the maximum tolerated dose (MTD) of a new therapy.
+  The CRM has been shown to be more accurate in targeting the MTD than
+  traditional rule-based approaches such as the 3\,+\,3 design, which is used
+  in most phase I trials. Furthermore, the CRM has been shown to assign more
+  trial participants at or close to the MTD than the 3\,+\,3 design. However,
+  the CRM’s uptake in clinical research has been incredibly slow, putting
+  trial participants, drug development and patients at risk. Barriers to
+  increasing the use of the CRM have been identified, most notably a lack of
+  knowledge amongst clinicians and statisticians on how to apply new designs in
+  practice. No recent tutorial, guidelines, or recommendations for clinicians
+  on conducting dose-finding studies using the CRM are available. Furthermore,
+  practical resources to support clinicians considering the CRM for their
+  trials are scarce.%
+    }
+    \verb{doi}
+    \verb 10.1186/s12874-018-0638-z
+    \endverb
+    \field{issn}{1471-2288}
+    \field{number}{1}
+    \field{pages}{18}
+    \field{shortjournal}{BMC Medical Research Methodology}
+    \field{title}{How to Design a Dose-Finding Study Using the Continual
+  Reassessment Method}
+    \verb{url}
+    \verb https://doi.org/10.1186/s12874-018-0638-z
+    \endverb
+    \field{volume}{19}
+    \verb{file}
+    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\AN5G5WE2\\Wheeler et al. - 2019
+    \verb  - How to design a dose-finding study using the conti.pdf;C\:\\Users\
+    \verb \PatelAL\\Zotero\\storage\\NG37AACW\\s12874-018-0638-z.html
+    \endverb
+    \field{journaltitle}{BMC Medical Research Methodology}
+    \field{day}{18}
+    \field{month}{01}
+    \field{year}{2019}
+  \endentry
+
+  \entry{cheungDoseFindingContinual2011}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CYK}{%
+         family={Cheung},
+         familyi={C\bibinitperiod},
+         given={Ying\bibnamedelima Kuen},
+         giveni={Y\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{CRC Press}}%
+    }
+    \keyw{Computers / Mathematical & Statistical Software,Mathematics /
+  Probability & Statistics / General,Medical / Biostatistics,Medical /
+  Epidemiology,Medical / Research,Science / Life Sciences / Biology,Technology
+  & Engineering / Chemical & Biochemical,TITE-DTP Chapter}
+    \strng{namehash}{CYK1}
+    \strng{fullhash}{CYK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    As clinicians begin to realize the important role of dose-finding in the
+  drug development process, there is an increasing openness to "novel" methods
+  proposed in the past two decades. In particular, the Continual Reassessment
+  Method (CRM) and its variations have drawn much attention in the medical
+  community, though it has yet to become a commonplace tool. To overcome the
+  status quo in phase I clinical trials, statisticians must be able to design
+  trials using the CRM in a timely and reproducible manner. A self-contained
+  theoretical framework of the CRM for researchers and graduate students who
+  set out to learn and do research in the CRM and dose-finding methods in
+  general, Dose Finding by the Continual Reassessment Method features: Real
+  clinical trial examples that illustrate the methods and techniques throughout
+  the book Detailed calibration techniques that enable biostatisticians to
+  design a CRM in timely manner Limitations of the CRM are outlined to aid in
+  correct use of method This book supplies practical, efficient dose-finding
+  methods based on cutting edge statistical research. More than just a
+  cookbook, it provides full, unified coverage of the CRM in addition to
+  step-by-step guidelines to automation and parameterization of the methods
+  used on a regular basis. A detailed exposition of the calibration of the CRM
+  for applied statisticians working with dose-finding in phase I trials, the
+  book focuses on the R package ‘dfcrm’ for the CRM and its major variants.
+  The author recognizes clinicians’ skepticism of model-based designs, and
+  addresses their concerns that the time, professional, and computational
+  resources necessary for accurate model-based designs can be major bottlenecks
+  to the widespread use of appropriate dose-finding methods in phase I
+  practice. The theoretically- and empirically-based methods in Dose Finding by
+  the Continual Reassessment Method will lessen the statistician’s burden and
+  encourage the continuing development and implementation of model-based
+  dose-finding methods.%
+    }
+    \verb{eprint}
+    \verb S8_6F2DSeKYC
+    \endverb
+    \field{isbn}{978-1-4200-9151-9}
+    \field{pagetotal}{207}
+    \field{title}{Dose {{Finding}} by the {{Continual Reassessment Method}}}
+    \field{langid}{english}
+    \field{eprinttype}{googlebooks}
+    \field{day}{29}
+    \field{month}{03}
+    \field{year}{2011}
   \endentry
 \enddatalist
 \endinput
