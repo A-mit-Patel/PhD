@@ -14,23 +14,23 @@ d <- 5
 # Specify the number of toxicity orderings
 s <- 1 
 # Specify a set of toxicity skeleton values
-p.skel <- c(0.01, 0.1, 0.2, 0.3, 0.4)
+p.skel <- c(0.1, 0.15, 0.25, 0.35, 0.45)
 # Specify the number of efficacy orderings 
 g <- 7
 # Specify the possible efficacy orderings of the drug combination
 q.skel <- matrix(nrow=g, ncol=d)
-q.skel[1,] <- c(0.01, 0.4, 0.3, 0.2, 0.1)
-q.skel[2,] <- c(0.01, 0.3, 0.4, 0.3, 0.2)
-q.skel[3,] <- c(0.01, 0.2, 0.3, 0.4, 0.3)
-q.skel[4,] <- c(0.01, 0.1, 0.2, 0.3, 0.4)
-q.skel[5,] <- c(0.01, 0.2, 0.3, 0.4, 0.4)
-q.skel[6,] <- c(0.01, 0.3, 0.4, 0.4, 0.4)
-q.skel[7,] <- c(0.01, 0.4, 0.4, 0.4, 0.4)
+q.skel[1,] <- c(0.3, 0.7, 0.6, 0.5, 0.4)
+q.skel[2,] <- c(0.3, 0.6, 0.7, 0.6, 0.5)
+q.skel[3,] <- c(0.3, 0.5, 0.6, 0.7, 0.6)
+q.skel[4,] <- c(0.3, 0.4, 0.5, 0.6, 0.7)
+q.skel[5,] <- c(0.3, 0.5, 0.6, 0.7, 0.7)
+q.skel[6,] <- c(0.3, 0.6, 0.7, 0.7, 0.7)
+q.skel[7,] <- c(0.3, 0.7, 0.7, 0.7, 0.7)
 
 # Toxicity upper limit 
 tul <- 0.35
 # Efficacy lower limit 
-ell <- 0.15 
+ell <- 0.5 
 # Number of patients 
 n <- 60 
 # Cohort size for each inclusion 
@@ -49,55 +49,67 @@ seed <- 123
 ntrial <- 10000
 
 # SPECIFY SCENARIOS
-# Specify true toxicity and efficay rates for each scenario
+# Specify true toxicity and efficacy rates for each scenario
 
-# Scenario 1 - good monotonic eff, tolerable
-s1eff <- c(0.01, 0.25, 0.35, 0.45, 0.55)
-s1tox <- c(0.01, 0.05, 0.10, 0.20, 0.25)
+# Scenario 1 - increasing monotonic eff, tolerable
+s1eff <- c(0.3, 0.4, 0.5, 0.6, 0.7)
+s1tox <- c(0.1, 0.2, 0.25, 0.3, 0.35)
 
-# Scenario 2 - good monotonic eff, toxic 
-s2eff <- c(0.01, 0.25, 0.35, 0.45, 0.55)
-s2tox <- c(0.01, 0.50, 0.55, 0.65, 0.75)
+# Scenario 2 - increasing monotonic eff, toxic 
+s2eff <- c(0.3, 0.4, 0.5, 0.6, 0.7)
+s2tox <- c(0.1, 0.4, 0.45, 0.5, 0.55)
 
-# Scenario 3 - ineffective, tolerable 
-s3eff <- c(0.01, 0.03, 0.06, 0.09, 0.12)
-s3tox <- c(0.01, 0.05, 0.10, 0.20, 0.25)
+# Scenario 3 - increasing monotonic eff, high doses toxic 
+s3eff <- c(0.3, 0.4, 0.5, 0.6, 0.7)
+s3tox <- c(0.1, 0.25, 0.35, 0.45, 0.55)
 
-# Scenario 4 - ineffective, toxic 
-s4eff <- c(0.01, 0.03, 0.06, 0.09, 0.12)
-s4tox <- c(0.01, 0.50, 0.55, 0.65, 0.75)
+# Scenario 4 - unimodal, tolerable 
+s4eff <- c(0.3, 0.4, 0.7, 0.5, 0.4)
+s4tox <- c(0.1, 0.2, 0.25, 0.3, 0.35)
 
-# Scenario 5 - plateau@3, tolerable 
-s5eff <- c(0.01, 0.35, 0.55, 0.55, 0.55)
-s5tox <- c(0.01, 0.05, 0.10, 0.20, 0.25)
+# Scenario 5 - unimodal, toxic 
+s5eff <- c(0.3, 0.4, 0.7, 0.5, 0.4)
+s5tox <- c(0.1, 0.4, 0.45, 0.5, 0.55)
 
-# Scenario 6 - plateau@3, toxic 
-s6eff <- c(0.01, 0.35, 0.55, 0.55, 0.55)
-s6tox <- c(0.01, 0.50, 0.55, 0.65, 0.75)
+# Scenario 6 - unimodal, high doses toxic  
+s6eff <- c(0.3, 0.4, 0.7, 0.5, 0.4)
+s6tox <- c(0.1, 0.25, 0.35, 0.45, 0.55)
 
-# Scenario 7 - plateau@4, tolerable 
-s7eff <- c(0.01, 0.25, 0.35, 0.55, 0.55)
-s7tox <- c(0.01, 0.05, 0.10, 0.20, 0.25)
+# Scenario 7 - plateau, tolerable 
+s7eff <- c(0.3, 0.4, 0.6, 0.6, 0.6)
+s7tox <- c(0.1, 0.2, 0.25, 0.3, 0.35)
 
-# Scenario 8 - plateau@4, toxic 
-s8eff <- c(0.01, 0.25, 0.35, 0.55, 0.55)
-s8tox <- c(0.01, 0.50, 0.55, 0.65, 0.75)
+# Scenario 8 - plateau, toxic 
+s8eff <- c(0.3, 0.4, 0.6, 0.6, 0.6)
+s8tox <- c(0.1, 0.4, 0.45, 0.5, 0.55)
 
-# Scenario 9 - unimodal@3, tolerable
-s9eff <- c(0.01, 0.35, 0.55, 0.35, 0.25)
-s9tox <- c(0.01, 0.05, 0.10, 0.20, 0.25)
+# Scenario 9 - plateau, high doses toxic
+s9eff <- c(0.3, 0.4, 0.6, 0.6, 0.6)
+s9tox <- c(0.1, 0.25, 0.35, 0.45, 0.55)
 
-# Scenario 10 - unimodal@3, toxic
-s10eff <- c(0.01, 0.35, 0.55, 0.35, 0.25)
-s10tox <- c(0.01, 0.50, 0.55, 0.65, 0.75)
+# Scenario 10 - monotonic decreasing, tolerable
+s10eff <- c(0.3, 0.7, 0.6, 0.5, 0.4)
+s10tox <- c(0.1, 0.2, 0.25, 0.3, 0.35)
 
-# Scenario 11 - unimodal@4, tolerable
-s11eff <- c(0.01, 0.25, 0.35, 0.55, 0.35)
-s11tox <- c(0.01, 0.05, 0.10, 0.20, 0.25)
+# Scenario 11 - monotonic decreasing, toxic
+s11eff <- c(0.3, 0.7, 0.6, 0.5, 0.4)
+s11tox <- c(0.1, 0.4, 0.45, 0.5, 0.55)
 
-#Scenario 12 - unimodal@4, toxic
-s12eff <- c(0.01, 0.25, 0.35, 0.55, 0.35)
-s12tox <- c(0.01, 0.50, 0.55, 0.65, 0.75)
+#Scenario 12 - monotonic decreasing, high doses toxic
+s12eff <- c(0.3, 0.7, 0.6, 0.5, 0.4)
+s12tox <- c(0.1, 0.25, 0.35, 0.45, 0.55)
+
+# Scenario 13 - no efficacy, tolerable
+s13eff <- c(0.3, 0.3, 0.3, 0.3, 0.3)
+s13tox <- c(0.1, 0.2, 0.25, 0.3, 0.35)
+
+# Scenario 14 - no efficacy, toxic
+s14eff <- c(0.3, 0.3, 0.3, 0.3, 0.3)
+s14tox <- c(0.1, 0.4, 0.45, 0.5, 0.55)
+
+#Scenario 15 - no efficacy, high doses toxic
+s15eff <- c(0.3, 0.3, 0.3, 0.3, 0.3)
+s15tox <- c(0.1, 0.25, 0.35, 0.45, 0.55)
 ###############################################################################
 ###############################################################################
 # Simulations where adaptive randomisation for placebo is 20% 
@@ -219,6 +231,32 @@ set.seed(seed); n0p20sims12 = wt.sim(s12tox, s12eff, p.skel, q.skel, tul, ell,
                                     lowest.is.placebo = TRUE, 
                                     placebo.rand.prob = placebo.rand.prob)
 
+# Scenario 13 
+set.seed(seed); n0p20sims13 = wt.sim(s13tox, s13eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 14 
+set.seed(seed); n0p20sims14 = wt.sim(s14tox, s14eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 15 
+set.seed(seed); n0p20sims15 = wt.sim(s15tox, s15eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
 
 ###############################################################################
 # Adaptive randomisation sample size to 15 
@@ -322,6 +360,32 @@ set.seed(seed); n15p20sims11 = wt.sim(s11tox, s11eff, p.skel, q.skel, tul, ell,
                                      placebo.rand.prob = placebo.rand.prob)
 # Scenario 12 
 set.seed(seed); n15p20sims12 = wt.sim(s12tox, s12eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+# Scenario 13 
+set.seed(seed); n15p20sims13 = wt.sim(s13tox, s13eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 14 
+set.seed(seed); n15p20sims14 = wt.sim(s14tox, s14eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 15 
+set.seed(seed); n15p20sims15 = wt.sim(s15tox, s15eff, p.skel, q.skel, tul, ell,
                                      cohortsize, ncohort, start.comb, n.ar=n.ar, 
                                      ntrial = ntrial, safety.conf = safety.conf, 
                                      futility.conf = futility.conf,
@@ -432,6 +496,32 @@ set.seed(seed); n30p20sims11 = wt.sim(s11tox, s11eff, p.skel, q.skel, tul, ell,
                                      placebo.rand.prob = placebo.rand.prob)
 # Scenario 12 
 set.seed(seed); n30p20sims12 = wt.sim(s12tox, s12eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+# Scenario 13 
+set.seed(seed); n30p20sims13 = wt.sim(s13tox, s13eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 14 
+set.seed(seed); n30p20sims14 = wt.sim(s14tox, s14eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 15 
+set.seed(seed); n30p20sims15 = wt.sim(s15tox, s15eff, p.skel, q.skel, tul, ell,
                                      cohortsize, ncohort, start.comb, n.ar=n.ar, 
                                      ntrial = ntrial, safety.conf = safety.conf, 
                                      futility.conf = futility.conf,
@@ -550,6 +640,33 @@ set.seed(seed); n45p20sims12 = wt.sim(s12tox, s12eff, p.skel, q.skel, tul, ell,
                                      lowest.is.placebo = TRUE, 
                                      placebo.rand.prob = placebo.rand.prob)
 
+# Scenario 13 
+set.seed(seed); n45p20sims13 = wt.sim(s13tox, s13eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 14 
+set.seed(seed); n45p20sims14 = wt.sim(s14tox, s14eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 15 
+set.seed(seed); n45p20sims15 = wt.sim(s15tox, s15eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
 ###############################################################################
 # Adaptive randomisation sample size to 60 
 ###############################################################################
@@ -654,6 +771,32 @@ set.seed(seed); n60p20sims11 = wt.sim(s11tox, s11eff, p.skel, q.skel, tul, ell,
                                      placebo.rand.prob = placebo.rand.prob)
 # Scenario 12 
 set.seed(seed); n60p20sims12 = wt.sim(s12tox, s12eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+# Scenario 13 
+set.seed(seed); n60p20sims13 = wt.sim(s13tox, s13eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 14 
+set.seed(seed); n60p20sims14 = wt.sim(s14tox, s14eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 15 
+set.seed(seed); n60p20sims15 = wt.sim(s15tox, s15eff, p.skel, q.skel, tul, ell,
                                      cohortsize, ncohort, start.comb, n.ar=n.ar, 
                                      ntrial = ntrial, safety.conf = safety.conf, 
                                      futility.conf = futility.conf,
@@ -778,6 +921,32 @@ set.seed(seed); n0p33sims12 = wt.sim(s12tox, s12eff, p.skel, q.skel, tul, ell,
                                      check.tox.at.dose.level = 2,
                                      lowest.is.placebo = TRUE, 
                                      placebo.rand.prob = placebo.rand.prob)
+# Scenario 13 
+set.seed(seed); n0p33sims13 = wt.sim(s13tox, s13eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 14 
+set.seed(seed); n0p33sims14 = wt.sim(s14tox, s14eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 15 
+set.seed(seed); n0p33sims15 = wt.sim(s15tox, s15eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
 
 
 ###############################################################################
@@ -856,7 +1025,7 @@ set.seed(seed); n15p33sims8 = wt.sim(s8tox, s8eff, p.skel, q.skel, tul, ell,
                                      check.tox.at.dose.level = 2,
                                      lowest.is.placebo = TRUE, 
                                      placebo.rand.prob = placebo.rand.prob)
-temp <- Sys.time()
+
 # Scenario 9 
 set.seed(seed); n15p33sims9 = wt.sim(s9tox, s9eff, p.skel, q.skel, tul, ell,
                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
@@ -890,6 +1059,32 @@ set.seed(seed); n15p33sims12 = wt.sim(s12tox, s12eff, p.skel, q.skel, tul, ell,
                                      lowest.is.placebo = TRUE, 
                                      placebo.rand.prob = placebo.rand.prob)
 
+# Scenario 13 
+set.seed(seed); n15p33sims13 = wt.sim(s13tox, s13eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 14 
+set.seed(seed); n15p33sims14 = wt.sim(s14tox, s14eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 15 
+set.seed(seed); n15p33sims15 = wt.sim(s15tox, s15eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
 
 
 ###############################################################################
@@ -1001,7 +1196,32 @@ set.seed(seed); n30p33sims12 = wt.sim(s12tox, s12eff, p.skel, q.skel, tul, ell,
                                      check.tox.at.dose.level = 2,
                                      lowest.is.placebo = TRUE, 
                                      placebo.rand.prob = placebo.rand.prob)
+# Scenario 13 
+set.seed(seed); n30p33sims13 = wt.sim(s13tox, s13eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
 
+# Scenario 14 
+set.seed(seed); n30p33sims14 = wt.sim(s14tox, s14eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 15 
+set.seed(seed); n30p33sims15 = wt.sim(s15tox, s15eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
 
 ###############################################################################
 # Adaptive randomisation sample size to 45 
@@ -1112,7 +1332,32 @@ set.seed(seed); n45p33sims12 = wt.sim(s12tox, s12eff, p.skel, q.skel, tul, ell,
                                      check.tox.at.dose.level = 2,
                                      lowest.is.placebo = TRUE, 
                                      placebo.rand.prob = placebo.rand.prob)
+# Scenario 13 
+set.seed(seed); n45p33sims13 = wt.sim(s13tox, s13eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
 
+# Scenario 14 
+set.seed(seed); n45p33sims14 = wt.sim(s14tox, s14eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 15 
+set.seed(seed); n45p33sims15 = wt.sim(s15tox, s15eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
 
 ###############################################################################
 # Adaptive randomisation sample size to 60 
@@ -1222,6 +1467,32 @@ set.seed(seed); n60p33sims12 = wt.sim(s12tox, s12eff, p.skel, q.skel, tul, ell,
                                       check.tox.at.dose.level = 2,
                                       lowest.is.placebo = TRUE, 
                                       placebo.rand.prob = placebo.rand.prob)
+# Scenario 13 
+set.seed(seed); n60p33sims13 = wt.sim(s13tox, s13eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 14 
+set.seed(seed); n60p33sims14 = wt.sim(s14tox, s14eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
+
+# Scenario 15 
+set.seed(seed); n60p33sims15 = wt.sim(s15tox, s15eff, p.skel, q.skel, tul, ell,
+                                     cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                     ntrial = ntrial, safety.conf = safety.conf, 
+                                     futility.conf = futility.conf,
+                                     check.tox.at.dose.level = 2,
+                                     lowest.is.placebo = TRUE, 
+                                     placebo.rand.prob = placebo.rand.prob)
 
 ###############################################################################
 ###############################################################################

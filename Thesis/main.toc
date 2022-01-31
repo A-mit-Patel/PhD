@@ -1,35 +1,68 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\babel@toc {english}{}
-\contentsline {chapter}{Abstract}{iii}{section*.1}% 
-\contentsline {chapter}{Acknowledgements}{v}{section*.2}% 
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.6}% 
-\contentsline {chapter}{\numberline {2}Implementing the PO-TITE-CRM trial design into ADePT-DDR}{3}{chapter.7}% 
-\contentsline {section}{\numberline {2.1}Introduction}{3}{section.8}% 
-\contentsline {section}{\numberline {2.2}The PO-TITE-CRM Design}{9}{section.11}% 
-\contentsline {section}{\numberline {2.3}PO-TITE-CRM in ADePT-DDR}{13}{section.26}% 
-\contentsline {subsection}{\numberline {2.3.1}Partial Ordering in Practice}{14}{subsection.27}% 
-\contentsline {subsection}{\numberline {2.3.2}The TITE component}{18}{subsection.32}% 
-\contentsline {subsection}{\numberline {2.3.3}Stopping Rules}{20}{subsection.35}% 
-\contentsline {subsection}{\numberline {2.3.4}Operating Characteristics}{22}{subsection.36}% 
-\contentsline {section}{\numberline {2.4}Exploring other designs}{27}{section.40}% 
-\contentsline {section}{\numberline {2.5}Discussion}{36}{section.51}% 
-\contentsline {section}{\numberline {2.6}Conclusion}{39}{section.52}% 
-\contentsline {chapter}{\numberline {3}Extensions to the Wages and Tait trial design}{41}{chapter.53}% 
-\contentsline {section}{\numberline {3.1}Introduction}{41}{section.54}% 
-\contentsline {section}{\numberline {3.2}The Wages and Tait Design}{45}{section.55}% 
-\contentsline {section}{\numberline {3.3}RtC-WT: An extension to the Wages and Tait Design}{50}{section.72}% 
-\contentsline {subsection}{\numberline {3.3.1}The Rationale for Incorporating Randomisation to Control}{50}{subsection.73}% 
-\contentsline {subsection}{\numberline {3.3.2}Design of the Proposed Extension RtC-WT}{53}{subsection.75}% 
-\contentsline {section}{\numberline {3.4}Evaluation and Exploration of the Extension via Simulations}{55}{section.78}% 
-\contentsline {subsection}{\numberline {3.4.1}Design Specification}{56}{subsection.79}% 
-\contentsline {subsection}{\numberline {3.4.2}Impact of AR phase size and probability of randomisation to control on RtC-WT}{58}{subsection.81}% 
-\contentsline {subsection}{\numberline {3.4.3}Comparison of RtC-WT against Alternative Designs }{66}{subsection.84}% 
-\contentsline {subsection}{\numberline {3.4.4}Investigating an Active Control}{72}{subsection.88}% 
-\contentsline {section}{\numberline {3.5}Discussion}{76}{section.93}% 
-\contentsline {chapter}{\numberline {4}Extending Dose Transition Pathways for use in TITE-CRMs}{81}{chapter.94}% 
-\contentsline {section}{\numberline {4.1}Introduction}{81}{section.95}% 
-\contentsline {section}{\numberline {4.2}Dose Transition Pathways}{84}{section.96}% 
-\contentsline {subsection}{\numberline {4.2.1}Example trial to illustrate DTPs}{86}{subsection.97}% 
-\contentsline {subsection}{\numberline {4.2.2}Using DTPs to calibrate the CRM}{87}{subsection.99}% 
-\contentsline {subsection}{\numberline {4.2.3}DTPs as an analysis tool}{95}{subsection.106}% 
-\contentsline {chapter}{Bibliography}{97}{chapter*.107}% 
+\babel@toc {english}{}\relax 
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Abstract}{iii}{section*.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Acknowledgements}{v}{section*.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {2}Implementing the PO-TITE-CRM trial design into ADePT-DDR}{3}{chapter.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.1}Introduction}{3}{section.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.2}The PO-TITE-CRM Design}{9}{section.11}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.3}PO-TITE-CRM in ADePT-DDR}{13}{section.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.1}Partial Ordering in Practice}{14}{subsection.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.2}The TITE component}{18}{subsection.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.3}Stopping Rules}{20}{subsection.35}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.4}Operating Characteristics}{22}{subsection.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.4}Exploring other designs}{27}{section.40}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.5}Discussion}{36}{section.51}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.6}Conclusion}{39}{section.52}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {3}Extensions to the Wages and Tait trial design}{41}{chapter.53}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.1}Introduction}{41}{section.54}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.2}The Wages and Tait Design}{45}{section.55}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.3}RtC-WT: An extension to the Wages and Tait Design}{50}{section.72}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.1}The Rationale for Incorporating Randomisation to Control}{50}{subsection.73}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.3.2}Design of the Proposed Extension RtC-WT}{53}{subsection.75}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.4}Evaluation and Exploration of the Extension via Simulations}{55}{section.78}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.1}Design Specification}{56}{subsection.79}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.2}Impact of AR phase size and probability of randomisation to control on RtC-WT}{58}{subsection.81}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.3}Comparison of RtC-WT against Alternative Designs }{66}{subsection.84}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.4.4}Investigating an Active Control}{72}{subsection.88}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.5}Discussion}{76}{section.93}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {4}Extending Dose Transition Pathways for use in TITE-CRMs}{81}{chapter.94}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.1}Introduction}{81}{section.95}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Dose Transition Pathways}{84}{section.96}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Example trial to illustrate DTPs}{86}{subsection.97}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}Using DTPs to calibrate the CRM}{87}{subsection.99}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.3}DTPs as an analysis tool}{95}{subsection.106}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{97}{chapter*.107}%
