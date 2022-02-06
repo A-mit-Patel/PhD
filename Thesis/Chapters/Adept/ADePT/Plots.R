@@ -1,15 +1,16 @@
 ################################################################################
 # Plot of the weight function. 
 ################################################################################
-Weight <- c(0.6,0.8,1)
-Weeks <- c(8+7,12+7,52+7)
-plot(Weeks, Weight)
 library(ggplot2)
+Weight <- c(0.005,0.005,0.6,0.8,1)
+Weeks <- c(0,8+7,8+7,12+7,52+7)
+plot(Weeks, Weight)
+
 
 data <- data.frame(Weight, Weeks)
 
 ggplot(data, aes(x = Weeks, y = Weight))+
-  geom_line() +
+  geom_line(size = 1) +
   geom_vline(xintercept = 7, linetype = 'longdash', col = 'red') +
   geom_vline(xintercept = 15, linetype = 'longdash', col = 'red') +
   geom_vline(xintercept = 19, linetype = 'longdash', col = 'red') +
@@ -28,7 +29,29 @@ ggplot(data, aes(x = Weeks, y = Weight))+
   annotate('text', x =39.5 , y = 0.45, label = '(40 Weeks)')+
   ggtitle('Weight function across follow-up period')+
   theme_bw()
-  
+
+ggplot(data, aes(x = Weeks, y = Weight))+
+  geom_line(size = 2) +
+  geom_vline(xintercept = 7, linetype = 'longdash', col = 'red') +
+  geom_vline(xintercept = 15, linetype = 'longdash', col = 'red') +
+  geom_vline(xintercept = 19, linetype = 'longdash', col = 'red') +
+  scale_x_continuous(expand = c(0, 0)) + 
+  scale_y_continuous(expand = c(0, 0)) +
+  geom_rect(aes(xmin=0, xmax=7, ymin=0, ymax=1, 
+                fill = 'Treatment Period (7 Weeks)'), alpha = 0.05, 
+            colour = NA) +
+  geom_rect(aes(xmin=7, xmax=15, ymin=0, ymax=1, 
+                fill = 'Minimum Follow-up (8 Weeks)'),  alpha = 0.05, 
+            colour = NA) +
+  geom_rect(aes(xmin=15, xmax=59, ymin=0, ymax=1, 
+                fill = 'Long-term Follow-up (44 weeks)'),  alpha = 0.05, 
+            colour = NA) +
+  scale_fill_manual(' ',
+                    values = c('#006747FF','#00539CFF', '#E95C20FF'),  
+                    guide = guide_legend(override.aes = list(alpha = 1))) +
+  #theme(legend.text=element_text(size=36))+
+  theme_bw(base_size = 16)
+
 ################################################################################
 # Plot of TRUE DLT Rates 
 ################################################################################

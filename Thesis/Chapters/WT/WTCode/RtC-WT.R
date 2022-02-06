@@ -61,7 +61,7 @@ postefff <- function(b, q, z, n, j) {
 wages.tait = function(y, z, n, p.skel, q.skel, n.ar, comb.curr = NULL, 
                       mprior.tox = NULL, mprior.eff = NULL, 
                       safety.confidence = 0.95, futility.confidence = 0.95,
-                      check.tox.at.dose.level = 1, 
+                      check.tox.at.dose.level, 
                       lowest.is.placebo = FALSE, placebo.rand.prob = NULL) {
   
   # y, number of toxicity events at each dose
@@ -242,7 +242,7 @@ wages.tait = function(y, z, n, p.skel, q.skel, n.ar, comb.curr = NULL,
 wt.sim.one <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort, 
                        start.comb, n.ar, mprior.tox = NULL, mprior.eff = NULL, 
                        safety.confidence = 0.95, futility.confidence = 0.95,
-                       check.tox.at.dose.level = 1,
+                       check.tox.at.dose.level,
                        lowest.is.placebo = FALSE, placebo.rand.prob = NULL) {
   
   # p0, true toxicity probabilities
@@ -336,9 +336,9 @@ wt.sim <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort,
                    start.comb, n.ar, ntrial, 
                    mprior.tox = NULL, mprior.eff = NULL, 
                    safety.confidence = 0.95, futility.confidence = 0.95,
-                   check.tox.at.dose.level = 1, 
+                   check.tox.at.dose.level, 
                    verbose = TRUE, really.verbose = FALSE,
-                   full_output = FALSE, 
+                   full_output = TRUE, 
                    lowest.is.placebo = FALSE, placebo.rand.prob = NULL) {
   
   # p0, true toxicity probabilities
@@ -457,7 +457,7 @@ wt.sim <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort,
     l$FullToxAtDose = y
     l$FullEffAtDose = z
     l$FullRecommendation = comb.select
-    l$FullStopTrial = stop_trial
+   # l$FullStopTrial = stop_trial
   }
   
   return(l)

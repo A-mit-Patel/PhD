@@ -57,7 +57,7 @@ s1tox <- c(0.1, 0.2, 0.25, 0.3, 0.35)
 
 # Scenario 2 - increasing monotonic eff, toxic 
 s2eff <- c(0.3, 0.4, 0.5, 0.6, 0.7)
-s2tox <- c(0.1, 0.4, 0.45, 0.5, 0.55)
+s2tox <- c(0.1, 0.45, 0.5, 0.55, 0.6)
 
 # Scenario 3 - increasing monotonic eff, high doses toxic 
 s3eff <- c(0.3, 0.4, 0.5, 0.6, 0.7)
@@ -69,7 +69,7 @@ s4tox <- c(0.1, 0.2, 0.25, 0.3, 0.35)
 
 # Scenario 5 - unimodal, toxic 
 s5eff <- c(0.3, 0.4, 0.7, 0.5, 0.4)
-s5tox <- c(0.1, 0.4, 0.45, 0.5, 0.55)
+s5tox <- c(0.1, 0.45, 0.5, 0.55, 0.6)
 
 # Scenario 6 - unimodal, high doses toxic  
 s6eff <- c(0.3, 0.4, 0.7, 0.5, 0.4)
@@ -81,7 +81,7 @@ s7tox <- c(0.1, 0.2, 0.25, 0.3, 0.35)
 
 # Scenario 8 - plateau, toxic 
 s8eff <- c(0.3, 0.4, 0.6, 0.6, 0.6)
-s8tox <- c(0.1, 0.4, 0.45, 0.5, 0.55)
+s8tox <- c(0.1, 0.45, 0.5, 0.55, 0.6)
 
 # Scenario 9 - plateau, high doses toxic
 s9eff <- c(0.3, 0.4, 0.6, 0.6, 0.6)
@@ -93,7 +93,7 @@ s10tox <- c(0.1, 0.2, 0.25, 0.3, 0.35)
 
 # Scenario 11 - monotonic decreasing, toxic
 s11eff <- c(0.3, 0.7, 0.6, 0.5, 0.4)
-s11tox <- c(0.1, 0.4, 0.45, 0.5, 0.55)
+s11tox <- c(0.1, 0.45, 0.5, 0.55, 0.6)
 
 #Scenario 12 - monotonic decreasing, high doses toxic
 s12eff <- c(0.3, 0.7, 0.6, 0.5, 0.4)
@@ -105,7 +105,7 @@ s13tox <- c(0.1, 0.2, 0.25, 0.3, 0.35)
 
 # Scenario 14 - no efficacy, toxic
 s14eff <- c(0.3, 0.3, 0.3, 0.3, 0.3)
-s14tox <- c(0.1, 0.4, 0.45, 0.5, 0.55)
+s14tox <- c(0.1, 0.45, 0.5, 0.55, 0.6)
 
 #Scenario 15 - no efficacy, high doses toxic
 s15eff <- c(0.3, 0.3, 0.3, 0.3, 0.3)

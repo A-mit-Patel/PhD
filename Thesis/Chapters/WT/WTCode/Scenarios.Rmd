@@ -197,7 +197,12 @@ ggplot(aes(x  = dose, y = value, group = name))+
   labs(x = 'Dose', y = 'Probability')
 ```
 
-# Summary of new scenarios 
+## Summary of new scenarios 
 We add 3 more scenarios but we get to look at each efficacy relationship under the different toxicity relationships. One possible criticism is that we don't look at different efficacy curves in each relationship. For example the plateau could occur at a different dose or for the unimodal relationship another dose could be the peak.  
 
 ![Summary of the new scenarios](Summary2.PNG)
+
+
+
+
+

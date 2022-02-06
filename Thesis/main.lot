@@ -21,28 +21,20 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.1}{\ignorespaces Toxicity and efficacy skeletons for RtC-WT in the example trial.\relax }}{56}{table.caption.80}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Toxicity and efficacy skeletons for RtC-WT in the example trial.\relax }}{57}{table.caption.80}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.2}{\ignorespaces Selection probabilities for multiple combinations of parameters.}}{60}{table.caption.82}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Summary of the efficacy and toxicity curves used in each scenario. \relax }}{60}{table.caption.82}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.3}{\ignorespaces Mean No. of patients for multiple combinations of parameters.}}{61}{table.caption.83}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Operating characteristics for multiple combinations of AR phase size and probabilities for randomisation to control. Probability of selecting the best or good dose levels as the OBD, mean number of patients treated at those dose levels and at the control dose after 10000 simulations.\relax }}{61}{table.83}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.4}{\ignorespaces Selection probabilities for alternative trial designs.\relax }}{69}{table.caption.86}%
+\contentsline {table}{\numberline {3.4}{\ignorespaces Probabilities of selecting the best dose level for multiple combinations of AR phase size and probabilities for randomisation to control, plus summary statistics.\relax }}{76}{table.caption.84}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.5}{\ignorespaces Mean No. of patients for alternative trial designs.}}{69}{table.caption.87}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.6}{\ignorespaces Updated toxicity and efficacy skeletons for RtC-WT (Set A)}}{73}{table.caption.89}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.7}{\ignorespaces Updated toxicity and efficacy skeletons for RtC-WT (Set B)}}{73}{table.caption.90}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.8}{\ignorespaces Selection probabilities for an active control dose.}}{74}{table.caption.91}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.9}{\ignorespaces Mean No. of patients for an active control dose.}}{75}{table.caption.92}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Probabilities of selecting good dose levels for multiple combinations of AR phase size and probabilities for randomisation to control, plus summary statistics.\relax }}{76}{table.caption.85}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.1}{\ignorespaces Specification of parameters for an example CRM trial. \relax }}{86}{table.caption.98}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Specification of parameters for an example CRM trial. \relax }}{82}{table.caption.90}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.2}{\ignorespaces Initial DTP for the first three cohorts of our example CRM.\relax }}{88}{table.caption.100}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Initial DTP for the first three cohorts of our example CRM.\relax }}{84}{table.caption.92}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.3}{\ignorespaces Updated DTPs for the first three cohorts of our example CRM with additional rules.\relax }}{92}{table.caption.103}%
+\contentsline {table}{\numberline {4.3}{\ignorespaces Updated DTPs for the first three cohorts of our example CRM with additional rules.\relax }}{88}{table.caption.95}%
