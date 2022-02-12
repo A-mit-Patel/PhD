@@ -535,19 +535,23 @@ colnames(data) <- c('Scenario', '$phi_R$', '$j_R$', 'Best Dose Level',
                     'Prob of Picking Good Doses', 'Mean N at Best Dose', 
                     'Mean N at Good Doses', 'Mean N at 1 (Control Dose)')
 
+colnames(data) <- c('Scenario', '$phi_R$', '$j_R$', 'Best Dose',
+                    'Good Doses', 'P(Best)', 'P(Good)', 'N(Best)', 
+                    'N(Good)', 'N(Control)')
+
 data %>% 
-  kable(format = 'latex', booktabs = T, linesep = '', digits = 3, longtab = T, 
+  kable(format = 'latex', linesep = '', longtable = T, booktabs = T, 
         align = c(rep('c', times = 10)), 
         caption = '\\label{tab_wt:OCsCombos}Operating characteristics for multiple combinations of AR phase size and probabilities for randomisation to control. Probability of selecting the best or good dose levels as the OBD, mean number of patients treated at those dose levels and at the control dose after 10000 simulations.'
         ) %>% 
   kable_styling(position = 'center', repeat_header_method = 'replace',
-                latex_options = c('repeat_header'), font_size = 12,
+                latex_options = c('repeat_header', 'HOLD_position'), font_size = 9,
                 repeat_header_text = "Operating characteristics (continued)") %>%
-  column_spec(2:3, width = '0.5cm') %>% 
-  column_spec(c(4,5,6,7,8,9,10), width = '2cm') %>%
-  column_spec(7 , width = '2.3cm') %>% 
+  # column_spec(2:3, width = '0.5cm') %>% 
+  # column_spec(c(4,5,6,7,8,9,10), width = '1.5cm') %>%
+  #olumn_spec(7 , width = '2.3cm') %>% 
   collapse_rows(columns = 1:2, latex_hline = "major",  valign = "middle") %>% 
-  landscape() %>% 
+  #landscape() %>% 
   cat()
 
 rm(data)
