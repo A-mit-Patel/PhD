@@ -84,7 +84,7 @@ for  a weighted dose response model $\phi_m(d_i,w,\beta)$ where $\beta \in (-\in
 \begin{equation}
 	P(U_j \leq u ) = P(U_j \leq u |U_j \leq T)P(U_j \leq T) \equiv w(u;T) \psi_m(d_i,\beta).
 \end{equation}
-For simplicity we will refer to the weight function $w(u;T)$ as $w$. The weight function will have to be decided upon by the trials team, dependent on the scenario, a simple linear function or a more complex adaptive weights function could be utilised. There are also several working dose models which could be used for $\psi$, Wages et al. \cite{wagesUsingTimetoeventContinual2013} present their design with the power parameter model given by 
+For simplicity we will refer to the weight function $w(u;T)$ as $w$. The weight function will have to be decided upon by the trials team, dependent on the scenario, a simple linear function or a more complex adaptive weights function could be utilised. There are also several working dose models which could be used for $\psi$. Wages et al. \cite{wagesUsingTimetoeventContinual2013} present their design with the power parameter model given by 
 \begin{equation}
 	\psi_m(d_i,\beta) = \alpha_{mi}^{exp(\beta)} \; i = 1,...,k; \; m = 1,...,M.
 \end{equation}
@@ -232,7 +232,7 @@ Functions from pocrm package in R \cite{wagesPocrmRpackagePhase2013, wagesPocrmD
 
 Standard scenarios to run involve adjusting the true DLT rates to reflect each dose being the TD25. For each of these we calculate the probability of selecting each dose as the TD25. It would be expected the dose with the highest probability of being selected has its true DLT rate set at 25\% to match the target rate. A high probability of selection for the correct dose implies the design works well in the specified scenario. Additional characteristics such as the average number of patients at each dose level are also investigated. This can be used to look at how many patients may potentially be allocated to a toxic dose. It is also necessary to consider performance when all doses are too toxic, here we would want the design to recommend stopping early. Usually the true DLT rates used to define these scenarios abide by the monotonicity assumption. Due to the partial ordering we consider scenarios in which the true DLT rates follow both orders. For trials with a large amount of orders it may be unfeasible to run so many simulations. However, as ADePT-DDR only has two orders we explored all scenarios for each ordering.
 
-We simulated 10000 trials for each scenario using the finalised design detailed in section \ref{adept:PO-TITE-CRM-in-Adept}. Simulations were based on the assumption that the trial would recruit one patient per month. The occurrence of DLT's were randomly generated for patients in each cohort using a Bernoulli distribution with the probability set at the true DLT rate for the cohorts assigned dose level in the specific scenario. For patients who had a DLT occur, the time at which the DLT occurred was randomly generated using a uniform distribution which spanned the start of treatment to the end of follow-up. The simulations presented in Tables \ref{tab_adept:OCorder1} and \ref{tab_adept:OCorder2} took approximately 5 hours and 53 minutes to run. The Monte Carlo standard error for probabilities estimated by 10000 simulations is $\sqrt{0.5 \times 0.5/10000} = 0.5\%$.
+We simulated 10000 trials for each scenario using the finalised design detailed in section \ref{adept:PO-TITE-CRM-in-Adept}. Simulations were based on the assumption that the trial would recruit one patient per month. The occurrence of DLT's were randomly generated for patients in each cohort using a Bernoulli distribution with the probability set at the true DLT rate for the cohorts assigned dose level in the specific scenario. For patients who had a DLT occur, the time at which the DLT occurred was randomly generated using a uniform distribution which spanned the start of treatment to the end of follow-up. The simulations presented in Tables \ref{tab_adept:OCorder1} and \ref{tab_adept:OCorder2} took approximately 5 hours and 53 minutes to run. It is recommended by Morris et al. \cite{morrisUsingSimulationStudies2019} to detail the Monte Carlo standard error in order to quantify the simulations uncertainty. In the case of a 50\% selection probability the Monte Carlo standard error estimated by 10000 simulations is $\sqrt{0.5 \times 0.5/10000} = 0.5\%$. 
 
 Table \ref{tab_adept:OCorder1} details simulations for eight scenarios to test the performance of the PO-TITE-CRM design using true DLT rates which reflect the first ordering. We analyse scenarios where each dose is the TD25 (scenarios 1-6) and when all doses are too toxic (scenario 8). Additionally, we also investigate performance under conditions where the probability of DLT is fairly similar between doses (scenario 7). This is a notoriously difficult circumstance for CRM designs to deal with as the limited number of patients and events at each dose make it hard to accurately estimate toxicity probabilities if they are similar. Simulation results for ordering 2 are shown in Table \ref{tab_adept:OCorder2} where dose level 2a is considered more toxic than 2b. This is achieved by altering the true DLT rates so 2b has a lower probability of DLT compared to 2a. 
 
@@ -255,7 +255,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				\rowcolor{gray!6}   & True DLT rate & 0.25 & 0.4 & 0.45 & 0.5 & 0.55 & 0.6 & \\
 				
-				\rowcolor{gray!6}   & P(select) & 0.68 & 0.18 & 0.05 & 0.01 & 0 & 0 & 0.0849\\
+				\rowcolor{gray!6}   & P(select) & \textbf{0.68} & 0.18 & 0.05 & 0.01 & 0 & 0 & 0.08\\
 				
 				\rowcolor{gray!6}   & \% of patients & 39 & 32 & 20 & 6 & 3 & 0 & \\
 				
@@ -263,7 +263,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				& True DLT rate & 0.12 & 0.25 & 0.4 & 0.45 & 0.5 & 0.55 & \\
 				
-				& P(select) & 0.23 & 0.51 & 0.2 & 0.03 & 0.02 & 0 & 0.0079\\
+				& P(select) & 0.23 & \textbf{0.51} & 0.2 & 0.03 & 0.02 & 0 & 0.01\\
 				
 				& \% of patients & 17 & 35 & 29 & 11 & 6 & 1 & \\
 				
@@ -271,7 +271,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				\rowcolor{gray!6}   & True DLT rate & 0.09 & 0.12 & 0.25 & 0.4 & 0.45 & 0.5 & \\
 				
-				\rowcolor{gray!6}   & P(select) & 0.02 & 0.2 & 0.55 & 0.14 & 0.09 & 0.01 & 4e-04\\
+				\rowcolor{gray!6}   & P(select) & 0.02 & 0.2 & \textbf{0.55} & 0.14 & 0.09 & 0.01 & $<$0.01\\
 				
 				\rowcolor{gray!6}   & \% of patients & 4 & 20 & 34 & 23 & 16 & 3 & \\
 				
@@ -279,7 +279,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				& True DLT rate & 0.06 & 0.09 & 0.12 & 0.25 & 0.4 & 0.45 & \\
 				
-				& P(select) & 0 & 0.02 & 0.22 & 0.48 & 0.23 & 0.05 & 1e-04\\
+				& P(select) & 0 & 0.02 & 0.22 & \textbf{0.48} & 0.23 & 0.05 & $<$0.01\\
 				
 				& \% of patients & 1 & 12 & 20 & 31 & 25 & 11 & \\
 				
@@ -287,7 +287,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				\rowcolor{gray!6}   & True DLT rate & 0.03 & 0.06 & 0.09 & 0.12 & 0.25 & 0.4 & \\
 				
-				\rowcolor{gray!6}   & P(select) & 0 & 0 & 0.02 & 0.3 & 0.43 & 0.25 & 0\\
+				\rowcolor{gray!6}   & P(select) & 0 & 0 & 0.02 & 0.3 & \textbf{0.43} & 0.25 & 0\\
 				
 				\rowcolor{gray!6}   & \% of patients & 1 & 10 & 12 & 24 & 28 & 25 & \\
 				
@@ -295,7 +295,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				& True DLT rate & 0.01 & 0.03 & 0.06 & 0.09 & 0.12 & 0.25 & \\
 				
-				& P(select) & 0 & 0 & 0 & 0.09 & 0.13 & 0.78 & 0\\
+				& P(select) & 0 & 0 & 0 & 0.09 & 0.13 & \textbf{0.78} & 0\\
 				
 				& \% of patients & 0 & 10 & 11 & 18 & 18 & 42 & \\
 				
@@ -303,7 +303,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				\rowcolor{gray!6}   & True DLT rate & 0.05 & 0.1 & 0.15 & 0.2 & 0.25 & 0.3 & \\
 				
-				\rowcolor{gray!6}   & P(select) & 0 & 0.03 & 0.12 & 0.31 & 0.28 & 0.26 & 3e-04\\
+				\rowcolor{gray!6}   & P(select) & 0 & 0.03 & 0.12 & 0.31 & \textbf{0.28} & 0.26 & $<$0.01\\
 				
 				\rowcolor{gray!6}   & \% of patients & 2 & 13 & 18 & 26 & 23 & 19 & \\
 				
@@ -311,7 +311,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				& True DLT rate & 0.5 & 0.6 & 0.65 & 0.7 & 0.75 & 0.8 & \\
 				
-				& P(select) & 0.26 & 0 & 0 & 0 & 0 & 0 & 0.7404\\
+				& P(select) & 0.26 & 0 & 0 & 0 & 0 & 0 & \textbf{0.74}\\
 				
 				& \% of patients & 56 & 26 & 15 & 2 & 0 & 0 & \\
 				
@@ -338,7 +338,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				\rowcolor{gray!6}   & True DLT rate & 0.25 & 0.4 & 0.45 & 0.55 & 0.5 & 0.6 & \\
 				
-				\rowcolor{gray!6}   & P(select) & 0.67 & 0.19 & 0.05 & 0 & 0.01 & 0 & 0.0827\\
+				\rowcolor{gray!6}   & P(select) & \textbf{0.67} & 0.19 & 0.05 & 0 & 0.01 & 0 & 0.08\\
 				
 				\rowcolor{gray!6}   & \% of patients & 39 & 32 & 20 & 6 & 3 & 0 & \\
 				
@@ -346,7 +346,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				& True DLT rate & 0.12 & 0.25 & 0.4 & 0.5 & 0.45 & 0.55 & \\
 				
-				& P(select) & 0.23 & 0.52 & 0.2 & 0.02 & 0.02 & 0 & 0.0074\\
+				& P(select) & 0.23 & \textbf{0.52} & 0.2 & 0.02 & 0.02 & 0 & 0.01\\
 				
 				& \% of patients & 18 & 36 & 29 & 11 & 6 & 1 & \\
 				
@@ -354,7 +354,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				\rowcolor{gray!6}   & True DLT rate & 0.09 & 0.12 & 0.25 & 0.45 & 0.4 & 0.5 & \\
 				
-				\rowcolor{gray!6}   & P(select) & 0.02 & 0.2 & 0.55 & 0.09 & 0.14 & 0.01 & 4e-04\\
+				\rowcolor{gray!6}   & P(select) & 0.02 & 0.2 & \textbf{0.55} & 0.09 & 0.14 & 0.01 & $<$0.01\\
 				
 				\rowcolor{gray!6}   & \% of patients & 4 & 20 & 34 & 21 & 17 & 3 & \\
 				
@@ -362,7 +362,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				& True DLT rate & 0.06 & 0.09 & 0.12 & 0.25 & 0.15 & 0.45 & \\
 				
-				& P(select) & 0 & 0.01 & 0.08 & 0.44 & 0.33 & 0.14 & 2e-04\\
+				& P(select) & 0 & 0.01 & 0.08 & \textbf{0.44} & 0.33 & 0.14 & $<$0.01\\
 				
 				& \% of patients & 1 & 11 & 16 & 30 & 24 & 18 & \\
 				
@@ -370,7 +370,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				\rowcolor{gray!6}   & True DLT rate & 0.03 & 0.06 & 0.09 & 0.35 & 0.25 & 0.4 & \\
 				
-				\rowcolor{gray!6}   & P(select) & 0 & 0 & 0.15 & 0.31 & 0.43 & 0.11 & 0\\
+				\rowcolor{gray!6}   & P(select) & 0 & 0 & 0.15 & 0.31 & \textbf{0.43} & 0.11 & 0\\
 				
 				\rowcolor{gray!6}   & \% of patients & 1 & 11 & 18 & 30 & 28 & 14 & \\
 				
@@ -378,7 +378,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				& True DLT rate & 0.01 & 0.03 & 0.06 & 0.12 & 0.09 & 0.25 & \\
 				
-				& P(select) & 0 & 0 & 0 & 0.13 & 0.09 & 0.78 & 0\\
+				& P(select) & 0 & 0 & 0 & 0.13 & 0.09 & \textbf{0.78} & 0\\
 				
 				& \% of patients & 0 & 10 & 11 & 19 & 16 & 43 & \\
 				
@@ -386,7 +386,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				\rowcolor{gray!6}   & True DLT rate & 0.05 & 0.1 & 0.15 & 0.25 & 0.2 & 0.3 & \\
 				
-				\rowcolor{gray!6}   & P(select) & 0 & 0.02 & 0.12 & 0.32 & 0.27 & 0.26 & 2e-04\\
+				\rowcolor{gray!6}   & P(select) & 0 & 0.02 & 0.12 & \textbf{0.32} & 0.27 & 0.26 & $<$0.01\\
 				
 				\rowcolor{gray!6}   & \% of patients & 2 & 13 & 19 & 27 & 22 & 18 & \\
 				
@@ -394,7 +394,7 @@ Ideally we want the probability of selection for the dose allocated at TD25 to b
 				\cmidrule{1-9}
 				& True DLT rate & 0.5 & 0.6 & 0.65 & 0.75 & 0.7 & 0.8 & \\
 				
-				& P(select) & 0.27 & 0 & 0 & 0 & 0 & 0 & 0.7273\\
+				& P(select) & 0.27 & 0 & 0 & 0 & 0 & 0 & \textbf{0.73}\\
 				
 				& \% of patients & 56 & 27 & 15 & 2 & 0 & 0 & \\
 				

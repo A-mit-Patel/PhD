@@ -9,8 +9,8 @@ Reallocating 'name_of_file' (item size: 1) to 31 items.
 A level-1 auxiliary file: Chapters/Chapter1/Chapter1.aux
 Reallocating 'name_of_file' (item size: 1) to 29 items.
 A level-1 auxiliary file: Chapters/Adept/Adept_tex.aux
-Reallocating 'name_of_file' (item size: 1) to 23 items.
-A level-1 auxiliary file: Chapters/WT/WT_tex.aux
+Reallocating 'name_of_file' (item size: 1) to 28 items.
+A level-1 auxiliary file: Chapters/WT/WT_tex_v1.1.aux
 Reallocating 'name_of_file' (item size: 1) to 35 items.
 A level-1 auxiliary file: Chapters/TITE-DTP/TITE-DTP_tex.aux
 Reallocating 'glb_str_end' (item size: 4) to 20 items.
@@ -37,42 +37,42 @@ Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 You've used 45 entries,
             6393 wiz_defined-function locations,
-            1797 strings with 83580 characters,
-and the built_in function-call counts, 541461 in all, are:
-= -- 34744
-> -- 28343
-< -- 2368
-+ -- 31346
-- -- 22628
-* -- 35683
-:= -- 71865
+            1808 strings with 83520 characters,
+and the built_in function-call counts, 596558 in all, are:
+= -- 35538
+> -- 37947
+< -- 2878
++ -- 40008
+- -- 31022
+* -- 37118
+:= -- 81830
 add.period$ -- 0
 call.type$ -- 45
-change.case$ -- 657
-chr.to.int$ -- 1794
+change.case$ -- 641
+chr.to.int$ -- 2634
 cite$ -- 88
-duplicate$ -- 46557
-empty$ -- 40870
-format.name$ -- 4116
-if$ -- 91397
+duplicate$ -- 49349
+empty$ -- 42745
+format.name$ -- 4115
+if$ -- 95420
 int.to.chr$ -- 0
-int.to.str$ -- 104
+int.to.str$ -- 103
 missing$ -- 0
-newline$ -- 2704
-num.names$ -- 2056
-pop$ -- 16626
+newline$ -- 2804
+num.names$ -- 2038
+pop$ -- 16516
 preamble$ -- 1
-purify$ -- 1153
+purify$ -- 1137
 quote$ -- 0
-skip$ -- 10293
+skip$ -- 11006
 stack$ -- 0
-substring$ -- 70897
-swap$ -- 11321
-text.length$ -- 1939
+substring$ -- 74084
+swap$ -- 12604
+text.length$ -- 2291
 text.prefix$ -- 3
 top$ -- 1
 type$ -- 1518
 warning$ -- 0
-while$ -- 7684
+while$ -- 8314
 width$ -- 0
-write$ -- 2660
+write$ -- 2760

@@ -290,14 +290,17 @@
     \endverb
     \field{volume}{333}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\28L93KLM\\Stransky et al. - 201
-    \verb 1 - The Mutational Landscape of Head and Neck Squamous.pdf
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\28L93KLM\\Stransky et al. - 2011 -
+    \verb  The Mutational Landscape of Head and Neck Squamous.pdf
     \endverb
     \field{journaltitle}{Science (New York, N.Y.)}
     \field{eprinttype}{pmid}
     \field{day}{26}
     \field{month}{08}
     \field{year}{2011}
+    \field{urlday}{20}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{cancerreaserchukHeadNeckCancers2017}{online}{}
@@ -326,9 +329,12 @@
     \endverb
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\JPKNM8NW\\head-and-neck-cancers
-    \verb .html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\JPKNM8NW\\head-and-neck-cancers.ht
+    \verb ml
     \endverb
+    \field{urlday}{21}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
     \warn{\item Invalid format of field 'date' \item Invalid format of field
   'date'}
   \endentry
@@ -430,14 +436,17 @@
     \field{volume}{25}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\EJJXI7S9\\Round et al. - 2013 -
-    \verb  Radiotherapy Demand and Activity in England 2006–2.pdf;C\:\\Users\
-    \verb \PatelAL\\Zotero\\storage\\WZBWGA9P\\S0936655513002343.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\EJJXI7S9\\Round et al. - 2013 - Ra
+    \verb diotherapy Demand and Activity in England 2006–2.pdf;C\:\\Users\\Am
+    \verb it\\Zotero\\storage\\WZBWGA9P\\S0936655513002343.html
     \endverb
     \field{journaltitle}{Clinical Oncology}
     \field{day}{01}
     \field{month}{09}
     \field{year}{2013}
+    \field{urlday}{21}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{cognettiHeadNeckCancer2008}{article}{}
@@ -495,14 +504,17 @@
     \endverb
     \field{volume}{113}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\4CQHWE9S\\Cognetti et al. - 200
-    \verb 8 - Head and Neck Cancer An Evolving Treatment Paradi.pdf
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\4CQHWE9S\\Cognetti et al. - 2008 -
+    \verb  Head and Neck Cancer An Evolving Treatment Paradi.pdf
     \endverb
     \field{journaltitle}{Cancer}
     \field{eprinttype}{pmid}
     \field{day}{01}
     \field{month}{10}
     \field{year}{2008}
+    \field{urlday}{21}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{pignonChemotherapyAddedLocoregional2000}{article}{}
@@ -582,14 +594,17 @@
     \field{volume}{355}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\V5HS8A7Q\\Pignon et al. - 2000
-    \verb - Chemotherapy added to locoregional treatment for h.pdf;C\:\\Users\\
-    \verb PatelAL\\Zotero\\storage\\XDNVEX63\\S0140673600900114.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\V5HS8A7Q\\Pignon et al. - 2000 - C
+    \verb hemotherapy added to locoregional treatment for h.pdf;C\:\\Users\\Ami
+    \verb t\\Zotero\\storage\\XDNVEX63\\S0140673600900114.html
     \endverb
     \field{journaltitle}{The Lancet}
     \field{day}{18}
     \field{month}{03}
     \field{year}{2000}
+    \field{urlday}{20}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{oconnorTargetingDNADamage2015}{article}{}
@@ -636,14 +651,17 @@
     \field{volume}{60}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\5QWB7TIA\\O’Connor - 2015 - T
-    \verb argeting the DNA Damage Response in Cancer.pdf;C\:\\Users\\PatelAL\\Z
-    \verb otero\\storage\\WGZ2QG38\\S109727651500831X.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\5QWB7TIA\\O’Connor - 2015 - Targ
+    \verb eting the DNA Damage Response in Cancer.pdf;C\:\\Users\\Amit\\Zotero\
+    \verb \storage\\WGZ2QG38\\S109727651500831X.html
     \endverb
     \field{journaltitle}{Molecular Cell}
     \field{day}{19}
     \field{month}{11}
     \field{year}{2015}
+    \field{urlday}{27}
+    \field{urlmonth}{08}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{chalmersScienceFocusCombining2016}{article}{}
@@ -676,12 +694,15 @@
     \field{volume}{28}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\FLE7RAW4\\Chalmers - 2016 - Sci
-    \verb ence in Focus Combining Radiotherapy with Inhi.pdf
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\FLE7RAW4\\Chalmers - 2016 - Scienc
+    \verb e in Focus Combining Radiotherapy with Inhi.pdf
     \endverb
     \field{journaltitle}{Clinical Oncology}
     \field{month}{05}
     \field{year}{2016}
+    \field{urlday}{21}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{meiAtaxiaTelangiectasiaRad3related2019}{article}{}
@@ -737,14 +758,17 @@
     \endverb
     \field{volume}{12}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\EAXGWNSQ\\Mei et al. - 2019 - A
-    \verb taxia telangiectasia and Rad3-related inhibitors .pdf;C\:\\Users\\Pat
-    \verb elAL\\Zotero\\storage\\KLQ7AZUP\\s13045-019-0733-6.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\EAXGWNSQ\\Mei et al. - 2019 - Atax
+    \verb ia telangiectasia and Rad3-related inhibitors .pdf;C\:\\Users\\Amit\\
+    \verb Zotero\\storage\\KLQ7AZUP\\s13045-019-0733-6.html
     \endverb
     \field{journaltitle}{Journal of Hematology \& Oncology}
     \field{day}{24}
     \field{month}{04}
     \field{year}{2019}
+    \field{urlday}{22}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{letourneauDoseEscalationMethods2009}{article}{}
@@ -796,14 +820,17 @@
     \field{volume}{101}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\39VNRPX9\\Le Tourneau et al. -
-    \verb 2009 - Dose Escalation Methods in Phase I Cancer Clinical.pdf;C\:\\Us
-    \verb ers\\PatelAL\\Zotero\\storage\\EYUC2KFQ\\969691.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\39VNRPX9\\Le Tourneau et al. - 200
+    \verb 9 - Dose Escalation Methods in Phase I Cancer Clinical.pdf;C\:\\Users
+    \verb \\Amit\\Zotero\\storage\\EYUC2KFQ\\969691.html
     \endverb
     \field{journaltitle}{JNCI: Journal of the National Cancer Institute}
     \field{day}{20}
     \field{month}{05}
     \field{year}{2009}
+    \field{urlday}{22}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{oquigleyContinualReassessmentMethod1990}{article}{}
@@ -956,12 +983,15 @@
     \endverb
     \field{volume}{25}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\Y7WCUDHX\\JCO.2007.12.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\Y7WCUDHX\\JCO.2007.12.html
     \endverb
     \field{journaltitle}{Journal of Clinical Oncology}
     \field{day}{01}
     \field{month}{11}
     \field{year}{2007}
+    \field{urlday}{27}
+    \field{urlmonth}{08}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{chiuzanDosefindingDesignsTrials2017}{article}{}
@@ -1053,9 +1083,9 @@
     \endverb
     \field{volume}{27}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\WH7FVDME\\Chiuzan et al. - 2017
-    \verb  - Dose-finding designs for trials of molecularly tar.pdf;C\:\\Users\
-    \verb \PatelAL\\Zotero\\storage\\MQXKCFX2\\10543406.2017.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\WH7FVDME\\Chiuzan et al. - 2017 -
+    \verb Dose-finding designs for trials of molecularly tar.pdf;C\:\\Users\\Am
+    \verb it\\Zotero\\storage\\MQXKCFX2\\10543406.2017.html
     \endverb
     \field{journaltitle}{Journal of Biopharmaceutical Statistics}
     \field{annotation}{%
@@ -1065,6 +1095,9 @@
     \field{day}{04}
     \field{month}{05}
     \field{year}{2017}
+    \field{urlday}{27}
+    \field{urlmonth}{08}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{brockMoreBetterAnalysis2021}{article}{}
@@ -1137,14 +1170,17 @@
     \endverb
     \field{volume}{21}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\J4CRA3LC\\Brock et al. - 2021 -
-    \verb  Is more better An analysis of toxicity and respon.pdf;C\:\\Users\\Pa
-    \verb telAL\\Zotero\\storage\\8PQAAIAP\\s12885-021-08440-0.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\J4CRA3LC\\Brock et al. - 2021 - Is
+    \verb  more better An analysis of toxicity and respon.pdf;C\:\\Users\\Amit\
+    \verb \Zotero\\storage\\8PQAAIAP\\s12885-021-08440-0.html
     \endverb
     \field{journaltitle}{BMC Cancer}
     \field{day}{05}
     \field{month}{07}
     \field{year}{2021}
+    \field{urlday}{01}
+    \field{urlmonth}{10}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{cheungSequentialDesignsPhase2000}{article}{}
@@ -1200,9 +1236,9 @@
     \field{volume}{56}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\KWQRXL4Q\\Cheung and Chappell -
-    \verb  2000 - Sequential Designs for Phase I Clinical Trials wit.pdf;C\:\\U
-    \verb sers\\PatelAL\\Zotero\\storage\\T9W8G7GT\\j.0006-341X.2000.01177.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\KWQRXL4Q\\Cheung and Chappell - 20
+    \verb 00 - Sequential Designs for Phase I Clinical Trials wit.pdf;C\:\\User
+    \verb s\\Amit\\Zotero\\storage\\T9W8G7GT\\j.0006-341X.2000.01177.html
     \endverb
     \field{journaltitle}{Biometrics}
     \field{annotation}{%
@@ -1210,6 +1246,9 @@
   https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.0006-341X.2000.01177.x%
     }
     \field{year}{2000}
+    \field{urlday}{25}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{thallDoseFindingTwoAgents2003}{article}{}
@@ -1273,14 +1312,17 @@
     \field{volume}{59}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\MK4B3SMF\\Thall et al. - 2003 -
-    \verb  Dose-Finding with Two Agents in Phase I Oncology T.pdf
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\MK4B3SMF\\Thall et al. - 2003 - Do
+    \verb se-Finding with Two Agents in Phase I Oncology T.pdf
     \endverb
     \field{journaltitle}{Biometrics}
     \field{annotation}{%
     \_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/1541-0420.00058%
     }
     \field{year}{2003}
+    \field{urlday}{25}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{yinBayesianDoseFinding2009}{article}{}
@@ -1338,9 +1380,9 @@
     \field{volume}{58}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\IWLKK8CV\\Yin and Yuan - 2009 -
-    \verb  Bayesian dose finding in oncology for drug combina.pdf;C\:\\Users\\P
-    \verb atelAL\\Zotero\\storage\\EFPK7TCU\\j.1467-9876.2009.00649.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\IWLKK8CV\\Yin and Yuan - 2009 - Ba
+    \verb yesian dose finding in oncology for drug combina.pdf;C\:\\Users\\Amit
+    \verb \\Zotero\\storage\\EFPK7TCU\\j.1467-9876.2009.00649.html
     \endverb
     \field{journaltitle}{Journal of the Royal Statistical Society: Series C
   (Applied Statistics)}
@@ -1349,6 +1391,9 @@
   https://rss.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1467-9876.2009.00649.x%
     }
     \field{year}{2009}
+    \field{urlday}{25}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{wagesContinualReassessmentMethod2011}{article}{}
@@ -1416,8 +1461,8 @@
     \field{volume}{67}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\HTVDVWWU\\Wages et al. - 2011 -
-    \verb  Continual reassessment method for partial ordering.pdf
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\HTVDVWWU\\Wages et al. - 2011 - Co
+    \verb ntinual reassessment method for partial ordering.pdf
     \endverb
     \field{journaltitle}{Biometrics}
     \field{eprinttype}{pmid}
@@ -1482,8 +1527,8 @@
     \field{volume}{32}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\SRCAAVHP\\Wages et al. - 2013 -
-    \verb  Using the time-to-event continual reassessment met.pdf
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\SRCAAVHP\\Wages et al. - 2013 - Us
+    \verb ing the time-to-event continual reassessment met.pdf
     \endverb
     \field{journaltitle}{Statistics in Medicine}
     \field{eprinttype}{pmid}
@@ -1553,14 +1598,17 @@
     \endverb
     \field{volume}{7}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\F9SL5LJA\\Liu et al. - 2013 - B
-    \verb AYESIAN DATA AUGMENTATION DOSE FINDING WITH CONTI.pdf
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\F9SL5LJA\\Liu et al. - 2013 - BAYE
+    \verb SIAN DATA AUGMENTATION DOSE FINDING WITH CONTI.pdf
     \endverb
     \field{journaltitle}{The annals of applied statistics}
     \field{eprinttype}{pmid}
     \field{day}{01}
     \field{month}{12}
     \field{year}{2013}
+    \field{urlday}{25}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{wheelerBayesianModelfreeApproach2019}{article}{}
@@ -1622,14 +1670,17 @@
     \endverb
     \field{volume}{68}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\TIDCH682\\Wheeler et al. - 2019
-    \verb  - A Bayesian model-free approach to combination ther.pdf
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\TIDCH682\\Wheeler et al. - 2019 -
+    \verb A Bayesian model-free approach to combination ther.pdf
     \endverb
     \field{journaltitle}{Journal of the Royal Statistical Society. Series C,
   Applied statistics}
     \field{eprinttype}{pmid}
     \field{month}{02}
     \field{year}{2019}
+    \field{urlday}{25}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{wagesSpecificationsContinualReassessment2013}{article}{}
@@ -1683,12 +1734,15 @@
     \endverb
     \field{volume}{12}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\Y847A7W6\\Wages and Conaway - 2
-    \verb 013 - Specifications of a continual reassessment method .pdf
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\Y847A7W6\\Wages and Conaway - 2013
+    \verb  - Specifications of a continual reassessment method .pdf
     \endverb
     \field{journaltitle}{Pharmaceutical statistics}
     \field{eprinttype}{pmid}
     \field{year}{2013}
+    \field{urlday}{25}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{wagesPocrmRpackagePhase2013}{article}{}
@@ -1741,8 +1795,8 @@
     \field{volume}{112}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\SMA53VFZ\\Wages and Varhegyi -
-    \verb 2013 - pocrm an R-package for phase I trials of combinat.pdf
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\SMA53VFZ\\Wages and Varhegyi - 201
+    \verb 3 - pocrm an R-package for phase I trials of combinat.pdf
     \endverb
     \field{journaltitle}{Computer Methods and Programs in Biomedicine}
     \field{eprinttype}{pmid}
@@ -1783,6 +1837,9 @@
     \field{day}{15}
     \field{month}{03}
     \field{year}{2019}
+    \field{urlday}{02}
+    \field{urlmonth}{08}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{wagesPracticalDesignsPhase2016}{article}{}
@@ -1839,12 +1896,15 @@
     \endverb
     \field{volume}{26}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\TGR4EFNQ\\Wages et al. - 2016 -
-    \verb  Practical designs for phase I combination studies .pdf
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\TGR4EFNQ\\Wages et al. - 2016 - Pr
+    \verb actical designs for phase I combination studies .pdf
     \endverb
     \field{journaltitle}{Journal of biopharmaceutical statistics}
     \field{eprinttype}{pmid}
     \field{year}{2016}
+    \field{urlday}{25}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{lesueurPhaseIIaStudy2019}{article}{}
@@ -2037,14 +2097,17 @@
     \endverb
     \field{volume}{19}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\UQXUZS7F\\Lesueur et al. - 2019
-    \verb  - Phase IIIa study of concomitant radiotherapy with.pdf
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\UQXUZS7F\\Lesueur et al. - 2019 -
+    \verb Phase IIIa study of concomitant radiotherapy with.pdf
     \endverb
     \field{journaltitle}{BMC Cancer}
     \field{eprinttype}{pmid}
     \field{day}{04}
     \field{month}{03}
     \field{year}{2019}
+    \field{urlday}{25}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{huangTimetoeventContinualReassessment2014}{article}{}
@@ -2139,6 +2202,9 @@
     \field{day}{26}
     \field{month}{01}
     \field{year}{2019}
+    \field{urlday}{01}
+    \field{urlmonth}{08}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{oquigleyContinualReassessmentMethod1996}{article}{}
@@ -2198,6 +2264,80 @@
     \field{journaltitle}{Biometrics}
     \field{eprinttype}{jstor}
     \field{year}{1996}
+  \endentry
+
+  \entry{morrisUsingSimulationStudies2019}{article}{}
+    \name{author}{3}{}{%
+      {{hash=MTP}{%
+         family={Morris},
+         familyi={M\bibinitperiod},
+         given={Tim\bibnamedelima P.},
+         giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=WIR}{%
+         family={White},
+         familyi={W\bibinitperiod},
+         given={Ian\bibnamedelima R.},
+         giveni={I\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=CMJ}{%
+         family={Crowther},
+         familyi={C\bibinitperiod},
+         given={Michael\bibnamedelima J.},
+         giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{graphics for simulation,Monte Carlo,simulation design,simulation
+  reporting,simulation studies}
+    \strng{namehash}{MTPWIRCMJ1}
+    \strng{fullhash}{MTPWIRCMJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Simulation studies are computer experiments that involve creating data by
+  pseudo-random sampling. A key strength of simulation studies is the ability
+  to understand the behavior of statistical methods because some “truth”
+  (usually some parameter/s of interest) is known from the process of
+  generating the data. This allows us to consider properties of methods, such
+  as bias. While widely used, simulation studies are often poorly designed,
+  analyzed, and reported. This tutorial outlines the rationale for using
+  simulation studies and offers guidance for design, execution, analysis,
+  reporting, and presentation. In particular, this tutorial provides a
+  structured approach for planning and reporting simulation studies, which
+  involves defining aims, data-generating mechanisms, estimands, methods, and
+  performance measures (“ADEMP”); coherent terminology for simulation
+  studies; guidance on coding simulation studies; a critical discussion of key
+  performance measures and their estimation; guidance on structuring tabular
+  and graphical presentation of results; and new graphical presentations. With
+  a view to describing recent practice, we review 100 articles taken from
+  Volume 34 of Statistics in Medicine, which included at least one simulation
+  study and identify areas for improvement.%
+    }
+    \verb{doi}
+    \verb 10.1002/sim.8086
+    \endverb
+    \field{issn}{1097-0258}
+    \field{number}{11}
+    \field{pages}{2074\bibrangedash 2102}
+    \field{title}{Using Simulation Studies to Evaluate Statistical Methods}
+    \verb{url}
+    \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.8086
+    \endverb
+    \field{volume}{38}
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\MTC2QMH3\\Morris et al. - 2019 - U
+    \verb sing simulation studies to evaluate statistical m.pdf;C\:\\Users\\Ami
+    \verb t\\Zotero\\storage\\Q26EYSWP\\sim.html
+    \endverb
+    \field{journaltitle}{Statistics in Medicine}
+    \field{annotation}{%
+    \_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/sim.8086%
+    }
+    \field{year}{2019}
+    \field{urlday}{15}
+    \field{urlmonth}{02}
+    \field{urlyear}{2022}
   \endentry
 
   \entry{ahnOptimalBiologicalDose2016}{incollection}{}
@@ -2270,14 +2410,17 @@
     \endverb
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\5IN5VL64\\9781118445112.stat070
-    \verb 78.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\5IN5VL64\\9781118445112.stat07078.
+    \verb html
     \endverb
     \field{annotation}{%
     \_eprint:
   https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781118445112.stat07078.pub2%
     }
     \field{year}{2016}
+    \field{urlday}{12}
+    \field{urlmonth}{06}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{braunBivariateContinualReassessment2002}{article}{}
@@ -2326,14 +2469,17 @@
     \field{volume}{23}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\NG5Q28TP\\Braun - 2002 - The bi
-    \verb variate continual reassessment method exten.pdf;C\:\\Users\\PatelAL\\
-    \verb Zotero\\storage\\WXD6K6QR\\S0197245601002057.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\NG5Q28TP\\Braun - 2002 - The bivar
+    \verb iate continual reassessment method exten.pdf;C\:\\Users\\Amit\\Zotero
+    \verb \\storage\\WXD6K6QR\\S0197245601002057.html
     \endverb
     \field{journaltitle}{Controlled Clinical Trials}
     \field{day}{01}
     \field{month}{06}
     \field{year}{2002}
+    \field{urlday}{12}
+    \field{urlmonth}{06}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{thallDosefindingBasedEfficacytoxicity2004}{article}{}
@@ -2463,14 +2609,17 @@
     \endverb
     \field{volume}{17}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\LC2CJGCN\\Brock et al. - 2017 -
-    \verb  Implementing the EffTox dose-finding design in the.pdf;C\:\\Users\\P
-    \verb atelAL\\Zotero\\storage\\A6FCDVSY\\s12874-017-0381-x.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\LC2CJGCN\\Brock et al. - 2017 - Im
+    \verb plementing the EffTox dose-finding design in the.pdf;C\:\\Users\\Amit
+    \verb \\Zotero\\storage\\A6FCDVSY\\s12874-017-0381-x.html
     \endverb
     \field{journaltitle}{BMC Medical Research Methodology}
     \field{day}{20}
     \field{month}{07}
     \field{year}{2017}
+    \field{urlday}{12}
+    \field{urlmonth}{06}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{zhouUtilitybasedBayesianOptimal2019}{article}{}
@@ -2539,15 +2688,18 @@
     \field{volume}{38}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\IJYBITYV\\Zhou et al. - 2019 -
-    \verb A utility-based Bayesian optimal interval (U-BOIN).pdf;C\:\\Users\\Pa
-    \verb telAL\\Zotero\\storage\\2QCI4CIU\\sim.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\IJYBITYV\\Zhou et al. - 2019 - A u
+    \verb tility-based Bayesian optimal interval (U-BOIN).pdf;C\:\\Users\\Amit\
+    \verb \Zotero\\storage\\2QCI4CIU\\sim.html
     \endverb
     \field{journaltitle}{Statistics in Medicine}
     \field{annotation}{%
     \_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/sim.8361%
     }
     \field{year}{2019}
+    \field{urlday}{12}
+    \field{urlmonth}{06}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{zhangAdaptiveDosefindingDesign2006}{article}{}
@@ -2606,15 +2758,18 @@
     \field{volume}{25}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\5H52J6MB\\Zhang et al. - 2006 -
-    \verb  An adaptive dose-finding design incorporating both.pdf;C\:\\Users\\P
-    \verb atelAL\\Zotero\\storage\\DVYYCPAL\\sim.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\5H52J6MB\\Zhang et al. - 2006 - An
+    \verb  adaptive dose-finding design incorporating both.pdf;C\:\\Users\\Amit
+    \verb \\Zotero\\storage\\DVYYCPAL\\sim.html
     \endverb
     \field{journaltitle}{Statistics in Medicine}
     \field{annotation}{%
     \_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/sim.2325%
     }
     \field{year}{2006}
+    \field{urlday}{12}
+    \field{urlmonth}{06}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{ananthakrishnanExtensionsMTPITEQR2018}{article}{}
@@ -2685,14 +2840,17 @@
     \field{volume}{10}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\IACNGL96\\Ananthakrishnan et al
-    \verb . - 2018 - Extensions of the mTPI and TEQR designs to include.pdf;C\:
-    \verb \\Users\\PatelAL\\Zotero\\storage\\L55S2XJ6\\S2451865417301734.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\IACNGL96\\Ananthakrishnan et al. -
+    \verb  2018 - Extensions of the mTPI and TEQR designs to include.pdf;C\:\\U
+    \verb sers\\Amit\\Zotero\\storage\\L55S2XJ6\\S2451865417301734.html
     \endverb
     \field{journaltitle}{Contemporary Clinical Trials Communications}
     \field{day}{01}
     \field{month}{06}
     \field{year}{2018}
+    \field{urlday}{12}
+    \field{urlmonth}{06}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{jiModifiedToxicityProbability2013}{article}{}
@@ -2760,14 +2918,17 @@
     \endverb
     \field{volume}{31}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\8IGGUNL4\\Ji and Wang - 2013 -
-    \verb Modified Toxicity Probability Interval Design A S.pdf;C\:\\Users\\Pat
-    \verb elAL\\Zotero\\storage\\DYNNZEFB\\JCO.2012.45.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\8IGGUNL4\\Ji and Wang - 2013 - Mod
+    \verb ified Toxicity Probability Interval Design A S.pdf;C\:\\Users\\Amit\\
+    \verb Zotero\\storage\\DYNNZEFB\\JCO.2012.45.html
     \endverb
     \field{journaltitle}{Journal of Clinical Oncology}
     \field{day}{10}
     \field{month}{05}
     \field{year}{2013}
+    \field{urlday}{12}
+    \field{urlmonth}{06}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{blanchardToxicityEquivalenceRange2011}{article}{}
@@ -2829,14 +2990,17 @@
     \field{volume}{32}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\3TCTVRC7\\Blanchard and Longmat
-    \verb e - 2011 - Toxicity equivalence range design (TEQR) A practi.pdf;C\:\
-    \verb \Users\\PatelAL\\Zotero\\storage\\HDLY9TRT\\S1551714410001710.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\3TCTVRC7\\Blanchard and Longmate -
+    \verb  2011 - Toxicity equivalence range design (TEQR) A practi.pdf;C\:\\Us
+    \verb ers\\Amit\\Zotero\\storage\\HDLY9TRT\\S1551714410001710.html
     \endverb
     \field{journaltitle}{Contemporary Clinical Trials}
     \field{day}{01}
     \field{month}{01}
     \field{year}{2011}
+    \field{urlday}{12}
+    \field{urlmonth}{06}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{rivierePhaseIIDosefinding2018}{article}{}
@@ -2918,13 +3082,16 @@
     \field{volume}{27}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\W9X39TWR\\Riviere et al. - 2018
-    \verb  - Phase III dose-finding design for molecularly tar.pdf
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\W9X39TWR\\Riviere et al. - 2018 -
+    \verb Phase III dose-finding design for molecularly tar.pdf
     \endverb
     \field{journaltitle}{Statistical Methods in Medical Research}
     \field{day}{01}
     \field{month}{02}
     \field{year}{2018}
+    \field{urlday}{15}
+    \field{urlmonth}{06}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{wagesSeamlessPhaseII2015}{article}{}
@@ -2978,9 +3145,9 @@
     \endverb
     \field{volume}{25}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\S4BLGANP\\Wages and Tait - 2015
-    \verb  - Seamless Phase III Adaptive Design for Oncology T.pdf;C\:\\Users\\
-    \verb PatelAL\\Zotero\\storage\\HWM37JFA\\10543406.2014.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\S4BLGANP\\Wages and Tait - 2015 -
+    \verb Seamless Phase III Adaptive Design for Oncology T.pdf;C\:\\Users\\Ami
+    \verb t\\Zotero\\storage\\HWM37JFA\\10543406.2014.html
     \endverb
     \field{journaltitle}{Journal of Biopharmaceutical Statistics}
     \field{annotation}{%
@@ -2990,6 +3157,9 @@
     \field{day}{03}
     \field{month}{09}
     \field{year}{2015}
+    \field{urlday}{12}
+    \field{urlmonth}{06}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{brockModularApproachDose2020}{online}{}
@@ -3045,91 +3215,14 @@
     \verb https://CRAN.R-project.org/package=escalation
     \endverb
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\JA2TYVIE\\index.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\JA2TYVIE\\index.html
     \endverb
     \field{day}{18}
     \field{month}{10}
     \field{year}{2020}
-  \endentry
-
-  \entry{yanImprovedAdaptiveRandomization2019}{article}{}
-    \name{author}{3}{}{%
-      {{hash=YD}{%
-         family={Yan},
-         familyi={Y\bibinitperiod},
-         given={Donglin},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=WNA}{%
-         family={Wages},
-         familyi={W\bibinitperiod},
-         given={Nolan\bibnamedelima A.},
-         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=DEV}{%
-         family={Dressler},
-         familyi={D\bibinitperiod},
-         given={Emily\bibnamedelima V.},
-         giveni={E\bibinitperiod\bibinitdelim V\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {{Taylor \& Francis}}%
-    }
-    \keyw{adaptive randomization,continual reassessment method,dose
-  finding,molecularly targeted agent,optimal biological dose,Seamless I/II
-  adaptive design,WT Chapter}
-    \strng{namehash}{YDWNADEV1}
-    \strng{fullhash}{YDWNADEV1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{abstract}{%
-    In this article, we propose and evaluate three alternative randomization
-  strategies to the adaptive randomization (AR) stage used in a seamless Phase
-  I/II dose-finding design. The original design was proposed by Wages and Tait
-  in 2015 for trials of molecularly targeted agents in cancer treatments, where
-  dose-efficacy assumptions are not always monotonically increasing. Our goal
-  is to improve the design’s overall performance regarding the estimation of
-  optimal dose as well as patient allocation to effective treatments. The
-  proposed methods calculate randomization probabilities based on the
-  likelihood of every candidate model as opposed to the original design which
-  selects the best model and then randomizes doses based on estimations from
-  the selected model. Unlike the original method, our proposed adaption does
-  not require an arbitrarily specified sample size for the adaptive
-  randomization stage. Simulations are used to compare the proposed strategies
-  and a final strategy is recommended. Under most scenarios, our recommended
-  method allocates more patients to the optimal dose while improving accuracy
-  in selecting the final optimal dose without increasing the overall risk of
-  toxicity.%
-    }
-    \verb{doi}
-    \verb 10.1080/10543406.2018.1535496
-    \endverb
-    \verb{eprint}
-    \verb 30451068
-    \endverb
-    \field{issn}{1054-3406}
-    \field{number}{2}
-    \field{pages}{333\bibrangedash 347}
-    \field{title}{Improved Adaptive Randomization Strategies for a Seamless
-  {{Phase I}}/{{II}} Dose-Finding Design}
-    \verb{url}
-    \verb https://doi.org/10.1080/10543406.2018.1535496
-    \endverb
-    \field{volume}{29}
-    \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\QLMZQ5KK\\Yan et al. - 2019 - I
-    \verb mproved adaptive randomization strategies for a s.pdf;C\:\\Users\\Pat
-    \verb elAL\\Zotero\\storage\\WYRMCHS9\\10543406.2018.html
-    \endverb
-    \field{journaltitle}{Journal of Biopharmaceutical Statistics}
-    \field{annotation}{%
-    \_eprint: https://doi.org/10.1080/10543406.2018.1535496%
-    }
-    \field{eprinttype}{pmid}
-    \field{day}{04}
-    \field{month}{03}
-    \field{year}{2019}
+    \field{urlday}{14}
+    \field{urlmonth}{06}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{yapDoseTransitionPathways2017}{article}{}
@@ -3218,15 +3311,18 @@
     \field{volume}{23}
     \field{langid}{english}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\BW8KF43M\\Yap et al. - 2017 - D
-    \verb ose Transition Pathways The Missing Link Between.pdf;C\:\\Users\\Pate
-    \verb lAL\\Zotero\\storage\\QY2K4YNY\\7440.full-text.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\BW8KF43M\\Yap et al. - 2017 - Dose
+    \verb  Transition Pathways The Missing Link Between.pdf;C\:\\Users\\Amit\\Z
+    \verb otero\\storage\\QY2K4YNY\\7440.full-text.html
     \endverb
     \field{journaltitle}{Clinical Cancer Research}
     \field{eprinttype}{pmid}
     \field{day}{15}
     \field{month}{12}
     \field{year}{2017}
+    \field{urlday}{01}
+    \field{urlmonth}{10}
+    \field{urlyear}{2021}
   \endentry
 
   \entry{wheelerHowDesignDosefinding2019}{article}{}
@@ -3341,14 +3437,17 @@
     \endverb
     \field{volume}{19}
     \verb{file}
-    \verb C\:\\Users\\PatelAL\\Zotero\\storage\\AN5G5WE2\\Wheeler et al. - 2019
-    \verb  - How to design a dose-finding study using the conti.pdf;C\:\\Users\
-    \verb \PatelAL\\Zotero\\storage\\NG37AACW\\s12874-018-0638-z.html
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\AN5G5WE2\\Wheeler et al. - 2019 -
+    \verb How to design a dose-finding study using the conti.pdf;C\:\\Users\\Am
+    \verb it\\Zotero\\storage\\NG37AACW\\s12874-018-0638-z.html
     \endverb
     \field{journaltitle}{BMC Medical Research Methodology}
     \field{day}{18}
     \field{month}{01}
     \field{year}{2019}
+    \field{urlday}{01}
+    \field{urlmonth}{01}
+    \field{urlyear}{2022}
   \endentry
 
   \entry{cheungDoseFindingContinual2011}{book}{}
