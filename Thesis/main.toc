@@ -47,16 +47,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.4.2}Impact of AR phase size and probability of randomisation to control on RtC-WT}{58}{subsection.81}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Extending Dose Transition Pathways for use in TITE-CRMs}{75}{chapter.86}%
+\contentsline {subsection}{\numberline {3.4.3}Comparison of RtC-WT against Alternative Designs }{74}{subsection.86}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Introduction}{75}{section.87}%
+\contentsline {chapter}{\numberline {4}Extending Dose Transition Pathways for use in TITE-CRMs}{79}{chapter.88}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Dose Transition Pathways}{78}{section.88}%
+\contentsline {section}{\numberline {4.1}Introduction}{79}{section.89}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Example trial to illustrate DTPs}{80}{subsection.89}%
+\contentsline {section}{\numberline {4.2}Dose Transition Pathways}{82}{section.90}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Using DTPs to calibrate the CRM}{81}{subsection.91}%
+\contentsline {subsection}{\numberline {4.2.1}Example trial to illustrate DTPs}{84}{subsection.91}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}DTPs as an analysis tool}{89}{subsection.98}%
+\contentsline {subsection}{\numberline {4.2.2}Using DTPs to calibrate the CRM}{85}{subsection.93}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{91}{chapter*.99}%
+\contentsline {subsection}{\numberline {4.2.3}DTPs as an analysis tool}{93}{subsection.100}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{95}{chapter*.101}%
