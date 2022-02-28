@@ -281,6 +281,7 @@ These are provided for each scenario under the 10 different parameterisations of
 	\centering
 	\caption{Summary of the efficacy and toxicity curves used in each scenario.}
 	\label{tab_wt:sim-scenarios}
+\resizebox{\textwidth}{!}{%
 	\begin{tabular}{cc|ccccc|l|cc}
 		\hline
 		\multicolumn{2}{c|}{\textbf{Scenario}} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{Description} & \textbf{ODB} & \textbf{Good Dose} \\ \hline
@@ -314,7 +315,8 @@ These are provided for each scenario under the 10 different parameterisations of
 		& eff & 0.3 & 0.3 & 0.3 & 0.3 & 0.3 & No Efficacy &  &  \\ \hline
 		\multirow{2}{*}{15} & tox & 0.1 & 0.25 & 0.35 & 0.45 & 0.55 & High doses toxic & \multirow{2}{*}{Stop} & \multirow{2}{*}{Stop/Control} \\
 		& eff & 0.3 & 0.3 & 0.3 & 0.3 & 0.3 & No Efficacy &  &  \\ \hline
-	\end{tabular}
+	\end{tabular}%
+}
 \end{table}
 \newpage
 
@@ -323,7 +325,7 @@ These are provided for each scenario under the 10 different parameterisations of
 
 \begin{longtable}[t]{cccccccccc}
 		
-	\caption[Selection probabilities for multiple combinations of parameters.]{\label{tab_wt:SelectProbCombos}Operating characteristics for multiple combinations of AR phase size and probabilities for randomisation to control. Probability of selecting the OBD or good dose levels, mean number of patients treated at those dose levels and at the control dose after 10000 simulations.}\\
+	\caption[Operating characteristics for multiple combinations of parameters.]{\label{tab_wt:SelectProbCombos}Operating characteristics for multiple combinations of AR phase size and probabilities for randomisation to control. Probability of selecting the OBD or good dose levels, mean number of patients treated at those dose levels and at the control dose after 10000 simulations.}\\
 	\toprule
 	Scenario & $\phi_R$ & $j_R$ & OBD & Good Doses & P(OBD) & P(Good) & N(OBD) & N(Good) & N(Control)\\
 	\midrule
@@ -337,305 +339,305 @@ These are provided for each scenario under the 10 different parameterisations of
 	\endfoot
 	\bottomrule
 	\endlastfoot
-	&  & 0 & 5 & 3-5 & 0.05 & 0.60 & 2.8 & 32.1 & 1.2\\
-	\nopagebreak
-	&  & 15 & 5 & 3-5 & 0.05 & 0.65 & 2.7 & 32 & 3.6\\
-	\nopagebreak
-	&  & 30 & 5 & 3-5 & 0.05 & 0.71 & 2.2 & 31.1 & 6.4\\
-	\nopagebreak
-	&  & 45 & 5 & 3-5 & 0.05 & 0.76 & 1.5 & 27.5 & 9.4\\
-	\nopagebreak
-	& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 5 & 3-5 & 0.04 & 0.80 & 1.1 & 22.9 & 12.4\\
-	\nopagebreak
-	&  & 0 & 5 & 3-5 & 0.05 & 0.60 & 2.8 & 32.1 & 1.2\\
-	\nopagebreak
-	&  & 15 & 5 & 3-5 & 0.07 & 0.67 & 3.1 & 32.6 & 4.9\\
-	\nopagebreak
-	&  & 30 & 5 & 3-5 & 0.06 & 0.75 & 2.2 & 30.4 & 9.8\\
-	\nopagebreak
-	&  & 45 & 5 & 3-5 & 0.05 & 0.79 & 1.3 & 25.5 & 14.7\\
-	\nopagebreak
-	\multirow{-10}{*}{\centering\arraybackslash 1} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 5 & 3-5 & 0.03 & 0.82 & 0.8 & 19.4 & 19.6\\
-	\cmidrule{1-10}\pagebreak[0]
-	&  & 0 & stop & stop/1 & 0.81 & 0.85 & - & 10.1 & 10.1\\
-	\nopagebreak
-	&  & 15 & stop & stop/1 & 0.80 & 0.85 & - & 11 & 11\\
-	\nopagebreak
-	&  & 30 & stop & stop/1 & 0.77 & 0.81 & - & 13.2 & 13.2\\
-	\nopagebreak
-	&  & 45 & stop & stop/1 & 0.72 & 0.75 & - & 15.6 & 15.6\\
-	\nopagebreak
-	& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & stop & stop/1 & 0.41 & 0.50 & - & 17.9 & 17.9\\
-	\nopagebreak
-	&  & 0 & stop & stop/1 & 0.81 & 0.85 & - & 10.1 & 10.1\\
-	\nopagebreak
-	&  & 15 & stop & stop/1 & 0.77 & 0.83 & - & 11.4 & 11.4\\
-	\nopagebreak
-	&  & 30 & stop & stop/1 & 0.75 & 0.79 & - & 14 & 14\\
-	\nopagebreak
-	&  & 45 & stop & stop/1 & 0.67 & 0.70 & - & 17.6 & 17.6\\
-	\nopagebreak
-	\multirow{-10}{*}{\centering\arraybackslash 2} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & stop & stop/1 & 0.38 & 0.42 & - & 20.7 & 20.7\\
-	\cmidrule{1-10}\pagebreak[0]
-	&  & 0 & 3 & 3 & 0.25 & 0.25 & 15.5 & 15.5 & 2.6\\
-	\nopagebreak
-	&  & 15 & 3 & 3 & 0.31 & 0.31 & 16.8 & 16.8 & 4.7\\
-	\nopagebreak
-	&  & 30 & 3 & 3 & 0.35 & 0.35 & 16.8 & 16.8 & 7.5\\
-	\nopagebreak
-	&  & 45 & 3 & 3 & 0.42 & 0.42 & 15.5 & 15.5 & 10.4\\
-	\nopagebreak
-	& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 3 & 3 & 0.48 & 0.48 & 12.7 & 12.7 & 13.3\\
-	\nopagebreak
-	&  & 0 & 3 & 3 & 0.25 & 0.25 & 15.5 & 15.5 & 2.6\\
-	\nopagebreak
-	&  & 15 & 3 & 3 & 0.32 & 0.32 & 0.3 & 17.2 & 5.8\\
-	\nopagebreak
-	&  & 30 & 3 & 3 & 0.39 & 0.39 & 0.3 & 17.3 & 10.4\\
-	\nopagebreak
-	&  & 45 & 3 & 3 & 0.46 & 0.46 & 0.2 & 15.2 & 15.2\\
-	\nopagebreak
-	\multirow{-10}{*}{\centering\arraybackslash 3} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 3 & 3 & 0.52 & 0.52 & 11.5 & 11.5 & 20.1\\
-	\cmidrule{1-10}\pagebreak[0]
-	&  & 0 & 3 & 3-4 & 0.69 & 0.75 & 32.3 & 37.2 & 1.3\\
-	\nopagebreak
-	&  & 15 & 3 & 3-4 & 0.69 & 0.76 & 30.3 & 35.5 & 3.5\\
-	\nopagebreak
-	&  & 30 & 3 & 3-4 & 0.71 & 0.81 & 26.4 & 32.3 & 6.5\\
-	\nopagebreak
-	&  & 45 & 3 & 3-4 & 0.73 & 0.83 & 21.6 & 27.4 & 9.5\\
-	\nopagebreak
-	& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 3 & 3-4 & 0.71 & 0.83 & 16 & 21.7 & 12.4\\
-	\nopagebreak
-	&  & 0 & 3 & 3-4 & 0.69 & 0.75 & 32.3 & 37.2 & 1.3\\
-	\nopagebreak
-	&  & 15 & 3 & 3-4 & 0.69 & 0.77 & 29.5 & 35.1 & 5\\
-	\nopagebreak
-	&  & 30 & 3 & 3-4 & 0.70 & 0.81 & 24.8 & 31 & 9.9\\
-	\nopagebreak
-	&  & 45 & 3 & 3-4 & 0.70 & 0.84 & 19.7 & 25.4 & 14.7\\
-	\nopagebreak
-	\multirow{-10}{*}{\centering\arraybackslash 4} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 3 & 3-4 & 0.68 & 0.83 & 13.7 & 18.5 & 19.5\\
-	\cmidrule{1-10}\pagebreak[0]
-	&  & 0 & stop & stop/1 & 0.81 & 0.86 & - & 10.1 & 10.1\\
-	\nopagebreak
-	&  & 15 & stop & stop/1 & 0.79 & 0.84 & - & 11.1 & 11.1\\
-	\nopagebreak
-	&  & 30 & stop & stop/1 & 0.77 & 0.82 & - & 13.1 & 13.1\\
-	\nopagebreak
-	&  & 45 & stop & stop/1 & 0.71 & 0.75 & - & 15.6 & 15.6\\
-	\nopagebreak
-	& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & stop & stop/1 & 0.41 & 0.49 & - & 17.9 & 17.9\\
-	\nopagebreak
-	&  & 0 & stop & stop/1 & 0.81 & 0.86 & - & 10.1 & 10.1\\
-	\nopagebreak
-	&  & 15 & stop & stop/1 & 0.78 & 0.83 & - & 11.3 & 11.3\\
-	\nopagebreak
-	&  & 30 & stop & stop/1 & 0.75 & 0.78 & - & 14.1 & 14.1\\
-	\nopagebreak
-	&  & 45 & stop & stop/1 & 0.67 & 0.70 & - & 17.6 & 17.6\\
-	\nopagebreak
-	\multirow{-10}{*}{\centering\arraybackslash 5} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & stop & stop/1 & 0.38 & 0.43 & - & 20.8 & 20.8\\
-	\cmidrule{1-10}\pagebreak[0]
-	&  & 0 & 3 & 3 & 0.37 & 0.37 & 21.2 & 21.2 & 2.6\\
-	\nopagebreak
-	&  & 15 & 3 & 3 & 0.41 & 0.41 & 21.3 & 21.3 & 4.5\\
-	\nopagebreak
-	&  & 30 & 3 & 3 & 0.45 & 0.45 & 19.6 & 19.6 & 7.5\\
-	\nopagebreak
-	&  & 45 & 3 & 3 & 0.50 & 0.50 & 17.1 & 17.1 & 10.4\\
-	\nopagebreak
-	& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 3 & 3 & 0.54 & 0.54 & 12.8 & 12.8 & 13.4\\
-	\nopagebreak
-	&  & 0 & 3 & 3 & 0.37 & 0.37 & 21.2 & 21.2 & 2.6\\
-	\nopagebreak
-	&  & 15 & 3 & 3 & 0.42 & 0.42 & 0.1 & 21.4 & 5.8\\
-	\nopagebreak
-	&  & 30 & 3 & 3 & 0.50 & 0.50 & 0.2 & 20.3 & 10.4\\
-	\nopagebreak
-	&  & 45 & 3 & 3 & 0.55 & 0.55 & 0.2 & 16.6 & 15.1\\
-	\nopagebreak
-	\multirow{-10}{*}{\centering\arraybackslash 6} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 3 & 3 & 0.59 & 0.59 & 11.5 & 11.5 & 20.1\\
-	\cmidrule{1-10}\pagebreak[0]
-	&  & 0 & 3 & 3-5 & 0.48 & 0.70 & 23.9 & 35.6 & 1.3\\
-	\nopagebreak
-	&  & 15 & 3 & 3-5 & 0.50 & 0.73 & 23.7 & 35 & 3.5\\
-	\nopagebreak
-	&  & 30 & 3 & 3-5 & 0.52 & 0.78 & 21.8 & 32.4 & 6.4\\
-	\nopagebreak
-	&  & 45 & 3 & 3-5 & 0.56 & 0.81 & 19.3 & 27.9 & 9.4\\
-	\nopagebreak
-	& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 3 & 3-5 & 0.57 & 0.82 & 15.8 & 22.5 & 12.5\\
-	\nopagebreak
-	&  & 0 & 3 & 3-5 & 0.48 & 0.70 & 23.9 & 35.6 & 1.3\\
-	\nopagebreak
-	&  & 15 & 3 & 3-5 & 0.49 & 0.75 & 22.7 & 35.1 & 5\\
-	\nopagebreak
-	&  & 30 & 3 & 3-5 & 0.51 & 0.80 & 20.8 & 31.6 & 9.7\\
-	\nopagebreak
-	&  & 45 & 3 & 3-5 & 0.55 & 0.84 & 17.7 & 26 & 14.7\\
-	\nopagebreak
-	\multirow{-10}{*}{\centering\arraybackslash 7} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 3 & 3-5 & 0.56 & 0.84 & 13.7 & 19.6 & 19.5\\
-	\cmidrule{1-10}\pagebreak[0]
-	&  & 0 & stop & stop/1 & 0.81 & 0.85 & - & 10.2 & 10.2\\
-	\nopagebreak
-	&  & 15 & stop & stop/1 & 0.79 & 0.84 & - & 11.1 & 11.1\\
-	\nopagebreak
-	&  & 30 & stop & stop/1 & 0.77 & 0.81 & - & 13.2 & 13.2\\
-	\nopagebreak
-	&  & 45 & stop & stop/1 & 0.71 & 0.76 & - & 15.6 & 15.6\\
-	\nopagebreak
-	& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & stop & stop/1 & 0.41 & 0.50 & - & 17.9 & 17.9\\
-	\nopagebreak
-	&  & 0 & stop & stop/1 & 0.81 & 0.85 & - & 10.2 & 10.2\\
-	\nopagebreak
-	&  & 15 & stop & stop/1 & 0.78 & 0.82 & - & 11.3 & 11.3\\
-	\nopagebreak
-	&  & 30 & stop & stop/1 & 0.75 & 0.79 & - & 14 & 14\\
-	\nopagebreak
-	&  & 45 & stop & stop/1 & 0.69 & 0.71 & - & 17.4 & 17.4\\
-	\nopagebreak
-	\multirow{-10}{*}{\centering\arraybackslash 8} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & stop & stop/1 & 0.38 & 0.43 & - & 20.8 & 20.8\\
-	\cmidrule{1-10}\pagebreak[0]
-	&  & 0 & 3 & 3 & 0.34 & 0.34 & 18.6 & 18.6 & 2.6\\
-	\nopagebreak
-	&  & 15 & 3 & 3 & 0.36 & 0.36 & 19.2 & 19.2 & 4.6\\
-	\nopagebreak
-	&  & 30 & 3 & 3 & 0.42 & 0.42 & 18.3 & 18.3 & 7.5\\
-	\nopagebreak
-	&  & 45 & 3 & 3 & 0.45 & 0.45 & 16.3 & 16.3 & 10.3\\
-	\nopagebreak
-	& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 3 & 3 & 0.50 & 0.50 & 12.9 & 12.9 & 13.3\\
-	\nopagebreak
-	&  & 0 & 3 & 3 & 0.34 & 0.34 & 18.6 & 18.6 & 2.6\\
-	\nopagebreak
-	&  & 15 & 3 & 3 & 0.38 & 0.38 & 0.2 & 19.7 & 5.9\\
-	\nopagebreak
-	&  & 30 & 3 & 3 & 0.45 & 0.45 & 0.2 & 18.6 & 10.4\\
-	\nopagebreak
-	&  & 45 & 3 & 3 & 0.52 & 0.52 & 0.2 & 15.9 & 15.2\\
-	\nopagebreak
-	\multirow{-10}{*}{\centering\arraybackslash 9} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 3 & 3 & 0.56 & 0.56 & 11.5 & 11.5 & 20.1\\
-	\cmidrule{1-10}\pagebreak[0]
-	&  & 0 & 2 & 2-4 & 0.77 & 0.97 & 45.1 & 57.1 & 1.3\\
-	\nopagebreak
-	&  & 15 & 2 & 2-4 & 0.79 & 0.97 & 41.8 & 55.3 & 3.5\\
-	\nopagebreak
-	&  & 30 & 2 & 2-4 & 0.79 & 0.98 & 37.2 & 52.5 & 6.5\\
-	\nopagebreak
-	&  & 45 & 2 & 2-4 & 0.79 & 0.99 & 32.2 & 49.6 & 9.4\\
-	\nopagebreak
-	& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 2 & 2-4 & 0.80 & 0.99 & 26.4 & 46.4 & 12.3\\
-	\nopagebreak
-	&  & 0 & 2 & 2-4 & 0.77 & 0.97 & 45.1 & 57.1 & 1.3\\
-	\nopagebreak
-	&  & 15 & 2 & 2-4 & 0.77 & 0.97 & 40.1 & 53.6 & 5\\
-	\nopagebreak
-	&  & 30 & 2 & 2-4 & 0.76 & 0.98 & 34.6 & 49.1 & 9.8\\
-	\nopagebreak
-	&  & 45 & 2 & 2-4 & 0.76 & 0.99 & 28.4 & 44.3 & 14.7\\
-	\nopagebreak
-	\multirow{-10}{*}{\centering\arraybackslash 10} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 2 & 2-4 & 0.78 & 0.99 & 22.3 & 39.2 & 19.6\\
-	\cmidrule{1-10}\pagebreak[0]
-	&  & 0 & stop & stop/1 & 0.65 & 0.74 & - & 11.7 & 11.7\\
-	\nopagebreak
-	&  & 15 & stop & stop/1 & 0.65 & 0.72 & - & 12.3 & 12.3\\
-	\nopagebreak
-	&  & 30 & stop & stop/1 & 0.62 & 0.69 & - & 13.8 & 13.8\\
-	\nopagebreak
-	&  & 45 & stop & stop/1 & 0.57 & 0.63 & - & 15.7 & 15.7\\
-	\nopagebreak
-	& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & stop & stop/1 & 0.41 & 0.49 & - & 17.9 & 17.9\\
-	\nopagebreak
-	&  & 0 & stop & stop/1 & 0.65 & 0.74 & - & 11.7 & 11.7\\
-	\nopagebreak
-	&  & 15 & stop & stop/1 & 0.64 & 0.72 & - & 12.5 & 12.5\\
-	\nopagebreak
-	&  & 30 & stop & stop/1 & 0.60 & 0.67 & - & 14.7 & 14.7\\
-	\nopagebreak
-	&  & 45 & stop & stop/1 & 0.52 & 0.56 & - & 17.7 & 17.7\\
-	\nopagebreak
-	\multirow{-10}{*}{\centering\arraybackslash 11} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & stop & stop/1 & 0.38 & 0.42 & - & 20.9 & 20.9\\
-	\cmidrule{1-10}\pagebreak[0]
-	&  & 0 & 2 & 2-3 & 0.83 & 0.92 & 47.3 & 53.7 & 2.7\\
-	\nopagebreak
-	&  & 15 & 2 & 2-3 & 0.83 & 0.93 & 43.6 & 51.8 & 4.7\\
-	\nopagebreak
-	&  & 30 & 2 & 2-3 & 0.82 & 0.95 & 39.7 & 49.3 & 7.4\\
-	\nopagebreak
-	&  & 45 & 2 & 2-3 & 0.84 & 0.96 & 35.9 & 46.4 & 10.4\\
-	\nopagebreak
-	& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 2 & 2-3 & 0.85 & 0.97 & 31.7 & 43.5 & 13.2\\
-	\nopagebreak
-	&  & 0 & 2 & 2-3 & 0.83 & 0.92 & 47.3 & 53.7 & 2.7\\
-	\nopagebreak
-	&  & 15 & 2 & 2-3 & 0.81 & 0.94 & 41.9 & 50.7 & 5.9\\
-	\nopagebreak
-	&  & 30 & 2 & 2-3 & 0.80 & 0.95 & 36.6 & 46.3 & 10.4\\
-	\nopagebreak
-	&  & 45 & 2 & 2-3 & 0.81 & 0.96 & 31.7 & 41.8 & 15.3\\
-	\nopagebreak
-	\multirow{-10}{*}{\centering\arraybackslash 12} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 2 & 2-3 & 0.82 & 0.97 & 26 & 36.8 & 20\\
-	\cmidrule{1-10}\pagebreak[0]
-	&  & 0 & stop & stop/1 & 0.82 & 0.82 & - & 1.2 & 1.2\\
-	\nopagebreak
-	&  & 15 & stop & stop/1 & 0.78 & 0.78 & - & 3.5 & 3.5\\
-	\nopagebreak
-	&  & 30 & stop & stop/1 & 0.70 & 0.70 & - & 6.5 & 6.5\\
-	\nopagebreak
-	&  & 45 & stop & stop/1 & 0.57 & 0.57 & - & 9.5 & 9.5\\
-	\nopagebreak
-	& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & stop & stop/1 & 0.01 & 0.01 & - & 12.4 & 12.4\\
-	\nopagebreak
-	&  & 0 & stop & stop/1 & 0.82 & 0.82 & - & 1.2 & 1.2\\
-	\nopagebreak
-	&  & 15 & stop & stop/1 & 0.76 & 0.76 & - & 4.9 & 4.9\\
-	\nopagebreak
-	&  & 30 & stop & stop/1 & 0.68 & 0.68 & - & 9.7 & 9.7\\
-	\nopagebreak
-	&  & 45 & stop & stop/1 & 0.54 & 0.54 & - & 14.7 & 14.7\\
-	\nopagebreak
-	\multirow{-10}{*}{\centering\arraybackslash 13} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & stop & stop/1 & 0.01 & 0.01 & - & 19.6 & 19.6\\
-	\cmidrule{1-10}\pagebreak[0]
-	&  & 0 & stop & stop/1 & 0.96 & 0.97 & - & 8.3 & 8.3\\
-	\nopagebreak
-	&  & 15 & stop & stop/1 & 0.95 & 0.96 & - & 9.6 & 9.6\\
-	\nopagebreak
-	&  & 30 & stop & stop/1 & 0.94 & 0.95 & - & 12.4 & 12.4\\
-	\nopagebreak
-	&  & 45 & stop & stop/1 & 0.92 & 0.93 & - & 15.5 & 15.5\\
-	\nopagebreak
-	& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & stop & stop/1 & 0.42 & 0.50 & - & 17.7 & 17.7\\
-	\nopagebreak
-	&  & 0 & stop & stop/1 & 0.96 & 0.97 & - & 8.3 & 8.3\\
-	\nopagebreak
-	&  & 15 & stop & stop/1 & 0.95 & 0.96 & - & 9.9 & 9.9\\
-	\nopagebreak
-	&  & 30 & stop & stop/1 & 0.93 & 0.94 & - & 13.5 & 13.5\\
-	\nopagebreak
-	&  & 45 & stop & stop/1 & 0.89 & 0.90 & - & 17.3 & 17.3\\
-	\nopagebreak
-	\multirow{-10}{*}{\centering\arraybackslash 14} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & stop & stop/1 & 0.38 & 0.43 & - & 20.8 & 20.8\\
-	\cmidrule{1-10}\pagebreak[0]
-	&  & 0 & stop & stop/1 & 0.89 & 0.89 & - & 2.3 & 2.3\\
-	\nopagebreak
-	&  & 15 & stop & stop/1 & 0.87 & 0.87 & - & 4.5 & 4.5\\
-	\nopagebreak
-	&  & 30 & stop & stop/1 & 0.82 & 0.82 & - & 7.3 & 7.3\\
-	\nopagebreak
-	&  & 45 & stop & stop/1 & 0.73 & 0.73 & - & 10.4 & 10.4\\
-	\nopagebreak
-	& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & stop & stop/1 & 0.02 & 0.03 & - & 13.4 & 13.4\\
-	\nopagebreak
-	&  & 0 & stop & stop/1 & 0.89 & 0.89 & - & 2.3 & 2.3\\
-	\nopagebreak
-	&  & 15 & stop & stop/1 & 0.86 & 0.86 & - & 5.7 & 5.7\\
-	\nopagebreak
-	&  & 30 & stop & stop/1 & 0.80 & 0.80 & - & 10.3 & 10.3\\
-	\nopagebreak
-	&  & 45 & stop & stop/1 & 0.69 & 0.70 & - & 15.2 & 15.2\\
-	\nopagebreak
-	\multirow{-10}{*}{\centering\arraybackslash 15} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & stop & stop/1 & 0.02 & 0.03 & - & 20.1 & 20.1\\*
+ &  & 0 & 5 & 3-5 & 0.05 & 0.60 & 2.8 & 32.1 & 1.2\\
+\nopagebreak
+&  & 15 & 5 & 3-5 & 0.05 & 0.65 & 2.7 & 32 & 3.6\\
+\nopagebreak
+&  & 30 & 5 & 3-5 & 0.05 & 0.71 & 2.2 & 31.1 & 6.4\\
+\nopagebreak
+&  & 45 & 5 & 3-5 & 0.05 & 0.76 & 1.5 & 27.5 & 9.4\\
+\nopagebreak
+& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 5 & 3-5 & 0.04 & 0.80 & 1.1 & 22.9 & 12.4\\
+\nopagebreak
+&  & 0 & 5 & 3-5 & 0.05 & 0.60 & 2.8 & 32.1 & 1.2\\
+\nopagebreak
+&  & 15 & 5 & 3-5 & 0.07 & 0.67 & 3.1 & 32.6 & 4.9\\
+\nopagebreak
+&  & 30 & 5 & 3-5 & 0.06 & 0.75 & 2.2 & 30.4 & 9.8\\
+\nopagebreak
+&  & 45 & 5 & 3-5 & 0.05 & 0.79 & 1.3 & 25.5 & 14.7\\
+\nopagebreak
+\multirow{-10}{*}{\centering\arraybackslash 1} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 5 & 3-5 & 0.03 & 0.82 & 0.8 & 19.4 & 19.6\\
+\cmidrule{1-10}\pagebreak[0]
+&  & 0 & stop & stop/1 & 0.81 & 0.85 & - & 10.1 & 10.1\\
+\nopagebreak
+&  & 15 & stop & stop/1 & 0.80 & 0.85 & - & 11 & 11\\
+\nopagebreak
+&  & 30 & stop & stop/1 & 0.77 & 0.81 & - & 13.2 & 13.2\\
+\nopagebreak
+&  & 45 & stop & stop/1 & 0.72 & 0.75 & - & 15.6 & 15.6\\
+\nopagebreak
+& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & stop & stop/1 & 0.41 & 0.50 & - & 17.9 & 17.9\\
+\nopagebreak
+&  & 0 & stop & stop/1 & 0.81 & 0.85 & - & 10.1 & 10.1\\
+\nopagebreak
+&  & 15 & stop & stop/1 & 0.77 & 0.83 & - & 11.4 & 11.4\\
+\nopagebreak
+&  & 30 & stop & stop/1 & 0.75 & 0.79 & - & 14 & 14\\
+\nopagebreak
+&  & 45 & stop & stop/1 & 0.67 & 0.70 & - & 17.6 & 17.6\\
+\nopagebreak
+\multirow{-10}{*}{\centering\arraybackslash 2} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & stop & stop/1 & 0.38 & 0.42 & - & 20.7 & 20.7\\
+\cmidrule{1-10}\pagebreak[0]
+&  & 0 & 3 & 3 & 0.25 & 0.25 & 15.5 & 15.5 & 2.6\\
+\nopagebreak
+&  & 15 & 3 & 3 & 0.31 & 0.31 & 16.8 & 16.8 & 4.7\\
+\nopagebreak
+&  & 30 & 3 & 3 & 0.35 & 0.35 & 16.8 & 16.8 & 7.5\\
+\nopagebreak
+&  & 45 & 3 & 3 & 0.42 & 0.42 & 15.5 & 15.5 & 10.4\\
+\nopagebreak
+& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 3 & 3 & 0.48 & 0.48 & 12.7 & 12.7 & 13.3\\
+\nopagebreak
+&  & 0 & 3 & 3 & 0.25 & 0.25 & 15.5 & 15.5 & 2.6\\
+\nopagebreak
+&  & 15 & 3 & 3 & 0.32 & 0.32 & 17.2 & 17.2 & 5.8\\
+\nopagebreak
+&  & 30 & 3 & 3 & 0.39 & 0.39 & 17.3 & 17.3 & 10.4\\
+\nopagebreak
+&  & 45 & 3 & 3 & 0.46 & 0.46 & 15.2 & 15.2 & 15.2\\
+\nopagebreak
+\multirow{-10}{*}{\centering\arraybackslash 3} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 3 & 3 & 0.52 & 0.52 & 11.5 & 11.5 & 20.1\\
+\cmidrule{1-10}\pagebreak[0]
+&  & 0 & 3 & 3-4 & 0.69 & 0.75 & 32.3 & 37.2 & 1.3\\
+\nopagebreak
+&  & 15 & 3 & 3-4 & 0.69 & 0.76 & 30.3 & 35.5 & 3.5\\
+\nopagebreak
+&  & 30 & 3 & 3-4 & 0.71 & 0.81 & 26.4 & 32.3 & 6.5\\
+\nopagebreak
+&  & 45 & 3 & 3-4 & 0.73 & 0.83 & 21.6 & 27.4 & 9.5\\
+\nopagebreak
+& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 3 & 3-4 & 0.71 & 0.83 & 16 & 21.7 & 12.4\\
+\nopagebreak
+&  & 0 & 3 & 3-4 & 0.69 & 0.75 & 32.3 & 37.2 & 1.3\\
+\nopagebreak
+&  & 15 & 3 & 3-4 & 0.69 & 0.77 & 29.5 & 35.1 & 5\\
+\nopagebreak
+&  & 30 & 3 & 3-4 & 0.70 & 0.81 & 24.8 & 31 & 9.9\\
+\nopagebreak
+&  & 45 & 3 & 3-4 & 0.70 & 0.84 & 19.7 & 25.4 & 14.7\\
+\nopagebreak
+\multirow{-10}{*}{\centering\arraybackslash 4} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 3 & 3-4 & 0.68 & 0.83 & 13.7 & 18.5 & 19.5\\
+\cmidrule{1-10}\pagebreak[0]
+&  & 0 & stop & stop/1 & 0.81 & 0.86 & - & 10.1 & 10.1\\
+\nopagebreak
+&  & 15 & stop & stop/1 & 0.79 & 0.84 & - & 11.1 & 11.1\\
+\nopagebreak
+&  & 30 & stop & stop/1 & 0.77 & 0.82 & - & 13.1 & 13.1\\
+\nopagebreak
+&  & 45 & stop & stop/1 & 0.71 & 0.75 & - & 15.6 & 15.6\\
+\nopagebreak
+& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & stop & stop/1 & 0.41 & 0.49 & - & 17.9 & 17.9\\
+\nopagebreak
+&  & 0 & stop & stop/1 & 0.81 & 0.86 & - & 10.1 & 10.1\\
+\nopagebreak
+&  & 15 & stop & stop/1 & 0.78 & 0.83 & - & 11.3 & 11.3\\
+\nopagebreak
+&  & 30 & stop & stop/1 & 0.75 & 0.78 & - & 14.1 & 14.1\\
+\nopagebreak
+&  & 45 & stop & stop/1 & 0.67 & 0.70 & - & 17.6 & 17.6\\
+\nopagebreak
+\multirow{-10}{*}{\centering\arraybackslash 5} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & stop & stop/1 & 0.38 & 0.43 & - & 20.8 & 20.8\\
+\cmidrule{1-10}\pagebreak[0]
+&  & 0 & 3 & 3 & 0.37 & 0.37 & 21.2 & 21.2 & 2.6\\
+\nopagebreak
+&  & 15 & 3 & 3 & 0.41 & 0.41 & 21.3 & 21.3 & 4.5\\
+\nopagebreak
+&  & 30 & 3 & 3 & 0.45 & 0.45 & 19.6 & 19.6 & 7.5\\
+\nopagebreak
+&  & 45 & 3 & 3 & 0.50 & 0.50 & 17.1 & 17.1 & 10.4\\
+\nopagebreak
+& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 3 & 3 & 0.54 & 0.54 & 12.8 & 12.8 & 13.4\\
+\nopagebreak
+&  & 0 & 3 & 3 & 0.37 & 0.37 & 21.2 & 21.2 & 2.6\\
+\nopagebreak
+&  & 15 & 3 & 3 & 0.42 & 0.42 & 21.4 & 21.4 & 5.8\\
+\nopagebreak
+&  & 30 & 3 & 3 & 0.50 & 0.50 & 20.3 & 20.3 & 10.4\\
+\nopagebreak
+&  & 45 & 3 & 3 & 0.55 & 0.55 & 16.6 & 16.6 & 15.1\\
+\nopagebreak
+\multirow{-10}{*}{\centering\arraybackslash 6} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 3 & 3 & 0.59 & 0.59 & 11.5 & 11.5 & 20.1\\
+\cmidrule{1-10}\pagebreak[0]
+&  & 0 & 3 & 3-5 & 0.48 & 0.70 & 23.9 & 35.6 & 1.3\\
+\nopagebreak
+&  & 15 & 3 & 3-5 & 0.50 & 0.73 & 23.7 & 35 & 3.5\\
+\nopagebreak
+&  & 30 & 3 & 3-5 & 0.52 & 0.78 & 21.8 & 32.4 & 6.4\\
+\nopagebreak
+&  & 45 & 3 & 3-5 & 0.56 & 0.81 & 19.3 & 27.9 & 9.4\\
+\nopagebreak
+& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 3 & 3-5 & 0.57 & 0.82 & 15.8 & 22.5 & 12.5\\
+\nopagebreak
+&  & 0 & 3 & 3-5 & 0.48 & 0.70 & 23.9 & 35.6 & 1.3\\
+\nopagebreak
+&  & 15 & 3 & 3-5 & 0.49 & 0.75 & 22.7 & 35.1 & 5\\
+\nopagebreak
+&  & 30 & 3 & 3-5 & 0.51 & 0.80 & 20.8 & 31.6 & 9.7\\
+\nopagebreak
+&  & 45 & 3 & 3-5 & 0.55 & 0.84 & 17.7 & 26 & 14.7\\
+\nopagebreak
+\multirow{-10}{*}{\centering\arraybackslash 7} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 3 & 3-5 & 0.56 & 0.84 & 13.7 & 19.6 & 19.5\\
+\cmidrule{1-10}\pagebreak[0]
+&  & 0 & stop & stop/1 & 0.81 & 0.85 & - & 10.2 & 10.2\\
+\nopagebreak
+&  & 15 & stop & stop/1 & 0.79 & 0.84 & - & 11.1 & 11.1\\
+\nopagebreak
+&  & 30 & stop & stop/1 & 0.77 & 0.81 & - & 13.2 & 13.2\\
+\nopagebreak
+&  & 45 & stop & stop/1 & 0.71 & 0.76 & - & 15.6 & 15.6\\
+\nopagebreak
+& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & stop & stop/1 & 0.41 & 0.50 & - & 17.9 & 17.9\\
+\nopagebreak
+&  & 0 & stop & stop/1 & 0.81 & 0.85 & - & 10.2 & 10.2\\
+\nopagebreak
+&  & 15 & stop & stop/1 & 0.78 & 0.82 & - & 11.3 & 11.3\\
+\nopagebreak
+&  & 30 & stop & stop/1 & 0.75 & 0.79 & - & 14 & 14\\
+\nopagebreak
+&  & 45 & stop & stop/1 & 0.69 & 0.71 & - & 17.4 & 17.4\\
+\nopagebreak
+\multirow{-10}{*}{\centering\arraybackslash 8} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & stop & stop/1 & 0.38 & 0.43 & - & 20.8 & 20.8\\
+\cmidrule{1-10}\pagebreak[0]
+&  & 0 & 3 & 3 & 0.34 & 0.34 & 18.6 & 18.6 & 2.6\\
+\nopagebreak
+&  & 15 & 3 & 3 & 0.36 & 0.36 & 19.2 & 19.2 & 4.6\\
+\nopagebreak
+&  & 30 & 3 & 3 & 0.42 & 0.42 & 18.3 & 18.3 & 7.5\\
+\nopagebreak
+&  & 45 & 3 & 3 & 0.45 & 0.45 & 16.3 & 16.3 & 10.3\\
+\nopagebreak
+& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 3 & 3 & 0.50 & 0.50 & 12.9 & 12.9 & 13.3\\
+\nopagebreak
+&  & 0 & 3 & 3 & 0.34 & 0.34 & 18.6 & 18.6 & 2.6\\
+\nopagebreak
+&  & 15 & 3 & 3 & 0.38 & 0.38 & 19.7 & 19.7 & 5.9\\
+\nopagebreak
+&  & 30 & 3 & 3 & 0.45 & 0.45 & 18.6 & 18.6 & 10.4\\
+\nopagebreak
+&  & 45 & 3 & 3 & 0.52 & 0.52 & 15.9 & 15.9 & 15.2\\
+\nopagebreak
+\multirow{-10}{*}{\centering\arraybackslash 9} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 3 & 3 & 0.56 & 0.56 & 11.5 & 11.5 & 20.1\\
+\cmidrule{1-10}\pagebreak[0]
+&  & 0 & 2 & 2-4 & 0.77 & 0.97 & 45.1 & 57.1 & 1.3\\
+\nopagebreak
+&  & 15 & 2 & 2-4 & 0.79 & 0.97 & 41.8 & 55.3 & 3.5\\
+\nopagebreak
+&  & 30 & 2 & 2-4 & 0.79 & 0.98 & 37.2 & 52.5 & 6.5\\
+\nopagebreak
+&  & 45 & 2 & 2-4 & 0.79 & 0.99 & 32.2 & 49.6 & 9.4\\
+\nopagebreak
+& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 2 & 2-4 & 0.80 & 0.99 & 26.4 & 46.4 & 12.3\\
+\nopagebreak
+&  & 0 & 2 & 2-4 & 0.77 & 0.97 & 45.1 & 57.1 & 1.3\\
+\nopagebreak
+&  & 15 & 2 & 2-4 & 0.77 & 0.97 & 40.1 & 53.6 & 5\\
+\nopagebreak
+&  & 30 & 2 & 2-4 & 0.76 & 0.98 & 34.6 & 49.1 & 9.8\\
+\nopagebreak
+&  & 45 & 2 & 2-4 & 0.76 & 0.99 & 28.4 & 44.3 & 14.7\\
+\nopagebreak
+\multirow{-10}{*}{\centering\arraybackslash 10} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 2 & 2-4 & 0.78 & 0.99 & 22.3 & 39.2 & 19.6\\
+\cmidrule{1-10}\pagebreak[0]
+&  & 0 & stop & stop/1 & 0.65 & 0.74 & - & 11.7 & 11.7\\
+\nopagebreak
+&  & 15 & stop & stop/1 & 0.65 & 0.72 & - & 12.3 & 12.3\\
+\nopagebreak
+&  & 30 & stop & stop/1 & 0.62 & 0.69 & - & 13.8 & 13.8\\
+\nopagebreak
+&  & 45 & stop & stop/1 & 0.57 & 0.63 & - & 15.7 & 15.7\\
+\nopagebreak
+& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & stop & stop/1 & 0.41 & 0.49 & - & 17.9 & 17.9\\
+\nopagebreak
+&  & 0 & stop & stop/1 & 0.65 & 0.74 & - & 11.7 & 11.7\\
+\nopagebreak
+&  & 15 & stop & stop/1 & 0.64 & 0.72 & - & 12.5 & 12.5\\
+\nopagebreak
+&  & 30 & stop & stop/1 & 0.60 & 0.67 & - & 14.7 & 14.7\\
+\nopagebreak
+&  & 45 & stop & stop/1 & 0.52 & 0.56 & - & 17.7 & 17.7\\
+\nopagebreak
+\multirow{-10}{*}{\centering\arraybackslash 11} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & stop & stop/1 & 0.38 & 0.42 & - & 20.9 & 20.9\\
+\cmidrule{1-10}\pagebreak[0]
+&  & 0 & 2 & 2-3 & 0.83 & 0.92 & 47.3 & 53.7 & 2.7\\
+\nopagebreak
+&  & 15 & 2 & 2-3 & 0.83 & 0.93 & 43.6 & 51.8 & 4.7\\
+\nopagebreak
+&  & 30 & 2 & 2-3 & 0.82 & 0.95 & 39.7 & 49.3 & 7.4\\
+\nopagebreak
+&  & 45 & 2 & 2-3 & 0.84 & 0.96 & 35.9 & 46.4 & 10.4\\
+\nopagebreak
+& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & 2 & 2-3 & 0.85 & 0.97 & 31.7 & 43.5 & 13.2\\
+\nopagebreak
+&  & 0 & 2 & 2-3 & 0.83 & 0.92 & 47.3 & 53.7 & 2.7\\
+\nopagebreak
+&  & 15 & 2 & 2-3 & 0.81 & 0.94 & 41.9 & 50.7 & 5.9\\
+\nopagebreak
+&  & 30 & 2 & 2-3 & 0.80 & 0.95 & 36.6 & 46.3 & 10.4\\
+\nopagebreak
+&  & 45 & 2 & 2-3 & 0.81 & 0.96 & 31.7 & 41.8 & 15.3\\
+\nopagebreak
+\multirow{-10}{*}{\centering\arraybackslash 12} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 2 & 2-3 & 0.82 & 0.97 & 26 & 36.8 & 20\\
+\cmidrule{1-10}\pagebreak[0]
+&  & 0 & stop & stop/1 & 0.82 & 0.82 & - & 1.2 & 1.2\\
+\nopagebreak
+&  & 15 & stop & stop/1 & 0.78 & 0.78 & - & 3.5 & 3.5\\
+\nopagebreak
+&  & 30 & stop & stop/1 & 0.70 & 0.70 & - & 6.5 & 6.5\\
+\nopagebreak
+&  & 45 & stop & stop/1 & 0.57 & 0.57 & - & 9.5 & 9.5\\
+\nopagebreak
+& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & stop & stop/1 & 0.01 & 0.01 & - & 12.4 & 12.4\\
+\nopagebreak
+&  & 0 & stop & stop/1 & 0.82 & 0.82 & - & 1.2 & 1.2\\
+\nopagebreak
+&  & 15 & stop & stop/1 & 0.76 & 0.76 & - & 4.9 & 4.9\\
+\nopagebreak
+&  & 30 & stop & stop/1 & 0.68 & 0.68 & - & 9.7 & 9.7\\
+\nopagebreak
+&  & 45 & stop & stop/1 & 0.54 & 0.54 & - & 14.7 & 14.7\\
+\nopagebreak
+\multirow{-10}{*}{\centering\arraybackslash 13} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & stop & stop/1 & 0.01 & 0.01 & - & 19.6 & 19.6\\
+\cmidrule{1-10}\pagebreak[0]
+&  & 0 & stop & stop/1 & 0.96 & 0.97 & - & 8.3 & 8.3\\
+\nopagebreak
+&  & 15 & stop & stop/1 & 0.95 & 0.96 & - & 9.6 & 9.6\\
+\nopagebreak
+&  & 30 & stop & stop/1 & 0.94 & 0.95 & - & 12.4 & 12.4\\
+\nopagebreak
+&  & 45 & stop & stop/1 & 0.92 & 0.93 & - & 15.5 & 15.5\\
+\nopagebreak
+& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & stop & stop/1 & 0.42 & 0.50 & - & 17.7 & 17.7\\
+\nopagebreak
+&  & 0 & stop & stop/1 & 0.96 & 0.97 & - & 8.3 & 8.3\\
+\nopagebreak
+&  & 15 & stop & stop/1 & 0.95 & 0.96 & - & 9.9 & 9.9\\
+\nopagebreak
+&  & 30 & stop & stop/1 & 0.93 & 0.94 & - & 13.5 & 13.5\\
+\nopagebreak
+&  & 45 & stop & stop/1 & 0.89 & 0.90 & - & 17.3 & 17.3\\
+\nopagebreak
+\multirow{-10}{*}{\centering\arraybackslash 14} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & stop & stop/1 & 0.38 & 0.43 & - & 20.8 & 20.8\\
+\cmidrule{1-10}\pagebreak[0]
+&  & 0 & stop & stop/1 & 0.89 & 0.89 & - & 2.3 & 2.3\\
+\nopagebreak
+&  & 15 & stop & stop/1 & 0.87 & 0.87 & - & 4.5 & 4.5\\
+\nopagebreak
+&  & 30 & stop & stop/1 & 0.82 & 0.82 & - & 7.3 & 7.3\\
+\nopagebreak
+&  & 45 & stop & stop/1 & 0.73 & 0.73 & - & 10.4 & 10.4\\
+\nopagebreak
+& \multirow{-5}{*}{\centering\arraybackslash 0.2} & 60 & stop & stop/1 & 0.02 & 0.03 & - & 13.4 & 13.4\\
+\nopagebreak
+&  & 0 & stop & stop/1 & 0.89 & 0.89 & - & 2.3 & 2.3\\
+\nopagebreak
+&  & 15 & stop & stop/1 & 0.86 & 0.86 & - & 5.7 & 5.7\\
+\nopagebreak
+&  & 30 & stop & stop/1 & 0.80 & 0.80 & - & 10.3 & 10.3\\
+\nopagebreak
+&  & 45 & stop & stop/1 & 0.69 & 0.70 & - & 15.2 & 15.2\\
+\nopagebreak
+\multirow{-10}{*}{\centering\arraybackslash 15} & \multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & stop & stop/1 & 0.02 & 0.03 & - & 20.1 & 20.1\\*
 \end{longtable}
 \endgroup{}
 
@@ -663,77 +665,65 @@ Typically, the scenarios where the higher doses are more toxic have been the mos
 
 Finally the last efficacy curve we look at is one where no efficacy is apparent, so efficacy stays at the same level as the control dose. Ideally in all these scenarios (13-15) we would stop for lack of efficacy. One thing to point out is that the rule for stopping for futility only triggers in the maximisation phase. So, for the designs where $j_R$ = 60 stopping for lack of efficacy will not occur. For scenario 13 we have doses which are all tolerable and can see stopping probabilities ranging from 54\% to 82\%. The only reason to stop in this scenario is for lack of efficacy and so those designs with larger AR phases won't be able to do this till later on into the trial meaning they are less likely to stop as reflected in the stopping probabilities. In terms of selecting the good dose, this is identical to selecting the OBD. So, in this scenario the control dose is almost never selected as the OBD, even though patients are still being allocated to that dose-level. As stated for AR phase size of 60 the trial cant be stopped for futility, so the probability it stopping is due to toxicity. In scenario 14, all the dose-levels are toxic, here we have very high stopping rates between 89\%-96\% except in the case of when the AR phase is 60. Scenario 15, where only the higher doses are too toxic stops most of the time as well given a reasonable AR phase between 69\% and 89\% of the time. Again, very rarely is the control dose selected as the OBD. 
 
-Tables \ref{tab_wt:OCsCombosSummaryBest} and \ref{tab_wt:OCsCombosSummaryGood} provide a summary and summary statistics of the selection probabilities of the OBD and good doses respectively for all 15 scenarios and 10 parameter combinations. The mean just provides a rudimentary glance across the 15 scenarios of how well it selects the OBD. The standard deviation is a representation in the variability of performance across the different designs. The lower the standard deviation the more homogenous the performance. The mean for selecting a good dose are on average about 10\% higher and appear to be slightly less variable, this is to be expected as when selecting the good dose-levels we are allowing for a wider range of doses to be included. There appears to be limited differences between the various parameterisations, except for in the case of when $j_R$ = 60 where its performance is poor in scenarios which require stopping. There are only 1-2 percentage points difference in the mean selection of the OBD and good dose-levels for the various designs. 
+Table \ref{tab_wt:OCsCombosSummary} provide a summary and summary statistics of the selection probabilities of the OBD and good doses respectively for all 15 scenarios and 10 parameter combinations. The mean just provides a rudimentary glance across the 15 scenarios of how well it selects the OBD. The standard deviation is a representation in the variability of performance across the different designs. The lower the standard deviation the more homogenous the performance. The mean for selecting a good dose are on average about 10\% higher and appear to be slightly less variable, this is to be expected as when selecting the good dose-levels we are allowing for a wider range of doses to be included. There appears to be limited differences between the various parameterisations, except for in the case of when $j_R$ = 60 where its performance is poor in scenarios which require stopping. There are only 1-2 percentage points difference in the mean selection of the OBD and good dose-levels for the various designs. 
 
-
-\begin{table}[H]
-
-	\caption[Summary of selection probabilities for the OBD under multiple combinations of parameters.] {\label{tab_wt:OCsCombosSummaryBest}Probabilities of selecting the best dose level for multiple combinations of AR phase size and probabilities for randomisation to control, plus summary statistics.}
-	\centering
-	\resizebox{\linewidth}{!}{
-		\begin{tabular}[H]{ccccccccccccccccccc}
-			\toprule
-			\multicolumn{2}{c}{ } & \multicolumn{15}{c}{Probability of selecting the best dose level: Scenarios 1-15} & \multicolumn{2}{c}{All scenarios} \\
-			\cmidrule(l{3pt}r{3pt}){3-17} \cmidrule(l{3pt}r{3pt}){18-19}
-			$\phi_R$ & $j_R$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & Mean & StDev\\
-			\midrule
-			& 0 & 0.05 & 0.81 & 0.25 & 0.69 & 0.81 & 0.37 & 0.48 & 0.81 & 0.34 & 0.77 & 0.65 & 0.83 & 0.82 & 0.96 & 0.89 & 0.63 & 0.27\\
-			
-			& 15 & 0.05 & 0.80 & 0.31 & 0.69 & 0.79 & 0.41 & 0.50 & 0.79 & 0.36 & 0.79 & 0.65 & 0.83 & 0.78 & 0.95 & 0.87 & 0.64 & 0.25\\
-			
-			& 30 & 0.05 & 0.77 & 0.35 & 0.71 & 0.77 & 0.45 & 0.52 & 0.77 & 0.42 & 0.79 & 0.62 & 0.82 & 0.70 & 0.94 & 0.82 & 0.63 & 0.23\\
-			
-			& 45 & 0.05 & 0.72 & 0.42 & 0.73 & 0.71 & 0.50 & 0.56 & 0.71 & 0.45 & 0.79 & 0.57 & 0.84 & 0.57 & 0.92 & 0.73 & 0.62 & 0.21\\
-			
-			\multirow{-5}{*}{\centering\arraybackslash 0.20} & 60 & 0.04 & 0.41 & 0.48 & 0.71 & 0.41 & 0.54 & 0.57 & 0.41 & 0.50 & 0.80 & 0.41 & 0.85 & 0.01 & 0.42 & 0.02 & 0.44 & 0.26\\
-			\cmidrule{1-19}
-			& 0 & 0.05 & 0.81 & 0.25 & 0.69 & 0.81 & 0.37 & 0.48 & 0.81 & 0.34 & 0.77 & 0.65 & 0.83 & 0.82 & 0.96 & 0.89 & 0.63 & 0.27\\
-			
-			& 15 & 0.07 & 0.77 & 0.32 & 0.69 & 0.78 & 0.42 & 0.49 & 0.78 & 0.38 & 0.77 & 0.64 & 0.81 & 0.76 & 0.95 & 0.86 & 0.63 & 0.24\\
-			
-			& 30 & 0.06 & 0.75 & 0.39 & 0.70 & 0.75 & 0.50 & 0.51 & 0.75 & 0.45 & 0.76 & 0.60 & 0.80 & 0.68 & 0.93 & 0.80 & 0.63 & 0.22\\
-			
-			& 45 & 0.05 & 0.67 & 0.46 & 0.70 & 0.67 & 0.55 & 0.55 & 0.69 & 0.52 & 0.76 & 0.52 & 0.81 & 0.54 & 0.89 & 0.69 & 0.60 & 0.20\\
-			
-			\multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 0.03 & 0.38 & 0.52 & 0.68 & 0.38 & 0.59 & 0.56 & 0.38 & 0.56 & 0.78 & 0.38 & 0.82 & 0.01 & 0.38 & 0.02 & 0.43 & 0.26\\
-			\bottomrule
-	\end{tabular}}
-\end{table}
-
-\begin{table}[H]
+\begin{table}[h!]
 	
-	\caption[Summary of selection probabilities for good doses under multiple combinations of parameters.]{\label{tab_wt:OCsCombosSummaryGood}Probabilities of selecting good dose levels for multiple combinations of AR phase size and probabilities for randomisation to control, plus summary statistics.}
+	\caption{\label{tab_wt:OCsCombosSummary}Probabilities of selecting the OBD and good dose levels for multiple combinations of AR phase size and probabilities for randomisation to control, plus summary statistics.}
 	\centering
 	\resizebox{\linewidth}{!}{
-		\begin{tabular}[H]{ccccccccccccccccccc}
+		\begin{tabular}[t]{ccccccccccccccccccccc}
 			\toprule
-			\multicolumn{2}{c}{ } & \multicolumn{15}{c}{Probability of selecting good dose levels: Scenarios 1-15} & \multicolumn{2}{c}{All scenarios} \\
-			\cmidrule(l{3pt}r{3pt}){3-17} \cmidrule(l{3pt}r{3pt}){18-19}
-			$\phi_R$ & $j_R$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & Mean & StDev\\
+			\multicolumn{2}{c}{ } & \multicolumn{15}{c}{Probability of selecting good dose levels: Scenarios 1-15} & \multicolumn{2}{c}{All scenarios} & \multicolumn{2}{c}{Non Stopping} \\
+			\cmidrule(l{3pt}r{3pt}){3-17} \cmidrule(l{3pt}r{3pt}){18-19} \cmidrule(l{3pt}r{3pt}){20-21}
+			$\phi_R$ & $j_R$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & Mean & StDev & Mean & StDev\\
 			\midrule
-			& 0 & 0.60 & 0.85 & 0.25 & 0.75 & 0.86 & 0.37 & 0.70 & 0.85 & 0.34 & 0.97 & 0.74 & 0.92 & 0.82 & 0.97 & 0.89 & 0.73 & 0.23\\
+			\addlinespace[0.3em]
+			\multicolumn{21}{l}{\textbf{Selection probabilities for the OBD}}\\
+			\hspace{1em}\hspace{1em} & 0 & 0.05 & 0.81 & 0.25 & 0.69 & 0.81 & 0.37 & 0.48 & 0.81 & 0.34 & 0.77 & 0.65 & 0.83 & 0.82 & 0.96 & 0.89 & 0.63 & 0.27 & 0.47 & 0.27\\
 			
-			& 15 & 0.65 & 0.85 & 0.31 & 0.76 & 0.84 & 0.41 & 0.73 & 0.84 & 0.36 & 0.97 & 0.72 & 0.93 & 0.78 & 0.96 & 0.87 & 0.73 & 0.21\\
+			\hspace{1em} & 15 & 0.05 & 0.80 & 0.31 & 0.69 & 0.79 & 0.41 & 0.50 & 0.79 & 0.36 & 0.79 & 0.65 & 0.83 & 0.78 & 0.95 & 0.87 & 0.64 & 0.25 & 0.49 & 0.26\\
 			
-			& 30 & 0.71 & 0.81 & 0.35 & 0.81 & 0.82 & 0.45 & 0.78 & 0.81 & 0.42 & 0.98 & 0.69 & 0.95 & 0.70 & 0.95 & 0.82 & 0.74 & 0.19\\
+			\hspace{1em} & 30 & 0.05 & 0.77 & 0.35 & 0.71 & 0.77 & 0.45 & 0.52 & 0.77 & 0.42 & 0.79 & 0.62 & 0.82 & 0.70 & 0.94 & 0.82 & 0.63 & 0.23 & 0.51 & 0.26\\
 			
-			& 45 & 0.76 & 0.75 & 0.42 & 0.83 & 0.75 & 0.50 & 0.81 & 0.76 & 0.45 & 0.99 & 0.63 & 0.96 & 0.57 & 0.93 & 0.73 & 0.72 & 0.18\\
+			\hspace{1em} & 45 & 0.05 & 0.72 & 0.42 & 0.73 & 0.71 & 0.50 & 0.56 & 0.71 & 0.45 & 0.79 & 0.57 & 0.84 & 0.57 & 0.92 & 0.73 & 0.62 & 0.21 & 0.54 & 0.26\\
 			
-			\multirow{-5}{*}{\centering\arraybackslash 0.20} & 60 & 0.80 & 0.50 & 0.48 & 0.83 & 0.49 & 0.54 & 0.82 & 0.50 & 0.50 & 0.99 & 0.49 & 0.97 & 0.01 & 0.50 & 0.03 & 0.56 & 0.29\\
-			\cmidrule{1-19}
-			& 0 & 0.60 & 0.85 & 0.25 & 0.75 & 0.86 & 0.37 & 0.70 & 0.85 & 0.34 & 0.97 & 0.74 & 0.92 & 0.82 & 0.97 & 0.89 & 0.73 & 0.23\\
+			\hspace{1em}\multirow{-5}{*}{\centering\arraybackslash 0.20} & 60 & 0.04 & 0.41 & 0.48 & 0.71 & 0.41 & 0.54 & 0.57 & 0.41 & 0.50 & 0.80 & 0.41 & 0.85 & 0.01 & 0.42 & 0.02 & 0.44 & 0.26 & 0.56 & 0.25\\
+			\cmidrule{1-21}
+			& 0 & 0.05 & 0.81 & 0.25 & 0.69 & 0.81 & 0.37 & 0.48 & 0.81 & 0.34 & 0.77 & 0.65 & 0.83 & 0.82 & 0.96 & 0.89 & 0.63 & 0.27 & 0.47 & 0.27\\
 			
-			& 15 & 0.67 & 0.83 & 0.32 & 0.77 & 0.83 & 0.42 & 0.75 & 0.82 & 0.38 & 0.97 & 0.72 & 0.94 & 0.76 & 0.96 & 0.86 & 0.73 & 0.21\\
+			\hspace{1em} & 15 & 0.07 & 0.77 & 0.32 & 0.69 & 0.78 & 0.42 & 0.49 & 0.78 & 0.38 & 0.77 & 0.64 & 0.81 & 0.76 & 0.95 & 0.86 & 0.63 & 0.24 & 0.49 & 0.25\\
 			
-			& 30 & 0.75 & 0.79 & 0.39 & 0.81 & 0.78 & 0.50 & 0.80 & 0.79 & 0.45 & 0.98 & 0.67 & 0.95 & 0.68 & 0.94 & 0.80 & 0.74 & 0.18\\
+			\hspace{1em} & 30 & 0.06 & 0.75 & 0.39 & 0.70 & 0.75 & 0.50 & 0.51 & 0.75 & 0.45 & 0.76 & 0.60 & 0.80 & 0.68 & 0.93 & 0.80 & 0.63 & 0.22 & 0.52 & 0.24\\
 			
-			& 45 & 0.79 & 0.70 & 0.46 & 0.84 & 0.70 & 0.55 & 0.84 & 0.71 & 0.52 & 0.99 & 0.56 & 0.96 & 0.54 & 0.90 & 0.70 & 0.72 & 0.17\\
+			\hspace{1em} & 45 & 0.05 & 0.67 & 0.46 & 0.70 & 0.67 & 0.55 & 0.55 & 0.69 & 0.52 & 0.76 & 0.52 & 0.81 & 0.54 & 0.89 & 0.69 & 0.60 & 0.20 & 0.55 & 0.24\\
 			
-			\multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 0.82 & 0.42 & 0.52 & 0.83 & 0.43 & 0.59 & 0.84 & 0.43 & 0.56 & 0.99 & 0.42 & 0.97 & 0.01 & 0.43 & 0.03 & 0.55 & 0.30\\
+			\hspace{1em}\multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 0.03 & 0.38 & 0.52 & 0.68 & 0.38 & 0.59 & 0.56 & 0.38 & 0.56 & 0.78 & 0.38 & 0.82 & 0.01 & 0.38 & 0.02 & 0.43 & 0.26 & 0.57 & 0.24\\
+			\cmidrule{1-21}
+			\addlinespace[0.3em]
+			\multicolumn{21}{l}{\textbf{Selection probabilities for good dose-levels}}\\
+			\hspace{1em}\hspace{1em} & 0 & 0.60 & 0.85 & 0.25 & 0.75 & 0.86 & 0.37 & 0.70 & 0.85 & 0.34 & 0.97 & 0.74 & 0.92 & 0.82 & 0.97 & 0.89 & 0.73 & 0.23 & 0.61 & 0.27\\
+			
+			\hspace{1em} & 15 & 0.65 & 0.85 & 0.31 & 0.76 & 0.84 & 0.41 & 0.73 & 0.84 & 0.36 & 0.97 & 0.72 & 0.93 & 0.78 & 0.96 & 0.87 & 0.73 & 0.21 & 0.64 & 0.26\\
+			
+			\hspace{1em} & 30 & 0.71 & 0.81 & 0.35 & 0.81 & 0.82 & 0.45 & 0.78 & 0.81 & 0.42 & 0.98 & 0.69 & 0.95 & 0.70 & 0.95 & 0.82 & 0.74 & 0.19 & 0.68 & 0.25\\
+			
+			\hspace{1em} & 45 & 0.76 & 0.75 & 0.42 & 0.83 & 0.75 & 0.50 & 0.81 & 0.76 & 0.45 & 0.99 & 0.63 & 0.96 & 0.57 & 0.93 & 0.73 & 0.72 & 0.18 & 0.71 & 0.23\\
+			
+			\hspace{1em}\multirow{-5}{*}{\centering\arraybackslash 0.20} & 60 & 0.80 & 0.50 & 0.48 & 0.83 & 0.49 & 0.54 & 0.82 & 0.50 & 0.50 & 0.99 & 0.49 & 0.97 & 0.01 & 0.50 & 0.03 & 0.56 & 0.29 & 0.74 & 0.21\\
+			\cmidrule{1-21}
+			& 0 & 0.60 & 0.85 & 0.25 & 0.75 & 0.86 & 0.37 & 0.70 & 0.85 & 0.34 & 0.97 & 0.74 & 0.92 & 0.82 & 0.97 & 0.89 & 0.73 & 0.23 & 0.61 & 0.27\\
+			
+			\hspace{1em} & 15 & 0.67 & 0.83 & 0.32 & 0.77 & 0.83 & 0.42 & 0.75 & 0.82 & 0.38 & 0.97 & 0.72 & 0.94 & 0.76 & 0.96 & 0.86 & 0.73 & 0.21 & 0.65 & 0.25\\
+			
+			\hspace{1em} & 30 & 0.75 & 0.79 & 0.39 & 0.81 & 0.78 & 0.50 & 0.80 & 0.79 & 0.45 & 0.98 & 0.67 & 0.95 & 0.68 & 0.94 & 0.80 & 0.74 & 0.18 & 0.70 & 0.23\\
+			
+			\hspace{1em} & 45 & 0.79 & 0.70 & 0.46 & 0.84 & 0.70 & 0.55 & 0.84 & 0.71 & 0.52 & 0.99 & 0.56 & 0.96 & 0.54 & 0.90 & 0.70 & 0.72 & 0.17 & 0.74 & 0.21\\
+			
+			\hspace{1em}\multirow{-5}{*}{\centering\arraybackslash 0.33} & 60 & 0.82 & 0.42 & 0.52 & 0.83 & 0.43 & 0.59 & 0.84 & 0.43 & 0.56 & 0.99 & 0.42 & 0.97 & 0.01 & 0.43 & 0.03 & 0.55 & 0.30 & 0.76 & 0.18\\
 			\bottomrule
 	\end{tabular}}
 \end{table}
-
 
 In general, these scenarios show us that there are some issues with certain specifications of $\phi_R$ and $j_R$ in some of the scenarios presented. Specifically, in the case of stopping for toxicity, having the AR phase being the same as the sample size causes some issues. For the randomisation probabilities, performance was mostly similar between the two values we chose. Many of the discrepancies in the scenarios were due to the size of the AR phase. Seemingly, performance was generally unaffected by the percentage of patients being randomised to control but rather the amount of time spent being randomised. In terms of patient numbers at the control dose we see on average a similar number to what would be expected i.e. for  for $\phi_R = 0.2$ and  $j_R = 45$ you would expect 9 control patients (20\% of 45) our simulations yielded values ranging from 9.4 to 15.6 across the 15 scenarios. 
 
@@ -761,7 +751,169 @@ For the two-arm approach, things are slightly different since patients are being
 
 where $J$ is the maximum sample size. Alternatively, if the number of control patients desired is known the denominator can be replaced by that number. In this scenario, this corresponds to a 1:5.06 randomisation which would lead to 10 patients in the control arm and 50 in the dose-finding study. As we are using cohorts of 3 it would be preferable to have the sample size of the dose-finding study be divisible by 3. Therefore we set the desired number of control patients as 9, leaving 51 for the dose-finding study. This gives a randomisation ration of 1:5.67 (3:17). 
 
-The specifications for the dose-finding study will be somewhat similar as well. Here there will only be four dose levels (no control dose-level) i.e doses 2-5 in Section \ref{WT:Design-Spec}. We also adjust the toxicity and efficacy skeletons accordingly in Table \ref{tab_wt:tox-eff-skeleton} as well by removing the values from dose-level 1. Since there is no control dose-level in the design we will just be using approximately 50\% of the patients in the AR phase, as recommended by Wages and Tait. As there will be 51 patients in the dose-finding study we set the AR phase to 24, slightly less than 50\% as we are using cohorts of three and 51 patients can't be evenly split up between the two phases. All other design specifications remain the same such as the stopping rules and the pre-specified toxicity upper bound and lower bound. 
+The specifications for the dose-finding study will be somewhat similar as well. Here there will only be four dose levels (no control dose-level) i.e doses 2-5 in Section \ref{WT:Design-Spec}. We also adjust the toxicity and efficacy skeletons accordingly in Table \ref{tab_wt:tox-eff-skeleton} as well by removing the values from dose-level 1. Since there is no control dose-level in the design we will just be using approximately 50\% of the patients in the AR phase, as recommended by Wages and Tait. As there will be 51 patients in the dose-finding study we set the AR phase to 24, slightly less than 50\% as we are using cohorts of three and 51 patients can't be evenly split up between the two phases. All other design specifications remain the same such as the stopping rules and the pre-specified toxicity upper bound and lower bound. We summarise the three designs being compared in Table \ref{tab_wt:Designs-to-compare}.
 
-To compare these different approaches simulations will be used covering the same scenarios as in section \ref{WT:Impact-ARandRTCon-RtC-WT}. For each scenario, we simulate 10000 trials each using the specifications mentioned above. Table \ref{tab_wt:SelectProbAlt} contains the results for scenarios 1 to 12 comparing selection probabilities. Table \ref{tab_wt:MeanNAlt} presents the results for the same scenarios looking at the average number of patients treated at each dose.  
+\begin{table}[h!]
+	\centering
+	\caption{Summary of the three designs being compared. }
+	\label{tab_wt:Designs-to-compare}
+	\resizebox{\textwidth}{!}{%
+	\begin{tabular}{c|llll}
+		\hline
+		\textbf{Design} & \textbf{Specification} & \textbf{Benefits} & \textbf{Flaws} & \textbf{Assumptions} \\ \hline
+		RtC-WT &
+		\begin{tabular}[c]{@{}l@{}}5 Doses \\ N = 60\\ Cohort size  = 3\\ AR size  $(j_R) = 30$\\ $\phi_R$ = 0.33\end{tabular} &
+		\begin{tabular}[c]{@{}l@{}}Guaranteed patients recruited \\ to the control dose.\\ Able to compare control to\\ experimental doses.\end{tabular} &
+		\begin{tabular}[c]{@{}l@{}}Performance may suffer. \\ Extra complexity in the design.\end{tabular} &
+		\begin{tabular}[c]{@{}l@{}}The lowest dose level is a \\ control dose.\end{tabular} \\ \hline
+		WT &
+		\begin{tabular}[c]{@{}l@{}}5 Doses \\ N = 60 \\ Cohort size = 3\\ AR size $(j_R) = 30$\end{tabular} &
+		\begin{tabular}[c]{@{}l@{}}Better performance.\\ Simple to implement.\\ Able to compare control \\ to experimental doses.\end{tabular} &
+		\begin{tabular}[c]{@{}l@{}}Patients not guaranteed at the \\ control dose.\end{tabular} &
+		\begin{tabular}[c]{@{}l@{}}Control dose treated in the same\\ was as an experimental dose.\end{tabular} \\ \hline
+		Two-Arm &
+		\begin{tabular}[c]{@{}l@{}}4 Doses \\ N = 51\\ Cohort size = 3\\ AR size $(j_R) = 24$\end{tabular} &
+		\begin{tabular}[c]{@{}l@{}}Simpler to implement.\\ Exact number of control \\ patients is known.\end{tabular} &
+		\begin{tabular}[c]{@{}l@{}}Cannot include the control dose \\ when modelling toxicity and efficacy\end{tabular} &
+		\begin{tabular}[c]{@{}l@{}}Recruit dose-finding and control \\ patients separately. \\ Allocation ratio is based on the \\ number of control patients desired.\end{tabular} \\ \hline
+	\end{tabular}%
+}
+\end{table}
 
+To compare these different approaches simulations will be used covering the same 15 scenarios as in section \ref{WT:Impact-ARandRTCon-RtC-WT}. For each scenario, we simulate 10000 trials each using the designs mentioned above. Table \ref{tab_wt:Designs-to-compare} shows the operating characteristics comparing the three designs. 
+
+In order to compare the Two-Arm design with the others we still consider there to be five dose-levels, with the first dose-level being a separate arm and dose-levels 2-5 comprising the dose-finding arm. Also, since the two arms can be considered independent in scenarios where stopping is preferred, this would only stop the dose-finding arm so patients at dose-level 1, the control arm, can still be recruited.   
+
+\begingroup\fontsize{9}{11}\selectfont
+
+\begin{longtable}[t]{ccccccccc}
+	\caption[Operating characteristics comparing multiple designs.]{\label{tab_wt:OCsDesigns-to-compare}Operating characteristics for alternative designs. Probability of selecting the best or good dose levels as the OBD, mean number of patients treated at those dose levels and at the control dose after 10000 simulations.}\\
+	\toprule
+	Scenario & Design & OBD & Good Doses & P(OBD) & P(Good) & N(OBD) & N(Good) & N(Control)\\
+	\midrule
+	\endfirsthead
+	\caption[]{Operating characteristics (continued)}\\
+	\toprule
+	Scenario & Design & OBD & Good Doses & P(OBD) & P(Good) & N(OBD) & N(Good) & N(Control)\\
+	\midrule
+	\endhead
+	
+	\endfoot
+	\bottomrule
+	\endlastfoot
+	& RtC-WT & 5 & 3-5 & 0.06 & 0.75 & 2.2 & 30.4 & 9.8\\
+	\nopagebreak
+	& WT & 5 & 3-5 & 0.05 & 0.72 & 2.1 & 31.8 & 6.6\\
+	\nopagebreak
+	\multirow{-3}{*}{\centering\arraybackslash 1} & Two-Arm & 5 & 3-5 & 0.04 & 0.61 & 1.8 & 25.5 & 9\\
+	\cmidrule{1-9}\pagebreak[0]
+	& RtC-WT & stop & stop/1 & 0.75 & 0.79 & - & 14 & 14\\
+	\nopagebreak
+	& WT & stop & stop/1 & 0.76 & 0.80 & - & 13.9 & 13.9\\
+	\nopagebreak
+	\multirow{-3}{*}{\centering\arraybackslash 2} & Two-Arm & stop & stop & 0.75 & 0.75 & - & - & 9\\
+	\cmidrule{1-9}\pagebreak[0]
+	& RtC-WT & 3 & 3 & 0.39 & 0.39 & 17.3 & 17.3 & 10.4\\
+	\nopagebreak
+	& WT & 3 & 3 & 0.37 & 0.37 & 17.7 & 17.7 & 8.4\\
+	\nopagebreak
+	\multirow{-3}{*}{\centering\arraybackslash 3} & Two-Arm & 3 & 3 & 0.26 & 0.26 & 12.6 & 12.6 & 9\\
+	\cmidrule{1-9}\pagebreak[0]
+	& RtC-WT & 3 & 3-4 & 0.70 & 0.81 & 24.8 & 31 & 9.9\\
+	\nopagebreak
+	& WT & 3 & 3-4 & 0.73 & 0.81 & 27.6 & 33.5 & 6.6\\
+	\nopagebreak
+	\multirow{-3}{*}{\centering\arraybackslash 4} & Two-Arm & 3 & 3-4 & 0.72 & 0.76 & 24 & 28.1 & 9\\
+	\cmidrule{1-9}\pagebreak[0]
+	& RtC-WT & stop & stop/1 & 0.75 & 0.78 & - & 14.1 & 14.1\\
+	\nopagebreak
+	& WT & stop & stop/1 & 0.76 & 0.80 & - & 13.9 & 13.9\\
+	\nopagebreak
+	\multirow{-3}{*}{\centering\arraybackslash 5} & Two-Arm & stop & stop & 0.75 & 0.75 & - & - & 9\\
+	\cmidrule{1-9}\pagebreak[0]
+	& RtC-WT & 3 & 3 & 0.50 & 0.50 & 20.3 & 20.3 & 10.4\\
+	\nopagebreak
+	& WT & 3 & 3 & 0.48 & 0.48 & 21.2 & 21.2 & 8.4\\
+	\nopagebreak
+	\multirow{-3}{*}{\centering\arraybackslash 6} & Two-Arm & 3 & 3 & 0.38 & 0.38 & 15.9 & 15.9 & 9\\
+	\cmidrule{1-9}\pagebreak[0]
+	& RtC-WT & 3 & 3-5 & 0.51 & 0.80 & 20.8 & 31.6 & 9.7\\
+	\nopagebreak
+	& WT & 3 & 3-5 & 0.54 & 0.79 & 22.8 & 33.4 & 6.8\\
+	\nopagebreak
+	\multirow{-3}{*}{\centering\arraybackslash 7} & Two-Arm & 3 & 3-5 & 0.52 & 0.71 & 19.5 & 27.8 & 9\\
+	\cmidrule{1-9}\pagebreak[0]
+	& RtC-WT & stop & stop/1 & 0.75 & 0.79 & - & 14 & 14\\
+	\nopagebreak
+	& WT & stop & stop/1 & 0.75 & 0.79 & - & 13.9 & 13.9\\
+	\nopagebreak
+	\multirow{-3}{*}{\centering\arraybackslash 8} & Two-Arm & stop & stop & 0.76 & 0.76 & - & - & 9\\
+	\cmidrule{1-9}\pagebreak[0]
+	& RtC-WT & 3 & 3 & 0.45 & 0.45 & 18.6 & 18.6 & 10.4\\
+	\nopagebreak
+	& WT & 3 & 3 & 0.43 & 0.43 & 19.4 & 19.4 & 8.4\\
+	\nopagebreak
+	\multirow{-3}{*}{\centering\arraybackslash 9} & Two-Arm & 3 & 3 & 0.34 & 0.34 & 14.2 & 14.2 & 9\\
+	\cmidrule{1-9}\pagebreak[0]
+	& RtC-WT & 2 & 2-4 & 0.76 & 0.98 & 34.6 & 49.1 & 9.8\\
+	\nopagebreak
+	& WT & 2 & 2-4 & 0.78 & 0.98 & 36.4 & 52.2 & 6.7\\
+	\nopagebreak
+	\multirow{-3}{*}{\centering\arraybackslash 10} & Two-Arm & 2 & 2-4 & 0.83 & 0.99 & 37.1 & 50.2 & 9\\
+	\cmidrule{1-9}\pagebreak[0]
+	& RtC-WT & stop & stop/1 & 0.60 & 0.67 & - & 14.7 & 14.7\\
+	\nopagebreak
+	& WT & stop & stop/1 & 0.60 & 0.67 & - & 14.3 & 14.3\\
+	\nopagebreak
+	\multirow{-3}{*}{\centering\arraybackslash 11} & Two-Arm & stop & stop & 0.53 & 0.53 & - & - & 9\\
+	\cmidrule{1-9}\pagebreak[0]
+	& RtC-WT & 2 & 2-3 & 0.80 & 0.95 & 36.6 & 46.3 & 10.4\\
+	\nopagebreak
+	& WT & 2 & 2-3 & 0.82 & 0.95 & 38.5 & 48.5 & 8.3\\
+	\nopagebreak
+	\multirow{-3}{*}{\centering\arraybackslash 12} & Two-Arm & 2 & 2-3 & 0.90 & 0.97 & 41.2 & 48.6 & 9\\
+	\cmidrule{1-9}\pagebreak[0]
+	& RtC-WT & stop & stop/1 & 0.68 & 0.68 & - & 9.7 & 9.7\\
+	\nopagebreak
+	& WT & stop & stop/1 & 0.71 & 0.71 & - & 6.3 & 6.3\\
+	\nopagebreak
+	\multirow{-3}{*}{\centering\arraybackslash 13} & Two-Arm & stop & stop & 0.68 & 0.68 & - & - & 9\\
+	\cmidrule{1-9}\pagebreak[0]
+	& RtC-WT & stop & stop/1 & 0.93 & 0.94 & - & 13.5 & 13.5\\
+	\nopagebreak
+	& WT & stop & stop/1 & 0.94 & 0.95 & - & 13.2 & 13.2\\
+	\nopagebreak
+	\multirow{-3}{*}{\centering\arraybackslash 14} & Two-Arm & stop & stop & 0.95 & 0.95 & - & - & 9\\
+	\cmidrule{1-9}\pagebreak[0]
+	& RtC-WT & stop & stop/1 & 0.80 & 0.80 & - & 10.3 & 10.3\\
+	\nopagebreak
+	& WT & stop & stop/1 & 0.82 & 0.82 & - & 8.1 & 8.1\\
+	\nopagebreak
+	\multirow{-3}{*}{\centering\arraybackslash 15} & Two-Arm & stop & stop & 0.81 & 0.81 & - & - & 9\\*
+\end{longtable}
+\endgroup{}
+
+\begin{table}[h!]
+	
+	\caption{\label{tab_wt:OCsDesigns-to-compare-Summary}Probabilities of selecting the OBD and good dose levels for multiple designs, plus summary statistics.}
+	\centering
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}[t]{cccccccccccccccccccc}
+			\toprule
+			\multicolumn{1}{c}{ } & \multicolumn{15}{c}{Selection probabilities: Scenarios 1-15} & \multicolumn{2}{c}{All scenarios} & \multicolumn{2}{c}{Non Stopping} \\
+			\cmidrule(l{3pt}r{3pt}){2-16} \cmidrule(l{3pt}r{3pt}){17-18} \cmidrule(l{3pt}r{3pt}){19-20}
+			Design & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & Mean & StDev & Mean & StDev\\
+			\midrule
+			\addlinespace[0.3em]
+			\multicolumn{20}{l}{\textbf{Selection probabilities for the OBD}}\\
+			\hspace{1em}RtC-WT & 0.06 & 0.75 & 0.39 & 0.70 & 0.75 & 0.50 & 0.51 & 0.75 & 0.45 & 0.76 & 0.60 & 0.80 & 0.68 & 0.93 & 0.80 & 0.63 & 0.22 & 0.52 & 0.24\\
+			\hspace{1em}WT & 0.05 & 0.76 & 0.37 & 0.73 & 0.76 & 0.48 & 0.54 & 0.75 & 0.43 & 0.78 & 0.60 & 0.82 & 0.71 & 0.94 & 0.82 & 0.64 & 0.23 & 0.53 & 0.26\\
+			\hspace{1em}Two-Arm & 0.04 & 0.75 & 0.26 & 0.72 & 0.75 & 0.38 & 0.52 & 0.76 & 0.34 & 0.83 & 0.53 & 0.90 & 0.68 & 0.95 & 0.81 & 0.62 & 0.26 & 0.50 & 0.30\\
+			\addlinespace[0.3em]
+			\multicolumn{20}{l}{\textbf{Selection probabilities for good dose-levels}}\\
+			\hspace{1em}RtC-WT & 0.75 & 0.79 & 0.39 & 0.81 & 0.78 & 0.50 & 0.80 & 0.79 & 0.45 & 0.98 & 0.67 & 0.95 & 0.68 & 0.94 & 0.80 & 0.74 & 0.18 & 0.70 & 0.23\\
+			\hspace{1em}WT & 0.72 & 0.80 & 0.37 & 0.81 & 0.80 & 0.48 & 0.79 & 0.79 & 0.43 & 0.98 & 0.67 & 0.95 & 0.71 & 0.95 & 0.82 & 0.74 & 0.19 & 0.69 & 0.24\\
+			\hspace{1em}Two-Arm & 0.61 & 0.75 & 0.26 & 0.76 & 0.75 & 0.38 & 0.71 & 0.76 & 0.34 & 0.99 & 0.53 & 0.97 & 0.68 & 0.95 & 0.81 & 0.68 & 0.22 & 0.63 & 0.28\\
+			\bottomrule
+	\end{tabular}}
+\end{table}

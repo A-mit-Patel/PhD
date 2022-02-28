@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.8)  17 FEB 2022 20:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.8)  28 FEB 2022 21:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -845,7 +845,7 @@ package with kernel methods
 )
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of hyperref version, that doesn't
-(scrhack)             need that hack, on input line 109.
+(scrhack)             need that hack, on input line 111.
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
@@ -872,15 +872,15 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip93
 )
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 109.
-Package hyperref Info: Option `hypertexnames' set `false' on input line 109.
-Package hyperref Info: Option `colorlinks' set `true' on input line 109.
-Package hyperref Info: Option `unicode' set `true' on input line 109.
-Package hyperref Info: Option `breaklinks' set `true' on input line 109.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 111.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 111.
+Package hyperref Info: Option `colorlinks' set `true' on input line 111.
+Package hyperref Info: Option `unicode' set `true' on input line 111.
+Package hyperref Info: Option `breaklinks' set `true' on input line 111.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
-LaTeX Font Info:    Trying to load font information for T1+ppl on input line 10
-9.
+LaTeX Font Info:    Trying to load font information for T1+ppl on input line 11
+1.
 
 (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
@@ -889,24 +889,24 @@ File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 (Chapters/WT/WT_tex_v1.1.aux) (Chapters/TITE-DTP/TITE-DTP_tex.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 109.
-LaTeX Font Info:    ... okay on input line 109.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 111.
+LaTeX Font Info:    ... okay on input line 111.
 
 
 LaTeX hooks Warning: Generic hook
@@ -923,7 +923,7 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 109.
+or `english'. on input line 111.
 
 (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
@@ -991,7 +991,7 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package scrlayer Info: Setting magic \footheight to \baselineskip while
-(scrlayer)             \begin{document} on input line 109.
+(scrlayer)             \begin{document} on input line 111.
 
 Package scrlayer-scrpage Warning: Very small head height detected!
 (scrlayer-scrpage)                Using scrlayer-scrpage the head height
@@ -1005,13 +1005,13 @@ Package scrlayer-scrpage Warning: Very small head height detected!
 (scrlayer-scrpage)                option `singlespacing=true'
 (scrlayer-scrpage)                to avoid this warning.
 
-Package scrbase Info: activating english \abbrevname on input line 109.
-Package scrbase Info: activating english \byname on input line 109.
-Package scrbase Info: activating english \acknowledgementname on input line 109
+Package scrbase Info: activating english \abbrevname on input line 111.
+Package scrbase Info: activating english \byname on input line 111.
+Package scrbase Info: activating english \acknowledgementname on input line 111
 .
-Package scrbase Info: activating english \authorshipname on input line 109.
-Package scrbase Info: activating english \constantsname on input line 109.
-Package scrbase Info: activating english \symbolsname on input line 109.
+Package scrbase Info: activating english \authorshipname on input line 111.
+Package scrbase Info: activating english \constantsname on input line 111.
+Package scrbase Info: activating english \symbolsname on input line 111.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -1046,9 +1046,9 @@ Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                - Invalid format of field 'date'.
 
 )
-Package biblatex Info: Reference section=0 on input line 109.
-Package biblatex Info: Reference segment=0 on input line 109.
-Package hyperref Info: Link coloring ON on input line 109.
+Package biblatex Info: Reference section=0 on input line 111.
+Package biblatex Info: Reference segment=0 on input line 111.
+Package hyperref Info: Link coloring ON on input line 111.
  (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1061,9 +1061,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count458
 )
-LaTeX Info: Redefining \ref on input line 109.
-LaTeX Info: Redefining \pageref on input line 109.
-LaTeX Info: Redefining \nameref on input line 109.
+LaTeX Info: Redefining \ref on input line 111.
+LaTeX Info: Redefining \pageref on input line 111.
+LaTeX Info: Redefining \nameref on input line 111.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -1082,36 +1082,36 @@ LaTeX Info: Redefining \nameref on input line 109.
 --------------------
 1: section
 LaTeX Font Info:    Trying to load font information for OT1+ppl on input line 2
-09.
+11.
 (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
 LaTeX Font Info:    Trying to load font information for OML+zplm on input line 
-209.
+211.
 
 (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+zplm on input line 
-209.
+211.
 
 (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OMX+zplm on input line 
-209.
+211.
 
 (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
-209.
+211.
 
 (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 20
-9.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 21
+1.
 
 (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
@@ -1125,7 +1125,7 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=23.99747pt'.
 (scrlayer-scrpage)                I'll also decrease \topmargin on input line 2
-09.
+11.
 
 
 Overfull \vbox (3.33585pt too high) has occurred while \output is active []
@@ -1162,9 +1162,7 @@ Overfull \vbox (3.33585pt too high) has occurred while \output is active []
 
 
 1: section
-[11] [12
-
-]
+[11] [12]
 1: section
 \openout2 = `Chapters/Chapter1/Chapter1.aux'.
 
@@ -1173,6 +1171,7 @@ Chapter 1.
 )
 1: section
 [1
+
 
 
 ]
@@ -1198,7 +1197,7 @@ Overfull \hbox (5.0661pt too wide) in paragraph at lines 28--29
 ponse model
  []
 
-<Figures//Adept-DoseExample.pdf, id=333, 160.6803pt x 146.4672pt>
+<Figures//Adept-DoseExample.pdf, id=339, 160.6803pt x 146.4672pt>
 File: Figures//Adept-DoseExample.pdf Graphic file (type pdf)
 <use Figures//Adept-DoseExample.pdf>
 Package pdftex.def Info: Figures//Adept-DoseExample.pdf  used on input line 34.
@@ -1223,7 +1222,7 @@ Overfull \hbox (7.31252pt too wide) in paragraph at lines 155--155
  []|\T1/ppl/b/n/12 Duration 
  []
 
-<Figures//Adept-DoseCombos.pdf, id=461, 491.91779pt x 570.21031pt>
+<Figures//Adept-DoseCombos.pdf, id=467, 491.91779pt x 570.21031pt>
 File: Figures//Adept-DoseCombos.pdf Graphic file (type pdf)
 <use Figures//Adept-DoseCombos.pdf>
 Package pdftex.def Info: Figures//Adept-DoseCombos.pdf  used on input line 172.
@@ -1243,7 +1242,7 @@ Overfull \hbox (13.09404pt too wide) in paragraph at lines 194--196
 lation/de-escalation
  []
 
-<Figures//Adept-WeightFunction.pdf, id=501, 713.66624pt x 434.62375pt>
+<Figures//Adept-WeightFunction.pdf, id=507, 713.66624pt x 434.62375pt>
 File: Figures//Adept-WeightFunction.pdf Graphic file (type pdf)
 <use Figures//Adept-WeightFunction.pdf>
 Package pdftex.def Info: Figures//Adept-WeightFunction.pdf  used on input line 
@@ -1261,19 +1260,19 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [26] [27]
-<Figures//Adept-DLTRates.pdf, id=571, 844.15375pt x 597.23125pt>
+<Figures//Adept-DLTRates.pdf, id=577, 844.15375pt x 597.23125pt>
 File: Figures//Adept-DLTRates.pdf Graphic file (type pdf)
 <use Figures//Adept-DLTRates.pdf>
 Package pdftex.def Info: Figures//Adept-DLTRates.pdf  used on input line 462.
 (pdftex.def)             Requested size: 412.56499pt x 291.88948pt.
  [28 <./Figures//Adept-DLTRates.pdf>] [29] [30]
-<Figures//Adept-SimsOrder1.pdf, id=604, 844.15375pt x 597.23125pt>
+<Figures//Adept-SimsOrder1.pdf, id=610, 844.15375pt x 597.23125pt>
 File: Figures//Adept-SimsOrder1.pdf Graphic file (type pdf)
 <use Figures//Adept-SimsOrder1.pdf>
 Package pdftex.def Info: Figures//Adept-SimsOrder1.pdf  used on input line 745.
 
 (pdftex.def)             Requested size: 412.56499pt x 291.88948pt.
-<Figures//Adept-SimsOrder2.pdf, id=607, 844.15375pt x 597.23125pt>
+<Figures//Adept-SimsOrder2.pdf, id=613, 844.15375pt x 597.23125pt>
 File: Figures//Adept-SimsOrder2.pdf Graphic file (type pdf)
 <use Figures//Adept-SimsOrder2.pdf>
 Package pdftex.def Info: Figures//Adept-SimsOrder2.pdf  used on input line 752.
@@ -1319,7 +1318,7 @@ he WT de-sign and how it works.
  []
 
 [45] [46] [47] [48] [49] [50] [51]
-<Figures//WT-TwoArmExample.pdf, id=760, 389.5353pt x 608.2725pt>
+<Figures//WT-TwoArmExample.pdf, id=766, 389.5353pt x 608.2725pt>
 File: Figures//WT-TwoArmExample.pdf Graphic file (type pdf)
 <use Figures//WT-TwoArmExample.pdf>
 Package pdftex.def Info: Figures//WT-TwoArmExample.pdf  used on input line 178.
@@ -1346,23 +1345,13 @@ LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 2
 (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
 )
-[60]
-Overfull \hbox (57.28043pt too wide) in paragraph at lines 284--318
- [][] 
- []
-
-[61]
-Overfull \hbox (10.9846pt too wide) in alignment at lines 324--330
+[60] [61]
+Overfull \hbox (10.9846pt too wide) in alignment at lines 326--332
  [] [] [] [] [] [] [] [] [] [] 
  []
 
 
-Overfull \hbox (10.9846pt too wide) in alignment at lines 330--335
- [] [] [] [] [] [] [] [] [] [] 
- []
-
-
-Overfull \hbox (10.9846pt too wide) in alignment at lines 335--337
+Overfull \hbox (10.9846pt too wide) in alignment at lines 332--337
  [] [] [] [] [] [] [] [] [] [] 
  []
 
@@ -1372,23 +1361,48 @@ Overfull \hbox (10.9846pt too wide) in alignment at lines 337--339
  []
 
 
-Overfull \hbox (10.9846pt too wide) in alignment at lines 339--639
+Overfull \hbox (10.9846pt too wide) in alignment at lines 339--341
+ [] [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (10.9846pt too wide) in alignment at lines 341--641
  [] [] [] [] [] [] [] [] [] [] 
  []
 
 [62] [63] [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76]
+Overfull \hbox (12.86227pt too wide) in alignment at lines 789--794
+ [] [] [] [] [] [] [] [] [] 
+ []
 
-LaTeX Warning: Reference `tab_wt:SelectProbAlt' on page 77 undefined on input l
-ine 766.
+
+Overfull \hbox (12.86227pt too wide) in alignment at lines 794--799
+ [] [] [] [] [] [] [] [] [] 
+ []
 
 
-LaTeX Warning: Reference `tab_wt:MeanNAlt' on page 77 undefined on input line 7
-66.
+Overfull \hbox (12.86227pt too wide) in alignment at lines 799--801
+ [] [] [] [] [] [] [] [] [] 
+ []
 
-) [77]
+
+Overfull \hbox (12.86227pt too wide) in alignment at lines 801--803
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+
+Overfull \hbox (12.86227pt too wide) in alignment at lines 803--893
+ [] [] [] [] [] [] [] [] [] 
+ []
+
+[77]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+) [78] [79]
 \openout2 = `Chapters/TITE-DTP/TITE-DTP_tex.aux'.
 
- (Chapters/TITE-DTP/TITE-DTP_tex.tex [78
+ (Chapters/TITE-DTP/TITE-DTP_tex.tex [80
 
 
 
@@ -1396,19 +1410,19 @@ LaTeX Warning: Reference `tab_wt:MeanNAlt' on page 77 undefined on input line 7
 ]
 Chapter 4.
 1: section
-[79]
+[81]
 Overfull \hbox (1.02005pt too wide) in paragraph at lines 18--19
 []\T1/ppl/m/n/12 Based on these re-views we can see that the up-take of more ef
 -fi-cient Bayesian
  []
 
-[80] [81]
+[82] [83]
 Overfull \hbox (2.3902pt too wide) in paragraph at lines 36--37
 \T1/ppl/m/n/12 toxicity model, dose-toxicity skele-ton, method of in-fer-ence, 
 de-ci-sion rules, sam-
  []
 
-[82] [83] [84]
+[84] [85] [86]
 LaTeX Font Info:    Calculating math sizes for size <4> on input line 158.
 
 
@@ -1423,19 +1437,19 @@ LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <3.03998> not available
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <2.40002> not available
 (Font)              size <5> substituted on input line 158.
 
-[85]
+[87]
 Overfull \vbox (55.9648pt too high) has occurred while \output is active []
 
 
-[86]
-<Figures//TITE-DTP-InitialExampleDTPNode.png, id=970, 683.55376pt x 687.56876pt
+[88]
+<Figures//TITE-DTP-InitialExampleDTPNode.png, id=985, 683.55376pt x 687.56876pt
 >
 File: Figures//TITE-DTP-InitialExampleDTPNode.png Graphic file (type png)
 <use Figures//TITE-DTP-InitialExampleDTPNode.png>
 Package pdftex.def Info: Figures//TITE-DTP-InitialExampleDTPNode.png  used on i
 nput line 165.
 (pdftex.def)             Requested size: 412.56499pt x 414.99944pt.
-<Figures//TITE-DTP-InitialExampleDTPFlow.pdf, id=972, 844.15375pt x 597.23125pt
+<Figures//TITE-DTP-InitialExampleDTPFlow.pdf, id=987, 844.15375pt x 597.23125pt
 >
 File: Figures//TITE-DTP-InitialExampleDTPFlow.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-InitialExampleDTPFlow.pdf>
@@ -1446,9 +1460,9 @@ nput line 172.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[87 <./Figures//TITE-DTP-InitialExampleDTPNode.png>] [88 <./Figures//TITE-DTP-I
-nitialExampleDTPFlow.pdf>] [89]
-<Figures//TITE-DTP-UpdatedExampleDTPNode.png, id=1000, 707.64375pt x 693.59125p
+[89 <./Figures//TITE-DTP-InitialExampleDTPNode.png>] [90 <./Figures//TITE-DTP-I
+nitialExampleDTPFlow.pdf>] [91]
+<Figures//TITE-DTP-UpdatedExampleDTPNode.png, id=1016, 707.64375pt x 693.59125p
 t>
 File: Figures//TITE-DTP-UpdatedExampleDTPNode.png Graphic file (type png)
 <use Figures//TITE-DTP-UpdatedExampleDTPNode.png>
@@ -1459,7 +1473,7 @@ nput line 260.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf, id=1001, 844.15375pt x 597.23125p
+<Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf, id=1017, 844.15375pt x 597.23125p
 t>
 File: Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf>
@@ -1469,76 +1483,76 @@ nput line 267.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[90] [91 <./Figures//TITE-DTP-UpdatedExampleDTPNode.png>] [92 <./Figures//TITE-
-DTP-UpdatedExampleDTPFlow.pdf>]) [93] [94
+[92] [93 <./Figures//TITE-DTP-UpdatedExampleDTPNode.png>] [94 <./Figures//TITE-
+DTP-UpdatedExampleDTPFlow.pdf>]) [95] [96
 
 
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-06.
+08.
 
 (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-Overfull \hbox (10.60683pt too wide) in paragraph at lines 306--306
+Overfull \hbox (10.60683pt too wide) in paragraph at lines 308--308
 \T1/cmtt/m/n/12 org / health -[] professional / cancer -[] statistics / statist
 ics -[] by -[] cancer -[]
  []
 
 
-Overfull \hbox (7.04141pt too wide) in paragraph at lines 306--306
+Overfull \hbox (7.04141pt too wide) in paragraph at lines 308--308
 \T1/ppl/m/n/12 pp. 949955, Mar. 18, 2000, \T1/ppl/m/sc/12 issn\T1/ppl/m/n/12 :
  0140-6736. \T1/ppl/m/sc/12 doi\T1/ppl/m/n/12 : [][]$\T1/cmtt/m/n/12 10 . 1016 
 / S0140 -[] 6736(00 )
  []
 
 
-Overfull \hbox (1.15176pt too wide) in paragraph at lines 306--306
+Overfull \hbox (1.15176pt too wide) in paragraph at lines 308--308
 \T1/cmtt/m/n/12 90011 -[] 4$[][]\T1/ppl/m/n/12 . [On-line]. Avail-able: [][]$\T
 1/cmtt/m/n/12 http : / / www . sciencedirect . com / science /
  []
 
 1: section
-[95]
-Overfull \hbox (5.08871pt too wide) in paragraph at lines 306--306
+[97]
+Overfull \hbox (5.08871pt too wide) in paragraph at lines 308--308
 []\T1/ppl/m/n/12 M. J. O'Connor,   Tar-get-ing the DNA Dam-age Re-sponse in Ca
 n-cer, \T1/ppl/m/it/12 Molec-
  []
 
 
-Overfull \hbox (2.08783pt too wide) in paragraph at lines 306--306
+Overfull \hbox (2.08783pt too wide) in paragraph at lines 308--308
 []\T1/ppl/m/n/12 A. Chalmers,   Sci-ence in Fo-cus: Com-bin-ing Ra-dio-ther-ap
 y with In-hibitors
  []
 
 
-Overfull \hbox (6.1905pt too wide) in paragraph at lines 306--306
+Overfull \hbox (6.1905pt too wide) in paragraph at lines 308--308
 \T1/ppl/m/n/12 A Prac-ti-cal De-sign for Phase 1 Clin-i-cal Tri-als in Can-cer,
  \T1/ppl/m/it/12 Bio-met-rics\T1/ppl/m/n/12 , vol. 46,
  []
 
-[96] [97] [98]
-Overfull \hbox (1.39478pt too wide) in paragraph at lines 306--306
+[98] [99] [100]
+Overfull \hbox (1.39478pt too wide) in paragraph at lines 308--308
 \T1/ppl/m/n/12 vol. 26, no. 1, pp. 150166, 2016, \T1/ppl/m/sc/12 issn\T1/ppl/m
 /n/12 : 1054-3406. \T1/ppl/m/sc/12 doi\T1/ppl/m/n/12 : [][]$\T1/cmtt/m/n/12 10 
 . 1080 / 10543406 .
  []
 
-[99] [100]
-Overfull \hbox (11.46663pt too wide) in paragraph at lines 306--306
+[101] [102]
+Overfull \hbox (11.46663pt too wide) in paragraph at lines 308--308
 \T1/ppl/m/n/12 dose-finding de-sign in the Match-point trial, \T1/ppl/m/it/12 
 BMC Med-i-cal Re-search Method-
  []
 
-[101]
-Overfull \hbox (13.74023pt too wide) in paragraph at lines 306--306
+[103]
+Overfull \hbox (13.74023pt too wide) in paragraph at lines 308--308
 \T1/ppl/m/n/12 pp. 466479, Feb. 1, 2018, \T1/ppl/m/sc/12 issn\T1/ppl/m/n/12 : 
 0962-2802. \T1/ppl/m/sc/12 doi\T1/ppl/m/n/12 : [][]$\T1/cmtt/m/n/12 10 . 1177 /
  0962280216631763$[][]\T1/ppl/m/n/12 .
  []
 
-[102] [103] (main.aux (Chapters/Chapter1/Chapter1.aux)
+[104] [105] (main.aux (Chapters/Chapter1/Chapter1.aux)
 (Chapters/Adept/Adept_tex.aux) (Chapters/WT/WT_tex_v1.1.aux)
 (Chapters/TITE-DTP/TITE-DTP_tex.aux))
 
@@ -1549,16 +1563,16 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: C7EEE366516ECBFF6FBFB2A1D250A38C;6442.
+(rerunfilecheck)             Checksum: E4E3DE31488BDBC985A3BFBA50C85E84;6442.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30542 strings out of 478659
- 671805 string characters out of 2846395
- 1399652 words of memory out of 3000000
- 47933 multiletter control sequences out of 15000+600000
+ 30547 strings out of 478659
+ 671875 string characters out of 2846395
+ 1400047 words of memory out of 3000000
+ 47934 multiletter control sequences out of 15000+600000
  469344 words of font info for 153 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,20n,93p,2187b,2513s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1576,9 +1590,9 @@ MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Amit/AppData/Local/Programs
 ms/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Amit/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Amit/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (115 pages, 900546 bytes).
+Output written on main.pdf (117 pages, 906906 bytes).
 PDF statistics:
- 1388 PDF objects out of 1440 (max. 8388607)
- 261 named destinations out of 1000 (max. 500000)
+ 1404 PDF objects out of 1440 (max. 8388607)
+ 265 named destinations out of 1000 (max. 500000)
  304 words of extra memory for PDF output out of 10000 (max. 10000000)
 
