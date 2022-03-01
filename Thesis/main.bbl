@@ -3225,6 +3225,89 @@
     \field{urlyear}{2021}
   \endentry
 
+  \entry{yanImprovedAdaptiveRandomization2019}{article}{}
+    \name{author}{3}{}{%
+      {{hash=YD}{%
+         family={Yan},
+         familyi={Y\bibinitperiod},
+         given={Donglin},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=WNA}{%
+         family={Wages},
+         familyi={W\bibinitperiod},
+         given={Nolan\bibnamedelima A.},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=DEV}{%
+         family={Dressler},
+         familyi={D\bibinitperiod},
+         given={Emily\bibnamedelima V.},
+         giveni={E\bibinitperiod\bibinitdelim V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Taylor \& Francis}}%
+    }
+    \keyw{adaptive randomization,continual reassessment method,dose
+  finding,molecularly targeted agent,optimal biological dose,Seamless I/II
+  adaptive design,WT Chapter}
+    \strng{namehash}{YDWNADEV1}
+    \strng{fullhash}{YDWNADEV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    In this article, we propose and evaluate three alternative randomization
+  strategies to the adaptive randomization (AR) stage used in a seamless Phase
+  I/II dose-finding design. The original design was proposed by Wages and Tait
+  in 2015 for trials of molecularly targeted agents in cancer treatments, where
+  dose-efficacy assumptions are not always monotonically increasing. Our goal
+  is to improve the design’s overall performance regarding the estimation of
+  optimal dose as well as patient allocation to effective treatments. The
+  proposed methods calculate randomization probabilities based on the
+  likelihood of every candidate model as opposed to the original design which
+  selects the best model and then randomizes doses based on estimations from
+  the selected model. Unlike the original method, our proposed adaption does
+  not require an arbitrarily specified sample size for the adaptive
+  randomization stage. Simulations are used to compare the proposed strategies
+  and a final strategy is recommended. Under most scenarios, our recommended
+  method allocates more patients to the optimal dose while improving accuracy
+  in selecting the final optimal dose without increasing the overall risk of
+  toxicity.%
+    }
+    \verb{doi}
+    \verb 10.1080/10543406.2018.1535496
+    \endverb
+    \verb{eprint}
+    \verb 30451068
+    \endverb
+    \field{issn}{1054-3406}
+    \field{number}{2}
+    \field{pages}{333\bibrangedash 347}
+    \field{title}{Improved Adaptive Randomization Strategies for a Seamless
+  {{Phase I}}/{{II}} Dose-Finding Design}
+    \verb{url}
+    \verb https://doi.org/10.1080/10543406.2018.1535496
+    \endverb
+    \field{volume}{29}
+    \verb{file}
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\QLMZQ5KK\\Yan et al. - 2019 - Impr
+    \verb oved adaptive randomization strategies for a s.pdf;C\:\\Users\\Amit\\
+    \verb Zotero\\storage\\WYRMCHS9\\10543406.2018.html
+    \endverb
+    \field{journaltitle}{Journal of Biopharmaceutical Statistics}
+    \field{annotation}{%
+    \_eprint: https://doi.org/10.1080/10543406.2018.1535496%
+    }
+    \field{eprinttype}{pmid}
+    \field{day}{04}
+    \field{month}{03}
+    \field{year}{2019}
+    \field{urlday}{21}
+    \field{urlmonth}{06}
+    \field{urlyear}{2021}
+  \endentry
+
   \entry{yapDoseTransitionPathways2017}{article}{}
     \name{author}{5}{}{%
       {{hash=YC}{%
