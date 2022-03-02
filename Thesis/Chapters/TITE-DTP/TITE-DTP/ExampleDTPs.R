@@ -5,6 +5,8 @@ library(kableExtra)
 library(dtpcrm)
 library(tidyr)
 library(diagram)
+library(DiagrammeRsvg)
+library(rsvg)
 
 # Set-up 
 skeleton <- getprior(target = 0.25, nu =4, nlevel =5, halfwidth = 0.05)
@@ -24,9 +26,10 @@ spread_paths(as_tibble(paths)) %>%
   print(n=100)
 
 # Node plot
-if(Sys.getenv("RSTUDIO") == "1") {
-  graph_paths(paths)
-}
+graph_paths(paths) %>% 
+  export_svg() %>% 
+  charToRaw %>% 
+  rsvg_pdf('C:/Users/Amit/Documents/GitHub/PhD/Thesis/Figures/TITE-DTP-InitialExampleDTPNode.pdf')
 
 # Code for the LaTeX table 
 spread_paths(as_tibble(paths)) %>%
@@ -67,7 +70,7 @@ model1 <- get_dfcrm(skeleton = skeleton, target = target) %>%
   dont_skip_doses(when_escalating = TRUE) %>% 
   stop_when_too_toxic(dose = 1, tox_threshold = 0.35, confidence = 0.9)
 
-paths <- model %>% 
+paths <- model1 %>% 
   get_dose_paths(cohort_sizes = c(3,3,3), next_dose =2)
 
 #DTPs
@@ -79,9 +82,10 @@ spread_paths(as_tibble(paths)) %>%
   print(n=100)
 
 # Node plot
-if(Sys.getenv("RSTUDIO") == "1") {
-  graph_paths(paths)
-}
+graph_paths(paths) %>% 
+  export_svg() %>% 
+  charToRaw %>% 
+  rsvg_pdf('C:/Users/Amit/Documents/GitHub/PhD/Thesis/Figures/TITE-DTP-UpdatedExampleDTPNode.pdf')
 
 # Code for the LaTeX table 
 spread_paths(as_tibble(paths)) %>%

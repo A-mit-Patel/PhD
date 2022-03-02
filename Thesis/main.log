@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.8)  1 MAR 2022 21:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.8)  2 MAR 2022 20:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -886,7 +886,7 @@ LaTeX Font Info:    Trying to load font information for T1+ppl on input line 11
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 (main.aux (Chapters/Chapter1/Chapter1.aux) (Chapters/Adept/Adept_tex.aux)
-(Chapters/WT/WT_tex_v1.1.aux) (Chapters/TITE-DTP/TITE-DTP_tex.aux))
+(Chapters/WT/WT_tex.aux) (Chapters/TITE-DTP/TITE-DTP_tex.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
@@ -1284,9 +1284,9 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [31 <./Figures//Adept-SimsOrder1.pdf>] [32] [33] [34 <./Figures//Adept-SimsOrde
 r2.pdf>] [35] [36] [37] [38]) [39]
-\openout2 = `Chapters/WT/WT_tex_v1.1.aux'.
+\openout2 = `Chapters/WT/WT_tex.aux'.
 
- (Chapters/WT/WT_tex_v1.1.tex [40
+ (Chapters/WT/WT_tex.tex [40
 
 
 
@@ -1442,14 +1442,14 @@ Overfull \vbox (55.9648pt too high) has occurred while \output is active []
 
 
 [94]
-<Figures//TITE-DTP-InitialExampleDTPNode.png, id=1019, 683.55376pt x 687.56876p
-t>
-File: Figures//TITE-DTP-InitialExampleDTPNode.png Graphic file (type png)
-<use Figures//TITE-DTP-InitialExampleDTPNode.png>
-Package pdftex.def Info: Figures//TITE-DTP-InitialExampleDTPNode.png  used on i
+<Figures//TITE-DTP-InitialExampleDTPNode.pdf, id=1019, 1157.32375pt x 1153.3087
+5pt>
+File: Figures//TITE-DTP-InitialExampleDTPNode.pdf Graphic file (type pdf)
+<use Figures//TITE-DTP-InitialExampleDTPNode.pdf>
+Package pdftex.def Info: Figures//TITE-DTP-InitialExampleDTPNode.pdf  used on i
 nput line 165.
-(pdftex.def)             Requested size: 412.56499pt x 414.99944pt.
-<Figures//TITE-DTP-InitialExampleDTPFlow.pdf, id=1021, 844.15375pt x 597.23125p
+(pdftex.def)             Requested size: 412.56499pt x 411.12569pt.
+<Figures//TITE-DTP-InitialExampleDTPFlow.pdf, id=1020, 844.15375pt x 597.23125p
 t>
 File: Figures//TITE-DTP-InitialExampleDTPFlow.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-InitialExampleDTPFlow.pdf>
@@ -1460,20 +1460,20 @@ nput line 172.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[95 <./Figures//TITE-DTP-InitialExampleDTPNode.png>] [96 <./Figures//TITE-DTP-I
+[95 <./Figures//TITE-DTP-InitialExampleDTPNode.pdf>] [96 <./Figures//TITE-DTP-I
 nitialExampleDTPFlow.pdf>] [97]
-<Figures//TITE-DTP-UpdatedExampleDTPNode.png, id=1050, 707.64375pt x 693.59125p
-t>
-File: Figures//TITE-DTP-UpdatedExampleDTPNode.png Graphic file (type png)
-<use Figures//TITE-DTP-UpdatedExampleDTPNode.png>
-Package pdftex.def Info: Figures//TITE-DTP-UpdatedExampleDTPNode.png  used on i
+<Figures//TITE-DTP-UpdatedExampleDTPNode.pdf, id=1056, 1122.1925pt x 1115.16624
+pt>
+File: Figures//TITE-DTP-UpdatedExampleDTPNode.pdf Graphic file (type pdf)
+<use Figures//TITE-DTP-UpdatedExampleDTPNode.pdf>
+Package pdftex.def Info: Figures//TITE-DTP-UpdatedExampleDTPNode.pdf  used on i
 nput line 260.
-(pdftex.def)             Requested size: 412.56499pt x 404.37871pt.
+(pdftex.def)             Requested size: 412.56499pt x 409.96756pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf, id=1051, 844.15375pt x 597.23125p
+<Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf, id=1057, 844.15375pt x 597.23125p
 t>
 File: Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf>
@@ -1483,7 +1483,7 @@ nput line 267.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[98] [99 <./Figures//TITE-DTP-UpdatedExampleDTPNode.png>] [100 <./Figures//TITE
+[98] [99 <./Figures//TITE-DTP-UpdatedExampleDTPNode.pdf>] [100 <./Figures//TITE
 -DTP-UpdatedExampleDTPFlow.pdf>]) [101] [102
 
 
@@ -1553,7 +1553,7 @@ Overfull \hbox (13.74023pt too wide) in paragraph at lines 308--308
  []
 
 [110] [111] (main.aux (Chapters/Chapter1/Chapter1.aux)
-(Chapters/Adept/Adept_tex.aux) (Chapters/WT/WT_tex_v1.1.aux)
+(Chapters/Adept/Adept_tex.aux) (Chapters/WT/WT_tex.aux)
 (Chapters/TITE-DTP/TITE-DTP_tex.aux))
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1566,10 +1566,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30563 strings out of 478659
- 672322 string characters out of 2846395
+ 30556 strings out of 478659
+ 672035 string characters out of 2846395
  1402920 words of memory out of 3000000
- 47942 multiletter control sequences out of 15000+600000
+ 47937 multiletter control sequences out of 15000+600000
  469344 words of font info for 153 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,20n,93p,2187b,2513s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1587,9 +1587,9 @@ MiKTeX/fonts/type1/public/rsfs/rsfs10.pfb><C:/Users/Amit/AppData/Local/Programs
 ms/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Amit/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Amit/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (123 pages, 922669 bytes).
+Output written on main.pdf (123 pages, 810410 bytes).
 PDF statistics:
- 1442 PDF objects out of 1728 (max. 8388607)
+ 1455 PDF objects out of 1728 (max. 8388607)
  273 named destinations out of 1000 (max. 500000)
  312 words of extra memory for PDF output out of 10000 (max. 10000000)
 
