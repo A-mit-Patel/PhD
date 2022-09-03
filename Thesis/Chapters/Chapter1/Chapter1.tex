@@ -7,8 +7,10 @@
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
+\section{Aims of this thesis}
+Early phase clinical trials are essential in the drug development process as they provide key information about new interventions which can be used in later-phase testing. Specifically, they aim to find a dose which can then be carried forward into phase II trials. Conventionally, the design of these trials are algorithm based which are simple to conduct and easy to implement. More complex methodologies such as model based designs have started to become more common. 
 
-
+This thesis aims to investigate extensions to existing model based methodologies in complex and innovative trial designs. Another aim will be to explore the application and implementation of these extensions, in trials currently being conducted, in order to gauge the effectiveness of these developments. 
 %-----------------------------------
 %	SUBSECTION 1
 %-----------------------------------
@@ -21,3 +23,24 @@
 %----------------------------------------------------------------------------------------
 %	SECTION 2
 %----------------------------------------------------------------------------------------
+\section{Chapters in this thesis}
+
+The first chapter of this thesis focuses on a trial being run at the Cancer Research Clinical Trials Unit (CRCTU). The ADePT-DDR trial is an open label multi-centre platform trial that aims to evaluate the safety and efficacy of different DNA Damage Repair (DDR) agents together with radiotherapy in patients with head and neck squamous cell carcinoma. The initial component of this trial is a single-arm dose-finding phase Ib/IIa trial to evaluate the DDR ATR inhibitor agent, AZD6738, in combination with radiotherapy alone.
+
+This component has been designed using the partial ordering time-to-event continual reassessment method (PO-TITE-CRM) to determine the maximum tolerated dose (MTD) of AZD6738. The PO-TITE-CRM design was introduced in 2013 as an extension to the TITE-CRM design, itself an extension of the original continual reassessment method (CRM), a model-based approach to dose-finding trials. Despite the publication of this novel dose-escalation design its implementation appears to be rare. 
+
+One of the key assumptions of the CRM is the monotonicity assumption which is that we assume that as the dosage of a drug increases so does the probability of toxicity. The CRM design was extended to work in the presence of partial orders in which, the order of toxicity probabilities may only be known for a subset of doses. Here the monotonicity assumption does not hold across the entire set of doses. This methodology was then further extended to include a time-to-event (TITE) component that attempts to utilise data from partially observed patients throughout the trial to account for late-onset toxicities. The dose levels under evaluation in the Adept-DDR trial vary not only by dose but by frequency taken. This aspect, alongside the potential later toxicities as a result of the treatment necessitated the implementation of the PO-TITE-CRM design.  
+
+Multiple iterations of simulations were utilised to determine the optimal parameterisation of the design. Simulation results from the optimal parameterisation show the operating characteristics of the design perform well across a variety of scenarios. Further work was done to compare the design we chose against potential alternatives. We present an overview of the design methodology and its application in this trial scenario.
+
+Our second chapter focuses on an extension to a seamless phase I/II design. This design by Wages and Tait uses adaptive randomisation to conduct its dose finding. We aimed to extend this design to include a control comparator arm by leveraging the designs adaptive randomisation mechanic. Our motivation was to develop a seamless phase I/II design that would allow for a direct comparison to a control arm. This is a common feature of traditional phase II designs but does not appear in seamless phase I/II designs. 
+
+We present the modification we make to the design and detail how altering specific parameters impacts the allocation of patients to the control arm. Simulations were then conducted to investigate the operating characteristics under certain specifications. Further simulation work is then used to compare our modified design with the original Wages and Tait design to ascertain if performance is impacted by our modification. Additionally, this control arm allows us to conduct power calculations comparing efficacy rates between patients allocated to the optimal dose and those in the control arm. These calculations give an insight into how our design would perform as a normal phase II trial. 
+
+Work is currently being done on the third chapter which is about extending dose-transition pathways (DTPs) for use in time-to-event (TITE) scenarios. Model based designs may be more difficult for clinicians and other members of a trials team to understand compared to traditional algorithm based designs. DTPs are a visualisation tool that aim to simplify the statistical models of these designs by showing various outcomes of the design in a series of paths dependent on the possible outcomes that can be observed. 
+
+Time-to-event scenarios present an additional challenge. Normally these designs operate using the outcome of a binary variable which indicates if a patient experienced a toxicity or not. In a TITE setting the number of outcomes is much more complicated as we have to take into account the time-point in which a patient experiences a toxicity. We aim to explore how this affects DTPs and the challenges that are faced when using them for these trials. We also look into potential solutions for this problem and how they could be implemented. 
+
+What follows in this document is an extract from the first chapter. 
+
+

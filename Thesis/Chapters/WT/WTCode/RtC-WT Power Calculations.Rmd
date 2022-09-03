@@ -1,0 +1,141 @@
+---
+title: "RtC-WT power calculations"
+author: "Amit Patel"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(kableExtra)
+library(clinfun)
+library(pwr)
+load('RProbComboSimsData.RData')
+rm(list=ls(pattern="p20"))
+rm(list=ls(pattern="n0"))
+rm(list=ls(pattern="n15"))
+rm(list=ls(pattern="n45"))
+rm(list=ls(pattern="n60"))
+
+```
+
+
+```{r}
+# DESIGN SPECIFICATION
+# These details remain constant across all scenarios 
+
+# Specify the total number of doses.
+d <- 5
+# Specify the number of toxicity orderings
+s <- 1 
+# Specify a set of toxicity skeleton values
+p.skel <- c(0.1, 0.15, 0.25, 0.35, 0.45)
+# Specify the number of efficacy orderings 
+g <- 7
+# Specify the possible efficacy orderings of the drug combination
+q.skel <- matrix(nrow=g, ncol=d)
+q.skel[1,] <- c(0.3, 0.7, 0.6, 0.5, 0.4)
+q.skel[2,] <- c(0.3, 0.6, 0.7, 0.6, 0.5)
+q.skel[3,] <- c(0.3, 0.5, 0.6, 0.7, 0.6)
+q.skel[4,] <- c(0.3, 0.4, 0.5, 0.6, 0.7)
+q.skel[5,] <- c(0.3, 0.5, 0.6, 0.7, 0.7)
+q.skel[6,] <- c(0.3, 0.6, 0.7, 0.7, 0.7)
+q.skel[7,] <- c(0.3, 0.7, 0.7, 0.7, 0.7)
+
+# Toxicity upper limit 
+tul <- 0.35
+# Efficacy lower limit 
+ell <- 0.5 
+# Number of patients 
+n <- 60 
+# Cohort size for each inclusion 
+cohortsize <- 3
+# Number of cohorts 
+ncohort <- n/cohortsize
+# Starting combination 
+start.comb <- 2 
+
+# Stopping criteria 
+safety.conf <- 0.90 
+futility.conf <- 0.90
+
+# Scenario 4 - unimodal, tolerable 
+s4eff <- c(0.3, 0.4, 0.7, 0.5, 0.4)
+s4tox <- c(0.1, 0.2, 0.25, 0.3, 0.35)
+
+# Fixed adaptive randomisation probability for control 
+placebo.rand.prob <- 0.33
+# Size of Adaptive randomisation phase 
+n.ar <- 30 
+
+# Repeatable simulations use seeds
+seed <- 123
+ntrial <- 10
+```
+
+```{r}
+set.seed(seed); n30p33sims4 = wt.sim(s4tox, s4eff, p.skel, q.skel, tul, ell,
+                                    cohortsize, ncohort, start.comb, n.ar=n.ar, 
+                                    ntrial = ntrial, safety.conf = safety.conf, 
+                                    futility.conf = futility.conf,
+                                    check.tox.at.dose.level = 2,
+                                    lowest.is.placebo = TRUE, 
+                                    placebo.rand.prob = placebo.rand.prob)
+```
+
+```{r}
+n30p33sims4$FullTreatedAtDose[1,]
+
+```
+
+```{r}
+n30p33sims4$FullRecommendation[1,]
+```
+
+```{r}
+Ncontrol <- n30p33sims4$FullTreatedAtDose[1,1]
+Nobd <- n30p33sims4$FullTreatedAtDose[1,3]
+```
+
+```{r}
+ph2simon(0.3, 0.5, 0.1, 0.1) 
+```
+
+```{r}
+pwr.2p2n.test(h = 0.2, n1 = Ncontrol  , n2 = Nobd, sig.level = 0.1)
+```
+
+Assuming control has proportion of response at 0.3 and we are trying to detect an effect size of 0.2. The corresponding proportion of response for obd is: 
+
+```{r}
+(sin((0.2 + 2*asin(sqrt(0.3)))/2))^2
+```
+
+```{r}
+pwr.2p2n.test(h = 0.5, n1 = Nobd , n2 = Ncontrol , sig.level = 0.1)
+```
+
+Assuming control has proportion of response at 0.3 and we are trying to detect an effect size of 0.5. The corresponding proportion of response for obd is 
+
+```{r}
+(sin((0.5 + 2*asin(sqrt(0.3)))/2))^2
+```
+
+```{r}
+pwr.2p2n.test(h = 0.8, n1 = Nobd , n2 = Ncontrol , sig.level = 0.1)
+```
+
+Assuming control has proportion of response at 0.3 and we are trying to detect an effect size of 0.5. The corresponding proportion of response for obd is 
+
+```{r}
+(sin((0.8 + 2*asin(sqrt(0.3)))/2))^2
+```
+Comparison to simons two stage would assume a proportion of 0.3 in control and 0.5 in obd. That corresponding effect size is 
+
+```{r}
+ES.h(0.5, 0.3)
+```
+
+```{r}
+pwr.2p2n.test(h = 0.4115168, n1 = Nobd , n2 = Ncontrol , sig.level = 0.1)
+```
