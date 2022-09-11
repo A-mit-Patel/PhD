@@ -25,7 +25,9 @@
 library(binom)
 library(nnet)
 library(dfcrm)
-
+# pwr calcs
+library(pwr)
+library(matrixStats)
 
 # Written by KB to split out method calculation and simulation
 post.tox <- function(a, p, y, n) {
@@ -339,7 +341,8 @@ wt.sim <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort,
                    check.tox.at.dose.level, 
                    verbose = TRUE, really.verbose = FALSE,
                    full_output = TRUE, 
-                   lowest.is.placebo = FALSE, placebo.rand.prob = NULL) {
+                   lowest.is.placebo = FALSE, placebo.rand.prob = NULL,
+                   effect.sizes = NULL) {
   
   # p0, true toxicity probabilities
   # q0, true efficacy probabilities
@@ -380,6 +383,8 @@ wt.sim <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort,
   eff.skel <- matrix(nrow = ntrial, ncol = nrow(q.skel))
   final.eff.skel <- rep(0, nrow(q.skel))
   nstop = 0
+  h <- effect.sizes
+  npower <- matrix(nrow = ntrial, ncol = length(h))
   
   for(i in 1:ntrial){
     if(verbose & i %% floor(ntrial / 10) == 0) print(i)
@@ -404,6 +409,22 @@ wt.sim <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort,
     eff.skel[i, ] <- result$EffSkel
     final.eff.skel[result$FinalEffSkel] <- final.eff.skel[result$FinalEffSkel]+1
     nstop <- nstop + result$stop
+    
+    
+    if(result$stop == 0 & result$comb.select[1] != 1){
+      
+      if(result$pt.allocation[1] > 0 & 
+         result$pt.allocation[result$comb.select == 1] >0 ){
+        
+        for (j in 1:length(h)) {
+          npower[i,j] <- pwr.2p2n.test(h = h[j], n1 = result$pt.allocation[1],
+                                       n2 = result$pt.allocation[result$comb.select == 1],
+                                       sig.level = 0.1)$power
+        }
+      }
+      
+    }
+
 
   }
   
@@ -443,7 +464,10 @@ wt.sim <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort,
     ProbSelect = round(colMeans(comb.select), 4),
     NStop = nstop,
     ProbStop = nstop / ntrial,
-    
+    EffectSizes = h,
+    PowerMean = round(colMeans(npower, na.rm = T), 4),
+    PowerSD = round(colSds(npower, na.rm = T), 4),
+    NPower = sum(!is.na(npower[,1])),
     CohortToxSkel = tox.skel,
     ProbFinalToxSkel = final.tox.skel / ntrial,
     CohortEffSkel = eff.skel,
@@ -457,6 +481,7 @@ wt.sim <- function(p0, q0, p.skel, q.skel, tul, ell, cohortsize, ncohort,
     l$FullToxAtDose = y
     l$FullEffAtDose = z
     l$FullRecommendation = comb.select
+    l$FullPower = npower
    # l$FullStopTrial = stop_trial
   }
   
