@@ -2009,3 +2009,51 @@ data %>%
   pack_rows('Selection probabilities for the OBD', 1, 3) %>% 
   pack_rows('Selection probabilities for good dose-levels', 4, 6) %>% 
   cat()
+
+
+# Power Calculations 
+
+# Table for power calculation summary
+load("PowerSimsData.RData")
+data <- rbind(
+  c(pwrsims1$PowerMean[1], pwrsims1$PowerMean[2], pwrsims1$PowerMean[3], 
+    pwrsims1$PowerMean[4], pwrsims1$NPower, pwrsims1$PowerSD[1],
+    pwrsims1$PowerSD[2], pwrsims1$PowerSD[3], pwrsims1$PowerSD[4]), 
+  
+  c(pwrsims3$PowerMean[1], pwrsims3$PowerMean[2], pwrsims3$PowerMean[3], 
+    pwrsims3$PowerMean[4], pwrsims3$NPower, pwrsims3$PowerSD[1], 
+    pwrsims3$PowerSD[2], pwrsims3$PowerSD[3], pwrsims3$PowerSD[4]),
+
+  c(pwrsims4$PowerMean[1], pwrsims4$PowerMean[2], pwrsims4$PowerMean[3], 
+    pwrsims4$PowerMean[4],pwrsims4$NPower, pwrsims4$PowerSD[1], 
+    pwrsims4$PowerSD[2], pwrsims4$PowerSD[3], pwrsims4$PowerSD[4]),
+
+  c(pwrsims6$PowerMean[1], pwrsims6$PowerMean[2], pwrsims6$PowerMean[3], 
+    pwrsims6$PowerMean[4], pwrsims6$NPower, pwrsims6$PowerSD[1], 
+    pwrsims6$PowerSD[2], pwrsims6$PowerSD[3], pwrsims6$PowerSD[4]),
+
+  c(pwrsims7$PowerMean[1], pwrsims7$PowerMean[2], pwrsims7$PowerMean[3], 
+    pwrsims7$PowerMean[4], pwrsims7$NPower, pwrsims7$PowerSD[1], 
+    pwrsims7$PowerSD[2], pwrsims7$PowerSD[3], pwrsims7$PowerSD[4]),
+
+  c(pwrsims9$PowerMean[1], pwrsims9$PowerMean[2], pwrsims9$PowerMean[3], 
+    pwrsims9$PowerMean[4], pwrsims9$NPower, pwrsims9$PowerSD[1], 
+    pwrsims9$PowerSD[2], pwrsims9$PowerSD[3], pwrsims9$PowerSD[4]),
+
+  c(pwrsims10$PowerMean[1], pwrsims10$PowerMean[2], pwrsims10$PowerMean[3], 
+    pwrsims10$PowerMean[4], pwrsims10$NPower, pwrsims10$PowerSD[1],
+    pwrsims10$PowerSD[2], pwrsims10$PowerSD[3], pwrsims10$PowerSD[4]),
+
+  c(pwrsims12$PowerMean[1], pwrsims12$PowerMean[2], pwrsims12$PowerMean[3],
+    pwrsims12$PowerMean[4], pwrsims12$NPower, pwrsims12$PowerSD[1], 
+    pwrsims12$PowerSD[2], pwrsims12$PowerSD[3], pwrsims12$PowerSD[4])
+) %>% 
+  data.frame() %>% 
+  mutate_if(is.numeric, round, digits = 2) %>% 
+  mutate(Scenario = c('1', '3', '4',' 6', '7', '9', '10', '12'),
+         '0.2' = paste0(X1, ' (', X6, ')', sep = ''),
+         '0.41' = paste0(X2, ' (', X7, ')', sep = ''),
+         '0.5' = paste0(X3, ' (', X8, ')', sep = ''),
+         '0.8' = paste0(X4, ' (', X9, ')', sep = ''),
+         N = X5 ) %>% 
+  select(Scenario, '0.2', '0.41', '0.5', '0.8', N)

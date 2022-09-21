@@ -3225,6 +3225,48 @@
     \field{urlyear}{2021}
   \endentry
 
+  \entry{cohenStatisticalPowerAnalysis1988}{book}{}
+    \name{author}{1}{}{%
+      {{hash=CJ}{%
+         family={Cohen},
+         familyi={C\bibinitperiod},
+         given={Jacob},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Routledge}}%
+    }
+    \keyw{WT Chapter}
+    \strng{namehash}{CJ1}
+    \strng{fullhash}{CJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Statistical Power Analysis is a nontechnical guide to power analysis in
+  research planning that provides users of applied statistics with the tools
+  they need for more effective analysis. The Second Edition includes: * a
+  chapter covering power analysis in set correlation and multivariate methods;
+  * a chapter considering effect size, psychometric reliability, and the
+  efficacy of "qualifying" dependent variables and; * expanded power and sample
+  size tables for multiple regression/correlation.%
+    }
+    \verb{doi}
+    \verb 10.4324/9780203771587
+    \endverb
+    \field{edition}{2}
+    \field{isbn}{978-0-203-77158-7}
+    \field{pagetotal}{567}
+    \field{title}{Statistical {{Power Analysis}} for the {{Behavioral
+  Sciences}}}
+    \list{location}{1}{%
+      {{New York}}%
+    }
+    \field{day}{01}
+    \field{month}{07}
+    \field{year}{1988}
+  \endentry
+
   \entry{yanImprovedAdaptiveRandomization2019}{article}{}
     \name{author}{3}{}{%
       {{hash=YD}{%

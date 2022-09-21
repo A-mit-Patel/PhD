@@ -51,20 +51,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.4.2}Impact of AR phase size and probability of randomisation to control on RtC-WT}{60}{subsection.83}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.3}Comparison of RtC-WT against Alternative Designs }{75}{subsection.87}%
+\contentsline {subsection}{\numberline {3.4.3}Comparison of RtC-WT against Alternative Designs }{76}{subsection.87}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Discussion}{83}{section.92}%
+\contentsline {section}{\numberline {3.5}Efficiency of an Efficacy Test}{82}{section.92}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Extending Dose Transition Pathways for use in TITE-CRMs}{89}{chapter.93}%
+\contentsline {section}{\numberline {3.6}Discussion}{86}{section.97}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Introduction}{89}{section.94}%
+\contentsline {chapter}{\numberline {4}Extending Dose Transition Pathways for use in TITE-CRMs}{91}{chapter.98}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Dose Transition Pathways}{92}{section.95}%
+\contentsline {section}{\numberline {4.1}Introduction}{91}{section.99}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Example trial to illustrate DTPs}{94}{subsection.96}%
+\contentsline {section}{\numberline {4.2}Dose Transition Pathways}{94}{section.100}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Using DTPs to calibrate the CRM}{95}{subsection.98}%
+\contentsline {subsection}{\numberline {4.2.1}Example trial to illustrate DTPs}{96}{subsection.101}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}DTPs as an analysis tool}{103}{subsection.105}%
+\contentsline {subsection}{\numberline {4.2.2}Using DTPs to calibrate the CRM}{97}{subsection.103}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{105}{chapter*.106}%
+\contentsline {subsection}{\numberline {4.2.3}DTPs as an analysis tool}{105}{subsection.110}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{107}{chapter*.111}%
