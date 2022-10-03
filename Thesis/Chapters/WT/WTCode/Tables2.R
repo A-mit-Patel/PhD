@@ -2057,3 +2057,14 @@ data <- rbind(
          '0.8' = paste0(X4, ' (', X9, ')', sep = ''),
          N = X5 ) %>% 
   select(Scenario, '0.2', '0.41', '0.5', '0.8', N)
+
+data %>% 
+  kable(format = 'latex', booktabs = T, linesep = '', 
+        align = c('l', rep('c', times = 5)), 
+        caption = '\\label{tab_wt:Power-Calcs}Power calculations for various effect sizes based on simulation results.'
+  ) %>% 
+  kable_styling(position = 'center') %>%
+  add_header_above(c(' ' = 1, 
+                     'Effect Sizes' = 4,
+                     ' ' = 1)) %>% 
+  cat()

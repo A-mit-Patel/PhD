@@ -57,16 +57,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.6}Discussion}{86}{section.97}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Extending Dose Transition Pathways for use in TITE-CRMs}{91}{chapter.98}%
+\contentsline {chapter}{\numberline {4}Extending Dose Transition Pathways for use in TITE-CRMs}{93}{chapter.98}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Introduction}{91}{section.99}%
+\contentsline {section}{\numberline {4.1}Introduction}{93}{section.99}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Dose Transition Pathways}{94}{section.100}%
+\contentsline {section}{\numberline {4.2}Dose Transition Pathways}{96}{section.100}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Example trial to illustrate DTPs}{96}{subsection.101}%
+\contentsline {subsection}{\numberline {4.2.1}Example trial to illustrate DTPs}{98}{subsection.101}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Using DTPs to calibrate the CRM}{97}{subsection.103}%
+\contentsline {subsection}{\numberline {4.2.2}Using DTPs to calibrate the CRM}{99}{subsection.103}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}DTPs as an analysis tool}{105}{subsection.110}%
+\contentsline {subsection}{\numberline {4.2.3}DTPs as an analysis tool}{107}{subsection.110}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{107}{chapter*.111}%
+\contentsline {chapter}{Bibliography}{109}{chapter*.111}%
