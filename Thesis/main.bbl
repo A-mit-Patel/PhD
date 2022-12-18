@@ -17,6 +17,369 @@
 \endgroup
 
 \datalist[entry]{none/global//global/global}
+  \entry{oquigleyContinualReassessmentMethod1990}{article}{}
+    \name{author}{3}{}{%
+      {{hash=OJ}{%
+         family={O'Quigley},
+         familyi={O\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PM}{%
+         family={Pepe},
+         familyi={P\bibinitperiod},
+         given={Margaret},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=FL}{%
+         family={Fisher},
+         familyi={F\bibinitperiod},
+         given={Lloyd},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{[Wiley, International Biometric Society]}}%
+    }
+    \keyw{Adept Chapter,WT Chapter}
+    \strng{namehash}{OJPMFL1}
+    \strng{fullhash}{OJPMFL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    This paper looks at a new approach to the design and analysis of Phase 1
+  clinical trials in cancer. The basic idea and motivation behind the approach
+  stem from an attempt to reconcile the needs of dose-finding experimentation
+  with the ethical demands of established medical practice. It is argued that
+  for these trials the particular shape of the dose toxicity curve is of little
+  interest. Attention focuses rather on identifying a dose with a given
+  targeted toxicity level and on concentrating experimentation at that which
+  all current available evidence indicates to be the best estimate of this
+  level. Such an approach not only makes an explicit attempt to meet ethical
+  requirements but also enables the use of models whose only requirements are
+  that locally (i.e., around the dose corresponding to the targeted toxicity
+  level) they reasonably well approximate the true probability of toxic
+  response. Although a large number of models could be contemplated, we look at
+  a particularly simple one. Extensive simulations show the model to have real
+  promise.%
+    }
+    \verb{doi}
+    \verb 10.2307/2531628
+    \endverb
+    \verb{eprint}
+    \verb 2531628
+    \endverb
+    \field{issn}{0006-341X}
+    \field{number}{1}
+    \field{pages}{33\bibrangedash 48}
+    \field{shorttitle}{Continual {{Reassessment Method}}}
+    \field{title}{Continual {{Reassessment Method}}: {{A Practical Design}} for
+  {{Phase}} 1 {{Clinical Trials}} in {{Cancer}}}
+    \field{volume}{46}
+    \field{journaltitle}{Biometrics}
+    \field{eprinttype}{jstor}
+    \field{year}{1990}
+  \endentry
+
+  \entry{rogatkoTranslationInnovativeDesigns2007}{article}{}
+    \name{author}{6}{}{%
+      {{hash=RA}{%
+         family={Rogatko},
+         familyi={R\bibinitperiod},
+         given={André},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Schoeneck},
+         familyi={S\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=JW}{%
+         family={Jonas},
+         familyi={J\bibinitperiod},
+         given={William},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=TM}{%
+         family={Tighiouart},
+         familyi={T\bibinitperiod},
+         given={Mourad},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KFR}{%
+         family={Khuri},
+         familyi={K\bibinitperiod},
+         given={Fadlo\bibnamedelima R.},
+         giveni={F\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Porter},
+         familyi={P\bibinitperiod},
+         given={Alan},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{American Society of Clinical Oncology}}%
+    }
+    \keyw{Adept Chapter,TITE-DTP Chapter}
+    \strng{namehash}{RASDJW+1}
+    \strng{fullhash}{RASDJWTMKFRPA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Purpose Phase I clinical trials of new anticancer therapies determine
+  suitable doses for further testing. Optimization of their design is vital in
+  that they enroll cancer patients whose well-being is distinctly at risk. This
+  study examines the effectiveness of knowledge transfer about more effective
+  statistical designs to clinical practice. Methods We examined abstract
+  records of cancer phase I trials from the Science Citation Index database
+  between 1991 and 2006 and classified them into clinical (dose-finding trials)
+  and statistical trials (methodologic studies of dose-escalation designs). We
+  then mapped these two sets by tracking which trials adopted new statistical
+  designs. Results One thousand two hundred thirty-five clinical and 90
+  statistical studies were identified. Only 1.6\% of the phase I cancer trials
+  (20 of 1,235 trials) followed a design proposed in one of the statistical
+  studies. These 20 clinical studies showed extensive lags between publication
+  of the statistical paper and its translation into a clinical paper. These 20
+  clinical trials followed Bayesian adaptive designs. The remainder used
+  variations of the standard up-and-down method. Conclusion A consequence of
+  using less effective designs is that more patients are treated with doses
+  outside the therapeutic window. Simulation studies have shown that
+  up-and-down designs treated only 35\% of patients at optimal dose levels
+  versus 55\% for Bayesian adaptive designs. This implies needless loss of
+  treatment efficacy and, possibly, lives. We suggest that regulatory agencies
+  (eg, US Food and Drug Administration) should proactively encourage the
+  adoption of statistical designs that would allow more patients to be treated
+  at near-optimal doses while controlling for excessive toxicity.%
+    }
+    \verb{doi}
+    \verb 10.1200/JCO.2007.12.1012
+    \endverb
+    \field{issn}{0732-183X}
+    \field{number}{31}
+    \field{pages}{4982\bibrangedash 4986}
+    \field{shortjournal}{JCO}
+    \field{title}{Translation of {{Innovative Designs Into Phase I Trials}}}
+    \verb{url}
+    \verb https://ascopubs.org/doi/full/10.1200/JCO.2007.12.1012
+    \endverb
+    \field{volume}{25}
+    \verb{file}
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\Y7WCUDHX\\JCO.2007.12.html
+    \endverb
+    \field{journaltitle}{Journal of Clinical Oncology}
+    \field{day}{01}
+    \field{month}{11}
+    \field{year}{2007}
+    \field{urlday}{27}
+    \field{urlmonth}{08}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{chiuzanDosefindingDesignsTrials2017}{article}{}
+    \name{author}{7}{}{%
+      {{hash=CC}{%
+         family={Chiuzan},
+         familyi={C\bibinitperiod},
+         given={Cody},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Shtaynberger},
+         familyi={S\bibinitperiod},
+         given={Jonathan},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MGA}{%
+         family={Manji},
+         familyi={M\bibinitperiod},
+         given={Gulam\bibnamedelima A.},
+         giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=DJK}{%
+         family={Duong},
+         familyi={D\bibinitperiod},
+         given={Jimmy\bibnamedelima K.},
+         giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=SGK}{%
+         family={Schwartz},
+         familyi={S\bibinitperiod},
+         given={Gary\bibnamedelima K.},
+         giveni={G\bibinitperiod\bibinitdelim K\bibinitperiod},
+      }}%
+      {{hash=IA}{%
+         family={Ivanova},
+         familyi={I\bibinitperiod},
+         given={Anastasia},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=LSM}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={Shing\bibnamedelima M.},
+         giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Taylor \& Francis}}%
+    }
+    \keyw{Adept Chapter,Dose-finding methods,immunotherapy,maximum tolerated
+  dose,optimal dose,phase 1 designs,targeted therapy,TITE-DTP Chapter}
+    \strng{namehash}{CCSJMGA+1}
+    \strng{fullhash}{CCSJMGADJKSGKIALSM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Recently, there has been a surge of early phase trials of molecularly
+  targeted agents (MTAs) and immunotherapies. These new therapies have
+  different toxicity profiles compared to cytotoxic therapies. MTAs can benefit
+  from new trial designs that allow inclusion of low-grade toxicities,
+  late-onset toxicities, addition of an efficacy endpoint, and flexibility in
+  the specification of a target toxicity probability. To study the degree of
+  adoption of these methods, we conducted a Web of Science search of articles
+  published between 2008 and 2014 that describe phase 1 oncology trials. Trials
+  were categorized based on the dose-finding design used and the type of drug
+  studied. Out of 1,712 dose-finding trials that met our criteria, 1,591
+  (92.9\%) utilized a rule-based design, and 92 (5.4\%; range 2.3\% in 2009 to
+  9.7\% in 2014) utilized a model-based or novel design. Over half of the
+  trials tested an MTA or immunotherapy. Among the MTA and immunotherapy
+  trials, 5.8\% used model-based methods, compared to 3.9\% and 8.3\% of the
+  chemotherapy or radiotherapy trials, respectively. While the percentage of
+  trials using novel dose-finding designs has tripled since 2007, the adoption
+  of these designs continues to remain low.%
+    }
+    \verb{doi}
+    \verb 10.1080/10543406.2017.1289952
+    \endverb
+    \verb{eprint}
+    \verb 28166468
+    \endverb
+    \field{issn}{1054-3406}
+    \field{number}{3}
+    \field{pages}{477\bibrangedash 494}
+    \field{title}{Dose-Finding Designs for Trials of Molecularly Targeted
+  Agents and Immunotherapies}
+    \verb{url}
+    \verb https://doi.org/10.1080/10543406.2017.1289952
+    \endverb
+    \field{volume}{27}
+    \verb{file}
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\WH7FVDME\\Chiuzan et al. - 2017 -
+    \verb Dose-finding designs for trials of molecularly tar.pdf;C\:\\Users\\Am
+    \verb it\\Zotero\\storage\\MQXKCFX2\\10543406.2017.html
+    \endverb
+    \field{journaltitle}{Journal of Biopharmaceutical Statistics}
+    \field{annotation}{%
+    \_eprint: https://doi.org/10.1080/10543406.2017.1289952%
+    }
+    \field{eprinttype}{pmid}
+    \field{day}{04}
+    \field{month}{05}
+    \field{year}{2017}
+    \field{urlday}{27}
+    \field{urlmonth}{08}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{cheungDfcrmDoseFindingContinual2019}{software}{}
+    \name{author}{1}{}{%
+      {{hash=CK}{%
+         family={Cheung},
+         familyi={C\bibinitperiod},
+         given={Ken},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \keyw{Adept Chapter,ClinicalTrials,ExperimentalDesign}
+    \strng{namehash}{CK1}
+    \strng{fullhash}{CK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    Provides functions to run the CRM and TITE-CRM in phase I trials and
+  calibration tools for trial planning purposes.%
+    }
+    \field{shorttitle}{Dfcrm}
+    \field{title}{Dfcrm: {{Dose-Finding}} by the {{Continual Reassessment
+  Method}}}
+    \verb{url}
+    \verb https://CRAN.R-project.org/package=dfcrm
+    \endverb
+    \field{version}{0.2-2.1}
+    \field{day}{26}
+    \field{month}{01}
+    \field{year}{2019}
+    \field{urlday}{01}
+    \field{urlmonth}{08}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{brockModularApproachDose2020}{online}{}
+    \name{author}{1}{}{%
+      {{hash=BK}{%
+         family={Brock},
+         familyi={B\bibinitperiod},
+         given={Kristian},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Comprehensive R Archive Network (CRAN)}}%
+    }
+    \keyw{WT Chapter}
+    \strng{namehash}{BK1}
+    \strng{fullhash}{BK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Methods for working with dose-finding clinical trials. We provide
+  implementations of many dose-finding clinical trial designs, including the
+  continual reassessment method (CRM) by O'Quigley et al. (1990) \&lt;{$<$}a
+  href="https://doi.org/10.2307\%2F2531628"{$>$}doi:10.2307/2531628{$<$}/a{$>\&$}gt;,
+  the toxicity probability interval (TPI) design by Ji et al. (2007)
+  \&lt;{$<$}a
+  href="https://doi.org/10.1177\%2F1740774507079442"{$>$}doi:10.1177/1740774507079442{$<$}/a{$>\&$}gt;,
+  the modified TPI (mTPI) design by Ji et al. (2010) \&lt;{$<$}a
+  href="https://doi.org/10.1177\%2F1740774510382799"{$>$}doi:10.1177/1740774510382799{$<$}/a{$>\&$}gt;,
+  the Bayesian optimal interval design (BOIN) by Liu \&amp; Yuan (2015)
+  \&lt;{$<$}a
+  href="https://doi.org/10.1111\%2Frssc.12089"{$>$}doi:10.1111/rssc.12089{$<$}/a{$>\&$}gt;,
+  EffTox by Thall \&amp; Cook (2004) \&lt;{$<$}a
+  href="https://doi.org/10.1111\%2Fj.0006-341X.2004.00218.x"{$>$}doi:10.1111/j.0006-341X.2004.00218.x{$<$}/a{$>\&$}gt;;
+  the design of Wages \&amp; Tait (2015) \&lt;{$<$}a
+  href="https://doi.org/10.1080\%2F10543406.2014.920873"{$>$}doi:10.1080/10543406.2014.920873{$<$}/a{$>\&$}gt;,
+  and the 3+3 described by Korn et al. (1994) \&lt;{$<$}a
+  href="https://doi.org/10.1002\%2Fsim.4780131802"{$>$}doi:10.1002/sim.4780131802{$<$}/a{$>\&$}gt;.
+  All designs are implemented with a common interface. We also offer optional
+  additional classes to tailor the behaviour of all designs, including avoiding
+  skipping doses, stopping after n patients have been treated at the
+  recommended dose, stopping when a toxicity condition is met, or demanding
+  that n patients are treated before stopping is allowed. By daisy-chaining
+  together these classes using the pipe operator from 'magrittr', it is simple
+  to tailor the behaviour of a dose-finding design so it behaves how the
+  trialist wants. Having provided a flexible interface for specifying designs,
+  we then provide functions to run simulations and calculate dose-paths for
+  future cohorts of patients.%
+    }
+    \field{title}{Modular {{Approach}} to {{Dose Finding Clinical Trials}}
+  [{{R}} Package Escalation Version 0.1.4]}
+    \verb{url}
+    \verb https://CRAN.R-project.org/package=escalation
+    \endverb
+    \verb{file}
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\JA2TYVIE\\index.html
+    \endverb
+    \field{day}{18}
+    \field{month}{10}
+    \field{year}{2020}
+    \field{urlday}{14}
+    \field{urlmonth}{06}
+    \field{urlyear}{2021}
+  \endentry
+
   \entry{stranskyMutationalLandscapeHead2011}{article}{}
     \name{author}{39}{}{%
       {{hash=SN}{%
@@ -830,273 +1193,6 @@
     \field{year}{2009}
     \field{urlday}{22}
     \field{urlmonth}{07}
-    \field{urlyear}{2020}
-  \endentry
-
-  \entry{oquigleyContinualReassessmentMethod1990}{article}{}
-    \name{author}{3}{}{%
-      {{hash=OJ}{%
-         family={O'Quigley},
-         familyi={O\bibinitperiod},
-         given={John},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=PM}{%
-         family={Pepe},
-         familyi={P\bibinitperiod},
-         given={Margaret},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=FL}{%
-         family={Fisher},
-         familyi={F\bibinitperiod},
-         given={Lloyd},
-         giveni={L\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {{[Wiley, International Biometric Society]}}%
-    }
-    \keyw{Adept Chapter,WT Chapter}
-    \strng{namehash}{OJPMFL1}
-    \strng{fullhash}{OJPMFL1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{shorttitle}
-    \field{abstract}{%
-    This paper looks at a new approach to the design and analysis of Phase 1
-  clinical trials in cancer. The basic idea and motivation behind the approach
-  stem from an attempt to reconcile the needs of dose-finding experimentation
-  with the ethical demands of established medical practice. It is argued that
-  for these trials the particular shape of the dose toxicity curve is of little
-  interest. Attention focuses rather on identifying a dose with a given
-  targeted toxicity level and on concentrating experimentation at that which
-  all current available evidence indicates to be the best estimate of this
-  level. Such an approach not only makes an explicit attempt to meet ethical
-  requirements but also enables the use of models whose only requirements are
-  that locally (i.e., around the dose corresponding to the targeted toxicity
-  level) they reasonably well approximate the true probability of toxic
-  response. Although a large number of models could be contemplated, we look at
-  a particularly simple one. Extensive simulations show the model to have real
-  promise.%
-    }
-    \verb{doi}
-    \verb 10.2307/2531628
-    \endverb
-    \verb{eprint}
-    \verb 2531628
-    \endverb
-    \field{issn}{0006-341X}
-    \field{number}{1}
-    \field{pages}{33\bibrangedash 48}
-    \field{shorttitle}{Continual {{Reassessment Method}}}
-    \field{title}{Continual {{Reassessment Method}}: {{A Practical Design}} for
-  {{Phase}} 1 {{Clinical Trials}} in {{Cancer}}}
-    \field{volume}{46}
-    \field{journaltitle}{Biometrics}
-    \field{eprinttype}{jstor}
-    \field{year}{1990}
-  \endentry
-
-  \entry{rogatkoTranslationInnovativeDesigns2007}{article}{}
-    \name{author}{6}{}{%
-      {{hash=RA}{%
-         family={Rogatko},
-         familyi={R\bibinitperiod},
-         given={André},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=SD}{%
-         family={Schoeneck},
-         familyi={S\bibinitperiod},
-         given={David},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=JW}{%
-         family={Jonas},
-         familyi={J\bibinitperiod},
-         given={William},
-         giveni={W\bibinitperiod},
-      }}%
-      {{hash=TM}{%
-         family={Tighiouart},
-         familyi={T\bibinitperiod},
-         given={Mourad},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=KFR}{%
-         family={Khuri},
-         familyi={K\bibinitperiod},
-         given={Fadlo\bibnamedelima R.},
-         giveni={F\bibinitperiod\bibinitdelim R\bibinitperiod},
-      }}%
-      {{hash=PA}{%
-         family={Porter},
-         familyi={P\bibinitperiod},
-         given={Alan},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {{American Society of Clinical Oncology}}%
-    }
-    \keyw{Adept Chapter,TITE-DTP Chapter}
-    \strng{namehash}{RASDJW+1}
-    \strng{fullhash}{RASDJWTMKFRPA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{abstract}{%
-    Purpose Phase I clinical trials of new anticancer therapies determine
-  suitable doses for further testing. Optimization of their design is vital in
-  that they enroll cancer patients whose well-being is distinctly at risk. This
-  study examines the effectiveness of knowledge transfer about more effective
-  statistical designs to clinical practice. Methods We examined abstract
-  records of cancer phase I trials from the Science Citation Index database
-  between 1991 and 2006 and classified them into clinical (dose-finding trials)
-  and statistical trials (methodologic studies of dose-escalation designs). We
-  then mapped these two sets by tracking which trials adopted new statistical
-  designs. Results One thousand two hundred thirty-five clinical and 90
-  statistical studies were identified. Only 1.6\% of the phase I cancer trials
-  (20 of 1,235 trials) followed a design proposed in one of the statistical
-  studies. These 20 clinical studies showed extensive lags between publication
-  of the statistical paper and its translation into a clinical paper. These 20
-  clinical trials followed Bayesian adaptive designs. The remainder used
-  variations of the standard up-and-down method. Conclusion A consequence of
-  using less effective designs is that more patients are treated with doses
-  outside the therapeutic window. Simulation studies have shown that
-  up-and-down designs treated only 35\% of patients at optimal dose levels
-  versus 55\% for Bayesian adaptive designs. This implies needless loss of
-  treatment efficacy and, possibly, lives. We suggest that regulatory agencies
-  (eg, US Food and Drug Administration) should proactively encourage the
-  adoption of statistical designs that would allow more patients to be treated
-  at near-optimal doses while controlling for excessive toxicity.%
-    }
-    \verb{doi}
-    \verb 10.1200/JCO.2007.12.1012
-    \endverb
-    \field{issn}{0732-183X}
-    \field{number}{31}
-    \field{pages}{4982\bibrangedash 4986}
-    \field{shortjournal}{JCO}
-    \field{title}{Translation of {{Innovative Designs Into Phase I Trials}}}
-    \verb{url}
-    \verb https://ascopubs.org/doi/full/10.1200/JCO.2007.12.1012
-    \endverb
-    \field{volume}{25}
-    \verb{file}
-    \verb C\:\\Users\\Amit\\Zotero\\storage\\Y7WCUDHX\\JCO.2007.12.html
-    \endverb
-    \field{journaltitle}{Journal of Clinical Oncology}
-    \field{day}{01}
-    \field{month}{11}
-    \field{year}{2007}
-    \field{urlday}{27}
-    \field{urlmonth}{08}
-    \field{urlyear}{2020}
-  \endentry
-
-  \entry{chiuzanDosefindingDesignsTrials2017}{article}{}
-    \name{author}{7}{}{%
-      {{hash=CC}{%
-         family={Chiuzan},
-         familyi={C\bibinitperiod},
-         given={Cody},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=SJ}{%
-         family={Shtaynberger},
-         familyi={S\bibinitperiod},
-         given={Jonathan},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=MGA}{%
-         family={Manji},
-         familyi={M\bibinitperiod},
-         given={Gulam\bibnamedelima A.},
-         giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=DJK}{%
-         family={Duong},
-         familyi={D\bibinitperiod},
-         given={Jimmy\bibnamedelima K.},
-         giveni={J\bibinitperiod\bibinitdelim K\bibinitperiod},
-      }}%
-      {{hash=SGK}{%
-         family={Schwartz},
-         familyi={S\bibinitperiod},
-         given={Gary\bibnamedelima K.},
-         giveni={G\bibinitperiod\bibinitdelim K\bibinitperiod},
-      }}%
-      {{hash=IA}{%
-         family={Ivanova},
-         familyi={I\bibinitperiod},
-         given={Anastasia},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=LSM}{%
-         family={Lee},
-         familyi={L\bibinitperiod},
-         given={Shing\bibnamedelima M.},
-         giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {{Taylor \& Francis}}%
-    }
-    \keyw{Adept Chapter,Dose-finding methods,immunotherapy,maximum tolerated
-  dose,optimal dose,phase 1 designs,targeted therapy,TITE-DTP Chapter}
-    \strng{namehash}{CCSJMGA+1}
-    \strng{fullhash}{CCSJMGADJKSGKIALSM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{abstract}{%
-    Recently, there has been a surge of early phase trials of molecularly
-  targeted agents (MTAs) and immunotherapies. These new therapies have
-  different toxicity profiles compared to cytotoxic therapies. MTAs can benefit
-  from new trial designs that allow inclusion of low-grade toxicities,
-  late-onset toxicities, addition of an efficacy endpoint, and flexibility in
-  the specification of a target toxicity probability. To study the degree of
-  adoption of these methods, we conducted a Web of Science search of articles
-  published between 2008 and 2014 that describe phase 1 oncology trials. Trials
-  were categorized based on the dose-finding design used and the type of drug
-  studied. Out of 1,712 dose-finding trials that met our criteria, 1,591
-  (92.9\%) utilized a rule-based design, and 92 (5.4\%; range 2.3\% in 2009 to
-  9.7\% in 2014) utilized a model-based or novel design. Over half of the
-  trials tested an MTA or immunotherapy. Among the MTA and immunotherapy
-  trials, 5.8\% used model-based methods, compared to 3.9\% and 8.3\% of the
-  chemotherapy or radiotherapy trials, respectively. While the percentage of
-  trials using novel dose-finding designs has tripled since 2007, the adoption
-  of these designs continues to remain low.%
-    }
-    \verb{doi}
-    \verb 10.1080/10543406.2017.1289952
-    \endverb
-    \verb{eprint}
-    \verb 28166468
-    \endverb
-    \field{issn}{1054-3406}
-    \field{number}{3}
-    \field{pages}{477\bibrangedash 494}
-    \field{title}{Dose-Finding Designs for Trials of Molecularly Targeted
-  Agents and Immunotherapies}
-    \verb{url}
-    \verb https://doi.org/10.1080/10543406.2017.1289952
-    \endverb
-    \field{volume}{27}
-    \verb{file}
-    \verb C\:\\Users\\Amit\\Zotero\\storage\\WH7FVDME\\Chiuzan et al. - 2017 -
-    \verb Dose-finding designs for trials of molecularly tar.pdf;C\:\\Users\\Am
-    \verb it\\Zotero\\storage\\MQXKCFX2\\10543406.2017.html
-    \endverb
-    \field{journaltitle}{Journal of Biopharmaceutical Statistics}
-    \field{annotation}{%
-    \_eprint: https://doi.org/10.1080/10543406.2017.1289952%
-    }
-    \field{eprinttype}{pmid}
-    \field{day}{04}
-    \field{month}{05}
-    \field{year}{2017}
-    \field{urlday}{27}
-    \field{urlmonth}{08}
     \field{urlyear}{2020}
   \endentry
 
@@ -2174,39 +2270,6 @@
     \field{year}{2014}
   \endentry
 
-  \entry{cheungDfcrmDoseFindingContinual2019}{software}{}
-    \name{author}{1}{}{%
-      {{hash=CK}{%
-         family={Cheung},
-         familyi={C\bibinitperiod},
-         given={Ken},
-         giveni={K\bibinitperiod},
-      }}%
-    }
-    \keyw{Adept Chapter,ClinicalTrials,ExperimentalDesign}
-    \strng{namehash}{CK1}
-    \strng{fullhash}{CK1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{shorttitle}
-    \field{abstract}{%
-    Provides functions to run the CRM and TITE-CRM in phase I trials and
-  calibration tools for trial planning purposes.%
-    }
-    \field{shorttitle}{Dfcrm}
-    \field{title}{Dfcrm: {{Dose-Finding}} by the {{Continual Reassessment
-  Method}}}
-    \verb{url}
-    \verb https://CRAN.R-project.org/package=dfcrm
-    \endverb
-    \field{version}{0.2-2.1}
-    \field{day}{26}
-    \field{month}{01}
-    \field{year}{2019}
-    \field{urlday}{01}
-    \field{urlmonth}{08}
-    \field{urlyear}{2020}
-  \endentry
-
   \entry{oquigleyContinualReassessmentMethod1996}{article}{}
     \name{author}{2}{}{%
       {{hash=OJ}{%
@@ -3162,69 +3225,6 @@
     \field{urlyear}{2021}
   \endentry
 
-  \entry{brockModularApproachDose2020}{online}{}
-    \name{author}{1}{}{%
-      {{hash=BK}{%
-         family={Brock},
-         familyi={B\bibinitperiod},
-         given={Kristian},
-         giveni={K\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {{Comprehensive R Archive Network (CRAN)}}%
-    }
-    \keyw{WT Chapter}
-    \strng{namehash}{BK1}
-    \strng{fullhash}{BK1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{abstract}{%
-    Methods for working with dose-finding clinical trials. We provide
-  implementations of many dose-finding clinical trial designs, including the
-  continual reassessment method (CRM) by O'Quigley et al. (1990) \&lt;{$<$}a
-  href="https://doi.org/10.2307\%2F2531628"{$>$}doi:10.2307/2531628{$<$}/a{$>\&$}gt;,
-  the toxicity probability interval (TPI) design by Ji et al. (2007)
-  \&lt;{$<$}a
-  href="https://doi.org/10.1177\%2F1740774507079442"{$>$}doi:10.1177/1740774507079442{$<$}/a{$>\&$}gt;,
-  the modified TPI (mTPI) design by Ji et al. (2010) \&lt;{$<$}a
-  href="https://doi.org/10.1177\%2F1740774510382799"{$>$}doi:10.1177/1740774510382799{$<$}/a{$>\&$}gt;,
-  the Bayesian optimal interval design (BOIN) by Liu \&amp; Yuan (2015)
-  \&lt;{$<$}a
-  href="https://doi.org/10.1111\%2Frssc.12089"{$>$}doi:10.1111/rssc.12089{$<$}/a{$>\&$}gt;,
-  EffTox by Thall \&amp; Cook (2004) \&lt;{$<$}a
-  href="https://doi.org/10.1111\%2Fj.0006-341X.2004.00218.x"{$>$}doi:10.1111/j.0006-341X.2004.00218.x{$<$}/a{$>\&$}gt;;
-  the design of Wages \&amp; Tait (2015) \&lt;{$<$}a
-  href="https://doi.org/10.1080\%2F10543406.2014.920873"{$>$}doi:10.1080/10543406.2014.920873{$<$}/a{$>\&$}gt;,
-  and the 3+3 described by Korn et al. (1994) \&lt;{$<$}a
-  href="https://doi.org/10.1002\%2Fsim.4780131802"{$>$}doi:10.1002/sim.4780131802{$<$}/a{$>\&$}gt;.
-  All designs are implemented with a common interface. We also offer optional
-  additional classes to tailor the behaviour of all designs, including avoiding
-  skipping doses, stopping after n patients have been treated at the
-  recommended dose, stopping when a toxicity condition is met, or demanding
-  that n patients are treated before stopping is allowed. By daisy-chaining
-  together these classes using the pipe operator from 'magrittr', it is simple
-  to tailor the behaviour of a dose-finding design so it behaves how the
-  trialist wants. Having provided a flexible interface for specifying designs,
-  we then provide functions to run simulations and calculate dose-paths for
-  future cohorts of patients.%
-    }
-    \field{title}{Modular {{Approach}} to {{Dose Finding Clinical Trials}}
-  [{{R}} Package Escalation Version 0.1.4]}
-    \verb{url}
-    \verb https://CRAN.R-project.org/package=escalation
-    \endverb
-    \verb{file}
-    \verb C\:\\Users\\Amit\\Zotero\\storage\\JA2TYVIE\\index.html
-    \endverb
-    \field{day}{18}
-    \field{month}{10}
-    \field{year}{2020}
-    \field{urlday}{14}
-    \field{urlmonth}{06}
-    \field{urlyear}{2021}
-  \endentry
-
   \entry{cohenStatisticalPowerAnalysis1988}{book}{}
     \name{author}{1}{}{%
       {{hash=CJ}{%
@@ -3572,6 +3572,64 @@
     \field{year}{2019}
     \field{urlday}{01}
     \field{urlmonth}{01}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{yapDtpcrmDoseTransition2019}{software}{}
+    \name{author}{4}{}{%
+      {{hash=YC}{%
+         family={Yap},
+         familyi={Y\bibinitperiod},
+         given={Christina},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Slade},
+         familyi={S\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=BK}{%
+         family={Brock},
+         familyi={B\bibinitperiod},
+         given={Kristian},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=PY}{%
+         family={Pan},
+         familyi={P\bibinitperiod},
+         given={Yi},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{YCSDBK+1}
+    \strng{fullhash}{YCSDBKPY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    Provides the dose transition pathways (DTP) to project in advance the doses
+  recommended by a model-based design for subsequent patients (stay, escalate,
+  deescalate or stop early) using all the accumulated toxicity information; See
+  Yap et al (2017) {$<$}doi:10.1158/1078-0432.CCR-17-0582{$>$}. DTP can be used
+  as a design and an operational tool and can be displayed as a table or flow
+  diagram. The 'dtpcrm' package also provides the modified continual
+  reassessment method (CRM) and time-to-event CRM (TITE-CRM) with added
+  practical considerations to allow stopping early when there is sufficient
+  evidence that the lowest dose is too toxic and/or there is a sufficient
+  number of patients dosed at the maximum tolerated dose.%
+    }
+    \field{shorttitle}{Dtpcrm}
+    \field{title}{Dtpcrm: {{Dose Transition Pathways}} for {{Continual
+  Reassessment Method}}}
+    \verb{url}
+    \verb https://CRAN.R-project.org/package=dtpcrm
+    \endverb
+    \field{version}{0.1.1}
+    \field{day}{20}
+    \field{month}{08}
+    \field{year}{2019}
+    \field{urlday}{18}
+    \field{urlmonth}{12}
     \field{urlyear}{2022}
   \endentry
 

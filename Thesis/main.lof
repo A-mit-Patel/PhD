@@ -5,28 +5,32 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Example dose levels to illustrate partial ordering.\relax }}{9}{figure.caption.12}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Example dose levels to illustrate partial ordering.\relax }}{11}{figure.caption.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces ADePT-DDR dose levels across dose and duration.\relax }}{18}{figure.caption.33}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces ADePT-DDR dose levels across dose and duration.\relax }}{20}{figure.caption.34}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Weight function across the follow-up period.}}{22}{figure.caption.36}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Weight function across the follow-up period.}}{24}{figure.caption.37}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Illustration of true DLT rates used in simulations.}}{31}{figure.caption.43}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Illustration of true DLT rates used in simulations.}}{33}{figure.caption.44}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Plot of simulations comparing designs for ordering 1.}}{33}{figure.caption.51}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Plot of simulations comparing designs for ordering 1.}}{35}{figure.caption.52}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Plot of simulations comparing designs for ordering 2.}}{36}{figure.caption.52}%
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Flowchart of a two arm randomised dose-finding trial.}}{55}{figure.caption.76}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Plot of simulations comparing designs for ordering 2.}}{38}{figure.caption.53}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Initial DTP node plot.}}{103}{figure.caption.105}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Flowchart of a two arm randomised dose-finding trial.}}{57}{figure.caption.77}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Initial DTP flow plot.}}{104}{figure.caption.106}%
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Updated DTP node plot.}}{107}{figure.caption.108}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Initial DTP node plot.}}{104}{figure.caption.106}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Updated DTP flow plot.}}{108}{figure.caption.109}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Initial DTP flow plot.}}{105}{figure.caption.107}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Updated DTP node plot.}}{108}{figure.caption.109}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Updated DTP flow plot.}}{109}{figure.caption.110}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.5}{\ignorespaces DTP node plot for three additional cohorts.}}{114}{figure.caption.113}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.6}{\ignorespaces DTP node plot for three additional various sized cohorts.}}{117}{figure.caption.115}%

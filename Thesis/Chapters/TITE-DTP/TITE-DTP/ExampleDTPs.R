@@ -26,7 +26,7 @@ spread_paths(as_tibble(paths)) %>%
   print(n=100)
 
 # Node plot
-graph_paths(paths) %>% 
+graph_paths(paths, RColorBrewer_palette = 'Set1') %>% 
   export_svg() %>% 
   charToRaw %>% 
   rsvg_pdf('C:/Users/Amit/Documents/GitHub/PhD/Thesis/Figures/TITE-DTP-InitialExampleDTPNode.pdf')
@@ -82,7 +82,7 @@ spread_paths(as_tibble(paths)) %>%
   print(n=100)
 
 # Node plot
-graph_paths(paths) %>% 
+graph_paths(paths, RColorBrewer_palette = 'Set1') %>% 
   export_svg() %>% 
   charToRaw %>% 
   rsvg_pdf('C:/Users/Amit/Documents/GitHub/PhD/Thesis/Figures/TITE-DTP-UpdatedExampleDTPNode.pdf')
@@ -137,3 +137,80 @@ summary(foo)
 x0 <- c(2,2,2,3,3,3,4,4,4,rep(5,24)) # initial design
 foo <- cohere(skeleton,target,x0)
 foo$message
+
+###############################################################################
+# DTPs with stopping rules for next 3 cohorts after 2NNN 3NNTNNT
+
+model2 <- get_dfcrm(skeleton = skeleton, target = target) %>% 
+  dont_skip_doses(when_escalating = TRUE) %>% 
+  stop_when_too_toxic(dose = 1, tox_threshold = 0.35, confidence = 0.9)
+
+paths <- model2 %>% 
+  get_dose_paths(cohort_sizes = c(3,3,3), 
+                 previous_outcomes = '2NNN 3NNTNNT')
+
+#DTPs
+spread_paths(as_tibble(paths)) %>%
+  select(o0 = 'outcomes0', d0 = 'next_dose0', 
+         o1 = 'outcomes1', d1 = 'next_dose1',
+         o2 = 'outcomes2', d2 = 'next_dose2', 
+         o3 = 'outcomes3', d3 = 'next_dose3') %>%
+  print(n=100)
+
+# Node plot
+graph_paths(paths, RColorBrewer_palette = 'Set1') %>% 
+  export_svg() %>% 
+  charToRaw %>% 
+  rsvg_pdf('C:/Users/Amit/Documents/GitHub/PhD/Thesis/Figures/TITE-DTP-UsingDuringTrialDTPNode.pdf')
+
+# Code for the LaTeX table 
+spread_paths(as_tibble(paths)) %>%
+  select(o0 = 'outcomes0', d0 = 'next_dose0', 
+         o1 = 'outcomes1', d1 = 'next_dose1',
+         o2 = 'outcomes2', d2 = 'next_dose2', 
+         o3 = 'outcomes3', d3 = 'next_dose3') %>%
+  print(n=100) %>% 
+  data.frame() %>% 
+  mutate(o0 = 1:64) %>%
+  #replace_na(list(d2 = 'STOP', d3 = 'STOP')) %>%  
+  kable('latex', booktabs = T, linesep = "", align = "c", 
+        col.names = c('Pathway', 'Dose', 'Outcomes', 'Dose', 'Outcomes', 'Dose',
+                      'Outcomes', 'Dose'),
+        caption = '\\label{tab_tite-dtp:UsingDuringTrialDTPs4-7}DTPs for three additional cohorts after observing outcomes for the first three cohorts.'
+  ) %>% 
+  kable_styling(latex_options = c("striped", "HOLD_position",  "scale_down"),
+                position = "center", font_size = 4) %>% 
+  add_header_above(c('', 'Cohort 4' = 2, 'Cohort 5' = 2, 'Cohort 6' = 2,
+                     'Cohort 7' = 1)) %>% 
+  cat()
+
+# non uniform cohorts 
+paths <- model2 %>% 
+  get_dose_paths(cohort_sizes = c(2,1,2), 
+                 previous_outcomes = '2NNN 3NNTNNT')
+
+graph_paths(paths, RColorBrewer_palette = 'Set1') %>% 
+  export_svg() %>% 
+  charToRaw %>% 
+  rsvg_pdf('C:/Users/Amit/Documents/GitHub/PhD/Thesis/Figures/TITE-DTP-NonUniformDTPNode.pdf')
+
+# Code for the LaTeX table 
+spread_paths(as_tibble(paths)) %>%
+  select(o0 = 'outcomes0', d0 = 'next_dose0', 
+         o1 = 'outcomes1', d1 = 'next_dose1',
+         o2 = 'outcomes2', d2 = 'next_dose2', 
+         o3 = 'outcomes3', d3 = 'next_dose3') %>%
+  print(n=100) %>% 
+  data.frame() %>% 
+  mutate(o0 = 1:36) %>%
+  #replace_na(list(d2 = 'STOP', d3 = 'STOP')) %>%  
+  kable('latex', booktabs = T, linesep = "", align = "c", 
+        col.names = c('Pathway', 'Dose', 'Outcomes', 'Dose', 'Outcomes', 'Dose',
+                      'Outcomes', 'Dose'),
+        caption = '\\label{tab_tite-dtp:NonUniformDTPs4-7}DTPs for three additional cohorts with varying cohort sizes after observing outcomes for the first three cohorts.'
+  ) %>% 
+  kable_styling(latex_options = c("striped", "HOLD_position",  "scale_down"),
+                position = "center", font_size = 4) %>% 
+  add_header_above(c('', 'Cohort 4' = 2, 'Cohort 5' = 2, 'Cohort 6' = 2,
+                     'Cohort 7' = 1)) %>% 
+  cat()

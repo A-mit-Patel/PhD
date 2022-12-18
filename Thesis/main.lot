@@ -5,44 +5,48 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.1}{\ignorespaces Example drug combinations with two agents.}}{11}{table.caption.14}%
+\contentsline {table}{\numberline {2.1}{\ignorespaces Example drug combinations with two agents.}}{13}{table.caption.15}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.2}{\ignorespaces ADePT-DDR dose-levels.}}{17}{table.caption.32}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces ADePT-DDR dose-levels.}}{19}{table.caption.33}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.3}{\ignorespaces Operating Characteristics for ordering 1.}}{26}{table.caption.39}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Operating Characteristics for ordering 1.}}{28}{table.caption.40}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.4}{\ignorespaces Operating Characteristics for ordering 2.}}{27}{table.caption.40}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Operating Characteristics for ordering 2.}}{29}{table.caption.41}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.5}{\ignorespaces Summary of simulated patient numbers for each scenario.\relax }}{29}{table.caption.41}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces Summary of simulated patient numbers for each scenario.\relax }}{31}{table.caption.42}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.6}{\ignorespaces Alternative designs selection probabilities for ordering 1.}}{34}{table.caption.49}%
+\contentsline {table}{\numberline {2.6}{\ignorespaces Alternative designs selection probabilities for ordering 1.}}{36}{table.caption.50}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.7}{\ignorespaces Alternative designs selection probabilities for ordering 2.}}{35}{table.caption.50}%
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.1}{\ignorespaces Toxicity and efficacy skeletons for RtC-WT in the example trial.\relax }}{59}{table.caption.82}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.2}{\ignorespaces Summary of the efficacy and toxicity curves used in each scenario.\relax }}{64}{table.caption.84}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.3}{\ignorespaces Operating characteristics for multiple combinations of parameters.}}{65}{table.85}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.4}{\ignorespaces Summary of operating characteristics of multiple combinations and parameters}}{76}{table.caption.86}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.5}{\ignorespaces Summary of the three designs being compared. \relax }}{80}{table.caption.89}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.6}{\ignorespaces Operating characteristics comparing multiple designs.}}{81}{table.90}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.7}{\ignorespaces Probabilities of selecting the OBD and good dose levels for multiple designs, plus summary statistics.\relax }}{82}{table.caption.91}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.8}{\ignorespaces List of effect sizes used in power calculations.\relax }}{86}{table.caption.95}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.9}{\ignorespaces Mean power for various effect sizes based on simulation results.\relax }}{87}{table.caption.96}%
+\contentsline {table}{\numberline {2.7}{\ignorespaces Alternative designs selection probabilities for ordering 2.}}{37}{table.caption.51}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.1}{\ignorespaces Specification of parameters for an example CRM trial. \relax }}{100}{table.caption.102}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Toxicity and efficacy skeletons for RtC-WT in the example trial.\relax }}{61}{table.caption.83}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.2}{\ignorespaces Initial DTP for the first three cohorts of our example CRM.\relax }}{102}{table.caption.104}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Summary of the efficacy and toxicity curves used in each scenario.\relax }}{66}{table.caption.85}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.3}{\ignorespaces Updated DTPs for the first three cohorts of our example CRM with additional rules.\relax }}{106}{table.caption.107}%
+\contentsline {table}{\numberline {3.3}{\ignorespaces Operating characteristics for multiple combinations of parameters.}}{67}{table.86}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.4}{\ignorespaces Summary of operating characteristics of multiple combinations and parameters}}{78}{table.caption.87}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.5}{\ignorespaces Summary of the three designs being compared. \relax }}{82}{table.caption.90}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.6}{\ignorespaces Operating characteristics comparing multiple designs.}}{83}{table.91}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.7}{\ignorespaces Probabilities of selecting the OBD and good dose levels for multiple designs, plus summary statistics.\relax }}{84}{table.caption.92}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.8}{\ignorespaces List of effect sizes used in power calculations.\relax }}{88}{table.caption.96}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.9}{\ignorespaces Mean power for various effect sizes based on simulation results.\relax }}{89}{table.caption.97}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.1}{\ignorespaces Specification of parameters for an example CRM trial. \relax }}{101}{table.caption.103}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.2}{\ignorespaces Initial DTP for the first three cohorts of our example CRM.\relax }}{103}{table.caption.105}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.3}{\ignorespaces Updated DTPs for the first three cohorts of our example CRM with additional rules.\relax }}{107}{table.caption.108}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.4}{\ignorespaces DTPs for three additional cohorts after observing outcomes for the first three cohorts.\relax }}{113}{table.caption.112}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.5}{\ignorespaces DTPs for three additional cohorts with varying cohort sizes after observing outcomes for the first three cohorts.\relax }}{116}{table.caption.114}%
