@@ -438,11 +438,274 @@ We will recreate the DTPs presented in this section except we will now use varyi
 
 These DTPs can be interpreted in the same way as before but now just correspond to a different number of patients. Where the recommended dose is set at dose-level 3 for cohort 5 we can consider these pathways equivalent to those presented earlier in Table \ref{tab_tite-dtp:UsingDuringTrialDTPs4-7} for cohort 4. As in oth of these scenarios 3 patients would have been treated at dose-level 3. For instance pathways 1-6 and its recommended dose for cohort 6 in Table \ref{tab_tite-dtp:NonUniformDTPs4-7} are equivalent to pathways 1-16 and its recommended dose for cohort 5 in Table \ref{tab_tite-dtp:UsingDuringTrialDTPs4-7}, This is because in both instances 3 patients have been treated at the same dose-level and all have the same outcome. Of course this does not always hold as a dose-decision made on less data may lead to a different dose-decision and hence create a different pathway. In the scenarios where two patients experience a toxicity the model de-escalates and since there isn't a third patient at that dose-level 3 the following pathways will all differ from those presented previously. 
 
-We have established how DTPs can also be used not only during the design and calibration of a trial but also whilst it is running. They have the ability to communicate dose decisions effectively. They also help alleviate some of the potential mystery behind model based designs where clinicians and non-statisticians involved in trials may not appreciate how dose decisions are being made by a model such as the CRM. Additionally, they can also be used to assess any modifications that need to be made to the design due to practical or logistical issues. It is clear DTPs are a valuable tool to incorporate in any dose-finding trial and with the escalation package by Brock \cite{brockModularApproachDose2020} they are very easy to implement, only requiring a few lines of code. In the next section we explore the possibility of extending DTPs to work in the time-to-event setting.  
+We have established how DTPs can also be used not only during the design and calibration of a trial but also whilst it is running. They have the ability to communicate dose decisions effectively. They also help alleviate some of the potential mystery behind model based designs where clinicians and non-statisticians involved in trials may not appreciate how dose decisions are being made by a model such as the CRM. Additionally, they can also be used to assess any modifications that need to be made to the design due to practical or logistical issues. It is clear DTPs are a valuable tool to incorporate in any dose-finding trial and with the escalation package by Brock \cite{brockModularApproachDose2020} they are very easy to implement, only requiring a few lines of code. In the next section we explore the possibility of extending DTPs to work in TITE-CRMs.  
 
 %----------------------------------------------------------------------------------------
 %	SECTION 3
 %----------------------------------------------------------------------------------------
 
-\section{TiTE-DTPs}
+\section{TITE-DTPs}
 \label{tite-dtp:TITE-DTPs}
+
+One reason why DTPs are effective is due to the simplicity of the outcomes being presented. With a CRM these outcomes are either toxicity (T) or no toxicity (N) and similarly, with a design like Wages and Tait or EffTox outcomes are either toxicity (T), efficacy (E), both toxicity and efficacy (B) or neither (N). Whilst the number of outcomes contributes to the number of potential pathways other aspects of the trial also go into determining this such as cohort size and the number of cohorts. Trying to compute and present all of these pathways for an entire challenge so the work around is to just present DTPs for upcoming cohorts.  
+
+However, when we move to the TITE setting the problem becomes more complex. TITE methodology works by using the idea of a partial tolerance event. At the time of analysis for a dose-decision patients without a toxicity event who have not completed their evaluation period can be considered as having a partial tolerance. These patients can then be weighted according to how much of the evaluation period they have completed and be included in the model. If the patient completes the evaluation period without having a toxicity they have tolerated treatment and are fully weighted. This means they can be analysed and included in the model as is normally done in a standard CRM design. If a patient experiences a toxicity at any time-point they are also fully weighted. 
+
+With TITE-DTPs we still maintain the issues from normal DTPs with the number of cohorts and cohort sizes and the number of pathways they produce, but now the outcome is also more complex. More specifically, just considering DTPs for a standard CRM design, patients would have either a toxicity or no toxicity now in the TITE setting we also have to account for the time each patient has spent in the trial. Patients can either have toxicity at which point they are fully weighted and just treated like they would be in a standard CRM or they could have no toxicity on day 1 of the evaluation period or, no toxicity on day 2, no toxicity on day 3 etc. The number of outcomes will also depend on how long the observation window is. For example, lets assume a follow-up period of 35 days (7 weeks). Then there would be 36 different outcomes: toxicity, no toxicity(i.e. completed the evaluation period without a toxicity), no toxicity on day 1, no toxicity on day 2, ..., no toxicity on day 34. This problem could also be extended dependent on how much precision is used in the measurement of time. 
+
+In order to explore the problem further we will use an illustrative example. Consider the example trial we presented in Section \ref{tite-dtp:Example-DTPs}, except now we include a TITE component with a 35 day evaluation period. The TITE-CRM can use all the same parameters and specifications we chose for the CRM trial. When setting up a time-to-event trial we also need to specify a weight function. This function determines how patients with partial tolerances will be weighted in the TITE-CRM model. For this example we will use a standard linear weight function where patients are weighted as a proportion of time they have completed in the evaluation period. So, a patient who has completed 20 days would have a weight of 0.571 ($20 \div 35$). The original CRM design used cohorts of three however, due to the complexity of TITE-DTPs we will begin by looking at cohorts of 1 and 2 patients. For similar reasoning we will also only detail pathways for the first cohort. 
+
+%-----------------------------------
+%	SUBSECTION 1
+%-----------------------------------
+
+\subsection{Cohort of one patient}
+\label{tite-dtp:TITE-DTPs-c1}
+First we will just look at a cohort of one patient, i.e the first patient recruited into the trial. There are 36 possible outcomes for this one patient. The simplest pathway to consider is what happens when this patient has a toxicity, as the timing of the toxicity does not impact how the patient is weighted. In this scenario the recommended dose for the next patient would be dose-level 1. So, if we see toxicity at any time-point we de-escalate.   
+
+Now in the scenario where no toxicity is observed there are 35 different possible outcomes. Either it is day and the patient has no toxicity, or it's day 2, or day 3, all the way up to no toxicity at day 35. Here we can fit the TITE-CRM model for each different outcome and see what the model will recommend as the next dose. Where the patient has between 1-19 days of follow-up the model recommends dose-level 4, anything greater than 19 and the model recommends dose-level 5.  
+
+After calculating all possible outcomes we can produce a TITE-DTP for this cohort (Table \ref{tab_tite-dtp:TITEDTP_c1}). As previously specified the first patient starts at dose-level 2, and as there are 36 possible outcomes there are 36 pathways to the next cohort. We also extend the nomenclature of Brock et al. \cite{brockImplementingEffToxDosefinding2017} to express the different outcomes here the number in brackets represent the amount of follow-up or observation period the patient has completed. So,  N(14) indicates at 14 days the patient has had a partial tolerance event and the corresponding recommended dose for that pathway is dose-level 4.
+
+\begin{table}[H]
+	
+	\caption{\label{tab_tite-dtp:TITEDTP_c1}TITE-DTP for a cohort of one.}
+	\centering
+	\resizebox{0.75\linewidth}{!}{
+		\fontsize{4}{3}\selectfont
+		\begin{tabular}[t]{cccc}
+			\toprule
+			\multicolumn{1}{c}{} & \multicolumn{2}{c}{Cohort 1} & \multicolumn{1}{c}{Cohort 2} \\
+			\cmidrule(l{3pt}r{3pt}){2-3} \cmidrule(l{3pt}r{3pt}){4-4}
+			Pathway & Dose & Outcomes & Dose\\
+			\midrule
+			\cellcolor{gray!6}{1} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{T} & \cellcolor{gray!6}{1}\\
+			2 & 2 & N(1) & 4\\
+			\cellcolor{gray!6}{3} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(2)} & \cellcolor{gray!6}{4}\\
+			4 & 2 & N(3) & 4\\
+			\cellcolor{gray!6}{5} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(4)} & \cellcolor{gray!6}{4}\\
+			6 & 2 & N(5) & 4\\
+			\cellcolor{gray!6}{7} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(6)} & \cellcolor{gray!6}{4}\\
+			8 & 2 & N(7) & 4\\
+			\cellcolor{gray!6}{9} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(8)} & \cellcolor{gray!6}{4}\\
+			10 & 2 & N(9) & 4\\
+			\cellcolor{gray!6}{11} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(10)} & \cellcolor{gray!6}{4}\\
+			12 & 2 & N(11) & 4\\
+			\cellcolor{gray!6}{13} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(12)} & \cellcolor{gray!6}{4}\\
+			14 & 2 & N(13) & 4\\
+			\cellcolor{gray!6}{15} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(14)} & \cellcolor{gray!6}{4}\\
+			16 & 2 & N(15) & 4\\
+			\cellcolor{gray!6}{17} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(16)} & \cellcolor{gray!6}{4}\\
+			18 & 2 & N(17) & 4\\
+			\cellcolor{gray!6}{19} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(18)} & \cellcolor{gray!6}{4}\\
+			20 & 2 & N(19) & 4\\
+			\cellcolor{gray!6}{21} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(20)} & \cellcolor{gray!6}{5}\\
+			22 & 2 & N(21) & 5\\
+			\cellcolor{gray!6}{23} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(22)} & \cellcolor{gray!6}{5}\\
+			24 & 2 & N(23) & 5\\
+			\cellcolor{gray!6}{25} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(24)} & \cellcolor{gray!6}{5}\\
+			26 & 2 & N(25) & 5\\
+			\cellcolor{gray!6}{27} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(26)} & \cellcolor{gray!6}{5}\\
+			28 & 2 & N(27) & 5\\
+			\cellcolor{gray!6}{29} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(28)} & \cellcolor{gray!6}{5}\\
+			30 & 2 & N(29) & 5\\
+			\cellcolor{gray!6}{31} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(30)} & \cellcolor{gray!6}{5}\\
+			32 & 2 & N(31) & 5\\
+			\cellcolor{gray!6}{33} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(32)} & \cellcolor{gray!6}{5}\\
+			34 & 2 & N(33) & 5\\
+			\cellcolor{gray!6}{35} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(34)} & \cellcolor{gray!6}{5}\\
+			36 & 2 & N & 5\\
+			\bottomrule
+	\end{tabular}}
+\end{table}
+
+DTPs presented earlier in this chapter have been able to convey a lot of information. For example, previously with 64 pathways we were able to specify all the possible outcomes and dose-recommendations up to the 4th cohort of three patients. Whereas in the TITE setting we have 36 just for one cohort of one patient. One way to improve on this would be to more succinctly summarise the TITE-DTP by aggregating the pathways which lead to the same recommendations. Table \ref{tab_tite-dtp:TITEDTP_c1_Sum} does this for us. 
+
+\begin{table}[H]
+	\centering
+	\caption{Summary of TITE-DTP for a cohort of one.}
+	\label{tab_tite-dtp:TITEDTP_c1_Sum}
+	\begin{tabular}{cccc}
+		\hline
+		& \multicolumn{2}{c}{Cohort 1}   & Cohort 2 \\ \cline{2-4} 
+		Dose               & Outcome            & Follow-up & Dose     \\ \hline
+		2                  & T                  &           & 1        \\
+		\multirow{2}{*}{2} & \multirow{2}{*}{N} & 1-19      & 4        \\
+		&                    & 20-35     & 5        \\ \hline
+	\end{tabular}
+\end{table}
+
+Whilst we can still apply the concept of DTPs to TITE-CRMs we can see even with just one patient and one cohort there are a lot of possible outcomes we have to look at. Also, we have used a fairly small observation period of only 5 weeks. If a larger observation period were to be used the number of pathways can get out of hand very quickly. In the next section we explore how adding in an extra patient affects these TITE-DTPs.  
+
+%-----------------------------------
+%	SUBSECTION 2
+%-----------------------------------
+
+\subsection{Cohort of two patients}
+\label{tite-dtp:TITE-DTPs-c2}
+Now we consider a cohort of two patients who start at dose-level 2. As before we will consider this the first cohort of patients and only calculate pathways for the next cohort. Here the number of outcomes is a lot greater. There are three potential scenarios either both patients could have a toxicity, one of the patients could have a toxicity and one could not and finally both patients could have no toxicity. Within the two options where patients could potentially have no toxicity there a multiple outcomes dependent on how much follow-up time is observed. The different scenarios and the associated number of outcomes are: 
+
+\begin{itemize}
+	\item TT - 1 outcome 
+	\item NT - 35 outcomes 
+	\item NN - 630 outcomes
+\end{itemize}
+
+So, for a cohort of two patients with a follow-up period of 35 days there are 666 possible pathways. The simplest of these is if both patients have a toxicity. Here both patients are fully weighted and when put into the model the dose recommendation is dose-level 1. 
+
+If one patient has a toxicity and the other one doesn't there will be 35 different outcomes. A patient has a toxicity and the other has a partial tolerance event on day 1, day 2, day 3, all the way till day 35 where they have fully tolerated the dose (i.e. N(1)T, N(2)T, N(3)T, ..., N(34)T, NT). These outcomes are just an extension of the pathways in Section \ref{tite-dtp:TITE-DTPs-c1} for one cohort of one patient, except now when we model these we include an extra patient in the model who experienced a toxicity. Table \ref{tab_tite-dtp:TITEDTP_c2NT} presents the pathways for this scenario. Here we can see regardless of how much follow-up time the patient with no toxicity has the model will always recommend de-escalating. 
+
+\begin{table}[H]
+	
+	\caption{\label{tab_tite-dtp:TITEDTP_c2NT}TITE-DTP for a cohort of two for scenario NT.}
+	\centering
+	\resizebox{0.75\linewidth}{!}{
+		\fontsize{4}{3}\selectfont
+		\begin{tabular}[t]{cccc}
+			\toprule
+			\multicolumn{1}{c}{} & \multicolumn{2}{c}{Cohort 1} & \multicolumn{1}{c}{Cohort 2} \\
+			\cmidrule(l{3pt}r{3pt}){2-3} \cmidrule(l{3pt}r{3pt}){4-4}
+			Pathway & Dose & Outcomes & Dose\\
+			\midrule
+			\cellcolor{gray!6}{1} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(1)T} & \cellcolor{gray!6}{1}\\
+			2 & 2 & N(2)T & 1\\
+			\cellcolor{gray!6}{3} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(3)T} & \cellcolor{gray!6}{1}\\
+			4 & 2 & N(4)T & 1\\
+			\cellcolor{gray!6}{5} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(5)T} & \cellcolor{gray!6}{1}\\
+			6 & 2 & N(6)T & 1\\
+			\cellcolor{gray!6}{7} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(7)T} & \cellcolor{gray!6}{1}\\
+			8 & 2 & N(8)T & 1\\
+			\cellcolor{gray!6}{9} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(9)T} & \cellcolor{gray!6}{1}\\
+			10 & 2 & N(10)T & 1\\
+			\cellcolor{gray!6}{11} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(11)T} & \cellcolor{gray!6}{1}\\
+			12 & 2 & N(12)T & 1\\
+			\cellcolor{gray!6}{13} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(13)T} & \cellcolor{gray!6}{1}\\
+			14 & 2 & N(14)T & 1\\
+			\cellcolor{gray!6}{15} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(15)T} & \cellcolor{gray!6}{1}\\
+			16 & 2 & N(16)T & 1\\
+			\cellcolor{gray!6}{17} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(17)T} & \cellcolor{gray!6}{1}\\
+			18 & 2 & N(18)T & 1\\
+			\cellcolor{gray!6}{19} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(19)T} & \cellcolor{gray!6}{1}\\
+			20 & 2 & N(20)T & 1\\
+			\cellcolor{gray!6}{21} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(21)T} & \cellcolor{gray!6}{1}\\
+			22 & 2 & N(22)T & 1\\
+			\cellcolor{gray!6}{23} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(23)T} & \cellcolor{gray!6}{1}\\
+			24 & 2 & N(24)T & 1\\
+			\cellcolor{gray!6}{25} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(25)T} & \cellcolor{gray!6}{1}\\
+			26 & 2 & N(26)T & 1\\
+			\cellcolor{gray!6}{27} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(27)T} & \cellcolor{gray!6}{1}\\
+			28 & 2 & N(28)T & 1\\
+			\cellcolor{gray!6}{29} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(29)T} & \cellcolor{gray!6}{1}\\
+			30 & 2 & N(30)T & 1\\
+			\cellcolor{gray!6}{31} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(31)T} & \cellcolor{gray!6}{1}\\
+			32 & 2 & N(32)T & 1\\
+			\cellcolor{gray!6}{33} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{N(33)T} & \cellcolor{gray!6}{1}\\
+			34 & 2 & N(34)T & 1\\
+			\cellcolor{gray!6}{35} & \cellcolor{gray!6}{2} & \cellcolor{gray!6}{NT} & \cellcolor{gray!6}{1}\\
+			\bottomrule
+	\end{tabular}}
+\end{table}
+
+The most complicated scenario is when both patients have no toxicity. The number of outcomes for this scenario can be calculated using the combinations with replacement formula where n represents to the number of follow-up days and r represents the number of patients: 
+
+\begin{equation}
+	\mathbb{C}(n+r-1,r) = \frac{(n+r-1)!}{r!(n-1)!}
+\end{equation}
+
+Here we have to consider every combination of follow-up days both patients could have completed. For simplicity we only consider unique combinations of days for example, N(21)N(34) would indicate one patient had been observed for 21 days and the other for 34 days, this would be the same as N(34)N(21) and so would only require one pathway. 
+
+For our example with 2 patients and an observation window of 35 days we get 630 different combinations hence the 630 pathways. Trying to show all these pathways in a table as we did before would be infeasible and hard to interpret so instead we just present some aggregate data in Table \ref{tab_tite-dtp:TITEDTP_c2NN}. 
+
+\begin{table}[H]
+	\centering
+	\caption{Summary of pathways for a cohort of two for scenario NN. }
+	\label{tab_tite-dtp:TITEDTP_c2NN}
+	\begin{tabular}{cccc}
+		\hline
+		\multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{2}{c}{Combined no. of Follow-up Days} \\ \cline{3-4} 
+		Recommend Dose & No. of Pathways & Minimum & Maximum \\ \hline
+		4              & 102             & 2       & 21      \\
+		5              & 528             & 20      & 70      \\ \hline
+	\end{tabular}
+\end{table}
+
+We can see out of the 630 pathways, 102 recommend dose 4 for the next cohort and 528 recommend dose 5. Dose-level 4 is recommended when the combined follow-up between patients is between 2 and 21 days and dose-level 5 is recommended when the combined number of follow-up days is between 20 and 70. This presents another problem with TITE-DTPs as there is some overlap in dose-recommendations depending on how much combined follow-up patients have. So, if the combined follow-up between the two patients in the cohort is 20 or 21 days they could potentially be allocated to either dose-level 4 or 5 and the way that decision is made is dependent on the split in follow-up between the two patients. This problem is also visualised in Figure \ref{fig_tite-dtp:c2NNprob}. The red lines indicate combined follow-up time between both patients of 19 and 22 days respectively. Anything greater than 22 days combined follow-up and the model recommends dose-level 5, anything less than 19 and the recommendation is dose-level 4. In-between those two time-points is a bit of a grey are with the model selecting to escalate higher, to dose-level 5, with less data i.e. combined follow-up time of 20 days. Table \ref{tab_tite-dtp:TITEDTP_c2NNprob} provides a breakdown of these specific combinations. 
+
+\begin{figure}[h!]
+	\centering
+	\caption[Combined follow-up and dose recommendations for cohort of 2 scenario NN.]{Plot illustrating combined-follow up and overlap of dose recommendations for a cohort of two patients for scenario NN.}
+	\label{fig_tite-dtp:c2NNprob}
+	\includegraphics[width=\textwidth]{TITE-DTP-c2NN}
+\end{figure}
+
+\begin{table}[H]
+	
+	\caption{\label{tab_tite-dtp:TITEDTP_c2NNprob}Different dose recommendations with overlapping combined follow-up times.}
+	\centering
+	\fontsize{11}{13}\selectfont
+	\begin{tabular}[t]{cccc}
+		\toprule
+		\multicolumn{2}{c}{Follow-up} & \multicolumn{2}{c}{ } \\
+		\cmidrule(l{3pt}r{3pt}){1-2}
+		Patient 1 & Patient 2 & Combined Follow-up & Dose Recommendation\\
+		\midrule
+		\cellcolor{gray!6}{1} & \cellcolor{gray!6}{19} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{5}\\
+		1 & 20 & 21 & 5\\
+		\cellcolor{gray!6}{2} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{5}\\
+		2 & 19 & 21 & 5\\
+		\cellcolor{gray!6}{3} & \cellcolor{gray!6}{17} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
+		3 & 18 & 21 & 5\\
+		\cellcolor{gray!6}{4} & \cellcolor{gray!6}{16} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
+		4 & 17 & 21 & 5\\
+		\cellcolor{gray!6}{5} & \cellcolor{gray!6}{15} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
+		5 & 16 & 21 & 5\\
+		\cellcolor{gray!6}{6} & \cellcolor{gray!6}{14} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
+		6 & 15 & 21 & 5\\
+		\cellcolor{gray!6}{7} & \cellcolor{gray!6}{13} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
+		7 & 14 & 21 & 4\\
+		\cellcolor{gray!6}{8} & \cellcolor{gray!6}{12} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
+		8 & 13 & 21 & 4\\
+		\cellcolor{gray!6}{9} & \cellcolor{gray!6}{11} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
+		9 & 12 & 21 & 4\\
+		\cellcolor{gray!6}{10} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
+		10 & 11 & 21 & 4\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+In the case where one patient has less than 14 days or less of follow-up the model recommends dose-level 4, similarly if one patient has at least 18 days of follow up the model recommends dose-level 5. Then when one patient has follow-up times of 15, 16 or 17 the model requires the second patient to have enough follow-up to make the combined total 21 days in order to recommend dose-level 5. So, there exists some threshold whereby the model is happy to escalate further if a single patient has enough follow-up (in this case 18 days) and some critical range where the model will only escalate further if a minimum combined follow-up threshold is met (here this is between 15-17 days for one patient with the threshold being 21 days).
+
+This could perhaps be similar to a incoherent CRM design, which escalate after observing a toxicity, except here we escalates after an inadequate amount of follow-up. It should also be noted that in practice rules may be employed to stop the trial skipping untried doses or skipping multiple doses which is what's being recommended in this case. However, that does not mean that this issue would still not occur even when selecting between two more appropriate doses. 
+
+So far we have split up the presentation of the pathways dependent on the scenario as there are too many to tabulate and present at once. Table \ref{tab_tite-dtp:TITEDTP_c2_Sum} attempts to summarise all the different pathways for a cohort of two patients. However, due to the issue earlier with the NN scenario it is difficult to adequately summarise the combined follow-up required for the different dose-decisions. Here we have addressed this by just including the combined follow-up times that we know guarantee a specific dose-decision as illustrated in Figure \ref{fig_tite-dtp:c2NNprob}.
+
+\begin{table}[H]
+	\centering
+	\caption{Summary of TITE-DTP for a cohort of two.}
+	\label{tab_tite-dtp:TITEDTP_c2_Sum}
+	\begin{tabular}{cccc}
+		\hline
+		\multicolumn{1}{l}{} & \multicolumn{2}{l}{Cohort 1}    & \multicolumn{1}{l}{Cohort 2} \\ \cline{2-4} 
+		Dose                 & Outcome             & Follow-up & Dose                         \\ \hline
+		2                    & TT                  &           & 1                            \\
+		2                    & NT                  &  1-35     & 1                            \\
+		\multirow{2}{*}{2}   & \multirow{2}{*}{NN} & 2-19      & 4                            \\
+		&                     & 22-70     & 5                            \\ \hline
+	\end{tabular}
+\end{table}
+
+Just by adding an extra patient to a cohort of one the number of pathways we have has increased almost 20-fold. We have also discovered when looking at a specific combinations of partial tolerance events there are some inconsistencies with the way the TITE-CRM is recommending dose-levels. Finally, for completeness we attempt producing TITE-DTPs for a cohort of 3 patients.   
+
+%-----------------------------------
+%	SUBSECTION 3
+%-----------------------------------
+
+\subsection{Cohort of three patients}
+
+
+%-----------------------------------
+%	SUBSECTION 4
+%-----------------------------------
+
+\subsection{The issues with TITE-DTPs}
+
