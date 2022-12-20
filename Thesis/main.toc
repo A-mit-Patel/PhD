@@ -75,10 +75,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.1}Cohort of one patient}{120}{subsection.117}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Cohort of two patients}{122}{subsection.120}%
+\contentsline {subsection}{\numberline {4.3.2}Cohort of two patients}{123}{subsection.120}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Cohort of three patients}{129}{subsection.127}%
+\contentsline {subsection}{\numberline {4.3.3}Cohort of three patients}{130}{subsection.127}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.4}The issues with TITE-DTPs}{129}{subsection.128}%
+\contentsline {section}{\numberline {4.4}Discussion}{137}{section.133}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{131}{chapter*.129}%
+\contentsline {chapter}{Bibliography}{143}{chapter*.134}%
