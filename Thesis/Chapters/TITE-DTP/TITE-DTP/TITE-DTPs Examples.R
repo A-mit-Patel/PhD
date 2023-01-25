@@ -274,7 +274,9 @@ results %>% mutate(TotalFollow = Patient1+Patient2+Patient3) %>%
 results %>% 
   mutate(TotalFollow = Patient1+Patient2+Patient3) %>%
   filter(TotalFollow %in% c(24,25,26)) %>% 
-  filter(Patient3 == 21)
+  group_by(Rec) %>% 
+  summarise(n = n())
+  #filter(Patient3 == 15)
 
 # Need to run all combinations for the plot 
 level <- c(1,1,1)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.8)  20 DEC 2022 20:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.8)  21 JAN 2023 15:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -886,7 +886,8 @@ LaTeX Font Info:    Trying to load font information for T1+ppl on input line 11
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 (main.aux (Chapters/Chapter1/Chapter1.aux) (Chapters/Adept/Adept_tex.aux)
-(Chapters/WT/WT_tex.aux) (Chapters/TITE-DTP/TITE-DTP_tex.aux))
+(Chapters/WT/WT_tex.aux) (Chapters/TITE-DTP/TITE-DTP_tex.aux)
+(Chapters/ETP/ETP_tex.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 111.
@@ -1142,23 +1143,23 @@ Overfull \vbox (3.33585pt too high) has occurred while \output is active []
 
 ] (main.toc
 1: section
-[7])
+[7] [8])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [8] (main.lof)
+ [9] [10
+
+] (main.lof)
 \tf@lof=\write6
 \openout6 = `main.lof'.
 
 
 1: section
-[9
-
-] [10
+[11] [12
 
 ] (main.lot
 1: section
-[11]
+[13]
 Overfull \hbox (24.97519pt too wide) in paragraph at lines 62--62
  [][] [][][]\T1/ppl/m/n/12 Different dose rec-om-men-da-tions with over-lap-pin
 g com-bined follow- 
@@ -1168,7 +1169,7 @@ g com-bined follow-
 \tf@lot=\write7
 \openout7 = `main.lot'.
 
- [12]
+ [14]
 1: section
 \openout2 = `Chapters/Chapter1/Chapter1.aux'.
 
@@ -1202,7 +1203,7 @@ Overfull \hbox (5.0661pt too wide) in paragraph at lines 28--29
 ponse model
  []
 
-<Figures//Adept-DoseExample.pdf, id=454, 160.6803pt x 146.4672pt>
+<Figures//Adept-DoseExample.pdf, id=499, 160.6803pt x 146.4672pt>
 File: Figures//Adept-DoseExample.pdf Graphic file (type pdf)
 <use Figures//Adept-DoseExample.pdf>
 Package pdftex.def Info: Figures//Adept-DoseExample.pdf  used on input line 34.
@@ -1231,7 +1232,7 @@ Overfull \hbox (7.31252pt too wide) in paragraph at lines 155--155
 
 pdfTeX warning: pdflatex.exe (file ./Figures//Adept-DoseCombos.pdf): PDF inclus
 ion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures//Adept-DoseCombos.pdf, id=581, 491.91779pt x 572.1375pt>
+<Figures//Adept-DoseCombos.pdf, id=627, 491.91779pt x 572.1375pt>
 File: Figures//Adept-DoseCombos.pdf Graphic file (type pdf)
 <use Figures//Adept-DoseCombos.pdf>
 Package pdftex.def Info: Figures//Adept-DoseCombos.pdf  used on input line 172.
@@ -1246,7 +1247,7 @@ Overfull \hbox (13.09404pt too wide) in paragraph at lines 194--196
 lation/de-escalation
  []
 
-<Figures//Adept-WeightFunction.pdf, id=617, 713.66624pt x 434.62375pt>
+<Figures//Adept-WeightFunction.pdf, id=662, 713.66624pt x 434.62375pt>
 File: Figures//Adept-WeightFunction.pdf Graphic file (type pdf)
 <use Figures//Adept-WeightFunction.pdf>
 Package pdftex.def Info: Figures//Adept-WeightFunction.pdf  used on input line 
@@ -1264,7 +1265,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [30] [31]
-<Figures//Adept-DLTRates.pdf, id=687, 844.15375pt x 597.23125pt>
+<Figures//Adept-DLTRates.pdf, id=732, 844.15375pt x 597.23125pt>
 File: Figures//Adept-DLTRates.pdf Graphic file (type pdf)
 <use Figures//Adept-DLTRates.pdf>
 Package pdftex.def Info: Figures//Adept-DLTRates.pdf  used on input line 462.
@@ -1274,13 +1275,13 @@ Package pdftex.def Info: Figures//Adept-DLTRates.pdf  used on input line 462.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [32] [33 <./Figures//Adept-DLTRates.pdf>] [34]
-<Figures//Adept-SimsOrder1.pdf, id=719, 844.15375pt x 597.23125pt>
+<Figures//Adept-SimsOrder1.pdf, id=764, 844.15375pt x 597.23125pt>
 File: Figures//Adept-SimsOrder1.pdf Graphic file (type pdf)
 <use Figures//Adept-SimsOrder1.pdf>
 Package pdftex.def Info: Figures//Adept-SimsOrder1.pdf  used on input line 745.
 
 (pdftex.def)             Requested size: 412.56499pt x 291.88948pt.
-<Figures//Adept-SimsOrder2.pdf, id=722, 844.15375pt x 597.23125pt>
+<Figures//Adept-SimsOrder2.pdf, id=767, 844.15375pt x 597.23125pt>
 File: Figures//Adept-SimsOrder2.pdf Graphic file (type pdf)
 <use Figures//Adept-SimsOrder2.pdf>
 Package pdftex.def Info: Figures//Adept-SimsOrder2.pdf  used on input line 752.
@@ -1321,7 +1322,7 @@ he WT de-sign and how it works.
  []
 
 [49] [50] [51] [52] [53] [54] [55]
-<Figures//WT-TwoArmExample.pdf, id=876, 389.5353pt x 608.2725pt>
+<Figures//WT-TwoArmExample.pdf, id=921, 389.5353pt x 608.2725pt>
 File: Figures//WT-TwoArmExample.pdf Graphic file (type pdf)
 <use Figures//WT-TwoArmExample.pdf>
 Package pdftex.def Info: Figures//WT-TwoArmExample.pdf  used on input line 178.
@@ -1424,7 +1425,14 @@ de-ci-sion rules, sam-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[100] [101]
+[100]
+Overfull \hbox (10.85625pt too wide) in paragraph at lines 74--75
+\T1/ppl/m/n/12 we will have 10 co-horts and there-fore 1,048,576 path-ways ($\O
+T1/zplm/m/n/12 [\OT1/ppl/m/n/12 3 \OT1/zplm/m/n/12 + \OT1/ppl/m/n/12 1\OT1/zplm
+/m/n/12 ][] = \OT1/ppl/m/n/12 1, 048, 576$\T1/ppl/m/n/12 ).
+ []
+
+[101]
 LaTeX Font Info:    Calculating math sizes for size <4> on input line 155.
 
 
@@ -1444,14 +1452,14 @@ Overfull \vbox (55.9648pt too high) has occurred while \output is active []
 
 
 [103]
-<Figures//TITE-DTP-InitialExampleDTPNode.pdf, id=1151, 1157.32375pt x 1153.3087
+<Figures//TITE-DTP-InitialExampleDTPNode.pdf, id=1195, 1157.32375pt x 1153.3087
 5pt>
 File: Figures//TITE-DTP-InitialExampleDTPNode.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-InitialExampleDTPNode.pdf>
 Package pdftex.def Info: Figures//TITE-DTP-InitialExampleDTPNode.pdf  used on i
 nput line 162.
 (pdftex.def)             Requested size: 412.56499pt x 411.12569pt.
-<Figures//TITE-DTP-InitialExampleDTPFlow.pdf, id=1152, 844.15375pt x 597.23125p
+<Figures//TITE-DTP-InitialExampleDTPFlow.pdf, id=1196, 844.15375pt x 597.23125p
 t>
 File: Figures//TITE-DTP-InitialExampleDTPFlow.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-InitialExampleDTPFlow.pdf>
@@ -1464,7 +1472,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [104 <./Figures//TITE-DTP-InitialExampleDTPNode.pdf>] [105 <./Figures//TITE-DTP
 -InitialExampleDTPFlow.pdf>] [106]
-<Figures//TITE-DTP-UpdatedExampleDTPNode.pdf, id=1187, 1122.1925pt x 1115.16624
+<Figures//TITE-DTP-UpdatedExampleDTPNode.pdf, id=1231, 1122.1925pt x 1115.16624
 pt>
 File: Figures//TITE-DTP-UpdatedExampleDTPNode.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-UpdatedExampleDTPNode.pdf>
@@ -1475,7 +1483,7 @@ nput line 257.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf, id=1188, 844.15375pt x 597.23125p
+<Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf, id=1232, 844.15375pt x 597.23125p
 t>
 File: Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf>
@@ -1485,27 +1493,26 @@ nput line 264.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[107] [108 <./Figures//TITE-DTP-UpdatedExampleDTPNode.pdf>] [109 <./Figures//TI
-TE-DTP-UpdatedExampleDTPFlow.pdf>] [110] [111] [112]
+[107] [108 <./Figures//TITE-DTP-UpdatedExampleDTPNode.pdf>]
+Overfull \hbox (0.93523pt too wide) in paragraph at lines 271--275
+[]\T1/ppl/m/n/12 Here we have high-lighted how DTPs can be utilised dur-ing the
+ ini-tial stages
+ []
+
+[109 <./Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf>] [110] [111] [112]
 Overfull \vbox (55.9648pt too high) has occurred while \output is active []
 
 
 [113]
-<Figures//TITE-DTP-UsingDuringTrialDTPNode.pdf, id=1242, 1157.32375pt x 1153.30
+<Figures//TITE-DTP-UsingDuringTrialDTPNode.pdf, id=1287, 1157.32375pt x 1153.30
 875pt>
 File: Figures//TITE-DTP-UsingDuringTrialDTPNode.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-UsingDuringTrialDTPNode.pdf>
 Package pdftex.def Info: Figures//TITE-DTP-UsingDuringTrialDTPNode.pdf  used on
  input line 371.
 (pdftex.def)             Requested size: 412.56499pt x 411.12569pt.
-
-Overfull \hbox (18.77019pt too wide) in paragraph at lines 376--377
-\T1/ppl/m/n/12 lead-ing to long time pe-ri-ods be-tween the eval-u-a-tion of co
--horts and dose-decisions.
- []
-
-[114 <./Figures//TITE-DTP-UsingDuringTrialDTPNode.pdf>] [115]
-<Figures//TITE-DTP-NonUniformDTPNode.pdf, id=1262, 958.58125pt x 996.72375pt>
+ [114 <./Figures//TITE-DTP-UsingDuringTrialDTPNode.pdf>] [115]
+<Figures//TITE-DTP-NonUniformDTPNode.pdf, id=1306, 958.58125pt x 996.72375pt>
 File: Figures//TITE-DTP-NonUniformDTPNode.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-NonUniformDTPNode.pdf>
 Package pdftex.def Info: Figures//TITE-DTP-NonUniformDTPNode.pdf  used on input
@@ -1518,119 +1525,168 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [116] [117 <./Figures//TITE-DTP-NonUniformDTPNode.pdf>] [118] [119] [120]
 [121] [122] [123] [124] [125]
 LaTeX Font Info:    Trying to load font information for U+fplmbb on input line 
-616.
+617.
 
 (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 [126]
-<Figures//TITE-DTP-c2NN.pdf, id=1332, 760.8425pt x 330.23375pt>
+<Figures//TITE-DTP-c2NN.pdf, id=1377, 760.8425pt x 330.23375pt>
 File: Figures//TITE-DTP-c2NN.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-c2NN.pdf>
-Package pdftex.def Info: Figures//TITE-DTP-c2NN.pdf  used on input line 642.
+Package pdftex.def Info: Figures//TITE-DTP-c2NN.pdf  used on input line 643.
 (pdftex.def)             Requested size: 412.56499pt x 179.07436pt.
-LaTeX Font Info:    Calculating math sizes for size <11> on input line 650.
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 651.
  [127 <./Figures//TITE-DTP-c2NN.pdf>] [128] [129] [130] [131] [132]
 [133]
-<Figures//TITE-DTP-c3NNN.png, id=1373, 428.09938pt x 413.04312pt>
+<Figures//TITE-DTP-c3NNN.png, id=1417, 428.09938pt x 413.04312pt>
 File: Figures//TITE-DTP-c3NNN.png Graphic file (type png)
 <use Figures//TITE-DTP-c3NNN.png>
-Package pdftex.def Info: Figures//TITE-DTP-c3NNN.png  used on input line 807.
+Package pdftex.def Info: Figures//TITE-DTP-c3NNN.png  used on input line 808.
 (pdftex.def)             Requested size: 350.68275pt x 338.3509pt.
 
-Overfull \hbox (4.61998pt too wide) in paragraph at lines 810--811
-[]\T1/ppl/m/n/12 In this ex-am-ple there are 156 dif-fer-ent path-ways where th
-e com-bined follow-
+Overfull \hbox (7.76398pt too wide) in paragraph at lines 811--812
+[]\T1/ppl/m/n/12 In this ex-am-ple, there are 156 dif-fer-ent path-ways where t
+he com-bined follow-
  []
 
 [134 <./Figures//TITE-DTP-c3NNN.png>] [135] [136] [137] [138] [139] [140]
 [141]) [142]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
-08.
+\openout2 = `Chapters/ETP/ETP_tex.aux'.
 
-(C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
-File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-Overfull \hbox (6.1905pt too wide) in paragraph at lines 308--308
-\T1/ppl/m/n/12 A Prac-ti-cal De-sign for Phase 1 Clin-i-cal Tri-als in Can-cer,
- \T1/ppl/m/it/12 Bio-met-rics\T1/ppl/m/n/12 , vol. 46,
- []
-
+ (Chapters/ETP/ETP_tex.tex
+Chapter 5.
 1: section
 [143
 
 
 
+
 ]
-Overfull \hbox (10.60683pt too wide) in paragraph at lines 308--308
+
+pdfTeX warning: pdflatex.exe (file ./Figures//ETP-Phase2SingleArmExample.pdf): 
+PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figures//ETP-Phase2SingleArmExample.pdf, id=1481, 242.8272pt x 248.8497pt>
+File: Figures//ETP-Phase2SingleArmExample.pdf Graphic file (type pdf)
+<use Figures//ETP-Phase2SingleArmExample.pdf>
+Package pdftex.def Info: Figures//ETP-Phase2SingleArmExample.pdf  used on input
+ line 27.
+(pdftex.def)             Requested size: 309.42374pt x 317.11397pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[144] [145 <./Figures//ETP-Phase2SingleArmExample.pdf>] [146] [147]
+
+Package amsmath Warning: Foreign command \atopwithdelims;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 71.
+
+) [148] [149] [150
+
+
+
+]
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 3
+09.
+
+(C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
+File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Overfull \hbox (6.1905pt too wide) in paragraph at lines 309--309
+\T1/ppl/m/n/12 A Prac-ti-cal De-sign for Phase 1 Clin-i-cal Tri-als in Can-cer,
+ \T1/ppl/m/it/12 Bio-met-rics\T1/ppl/m/n/12 , vol. 46,
+ []
+
+1: section
+[151]
+Overfull \hbox (10.60683pt too wide) in paragraph at lines 309--309
 \T1/cmtt/m/n/12 org / health -[] professional / cancer -[] statistics / statist
 ics -[] by -[] cancer -[]
  []
 
 
-Overfull \hbox (7.04141pt too wide) in paragraph at lines 308--308
+Overfull \hbox (7.04141pt too wide) in paragraph at lines 309--309
 \T1/ppl/m/n/12 pp. 949955, Mar. 18, 2000, \T1/ppl/m/sc/12 issn\T1/ppl/m/n/12 :
  0140-6736. \T1/ppl/m/sc/12 doi\T1/ppl/m/n/12 : [][]$\T1/cmtt/m/n/12 10 . 1016 
 / S0140 -[] 6736(00 )
  []
 
 
-Overfull \hbox (1.15176pt too wide) in paragraph at lines 308--308
+Overfull \hbox (1.15176pt too wide) in paragraph at lines 309--309
 \T1/cmtt/m/n/12 90011 -[] 4$[][]\T1/ppl/m/n/12 . [On-line]. Avail-able: [][]$\T
 1/cmtt/m/n/12 http : / / www . sciencedirect . com / science /
  []
 
 
-Overfull \hbox (5.08871pt too wide) in paragraph at lines 308--308
+Overfull \hbox (5.08871pt too wide) in paragraph at lines 309--309
 []\T1/ppl/m/n/12 M. J. O'Connor,   Tar-get-ing the DNA Dam-age Re-sponse in Ca
 n-cer, \T1/ppl/m/it/12 Molec-
  []
 
-[144]
-Overfull \hbox (2.08783pt too wide) in paragraph at lines 308--308
+[152]
+Overfull \hbox (2.08783pt too wide) in paragraph at lines 309--309
 []\T1/ppl/m/n/12 A. Chalmers,   Sci-ence in Fo-cus: Com-bin-ing Ra-dio-ther-ap
 y with In-hibitors
  []
 
-[145] [146]
-Overfull \hbox (1.39478pt too wide) in paragraph at lines 308--308
+[153] [154]
+Overfull \hbox (1.39478pt too wide) in paragraph at lines 309--309
 \T1/ppl/m/n/12 vol. 26, no. 1, pp. 150166, 2016, \T1/ppl/m/sc/12 issn\T1/ppl/m
 /n/12 : 1054-3406. \T1/ppl/m/sc/12 doi\T1/ppl/m/n/12 : [][]$\T1/cmtt/m/n/12 10 
 . 1080 / 10543406 .
  []
 
-[147] [148]
-Overfull \hbox (11.46663pt too wide) in paragraph at lines 308--308
+[155] [156]
+Overfull \hbox (11.46663pt too wide) in paragraph at lines 309--309
 \T1/ppl/m/n/12 dose-finding de-sign in the Match-point trial, \T1/ppl/m/it/12 
 BMC Med-i-cal Re-search Method-
  []
 
-[149]
-Overfull \hbox (13.74023pt too wide) in paragraph at lines 308--308
+[157]
+Overfull \hbox (13.74023pt too wide) in paragraph at lines 309--309
 \T1/ppl/m/n/12 pp. 466479, Feb. 1, 2018, \T1/ppl/m/sc/12 issn\T1/ppl/m/n/12 : 
 0962-2802. \T1/ppl/m/sc/12 doi\T1/ppl/m/n/12 : [][]$\T1/cmtt/m/n/12 10 . 1177 /
  0962280216631763$[][]\T1/ppl/m/n/12 .
  []
 
-[150] [151] (main.aux (Chapters/Chapter1/Chapter1.aux)
-(Chapters/Adept/Adept_tex.aux) (Chapters/WT/WT_tex.aux)
-(Chapters/TITE-DTP/TITE-DTP_tex.aux))
+[158] [159]
+Overfull \hbox (3.76405pt too wide) in paragraph at lines 309--309
+[]\T1/ppl/m/n/12 J. M. Bland and D. G. Alt-man,   Bayesians and fre-quen-tists
+, \T1/ppl/m/it/12 BMJ\T1/ppl/m/n/12 , vol. 317,
+ []
+
+
+Overfull \hbox (15.66301pt too wide) in paragraph at lines 309--309
+\T1/ppl/m/n/12 bayesian meth-ods in health tech-nol-ogy as-sess-ment, \T1/ppl/
+m/it/12 BMJ\T1/ppl/m/n/12 , vol. 319, no. 7208,
+ []
+
+
+Overfull \hbox (17.32022pt too wide) in paragraph at lines 309--309
+\T1/ppl/m/n/12 Sep. 25, 2009, 612 pp., \T1/ppl/m/sc/12 isbn\T1/ppl/m/n/12 : 978
+-0-470-31771-6. Google Books: [][]$\T1/cmtt/m/n/12 11nSgIcd7xQC$[][]\T1/ppl/m/n
+/12 . 
+ []
+
+[160] (main.aux (Chapters/Chapter1/Chapter1.aux) (Chapters/Adept/Adept_tex.aux)
+(Chapters/WT/WT_tex.aux) (Chapters/TITE-DTP/TITE-DTP_tex.aux)
+(Chapters/ETP/ETP_tex.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.59998pt have occurred.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4F3F9D8131E81CA7D3F93C5D9A8CF21C;8061.
+(rerunfilecheck)             Checksum: DBD00C7060A44DE31132C123D6DD4480;9797.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30765 strings out of 478659
- 676468 string characters out of 2846395
- 1408541 words of memory out of 3000000
- 48061 multiletter control sequences out of 15000+600000
- 482995 words of font info for 194 fonts, out of 8000000 for 9000
+ 30867 strings out of 478659
+ 680170 string characters out of 2846395
+ 1420099 words of memory out of 3000000
+ 48125 multiletter control sequences out of 15000+600000
+ 483926 words of font info for 195 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,20n,93p,2187b,2513s stack positions out of 5000i,500n,10000p,200000b,80000s
  <C:\Users\Amit\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1
@@ -1648,9 +1704,9 @@ grams/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Amit/AppData/Local/P
 rograms/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Amit/AppData/Local
 /Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Amit/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (163 pages, 1275083 bytes).
+Output written on main.pdf (174 pages, 1345922 bytes).
 PDF statistics:
- 1809 PDF objects out of 2073 (max. 8388607)
- 345 named destinations out of 1000 (max. 500000)
- 404 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1949 PDF objects out of 2073 (max. 8388607)
+ 374 named destinations out of 1000 (max. 500000)
+ 465 words of extra memory for PDF output out of 10000 (max. 10000000)
 
