@@ -4066,5 +4066,119 @@
     \field{month}{09}
     \field{year}{2009}
   \endentry
+
+  \entry{sochBookStatisticalProofs2020}{software}{}
+    \name{author}{5}{}{%
+      {{hash=SJ}{%
+         family={Soch},
+         familyi={S\bibinitperiod},
+         given={Joram},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PTBoS}{%
+         family={Proofs},
+         familyi={P\bibinitperiod},
+         given={The Book of\bibnamedelima Statistical},
+         giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim
+  o\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=FTJ}{%
+         family={Faulkenberry},
+         familyi={F\bibinitperiod},
+         given={Thomas\bibnamedelima J.},
+         giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=PK}{%
+         family={Petrykowski},
+         familyi={P\bibinitperiod},
+         given={Kenneth},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=AC}{%
+         family={Allefeld},
+         familyi={A\bibinitperiod},
+         given={Carsten},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {{Zenodo}}%
+    }
+    \strng{namehash}{SJPTBoSFTJ+1}
+    \strng{fullhash}{SJPTBoSFTJPKAC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    The Book of Statistical Proofs, as of 2020 Release Date: December 4, 2020
+  – browse repository at this point in time Statistics: 3 Authors – 123
+  Definitions – 200 Proofs – 323 Items in total – 291 PDF pages Links:
+  Website – Wiki – GitHub – Twitter – GMail%
+    }
+    \verb{doi}
+    \verb 10.5281/zenodo.4305950
+    \endverb
+    \field{shorttitle}{{{StatProofBook}}/{{StatProofBook}}.Github.Io}
+    \field{title}{The {{Book}} of {{Statistical Proofs}}}
+    \verb{url}
+    \verb https://zenodo.org/record/4305950
+    \endverb
+    \verb{file}
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\4FCYJL3I\\4305950.html
+    \endverb
+    \field{day}{04}
+    \field{month}{12}
+    \field{year}{2020}
+    \field{urlday}{28}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{kermanClosedformApproximationMedian2011}{misc}{}
+    \name{author}{1}{}{%
+      {{hash=KJ}{%
+         family={Kerman},
+         familyi={K\bibinitperiod},
+         given={Jouni},
+         giveni={J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{arXiv}}%
+    }
+    \keyw{Mathematics - Statistics Theory,Statistics - Computation}
+    \strng{namehash}{KJ1}
+    \strng{fullhash}{KJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    A simple closed-form approximation for the median of the beta distribution
+  Beta(a, b) is introduced: (a-1/3)/(a+b-2/3) for (a,b) both larger than 1 has
+  a relative error of less than 4\%, rapidly decreasing to zero as both shape
+  parameters increase.%
+    }
+    \verb{eprint}
+    \verb 1111.0433
+    \endverb
+    \field{number}{arXiv:1111.0433}
+    \field{title}{A Closed-Form Approximation for the Median of the Beta
+  Distribution}
+    \verb{url}
+    \verb http://arxiv.org/abs/1111.0433
+    \endverb
+    \verb{file}
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\IWFX8CJ2\\Kerman - 2011 - A closed
+    \verb -form approximation for the median of the .pdf;C\:\\Users\\Amit\\Zote
+    \verb ro\\storage\\2LMZTEH8\\1111.html
+    \endverb
+    \field{eprinttype}{arxiv}
+    \field{eprintclass}{math, stat}
+    \field{day}{02}
+    \field{month}{11}
+    \field{year}{2011}
+    \field{urlday}{28}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
+    \warn{\item Can't use 'eprinttype' + 'archiveprefix'}
+  \endentry
 \enddatalist
 \endinput

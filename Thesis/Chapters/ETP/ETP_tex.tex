@@ -80,12 +80,112 @@ If the prior for $\theta$ is from a Beta distribution such that
 then the posterior distribution is also from a Beta distribution and can be expressed as 
 
 \begin{equation}
+\label{eq_etp:betaposterior}
 	P(\theta|y) = \text{Beta}(a+y,b+n-y)
 \end{equation}
 
-Using the posterior distribution for $\theta$ we can go on to make summary estimates and interpret the treatment effect. 
+To avoid confusion with the prior we will let $\alpha = a+y$ and $\beta = b+n-y$ which gives
+
+\begin{equation}
+	\label{eq_etp:betaposterior2}
+	P(\theta|y) = \text{Beta}(\alpha,\beta)
+\end{equation}
+
+Bayesian inference can then be used for estimation and decision making. Features such as the mean and  variance of the treatment effect $\theta$ can be  estimated from the posterior distribution given in equation \ref{eq_etp:betaposterior2}. For the posterior distribution of $\theta \sim Beta(\alpha,\beta)$ the mean, variance and mode are.
+
+\begin{equation}
+\label{eq_etp:betamean}
+	E[\theta] = \frac{\alpha}{\alpha + \beta} 
+\end{equation}
+
+\begin{equation}
+\label{eq_etp:betavar}
+	Var[\theta] = \frac{\alpha\beta}{(\alpha+\beta)^2 (\alpha+\beta+1)}
+\end{equation}
+
+\begin{equation}
+	\label{eq_etp:betamode}
+	mode[\theta] = \frac{\alpha - 1 }{\alpha + \beta - 2} 
+\end{equation}
+ 
+The proofs for these formula are relatively simple and can be found in \cite{sochBookStatisticalProofs2020}. There exists no closed formula for the median however this can still be calculated using the density function of a Beta distribution. If we take $\theta^m$ to be the median then, the median is the value that solves 
+
+\begin{equation}
+	P(\theta < Median) = 0.5 = \int_{0}^{\theta^m} \theta^{\alpha-1}(1-\theta)^{\beta-1}d\theta
+\end{equation}
+
+Alternatively, there is a closed form approximation to the median presented by Kerman \cite{kermanClosedformApproximationMedian2011} which is as follows 
+
+\begin{equation}
+	median[\theta] \approx \frac{\alpha - \frac{1}{3}}{\alpha + \beta - \frac{2}{3}}
+\end{equation}
+
+We can also establish credible intervals or make other probability statements in a similar manner. 
+Then pre-specified rules based on these direct probabilities from the posterior can be used for decision making purposes. For example, if 
+
+\begin{equation}
+	P(\theta > c |y) \geq q  \; \; \; \; \text{then GO else No GO}
+\end{equation}
+
+
+where $c$ is some target level of treatment effect and $q$ is some threshold of sufficient evidence. This probability can be calculated from the density function of the Beta distribution from $c$ to $\infty$. 
+
+\begin{equation}
+	P(\theta > c | y) = \int_{c}^{\infty}\theta^{\alpha-1}(1-\theta)^{\beta-1}d\theta
+\end{equation}
+
+It should be noted that $\int_{0}^{1}\theta^{\alpha-1}(1-\theta)^{\beta-1}d\theta = 1$, so $\theta$ has an upper bound of 1. Appropriate decision criteria, i.e. values for $c$ and $q$, can be determined and evaluated via simulations.
+
 %-----------------------------------
 %	SUBSECTION 1
+%-----------------------------------
+
+\subsection{Illustrative example to showcase a Beta-Binomial design} 
+In this section we will detail an example to show how a Beta-Binomial conjugate analysis would work in practice and how its used to make decisions. 
+
+Consider a trial in which we are trying to evaluate the efficacy of some new treatment. This will be done using an outcome measure of response. Patients can either be considered a responder or a non-responder. The treatment effect will be the response rate and will be analysed using a Beta-Binomial conjugate model. 
+
+To conduct the analysis and make a GO or No GO decision a prior and decision criteria needs to be specified. For simplicity a minimally informative Beta(1,1) prior will be used. This represents a 50\% response rate from a group of two patients. The following decision rule will also be used $P(\theta  \geq 40\%) \geq 0.9$, where $\theta$ is the treatment effect (response rate). So, if there is a greater than  90\% chance that the true response rate is at least 40\% this will be considered sufficient evidence to warrant a GO decision. 
+
+Now assume that 30 patients were recruited 18 of which had a response. Using equation \ref{eq_etp:betaposterior} we can establish that the posterior distribution for the treatment effect is $P(\theta) = Beta(19, 13)$. From this we can then calculate summary estimates, which are presented in Table \ref{tab_etp:bb_sum_est}.
+
+\begin{table}[H]
+	\centering
+	\caption{Summary estimates of response rate with 30 patients and 18 responses. }
+	\label{tab_etp:bb_sum_est}
+	\begin{tabular}{cc}
+		\hline
+		\textbf{Summary Estimate}                   &              \\ \hline
+		\multicolumn{1}{c|}{Mean}                   & 0.594        \\
+		\multicolumn{1}{c|}{Median}                 & 0.595        \\
+		\multicolumn{1}{c|}{Mode}                   & 0.6          \\
+		\multicolumn{1}{c|}{Variance}               & 0.007        \\
+		\multicolumn{1}{c|}{95\% Credible Interval} & 0.422, 0.755 \\ \hline
+	\end{tabular}
+\end{table}
+
+From these estimates we can say, based on the data that is observed (18 responses in 30 patients), the response rate is 60\% with a 95\% credible interval (42\%, 76\%). The probability of the response rate being at least 40\% can also be calculated. In this example it is 98.7\%. As this value is greater than the threshold of 90\%  we cans say there is sufficient evidence to warrant a GO decision.
+
+This can also be illustrated as shown in Figure \ref{fig_etp:bb_dec_rule1}. The blue shaded region highlights the upper 90\% of the distribution. In this scenario with this decision criteria, as the entire region does not cross the target response rate of 40\% we have a GO decision. We can see that there is a greater than 90\% chance that the response rate is greater than 40\%. 
+
+ \begin{figure}[h!]
+ 	\centering
+ 	\caption{Posterior distribution of response rate with decision criteria.}
+ 	\label{fig_etp:bb_dec_rule1}
+ 	\includegraphics[width=\textwidth]{ETP-BetaBinomialDecRule1}
+ \end{figure}
+
+
+
+%-----------------------------------
+%	SUBSECTION 2
+%-----------------------------------
+
+\subsection{Choice of Priors} 
+
+
+%-----------------------------------
+%	SUBSECTION 3
 %-----------------------------------
 
 \subsection{Interim analyses and Predictive Probability of Success}
@@ -100,7 +200,7 @@ Using the posterior distribution for $\theta$ we can go on to make summary estim
 %	SUBSECTION 1
 %-----------------------------------
 
-\subsection{Illustrative example using the DETERMINE trial}
+\subsection{Application the DETERMINE trial}
 
 %----------------------------------------------------------------------------------------
 %	SECTION 4
