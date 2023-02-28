@@ -183,12 +183,18 @@ A sceptical prior can be used when we are sceptical about the treatment producin
 
 Priors can also be evidence based or elicited. Evidence based priors will use results or data from previous trials to inform the choice of prior. These can then be adjusted to account for any potential biases. Elicited priors are decided based on discussions with a group of experts. 
 
+Figure \ref{fig_etp:bb_example_priors} shows the effect that different priors can have on the estimation of the treatment effect. Our example with 16 responses and a minimally informative prior is shown in the first plot. Here we can see the median response rate is 53.2\% and the probability of the response rate being greater than 30\% is greater than 90\% meaning we have a go decision. The minimally informative prior is indicated by the red line and is essentially a uniform distribution. Assuming we still have 16 responses, we can see that when a sceptical $Beta(2,8)$ prior is implemented the posterior distribution changes from $Beta(17,15)$ to $Beta(18,22)$. This shifts the posterior such that the new estimated median response rate is 44.9\%. However even with a sceptical prior we can still see we meet the criteria for a GO decision with a probability of 0.976 that the response rate is greater than 30\%. Then with an enthusiastic prior the posterior shifts in the other direction. So, with the same 16 responses but an enthusiastic prior the estimate of the response rate is 57.6\%. Again, the decision criteria is also met in this instance as well.    
+
  \begin{figure}[h!]
 	\centering
-	\caption{Posterior distribution of example under differnt priors.}
+	\caption{Posterior distribution of example under different priors.}
 	\label{fig_etp:bb_example_priors}
 	\includegraphics[width=\textwidth]{ETP-BetaBinomialPriors}
 \end{figure}
+
+In this example the choice of prior did not impact the decision that would be made. However, if the decision rule was different or the number of responses seen was less this could change. As part of some trials a sensitivity may be conducted to check the results and decisions of a trial with a different prior. As stated before simulation work is used to establish the most appropriate decision criteria and priors can be sourced from available evidence or elicited. The simulations should be conducted with the priors in mind as well as any sensitivity analyses that may be planned.   
+
+Once the decision rule and prior have been specified the minimum number of responses required to make a GO decision could also be calculated. In our example here this number is 12. So, we would need to observe a minimum of 12 responses to make a GO decision out of 30 patients. As the Beta-Binomial conjugate analysis is Bayesian in nature we can make use of this information and incorporate interim analyses into the trial. This would work by evaluating the data at pre-specified time points or after a certain amount of patients have been recruited. At these time points we can determine whether or not we have observed enough responses to warrant continuing with the trial based on the overall minimum responses we would need for a final GO decision. This is typically referred to as the predictive probability of success (PPOS). In the next section we look at how the PPoS is used to make decisions at interim analyses. 
 
 %-----------------------------------
 %	SUBSECTION 3

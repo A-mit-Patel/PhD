@@ -89,12 +89,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2.1}Illustrative example to showcase a Beta-Binomial design}{150}{subsection.150}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Interim analyses and Predictive Probability of Success}{153}{subsection.154}%
+\contentsline {subsection}{\numberline {5.2.2}Interim analyses and Predictive Probability of Success}{155}{subsection.154}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Constructing Efficacy Transition Pathways}{153}{section.155}%
+\contentsline {section}{\numberline {5.3}Constructing Efficacy Transition Pathways}{155}{section.155}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Application the DETERMINE trial}{153}{subsection.156}%
+\contentsline {subsection}{\numberline {5.3.1}Application the DETERMINE trial}{155}{subsection.156}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Development of a Web Application for ETPs}{153}{section.157}%
+\contentsline {section}{\numberline {5.4}Development of a Web Application for ETPs}{155}{section.157}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{155}{chapter*.158}%
+\contentsline {chapter}{Bibliography}{157}{chapter*.158}%
