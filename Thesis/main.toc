@@ -91,10 +91,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {5.2.2}Interim analyses and Predictive Probability of Success}{155}{subsection.154}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Constructing Efficacy Transition Pathways}{155}{section.155}%
+\contentsline {section}{\numberline {5.3}Constructing Efficacy Transition Pathways}{161}{section.162}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}Application the DETERMINE trial}{155}{subsection.156}%
+\contentsline {subsection}{\numberline {5.3.1}Application the DETERMINE trial}{161}{subsection.163}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Development of a Web Application for ETPs}{155}{section.157}%
+\contentsline {section}{\numberline {5.4}Development of a Web Application for ETPs}{161}{section.164}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{157}{chapter*.158}%
+\contentsline {chapter}{Bibliography}{163}{chapter*.165}%

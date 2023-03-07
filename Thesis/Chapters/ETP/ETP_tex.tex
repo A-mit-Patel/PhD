@@ -44,6 +44,7 @@ In this chapter we will explore the components that go into constructing an ETP 
 %----------------------------------------------------------------------------------------
 
 \section{Beta-Binomial Conjugate Analyses}
+\label{etp:BBConjugateAnalysis}
 
 Bayesian methods are an alternative way of thinking about evidence, data and statistics compared to the traditional frequentist approach. The Bayesian approach could be considered more intuitive and has some advantages that make it useful for analysing clinical trials. 
 
@@ -62,7 +63,7 @@ Binomial data has two possible outcomes. For example, a coin toss has two outcom
 Following the explanation by Lee \cite{leeBayesianStatisticsIntroduction2012} of a Beta conjugate prior for a binomial distribution. Consider a parameter of interest $\theta$ that represents some treatment effect. More specifically, for binomial data in a single arm Phase \RN{2} clinical trial, lets say the parameter $\theta$ is the probability of response in a number of patients following a some new treatment. Each patient can experience either a response or no response, with the same probability of response and each patient being independent from each other. For a fixed sample size with $n$ patients and number of responses ($y$) we have: 
 
 \begin{equation}
-	y \sim \text{Binomial}(n, \theta)
+	Y \sim \text{Binomial}(n, \theta)
 \end{equation}
 
 So, $y$ is from a binomial distribution which produces the following likelihood: 
@@ -74,6 +75,7 @@ So, $y$ is from a binomial distribution which produces the following likelihood:
 If the prior for $\theta$ is from a Beta distribution such that 
 
 \begin{equation}
+	\label{eq_etp:betaprior}
 	P(\theta) = \text{Beta}(a,b)
 \end{equation}
 
@@ -124,6 +126,7 @@ We can also establish credible intervals or make other probability statements in
 Then pre-specified rules based on these direct probabilities from the posterior can be used for decision making purposes. For example, if 
 
 \begin{equation}
+	\label{eq_etp:betafinaldecrule}
 	P(\theta > c |y) \geq q  \; \; \; \; \text{then GO else No GO}
 \end{equation}
 
@@ -141,13 +144,14 @@ It should be noted that $\int_{0}^{1}\theta^{\alpha-1}(1-\theta)^{\beta-1}d\thet
 %-----------------------------------
 
 \subsection{Illustrative example to showcase a Beta-Binomial design} 
+\label{etp:BBIllEx}
 In this section we will detail an example to show how a Beta-Binomial conjugate analysis would work in practice and how its used to make decisions. 
 
 Consider a trial in which we are trying to evaluate the efficacy of some new treatment. This will be done using an outcome measure of response. Patients can either be considered a responder or a non-responder. The treatment effect will be the response rate and will be analysed using a Beta-Binomial conjugate model. 
 
-To conduct the analysis and make a GO or No GO decision a prior and decision criteria needs to be specified. For simplicity a minimally informative $Beta(1,1)$ prior will be used. This represents a 50\% response rate from a group of two patients. The following decision rule will also be used $P(\theta  \geq 30\%) \geq 0.9$, where $\theta$ is the treatment effect (response rate). So, if there is a greater than  90\% chance that the true response rate is at least 30\% this will be considered sufficient evidence to warrant a GO decision. 
+To conduct the analysis and make a GO or No GO decision a prior and decision criteria needs to be specified. For simplicity a minimally informative Beta(1,1) prior will be used. This represents a 50\% response rate from a group of two patients. The following decision rule will also be used $P(\theta  \geq 30\%) \geq 0.9$, where $\theta$ is the treatment effect (response rate). So, if there is a greater than  90\% chance that the true response rate is at least 30\% this will be considered sufficient evidence to warrant a GO decision. 
 
-Now assume that 30 patients were recruited 16 of which had a response. Using equation \ref{eq_etp:betaposterior} we can establish that the posterior distribution for the treatment effect is $P(\theta) = Beta(17, 15)$. From this we can then calculate summary estimates, which are presented in Table \ref{tab_etp:bb_sum_est}.
+Now assume that 30 patients were recruited 16 of which had a response. Using equation \ref{eq_etp:betaposterior} we can establish that the posterior distribution for the treatment effect is $P(\theta) = \text{Beta}(17, 15)$. From this we can then calculate summary estimates, which are presented in Table \ref{tab_etp:bb_sum_est}.
 
 \begin{table}[H]
 	\centering
@@ -183,7 +187,7 @@ A sceptical prior can be used when we are sceptical about the treatment producin
 
 Priors can also be evidence based or elicited. Evidence based priors will use results or data from previous trials to inform the choice of prior. These can then be adjusted to account for any potential biases. Elicited priors are decided based on discussions with a group of experts. 
 
-Figure \ref{fig_etp:bb_example_priors} shows the effect that different priors can have on the estimation of the treatment effect. Our example with 16 responses and a minimally informative prior is shown in the first plot. Here we can see the median response rate is 53.2\% and the probability of the response rate being greater than 30\% is greater than 90\% meaning we have a go decision. The minimally informative prior is indicated by the red line and is essentially a uniform distribution. Assuming we still have 16 responses, we can see that when a sceptical $Beta(2,8)$ prior is implemented the posterior distribution changes from $Beta(17,15)$ to $Beta(18,22)$. This shifts the posterior such that the new estimated median response rate is 44.9\%. However even with a sceptical prior we can still see we meet the criteria for a GO decision with a probability of 0.976 that the response rate is greater than 30\%. Then with an enthusiastic prior the posterior shifts in the other direction. So, with the same 16 responses but an enthusiastic prior the estimate of the response rate is 57.6\%. Again, the decision criteria is also met in this instance as well.    
+Figure \ref{fig_etp:bb_example_priors} shows the effect that different priors can have on the estimation of the treatment effect. Our example with 16 responses and a minimally informative prior is shown in the first plot. Here we can see the median response rate is 53.2\% and the probability of the response rate being greater than 30\% is greater than 90\% meaning we have a go decision. The minimally informative prior is indicated by the red line and is essentially a uniform distribution. Assuming we still have 16 responses, we can see that when a sceptical Beta(2,8) prior is implemented the posterior distribution changes from Beta(17,15) to Beta(18,22). This shifts the posterior such that the new estimated median response rate is 44.9\%. However even with a sceptical prior we can still see we meet the criteria for a GO decision with a probability of 0.976 that the response rate is greater than 30\%. Then with an enthusiastic prior the posterior shifts in the other direction. So, with the same 16 responses but an enthusiastic prior the estimate of the response rate is 57.6\%. Again, the decision criteria is also met in this instance as well.    
 
  \begin{figure}[h!]
 	\centering
@@ -194,13 +198,120 @@ Figure \ref{fig_etp:bb_example_priors} shows the effect that different priors ca
 
 In this example the choice of prior did not impact the decision that would be made. However, if the decision rule was different or the number of responses seen was less this could change. As part of some trials a sensitivity may be conducted to check the results and decisions of a trial with a different prior. As stated before simulation work is used to establish the most appropriate decision criteria and priors can be sourced from available evidence or elicited. The simulations should be conducted with the priors in mind as well as any sensitivity analyses that may be planned.   
 
-Once the decision rule and prior have been specified the minimum number of responses required to make a GO decision could also be calculated. In our example here this number is 12. So, we would need to observe a minimum of 12 responses to make a GO decision out of 30 patients. As the Beta-Binomial conjugate analysis is Bayesian in nature we can make use of this information and incorporate interim analyses into the trial. This would work by evaluating the data at pre-specified time points or after a certain amount of patients have been recruited. At these time points we can determine whether or not we have observed enough responses to warrant continuing with the trial based on the overall minimum responses we would need for a final GO decision. This is typically referred to as the predictive probability of success (PPOS). In the next section we look at how the PPoS is used to make decisions at interim analyses. 
+Once the decision rule and prior have been specified the minimum number of responses required to make a GO decision could also be calculated. In our example here this number is 13. So, we would need to observe a minimum of 13 responses to make a GO decision out of 30 patients. To make these trial designs more efficient interim analyses can be included. This will allow the trial to look at the data at an earlier time point and potentially make a decision earlier as to whether the trial should continue. In the next section we look at how the predictive probability of success (PPOS) is used to make decisions at interim analyses. 
 
 %-----------------------------------
 %	SUBSECTION 3
 %-----------------------------------
 
 \subsection{Interim analyses and Predictive Probability of Success}
+
+There are several different methods in which interim analyses can be incorporated into a single-arm Phase \RN{2} clinical trial. One method that can be used in the context of a Beta-Binomial conjugate analysis utilises PPoS. This works by evaluating the data at pre-specified time points or after a certain intervals of patients have been recruited. At these time points we can determine whether or not we have observed enough responses to warrant continuing with the trial based on the overall minimum responses we would need for a final GO decision. More explicitly the PPoS is the probability of the trial being considered a success given the current data observed at the interim analysis. This is calculated by predicting the future number of responses in the patients yet to be recruited based on the data that has already been observed. 
+
+In section \ref{etp:BBConjugateAnalysis} we detailed how a Beta-Binomial conjugate analysis works in practice. Here, we will extend that to show how PPoS and an interim analysis can be incorporated into this trial design following the explanation of Berry et al. \cite{berryBayesianAdaptiveMethods2010}. 
+
+Consider for a fixed sample of size $n$ patients an interim analysis that will be conducted after $n_{int}$ patients, such that $n_{int} < n$. Again, the parameter of interest, treatment effect or response rate will be represented by $\theta$. Let the number of responses $x$ among the $n_{int}$ patients follow a binomial distribution: 
+
+\begin{equation}
+	X \sim \text{Binomial}(n_{int},\theta) 
+\end{equation}
+
+Let $Z$ be the number of responses in the remaining $m$ patients, where $m = n - n_{int}$. When $Z = i$, where $i = 1, ..., m$, the posterior distribution can be expressed as 
+
+\begin{equation}
+	P(\theta|x,Z=i) = \text{Beta}(a+x+z, b+n-x-z)
+\end{equation}
+
+Where $a$ and $b$ are parameters from the Beta prior distribution, see equation \ref{eq_etp:betaprior}. 
+
+Suppose we have a decision rule where a GO decision is made if the posterior probability of $\theta$ exceeds some pre-specified target treatment effect/ response rate $c$ with a probability greater than some threshold $q$ (as defined in equation \ref{eq_etp:betafinaldecrule}).
+
+The predictive probability of success (PPoS) can be calculated as follows. Let $B_i = P(\theta > c |x, Z=i)$ and $I_i = I(B_i \geq q)$ be an indicator variable taking a value of 1, if the criteria $B_i \geq q$ is satisfied or 0 otherwise. Then we have 
+
+\begin{equation}
+	\begin{aligned}
+		\text{PPoS} & = E\{I[P(\theta > c |x,Z) \geq q]|x \} \\
+		& = \int I[P(\theta > c |x,Z) \geq q]dP(Z|x) \\
+		& = \sum_{i =0}^{m} P(Z = i|x)I[P(\theta > c |x,Z=i) \geq q] \\
+		& = \sum_{i =0}^{m} P(Z=i|x)I(B_i \geq q) \\
+		& = \sum_{i =0}^{m} P(Z=i|x)I_i
+	\end{aligned}
+\end{equation}
+
+Where $P(Z = i | x)$ is the probability of observing $Z$ responses in $m$ patients based on a beta probability distribution with parameters $a+x$ and $b+n_{int}-x$. This can be calculated from the probability mass function
+
+\begin{equation}
+	\begin{aligned}
+		f(Z = i|m, a+x, b+n_{int}-x) & = {m\choose z} \frac{\text{Beta}(a+x+z, b+n_{int}+m-x-i)}{\text{Beta}(a+x, b+n_{int}-x)} \\
+		& = {m\choose z} \frac{\text{Beta}(a+x+z, b+n-x-i)}{\text{Beta}(a+x, b+n_{int}-x)} \\
+	\end{aligned}
+\end{equation}
+
+The Beta functions can be further simplified or alternatively expressed using the gamma function. Note $\Gamma(k) = (k-1)!$
+
+\small
+\begin{equation}
+	\begin{aligned}
+		f(Z = i) & = \frac{m!}{z!(m-z)!}\cfrac{\cfrac{\Gamma(a+x+z)\Gamma(b+n-x-z)}{\Gamma(a+b+n)}}{\cfrac{\Gamma(a+x)\Gamma(b+n_{int}-x)}{\Gamma(a+b+n)}} \\
+		& = \frac{\Gamma(m+1)}{\Gamma(z+1)\Gamma(m-z+1)}\frac{\Gamma(a+x+z)\Gamma(b+n-x-z)}{\Gamma(a+b+n)}\frac{a+b+n_{int}}{\Gamma(a+x)\Gamma(b+n_{int}-x)}
+	\end{aligned}
+\end{equation}
+\normalsize
+
+The process to calculate the PPoS starts with the quantity $B_i$ which represents the probability that the response rate is greater than some target $c$ given $x$ responses in $n_{int}$ patients and assuming $i$ future responses in the remaining $m$ patients. The quantity $B_i$ is then compared to our probability threshold $q$ which provides a value for the indicator variable $I_i$ and informs us if the trial would result in a GO decision at the end of the trial dependent on the data observed and the value of $Z=i$. The indicators $I_i$ are then weighted by the probability $P(Z=i)$ and summed to give the PPoS. 
+
+PPoS is then interpreted and used to make decisions at interim analyses. Low values of PPoS suggest there is a low probability of achieving a GO decision at the final analysis based on the data accrued so far. Similarly, a high PPoS suggests the opposite and that the trial would likely be a success based on the current data. An interim decision rule can then be implemented around values of PPoS to recommend stopping the trial early for either efficacy or futility. To stop for futility a the following rule could be imposed 
+
+\begin{equation}
+	\text{PPoS} < t  \; \; \; \; \text{then STOP for futility}
+\end{equation}
+
+Where $t$ is some PPoS acceptable probability threshold. Values of $t$ range from 0 to 1 but would typically be small. For example a value of 0.05 may be used to indicate if there is a less than 5\% chance that the response rate at the end of the trial will be greater than $c$ with some probability $q$ then the trial should stop early. 
+
+To show how this works in practice we will extend the example shown in section \ref{etp:BBIllEx} to include an interim analysis. The same Beta(1,1) prior and decision rule $P(\theta  \geq 30\%) \geq 0.9$ will be utilised. A maximum sample size of 30 patients will be used except now an interim analysis will be performed after 15 patients have been recruited. We will use the following decision rule, such that if the PPoS $\leq 0.05$ we will recommend stopping the trial. 
+
+Lets consider after 15 patients we observe 8 responses. We also know in the remaining $m$ patients, 15 in this scenario, there can be between 0 and 15 responses. Table \ref{tab_etp:bb_ppos_8resp} shows the calculations required to determine PPoS. 
+
+\begin{table}[h!]
+	\caption{\label{tab_etp:bb_ppos_8resp}Predictive probability of success calculations for 8 responses after 15 patients.}
+	\centering
+	\begin{tabular}[t]{cccc}
+		\toprule
+		$Z = i$ & $P(Z = i|x)$ & $B_i = P(\theta \geq 0.3 |x, Z=i)$ & $I(B_i \geq 0.9)$\\
+		\midrule
+		0 & 0.0006 & 0.3865 & 0\\
+		1 & 0.0035 & 0.5416 & 0\\
+		2 & 0.0116 & 0.6879 & 0\\
+		3 & 0.0277 & 0.8076 & 0\\
+		4 & 0.0524 & 0.8931 & 0\\
+		5 & 0.0833 & 0.9466 & 1\\
+		6 & 0.1143 & 0.9761 & 1\\
+		7 & 0.1378 & 0.9905 & 1\\
+		8 & 0.1470 & 0.9966 & 1\\
+		9 & 0.1388 & 0.9989 & 1\\
+		10 & 0.1153 & 0.9997 & 1\\
+		11 & 0.0830 & 0.9999 & 1\\
+		12 & 0.0503 & 1.0000 & 1\\
+		13 & 0.0244 & 1.0000 & 1\\
+		14 & 0.0085 & 1.0000 & 1\\
+		15 & 0.0016 & 1.0000 & 1\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+We can see that when the number of responses is less than five the quantity $B_i$ is less that 0.9. As such a GO decision would not be made at the final analysis. On the other hand when the number of responses is greater than or equal to five a GO decision would be achieved at the final analysis. This also aligns with what was presented before where a minimum of 13 responses would be required for a GO decision. As we had eight in the first 15 patients a minimum of five responses would be required in the subsequent 15 patients. 
+
+The PPoS is then just the sum of the indicators of a positive trial result weighted by the probability of observing that result. This is just the sum of $P(Z = i|x)$ where $I(B_i \geq 0.9)$. Here, the PPoS is 0.9043. So, based on observing 8 responses out of 15 patients there is a 90\% chance the trial will be successful if it recruits a further 15 patients. As this PPoS value is much greater than our 5\% acceptable probability level we would not recommend stopping at the interim analysis. 
+
+In this example we assumed that there were eight responses. However, if this was instead three the PPoS would only be 0.009. This is less than our 5\% target so would mean that the trial would recommend stopping. If the number of responses was 13 the PPoS would then be 1. This is due to our decision rule requiring a minimum of 13 responses out of 30 patients for a GO decision. As this would have been achieved in the first 15 patients the trial could be declared a success. 
+
+The PPoS will also vary dependent on the timing of the analysis. It is also possible to incorporate multiple analyses without any additional effort. The same process to calculate PPoS can be done every five patients for example. Simulations can be used to assess and determine the best decision rule to use for PPoS and the frequency of interim analyses. 
+
+Whilst fairly simple to calculate and implement interim analyses and decision rules for a trial design like this may be difficult for non statisticians to grasp and interpret. To aid this, for the final decision rule, we can calculate and detail explicitly how many patients or responses are required to make certain decisions. In our example, we needed a minimum of 13 responses out of 30 patients to make a GO decision. This could then be used to inform discussions with the clinicians as to whether this is appropriate or if the decision rule needs to be updated. 
+
+For interim analyses, the same can be done but there is more data to consider. As for each interim you would need to know the minimum number of responses that would have to be observed to not stop the trial. In our example of an interim at 15 patients you would need to observe four responses to continue recruiting. Depending on how many interim analyses are specified in the trial this would have to be done multiple times.
+
+In the next section we present a novel plot which visualises different outcomes and decisions made in a Phase \RN{2} trial using a Beta-Binomial design incorporating multiple interim analyses.   
 
 %----------------------------------------------------------------------------------------
 %	SECTION 3
