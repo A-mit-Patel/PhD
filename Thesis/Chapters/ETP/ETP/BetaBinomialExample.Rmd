@@ -261,3 +261,159 @@ ggarrange(plot_prior, plot_scep, plot_enth,
                      "Enthusiastic Prior"), ncol = 1, nrow = 3, hjust= -0.01)
 ```
 
+# Constructing ETP 
+# 0 responses 5 patients 
+```{r}
+ggplot()+
+  geom_rect(aes(xmin = 0, xmax = 2, ymin = 0, ymax = 2.5),
+            fill = "white", col = "red", lty = "longdash") +
+  geom_text(aes(label=paste(0), x = 1 , y = 2,
+                fontface = "bold.italic"), size = 6, colour = '#313639') +
+  geom_text(aes(label= "Number of responses", x = 2.2,
+                y = 2, fontface = "bold.italic"), size = 6, hjust = 0,
+            colour = '#313639') +
+  
+  geom_text(aes(label = 0.025, x = 1, y = 1.5, fontface = "bold"), size = 6,
+            colour = "blue")+
+  geom_text(aes(label= "Predicted Probability of Success", x = 2.2, y = 1.5,
+                fontface = "bold"), 
+            size = 6, hjust = 0, colour = "blue")+ 
+  
+  geom_text(aes(label=paste(11, "%", sep=""), x = 1 , y = 1), 
+            size = 6) +
+  geom_text(aes(label= "Bayesian estimate of response rate", x = 2.2,
+                y = 1), size = 6, hjust = 0)+ 
+  
+  geom_text(aes(label="(0%-46%)", x = 1 , y = 0.5, fontface = "italic"), 
+            size = 6) +
+  geom_text(aes(label= "95% two sided credible interval", x = 2.2,
+                y = 0.5, fontface = "italic"), size = 6, hjust = 0) +
+  xlim(0,6) + 
+  
+  theme(axis.line=element_blank(),axis.text.x=element_blank(),
+        axis.text.y=element_blank(),axis.ticks=element_blank(),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank(),
+        panel.background=element_blank(),
+        panel.border=element_blank(),
+        panel.grid.major=element_blank(),
+        panel.grid.minor=element_blank(),
+        plot.background=element_blank())
+```
+
+# 2 Responses 5 patients 
+```{r}
+ggplot()+
+  geom_rect(aes(xmin = 0, xmax = 2, ymin = 0, ymax = 2.5),
+            fill = "white", col = "dark green", lty = "longdash") +
+  geom_text(aes(label=paste(2), x = 1 , y = 2,
+                fontface = "bold.italic"), size = 6, colour = '#313639') +
+  geom_text(aes(label= "Number of responses", x = 2.2,
+                y = 2, fontface = "bold.italic"), size = 6, hjust = 0,
+            colour = '#313639') +
+  
+  geom_text(aes(label = 0.501, x = 1, y = 1.5, fontface = "bold"), size = 6,
+            colour = "blue")+
+  geom_text(aes(label= "Predicted Probability of Success", x = 2.2, y = 1.5,
+                fontface = "bold"), 
+            size = 6, hjust = 0, colour = "blue")+ 
+  
+  geom_text(aes(label=paste(42, "%", sep=""), x = 1 , y = 1), 
+            size = 6) +
+  geom_text(aes(label= "Bayesian estimate of response rate", x = 2.2,
+                y = 1), size = 6, hjust = 0)+ 
+  
+  geom_text(aes(label="(12%-78%)", x = 1 , y = 0.5, fontface = "italic"), 
+            size = 6) +
+  geom_text(aes(label= "95% two sided credible interval", x = 2.2,
+                y = 0.5, fontface = "italic"), size = 6, hjust = 0) +
+  xlim(0,6) + 
+  
+  theme(axis.line=element_blank(),axis.text.x=element_blank(),
+        axis.text.y=element_blank(),axis.ticks=element_blank(),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank(),
+        panel.background=element_blank(),
+        panel.border=element_blank(),
+        panel.grid.major=element_blank(),
+        panel.grid.minor=element_blank(),
+        plot.background=element_blank())
+```
+
+# 10 resonses 30 patients 
+```{r}
+ggplot()+
+  geom_rect(aes(xmin = 0, xmax = 2, ymin = 0, ymax = 2.5),
+            fill = "white", col = "red", lty = "solid") +
+  geom_text(aes(label=paste(10), x = 1 , y = 2,
+                fontface = "bold.italic"), size = 6, colour = '#313639') +
+  geom_text(aes(label= "Number of responses", x = 2.2,
+                y = 2, fontface = "bold.italic"), size = 6, hjust = 0,
+            colour = '#313639') +
+  
+  geom_text(aes(label = 0.688, x = 1, y = 1.5, fontface = "bold"), size = 6,
+            colour = "black")+
+  geom_text(aes(label= "Posterior Probability", x = 2.2, y = 1.5,
+                fontface = "bold"), 
+            size = 6, hjust = 0, colour = "black")+ 
+  
+  geom_text(aes(label=paste(34, "%", sep=""), x = 1 , y = 1), 
+            size = 6) +
+  geom_text(aes(label= "Bayesian estimate of response rate", x = 2.2,
+                y = 1), size = 6, hjust = 0)+ 
+  
+  geom_text(aes(label="(19%-51%)", x = 1 , y = 0.5, fontface = "italic"), 
+            size = 6) +
+  geom_text(aes(label= "95% two sided credible interval", x = 2.2,
+                y = 0.5, fontface = "italic"), size = 6, hjust = 0) +
+  xlim(0,6) + 
+  
+  theme(axis.line=element_blank(),axis.text.x=element_blank(),
+        axis.text.y=element_blank(),axis.ticks=element_blank(),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank(),
+        panel.background=element_blank(),
+        panel.border=element_blank(),
+        panel.grid.major=element_blank(),
+        panel.grid.minor=element_blank(),
+        plot.background=element_blank())
+```
+
+# 14 resonses 30 patients 
+```{r}
+ggplot()+
+  geom_rect(aes(xmin = 0, xmax = 2, ymin = 0, ymax = 2.5),
+            fill = "white", col = "dark green", lty = "solid") +
+  geom_text(aes(label=paste(14), x = 1 , y = 2,
+                fontface = "bold.italic"), size = 6, colour = '#313639') +
+  geom_text(aes(label= "Number of responses", x = 2.2,
+                y = 2, fontface = "bold.italic"), size = 6, hjust = 0,
+            colour = '#313639') +
+  
+  geom_text(aes(label = 0.976, x = 1, y = 1.5, fontface = "bold"), size = 6,
+            colour = "black")+
+  geom_text(aes(label= "Posterior Probability", x = 2.2, y = 1.5,
+                fontface = "bold"), 
+            size = 6, hjust = 0, colour = "black")+ 
+  
+  geom_text(aes(label=paste(47, "%", sep=""), x = 1 , y = 1), 
+            size = 6) +
+  geom_text(aes(label= "Bayesian estimate of response rate", x = 2.2,
+                y = 1), size = 6, hjust = 0)+ 
+  
+  geom_text(aes(label="(30%-64%)", x = 1 , y = 0.5, fontface = "italic"), 
+            size = 6) +
+  geom_text(aes(label= "95% two sided credible interval", x = 2.2,
+                y = 0.5, fontface = "italic"), size = 6, hjust = 0) +
+  xlim(0,6) + 
+  
+  theme(axis.line=element_blank(),axis.text.x=element_blank(),
+        axis.text.y=element_blank(),axis.ticks=element_blank(),
+        axis.title.x=element_blank(),
+        axis.title.y=element_blank(),
+        panel.background=element_blank(),
+        panel.border=element_blank(),
+        panel.grid.major=element_blank(),
+        panel.grid.minor=element_blank(),
+        plot.background=element_blank())
+```

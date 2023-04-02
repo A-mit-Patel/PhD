@@ -648,34 +648,34 @@ We can see out of the 630 pathways, 102 recommend dose 4 for the next cohort and
 	\caption{\label{tab_tite-dtp:TITEDTP_c2NNprob}Different dose recommendations with overlapping combined follow-up times.}
 	\centering
 	\fontsize{11}{13}\selectfont
-	\begin{tabular}[t]{cccc}
-		\toprule
-		\multicolumn{2}{c}{Follow-up} & \multicolumn{2}{c}{ } \\
-		\cmidrule(l{3pt}r{3pt}){1-2}
-		Patient 1 & Patient 2 & Combined Follow-up & Dose Recommendation\\
-		\midrule
-		\cellcolor{gray!6}{1} & \cellcolor{gray!6}{19} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{5}\\
-		1 & 20 & 21 & 5\\
-		\cellcolor{gray!6}{2} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{5}\\
-		2 & 19 & 21 & 5\\
-		\cellcolor{gray!6}{3} & \cellcolor{gray!6}{17} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
-		3 & 18 & 21 & 5\\
-		\cellcolor{gray!6}{4} & \cellcolor{gray!6}{16} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
-		4 & 17 & 21 & 5\\
-		\cellcolor{gray!6}{5} & \cellcolor{gray!6}{15} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
-		5 & 16 & 21 & 5\\
-		\cellcolor{gray!6}{6} & \cellcolor{gray!6}{14} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
-		6 & 15 & 21 & 5\\
-		\cellcolor{gray!6}{7} & \cellcolor{gray!6}{13} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
-		7 & 14 & 21 & 4\\
-		\cellcolor{gray!6}{8} & \cellcolor{gray!6}{12} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
-		8 & 13 & 21 & 4\\
-		\cellcolor{gray!6}{9} & \cellcolor{gray!6}{11} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
-		9 & 12 & 21 & 4\\
-		\cellcolor{gray!6}{10} & \cellcolor{gray!6}{10} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
-		10 & 11 & 21 & 4\\
-		\bottomrule
-	\end{tabular}
+		\begin{tabular}[t]{cccc}
+	\toprule
+	\multicolumn{2}{c}{Follow-up} & \multicolumn{2}{c}{ } \\
+	\cmidrule(l{3pt}r{3pt}){1-2}
+	Patient 1 & Patient 2 & Combined Follow-up & Dose Recommendation\\
+	\midrule
+	\cellcolor{gray!6}{1} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{5}\\
+	2 & 19 & 21 & 5\\
+	\cellcolor{gray!6}{3} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{5}\\
+	4 & 17 & 21 & 5\\
+	\cellcolor{gray!6}{5} & \cellcolor{gray!6}{16} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{5}\\
+	6 & 15 & 21 & 5\\
+	\cellcolor{gray!6}{7} & \cellcolor{gray!6}{14} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{4}\\
+	8 & 13 & 21 & 4\\
+	\cellcolor{gray!6}{9} & \cellcolor{gray!6}{12} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{4}\\
+	10 & 11 & 21 & 4\\
+	\cellcolor{gray!6}{1} & \cellcolor{gray!6}{19} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{5}\\
+	2 & 18 & 20 & 5\\
+	\cellcolor{gray!6}{3} & \cellcolor{gray!6}{17} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
+	4 & 16 & 20 & 4\\
+	\cellcolor{gray!6}{5} & \cellcolor{gray!6}{15} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
+	6 & 14 & 20 & 4\\
+	\cellcolor{gray!6}{7} & \cellcolor{gray!6}{13} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
+	8 & 12 & 20 & 4\\
+	\cellcolor{gray!6}{9} & \cellcolor{gray!6}{11} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
+	10 & 10 & 20 & 4\\
+	\bottomrule
+		\end{tabular}
 \end{table}
 
 In the case where one patient has 14 days or less of follow-up, the model recommends dose-level 4, similarly, if one patient has at least 18 days of follow up the model recommends dose-level 5. Then when one patient has follow-up times of 15, 16 or 17 the model requires the second patient to have enough follow-up to make the combined total of 21 days in order to recommend dose-level 5. So, there exists some threshold whereby the model is happy to escalate further if a single patient has enough follow-up (in this case 18 days) and some critical range where the model will only escalate further if a minimum combined follow-up threshold is met (here this is between 15-17 days for one patient with the threshold being 21 days).

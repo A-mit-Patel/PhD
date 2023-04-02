@@ -117,6 +117,7 @@ results %>% mutate(TotalFollow = Patient1+Patient2) %>%
 results %>% mutate(TotalFollow = Patient1+Patient2) %>%
   filter(TotalFollow == 20 | TotalFollow == 21) %>% 
   select(Patient1, Patient2, TotalFollow, Rec) %>% 
+  arrange(desc(TotalFollow)) %>% 
   kable('latex', booktabs = T, linesep = "", align = "c", 
         col.names = c('Patient 1', 'Patient 2', 'Combined Follow-up', 'Dose Recommendation'),
         caption = '\\label{tab_tite-dtp:TITEDTP_c2NNprob}Different dose recommendations with overlapping combinded follow-up times.') %>% 
@@ -316,3 +317,81 @@ rgl.postscript("c3NNN", "pdf")
 outputFile = sub(".gif$","",outputFile)
 movie3d(spin3d(axis=c(0,0,1), rpm=5), duration=12, dir=getwd(), movie="c3NNN")
 ################################################################################
+
+# Investigating combinations 
+# With a combined follow-up of 20 2, 18 leads to 5 but 3, 17 leads to 4
+# With a combined follow-up of 21 6, 15 leads to 5 but 7, 14 leads to 4
+level <- c(2,2)
+tox <- c(0,0)
+followup <- c(2, 18)
+weights <- followup / obswin 
+mod1 <- titecrm(prior = skeleton, target = target, tox = tox, level = level, 
+               obswin = obswin, weights = weights)
+
+followup <- c(3, 17)
+weights <- followup / obswin 
+mod2 <- titecrm(prior = skeleton, target = target, tox = tox, level = level, 
+                obswin = obswin, weights = weights)
+
+
+level <- c(2,2)
+tox <- c(0,0)
+
+combos <- combinations(n = 35, r = 2, repeats.allowed = T, v = 1:35)
+pos <- cbind(rep(0,nrow(combos)))
+results <-  pos[, rep(1, each=length(tox)+3)]
+for (i in 1:nrow(combos)) {
+  followup <- as.numeric(combos[i,])
+  weights <- followup / obswin 
+  mod <- titecrm(prior = skeleton, target = target, tox = tox, level = level, 
+                 obswin = obswin, weights = weights)
+  
+  for (j in 1:ncol(results)) {
+    results[,j][i] <- followup[j]
+    results[,3][i] <- mod$mtd
+    results[,4][i] <- mod$estimate
+    results[,5][i] <- mod$post.var
+  }
+}
+
+results <- data.frame(results)
+colnames(results) <- c('Patient1', 'Patient2', 'Rec', 'Est', 'Var')
+
+results %>% mutate(TotalFollow = Patient1+Patient2) %>% 
+  group_by(Rec) %>% 
+  summarise(n = n(), min = min(TotalFollow), max = max(TotalFollow))
+
+results %>% mutate(TotalFollow = Patient1+Patient2, 
+                   Est = Est %>% round(4),
+                   Var = Var %>% round(4)) %>%
+  filter(TotalFollow == 20 | TotalFollow == 21) %>% 
+  select(Patient1, Patient2, TotalFollow, Rec, Est, Var) %>% 
+  arrange(desc(TotalFollow)) 
+
+
+results %>% mutate(TotalFollow = Patient1+Patient2) %>% 
+  filter(TotalFollow == 19) %>% View()
+
+results %>% mutate(TotalFollow = Patient1+Patient2) %>%
+  ggplot(aes(x = TotalFollow, y = Est, col = factor(Rec))) + 
+  geom_point() +
+  geom_hline(yintercept = 0.149, col = "red")
+
+skeleton
+beta <- seq(0,1, 0.0001)
+df <- data.frame(beta, rec = rep(NA, times = length(beta)))
+for (i in 1:length(beta)) {
+  ptox <- skeleton^exp(beta[i])
+  if (all(ptox <= target)) {
+    df$rec[i] <- length(skeleton)
+  }
+  else if (all(ptox >= target)) {
+    df$rec[i] <- 1
+  }
+  else {
+    df$rec[i] <- order(abs(ptox - target))[1]
+  } 
+}
+df %>% group_by(rec) %>% 
+  summarise(min = min(beta) %>% round(4),
+            max = max(beta) %>% round(4))

@@ -318,15 +318,141 @@ In the next section we present a novel plot which visualises different outcomes 
 %----------------------------------------------------------------------------------------
 
 \section{Constructing Efficacy Transition Pathways}
+We have explored how PPoS can be used for interim analyses to determine if the trial will be a success or not. At each interim PPoS is calculated based on the number of responses observed thus far and evaluated to see if it meets the decision criteria. Therefore there will be a minimum number of responses that have to be observed in order to continue recruitment. This is similar to how we can calculate the number of responses required at the end of the trial to warrant a GO decision. Obviously, the minimum number of responses required at each interim and the final analysis depends on the decision criteria that is specified. 
 
-%-----------------------------------
-%	SUBSECTION 1
-%-----------------------------------
+Intuitively, it is easier to understand that four responses have to be observed from 15 patients rather than a PPoS $\leq 0.05$ is needed. Through discussions with clinicians we can then calibrate our decision criteria based on these interpretations. We may want to be more strict or lenient at our interim. If the clinicians would be happy to continue recruitment after seeing only two responses we could lower the PPoS threshold, likewise if they wanted to be confident and only continue if six responses were observed we would increase the PPoS threshold. Similarly, this can also be done for the final analysis decision criteria. The acceptable probability level or target response rate could be adjusted so a specific minimum number of responses observed achieves a GO decision.  
 
-\subsection{Application the DETERMINE trial}
+For our example trial, in the last section, with 30 patients and only one interim this is fairly easy information to present and discuss with the clinicians. However, as more interims are added trying to understand the break points at each interim become more complex. A solution for this is ETPs. In this section we will present how they are constructed and how they can be utilised in the design and interpretation of a trial. 
+
+In order to illustrate an ETP we will use the same example as before. However, rather than just having one interim at 15 patients we will conduct an interim every five patients. With a total sample size of 30 patients there will be five interims and one final analysis. The same decision criteria will be used as well. At each interim recruitment will stop if PPoS $< 0.05$ and at the final analysis a GO decision will be made if $P(\theta  \geq 30\%) \geq 0.9$. 
+
+To construct an ETP we produce individual cells which contain key information about a specific outcome i.e. a certain amount of responses. If we consider our first interim at five patients, at that point there are six different possible outcomes that can be observed. Either one, two, three, four or all five of the patients had a response or none of them did. For each possible outcome we can then calculate the PPoS as well as the Bayesian estimate of the response rate and an associated credible interval. Figure \ref{fig_etp:Cell0Resp5Pat} shows what this cell would look like. 
+
+\begin{figure}[h!]
+	\centering
+	\caption{ETP cell plot for 0 responses in 5 patients.}
+	\label{fig_etp:Cell0Resp5Pat}
+	\includegraphics[width=\textwidth]{ETP-cell0Resp5Pat}
+\end{figure}
+
+The number at the top indicates the outcome for the cell, in this case the number of responses which is 0. The second row shows the PPoS in this scenario, the third row showing the Bayesian estimate of response rate and the last row shows the 95\% credible interval. For 0 responses the PPoS is 0.025 which is less than our threshold so the decision here would be to stop. This is represented by the red dashed line. From this one cell we are able to see what the decision would be at the interim analysis time point if this is the outcome that is observed. We are also able to see specifically what the PPoS and estimated response rate would be as well.  
+
+Cells are generated for each possible outcome at each interim time point. Figure \ref{fig_etp:Cell2Resp5Pat} shows the cell for two responses in five patients. Here we can see the PPoS is 0.501 which is greater than our threshold so the decision would be made to continue recruitment. This is indicated by the green dashed line. As we put each cell together we can then clearly see the minimum number of responses required to continue recruiting.  
+
+\begin{figure}[h!]
+	\centering
+	\caption{ETP cell plot for 2 responses in 5 patients.}
+	\label{fig_etp:Cell2Resp5Pat}
+	\includegraphics[width=\textwidth]{ETP-cell2Resp5Pat}
+\end{figure}
+
+This process is then repeated for each interim analysis. So, the next analysis would be at 10 patients. Here we would generate 11 cells for all the different possible outcomes (no response, one response, two responses, ..., 10 responses). The same would then be done for the analysis at 15, 20 and 25 patients. 
+
+For the final analysis the presentation of the cells is slightly different. Here we are no longer interested in PPoS as no more patients will be recruited and rather we can just evaluate if the trial has met the decision criteria. So, in each cell rather than present PPoS the posterior probability that the response rate is greater than our target rate is presented instead. Figures \ref{fig_etp:Cell10Resp30Pat} and \ref{fig_etp:Cell14Resp30Pat} show the cells for 10 responses and 14 responses out of 30 patients respectively. In this example our $q$ is set at 0.9 so if the posterior probability is greater than that we have a GO decision. 
+
+
+\begin{figure}[h!]
+	\centering
+	\caption{ETP cell plot for 10 responses in 30 patients.}
+	\label{fig_etp:Cell10Resp30Pat}
+	\includegraphics[width=\textwidth]{ETP-cell10Resp30Pat}
+\end{figure}
+
+
+\begin{figure}[h!]
+	\centering
+	\caption{ETP cell plot for 14 responses in 30 patients.}
+	\label{fig_etp:Cell14Resp30Pat}
+	\includegraphics[width=\textwidth]{ETP-cell14Resp30Pat}
+\end{figure}
+
+
+The efficacy transition pathway is then constructed by grouping each cell for each interim analysis and then stacking those group of cells together. For our example trial the ETP is shown in Figure \ref{fig_etp:ConstructedETP}. Each row of cells in the ETP represents each interim analysis with the final row representing the final analysis. One adaptation made with the cells is that the confidence interval is presented across the bottom two rows in each cell just to make the figure easier to read and more scalable. 
+
+From this figure what can clearly be seen is when we do or do not have a GO decision. At each interim of 5, 10, 15, 20, 25 patients we can see that the minimum number of responses for a GO decision is 1, 2, 4, 7 and 9 respectively. Also, for the final analysis a minimum of 13 responses is required. 
+
+We can also evaluate some aspects of our decision rule criteria. Specifically, around $t$ our PPoS acceptable probability threshold and $q$ our threshold of sufficient evidence or the final decision. If we were to change our value of $t$ from 0.05 we can see what affect that would have on the decisions that would be made. We can identify this by looking at the PPoS in each cell for the different interims and comparing that against the new decision rule. Consider a new value of $t$ of 0.1 our interim decision rule would become PPoS $< 0.1$, so we would stop at each interim analysis if our PPoS was less than 10\%. Now the minimum number of responses for a GO decision at each interim is 1, 3, 5, 7 and 10. This has stayed the same for the interim analyses at 5 and 20 patients but has increased by 1 extra response for the other interims. We can update our ETP to reflect this change. Figure \ref{fig_etp:ConstructedETPNewPPoS} shows this new plot. The only changes here to the original ETP \ref{fig_etp:ConstructedETP} is the colour of the border around the cells for when a GO decision is made. All the calculations of PPoS, Bayesian estimates and posterior probabilities remain the same. 
+
+Similarly, we can also check the posterior probability for the final analysis against our value of $q$. If we were to change this to 0.8 so the decision rule would now become $P(\theta  \geq 30\%) \geq 0.8$. The minimum number of responses for a GO decision at the final analysis would be 11. By looking at the final row and the cell representing the outcome for 11 patients we see here the posterior probability is 0.808. That means the probability of the response rate being greater than 30\% is 0.808 which would meet the criteria for this new decision rule. Its important to note any change made to the final analysis decision rule will have a knock on effect to decisions made at the interim analysis. This is because the final decision rule is used to calculate the PPoS. So let's say we keep the original interim analysis decision rule of stopping if PPoS $< 0.05$ but we use the new final decision rule $P(\theta  \geq 30\%) \geq 0.8$. The associated ETP for this set of rules is given in Figure 
+\ref{fig_etp:ConstructedETPNewFinal}. Here the values of PPoS have changed for the interim analyses as has the minimum number of responses required for a GO decision. It is important to note that the posterior probabilities and the Bayesian estimates of response rate with it's credible interval are the same throughout these plots. They Bayesian estimates will remain unaffected by the changes in decision rules as they are calculated based on the Beta-Binomial conjugate analysis. However, the posterior probability will change if the target response rate, $c$, is different as this is just the probability that the true response rate is higher than $c$. 
+
+Any changes made to the target response rate in the decision rule would impact the PPoS, the posterior probability and the minimum number of responses required for GO decisions at the interim and final analyses. If our target response rate was now 40\% instead of 30\% and we kept all the decision rules and parameters the same as our original example. We would have the following decision rules: stop if PPoS $< 0.05$ at each interim and GO at final if $P(\theta  \geq 40\%) \geq 0.9$. With this new target response rate at least 16 responses are required for a GO at the final analysis. The numbers at each interim also differ as well. This can be seen in Figure \ref{fig_etp:ConstructedETPNewTarget}. 
+
+Table \ref{tab_etp:ETP_plots_summary} provides a summary of all of the ETP plots produced. This allows us to easily compare for each plot and set of decision rules the minimum number of patients required for a GO decision. This doesn't reflect all the information that is shown in each plot but just provides a brief summary. 
+
+\begin{table}[h!]
+	\centering
+	\caption{Summary of the ETP figures. }
+	\label{tab_etp:ETP_plots_summary}
+	\resizebox{\textwidth}{!}{%
+		\begin{tabular}{l|cc|cccccc}
+			\hline
+			\multirow{2}{*}{\textbf{Figure}} &
+			\multicolumn{2}{c|}{\textbf{Decision Rules}} &
+			\multicolumn{6}{l}{\textbf{Minimum Number of Responses for a GO Decision}} \\ \cline{2-9} 
+			&
+			\textbf{Interim} &
+			\textbf{Final} &
+			\textbf{N =5} &
+			\textbf{N =10} &
+			\textbf{N = 15} &
+			\textbf{N = 20} &
+			\textbf{N = 25} &
+			\textbf{N = 30} \\ \hline
+			\ref{fig_etp:ConstructedETP} & PPoS $< 0.05$ & $P(\theta  \geq 30\%) \geq 0.9$ & 1 & 2 & 4 & 7 & 9  & 13 \\
+			\ref{fig_etp:ConstructedETPNewPPoS} & PPoS $< 0.1$  & $P(\theta  \geq 30\%) \geq 0.9$ & 1 & 3 & 5 & 7 & 10 & 13 \\
+			\ref{fig_etp:ConstructedETPNewFinal} & PPoS $< 0.05$ & $P(\theta  \geq 30\%) \geq 0.8$ & 0 & 2 & 3 & 5 & 8  & 11 \\
+			\ref{fig_etp:ConstructedETPNewTarget} & PPoS $< 0.05$ & $P(\theta  \geq 40\%) \geq 0.9$ & 1 & 3 & 6 & 9 & 12 & 16 \\
+			\hline
+		\end{tabular}%
+	}
+\end{table}
+
+\begin{sidewaysfigure}
+	\centering
+	\caption{Example of a constructed ETP.}
+	\label{fig_etp:ConstructedETP}
+	\includegraphics[width=25cm, height=15cm]{ETP-constructed}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}
+	\centering
+	\caption{Example of a constructed ETP with new PPoS decision rule.}
+	\label{fig_etp:ConstructedETPNewPPoS}
+	\includegraphics[width=25cm, height=15cm]{ETP-constructedNewPPoSRule}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}
+	\centering
+	\caption{Example of a constructed ETP with new final decision rule.}
+	\label{fig_etp:ConstructedETPNewFinal}
+	\includegraphics[width=25cm, height=15cm]{ETP-constructedNewFinalRule}
+\end{sidewaysfigure}
+
+\begin{sidewaysfigure}
+	\centering
+	\caption{Example of a constructed ETP with new target response rate.}
+	\label{fig_etp:ConstructedETPNewTarget}
+	\includegraphics[width=25cm, height=15cm]{ETP-constructedNewFinalTarget}
+\end{sidewaysfigure}  
+
+\newpage
+
+Here we have shown how ETPs are constructed and how they change and react to modifications in our decision rules. There are several other factors which can impact an ETP such as the prior used in the Beta-Binomial conjugate analysis as well as the timing of each interim analysis and the overall sample size of the trial. Changes to the prior will have an impact on all of the calculations as it is used to generate the posterior distribution on which all of the other calculations are based upon. Adding more interim analyses would add more rows to the plot and changing the sample size of the trial alters the number of cells in each row. 
+
+Overall ETPs can be a useful tool during the design stages of a trial as we can experiment with different decision rules and see what practical affect it has on the trial in terms of the number of responses that need to be observed for a GO decision. They can be used to facilitate discussions with non statistical experts involved in the design of the trial. Much like dose transition pathways in a dose-finding trial they can also provide some transparency as to what decisions will be made and when they would be made. 
+
+A single ETP also provides us with the ability to see how multiple different decision rules may change the outcome for a trial. If just the acceptable probability levels for the PPoS and final analysis, $t$ and $q$, are changing in the decision rule the impact of those changes should be apparent just by comparing the PPoS and posterior probability without the need of generating a whole new plot like we have in our example.
+
+Whilst the calculations needed to produce these plots can be quite simple actually constructing the plots is not so trivial. In the next section we present an application we developed to overcome this issue and make ETPs easily accessible and producible. 
+
 
 %----------------------------------------------------------------------------------------
 %	SECTION 4
 %----------------------------------------------------------------------------------------
 
 \section{Development of a Web Application for ETPs}
+
+Maybe scrap section specifically on determine and extend introduction for the development of a web application. 
+
+Talk about how Cindy came up with this idea based on an extension to DTPs and had began implementing them in the design of some of her trials. Talk about Determine, MonoGerm, GLO-BNHL collegues were "hand generating" these ETPs. Demonstrated their usefulness when designing a trial and so that can be quite a tedious process. Calculations are easy with code but generating plot in power point etc. is effort. Perhaps show examples of what they had done (if allowed). Created a need to automate this process, needed to be accessible for multiple programming language users so converted into an app. Then extended that to also educate on these types of trial designs. 
