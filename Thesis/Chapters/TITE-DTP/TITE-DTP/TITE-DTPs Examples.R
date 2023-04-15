@@ -6,6 +6,8 @@ library(kableExtra)
 library(gtools)
 library(rgl)
 library(magick)
+library(ggrepel)
+library(ggpubr)
 
 skeleton <- getprior(target = 0.25, nu =4, nlevel =5, halfwidth = 0.05)
 target <- 0.25 
@@ -125,6 +127,36 @@ results %>% mutate(TotalFollow = Patient1+Patient2) %>%
                 position = "center", font_size = 11) %>% 
   add_header_above(c('Follow-up' = 2, ' ' = 2)) %>% 
   cat()
+
+# calculate exact numbe rof pathways for each specific outcome
+
+results <- results %>% 
+  mutate(TF = Patient1 + Patient2)
+
+results %>% 
+  filter(TF <= 19) %>% 
+  nrow()
+
+results %>% 
+  filter(TF >= 22) %>% 
+  nrow()
+
+results %>% 
+  filter(TF == 20 & Patient2 <= 17) %>% 
+  nrow()
+
+results %>% 
+  filter(TF == 20 & Patient2 >= 18) %>% 
+  nrow()
+
+results %>% 
+  filter(TF == 21 & Patient2 <= 14) %>% 
+  nrow()
+
+results %>% 
+  filter(TF == 21 & Patient2 >= 15) %>% 
+  nrow()
+
 
  # To produce a plot need to run on all possible combinations not just unique
 level <- c(2,2)
@@ -333,7 +365,7 @@ weights <- followup / obswin
 mod2 <- titecrm(prior = skeleton, target = target, tox = tox, level = level, 
                 obswin = obswin, weights = weights)
 
-
+# Re run analysis but record estimates and variance 
 level <- c(2,2)
 tox <- c(0,0)
 
@@ -354,28 +386,57 @@ for (i in 1:nrow(combos)) {
   }
 }
 
+# Rename data frame 
 results <- data.frame(results)
 colnames(results) <- c('Patient1', 'Patient2', 'Rec', 'Est', 'Var')
 
+# Check matches previous results 
 results %>% mutate(TotalFollow = Patient1+Patient2) %>% 
   group_by(Rec) %>% 
   summarise(n = n(), min = min(TotalFollow), max = max(TotalFollow))
 
+# Create table with beta estimate and variance included
 results %>% mutate(TotalFollow = Patient1+Patient2, 
                    Est = Est %>% round(4),
                    Var = Var %>% round(4)) %>%
   filter(TotalFollow == 20 | TotalFollow == 21) %>% 
   select(Patient1, Patient2, TotalFollow, Rec, Est, Var) %>% 
-  arrange(desc(TotalFollow)) 
+  arrange(desc(TotalFollow)) %>% 
+  kable('latex', booktabs = T, linesep = "", align = "c", 
+        col.names = c('Patient 1', 'Patient 2', 'Combined', 'Dose Recommendation',
+                      'Beta', 'Variance'),
+        caption = '\\label{tab_tite-dtp:TITEDTP_c2NNprob}Different dose recommendations with overlapping combined follow-up times.') %>% 
+  kable_styling(latex_options = c("striped", "HOLD_position"),
+                position = "center", font_size = 11) %>% 
+  add_header_above(c('Follow-up' = 3, ' ' = 1, 'Posterior Estimates' = 2)) %>% 
+  cat()
 
-
-results %>% mutate(TotalFollow = Patient1+Patient2) %>% 
-  filter(TotalFollow == 19) %>% View()
-
+# Overall plot 
 results %>% mutate(TotalFollow = Patient1+Patient2) %>%
   ggplot(aes(x = TotalFollow, y = Est, col = factor(Rec))) + 
   geom_point() +
-  geom_hline(yintercept = 0.149, col = "red")
+  geom_hline(yintercept = 0.149, col = "red", linetype = "longdash") +
+  labs(x = "Combined Total Follow-up", y = expression(Posterior ~ Estimate ~ beta),
+       col = "Recommended Dose")+
+  scale_color_manual(values = c("#994d1a","#1a6699"))+
+  scale_x_continuous(breaks = seq(0, 70, 5))+
+  theme_bw()+
+  theme(legend.position = "bottom") 
+
+# Plot for 20 & 21 days 
+results %>% mutate(TotalFollow = Patient1+Patient2) %>%
+  filter(TotalFollow == 20 | TotalFollow == 21) %>% 
+  ggplot(aes(x = factor(TotalFollow), y = Est, col = factor(Rec))) + 
+  geom_point() +
+  geom_hline(yintercept = 0.149, col = "red", linetype = "longdash") +
+  geom_text_repel(mapping = aes(label = paste0("(", Patient1, ", ", Patient2, ")")),
+                  show.legend = FALSE)+
+  labs(x = "Combined Total Follow-up", y = expression(Posterior ~ Estimate ~ beta),
+       col = "Recommended Dose")+
+  scale_color_manual(values = c("#994d1a","#1a6699"))+
+  theme_bw()+
+  theme(legend.position = "bottom") 
+
 
 skeleton
 beta <- seq(0,1, 0.0001)
@@ -395,3 +456,5 @@ for (i in 1:length(beta)) {
 df %>% group_by(rec) %>% 
   summarise(min = min(beta) %>% round(4),
             max = max(beta) %>% round(4))
+
+# 0.1492 -> 4, 0.1493 ->5 

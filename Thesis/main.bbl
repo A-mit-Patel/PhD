@@ -75,10 +75,16 @@
     \field{shorttitle}{Continual {{Reassessment Method}}}
     \field{title}{Continual {{Reassessment Method}}: {{A Practical Design}} for
   {{Phase}} 1 {{Clinical Trials}} in {{Cancer}}}
+    \verb{url}
+    \verb https://www.jstor.org/stable/2531628
+    \endverb
     \field{volume}{46}
     \field{journaltitle}{Biometrics}
     \field{eprinttype}{jstor}
     \field{year}{1990}
+    \field{urlday}{22}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{rogatkoTranslationInnovativeDesigns2007}{article}{}
@@ -272,9 +278,6 @@
     \verb it\\Zotero\\storage\\MQXKCFX2\\10543406.2017.html
     \endverb
     \field{journaltitle}{Journal of Biopharmaceutical Statistics}
-    \field{annotation}{%
-    \_eprint: https://doi.org/10.1080/10543406.2017.1289952%
-    }
     \field{eprinttype}{pmid}
     \field{day}{04}
     \field{month}{05}
@@ -1337,10 +1340,6 @@
     \verb s\\Amit\\Zotero\\storage\\T9W8G7GT\\j.0006-341X.2000.01177.html
     \endverb
     \field{journaltitle}{Biometrics}
-    \field{annotation}{%
-    \_eprint:
-  https://onlinelibrary.wiley.com/doi/pdf/10.1111/j.0006-341X.2000.01177.x%
-    }
     \field{year}{2000}
     \field{urlday}{25}
     \field{urlmonth}{07}
@@ -1412,9 +1411,6 @@
     \verb se-Finding with Two Agents in Phase I Oncology T.pdf
     \endverb
     \field{journaltitle}{Biometrics}
-    \field{annotation}{%
-    \_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1111/1541-0420.00058%
-    }
     \field{year}{2003}
     \field{urlday}{25}
     \field{urlmonth}{07}
@@ -1482,10 +1478,6 @@
     \endverb
     \field{journaltitle}{Journal of the Royal Statistical Society: Series C
   (Applied Statistics)}
-    \field{annotation}{%
-    \_eprint:
-  https://rss.onlinelibrary.wiley.com/doi/pdf/10.1111/j.1467-9876.2009.00649.x%
-    }
     \field{year}{2009}
     \field{urlday}{25}
     \field{urlmonth}{07}
@@ -2323,10 +2315,16 @@
     \field{pages}{673\bibrangedash 684}
     \field{shorttitle}{Continual {{Reassessment Method}}}
     \field{title}{Continual {{Reassessment Method}}: {{A Likelihood Approach}}}
+    \verb{url}
+    \verb https://www.jstor.org/stable/2532905
+    \endverb
     \field{volume}{52}
     \field{journaltitle}{Biometrics}
     \field{eprinttype}{jstor}
     \field{year}{1996}
+    \field{urlday}{07}
+    \field{urlmonth}{12}
+    \field{urlyear}{2020}
   \endentry
 
   \entry{morrisUsingSimulationStudies2019}{article}{}
@@ -2394,9 +2392,6 @@
     \verb t\\Zotero\\storage\\Q26EYSWP\\sim.html
     \endverb
     \field{journaltitle}{Statistics in Medicine}
-    \field{annotation}{%
-    \_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/sim.8086%
-    }
     \field{year}{2019}
     \field{urlday}{15}
     \field{urlmonth}{02}
@@ -2476,10 +2471,6 @@
     \verb C\:\\Users\\Amit\\Zotero\\storage\\5IN5VL64\\9781118445112.stat07078.
     \verb html
     \endverb
-    \field{annotation}{%
-    \_eprint:
-  https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781118445112.stat07078.pub2%
-    }
     \field{year}{2016}
     \field{urlday}{12}
     \field{urlmonth}{06}
@@ -2756,9 +2747,6 @@
     \verb \Zotero\\storage\\2QCI4CIU\\sim.html
     \endverb
     \field{journaltitle}{Statistics in Medicine}
-    \field{annotation}{%
-    \_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/sim.8361%
-    }
     \field{year}{2019}
     \field{urlday}{12}
     \field{urlmonth}{06}
@@ -2826,9 +2814,6 @@
     \verb \\Zotero\\storage\\DVYYCPAL\\sim.html
     \endverb
     \field{journaltitle}{Statistics in Medicine}
-    \field{annotation}{%
-    \_eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/sim.2325%
-    }
     \field{year}{2006}
     \field{urlday}{12}
     \field{urlmonth}{06}
@@ -3213,9 +3198,6 @@
     \verb t\\Zotero\\storage\\HWM37JFA\\10543406.2014.html
     \endverb
     \field{journaltitle}{Journal of Biopharmaceutical Statistics}
-    \field{annotation}{%
-    \_eprint: https://doi.org/10.1080/10543406.2014.920873%
-    }
     \field{eprinttype}{pmid}
     \field{day}{03}
     \field{month}{09}
@@ -3338,9 +3320,6 @@
     \verb Zotero\\storage\\WYRMCHS9\\10543406.2018.html
     \endverb
     \field{journaltitle}{Journal of Biopharmaceutical Statistics}
-    \field{annotation}{%
-    \_eprint: https://doi.org/10.1080/10543406.2018.1535496%
-    }
     \field{eprinttype}{pmid}
     \field{day}{04}
     \field{month}{03}
@@ -4133,7 +4112,7 @@
     \field{urlyear}{2023}
   \endentry
 
-  \entry{kermanClosedformApproximationMedian2011}{misc}{}
+  \entry{kermanClosedformApproximationMedian2011}{online}{}
     \name{author}{1}{}{%
       {{hash=KJ}{%
          family={Kerman},
@@ -4141,9 +4120,6 @@
          given={Jouni},
          giveni={J\bibinitperiod},
       }}%
-    }
-    \list{publisher}{1}{%
-      {{arXiv}}%
     }
     \keyw{Mathematics - Statistics Theory,Statistics - Computation}
     \strng{namehash}{KJ1}
@@ -4157,9 +4133,10 @@
   parameters increase.%
     }
     \verb{eprint}
-    \verb 1111.0433
+    \verb arXiv:1111.0433
     \endverb
     \field{number}{arXiv:1111.0433}
+    \field{pubstate}{preprint}
     \field{title}{A Closed-Form Approximation for the Median of the Beta
   Distribution}
     \verb{url}
@@ -4171,14 +4148,12 @@
     \verb ro\\storage\\2LMZTEH8\\1111.html
     \endverb
     \field{eprinttype}{arxiv}
-    \field{eprintclass}{math, stat}
     \field{day}{02}
     \field{month}{11}
     \field{year}{2011}
     \field{urlday}{28}
     \field{urlmonth}{01}
     \field{urlyear}{2023}
-    \warn{\item Can't use 'eprinttype' + 'archiveprefix'}
   \endentry
 \enddatalist
 \endinput

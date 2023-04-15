@@ -49,7 +49,7 @@ Consider an early phase trial aiming to determine the TD25 of a single agent, Ta
 	\label{tab_tite-dtp:exampleCRMspecs}
 	\begin{tabular}{l|c}
 		\hline
-		\textbf{Parmaeter}     & \textbf{Value}               \\ \hline
+		\textbf{Parameter}     & \textbf{Value}               \\ \hline
 		Number of dose-levels  & 5                            \\
 		Starting dose-level    & 2                            \\
 		Sample size            & 30                           \\
@@ -61,9 +61,9 @@ Consider an early phase trial aiming to determine the TD25 of a single agent, Ta
 	\end{tabular}
 \end{table}
 
-We assume the prior distribution for the slope parameter in the power model will be normally distributed with a mean of 0 and variance of 1.34. This prior distribution was chosen due to convention. These values are based on work by O'Quigley and Shen \cite{oquigleyContinualReassessmentMethod1996} that proposed a suitable prior distribution would be a normal distribution with a mean of 0 and a sufficiently large variance, they go on to use a variance of 1.34 which was adopted by others and eventually became the norm. As this example is for only illustrative purposes and given its simplicity we feel these are adequate choices. Wheeler et al \cite{wheelerHowDesignDosefinding2019} also discuss choices of prior parameters when designing a dose-finding study, obviously, in a real trial scenario more thought should be given to the selection of all parameters. 
+We assume the prior distribution for the slope parameter in the power model will be normally distributed with a mean of 0 and variance of 1.34. This prior distribution was chosen due to convention. These values are based on work by O'Quigley and Shen \cite{oquigleyContinualReassessmentMethod1996} that proposed a suitable prior distribution would be a normal distribution with a mean of 0 and a sufficiently large variance, they go on to use a variance of 1.34 which was adopted by others and eventually became the norm. As this example is for only illustrative purposes and given its simplicity we feel these are adequate choices. Wheeler et al \cite{wheelerHowDesignDosefinding2019} also discuss choices of prior parameters when designing a dose-finding study. Obviously, in a real trial scenario more thought should be given to the selection of all parameters. 
 
-Most of the parameter specifications made here are fairly arbitrary, in practice, these specifications should have either a clinical or statistical rationale behind them based on the context of the trial. Once an initial set of these parameters have been selected, simulations are conducted to assess the operating characteristics of the design under various scenarios. At this point, DTPs can also be generated. 
+Most of the parameter specifications made here are fairly arbitrary. In practice, these specifications should have either a clinical or statistical rationale behind them based on the context of the trial. Once an initial set of these parameters have been selected, simulations are conducted to assess the operating characteristics of the design under various scenarios. At this point, DTPs can also be generated. 
 
 %-----------------------------------
 %	SUBSECTION 2
@@ -468,7 +468,9 @@ First we will just look at a cohort of one patient, i.e the first patient recrui
 
 Now in the scenario where no toxicity is observed, there are 35 different possible outcomes. Either it is day one and the patient has no toxicity, or it's day two, or day three, all the way up to no toxicity at day 35. Here we can fit the TITE-CRM model for each different outcome and see what the model will recommend as the next dose. Where the patient has between 1-19 days of follow-up the model recommends dose-level 4, anything greater than 19 and the model recommends dose-level 5.  
 
-After calculating all possible outcomes we can produce a TITE-DTP for this cohort (Table \ref{tab_tite-dtp:TITEDTP_c1}). As previously specified the first patient starts at dose-level 2, and as there are 36 possible outcomes there are 36 pathways to the next cohort. We also extend the nomenclature of Brock et al. \cite{brockImplementingEffToxDosefinding2017} to express the different outcomes here the number in brackets represents the amount of follow-up or observation period the patient has completed. So,  N(14) indicates at 14 days the patient has had a partial tolerance event and the corresponding recommended dose for that pathway is dose-level 4.
+After calculating all possible outcomes we can produce a TITE-DTP for this cohort (Table \ref{tab_tite-dtp:TITEDTP_c1}). As previously specified the first patient starts at dose-level 2, and as there are 36 possible outcomes there are 36 pathways to the next cohort.
+
+We also extend the nomenclature of Brock et al. \cite{brockImplementingEffToxDosefinding2017} to express the different outcomes here the number in brackets represents the amount of follow-up or observation period the patient has completed. So,  N(14) indicates at 14 days the patient has had a partial tolerance event and the corresponding recommended dose for that pathway is dose-level 4. To summarise a large group of these outcomes we may include inequalities in the notation as well. N($\leq$14) would refer to all the outcomes where the patient had 14 days of follow-up or less. Similarly, N($\geq$14) would indicate 14 days or more. 
 
 \begin{table}[H]
 	
@@ -648,41 +650,77 @@ We can see out of the 630 pathways, 102 recommend dose 4 for the next cohort and
 	\caption{\label{tab_tite-dtp:TITEDTP_c2NNprob}Different dose recommendations with overlapping combined follow-up times.}
 	\centering
 	\fontsize{11}{13}\selectfont
-		\begin{tabular}[t]{cccc}
-	\toprule
-	\multicolumn{2}{c}{Follow-up} & \multicolumn{2}{c}{ } \\
-	\cmidrule(l{3pt}r{3pt}){1-2}
-	Patient 1 & Patient 2 & Combined Follow-up & Dose Recommendation\\
-	\midrule
-	\cellcolor{gray!6}{1} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{5}\\
-	2 & 19 & 21 & 5\\
-	\cellcolor{gray!6}{3} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{5}\\
-	4 & 17 & 21 & 5\\
-	\cellcolor{gray!6}{5} & \cellcolor{gray!6}{16} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{5}\\
-	6 & 15 & 21 & 5\\
-	\cellcolor{gray!6}{7} & \cellcolor{gray!6}{14} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{4}\\
-	8 & 13 & 21 & 4\\
-	\cellcolor{gray!6}{9} & \cellcolor{gray!6}{12} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{4}\\
-	10 & 11 & 21 & 4\\
-	\cellcolor{gray!6}{1} & \cellcolor{gray!6}{19} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{5}\\
-	2 & 18 & 20 & 5\\
-	\cellcolor{gray!6}{3} & \cellcolor{gray!6}{17} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
-	4 & 16 & 20 & 4\\
-	\cellcolor{gray!6}{5} & \cellcolor{gray!6}{15} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
-	6 & 14 & 20 & 4\\
-	\cellcolor{gray!6}{7} & \cellcolor{gray!6}{13} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
-	8 & 12 & 20 & 4\\
-	\cellcolor{gray!6}{9} & \cellcolor{gray!6}{11} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4}\\
-	10 & 10 & 20 & 4\\
-	\bottomrule
-		\end{tabular}
+	\begin{tabular}[t]{cccccc}
+		\toprule
+		\multicolumn{3}{c}{Follow-up} & \multicolumn{1}{c}{ } & \multicolumn{2}{c}{Posterior Estimates} \\
+		\cmidrule(l{3pt}r{3pt}){1-3} \cmidrule(l{3pt}r{3pt}){5-6}
+		Patient 1 & Patient 2 & Combined & Dose Recommendation & $\beta$ & Variance\\
+		\midrule
+		\cellcolor{gray!6}{1} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{0.1606} & \cellcolor{gray!6}{1.2024}\\
+		2 & 19 & 21 & 5 & 0.1579 & 1.2063\\
+		\cellcolor{gray!6}{3} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{0.1555} & \cellcolor{gray!6}{1.2097}\\
+		4 & 17 & 21 & 5 & 0.1534 & 1.2127\\
+		\cellcolor{gray!6}{5} & \cellcolor{gray!6}{16} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{0.1516} & \cellcolor{gray!6}{1.2153}\\
+		6 & 15 & 21 & 5 & 0.1501 & 1.2174\\
+		\cellcolor{gray!6}{7} & \cellcolor{gray!6}{14} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{0.1489} & \cellcolor{gray!6}{1.2191}\\
+		8 & 13 & 21 & 4 & 0.1480 & 1.2204\\
+		\cellcolor{gray!6}{9} & \cellcolor{gray!6}{12} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{0.1474} & \cellcolor{gray!6}{1.2212}\\
+		10 & 11 & 21 & 4 & 0.1471 & 1.2216\\
+		\cellcolor{gray!6}{1} & \cellcolor{gray!6}{19} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{0.1520} & \cellcolor{gray!6}{1.2110}\\
+		2 & 18 & 20 & 5 & 0.1495 & 1.2146\\
+		\cellcolor{gray!6}{3} & \cellcolor{gray!6}{17} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{0.1473} & \cellcolor{gray!6}{1.2178}\\
+		4 & 16 & 20 & 4 & 0.1453 & 1.2205\\
+		\cellcolor{gray!6}{5} & \cellcolor{gray!6}{15} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{0.1437} & \cellcolor{gray!6}{1.2228}\\
+		6 & 14 & 20 & 4 & 0.1424 & 1.2247\\
+		\cellcolor{gray!6}{7} & \cellcolor{gray!6}{13} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{0.1414} & \cellcolor{gray!6}{1.2261}\\
+		8 & 12 & 20 & 4 & 0.1406 & 1.2272\\
+		\cellcolor{gray!6}{9} & \cellcolor{gray!6}{11} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{4} & \cellcolor{gray!6}{0.1402} & \cellcolor{gray!6}{1.2278}\\
+		10 & 10 & 20 & 4 & 0.1400 & 1.2280\\
+		\bottomrule
+	\end{tabular}
 \end{table}
 
 In the case where one patient has 14 days or less of follow-up, the model recommends dose-level 4, similarly, if one patient has at least 18 days of follow up the model recommends dose-level 5. Then when one patient has follow-up times of 15, 16 or 17 the model requires the second patient to have enough follow-up to make the combined total of 21 days in order to recommend dose-level 5. So, there exists some threshold whereby the model is happy to escalate further if a single patient has enough follow-up (in this case 18 days) and some critical range where the model will only escalate further if a minimum combined follow-up threshold is met (here this is between 15-17 days for one patient with the threshold being 21 days).
 
 This could perhaps be similar to an incoherent CRM design, which escalates after observing a toxicity, except here we escalate after an inadequate amount of follow-up. It should also be noted that in practice rules may be employed to stop the trial skipping untried doses or skipping multiple doses which is what's being recommended in this case. However, that does not mean that this issue would still not occur even when selecting between two more appropriate dose-levels. 
 
-So far we have split up the presentation of the pathways dependent on the scenario as there are too many to tabulate and present at once. Table \ref{tab_tite-dtp:TITEDTP_c2_Sum} attempts to summarise all the different pathways for a cohort of two patients. However, due to the issue earlier with the NN scenario, it is difficult to adequately summarise the combined follow-up required for the different dose decisions. Here we have opted to keep the overlap in as it allows you to see the absolute minimum and maximum combined follow-up both dose recommendations for cohort 2 require. Even though it doesn't give a specific breakdown of how many days individual patients need it may still be useful information to convey. From these values you can still determine the minimum and maximum that guarantee a specific dose as well (i.e. 18 days or less combined follow-up is dose-level 4 and 23 days or more is dose-level 5).
+This issue was examined further by assessing the posterior estimates of our model parameter $\beta$ and it's variance, from the power model used within our TITE-CRM, for each of these different follow-up combinations. Table \ref{tab_tite-dtp:TITEDTP_c2NNprob} shows these values. What can be seen is that there is a specific value of $\beta$ at which point the dose-decision changes from dose-level 4 to 5. The skeleton is updated using the power model and the estimate of $\beta$ to generate posterior probabilities of toxicity for each dose. The dose-level then closest to our target of 25\% is then selected as the recommended dose. So, there must exist some value of $\beta$ at which dose-level 5 now becomes the dose closest to our target. From Table \ref{tab_tite-dtp:TITEDTP_c2NNprob} we can see that a $\beta$ value less than or equal to 0.1489 leads to a dose-recommendation of 4 and a value of 0.1495 or higher leads to a dose recommendation of 5. More specifically, we evaluated values between 0 and 1 up to four decimal places to see exactly where this boundary occurs and found that a $\beta$ value of 0.1492 or lower leads to dose-level 4 and 0.1493 and higher leads to dose-level 5. 
+
+In Figure \ref{fig_tite-dtp:c2NNEstAllCombs} for each possible combination of follow-up from two to 70 days we plotted the estimated value of $\beta$. The red line indicates that critical value of 0.1492 and we can see that any combination of follow-up on or before that line recommends dose-level 4 and any above it recommends dose-level 5. Figure \ref{fig_tite-dtp:c2NNEst2021} focuses specifically on a combined follow-up time of 20 and 21 days and shows how these two combinations of days are the only ones which cross this critical threshold. Each point on the plot is labelled with the individual days of follow-up for both patients.  
+
+\begin{figure}[h!]
+	\centering
+	\caption[Changes in $\beta$ based on combined follow-up.]{Plot illustrating how the posterior estimate of $\beta$ and dose recommendation change based on combined follow-up.}
+	\label{fig_tite-dtp:c2NNEstAllCombs}
+	\includegraphics[width=\textwidth]{TITE-DTP-c2NN-EstAllCombs}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\caption[Changes in $\beta$ based on combined follow-up of 20 and 21 days.]{Plot illustrating how the posterior estimate of $\beta$ and dose recommendation change based on combined follow-up of 20 and 21 days.}
+	\label{fig_tite-dtp:c2NNEst2021}
+	\includegraphics[width=\textwidth]{TITE-DTP-c2NN-Est2021}
+\end{figure}
+
+Intuitively, since we are using a linear weight function, we would expect each day of follow-up to be weighted the same across each patient. That's to say if we observe 20 days of follow-up with no toxicity the model should make the same recommendation regardless of if that's 20 patients with only one day of follow-up each or only one patient with 20 days of follow-up. Clearly, that is not the case here. To add to this as well, when we look back at dose transition pathways for a cohort of one (Table \ref{tab_tite-dtp:TITEDTP_c1}) for N(20) and N(21) the model recommends dose-level 5. So, when two patients have a combined (i.e total) follow-up time of 20 or 21 days the dose recommendation could potentially be lower than if just one patient had the same amount of follow-up.   
+
+In order to explore why this discrepancy exists we look into how the TITE-CRM works. For reference the TITE-CRM was originally introduced by Cheung and Chappel \cite{cheungSequentialDesignsPhase2000}. A further detailed description of the TITE-CRM is also provided by Cheung \cite{cheungDoseFindingContinual2011}. We also detail the TITE-CRM design in the presence of partial orders in Chapter \ref{Adept} (Section \ref{adept:PO-TITE-CRM-Design}). The TITE-CRM makes use of a weighted likelihood for the model parameter $\beta$, this is given by the equation below: 
+
+\begin{equation}
+	{L}_n(\beta|w)=\prod_{i=1}^{n}\{w_i F(x_i,\beta)\}^{Y_i} \{1-w_i F(x_i,\beta)\}^{1-Y_i}
+\end{equation}
+
+where $F(x_i, \beta)$ is our dose toxicity model, $Y_i$ is a toxicity indicator for each patient and $w_i$ is the weight associated for the observation of each patient. When there are no toxicities i.e. $Y_i = 0$ the first part of the likelihood formula ($w_iF(x_i,\beta)^{Y_i}$) is reduced to 1 and we are left with $1- w_iF(x_i,\beta)^{1-Y_i}$. At each dose-level $F(x_i, \beta)$ will remain fixed and is only affected by the weight $w_i$. This value is different for each patient depending on how long they have been observed in the trial. Then the likelihood is calculated by multiplying these terms for each patient together. This leads us to the root of the issue. As each $w_i$ is independent for each patient and each of these terms is then multiplied together there is no linear relationship between the combined follow-up times for patients at the same dose-level. So, we will get different likelihood estimates which leads to different estimates of the $\beta$ parameter which ultimately leads to different dose decisions as illustrated in our example. 
+
+This was shown in Figure \ref{fig_tite-dtp:c2NNEstAllCombs}, where all combinations of follow-up times yielded different values of $\beta$. For example, a combined total follow-up of 20 days where one patient has 2 days and the other has 18 equates to weights of $\frac{2}{35}$ and $\frac{18}{35}$ for each patient respectively (this is based on our linear weight function and observation window of 35 days). For the same combined total follow-up of 20 days but split where one patient has 3 days and the other has 17 leads to weights of $\frac{3}{35}$ and $\frac{17}{35}$. For these two different combinations when they are plugged into the likelihood formula we would get different results. The plot also shows this occurs at every combination. However, in most instances the different values of $\beta$ for the same overall combined follow-up time would either be all above or below the critical value we discovered so as such would not change the dose decision. 
+
+When using a linear weight function we cannot say that each day in each patient at the same dose-level is worth the same amount. Essentially, the sum of follow-up time between patients at the same dose-level cannot be thought of as the same. 10 days of follow-up in one patient and 10 days in another is not the same as 20 days in one patient or 19 days in one patient and one in another. This is mainly due to how the likelihood is calculated. We can still say that weighting is linear in individual patients, due to the linear weight function we use, this just does not apply across patients. 
+ 
+So far we have split up the presentation of the pathways dependent on the scenario as there are too many to tabulate and present at once. Table \ref{tab_tite-dtp:TITEDTP_c2_Sum} attempts to summarise all the different pathways for a cohort of two patients. However, due to the issue with the NN scenario, it is difficult to adequately summarise the combined follow-up required for the different dose decisions. Here we have opted to show the exact minimum and maximum combined follow-up that leads to different dose-recommendations. We then add in extra rows to provide a specific breakdown of how many days individual patients need.  
+
+From these values you can still determine the minimum and maximum that guarantee a specific dose as well. For a combined follow-up of 20 days where one patient has 17 days or less of follow-up the recommendation is dose-level 4 and for the same combination but with one patient with 18 days or more follow-up the recommendation is dose-level 5. This may be confusing at first as if you assume a combined follow-up of 20 days with one patient only having two days you would say that is less than 17 so the dose-recommendation is 4. However, if one patient has two days and the combination is 20 that implies the other patient has 18 days of follow-up so we should use the recommendation from the N($\geq$18) row which is dose-level 5.
+
+This table could be simplified just by including the overlap in the follow-up column but this would lose out on the granular detail. So, for the outcome NN we could say a follow-up of 2-21 leads to dose-level 4 and a follow-up of 20-70 leads to dose-level 5. An asterisk or some text could accompany the table to perhaps explain the overlap or add more details. 
 
 \begin{table}[H]
 	\centering
@@ -695,8 +733,12 @@ So far we have split up the presentation of the pathways dependent on the scenar
 		Dose                 & No. of Pathways & Outcome             & Follow-up & Dose     \\ \hline
 		2                    & 1               & TT                  &           & 1        \\ \hline
 		2                    & 35              & NT                  & 1-35      & 1        \\ \hline
-		\multirow{2}{*}{2}   & 102             & \multirow{2}{*}{NT} & 2-21      & 4        \\
-		& 528             &                     & 19-70     & 5        \\ \hline
+		\multirow{6}{*}{2}   & 90              & \multirow{6}{*}{NN} & 2-19      & 4        \\
+							 & 8               &                     & 20 N($\leq$17) & 4        \\
+							 & 4               &                     & 21 N($\leq$14) & 4        \\
+							 & 2               &                     & 20 N($\geq$18) & 5        \\
+							 & 6               &                     & 21 N($\geq$15) & 5        \\
+							 & 520             &                     & 22-70     & 5        \\ \hline
 	\end{tabular}
 \end{table}
 
