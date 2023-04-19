@@ -854,9 +854,62 @@ When an additional patient is added to the cohort, the most complicated scenario
 In this example, there are 70 different pathways where the combined follow-up between the three patients is 20-21 days. By examining these pathways specifically we can define the different thresholds that are needed to make different decisions. Out of the 70 pathways dose-level 5 is recommended in only 9 of those instances. Of those only one is for a combined total follow-up of 20 days and the other 8 have a combined total follow-up of 21 days. So, if one of the three patients has a minimum of 18 days of follow-up then the model will recommend dose-level 5. This is why the minimum combined days of follow-up is 20 to recommend dose-level 5 in Table \ref{tab_tite-dtp:TITEDTP_c3NNN} as one patient will have 18 days and the other two will have one day each. In the case where the combined follow-up is 21 days, the model will only recommend dose-level 5 if one of the three patients has a minimum of 15 days and other has a minimum of 4. Table \ref{tab_tite-dtp:TITEDTP_c3NNNprob} shows all these possible combinations leading to dose-level 5. 
 
 \begin{table}[H]
+	\caption{\label{tab_tite-dtp:TITEDTP_c3NNNprob}Follow-up combinations totalling 20 or 21 days leading to dose-level 5.}
+	\centering
+	\resizebox{\linewidth}{!}{
+		\fontsize{11}{13}\selectfont
+		\begin{tabular}[t]{ccccccc}
+			\toprule
+			\multicolumn{4}{c}{Follow-up} & \multicolumn{1}{c}{ } & \multicolumn{2}{c}{Posterior Estimates} \\
+			\cmidrule(l{3pt}r{3pt}){1-4} \cmidrule(l{3pt}r{3pt}){6-7}
+			Patient 1 & Patient 2 & Patient 3 & Combined & Dose Recommendation & $\beta$ & Variance\\
+			\midrule
+			\cellcolor{gray!6}{1} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{19} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{0.1578} & \cellcolor{gray!6}{1.2064}\\
+			1 & 2 & 18 & 21 & 5 & 0.1553 & 1.2100\\
+			\cellcolor{gray!6}{1} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{17} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{0.1531} & \cellcolor{gray!6}{1.2131}\\
+			1 & 4 & 16 & 21 & 5 & 0.1512 & 1.2158\\
+			\cellcolor{gray!6}{1} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{15} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{0.1496} & \cellcolor{gray!6}{1.2181}\\
+			2 & 2 & 17 & 21 & 5 & 0.1530 & 1.2133\\
+			\cellcolor{gray!6}{2} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{16} & \cellcolor{gray!6}{21} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{0.1510} & \cellcolor{gray!6}{1.2161}\\
+			2 & 4 & 15 & 21 & 5 & 0.1493 & 1.2185\\
+			\cellcolor{gray!6}{1} & \cellcolor{gray!6}{1} & \cellcolor{gray!6}{18} & \cellcolor{gray!6}{20} & \cellcolor{gray!6}{5} & \cellcolor{gray!6}{0.1494} & \cellcolor{gray!6}{1.2147}\\
+			\bottomrule
+	\end{tabular}}
+\end{table}
+
+We haven't shown all 70 pathways but we observe the $\beta$ estimate in each of these cases leading to a dose recommendation of 5 is above 0.1493. This is the same threshold we saw in the scenario of 2 patients with NN outcomes. Similarly, all of the combinations with $\beta$ estimate of 0.1492 or less resulted in a dose-recommendation of  dose-level 4. As before we can also visualise this issue with Figures \ref{fig_tite-dtp:c2NNNEstAllCombs} and \ref{fig_tite-dtp:c2NNNEst2021}. These plots show the $\beta$ estimates for each possible total follow-up combination and more specifically the combinations for a total of 20 and 21 days. Figure \ref{fig_tite-dtp:c2NNNEst2021} labels each point to show the individual follow-up of each of the patients. Here we see the same pattern before as with the 2NN scenario. A minimum number of days is needed in a specific patient in order to obtain an estimate of $\beta$ which is high enough to warrant escalation to the highest dose. We can see when the follow-up time is split more evenly between the patients the estimates of $\beta$ are lower. This also supports our findings earlier where we surmised that weightings between patients at the same dose-level aren't entirely equivalent due to how the likelihood is calculated. 
+
+\begin{figure}[h!]
+	\centering
+	\caption[Changes in $\beta$ based on combined follow-up for three patients.]{Plot illustrating how the posterior estimate of $\beta$ and dose recommendation change based on combined follow-up for three patients.}
+	\label{fig_tite-dtp:c2NNNEstAllCombs}
+	\includegraphics[width=\textwidth]{TITE-DTP-c2NNN-EstAllCombs}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\caption[Changes in $\beta$ based on combined follow-up of 20 and 21 days for three patients.]{Plot illustrating how the posterior estimate of $\beta$ and dose recommendation change based on combined follow-up of 20 and 21 days for three patients.}
+	\label{fig_tite-dtp:c2NNNEst2021}
 	\includegraphics[width=\textwidth]{TITE-DTP-c2NNN-Est2021}
+\end{figure}
+
 It is important to note that the threshold of the $\beta$ estimate which causes the change in dose-recommendation should remain constant throughout the trial. This threshold can be thought of as the the values of $\beta$ required to make a dose-recommendation picking between doses 4 and 5. This is what we have observed in our two examples of 2NN and 2NNN outcomes respectively. This is due to the way in which we determine the recommended dose for the next patient. The next dose is recommended based on minimising the following equation: 
 
+\begin{equation}
+	|F(d_k, \beta) - \theta| \; k = i, \cdots, 5
+\end{equation}
+
+Here $d_k$ represents each dose-level 1 to 5 and $\theta$ is our TD25. The dose with the probability of toxicity closest to our target of 25\% will be selected as our next recommended dose. This probability is determined by our estimate of $\beta$. What we see in our example is that when $\beta$ is less than 0.1492 dose-level 4 is the closest in probability to our target level and when it is 0.1493 or higher it is dose-level 5. We did not observe any values of $\beta$ between 0.1492 and 0.1493 but there must exist some asymptotic value at which the decision changes. This boundary cannot be explicitly defined as its based on the absolute minimum difference which could theoretically be infinitesimally small.    
+
+You would also expect there to be similar boundaries/thresholds when choosing between any two other adjoining dose-levels. There should exist a value of $\beta$ at which dose-level 1 would be recommended over dose-level 2 and vice versa. Similarly, for dose-levels 2 and 3 and then 3 and 4. Whilst we may be able to identify these boundary values of $\beta$ we cannot know what combination of patients, weights and dose-levels will lead us there. In our example for the cohort of two (2NN) and three (2NNN) in both instances we see that at a combined follow-up of 20 and 21 days our dose-decision changes. However, if we were to change all of the patients or just one of the patients dose-levels the combined follow-up of where the decision changes may be different. This goes back to equation \ref{eq_tite-dtp:titelikelihood}. At a different dose-level the value of $F(x_i, \beta)$ will differ leading to a different likelihood and estimate of the $\beta$ parameter. At lower dose-levels we would expect the combination of follow-up days to recommend the same dose to be higher and lower for higher dose-levels. So the amount of follow-up time required to recommend dose-level 5 would increase as you decrease dose-level. 
+
+Table \ref{tab_tite-dtp:TITEDTP_c3_Sum} combines all the different scenarios and creates a summary table of the TITE-DTPs for a cohort of three. As before we have used a similar notation to express each possible pathway. There is some additional complexity due to there being three patients instead of two and this can be seen in the pathways for the NNN outcome where the combined follow-up time is 21 days.
+
+These can be interpreted as follows. If there are no toxicities in the three patients and their combined follow-up time is 21 days the recommended dose will be dose level-4, if one of those patients has a follow-up time of less then or equal to 14 days (21 N($\leq$14)), or if one of the patients has a follow-up time of less than or equal to 15 days and another patient has less than or equal to 3 days (21 N($\leq$15)N($\leq$3)). This constitutes 29 different pathways. The scenario with N($\leq$15)N($\leq$3) is included as the cut-off in this scenario is not dependent on a specific amount of follow-up in one patient but in two. In the scenario where patients have 15, 3 and 3 days of follow-up respectively the dose recommendation is 4 but a combination of (15, 4, 2) or (15, 5, 1) leads to a dose recommendation of 5. This can also be seen in the next row of the table where if the combined follow-up is 21 days a dose recommendation of 5 is made if one patient has at least 16 days of follow-up or one patient has at least 15 with another having at least 4. Looking back at Figure \ref{fig_tite-dtp:c2NNNEst2021} we can see this exact change by looking at the points around the line representing the threshold value of $\beta$.
+
+Looking at the number of pathways can be quite misleading as from this table it would seem that a large number of them would end up recommending dose-level 5 however, this scenario might not be the most likely depending on what the underlying toxicity is of the dose-level. A higher number of pathways does not correlate to that outcome being more likely it just indicates that it is more complex. Therefore, extra care should be taken when interpreting TITE-DTPs. 
+
+\begin{table}[h]
 	\centering
 	\caption{Summary of TITE-DTP for a cohort of three.}
 	\label{tab_tite-dtp:TITEDTP_c3_Sum}
@@ -868,9 +921,13 @@ It is important to note that the threshold of the $\beta$ estimate which causes 
 		2                    & 1               & TTT                  &           & 1        \\ \hline
 		2                    & 35              & NTT                  & 1-35      & 1        \\ \hline
 		\multirow{2}{*}{2}   & 624             & \multirow{2}{*}{NNT} & 2-66      & 1        \\
-		& 6               &                      & 67-70     & 2        \\ \hline
-		\multirow{2}{*}{2}   & 484             & \multirow{2}{*}{NNN} & 3-26      & 4        \\
-		& 7286            &                      & 24-105    & 5        \\ 
+							 & 6               &                      & 67-70     & 2        \\ \hline
+		\multirow{6}{*}{2}   & 204             & \multirow{6}{*}{NNN} & 3-19      & 4        \\
+							 & 32              &                      & 20 N($\leq$17)    & 4        \\
+							 & 1               &                      & 20 N($\geq$18)    & 5        \\
+							 & 29              &                      & 21 N($\leq$14) | N($\leq$15)N($\leq$3)    & 4        \\
+							 & 8               &                      & 21 N($\geq$16) | N($\geq$15)N($\geq$4)    & 5        \\
+						   	 & 7496            &                      & 22-105    & 5        \\ 
 		\bottomrule
 	\end{tabular}
 \end{table}
