@@ -266,7 +266,7 @@ results %>% mutate(TotalFollow = Patient2+Patient3) %>% View()
 
 # NNN
   
-level <- c(1,1,1)
+level <- c(2,2,2)
 tox <- c(0,0,0)
 combos <- combinations(n = 35, r = 3, repeats.allowed = T, v = 1:35)
 
@@ -312,7 +312,7 @@ results %>%
   #filter(Patient3 == 15)
 
 # Need to run all combinations for the plot 
-level <- c(1,1,1)
+level <- c(2,2,2)
 tox <- c(0,0,0)
 combos <- 1:obswin
 combos <- expand.grid(combos, combos, combos)
@@ -458,3 +458,126 @@ df %>% group_by(rec) %>%
             max = max(beta) %>% round(4))
 
 # 0.1492 -> 4, 0.1493 ->5 
+
+####################################
+# For 3 patients 
+#################################### 
+
+level <- c(2,2,2)
+tox <- c(0,0,0)
+combos <- combinations(n = 35, r = 3, repeats.allowed = T, v = 1:35)
+pos <- cbind(rep(0,nrow(combos)))
+results <-  pos[, rep(1, each=length(tox)+3)]
+
+for (i in 1:nrow(combos)) {
+  if(i == 1){
+    start.time <- Sys.time()
+    print(start.time)
+  }
+  if(i == nrow(combos)){
+    end.time <- Sys.time()
+    print(end.time)
+  }
+  followup <- as.numeric(combos[i,])
+  weights <- followup / obswin 
+  mod <- titecrm(prior = skeleton, target = target, tox = tox, level = level, 
+                 obswin = obswin, weights = weights)
+  
+  for (j in 1:ncol(results)) {
+    results[,j][i] <- followup[j]
+    results[,4][i] <- mod$mtd
+    results[,5][i] <- mod$estimate
+    results[,6][i] <- mod$post.var
+  }
+  
+}
+
+
+results <- data.frame(results)
+colnames(results) <- c('Patient1', 'Patient2','Patient3', 'Rec',  'Est', 'Var')
+results %>% group_by(Rec) %>% 
+  summarise(n=n())
+
+results %>% mutate(TotalFollow = Patient1+Patient2+Patient3) %>% 
+  group_by(Rec) %>% 
+  summarise(n = n(), min = min(TotalFollow), max = max(TotalFollow))
+
+results %>% 
+  mutate(TotalFollow = Patient1+Patient2+Patient3) %>%
+  filter(TotalFollow %in% c(20,21)) %>% 
+  group_by(Rec) %>% 
+  summarise(n = n())
+
+
+results %>% 
+  mutate(TotalFollow = Patient1+Patient2+Patient3) %>%
+  filter(TotalFollow %in% c(20,21)) %>% 
+  arrange(Est)
+
+# Create table with beta estimate and variance included for 9 pathways
+results %>% mutate(TotalFollow = Patient1+Patient2+Patient3, 
+                   Est = Est %>% round(4),
+                   Var = Var %>% round(4)) %>%
+  filter(TotalFollow %in% c(20,21) & Rec == 5) %>% 
+  select(Patient1, Patient2, Patient3, TotalFollow, Rec, Est, Var) %>% 
+  arrange(desc(TotalFollow)) %>% 
+  kable('latex', booktabs = T, linesep = "", align = "c",
+        col.names = c('Patient 1', 'Patient 2', 'Patient 3', 'Combined', 'Dose Recommendation',
+                      'Beta', 'Variance'),
+        caption = '\\label{tab_tite-dtp:TITEDTP_c3NNNprob}Follow-up combinations totalling 20 or 21 days leading to dose-level 5.') %>%
+  kable_styling(latex_options = c("striped", "HOLD_position", "scale_down"),
+                position = "center", font_size = 11) %>%
+  add_header_above(c('Follow-up' = 4, ' ' = 1, 'Posterior Estimates' = 2)) %>%
+  cat()
+
+# Overall plot 
+results %>% mutate(TotalFollow = Patient1+Patient2+Patient3) %>%
+  ggplot(aes(x = TotalFollow, y = Est, col = factor(Rec))) + 
+  geom_point(size = 0.5) +
+  geom_hline(yintercept = 0.1492, col = "red", linetype = "longdash") +
+  labs(x = "Combined Total Follow-up", y = expression(Posterior ~ Estimate ~ beta),
+       col = "Recommended Dose")+
+  scale_color_manual(values = c("#994d1a","#1a6699"))+
+  scale_x_continuous(breaks = seq(0, 105, 5))+
+  theme_bw()+
+  theme(legend.position = "bottom") 
+
+# Plot for 20 & 21 days 
+results %>% mutate(TotalFollow = Patient1+Patient2+Patient3) %>%
+  filter(TotalFollow == 20 | TotalFollow == 21) %>% 
+  ggplot(aes(x = factor(TotalFollow), y = Est, col = factor(Rec))) + 
+  geom_point() +
+  geom_hline(yintercept = 0.1492, col = "red", linetype = "longdash") +
+  geom_text_repel(mapping = aes(label = paste0("(", Patient1, ", ",
+                                               Patient2, ", ", 
+                                               Patient3, ")")),
+                  show.legend = FALSE, max.overlaps = Inf)+
+  labs(x = "Combined Total Follow-up", y = expression(Posterior ~ Estimate ~ beta),
+       col = "Recommended Dose")+
+  scale_color_manual(values = c("#994d1a","#1a6699"))+
+  theme_bw()+
+  theme(legend.position = "bottom") 
+
+# Calculate DTP
+results <- results %>% 
+  mutate(TF = Patient1 + Patient2+ Patient3)
+
+results %>% 
+  filter(TF <= 19) %>% 
+  nrow()
+
+results %>% 
+  filter(TF >= 22) %>% 
+  nrow()
+
+results %>% 
+  filter(TF == 20 & Patient3 <= 17) 
+
+results %>% 
+  filter(TF == 20 & Patient3 >= 18) 
+
+results %>% 
+  filter(TF == 21 & ((Patient3 <= 15 & Patient2 <=3) | Patient3 <= 14)) 
+
+results %>% 
+  filter(TF == 21 & ((Patient3 >= 15 & Patient2 >=4) | Patient3 >= 16)) 

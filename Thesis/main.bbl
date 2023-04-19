@@ -3675,6 +3675,108 @@
     \field{year}{2011}
   \endentry
 
+  \entry{vanwerkhovenPracticalitiesRunningEarlyphase2020}{article}{useprefix}
+    \name{author}{8}{}{%
+      {{hash=vWE}{%
+         prefix={van},
+         prefixi={v\bibinitperiod},
+         family={Werkhoven},
+         familyi={W\bibinitperiod},
+         given={Erik},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=HS}{%
+         family={Hinsley},
+         familyi={H\bibinitperiod},
+         given={Samantha},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=FE}{%
+         family={Frangou},
+         familyi={F\bibinitperiod},
+         given={Eleni},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Holmes},
+         familyi={H\bibinitperiod},
+         given={Jane},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=dHR}{%
+         prefix={de},
+         prefixi={d\bibinitperiod},
+         family={Haan},
+         familyi={H\bibinitperiod},
+         given={Rosemarie},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Hawkins},
+         familyi={H\bibinitperiod},
+         given={Maria},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Brown},
+         familyi={B\bibinitperiod},
+         given={Sarah},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=LSB}{%
+         family={Love},
+         familyi={L\bibinitperiod},
+         given={Sharon\bibnamedelima B.},
+         giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \keyw{Adaptive trial design,Clinical trial design,Dose-finding,Late
+  toxicity,Phase I,TiTE-CRM}
+    \strng{namehash}{vWEHSFE+1}
+    \strng{fullhash}{vWEHSFEHJdHRHMBSLSB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Awareness of model-based designs for dose-finding studies such as the
+  Continual Reassessment Method (CRM) is now becoming more commonplace amongst
+  clinicians, statisticians and trial management staff. In some settings
+  toxicities can occur a long time after treatment has finished, resulting in
+  extremely long, interrupted, CRM design trials. The Time-to-Event CRM
+  (TiTE-CRM), a modification to the original CRM, accounts for the timing of
+  late-onset toxicities and results in shorter trial duration. In this article,
+  we discuss how to design and deliver a trial using this method, from the
+  grant application stage through to dissemination, using two radiotherapy
+  trials as examples.%
+    }
+    \verb{doi}
+    \verb 10.1186/s12874-020-01012-z
+    \endverb
+    \field{issn}{1471-2288}
+    \field{number}{1}
+    \field{pages}{162}
+    \field{shortjournal}{BMC Medical Research Methodology}
+    \field{title}{Practicalities in Running Early-Phase Trials Using the
+  Time-to-Event Continual Reassessment Method ({{TiTE-CRM}}) for Interventions
+  with Long Toxicity Periods Using Two Radiotherapy Oncology Trials as
+  Examples}
+    \verb{url}
+    \verb https://doi.org/10.1186/s12874-020-01012-z
+    \endverb
+    \field{volume}{20}
+    \verb{file}
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\RLX6T84I\\van Werkhoven et al. - 2
+    \verb 020 - Practicalities in running early-phase trials using.pdf;C\:\\Use
+    \verb rs\\Amit\\Zotero\\storage\\PW6V2JHV\\s12874-020-01012-z.html
+    \endverb
+    \field{journaltitle}{BMC Medical Research Methodology}
+    \field{day}{22}
+    \field{month}{06}
+    \field{year}{2020}
+    \field{urlday}{19}
+    \field{urlmonth}{04}
+    \field{urlyear}{2023}
+  \endentry
+
   \entry{berryBayesianAdaptiveMethods2010}{book}{}
     \name{author}{4}{}{%
       {{hash=BSM}{%
@@ -4133,9 +4235,8 @@
   parameters increase.%
     }
     \verb{eprint}
-    \verb arXiv:1111.0433
+    \verb 1111.0433
     \endverb
-    \field{number}{arXiv:1111.0433}
     \field{pubstate}{preprint}
     \field{title}{A Closed-Form Approximation for the Median of the Beta
   Distribution}
@@ -4148,6 +4249,7 @@
     \verb ro\\storage\\2LMZTEH8\\1111.html
     \endverb
     \field{eprinttype}{arxiv}
+    \field{eprintclass}{math, stat}
     \field{day}{02}
     \field{month}{11}
     \field{year}{2011}

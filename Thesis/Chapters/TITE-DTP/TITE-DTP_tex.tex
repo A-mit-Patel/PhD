@@ -690,14 +690,14 @@ In Figure \ref{fig_tite-dtp:c2NNEstAllCombs} for each possible combination of fo
 
 \begin{figure}[h!]
 	\centering
-	\caption[Changes in $\beta$ based on combined follow-up.]{Plot illustrating how the posterior estimate of $\beta$ and dose recommendation change based on combined follow-up.}
+	\caption[Changes in $\beta$ based on combined follow-up for two patients.]{Plot illustrating how the posterior estimate of $\beta$ and dose recommendation change based on combined follow-up for two patients.}
 	\label{fig_tite-dtp:c2NNEstAllCombs}
 	\includegraphics[width=\textwidth]{TITE-DTP-c2NN-EstAllCombs}
 \end{figure}
 
 \begin{figure}[h!]
 	\centering
-	\caption[Changes in $\beta$ based on combined follow-up of 20 and 21 days.]{Plot illustrating how the posterior estimate of $\beta$ and dose recommendation change based on combined follow-up of 20 and 21 days.}
+	\caption[Changes in $\beta$ based on combined follow-up of 20 and 21 days for two patients.]{Plot illustrating how the posterior estimate of $\beta$ and dose recommendation change based on combined follow-up of 20 and 21 days for two patients.}
 	\label{fig_tite-dtp:c2NNEst2021}
 	\includegraphics[width=\textwidth]{TITE-DTP-c2NN-Est2021}
 \end{figure}
@@ -707,6 +707,7 @@ Intuitively, since we are using a linear weight function, we would expect each d
 In order to explore why this discrepancy exists we look into how the TITE-CRM works. For reference the TITE-CRM was originally introduced by Cheung and Chappel \cite{cheungSequentialDesignsPhase2000}. A further detailed description of the TITE-CRM is also provided by Cheung \cite{cheungDoseFindingContinual2011}. We also detail the TITE-CRM design in the presence of partial orders in Chapter \ref{Adept} (Section \ref{adept:PO-TITE-CRM-Design}). The TITE-CRM makes use of a weighted likelihood for the model parameter $\beta$, this is given by the equation below: 
 
 \begin{equation}
+	\label{eq_tite-dtp:titelikelihood}
 	{L}_n(\beta|w)=\prod_{i=1}^{n}\{w_i F(x_i,\beta)\}^{Y_i} \{1-w_i F(x_i,\beta)\}^{1-Y_i}
 \end{equation}
 
@@ -828,7 +829,7 @@ Similarly, the NNT scenario is an extension of the NN scenario for a cohort of t
 	\end{tabular}
 \end{table}
 
-When an additional patient is added to the cohort, the most complicated scenario is when all patients in the cohort experience no toxicity. With 3 patients and 35 days follow-up, 7770 different possible combinations of follow-up days can be observed. The results from fitting all these models are presented in Table \ref{tab_tite-dtp:TITEDTP_c3NNN}. In this scenario, if the combined number of follow-up between the three patients is between 3 and 23 days the model will recommend dose-level 4 and if it's above 27 dose-level 5 will be recommended. Again we see the same problem as before with a cohort of two patients for the NN scenario. There appears to be some overlap in dose decisions for certain combinations of follow-up days between the three patients. Anything between 24 and 26 days may result in either a recommendation of dose-level 4 or 5 depending on the split of follow-up time between the three patients. Figure \ref{fig_tite-dtp:c3NNNprob} also provides a 3D illustration of these pathways with each dot representing a different decision, and the colour corresponding to the dose recommended. A dark blue dot indicates dose-level 4 and light blue is dose-level 5.  
+When an additional patient is added to the cohort, the most complicated scenario is when all patients in the cohort experience no toxicity. With 3 patients and 35 days follow-up, 7770 different possible combinations of follow-up days can be observed. The results from fitting all these models are presented in Table \ref{tab_tite-dtp:TITEDTP_c3NNN}. In this scenario, if the combined number of follow-up between the three patients is between 3 and 23 days the model will recommend dose-level 4 and if it's above 22 dose-level 5 will be recommended. Again we see the same problem as before with a cohort of two patients for the NN scenario. There appears to be some overlap in dose decisions for certain combinations of follow-up days between the three patients. Anything between 20 and 21 days may result in either a recommendation of dose-level 4 or 5 depending on the split of follow-up time between the three patients. Figure \ref{fig_tite-dtp:c2NNNprob} also provides a 3D illustration of these pathways with each dot representing a different decision, and the colour corresponding to the dose recommended. A dark blue dot indicates dose-level 4 and light blue is dose-level 5.  
 
 \begin{table}[H]
 	\centering
@@ -838,23 +839,24 @@ When an additional patient is added to the cohort, the most complicated scenario
 		\hline
 		\multicolumn{1}{l}{} & \multicolumn{1}{l}{} & \multicolumn{2}{c}{Combined no. of Follow-up Days} \\ \cline{3-4} 
 		Recommend Dose & No. of Pathways & Minimum & Maximum \\ \hline
-		4              & 484             & 3       & 26      \\
-		5              & 7286            & 24      & 105      \\ \hline
+		4              & 265             & 3       & 21      \\
+		5              & 7505            & 20      & 105      \\ \hline
 	\end{tabular}
 \end{table}
 
 \begin{figure}[H]
 	\centering
 	\caption{Dose recommendations for a cohort of three patients for scenario NNN.}
-	\label{fig_tite-dtp:c3NNNprob}
-	\includegraphics[width=0.85\textwidth]{TITE-DTP-c3NNN}
+	\label{fig_tite-dtp:c2NNNprob}
+	\includegraphics[width=0.8\textwidth]{TITE-DTP-c2NNN}
 \end{figure}
 
-In this example, there are 156 different pathways where the combined follow-up between the three patients is 24-26 days. By examining these pathways specifically we can define the different thresholds that are needed to make different decisions. So, if one of the three patients has a minimum of 22 days of follow-up then the model will recommend dose-level 5. This is why the minimum combined days of follow-up is 24 to recommend dose-level 5 in Table \ref{tab_tite-dtp:TITEDTP_c3NNN} as one patient will have 22 days and the other two will have one day each. In the case where one patient has a minimum follow-up of 20 or 21 days, the model will only recommend escalating to dose-level 5 if the combined follow-up of all three patients is 25. For one patient with a follow-up time between 16 and 19 days, the combined total has to be 26 to escalate to dose-level 5. There is also one pathway which includes a patient with 15 days of follow-up another with 10 days and the last patient with 1 day that escalates to dose-level 5. However every other variant of one patient having 15 days of follow-up with the combined total reaching 24-26 only escalates to dose-level 4. Out of the 156 combinations of combined follow-up between 24 and 26 days 126 recommend dose-level 4 and 30 recommend dose-level 5. 
-
-Table \ref{tab_tite-dtp:TITEDTP_c3_Sum} combines all the different scenarios and creates a summary table of the TITE-DTPs for a cohort of three. As before we have left the overlapping combined follow-up times for the NNN scenario. Looking at the number of pathways can be quite misleading as from this table it would seem that a large number of them would end up recommending dose-level 5 however, this scenario might not be the most likely depending on what the underlying toxicity is of the dose-level. A higher number of pathways does not correlate to that outcome being more likely it just indicates that it is more complex. Therefore, extra care should be taken when interpreting TITE-DTPs. 
+In this example, there are 70 different pathways where the combined follow-up between the three patients is 20-21 days. By examining these pathways specifically we can define the different thresholds that are needed to make different decisions. Out of the 70 pathways dose-level 5 is recommended in only 9 of those instances. Of those only one is for a combined total follow-up of 20 days and the other 8 have a combined total follow-up of 21 days. So, if one of the three patients has a minimum of 18 days of follow-up then the model will recommend dose-level 5. This is why the minimum combined days of follow-up is 20 to recommend dose-level 5 in Table \ref{tab_tite-dtp:TITEDTP_c3NNN} as one patient will have 18 days and the other two will have one day each. In the case where the combined follow-up is 21 days, the model will only recommend dose-level 5 if one of the three patients has a minimum of 15 days and other has a minimum of 4. Table \ref{tab_tite-dtp:TITEDTP_c3NNNprob} shows all these possible combinations leading to dose-level 5. 
 
 \begin{table}[H]
+	\includegraphics[width=\textwidth]{TITE-DTP-c2NNN-Est2021}
+It is important to note that the threshold of the $\beta$ estimate which causes the change in dose-recommendation should remain constant throughout the trial. This threshold can be thought of as the the values of $\beta$ required to make a dose-recommendation picking between doses 4 and 5. This is what we have observed in our two examples of 2NN and 2NNN outcomes respectively. This is due to the way in which we determine the recommended dose for the next patient. The next dose is recommended based on minimising the following equation: 
+
 	\centering
 	\caption{Summary of TITE-DTP for a cohort of three.}
 	\label{tab_tite-dtp:TITEDTP_c3_Sum}
@@ -892,11 +894,20 @@ It is clear that the inclusion and use of DTPs is a net positive for dose-findin
 
 Our work agrees with what Yap et al. \cite{yapDoseTransitionPathways2017} originally theorised. Extending DTPs to a TITE-CRM is problematic. Firstly, due to the idea of partial tolerances, trying to account for every possibility and time point a patient hasn't had a toxicity is an exponentially increasing problem. The complexity of DTPs is intrinsically linked to patients with partial tolerances as to fully build out the TITE-DTP you need to calculate every possible time point at which that patient could be observed. Then also for cohorts of more than one patient, considering the outcome where both patients experience a partial tolerance exponentially increases the number of pathways. We demonstrated that by showing the different potential DTPs for cohorts of patients from sizes one to two to three and how the number of pathways kept increasing with each iteration. 
 
-We also found the TITE-CRM to have small inconsistencies when escalating doses. In some instances, different dose decisions were being made based on the split of follow-up time between patients for the same overall combined follow-up time. So, in our final example and TITE-DTP for a cohort of three patients we saw different recommendations when the combined amount of follow-up time between the three patients was 24, 25 or 26 days dependent on how those were split between the patients. It's not entirely obvious why this occurs, except there must exist some threshold where the TITE-CRM will escalate once one individual patient has enough follow-up and hence enough weighting. 
+We also found the TITE-CRM to have small inconsistencies when escalating doses. In some instances, different dose decisions were being made based on the split of follow-up time between patients for the same overall combined follow-up time. So, in our examples and TITE-DTPs for a cohort of two or three patients we saw different recommendations when the combined amount of follow-up time between the three patients was 20 and 21 days dependent on how those were split between the patients. We have shown this is dependent on the model parameter and that different combinations of follow-up times produce different estimates of the parameter due to the likelihood function. The model parameter $\beta$ can take any real value. As such there are specific boundaries or thresholds that exist at which the dose-decision will change dependent on the value of $\beta$. However, trying to strictly define these as a specific value is difficult as the way a dose is selected is based on the smallest difference between the estimated probability of toxicity at that dose and the target toxicity level. This difference can be infinitesimally small and as that tends to zero the value of $\beta$ which leads to that small difference tends to a specific boundary/threshold value. However, we can define a two values for $\beta$ at each adjoining dose-level to say a value above will result in the higher dose being recommended and a value below the other value will mean the lower dose is recommended.
+
+Understanding this exact boundary is not paramount as in a practical setting due to the observation window or the number of patients you have you may not get close to that specific value of $\beta$ where the dose decision changes. As with our examples where values of $\beta$ below 0.1492 resulted in a dose-recommendation of dose-level 4 and any value above 0.1493 resulted in dose-level 5 being recommended. We saw this corresponded with combined follow-up times between 20 and 21 days. Understanding the exact combination of follow-up days for patients that lead to a dose decision is important to help us construct the TITE-DTPs. This is another advantage of DTPs in a TITE setting as they allow us to see exactly what amount of data we need to observe for specific decisions to be made. This may be helpful in practice when it comes to timing analyses for dose-decisions as it may be beneficial to observe patients for a few extra days in order to escalate to a higher doses. Whilst this may be a rare occurrence in an actual trial it will still be beneficial to be aware that his problem could arise and develop a plan ahead of time to deal with it. 
+
+It is also important to note that this inconsistency may change how we intuitively interpret patients weighting in a TITE-CRM, specifically with a linear weight function. Through our examples we have shown that follow-up time between patients at the same dose-levels is not equally weighted. We saw that for the same combination of follow-up time different dose recommendation were being made based on the split of follow-up time between the patients. Even in instances where different dose-recommendations weren't being made we still saw different estimates of $\beta$ for different combinations of the same total. An extensive review of the literature has not been conducted however we do not think that this issue with the TITE-CRM has been highlighted previously, this may also extend to other methodology which implements a TITE component. 
+
+Further work may be done to explore this issue and the idea of TITE-DTPs. Here we have only looked at a relatively simple example using a TITE-CRM with a power model and a linear weight function. A more complex weight function could further highlight this issue. For example if more weight is given to patients early in the observation window, the effect we observed in our example may be further exaggerated. Our example design did not make use of any stopping rules or rules about skipping doses. Changes to any of the specifications or the inclusion of stopping rules would alter the results we produced. The observation window of 35 days that we selected was also fairly arbitrary and as discussed previously any significant increase in this value will drastically increase the number of pathways that need to be calculated. We only looked at patients at the start of the trial all of whom received the same dose-level. An additional approach would be to look at the pathways halfway through the trial assuming previous patients had been fully observed so we wouldn't have to consider multiple pathways from that data. Looking into a more complex example and multiple scenarios to see if TITE-DTPs still behave as we have described would be beneficial to validate the work we have already done as well as highlight any different features that may emerge such as the inconsistency with weighting that we found.
 
 The examples of TITE-DTPs we provided were for only one cohort as well. Obviously, this becomes more and more difficult to deal with as we add in extra patients and cohorts. It's also not as trivial as just presenting a summary table as we did for the first cohort as well. Any additional cohort will have to take into account not only partial tolerance events from the new cohort but would have to consider every remaining possible partial tolerance event from a previous cohort. Consider one pathway from a cohort of three, N(31)N(23)N(9), all patients here experienced a partial tolerance and as their combined follow-up time adds up to 63 days we can see from the TITE-DTP in Table \ref{tab_tite-dtp:TITEDTP_c3_Sum} the dose recommendation would be dose-level 5. If we were to then recruit cohort 2 to dose-level 5 and attempt to produce more pathways we would need to check combinations for each possible amount of remaining follow-up time for the patients in the previous cohort as well as the full 35 days for each of the three new patients. So, this can essentially be thought of as a cohort of six, where some patients already have some data available. Equation \ref{eq_tite-dtp:combinations} can then be used to give us a rough estimate of how many combinations need to be considered. For a cohort of 6 patients with 35 days of follow-up, the number of combinations is $1 \times 10^{41}$. Now since we already have some data a few of these combinations are redundant but that is still an astronomical amount of pathways (for context the universe is approximately $4.3 \times 10^{17}$ seconds old). 
 
+The TITE-CRM was originally designed to work without the use of cohorts. The idea was that patients could be recruited into the trial continually and they would be allocated a dose-level based on data from patients already in the trial. As those patients already in the trial may not have completed their DLT observation window they would be partially weighted using the idea of them having achieved a partial tolerance. As recruitment to a clinical trial may not be consistent or predictable this made it possible not pause recruitment in a dose-finding trial which would typically have to be done whilst a cohort was being observed for DLTs. However, in a practical setting and with guidance from regulators it may not always be possible to run trials in this manner. In order to make a dose-decision data may have to be source verified and cleaned. A report and analysis will have to be produced and  used to make a dose-decision which is then discussed with an independent committee. This process may take weeks and recruitment may have to be paused to allow for this to occur before the next patient is recruited. Werkhoven et al. \cite{vanwerkhovenPracticalitiesRunningEarlyphase2020} provide a full discussion on the practicalities of running a TITE-CRM and the challenges it raises. However, the TITE-CRM still remains useful as we can have long observation windows to monitor late-onset toxicities and still make dose-decisions whilst observing patients (Like we have done in Chapter \ref{Adept} for the ADePT-DDR trial). As such TITE-DTPs can still be a useful tool.
+
 One way in which TITE-DTPs could work with multiple cohorts would be if previous cohorts were completed and had full information. That data could go directly into the model and you wouldn't need to consider any previous partial tolerances. When a dose decision for cohort 2 is made on partial information from cohort 1, TITE-DTPs could be created showing outcomes for cohort 3 that assume cohort 1 has full information. In practice, this may very much be the case as well depending on factors such as recruitment time and the follow-up period. 
+
 
 The way DTPs are calculated the outcomes are specified and then entered into the model and then the recommended dose based on those is extracted. Those values are then used to construct the DTPs. That means for each outcome we have to specify an individual model. So, earlier in the chapter when there were 64 pathways 64 models were fitted and in the example of TITE-DTPs for a cohort of 3 we had 8436. As you increase the cohort size and the number of patients or the number of follow-up days in the trial, the number of pathways increases hence the number of models required to compute the DTP increase and the more models required the more computing time is needed. One way around this may be to stop computing once a dose-decision threshold is reached. This specifically relates to any outcomes where a partial tolerance occurs.  In the TITE-DTP example for the NNN outcome, we see anything after 27 days of combined follow-up recommends dose-level 5, We could incorporate a rule into our code that checks after each combination of follow-up days if the recommended dose changes and remains the same across every permutation of follow-up time across the patients DTPs would stop being calculated and you can assume the recommended dose will be the same. That's to say in this scenario for every combination of the three patients' follow-up time that adds up to 27 the model recommends dose-level 5 so we can assume that for any additional follow-up time the model will make the same recommendation as that is the maximum dose. This could cut down computing time on thousands of additional pathways depending on the scenario and context. 
 
@@ -904,48 +915,4 @@ An alternative method of producing TITE-DTPs may be to use patients' weight as a
 
 As Yap et al. \cite{yapDoseTransitionPathways2017} suggested perhaps the easiest approach is just to assume that full tolerance will be achieved and calculate DTPs from that viewpoint. So treat the trial like a CRM and give full weighting to all the patients. This could be used as an alternative and a way to compare dose decisions made on partial information versus full information. This comparison was also made in our example and we saw how some decisions may change with only partial information. During the design stage of a trial, this may be useful in helping determine the length of any potential observation window and how dose decisions may change during it.  
 
-In order to demonstrate TITE-DTPs we have used a relatively simple TITE-CRM trial design that doesn't include any stopping rules. Changes to any of the specifications or the inclusion of stopping rules would alter the results we produced. The observation window of 35 days that we selected was also fairly arbitrary and as discussed previously any significant increase in this value will drastically increase the number of pathways that need to be calculated. Along with that we also used a simple linear weight function. A more complex weight function would also alter the results of our pathways and depending on its complexity different features may emerge such as the inconsistencies we found. 
-
 Overall it is possible to produce TITE-DTPs but it heavily depends on the number of days that patients can have a partial tolerance. It also depends on the size of the cohort you are evaluating. There are also some practical suggestions for how TITE-DTPs could be used during a trials design as well as it is running. Based on all these factors it appears problematic to produce TITE-DTPs for more than one cohort at a time and this will only be feasible during a trial if you can assume complete information on previous cohorts. Ultimately TITE-DTPs are still able to achieve the same aims as DTP except its ability to look ahead is a lot less. Statisticians should attempt to produce them wherever possible. However, if the scenario or trial parameters mean the TITE-DTPs is too complicated they may be more of a hindrance than a benefit.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
