@@ -743,6 +743,22 @@ This table could be simplified just by including the overlap in the follow-up co
 	\end{tabular}
 \end{table}
 
+As with classic DTPs we can also visually show these pathways. Figure \ref{fig_tite-dtp:TITEDTP-cohort2-node} shows a summary of the pathways as a node plot. Rather than present each possible pathway as we do with normal DTPs here we just present the same summary that is shown in Table \ref{tab_tite-dtp:TITEDTP_c2_Sum}. Inside each node is the dose-level. The arrows show each possible outcome and it's associated dose-decision. Each arrow is labelled with the specific outcome and the combined amount of follow-up time  which leads to the specific recommendation. An alternative presentation of the pathways is provided in Figure \ref{fig_tite-dtp:TITEDTP-cohort2-flow}. This plot shows a summary of the pathways in a similar manner to the flow plots of DTPs. It shows how the dose decision changes with the combined amount of follow-up time. For this plot it's important to note that follow-up time is only relevant to outcomes of no toxicity (N). So, for TT the outcome is not dependent on follow-up time. However, for NT the outcomes could change based on the amount of follow-up time the patient who experienced no toxicity (N) has. This is why TT, NT and NN have different sized boxes as the total combined follow-up for each is different. Neither of these plots capture how many pathways these outcomes represent but this information could easily be added as required. This should be done with caution as we said before this could be slightly misleading as the number of pathways does not indicate that one outcome is more likely than another. 
+
+\begin{figure}[h!]
+	\centering
+	\caption{TITE-DTP Node plot for a cohort of two patients.}
+	\label{fig_tite-dtp:TITEDTP-cohort2-node}
+	\includegraphics[width=\textwidth]{TITE-DTP-cohort2Node}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\caption{TITE-DTP Flow plot for a cohort of two patients.}
+	\label{fig_tite-dtp:TITEDTP-cohort2-flow}
+	\includegraphics[width=0.8\textwidth, height=\textheight]{TITE-DTP-cohort2Flow}
+\end{figure}
+
 Just by adding an extra patient to a cohort of one the number of pathways we have has increased almost 20-fold. We have also discovered when looking at specific combinations of partial tolerance events there are some inconsistencies with the way the TITE-CRM is recommending dose-levels. Finally, for completeness, we attempt producing TITE-DTPs for a cohort of 3 patients.   
 
 %-----------------------------------
