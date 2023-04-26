@@ -79,20 +79,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.3}Cohort of three patients}{137}{subsection.132}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Discussion}{147}{section.142}%
+\contentsline {section}{\numberline {4.4}Discussion}{149}{section.144}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Efficacy Transition Pathways}{157}{chapter.143}%
+\contentsline {chapter}{\numberline {5}Efficacy Transition Pathways}{159}{chapter.145}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Introduction}{157}{section.144}%
+\contentsline {section}{\numberline {5.1}Introduction}{159}{section.146}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Beta-Binomial Conjugate Analyses}{160}{section.146}%
+\contentsline {section}{\numberline {5.2}Beta-Binomial Conjugate Analyses}{162}{section.148}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Illustrative example to showcase a Beta-Binomial design}{164}{subsection.159}%
+\contentsline {subsection}{\numberline {5.2.1}Illustrative example to showcase a Beta-Binomial design}{166}{subsection.161}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Interim analyses and Predictive Probability of Success}{169}{subsection.163}%
+\contentsline {subsection}{\numberline {5.2.2}Interim analyses and Predictive Probability of Success}{171}{subsection.165}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Constructing Efficacy Transition Pathways}{175}{section.171}%
+\contentsline {section}{\numberline {5.3}Constructing Efficacy Transition Pathways}{177}{section.173}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Development of a Web Application for ETPs}{187}{section.181}%
+\contentsline {section}{\numberline {5.4}Development of a Web Application for ETPs}{189}{section.183}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{189}{chapter*.182}%
+\contentsline {chapter}{Bibliography}{191}{chapter*.184}%

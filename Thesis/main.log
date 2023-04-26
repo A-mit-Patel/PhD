@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.8)  24 APR 2023 20:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.8)  26 APR 2023 21:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1212,7 +1212,7 @@ Overfull \hbox (5.0661pt too wide) in paragraph at lines 28--29
 ponse model
  []
 
-<Figures//Adept-DoseExample.pdf, id=545, 160.6803pt x 146.4672pt>
+<Figures//Adept-DoseExample.pdf, id=549, 160.6803pt x 146.4672pt>
 File: Figures//Adept-DoseExample.pdf Graphic file (type pdf)
 <use Figures//Adept-DoseExample.pdf>
 Package pdftex.def Info: Figures//Adept-DoseExample.pdf  used on input line 34.
@@ -1241,7 +1241,7 @@ Overfull \hbox (7.31252pt too wide) in paragraph at lines 155--155
 
 pdfTeX warning: pdflatex.exe (file ./Figures//Adept-DoseCombos.pdf): PDF inclus
 ion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures//Adept-DoseCombos.pdf, id=672, 491.91779pt x 572.1375pt>
+<Figures//Adept-DoseCombos.pdf, id=676, 491.91779pt x 572.1375pt>
 File: Figures//Adept-DoseCombos.pdf Graphic file (type pdf)
 <use Figures//Adept-DoseCombos.pdf>
 Package pdftex.def Info: Figures//Adept-DoseCombos.pdf  used on input line 172.
@@ -1256,7 +1256,7 @@ Overfull \hbox (13.09404pt too wide) in paragraph at lines 194--196
 lation/de-escalation
  []
 
-<Figures//Adept-WeightFunction.pdf, id=707, 713.66624pt x 434.62375pt>
+<Figures//Adept-WeightFunction.pdf, id=711, 713.66624pt x 434.62375pt>
 File: Figures//Adept-WeightFunction.pdf Graphic file (type pdf)
 <use Figures//Adept-WeightFunction.pdf>
 Package pdftex.def Info: Figures//Adept-WeightFunction.pdf  used on input line 
@@ -1274,7 +1274,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [30] [31]
-<Figures//Adept-DLTRates.pdf, id=777, 844.15375pt x 597.23125pt>
+<Figures//Adept-DLTRates.pdf, id=781, 844.15375pt x 597.23125pt>
 File: Figures//Adept-DLTRates.pdf Graphic file (type pdf)
 <use Figures//Adept-DLTRates.pdf>
 Package pdftex.def Info: Figures//Adept-DLTRates.pdf  used on input line 462.
@@ -1284,13 +1284,13 @@ Package pdftex.def Info: Figures//Adept-DLTRates.pdf  used on input line 462.
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [32] [33 <./Figures//Adept-DLTRates.pdf>] [34]
-<Figures//Adept-SimsOrder1.pdf, id=809, 844.15375pt x 597.23125pt>
+<Figures//Adept-SimsOrder1.pdf, id=813, 844.15375pt x 597.23125pt>
 File: Figures//Adept-SimsOrder1.pdf Graphic file (type pdf)
 <use Figures//Adept-SimsOrder1.pdf>
 Package pdftex.def Info: Figures//Adept-SimsOrder1.pdf  used on input line 745.
 
 (pdftex.def)             Requested size: 412.56499pt x 291.88948pt.
-<Figures//Adept-SimsOrder2.pdf, id=812, 844.15375pt x 597.23125pt>
+<Figures//Adept-SimsOrder2.pdf, id=816, 844.15375pt x 597.23125pt>
 File: Figures//Adept-SimsOrder2.pdf Graphic file (type pdf)
 <use Figures//Adept-SimsOrder2.pdf>
 Package pdftex.def Info: Figures//Adept-SimsOrder2.pdf  used on input line 752.
@@ -1331,7 +1331,7 @@ he WT de-sign and how it works.
  []
 
 [49] [50] [51] [52] [53] [54] [55]
-<Figures//WT-TwoArmExample.pdf, id=966, 389.5353pt x 608.2725pt>
+<Figures//WT-TwoArmExample.pdf, id=970, 389.5353pt x 608.2725pt>
 File: Figures//WT-TwoArmExample.pdf Graphic file (type pdf)
 <use Figures//WT-TwoArmExample.pdf>
 Package pdftex.def Info: Figures//WT-TwoArmExample.pdf  used on input line 178.
@@ -1461,14 +1461,14 @@ Overfull \vbox (55.9648pt too high) has occurred while \output is active []
 
 
 [103]
-<Figures//TITE-DTP-InitialExampleDTPNode.pdf, id=1240, 1157.32375pt x 1153.3087
+<Figures//TITE-DTP-InitialExampleDTPNode.pdf, id=1244, 1157.32375pt x 1153.3087
 5pt>
 File: Figures//TITE-DTP-InitialExampleDTPNode.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-InitialExampleDTPNode.pdf>
 Package pdftex.def Info: Figures//TITE-DTP-InitialExampleDTPNode.pdf  used on i
 nput line 162.
 (pdftex.def)             Requested size: 412.56499pt x 411.12569pt.
-<Figures//TITE-DTP-InitialExampleDTPFlow.pdf, id=1241, 844.15375pt x 597.23125p
+<Figures//TITE-DTP-InitialExampleDTPFlow.pdf, id=1245, 844.15375pt x 597.23125p
 t>
 File: Figures//TITE-DTP-InitialExampleDTPFlow.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-InitialExampleDTPFlow.pdf>
@@ -1481,7 +1481,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [104 <./Figures//TITE-DTP-InitialExampleDTPNode.pdf>] [105 <./Figures//TITE-DTP
 -InitialExampleDTPFlow.pdf>] [106]
-<Figures//TITE-DTP-UpdatedExampleDTPNode.pdf, id=1276, 1122.1925pt x 1115.16624
+<Figures//TITE-DTP-UpdatedExampleDTPNode.pdf, id=1280, 1122.1925pt x 1115.16624
 pt>
 File: Figures//TITE-DTP-UpdatedExampleDTPNode.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-UpdatedExampleDTPNode.pdf>
@@ -1492,7 +1492,7 @@ nput line 257.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf, id=1277, 844.15375pt x 597.23125p
+<Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf, id=1281, 844.15375pt x 597.23125p
 t>
 File: Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-UpdatedExampleDTPFlow.pdf>
@@ -1513,7 +1513,7 @@ Overfull \vbox (55.9648pt too high) has occurred while \output is active []
 
 
 [113]
-<Figures//TITE-DTP-UsingDuringTrialDTPNode.pdf, id=1332, 1157.32375pt x 1153.30
+<Figures//TITE-DTP-UsingDuringTrialDTPNode.pdf, id=1336, 1157.32375pt x 1153.30
 875pt>
 File: Figures//TITE-DTP-UsingDuringTrialDTPNode.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-UsingDuringTrialDTPNode.pdf>
@@ -1521,7 +1521,7 @@ Package pdftex.def Info: Figures//TITE-DTP-UsingDuringTrialDTPNode.pdf  used on
  input line 371.
 (pdftex.def)             Requested size: 412.56499pt x 411.12569pt.
  [114 <./Figures//TITE-DTP-UsingDuringTrialDTPNode.pdf>] [115]
-<Figures//TITE-DTP-NonUniformDTPNode.pdf, id=1351, 958.58125pt x 996.72375pt>
+<Figures//TITE-DTP-NonUniformDTPNode.pdf, id=1355, 958.58125pt x 996.72375pt>
 File: Figures//TITE-DTP-NonUniformDTPNode.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-NonUniformDTPNode.pdf>
 Package pdftex.def Info: Figures//TITE-DTP-NonUniformDTPNode.pdf  used on input
@@ -1540,20 +1540,20 @@ LaTeX Font Info:    Trying to load font information for U+fplmbb on input line
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 [126]
-<Figures//TITE-DTP-c2NN.pdf, id=1422, 760.8425pt x 330.23375pt>
+<Figures//TITE-DTP-c2NN.pdf, id=1426, 760.8425pt x 330.23375pt>
 File: Figures//TITE-DTP-c2NN.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-c2NN.pdf>
 Package pdftex.def Info: Figures//TITE-DTP-c2NN.pdf  used on input line 645.
 (pdftex.def)             Requested size: 412.56499pt x 179.07436pt.
 LaTeX Font Info:    Calculating math sizes for size <11> on input line 653.
  [127 <./Figures//TITE-DTP-c2NN.pdf>] [128] [129]
-<Figures//TITE-DTP-c2NN-EstAllCombs.pdf, id=1444, 549.05125pt x 322.20375pt>
+<Figures//TITE-DTP-c2NN-EstAllCombs.pdf, id=1448, 549.05125pt x 322.20375pt>
 File: Figures//TITE-DTP-c2NN-EstAllCombs.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-c2NN-EstAllCombs.pdf>
 Package pdftex.def Info: Figures//TITE-DTP-c2NN-EstAllCombs.pdf  used on input 
 line 695.
 (pdftex.def)             Requested size: 412.56499pt x 242.11435pt.
-<Figures//TITE-DTP-c2NN-Est2021.pdf, id=1445, 722.7pt x 433.62pt>
+<Figures//TITE-DTP-c2NN-Est2021.pdf, id=1449, 722.7pt x 433.62pt>
 File: Figures//TITE-DTP-c2NN-Est2021.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-c2NN-Est2021.pdf>
 Package pdftex.def Info: Figures//TITE-DTP-c2NN-Est2021.pdf  used on input line
@@ -1568,50 +1568,50 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 pdfTeX warning: pdflatex.exe (file ./Figures//TITE-DTP-cohort2Node.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures//TITE-DTP-cohort2Node.pdf, id=1490, 421.575pt x 351.23218pt>
+<Figures//TITE-DTP-cohort2Node.pdf, id=1494, 421.575pt x 351.23218pt>
 File: Figures//TITE-DTP-cohort2Node.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-cohort2Node.pdf>
 Package pdftex.def Info: Figures//TITE-DTP-cohort2Node.pdf  used on input line 
-752.
-(pdftex.def)             Requested size: 412.56499pt x 343.73357pt.
+756.
+(pdftex.def)             Requested size: 371.30597pt x 309.3586pt.
 
 
 pdfTeX warning: pdflatex.exe (file ./Figures//TITE-DTP-cohort2Flow.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures//TITE-DTP-cohort2Flow.pdf, id=1491, 310.27919pt x 640.31218pt>
+<Figures//TITE-DTP-cohort2Flow.pdf, id=1495, 310.27919pt x 640.31218pt>
 File: Figures//TITE-DTP-cohort2Flow.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-cohort2Flow.pdf>
 Package pdftex.def Info: Figures//TITE-DTP-cohort2Flow.pdf  used on input line 
-759.
+763.
 (pdftex.def)             Requested size: 330.08272pt x 660.75998pt.
 [135 <./Figures//TITE-DTP-cohort2Node.pdf>]
 Overfull \vbox (23.65955pt too high) has occurred while \output is active []
 
 
 [136 <./Figures//TITE-DTP-cohort2Flow.pdf>] [137] [138] [139]
-<Figures//TITE-DTP-c2NNN.png, id=1535, 254.45062pt x 252.945pt>
+<Figures//TITE-DTP-c2NNN.png, id=1539, 254.45062pt x 252.945pt>
 File: Figures//TITE-DTP-c2NNN.png Graphic file (type png)
 <use Figures//TITE-DTP-c2NNN.png>
-Package pdftex.def Info: Figures//TITE-DTP-c2NNN.png  used on input line 867.
+Package pdftex.def Info: Figures//TITE-DTP-c2NNN.png  used on input line 871.
 (pdftex.def)             Requested size: 330.05324pt x 328.11443pt.
 
-Overfull \hbox (1.76398pt too wide) in paragraph at lines 870--871
+Overfull \hbox (1.76398pt too wide) in paragraph at lines 874--875
 []\T1/ppl/m/n/12 In this ex-am-ple, there are 70 dif-fer-ent path-ways where th
 e com-bined follow-
  []
 
 [140 <./Figures//TITE-DTP-c2NNN.png>] [141]
-<Figures//TITE-DTP-c2NNN-EstAllCombs.pdf, id=1551, 549.05125pt x 322.20375pt>
+<Figures//TITE-DTP-c2NNN-EstAllCombs.pdf, id=1555, 549.05125pt x 322.20375pt>
 File: Figures//TITE-DTP-c2NNN-EstAllCombs.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-c2NNN-EstAllCombs.pdf>
 Package pdftex.def Info: Figures//TITE-DTP-c2NNN-EstAllCombs.pdf  used on input
- line 902.
+ line 906.
 (pdftex.def)             Requested size: 412.56499pt x 242.11435pt.
-<Figures//TITE-DTP-c2NNN-Est2021.pdf, id=1552, 722.7pt x 433.62pt>
+<Figures//TITE-DTP-c2NNN-Est2021.pdf, id=1556, 722.7pt x 433.62pt>
 File: Figures//TITE-DTP-c2NNN-Est2021.pdf Graphic file (type pdf)
 <use Figures//TITE-DTP-c2NNN-Est2021.pdf>
 Package pdftex.def Info: Figures//TITE-DTP-c2NNN-Est2021.pdf  used on input lin
-e 909.
+e 913.
 (pdftex.def)             Requested size: 412.56499pt x 247.53648pt.
 
 
@@ -1622,11 +1622,37 @@ NN-Est2021.pdf>] [144]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[145] [146] [147] [148] [149] [150] [151] [152] [153]) [154] [155]
+[145] [146]
+
+pdfTeX warning: pdflatex.exe (file ./Figures//TITE-DTP-cohort3Node.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figures//TITE-DTP-cohort3Node.pdf, id=1596, 492.88138pt x 415.5525pt>
+File: Figures//TITE-DTP-cohort3Node.pdf Graphic file (type pdf)
+<use Figures//TITE-DTP-cohort3Node.pdf>
+Package pdftex.def Info: Figures//TITE-DTP-cohort3Node.pdf  used on input line 
+964.
+(pdftex.def)             Requested size: 412.56499pt x 347.83794pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./Figures//TITE-DTP-cohort3Flow.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Figures//TITE-DTP-cohort3Flow.pdf, id=1597, 547.08388pt x 889.40276pt>
+File: Figures//TITE-DTP-cohort3Flow.pdf Graphic file (type pdf)
+<use Figures//TITE-DTP-cohort3Flow.pdf>
+Package pdftex.def Info: Figures//TITE-DTP-cohort3Flow.pdf  used on input line 
+972.
+(pdftex.def)             Requested size: 406.41347pt x 660.70042pt.
+[147
+
+ <./Figures//TITE-DTP-cohort3Node.pdf>]
+Overfull \vbox (23.59999pt too high) has occurred while \output is active []
+
+
+[148 <./Figures//TITE-DTP-cohort3Flow.pdf>] [149] [150] [151] [152] [153]
+[154] [155] [156]) [157]
 \openout2 = `Chapters/ETP/ETP_tex.aux'.
 
-
-(Chapters/ETP/ETP_tex.tex [156
+ (Chapters/ETP/ETP_tex.tex [158
 
 
 
@@ -1634,11 +1660,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ]
 Chapter 5.
 1: section
-[157]
+[159]
 
 pdfTeX warning: pdflatex.exe (file ./Figures//ETP-Phase2SingleArmExample.pdf): 
 PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figures//ETP-Phase2SingleArmExample.pdf, id=1656, 242.8272pt x 248.8497pt>
+<Figures//ETP-Phase2SingleArmExample.pdf, id=1690, 242.8272pt x 248.8497pt>
 File: Figures//ETP-Phase2SingleArmExample.pdf Graphic file (type pdf)
 <use Figures//ETP-Phase2SingleArmExample.pdf>
 Package pdftex.def Info: Figures//ETP-Phase2SingleArmExample.pdf  used on input
@@ -1647,14 +1673,14 @@ Package pdftex.def Info: Figures//ETP-Phase2SingleArmExample.pdf  used on input
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[158] [159 <./Figures//ETP-Phase2SingleArmExample.pdf>] [160] [161]
+[160] [161 <./Figures//ETP-Phase2SingleArmExample.pdf>] [162] [163]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 72.
 
-[162] [163] [164]
-<Figures//ETP-BetaBinomialDecRule1.pdf, id=1730, 578.16pt x 433.62pt>
+[164] [165] [166]
+<Figures//ETP-BetaBinomialDecRule1.pdf, id=1764, 578.16pt x 433.62pt>
 File: Figures//ETP-BetaBinomialDecRule1.pdf Graphic file (type pdf)
 <use Figures//ETP-BetaBinomialDecRule1.pdf>
 Package pdftex.def Info: Figures//ETP-BetaBinomialDecRule1.pdf  used on input l
@@ -1664,8 +1690,8 @@ ine 179.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[165] [166 <./Figures//ETP-BetaBinomialDecRule1.pdf>]
-<Figures//ETP-BetaBinomialPriors.pdf, id=1748, 597.23125pt x 844.15375pt>
+[167] [168 <./Figures//ETP-BetaBinomialDecRule1.pdf>]
+<Figures//ETP-BetaBinomialPriors.pdf, id=1783, 597.23125pt x 844.15375pt>
 File: Figures//ETP-BetaBinomialPriors.pdf Graphic file (type pdf)
 <use Figures//ETP-BetaBinomialPriors.pdf>
 Package pdftex.def Info: Figures//ETP-BetaBinomialPriors.pdf  used on input lin
@@ -1675,37 +1701,37 @@ e 196.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[167]
+[169]
 
-LaTeX Warning: Text page 168 contains only floats.
+LaTeX Warning: Text page 170 contains only floats.
 
-[168 <./Figures//ETP-BetaBinomialPriors.pdf>] [169] [170]
+[170 <./Figures//ETP-BetaBinomialPriors.pdf>] [171] [172]
 Overfull \hbox (2.73662pt too wide) detected at line 258
 [][][][]
  []
 
-[171] [172] [173] [174] [175]
-<Figures//ETP-cell0Resp5Pat.pdf, id=1810, 453.695pt x 231.86626pt>
+[173] [174] [175] [176] [177]
+<Figures//ETP-cell0Resp5Pat.pdf, id=1844, 453.695pt x 231.86626pt>
 File: Figures//ETP-cell0Resp5Pat.pdf Graphic file (type pdf)
 <use Figures//ETP-cell0Resp5Pat.pdf>
 Package pdftex.def Info: Figures//ETP-cell0Resp5Pat.pdf  used on input line 335
 .
 (pdftex.def)             Requested size: 412.56499pt x 210.84648pt.
- [176 <./Figures//ETP-cell0Resp5Pat.pdf>]
-<Figures//ETP-cell2Resp5Pat.pdf, id=1824, 453.695pt x 231.86626pt>
+ [178 <./Figures//ETP-cell0Resp5Pat.pdf>]
+<Figures//ETP-cell2Resp5Pat.pdf, id=1858, 453.695pt x 231.86626pt>
 File: Figures//ETP-cell2Resp5Pat.pdf Graphic file (type pdf)
 <use Figures//ETP-cell2Resp5Pat.pdf>
 Package pdftex.def Info: Figures//ETP-cell2Resp5Pat.pdf  used on input line 346
 .
 (pdftex.def)             Requested size: 412.56499pt x 210.84648pt.
- [177 <./Figures//ETP-cell2Resp5Pat.pdf>]
-<Figures//ETP-cell10Resp30Pat.pdf, id=1839, 453.695pt x 231.86626pt>
+ [179 <./Figures//ETP-cell2Resp5Pat.pdf>]
+<Figures//ETP-cell10Resp30Pat.pdf, id=1874, 453.695pt x 231.86626pt>
 File: Figures//ETP-cell10Resp30Pat.pdf Graphic file (type pdf)
 <use Figures//ETP-cell10Resp30Pat.pdf>
 Package pdftex.def Info: Figures//ETP-cell10Resp30Pat.pdf  used on input line 3
 58.
 (pdftex.def)             Requested size: 412.56499pt x 210.84648pt.
-<Figures//ETP-cell14Resp30Pat.pdf, id=1840, 453.695pt x 231.86626pt>
+<Figures//ETP-cell14Resp30Pat.pdf, id=1875, 453.695pt x 231.86626pt>
 File: Figures//ETP-cell14Resp30Pat.pdf Graphic file (type pdf)
 <use Figures//ETP-cell14Resp30Pat.pdf>
 Package pdftex.def Info: Figures//ETP-cell14Resp30Pat.pdf  used on input line 3
@@ -1715,9 +1741,9 @@ Package pdftex.def Info: Figures//ETP-cell14Resp30Pat.pdf  used on input line 3
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[178 <./Figures//ETP-cell10Resp30Pat.pdf>] [179 <./Figures//ETP-cell14Resp30Pat
-.pdf>] [180]
-<Figures//ETP-constructed.pdf, id=1880, 844.15375pt x 597.23125pt>
+[180 <./Figures//ETP-cell10Resp30Pat.pdf>] [181 <./Figures//ETP-cell14Resp30Pat
+.pdf>] [182]
+<Figures//ETP-constructed.pdf, id=1914, 844.15375pt x 597.23125pt>
 File: Figures//ETP-constructed.pdf Graphic file (type pdf)
 <use Figures//ETP-constructed.pdf>
 Package pdftex.def Info: Figures//ETP-constructed.pdf  used on input line 415.
@@ -1727,7 +1753,7 @@ Overfull \hbox (50.63802pt too wide) in paragraph at lines 415--416
  [][] 
  []
 
-<Figures//ETP-constructedNewPPoSRule.pdf, id=1881, 844.15375pt x 597.23125pt>
+<Figures//ETP-constructedNewPPoSRule.pdf, id=1915, 844.15375pt x 597.23125pt>
 File: Figures//ETP-constructedNewPPoSRule.pdf Graphic file (type pdf)
 <use Figures//ETP-constructedNewPPoSRule.pdf>
 Package pdftex.def Info: Figures//ETP-constructedNewPPoSRule.pdf  used on input
@@ -1738,7 +1764,7 @@ Overfull \hbox (50.63802pt too wide) in paragraph at lines 422--423
  [][] 
  []
 
-<Figures//ETP-constructedNewFinalRule.pdf, id=1882, 844.15375pt x 597.23125pt>
+<Figures//ETP-constructedNewFinalRule.pdf, id=1916, 844.15375pt x 597.23125pt>
 File: Figures//ETP-constructedNewFinalRule.pdf Graphic file (type pdf)
 <use Figures//ETP-constructedNewFinalRule.pdf>
 Package pdftex.def Info: Figures//ETP-constructedNewFinalRule.pdf  used on inpu
@@ -1749,7 +1775,7 @@ Overfull \hbox (50.63802pt too wide) in paragraph at lines 429--430
  [][] 
  []
 
-<Figures//ETP-constructedNewFinalTarget.pdf, id=1883, 844.15375pt x 597.23125pt
+<Figures//ETP-constructedNewFinalTarget.pdf, id=1917, 844.15375pt x 597.23125pt
 >
 File: Figures//ETP-constructedNewFinalTarget.pdf Graphic file (type pdf)
 <use Figures//ETP-constructedNewFinalTarget.pdf>
@@ -1761,9 +1787,9 @@ Overfull \hbox (50.63802pt too wide) in paragraph at lines 436--437
  [][] 
  []
 
-[181] [182 <./Figures//ETP-constructed.pdf>] [183 <./Figures//ETP-constructedNe
-wPPoSRule.pdf>] [184 <./Figures//ETP-constructedNewFinalRule.pdf>] [185 <./Figu
-res//ETP-constructedNewFinalTarget.pdf>] [186]) [187] [188
+[183] [184 <./Figures//ETP-constructed.pdf>] [185 <./Figures//ETP-constructedNe
+wPPoSRule.pdf>] [186 <./Figures//ETP-constructedNewFinalRule.pdf>] [187 <./Figu
+res//ETP-constructedNewFinalTarget.pdf>] [188]) [189] [190
 
 
 
@@ -1780,7 +1806,7 @@ Overfull \hbox (6.1905pt too wide) in paragraph at lines 311--311
  []
 
 1: section
-[189]
+[191]
 Overfull \hbox (10.60683pt too wide) in paragraph at lines 311--311
 \T1/cmtt/m/n/12 org / health -[] professional / cancer -[] statistics / statist
 ics -[] by -[] cancer -[]
@@ -1799,7 +1825,7 @@ Overfull \hbox (1.15176pt too wide) in paragraph at lines 311--311
 1/cmtt/m/n/12 http : / / www . sciencedirect . com / science /
  []
 
-[190]
+[192]
 Overfull \hbox (5.08871pt too wide) in paragraph at lines 311--311
 []\T1/ppl/m/n/12 M. J. O'Connor,   Tar-get-ing the DNA Dam-age Re-sponse in Ca
 n-cer, \T1/ppl/m/it/12 Molec-
@@ -1811,34 +1837,34 @@ Overfull \hbox (2.08783pt too wide) in paragraph at lines 311--311
 y with In-hibitors
  []
 
-[191] [192]
+[193] [194]
 Overfull \hbox (1.39478pt too wide) in paragraph at lines 311--311
 \T1/ppl/m/n/12 vol. 26, no. 1, pp. 150166, 2016, \T1/ppl/m/sc/12 issn\T1/ppl/m
 /n/12 : 1054-3406. \T1/ppl/m/sc/12 doi\T1/ppl/m/n/12 : [][]$\T1/cmtt/m/n/12 10 
 . 1080 / 10543406 .
  []
 
-[193]
+[195]
 Overfull \hbox (3.88547pt too wide) in paragraph at lines 311--311
 \T1/ppl/m/n/12 341X. \T1/ppl/m/sc/12 doi\T1/ppl/m/n/12 : [][]$\T1/cmtt/m/n/12 1
 0 . 2307 / 2532905$[][]\T1/ppl/m/n/12 . JS-TOR: [][]$\T1/cmtt/m/n/12 2532905$[]
 []\T1/ppl/m/n/12 . [On-line]. Avail-able: [][]$\T1/cmtt/m/n/12 https :
  []
 
-[194]
+[196]
 Overfull \hbox (11.46663pt too wide) in paragraph at lines 311--311
 \T1/ppl/m/n/12 dose-finding de-sign in the Match-point trial, \T1/ppl/m/it/12 
 BMC Med-i-cal Re-search Method-
  []
 
-[195]
+[197]
 Overfull \hbox (13.74023pt too wide) in paragraph at lines 311--311
 \T1/ppl/m/n/12 pp. 466479, Feb. 1, 2018, \T1/ppl/m/sc/12 issn\T1/ppl/m/n/12 : 
 0962-2802. \T1/ppl/m/sc/12 doi\T1/ppl/m/n/12 : [][]$\T1/cmtt/m/n/12 10 . 1177 /
  0962280216631763$[][]\T1/ppl/m/n/12 .
  []
 
-[196] [197]
+[198] [199]
 Overfull \hbox (3.76405pt too wide) in paragraph at lines 311--311
 []\T1/ppl/m/n/12 J. M. Bland and D. G. Alt-man,   Bayesians and fre-quen-tists
 , \T1/ppl/m/it/12 BMJ\T1/ppl/m/n/12 , vol. 317,
@@ -1850,14 +1876,14 @@ Overfull \hbox (15.66301pt too wide) in paragraph at lines 311--311
 m/it/12 BMJ\T1/ppl/m/n/12 , vol. 319, no. 7208,
  []
 
-[198]
+[200]
 Overfull \hbox (17.32022pt too wide) in paragraph at lines 311--311
 \T1/ppl/m/n/12 Sep. 25, 2009, 612 pp., \T1/ppl/m/sc/12 isbn\T1/ppl/m/n/12 : 978
 -0-470-31771-6. Google Books: [][]$\T1/cmtt/m/n/12 11nSgIcd7xQC$[][]\T1/ppl/m/n
 /12 . 
  []
 
-[199] (main.aux (Chapters/Chapter1/Chapter1.aux) (Chapters/Adept/Adept_tex.aux)
+[201] (main.aux (Chapters/Chapter1/Chapter1.aux) (Chapters/Adept/Adept_tex.aux)
 (Chapters/WT/WT_tex.aux) (Chapters/TITE-DTP/TITE-DTP_tex.aux)
 (Chapters/ETP/ETP_tex.aux))
 
@@ -1865,16 +1891,16 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 2.59998pt have occurred.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 4138AB5E223F6369C90D639FE06C153E;9845.
+(rerunfilecheck)             Checksum: 0B67F2837C8B293F72B704D5CFF17B56;9845.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 31245 strings out of 478659
- 690260 string characters out of 2846395
- 1428727 words of memory out of 3000000
- 48409 multiletter control sequences out of 15000+600000
+ 31269 strings out of 478659
+ 691072 string characters out of 2846395
+ 1428899 words of memory out of 3000000
+ 48429 multiletter control sequences out of 15000+600000
  494543 words of font info for 224 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  96i,20n,93p,2187b,2513s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1893,9 +1919,9 @@ grams/MiKTeX/fonts/type1/urw/palatino/uplb8a.pfb><C:/Users/Amit/AppData/Local/P
 rograms/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Amit/AppData/Local
 /Programs/MiKTeX/fonts/type1/urw/palatino/uplr8a.pfb><C:/Users/Amit/AppData/Loc
 al/Programs/MiKTeX/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on main.pdf (213 pages, 1756038 bytes).
+Output written on main.pdf (215 pages, 1807829 bytes).
 PDF statistics:
- 2392 PDF objects out of 2487 (max. 8388607)
- 452 named destinations out of 1000 (max. 500000)
- 545 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2426 PDF objects out of 2487 (max. 8388607)
+ 456 named destinations out of 1000 (max. 500000)
+ 555 words of extra memory for PDF output out of 10000 (max. 10000000)
 
