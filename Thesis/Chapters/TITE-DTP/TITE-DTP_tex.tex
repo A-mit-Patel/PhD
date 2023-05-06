@@ -929,8 +929,9 @@ These can be interpreted as follows. If there are no toxicities in the three pat
 
 Looking at the number of pathways can be quite misleading as from this table it would seem that a large number of them would end up recommending dose-level 5 however, this scenario might not be the most likely depending on what the underlying toxicity is of the dose-level. A higher number of pathways does not correlate to that outcome being more likely it just indicates that it is more complex. Therefore, extra care should be taken when interpreting TITE-DTPs. 
 
+Figures \ref{fig_tite-dtp:TITEDTP-cohort3-node} and \ref{fig_tite-dtp:TITEDTP-cohort3-flow} visualise the TITE-DTP as we did for a cohort of two patients using a node plot and flow plot respectively. Due to the additional patient and the potential for more outcomes we can see these figures are somewhat more complicated.
 
-\begin{table}[h]
+\begin{table}[h!]
 	\centering
 	\caption{Summary of TITE-DTP for a cohort of three.}
 	\label{tab_tite-dtp:TITEDTP_c3_Sum}
@@ -942,20 +943,16 @@ Looking at the number of pathways can be quite misleading as from this table it 
 		2                    & 1               & TTT                  &           & 1        \\ \hline
 		2                    & 35              & NTT                  & 1-35      & 1        \\ \hline
 		\multirow{2}{*}{2}   & 624             & \multirow{2}{*}{NNT} & 2-66      & 1        \\
-							 & 6               &                      & 67-70     & 2        \\ \hline
+		& 6               &                      & 67-70     & 2        \\ \hline
 		\multirow{6}{*}{2}   & 204             & \multirow{6}{*}{NNN} & 3-19      & 4        \\
-							 & 32              &                      & 20 N($\leq$17)    & 4        \\
-							 & 1               &                      & 20 N($\geq$18)    & 5        \\
-							 & 29              &                      & 21 N($\leq$14) | N($\leq$15)N($\leq$3)    & 4        \\
-							 & 8               &                      & 21 N($\geq$16) | N($\geq$15)N($\geq$4)    & 5        \\
-						   	 & 7496            &                      & 22-105    & 5        \\ 
+		& 32              &                      & 20 N($\leq$17)    & 4        \\
+		& 1               &                      & 20 N($\geq$18)    & 5        \\
+		& 29              &                      & 21 N($\leq$14) | N($\leq$15)N($\leq$3)    & 4        \\
+		& 8               &                      & 21 N($\geq$16) | N($\geq$15)N($\geq$4)    & 5        \\
+		& 7496            &                      & 22-105    & 5        \\ 
 		\bottomrule
 	\end{tabular}
 \end{table}
-
-Figures \ref{fig_tite-dtp:TITEDTP-cohort3-node} and \ref{fig_tite-dtp:TITEDTP-cohort3-flow} visualise the TITE-DTP as we did for a cohort of two patients using a node plot and flow plot respectively. Due to the additional patient and the potential for more outcomes we can see these figures are somewhat more complicated.
-
-\clearpage
 
 \begin{figure}[h!]
 	\centering
@@ -964,12 +961,13 @@ Figures \ref{fig_tite-dtp:TITEDTP-cohort3-node} and \ref{fig_tite-dtp:TITEDTP-co
 	\includegraphics[width=\textwidth]{TITE-DTP-cohort3Node}
 \end{figure}
 
+\clearpage
 
-\begin{figure}[H]
+\begin{figure}[h!]
 	\centering
 	\caption{TITE-DTP Flow plot for a cohort of two patients.}
 	\label{fig_tite-dtp:TITEDTP-cohort3-flow}
-	\includegraphics[height=\textheight]{TITE-DTP-cohort3Flow}
+	\includegraphics[height=0.93\textheight]{TITE-DTP-cohort3Flow}
 \end{figure}
 
 Back in section \ref{tite-dtp:UsingDTPs-Calibration}, we introduced a simple trial example and produced DTPs (Table \ref{tab_tite-dtp:InitialDTPExample}). The pathways for cohort 1 in that table are the full information equivalent of the TITE-DTPs in Table \ref{tab_tite-dtp:TITEDTP_c3_Sum}. As the same trial example was used to produce both of these pathways the only difference is for one of them we have allowed the ability to use partial information in the form of the TITE-CRM and introduce a follow-up period of 35 days. In Table \ref{tab_tite-dtp:InitialDTPExample} pathways 1-16 indicate NNN which is equivalent to Table \ref{tab_tite-dtp:TITEDTP_c3_Sum} outcome of NNN when the follow-up is max for each patient i.e. 105 days of combined follow-up. In both sets of pathways we can see the recommended dose for cohort 2 is dose-level 5. The outcome where all three patients have a toxicity is exactly the same for both the DTP and TITE-DTP. For the outcome of NTT we can see the recommended dose for cohort 2 is the same in both pathways, this implies allowing for partial information doesn't change the recommendation for this cohort. When we come to compare NNT we can see that allowing for partial information does have a slightly different impact on dose recommendations. If the cohort is evaluated when there are two partial tolerances with the number of combined follow-up days being 66 or lower the model recommends dose-level 1. Contrast this to when we have full information (each patient has 35 days of follow-up with no toxicity or just the CRM version of the DTP, Table \ref{tab_tite-dtp:InitialDTPExample}) and the recommended dose is 2. TITE-DTPs also allow you to compare your design to one with full information i.e the CRM equivalent of a TITE-CRM and allow you to evaluate the length of the follow-up period and see how the dose decisions change as you move through it. 
