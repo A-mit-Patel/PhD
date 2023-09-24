@@ -1,0 +1,136 @@
+<mxfile host="app.diagrams.net" modified="2023-05-10T18:52:50.480Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36 OPR/97.0.0.0" etag="vDGWjkxaEfFz0OIGb5nb" version="21.2.9" type="device">
+  <diagram name="Page-1" id="8LdqstpHWxi6hESG80RO">
+    <mxGraphModel dx="1143" dy="758" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="klrIOIBwbLmBRLKwZnor-1" value="DETERMINE Platform Trial" style="rounded=0;whiteSpace=wrap;html=1;fontSize=36;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="5" y="50" width="840" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-2" value="Molecular Grouping 1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="5" y="140" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-6" value="Molecular Grouping 2" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="225" y="140" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-7" value="Molecular Grouping 3" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="445" y="140" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-8" value="Molecular Grouping 4" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="665" y="140" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-9" value="&lt;b&gt;Treatment Arm 1&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=top;arcSize=17;horizontal=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="5" y="230" width="185" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-10" value="Appendix #1 &lt;br&gt;Drug A" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="12" y="280" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-11" value="Trial Cohort&lt;br style=&quot;font-size: 18px;&quot;&gt;N = 30" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+          <mxGeometry x="12" y="360" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-16" value="Sub Cohort 1" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="-49.75" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-17" value="Sub Cohort 2" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="-5.25" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-18" value="Sub Cohort 3" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="39.75" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-19" value="Sub Cohort 4" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="84.75" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-21" value="&lt;b&gt;Treatment Arm 2&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=top;arcSize=17;horizontal=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="222.5" y="230" width="185" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-22" value="Appendix #2 &lt;br&gt;Drug B" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="229.5" y="280" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-23" value="Trial Cohort&lt;br style=&quot;font-size: 18px;&quot;&gt;N = 30" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+          <mxGeometry x="229.5" y="360" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-24" value="Sub Cohort 1" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="167.75" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-25" value="Sub Cohort 2" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="212.25" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-26" value="Sub Cohort 3" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="257.25" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-27" value="Sub Cohort 4" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="302.25" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-30" value="&lt;b&gt;Treatment Arm 3&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=top;arcSize=17;horizontal=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="444.75" y="230" width="185" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-31" value="Appendix #3&lt;br&gt;Drug C" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="451.75" y="280" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-32" value="Trial Cohort&lt;br style=&quot;font-size: 18px;&quot;&gt;N = 30" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+          <mxGeometry x="451.75" y="360" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-33" value="Sub Cohort 1" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="390" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-34" value="Sub Cohort 2" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="434.5" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-35" value="Sub Cohort 3" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="479.5" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-36" value="Sub Cohort 4" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="524.5" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-37" value="&lt;b&gt;Treatment Arm 4&lt;/b&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=top;arcSize=17;horizontal=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="662.25" y="230" width="185" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-38" value="Appendix #4&lt;br&gt;Drug D" style="rounded=0;whiteSpace=wrap;html=1;fontSize=18;fillColor=#6a00ff;fontColor=#ffffff;strokeColor=#3700CC;" vertex="1" parent="1">
+          <mxGeometry x="669.25" y="280" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-39" value="Trial Cohort&lt;br style=&quot;font-size: 18px;&quot;&gt;N = 30" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" vertex="1" parent="1">
+          <mxGeometry x="669.25" y="360" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-40" value="Sub Cohort 1" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="607.5" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-41" value="Sub Cohort 2" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="652" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-42" value="Sub Cohort 3" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="697" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-43" value="Sub Cohort 4" style="rounded=1;whiteSpace=wrap;html=1;rotation=-90;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="742" y="500" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-45" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="klrIOIBwbLmBRLKwZnor-6" target="klrIOIBwbLmBRLKwZnor-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="105" y="210" as="sourcePoint" />
+            <mxPoint x="105" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-46" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.488;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="klrIOIBwbLmBRLKwZnor-7" target="klrIOIBwbLmBRLKwZnor-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="530" y="280" as="sourcePoint" />
+            <mxPoint x="580" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-48" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="97.32" y="200" as="sourcePoint" />
+            <mxPoint x="97.32" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-50" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="klrIOIBwbLmBRLKwZnor-8" target="klrIOIBwbLmBRLKwZnor-37">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="770" y="290" as="sourcePoint" />
+            <mxPoint x="820" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="klrIOIBwbLmBRLKwZnor-51" value="" style="shape=curlyBracket;whiteSpace=wrap;html=1;rounded=1;flipH=1;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;rotation=-90;strokeWidth=4;" vertex="1" parent="1">
+          <mxGeometry x="415" y="-300" width="20" height="840" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

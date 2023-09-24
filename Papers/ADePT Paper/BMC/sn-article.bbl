@@ -1,0 +1,83 @@
+\begin{thebibliography}{10}
+\providecommand{\doi}[1]{\url{https://doi.org/#1}}
+\bibcommenthead
+
+\bibitem[\protect\citeauthoryear{Brock et~al.}{2021}]{brock2021more}
+Brock K, Homer V, Soul G, Potter C, Chiuzan C, Lee S.
+\newblock Is more better? An analysis of toxicity and response outcomes from
+  dose-finding clinical trials in cancer.
+\newblock BMC cancer. 2021;21(1):1--18.
+
+\bibitem[\protect\citeauthoryear{Stransky
+  et~al.}{2011}]{stransky2011mutational}
+Stransky N, Egloff AM, Tward AD, Kostic AD, Cibulskis K, Sivachenko A, et~al.
+\newblock The mutational landscape of head and neck squamous cell carcinoma.
+\newblock Science. 2011;333(6046):1157--1160.
+
+\bibitem[\protect\citeauthoryear{Round et~al.}{2013}]{round2013radiotherapy}
+Round C, Williams M, Mee T, Kirkby N, Cooper T, Hoskin P, et~al.
+\newblock Radiotherapy demand and activity in England 2006--2020.
+\newblock Clinical Oncology. 2013;25(9):522--530.
+
+\bibitem[\protect\citeauthoryear{Cognetti et~al.}{2008}]{cognetti2008head}
+Cognetti DM, Weber RS, Lai SY.
+\newblock Head and neck cancer: an evolving treatment paradigm.
+\newblock Cancer. 2008;113(S7):1911--1932.
+
+\bibitem[\protect\citeauthoryear{Pignon et~al.}{2000}]{pignon2000chemotherapy}
+Pignon J, Bourhis J, Domenge Co, Designe Ll, Group MNC, et~al.
+\newblock Chemotherapy added to locoregional treatment for head and neck
+  squamous-cell carcinoma: three meta-analyses of updated individual data.
+\newblock The Lancet. 2000;355(9208):949--955.
+
+\bibitem[\protect\citeauthoryear{O’Connor}{2015}]{o2015targeting}
+O’Connor MJ.
+\newblock Targeting the DNA damage response in cancer.
+\newblock Molecular cell. 2015;60(4):547--560.
+
+\bibitem[\protect\citeauthoryear{Chalmers}{2016}]{chalmers2016science}
+Chalmers AJ.
+\newblock Science in focus: combining radiotherapy with inhibitors of the DNA
+  damage response.
+\newblock Clinical oncology. 2016;28(5):279--282.
+
+\bibitem[\protect\citeauthoryear{Mei et~al.}{2019}]{mei2019ataxia}
+Mei L, Zhang J, He K, Zhang J.
+\newblock Ataxia telangiectasia and Rad3-related inhibitors and cancer therapy:
+  where we stand.
+\newblock Journal of hematology \& oncology. 2019;12(1):1--8.
+
+\bibitem[\protect\citeauthoryear{Wages et~al.}{2011}]{wages2011continual}
+Wages NA, Conaway MR, O'Quigley J.
+\newblock Continual reassessment method for partial ordering.
+\newblock Biometrics. 2011;67(4):1555--1563.
+
+\bibitem[\protect\citeauthoryear{Wages et~al.}{2013}]{wages2013using}
+Wages NA, Conaway MR, O'Quigley J.
+\newblock Using the time-to-event continual reassessment method in the presence
+  of partial orders.
+\newblock Statistics in medicine. 2013;32(1):131--141.
+
+\bibitem[\protect\citeauthoryear{Cheung and
+  Chappell}{2000}]{cheung2000sequential}
+Cheung YK, Chappell R.
+\newblock Sequential designs for phase I clinical trials with late-onset
+  toxicities.
+\newblock Biometrics. 2000;56(4):1177--1182.
+
+\bibitem[\protect\citeauthoryear{Cheung}{2011}]{cheung2011dose}
+Cheung YK.
+\newblock Dose finding by the continual reassessment method.
+\newblock CRC Press; 2011.
+
+\bibitem[\protect\citeauthoryear{O'Quigley and Shen}{1996}]{o1996continual}
+O'Quigley J, Shen LZ.
+\newblock Continual reassessment method: a likelihood approach.
+\newblock Biometrics. 1996;p. 673--684.
+
+\bibitem[\protect\citeauthoryear{Morris et~al.}{2019}]{morris2019using}
+Morris TP, White IR, Crowther MJ.
+\newblock Using simulation studies to evaluate statistical methods.
+\newblock Statistics in medicine. 2019;38(11):2074--2102.
+
+\end{thebibliography}

@@ -1505,10 +1505,10 @@
          giveni={J\bibinitperiod},
       }}%
     }
-    \keyw{Adept Chapter,Antineoplastic Agents,Clinical Trials; Phase I as
-  Topic,Data Interpretation; Statistical,Drug-Related Side Effects and Adverse
-  Reactions,Humans,Maximum Tolerated Dose,Neoplasms,Outcome Assessment; Health
-  Care,Risk Assessment,Risk Factors,Treatment Outcome}
+    \keyw{Adept Chapter,Antineoplastic Agents,{Clinical Trials, Phase I as
+  Topic},{Data Interpretation, Statistical},Drug-Related Side Effects and
+  Adverse Reactions,Humans,Maximum Tolerated Dose,Neoplasms,{Outcome
+  Assessment, Health Care},Risk Assessment,Risk Factors,Treatment Outcome}
     \strng{namehash}{WNACMROJ1}
     \strng{fullhash}{WNACMROJ1}
     \field{labelnamesource}{author}
@@ -1579,9 +1579,9 @@
          giveni={J\bibinitperiod},
       }}%
     }
-    \keyw{Adept Chapter,Clinical Trials; Phase I as Topic,Computer
-  Simulation,Data Interpretation; Statistical,Dose-Response Relationship;
-  Drug,Humans,Maximum Tolerated Dose}
+    \keyw{Adept Chapter,{Clinical Trials, Phase I as Topic},Computer
+  Simulation,{Data Interpretation, Statistical},{Dose-Response Relationship,
+  Drug},Humans,Maximum Tolerated Dose}
     \strng{namehash}{WNACMROJ1}
     \strng{fullhash}{WNACMROJ1}
     \field{labelnamesource}{author}
@@ -1849,8 +1849,8 @@
       }}%
     }
     \keyw{Adept Chapter,Antineoplastic Agents,Antineoplastic Combined
-  Chemotherapy Protocols,Cancer Vaccines,Clinical Trials; Phase I as
-  Topic,Computer Simulation,Continual reassessment method,Dose finding,Drug
+  Chemotherapy Protocols,Cancer Vaccines,{Clinical Trials, Phase I as
+  Topic},Computer Simulation,Continual reassessment method,Dose finding,Drug
   combination,Freund's Adjuvant,Humans,Lipids,Maximum Tolerated
   Dose,Melanoma,Neoplasms,Partial ordering,Phase I trials,Software,Toll-Like
   Receptors}
@@ -2213,8 +2213,8 @@
          giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
       }}%
     }
-    \keyw{Adaptive weight,Adept Chapter,Antibodies; Monoclonal,Bayes
-  Theorem,Biometry,Calibration,Clinical Trials; Phase I as Topic,Dose
+    \keyw{Adaptive weight,Adept Chapter,{Antibodies, Monoclonal},Bayes
+  Theorem,Biometry,Calibration,{Clinical Trials, Phase I as Topic},Dose
   finding,Humans,MTD,Neoplasms,Oncology,Time Factors,Time-to-event}
     \strng{namehash}{HBKPF1}
     \strng{fullhash}{HBKPF1}
@@ -2551,11 +2551,11 @@
          giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
       }}%
     }
-    \keyw{Abciximab,Algorithms,Antibodies; Monoclonal,Bayes
-  Theorem,Biometry,Clinical Trials; Phase I as Topic,Clinical Trials; Phase II
-  as Topic,Dose-Response Relationship; Drug,Graft vs Host
-  Disease,Humans,Immunoglobulin Fab Fragments,Models;
-  Statistical,Pentostatin,Platelet Glycoprotein GPIIb-IIIa Complex,Recombinant
+    \keyw{Abciximab,Algorithms,{Antibodies, Monoclonal},Bayes
+  Theorem,Biometry,{Clinical Trials, Phase I as Topic},{Clinical Trials, Phase
+  II as Topic},{Dose-Response Relationship, Drug},Graft vs Host
+  Disease,Humans,Immunoglobulin Fab Fragments,{Models,
+  Statistical},Pentostatin,Platelet Glycoprotein GPIIb-IIIa Complex,Recombinant
   Proteins,Stroke,Tissue Plasminogen Activator,WT Chapter}
     \strng{namehash}{TPFCJD1}
     \strng{fullhash}{TPFCJD1}
@@ -3624,10 +3624,10 @@
     \list{publisher}{1}{%
       {{CRC Press}}%
     }
-    \keyw{Computers / Mathematical & Statistical Software,Mathematics /
-  Probability & Statistics / General,Medical / Biostatistics,Medical /
+    \keyw{Computers / Mathematical \& Statistical Software,Mathematics /
+  Probability \& Statistics / General,Medical / Biostatistics,Medical /
   Epidemiology,Medical / Research,Science / Life Sciences / Biology,Technology
-  & Engineering / Chemical & Biochemical,TITE-DTP Chapter}
+  \& Engineering / Chemical \& Biochemical,TITE-DTP Chapter}
     \strng{namehash}{CYK1}
     \strng{fullhash}{CYK1}
     \field{labelnamesource}{author}
@@ -3807,7 +3807,7 @@
     \list{publisher}{1}{%
       {{CRC Press}}%
     }
-    \keyw{Mathematics / Probability & Statistics / General,Medical /
+    \keyw{Mathematics / Probability \& Statistics / General,Medical /
   Pharmacology}
     \strng{namehash}{BSMCBPLJJ+1}
     \strng{fullhash}{BSMCBPLJJMP1}
@@ -4110,8 +4110,8 @@
     \list{publisher}{1}{%
       {{John Wiley \& Sons}}%
     }
-    \keyw{Mathematics / General,Mathematics / Probability & Statistics /
-  Bayesian Analysis,Mathematics / Probability & Statistics / Stochastic
+    \keyw{Mathematics / General,Mathematics / Probability \& Statistics /
+  Bayesian Analysis,Mathematics / Probability \& Statistics / Stochastic
   Processes}
     \strng{namehash}{BJMSAFM1}
     \strng{fullhash}{BJMSAFM1}
@@ -4256,6 +4256,76 @@
     \field{urlday}{28}
     \field{urlmonth}{01}
     \field{urlyear}{2023}
+  \endentry
+
+  \entry{zhouBOP2BayesianOptimal2017}{article}{}
+    \name{author}{3}{}{%
+      {{hash=ZH}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Heng},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=LJJ}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={J.\bibnamedelima Jack},
+         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yuan},
+         familyi={Y\bibinitperiod},
+         given={Ying},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \keyw{Bayes Theorem,Bayesian adaptive design,Bias,{Clinical Trials, Phase
+  II as Topic},co-primary endpoints,Computer Simulation,early stopping,Endpoint
+  Determination,Humans,immunotherapy,Multivariate Analysis,ordinal
+  endpoint,Research Design,Sample Size,Treatment Outcome}
+    \strng{namehash}{ZHLJJYY1}
+    \strng{fullhash}{ZHLJJYY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    We propose a flexible Bayesian optimal phase II (BOP2) design that is
+  capable of handling simple (e.g., binary) and complicated (e.g., ordinal,
+  nested, and co-primary) endpoints under a unified framework. We use a
+  Dirichlet-multinomial model to accommodate different types of endpoints. At
+  each interim, the go/no-go decision is made by evaluating a set of posterior
+  probabilities of the events of interest, which is optimized to maximize power
+  or minimize the number of patients under the null hypothesis. Unlike other
+  existing Bayesian designs, the BOP2 design explicitly controls the type I
+  error rate, thereby bridging the gap between Bayesian designs and frequentist
+  designs. In addition, the stopping boundary of the BOP2 design can be
+  enumerated prior to the onset of the trial. These features make the BOP2
+  design accessible to a wide range of users and regulatory agencies and
+  particularly easy to implement in practice. Simulation studies show that the
+  BOP2 design has favorable operating characteristics with higher power and
+  lower risk of incorrectly terminating the trial than some existing Bayesian
+  phase II designs. The software to implement the BOP2 design is freely
+  available at www.trialdesign.org. Copyright © 2017 John Wiley \& Sons, Ltd.%
+    }
+    \verb{doi}
+    \verb 10.1002/sim.7338
+    \endverb
+    \verb{eprint}
+    \verb 28589563
+    \endverb
+    \field{issn}{1097-0258}
+    \field{number}{21}
+    \field{pages}{3302\bibrangedash 3314}
+    \field{shortjournal}{Stat Med}
+    \field{shorttitle}{{{BOP2}}}
+    \field{title}{{{BOP2}}: {{Bayesian}} Optimal Design for Phase {{II}}
+  Clinical Trials with Simple and Complex Endpoints}
+    \field{volume}{36}
+    \field{langid}{english}
+    \field{journaltitle}{Statistics in Medicine}
+    \field{eprinttype}{pmid}
+    \field{day}{20}
+    \field{month}{09}
+    \field{year}{2017}
   \endentry
 \enddatalist
 \endinput
