@@ -5,8 +5,8 @@ Reallocating 'name_of_file' (item size: 1) to 9 items.
 The style file: biblatex.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Reallocating 'name_of_file' (item size: 1) to 4 items.
-Reallocating 'name_of_file' (item size: 1) to 31 items.
-A level-1 auxiliary file: Chapters/Chapter1/Chapter1.aux
+Reallocating 'name_of_file' (item size: 1) to 43 items.
+A level-1 auxiliary file: Chapters/Introduction/Introduction_tex.aux
 Reallocating 'name_of_file' (item size: 1) to 29 items.
 A level-1 auxiliary file: Chapters/Adept/Adept_tex.aux
 Reallocating 'name_of_file' (item size: 1) to 23 items.
@@ -15,6 +15,8 @@ Reallocating 'name_of_file' (item size: 1) to 35 items.
 A level-1 auxiliary file: Chapters/TITE-DTP/TITE-DTP_tex.aux
 Reallocating 'name_of_file' (item size: 1) to 25 items.
 A level-1 auxiliary file: Chapters/ETP/ETP_tex.aux
+Reallocating 'name_of_file' (item size: 1) to 39 items.
+A level-1 auxiliary file: Chapters/Conclusion/Conclusion_tex.aux
 Reallocating 'glb_str_end' (item size: 4) to 20 items.
 Reallocating 'glb_str_ptr' (item size: 4) to 20 items.
 Reallocating 'global_strs' (item size: 1) to 4000000 items.
@@ -30,51 +32,51 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'field_info' (item size: 4) to 12000 items.
+Reallocating 'field_info' (item size: 4) to 12420 items.
 Database file #1: main-blx.bib
 Database file #2: ref.bib
 Reallocating 'str_pool' (item size: 1) to 130000 items.
 Biblatex version: 3.16
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-You've used 50 entries,
+You've used 53 entries,
             6393 wiz_defined-function locations,
-            1862 strings with 89887 characters,
-and the built_in function-call counts, 659283 in all, are:
-= -- 38887
-> -- 42642
-< -- 3244
-+ -- 44760
-- -- 34810
-* -- 40611
-:= -- 90592
+            1896 strings with 92641 characters,
+and the built_in function-call counts, 692308 in all, are:
+= -- 40801
+> -- 44878
+< -- 3467
++ -- 46963
+- -- 36570
+* -- 42452
+:= -- 94801
 add.period$ -- 0
-call.type$ -- 50
-change.case$ -- 719
-chr.to.int$ -- 2994
-cite$ -- 98
-duplicate$ -- 54801
-empty$ -- 46926
-format.name$ -- 4570
-if$ -- 104994
+call.type$ -- 53
+change.case$ -- 818
+chr.to.int$ -- 3138
+cite$ -- 104
+duplicate$ -- 57466
+empty$ -- 49303
+format.name$ -- 4793
+if$ -- 110504
 int.to.chr$ -- 0
-int.to.str$ -- 116
+int.to.str$ -- 126
 missing$ -- 0
-newline$ -- 3072
-num.names$ -- 2269
-pop$ -- 18385
+newline$ -- 3202
+num.names$ -- 2469
+pop$ -- 19504
 preamble$ -- 1
-purify$ -- 1258
+purify$ -- 1380
 quote$ -- 0
-skip$ -- 12260
+skip$ -- 13052
 stack$ -- 0
-substring$ -- 80668
-swap$ -- 13982
-text.length$ -- 2621
+substring$ -- 84452
+swap$ -- 14688
+text.length$ -- 2755
 text.prefix$ -- 3
 top$ -- 1
-type$ -- 1688
+type$ -- 1790
 warning$ -- 0
-while$ -- 9238
+while$ -- 9624
 width$ -- 0
-write$ -- 3023
+write$ -- 3150
