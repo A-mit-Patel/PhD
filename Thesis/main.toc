@@ -35,80 +35,78 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.5}Discussion}{44}{section.55}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Conclusion}{47}{section.56}%
+\contentsline {chapter}{\numberline {3}Extensions to the Wages and Tait trial design}{49}{chapter.56}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Extensions to the Wages and Tait trial design}{49}{chapter.57}%
+\contentsline {section}{\numberline {3.1}Introduction}{49}{section.57}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Introduction}{49}{section.58}%
+\contentsline {section}{\numberline {3.2}The Wages and Tait Design}{53}{section.58}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}The Wages and Tait Design}{53}{section.59}%
+\contentsline {section}{\numberline {3.3}RtC-WT: An extension to the Wages and Tait Design}{58}{section.75}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}RtC-WT: An extension to the Wages and Tait Design}{58}{section.76}%
+\contentsline {subsection}{\numberline {3.3.1}The Rationale for Incorporating Randomisation to Control}{58}{subsection.76}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.1}The Rationale for Incorporating Randomisation to Control}{58}{subsection.77}%
+\contentsline {subsection}{\numberline {3.3.2}Design of the Proposed Extension RtC-WT}{62}{subsection.78}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.3.2}Design of the Proposed Extension RtC-WT}{62}{subsection.79}%
+\contentsline {section}{\numberline {3.4}Evaluation and Exploration of the Extension via Simulations}{64}{section.81}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Evaluation and Exploration of the Extension via Simulations}{64}{section.82}%
+\contentsline {subsection}{\numberline {3.4.1}Design Specification}{64}{subsection.82}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.1}Design Specification}{64}{subsection.83}%
+\contentsline {subsection}{\numberline {3.4.2}Impact of AR phase size and probability of randomisation to control on RtC-WT}{66}{subsection.84}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.2}Impact of AR phase size and probability of randomisation to control on RtC-WT}{66}{subsection.85}%
+\contentsline {subsection}{\numberline {3.4.3}Comparison of RtC-WT against Alternative Designs }{83}{subsection.88}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.4.3}Comparison of RtC-WT against Alternative Designs }{83}{subsection.89}%
+\contentsline {section}{\numberline {3.5}Efficiency of an Efficacy Test}{90}{section.93}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Efficiency of an Efficacy Test}{90}{section.94}%
+\contentsline {section}{\numberline {3.6}Discussion}{94}{section.98}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Discussion}{94}{section.99}%
+\contentsline {chapter}{\numberline {4}Extending Dose Transition Pathways for use in TITE-CRMs}{101}{chapter.99}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Extending Dose Transition Pathways for use in TITE-CRMs}{101}{chapter.100}%
+\contentsline {section}{\numberline {4.1}Introduction}{101}{section.100}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Introduction}{101}{section.101}%
+\contentsline {section}{\numberline {4.2}Dose Transition Pathways}{102}{section.101}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Dose Transition Pathways}{102}{section.102}%
+\contentsline {subsection}{\numberline {4.2.1}Example trial to illustrate DTPs}{104}{subsection.102}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.1}Example trial to illustrate DTPs}{104}{subsection.103}%
+\contentsline {subsection}{\numberline {4.2.2}Using DTPs to calibrate the CRM}{105}{subsection.104}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.2}Using DTPs to calibrate the CRM}{105}{subsection.105}%
+\contentsline {subsection}{\numberline {4.2.3}Using DTPs during a trial}{115}{subsection.111}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.3}Using DTPs during a trial}{115}{subsection.112}%
+\contentsline {section}{\numberline {4.3}TITE-DTPs}{123}{section.116}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}TITE-DTPs}{123}{section.117}%
+\contentsline {subsection}{\numberline {4.3.1}Cohort of one patient}{125}{subsection.117}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.1}Cohort of one patient}{125}{subsection.118}%
+\contentsline {subsection}{\numberline {4.3.2}Cohort of two patients}{128}{subsection.120}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.2}Cohort of two patients}{128}{subsection.121}%
+\contentsline {subsection}{\numberline {4.3.3}Cohort of three patients}{143}{subsection.132}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.3.3}Cohort of three patients}{143}{subsection.133}%
+\contentsline {section}{\numberline {4.4}Discussion}{154}{section.144}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Discussion}{154}{section.145}%
+\contentsline {chapter}{\numberline {5}Efficacy Transition Pathways}{165}{chapter.145}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Efficacy Transition Pathways}{165}{chapter.146}%
+\contentsline {section}{\numberline {5.1}Introduction}{165}{section.146}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Introduction}{165}{section.147}%
+\contentsline {section}{\numberline {5.2}Efficacy Transition Pathways}{167}{section.147}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Efficacy Transition Pathways}{167}{section.148}%
+\contentsline {subsection}{\numberline {5.2.1}Illustrative example to showcase a Beta-Binomial design}{169}{subsection.148}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Illustrative example to showcase a Beta-Binomial design}{169}{subsection.149}%
+\contentsline {subsection}{\numberline {5.2.2}Constructing Efficacy Transition Pathways}{171}{subsection.151}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Constructing Efficacy Transition Pathways}{171}{subsection.152}%
+\contentsline {subsection}{\numberline {5.2.3}Updating decision criteria based on Efficacy Transition Pathways}{180}{subsection.158}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.3}Updating decision criteria based on Efficacy Transition Pathways}{179}{subsection.159}%
+\contentsline {section}{\numberline {5.3}Implementation of Efficacy Transition Pathways}{185}{section.162}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Implementation of Efficacy Transition Pathways}{184}{section.163}%
+\contentsline {subsection}{\numberline {5.3.1}MonoGerm}{187}{subsection.163}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}MonoGerm}{186}{subsection.164}%
+\contentsline {subsection}{\numberline {5.3.2}Glo-BNHL}{192}{subsection.168}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Glo-BNHL}{191}{subsection.169}%
+\contentsline {subsection}{\numberline {5.3.3}DETERMINE}{200}{subsection.178}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.3}DETERMINE}{199}{subsection.179}%
+\contentsline {section}{\numberline {5.4}Development of a Web Application for Efficacy Transition Pathways}{205}{section.183}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Development of a Web Application for Efficacy Transition Pathways}{204}{section.184}%
+\contentsline {subsection}{\numberline {5.4.1}Additional Features of the App}{209}{subsection.184}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.1}Additional Features of the App}{207}{subsection.185}%
+\contentsline {section}{\numberline {5.5}Discussion}{213}{section.185}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Discussion}{211}{section.186}%
+\contentsline {chapter}{\numberline {6}Summary and Conclusions}{217}{chapter.186}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Conclusion}{215}{chapter.187}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{225}{chapter*.188}%
+\contentsline {chapter}{Bibliography}{227}{chapter*.187}%
