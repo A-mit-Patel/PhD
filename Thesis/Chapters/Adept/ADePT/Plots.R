@@ -48,7 +48,8 @@ ggplot(data, aes(x = Weeks, y = Weight))+
             colour = NA) +
   scale_fill_manual(' ',
                     values = c('#006747FF','#00539CFF', '#E95C20FF'),  
-                    guide = guide_legend(override.aes = list(alpha = 1))) +
+                    guide = guide_legend(override.aes = list(alpha = 0.05))) +
+  labs(x = "Weeks in trial")+
   #theme(legend.text=element_text(size=36))+
   theme_bw(base_size = 16)
 
@@ -172,6 +173,9 @@ longdata <- data %>%
                                       'Scenario 8 All toxic'))
   )
 
+cbp2 <- c("#000000", "#E69F00", "#56B4E9", "#009E73",
+          "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
 ggplot(longdata, aes(x = measurement,  y = Probability, col = Method, 
                      group = Method )) +
   geom_point() +
@@ -180,6 +184,7 @@ ggplot(longdata, aes(x = measurement,  y = Probability, col = Method,
   ylab('Selection Probability')+
   scale_x_discrete(labels = doselabs)+
   facet_wrap(~scenario, ncol = 2)+
+  scale_colour_manual(values=cbp2)+
   theme_bw()
 
 rm(list = ls(all.names = TRUE))
@@ -273,6 +278,9 @@ longdata <- data %>%
                                       'Scenario 16 All toxic'))
   )
 
+cbp2 <- c("#000000", "#E69F00", "#56B4E9", "#009E73",
+          "#F0E442", "#0072B2", "#D55E00", "#CC79A7")
+
 ggplot(longdata, aes(x = measurement,  y = Probability, col = Method, 
                      group = Method )) +
   geom_point() +
@@ -281,6 +289,7 @@ ggplot(longdata, aes(x = measurement,  y = Probability, col = Method,
   ylab('Selection Probability')+
   scale_x_discrete(labels = doselabs)+
   facet_wrap(~scenario, ncol = 2)+
+  scale_colour_manual(values=cbp2)+
   theme_bw()
 
 rm(list = ls(all.names = TRUE))

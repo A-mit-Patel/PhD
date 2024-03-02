@@ -683,6 +683,176 @@
     \field{urlyear}{2023}
   \endentry
 
+  \entry{iasonosComprehensiveComparisonContinual2008}{article}{}
+    \name{author}{5}{}{%
+      {{hash=IA}{%
+         family={Iasonos},
+         familyi={I\bibinitperiod},
+         given={Alexia},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=WAS}{%
+         family={Wilton},
+         familyi={W\bibinitperiod},
+         given={Andrew\bibnamedelima S},
+         giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=RER}{%
+         family={Riedel},
+         familyi={R\bibinitperiod},
+         given={Elyn\bibnamedelima R},
+         giveni={E\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=SVE}{%
+         family={Seshan},
+         familyi={S\bibinitperiod},
+         given={Venkatraman\bibnamedelima E},
+         giveni={V\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=SDR}{%
+         family={Spriggs},
+         familyi={S\bibinitperiod},
+         given={David\bibnamedelima R},
+         giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{SAGE Publications}}%
+    }
+    \strng{namehash}{IAWASRER+1}
+    \strng{fullhash}{IAWASRERSVESDR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Background An extensive literature has covered the statistical properties
+  of the Continual Reassessment Method (CRM) and the modifications of this
+  method. While there are some applications of CRM designs in recent Phase I
+  trials, the standard method (SM) of escalating doses after three patients
+  with an option for an additional three patients SM remains very popular,
+  mainly due to its simplicity. From a practical perspective, clinicians are
+  interested in designs that can estimate the MTD using fewer patients for a
+  fixed number of doses, or can test more dose levels for a given sample size.
+  Purpose This article compares CRM-based methods with the SM in terms of the
+  number of patients needed to reach the MTD, total sample size required, and
+  trial duration. Methods The comparisons are performed under two alternative
+  schemes: a fixed or a varying sample approach with the implementation of a
+  stopping rule. The stopping rule halts the trial if the confidence interval
+  around the MTD is within a pre-specified bound. Our simulations evaluated
+  several CRM-based methods under different scenarios by varying the number of
+  dose levels from five to eight and the location of the true MTD. Results CRM
+  and SM are comparable in terms of how fast they reach the MTD and the total
+  sample size required when testing a limited number of dose levels (≤5), but
+  as the number of dose levels increases, CRM reaches the MTD in fewer patients
+  when used with a fixed sample of 20 patients. However, a sample size of
+  20—25 patients is not sufficient to achieve a narrow precision around the
+  estimated toxicity rate at the MTD. Limitations We focused on methods with
+  practical design features that are of interest to clinicians. However, there
+  are several alternative CRM-based designs that are not investigated in this
+  manuscript, and hence our results are not generalizable to other designs.
+  Conclusions We show that CRM-based methods are an improvement over the SM in
+  terms of accuracy and optimal dose allocation in almost all cases, except
+  when the true dose is among the lower levels. Clinical Trials 2008; 5:
+  465—477. http://ctj.sagepub.com%
+    }
+    \verb{doi}
+    \verb 10.1177/1740774508096474
+    \endverb
+    \field{issn}{1740-7745}
+    \field{number}{5}
+    \field{pages}{465\bibrangedash 477}
+    \field{shortjournal}{Clinical Trials}
+    \field{title}{A Comprehensive Comparison of the Continual Reassessment
+  Method to the Standard 3 + 3 Dose Escalation Scheme in {{Phase I}}
+  Dose-Finding Studies}
+    \verb{url}
+    \verb https://doi.org/10.1177/1740774508096474
+    \endverb
+    \field{volume}{5}
+    \field{langid}{english}
+    \verb{file}
+    \verb C:\Users\Amit\Zotero\storage\ZUR24KEB\Iasonos et al. - 2008 - A compr
+    \verb ehensive comparison of the continual reasse.pdf
+    \endverb
+    \field{journaltitle}{Clinical Trials}
+    \field{day}{01}
+    \field{month}{10}
+    \field{year}{2008}
+    \field{urlday}{01}
+    \field{urlmonth}{03}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{onar-thomasSimulationbasedComparisonTraditional2010}{article}{}
+    \name{author}{2}{}{%
+      {{hash=OTA}{%
+         family={Onar-Thomas},
+         familyi={O\bibinithyphendelim T\bibinitperiod},
+         given={Arzu},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=XZ}{%
+         family={Xiong},
+         familyi={X\bibinitperiod},
+         given={Zang},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \keyw{Body surface area-based dosing,Dose finding,Maximum tolerated
+  dose,Pediatric trials}
+    \strng{namehash}{OTAXZ1}
+    \strng{fullhash}{OTAXZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    The traditional method (TM), also known as the 3+3 up-and-down design, and
+  the continual reassessment method (CRM) are commonly used in Phase I oncology
+  trials to identify the maximum tolerated dose (MTD). The rolling-6 is a
+  relative newcomer which was developed to shorten trial duration by minimizing
+  the period of time during which the trial is closed to accrual for toxicity
+  assessment. In this manuscript we have compared the performance of these
+  three approaches via simulations not only with respect to the usual
+  parameters such as overall toxicity, sample size and percentage of patients
+  treated at doses above the MTD but also in terms of trial duration and the
+  dose chosen as the MTD. Our results indicate that the toxicity rates are
+  comparable across the three designs, but the TM and the rolling-6 tend to
+  treat a higher percentage of patients at doses below the MTD. With respect to
+  trial duration, rolling-6 leads to shorter trials compared to the TM but not
+  compared to the CRM. Additionally, the doses identified as the MTD by the TM
+  and the rolling-6 differ in a large percentage of trials. Our results also
+  indicate that the body surface area-based dosing used in pediatric trials can
+  make a difference in dose escalation/de-escalation patterns in the CRM
+  compared to the cases where such variations are not taken into account in the
+  calculations, even leading to different MTDs in some cases.%
+    }
+    \verb{doi}
+    \verb 10.1016/j.cct.2010.03.006
+    \endverb
+    \field{issn}{1551-7144}
+    \field{number}{3}
+    \field{pages}{259\bibrangedash 270}
+    \field{shortjournal}{Contemporary Clinical Trials}
+    \field{title}{A Simulation-Based Comparison of the Traditional Method,
+  {{Rolling-6}} Design and a Frequentist Version of the Continual Reassessment
+  Method with Special Attention to Trial Duration in Pediatric {{Phase I}}
+  Oncology Trials}
+    \verb{url}
+    \verb https://www.sciencedirect.com/science/article/pii/S1551714410000364
+    \endverb
+    \field{volume}{31}
+    \verb{file}
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\WTVD6XHK\\Onar-Thomas and Xiong -
+    \verb 2010 - A simulation-based comparison of the traditional m.pdf;C\:\\Us
+    \verb ers\\Amit\\Zotero\\storage\\GT5PIWJM\\S1551714410000364.html
+    \endverb
+    \field{journaltitle}{Contemporary Clinical Trials}
+    \field{day}{01}
+    \field{month}{05}
+    \field{year}{2010}
+    \field{urlday}{01}
+    \field{urlmonth}{03}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{oquigleyContinualReassessmentMethod1990}{article}{}
     \name{author}{3}{}{%
       {{hash=OJ}{%
@@ -748,6 +918,68 @@
     \field{journaltitle}{Biometrics}
     \field{eprinttype}{jstor}
     \field{year}{1990}
+    \field{urlday}{22}
+    \field{urlmonth}{07}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{letourneauDoseEscalationMethods2009}{article}{}
+    \name{author}{3}{}{%
+      {{hash=LTC}{%
+         family={Le\bibnamedelima Tourneau},
+         familyi={L\bibinitperiod\bibinitdelim T\bibinitperiod},
+         given={Christophe},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=LJJ}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={J.\bibnamedelima Jack},
+         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=SLL}{%
+         family={Siu},
+         familyi={S\bibinitperiod},
+         given={Lillian\bibnamedelima L.},
+         giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {{Oxford Academic}}%
+    }
+    \keyw{Adept Chapter}
+    \strng{namehash}{LTCLJJSLL1}
+    \strng{fullhash}{LTCLJJSLL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Abstract. Phase I clinical trials are an essential step in the development
+  of anticancer drugs. The main goal of these studies is to establish the
+  recommended%
+    }
+    \verb{doi}
+    \verb 10.1093/jnci/djp079
+    \endverb
+    \field{issn}{0027-8874}
+    \field{number}{10}
+    \field{pages}{708\bibrangedash 720}
+    \field{shortjournal}{J Natl Cancer Inst}
+    \field{title}{Dose {{Escalation Methods}} in {{Phase I Cancer Clinical
+  Trials}}}
+    \verb{url}
+    \verb https://academic.oup.com/jnci/article/101/10/708/969691
+    \endverb
+    \field{volume}{101}
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\39VNRPX9\\Le Tourneau et al. - 200
+    \verb 9 - Dose Escalation Methods in Phase I Cancer Clinical.pdf;C\:\\Users
+    \verb \\Amit\\Zotero\\storage\\EYUC2KFQ\\969691.html
+    \endverb
+    \field{journaltitle}{JNCI: Journal of the National Cancer Institute}
+    \field{day}{20}
+    \field{month}{05}
+    \field{year}{2009}
     \field{urlday}{22}
     \field{urlmonth}{07}
     \field{urlyear}{2020}
@@ -2457,68 +2689,6 @@
     \field{day}{24}
     \field{month}{04}
     \field{year}{2019}
-    \field{urlday}{22}
-    \field{urlmonth}{07}
-    \field{urlyear}{2020}
-  \endentry
-
-  \entry{letourneauDoseEscalationMethods2009}{article}{}
-    \name{author}{3}{}{%
-      {{hash=LTC}{%
-         family={Le\bibnamedelima Tourneau},
-         familyi={L\bibinitperiod\bibinitdelim T\bibinitperiod},
-         given={Christophe},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=LJJ}{%
-         family={Lee},
-         familyi={L\bibinitperiod},
-         given={J.\bibnamedelima Jack},
-         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=SLL}{%
-         family={Siu},
-         familyi={S\bibinitperiod},
-         given={Lillian\bibnamedelima L.},
-         giveni={L\bibinitperiod\bibinitdelim L\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {{Oxford Academic}}%
-    }
-    \keyw{Adept Chapter}
-    \strng{namehash}{LTCLJJSLL1}
-    \strng{fullhash}{LTCLJJSLL1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{abstract}{%
-    Abstract. Phase I clinical trials are an essential step in the development
-  of anticancer drugs. The main goal of these studies is to establish the
-  recommended%
-    }
-    \verb{doi}
-    \verb 10.1093/jnci/djp079
-    \endverb
-    \field{issn}{0027-8874}
-    \field{number}{10}
-    \field{pages}{708\bibrangedash 720}
-    \field{shortjournal}{J Natl Cancer Inst}
-    \field{title}{Dose {{Escalation Methods}} in {{Phase I Cancer Clinical
-  Trials}}}
-    \verb{url}
-    \verb https://academic.oup.com/jnci/article/101/10/708/969691
-    \endverb
-    \field{volume}{101}
-    \field{langid}{english}
-    \verb{file}
-    \verb C\:\\Users\\Amit\\Zotero\\storage\\39VNRPX9\\Le Tourneau et al. - 200
-    \verb 9 - Dose Escalation Methods in Phase I Cancer Clinical.pdf;C\:\\Users
-    \verb \\Amit\\Zotero\\storage\\EYUC2KFQ\\969691.html
-    \endverb
-    \field{journaltitle}{JNCI: Journal of the National Cancer Institute}
-    \field{day}{20}
-    \field{month}{05}
-    \field{year}{2009}
     \field{urlday}{22}
     \field{urlmonth}{07}
     \field{urlyear}{2020}

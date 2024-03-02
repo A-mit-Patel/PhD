@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.8)  20 JUL 2023 18:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.1.8)  22 DEC 2023 14:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -746,63 +746,63 @@ LaTeX Info: Redefining \nameref on input line 105.
 \c@lstlisting=\count339
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Calculating math sizes for size <12.045> on input line 166.
+LaTeX Font Info:    Calculating math sizes for size <12.045> on input line 164.
 
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <8.43146> not available
-(Font)              size <8> substituted on input line 166.
+(Font)              size <8> substituted on input line 164.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <8.43146> not available
-(Font)              size <8> substituted on input line 166.
+(Font)              size <8> substituted on input line 164.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <8.43146> not available
-(Font)              size <8> substituted on input line 166.
+(Font)              size <8> substituted on input line 164.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 166
+LaTeX Font Info:    Trying to load font information for U+msa on input line 164
 .
 (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 166
+LaTeX Font Info:    Trying to load font information for U+msb on input line 164
 .
 
 (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+rsfs on input line 16
-6.
+4.
 
 (C:\Users\Amit\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <8.43146> not available
-(Font)              size <8> substituted on input line 166.
+(Font)              size <8> substituted on input line 164.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <8.43146> not available
-(Font)              size <8> substituted on input line 166.
+(Font)              size <8> substituted on input line 164.
 
 LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 16
-6.
+4.
 
 LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <5.52061> not available
-(Font)              size <6> substituted on input line 166.
+(Font)              size <6> substituted on input line 164.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <5.52061> not available
-(Font)              size <6> substituted on input line 166.
+(Font)              size <6> substituted on input line 164.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <5.52061> not available
-(Font)              size <6> substituted on input line 166.
+(Font)              size <6> substituted on input line 164.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <5.52061> not available
-(Font)              size <6> substituted on input line 166.
+(Font)              size <6> substituted on input line 164.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -811,7 +811,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 {C:/Users/Amit/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
 LaTeX Font Info:    Calculating math sizes for size <10.03749> on input line 16
-6.
+4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -822,26 +822,26 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [4]
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 238.
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 236.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <4.015> not available
-(Font)              size <5> substituted on input line 238.
+(Font)              size <5> substituted on input line 236.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <4.015> not available
-(Font)              size <5> substituted on input line 238.
+(Font)              size <5> substituted on input line 236.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <4.015> not available
-(Font)              size <5> substituted on input line 238.
+(Font)              size <5> substituted on input line 236.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <4.015> not available
-(Font)              size <5> substituted on input line 238.
+(Font)              size <5> substituted on input line 236.
 
 
-Overfull \hbox (0.98027pt too wide) in paragraph at lines 234--253
+Overfull \hbox (0.98027pt too wide) in paragraph at lines 232--251
  [] 
  []
 
@@ -861,7 +861,7 @@ d PDF version <1.7>, but at most version <1.5> allowed
 <Adept-DoseCombos.pdf, id=125, 491.91779pt x 572.1375pt>
 File: Adept-DoseCombos.pdf Graphic file (type pdf)
 <use Adept-DoseCombos.pdf>
-Package pdftex.def Info: Adept-DoseCombos.pdf  used on input line 267.
+Package pdftex.def Info: Adept-DoseCombos.pdf  used on input line 265.
 (pdftex.def)             Requested size: 223.20227pt x 259.59836pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -870,11 +870,11 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-<Adept-WeightFunction.pdf, id=152, 713.66624pt x 434.62375pt>
+<Adept-WeightFunction.pdf, id=152, 656.4525pt x 430.60875pt>
 File: Adept-WeightFunction.pdf Graphic file (type pdf)
 <use Adept-WeightFunction.pdf>
-Package pdftex.def Info: Adept-WeightFunction.pdf  used on input line 292.
-(pdftex.def)             Requested size: 372.0pt x 226.54945pt.
+Package pdftex.def Info: Adept-WeightFunction.pdf  used on input line 290.
+(pdftex.def)             Requested size: 372.0pt x 244.01715pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -882,16 +882,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -902,50 +901,51 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [13]
-Underfull \hbox (badness 10000) in paragraph at lines 544--545
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 548--549
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 552--553
-
- []
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
-Underfull \hbox (badness 10000) in paragraph at lines 556--557
+Underfull \hbox (badness 10000) in paragraph at lines 546--547
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 560--561
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 566--567
+Underfull \hbox (badness 10000) in paragraph at lines 554--555
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 570--571
+Underfull \hbox (badness 10000) in paragraph at lines 558--559
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 562--563
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 568--569
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--573
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15]
 (sn-article.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [16]
+ [16])
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17]
@@ -955,6 +955,9 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [19]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
 (sn-article.aux)
 
 LaTeX Font Warning: Size substitutions with differences
@@ -965,12 +968,12 @@ Package rerunfilecheck Info: File `sn-article.out' has not changed.
  ) 
 Here is how much of TeX's memory you used:
  15928 strings out of 478659
- 255219 string characters out of 2846395
- 628227 words of memory out of 3000000
- 33694 multiletter control sequences out of 15000+600000
+ 255223 string characters out of 2846395
+ 628224 words of memory out of 3000000
+ 33693 multiletter control sequences out of 15000+600000
  419888 words of font info for 95 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 85i,15n,117p,2000b,657s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 85i,15n,117p,2077b,657s stack positions out of 5000i,500n,10000p,200000b,80000s
 <C:/Users/Amit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mbx10.pfb><C:/Users/Amit/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
 nts/cm/cmbx12.pfb><C:/Users/Amit/AppData/Local/Programs/MiKTeX/fonts/type1/publ
@@ -989,9 +992,9 @@ nts/cm/cmr8.pfb><C:/Users/Amit/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmr9.pfb><C:/Users/Amit/AppData/Local/Programs/MiKTeX/fonts/type1/
 public/amsfonts/cm/cmsy10.pfb><C:/Users/Amit/AppData/Local/Programs/MiKTeX/font
 s/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on sn-article.pdf (19 pages, 351071 bytes).
+Output written on sn-article.pdf (20 pages, 352782 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 65 named destinations out of 1000 (max. 500000)
+ 318 PDF objects out of 1000 (max. 8388607)
+ 66 named destinations out of 1000 (max. 500000)
  83 words of extra memory for PDF output out of 10000 (max. 10000000)
 

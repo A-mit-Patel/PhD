@@ -46,7 +46,7 @@ headsepline, % Uncomment to get a line under the header
 
 \usepackage[backend=bibtex,style=ieee,maxbibnames=3]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
-\addbibresource{ref.bib} % The filename of the bibliography
+\addbibresource{ref_new.bib} % The filename of the bibliography
 
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 
@@ -206,13 +206,13 @@ headsepline, % Uncomment to get a line under the header
 
 \noindent The results and decisions made in early phase clinical trials play an important role in the drug development process. Failure to make correct or accurate decisions may result in further unwarranted clinical research and may also cause potential future harm to patients. 
 
-This thesis explores methodologies used in dose-finding trials specifically, looking at the implementation of these methods and how they can be extended to answer different questions and assist with decision-making. 
+This thesis explores methodologies used in dose-finding trials, specifically looking at the implementation of these methods and how they can be extended to answer different questions and assist with decision-making. 
 
-Firstly we detail our experiences implementing a novel methodology for a dose-finding trial where the cytotoxic assumption no longer holds. We then present an extension to a seamless adaptive phase \RN{1}/\RN{2} trial design which aims to conduct dose-finding and replace the need for a randomised phase \RN{2} trial. 
+Firstly we detail our experiences implementing a novel methodology for a dose-finding trial where monotonic ordering is not possible. We then present an extension to a seamless adaptive phase \RN{1}/\RN{2} trial design which aims to conduct dose-finding and replace the need for a randomised phase \RN{2} trial. 
 
-We also present two extensions to dose transition pathways a visualisation tool to aid designing and decision making in early phase trials.  The first looks at how they can be applied to more complex time-to-event methodologies and the second looks at how the same concept can be applied to single-arm phase \RN{2} trials. 
+We also present two extensions to dose transition pathways, a visualisation tool to aid designing and decision making in early phase trials.  The first looks at how they can be applied to more complex time-to-event methodologies and the second looks at how the same concept can be applied to single-arm phase \RN{2} trials. 
 
-Throughout this thesis we include exemplar trials and showcase our methods being motivated or implemented into clinical trials conducted by the Cancer Research Clinical Trials Unit.
+Throughout this thesis we include exemplar trials and showcase our methods being motivated or implemented into clinical trials conducted by the Cancer Research UK Clinical Trials Unit at the University of Birmingham.
 
 \end{abstract}
 
@@ -299,9 +299,6 @@ Acknowledge people here \ldots
 \include{Chapters/ETP/ETP_tex}
 \include{Chapters/Conclusion/Conclusion_tex}
 
-%\include{Chapters/Chapter5} 
-%\include{Chapters/Chapter6} 
-
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
 %----------------------------------------------------------------------------------------
@@ -319,7 +316,7 @@ Acknowledge people here \ldots
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 
-\printbibliography[heading=bibintoc]
+%\printbibliography[heading=bibintoc]
 
 %----------------------------------------------------------------------------------------
 
