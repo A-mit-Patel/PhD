@@ -86,7 +86,7 @@
       <file>main-blx.bib</file>
     </requires>
     <requires type="editable">
-      <file>ref_new.bib</file>
+      <file>ref.bib</file>
     </requires>
     <requires type="static">
       <file>biblatex.bst</file>

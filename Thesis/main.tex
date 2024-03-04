@@ -46,7 +46,7 @@ headsepline, % Uncomment to get a line under the header
 
 \usepackage[backend=bibtex,style=ieee,maxbibnames=3]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
 
-\addbibresource{ref_new.bib} % The filename of the bibliography
+\addbibresource{ref.bib} % The filename of the bibliography
 
 \usepackage[autostyle=true]{csquotes} % Required to generate language-dependent quotes in the bibliography
 
@@ -303,12 +303,12 @@ Acknowledge people here \ldots
 %	THESIS CONTENT - APPENDICES
 %----------------------------------------------------------------------------------------
 
-%\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
+\appendix % Cue to tell LaTeX that the following "chapters" are Appendices
 
 % Include the appendices of the thesis as separate files from the Appendices folder
 % Uncomment the lines as you write the Appendices
 
-%\include{Appendices/AppendixA}
+\include{Appendices/Appendix_ETP_examples}
 %\include{Appendices/AppendixB}
 %\include{Appendices/AppendixC}
 
@@ -316,7 +316,7 @@ Acknowledge people here \ldots
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
 
-%\printbibliography[heading=bibintoc]
+\printbibliography[heading=bibintoc]
 
 %----------------------------------------------------------------------------------------
 

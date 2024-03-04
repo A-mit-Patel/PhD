@@ -87,7 +87,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{American Board of Family Medicine}}%
+      {American Board of Family Medicine}%
     }
     \strng{namehash}{LMSSLK1}
     \strng{fullhash}{LMSSLK1}
@@ -233,7 +233,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{Academic Press}}%
+      {Academic Press}%
     }
     \keyw{Clinical Trial Phases,efficacy,safety,sequential steps,tolerability}
     \strng{namehash}{WB1}
@@ -292,7 +292,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{Nature Publishing Group}}%
+      {Nature Publishing Group}%
     }
     \keyw{Cancer therapy,Drug safety}
     \strng{namehash}{IAOJ1}
@@ -632,7 +632,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{[Wiley, International Biometric Society]}}%
+      {[Wiley, International Biometric Society]}%
     }
     \strng{namehash}{SBE1}
     \strng{fullhash}{SBE1}
@@ -717,7 +717,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{SAGE Publications}}%
+      {SAGE Publications}%
     }
     \strng{namehash}{IAWASRER+1}
     \strng{fullhash}{IAWASRERSVESDR1}
@@ -875,7 +875,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{[Wiley, International Biometric Society]}}%
+      {[Wiley, International Biometric Society]}%
     }
     \keyw{Adept Chapter,WT Chapter}
     \strng{namehash}{OJPMFL1}
@@ -945,7 +945,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{Oxford Academic}}%
+      {Oxford Academic}%
     }
     \keyw{Adept Chapter}
     \strng{namehash}{LTCLJJSLL1}
@@ -1025,7 +1025,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{American Society of Clinical Oncology}}%
+      {American Society of Clinical Oncology}%
     }
     \keyw{Adept Chapter,TITE-DTP Chapter}
     \strng{namehash}{RASDJW+1}
@@ -1128,7 +1128,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{Taylor \& Francis}}%
+      {Taylor \& Francis}%
     }
     \keyw{Adept Chapter,Dose-finding methods,immunotherapy,maximum tolerated
   dose,optimal dose,phase 1 designs,targeted therapy,TITE-DTP Chapter}
@@ -1228,7 +1228,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{Comprehensive R Archive Network (CRAN)}}%
+      {Comprehensive R Archive Network (CRAN)}%
     }
     \keyw{WT Chapter}
     \strng{namehash}{BK1}
@@ -1358,9 +1358,9 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{CRC Press}}%
+      {CRC Press}%
     }
-    \keyw{Mathematics / Probability \& Statistics / General,Medical /
+    \keyw{Mathematics / Probability & Statistics / General,Medical /
   Pharmacology}
     \strng{namehash}{BSMCBPLJJ+1}
     \strng{fullhash}{BSMCBPLJJMP1}
@@ -1408,7 +1408,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{John Wiley \& Sons}}%
+      {John Wiley \& Sons}%
     }
     \keyw{Medical / General,Medical / Pharmacology}
     \strng{namehash}{JSTSBMD1}
@@ -1461,7 +1461,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{John Wiley \& Sons, Incorporated}}%
+      {John Wiley \& Sons, Incorporated}%
     }
     \strng{namehash}{LPM1}
     \strng{fullhash}{LPM1}
@@ -1474,7 +1474,7 @@
     \verb http://ebookcentral.proquest.com/lib/bham/detail.action?docID=7103580
     \endverb
     \list{location}{1}{%
-      {{Newark, UNITED STATES}}%
+      {Newark, UNITED STATES}%
     }
     \verb{file}
     \verb C:\Users\Amit\Zotero\storage\MQUHDDEM\reader.html
@@ -1507,7 +1507,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{Taylor \& Francis}}%
+      {Taylor \& Francis}%
     }
     \keyw{Lindley information,Prior information,Probabilities of type I and
   type II errors}
@@ -1586,7 +1586,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{SAGE Publications}}%
+      {SAGE Publications}%
     }
     \strng{namehash}{SBRCJTAGD+1}
     \strng{fullhash}{SBRCJTAGDAJ1}
@@ -1730,9 +1730,9 @@
          giveni={J\bibinitperiod},
       }}%
     }
-    \keyw{Adept Chapter,{Clinical Trials, Phase I as Topic},Computer
-  Simulation,{Data Interpretation, Statistical},{Dose-Response Relationship,
-  Drug},Humans,Maximum Tolerated Dose}
+    \keyw{Adept Chapter,Clinical Trials Phase I as Topic,Computer
+  Simulation,Data Interpretation Statistical,Dose-Response Relationship
+  Drug,Humans,Maximum Tolerated Dose}
     \strng{namehash}{WNACMROJ1}
     \strng{fullhash}{WNACMROJ1}
     \field{labelnamesource}{author}
@@ -1792,7 +1792,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{Taylor \& Francis}}%
+      {Taylor \& Francis}%
     }
     \keyw{Continual reassessment method,Dose finding,Molecularly targeted
   agent,Optimal biological dose,WT Chapter}
@@ -1875,7 +1875,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{American Association for Cancer Research}}%
+      {American Association for Cancer Research}%
     }
     \strng{namehash}{YCBLJCYK+1}
     \strng{fullhash}{YCBLJCYKCCOJ1}
@@ -2235,7 +2235,7 @@
       }}%
     }
     \list{organization}{1}{%
-      {{Cancer Research UK}}%
+      {Cancer Research UK}%
     }
     \keyw{Adept Chapter}
     \strng{namehash}{C1}
@@ -3000,10 +3000,10 @@
          giveni={J\bibinitperiod},
       }}%
     }
-    \keyw{Adept Chapter,Antineoplastic Agents,{Clinical Trials, Phase I as
-  Topic},{Data Interpretation, Statistical},Drug-Related Side Effects and
-  Adverse Reactions,Humans,Maximum Tolerated Dose,Neoplasms,{Outcome
-  Assessment, Health Care},Risk Assessment,Risk Factors,Treatment Outcome}
+    \keyw{Adept Chapter,Antineoplastic Agents,Clinical Trials Phase I as
+  Topic,Data Interpretation Statistical,Drug-Related Side Effects and Adverse
+  Reactions,Humans,Maximum Tolerated Dose,Neoplasms,Outcome Assessment Health
+  Care,Risk Assessment,Risk Factors,Treatment Outcome}
     \strng{namehash}{WNACMROJ1}
     \strng{fullhash}{WNACMROJ1}
     \field{labelnamesource}{author}
@@ -3024,7 +3024,7 @@
   partial ordering. In this article, we propose a new two-dimensional
   dose-finding method for multiple-agent trials that simplifies to the
   continual reassessment method (CRM), introduced by O'Quigley, Pepe, and
-  Fisher (1990,\hspace{0.6em}Biometrics 46, 33-48), when the ordering is fully
+  Fisher (1990,\enspace Biometrics 46, 33-48), when the ordering is fully
   known. This design enables us to relax the assumption of a monotonic
   dose-toxicity curve. We compare our approach and some simulation results to a
   CRM design in which the ordering is known as well as to other suggestions for
@@ -3277,8 +3277,8 @@
       }}%
     }
     \keyw{Adept Chapter,Antineoplastic Agents,Antineoplastic Combined
-  Chemotherapy Protocols,Cancer Vaccines,{Clinical Trials, Phase I as
-  Topic},Computer Simulation,Continual reassessment method,Dose finding,Drug
+  Chemotherapy Protocols,Cancer Vaccines,Clinical Trials Phase I as
+  Topic,Computer Simulation,Continual reassessment method,Dose finding,Drug
   combination,Freund's Adjuvant,Humans,Lipids,Maximum Tolerated
   Dose,Melanoma,Neoplasms,Partial ordering,Phase I trials,Software,Toll-Like
   Receptors}
@@ -3641,8 +3641,8 @@
          giveni={P\bibinitperiod\bibinitdelim F\bibinitperiod},
       }}%
     }
-    \keyw{Adaptive weight,Adept Chapter,{Antibodies, Monoclonal},Bayes
-  Theorem,Biometry,Calibration,{Clinical Trials, Phase I as Topic},Dose
+    \keyw{Adaptive weight,Adept Chapter,Antibodies Monoclonal,Bayes
+  Theorem,Biometry,Calibration,Clinical Trials Phase I as Topic,Dose
   finding,Humans,MTD,Neoplasms,Oncology,Time Factors,Time-to-event}
     \strng{namehash}{HBKPF1}
     \strng{fullhash}{HBKPF1}
@@ -3706,7 +3706,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{[Wiley, International Biometric Society]}}%
+      {[Wiley, International Biometric Society]}%
     }
     \keyw{Adept Chapter}
     \strng{namehash}{OJSLZ1}
@@ -4062,7 +4062,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{Nature Publishing Group}}%
+      {Nature Publishing Group}%
     }
     \keyw{Cancer,Cancer immunotherapy,Immune system}
     \strng{namehash}{MICGDG1}
@@ -4219,7 +4219,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{American Cancer Society}}%
+      {American Cancer Society}%
     }
     \keyw{cytostatic drug,dose-finding approach,drug development,optimal
   biological dose,phase I clinical trials,TITE-DTP Chapter,WT Chapter}
@@ -4343,11 +4343,11 @@
          giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
       }}%
     }
-    \keyw{Abciximab,Algorithms,{Antibodies, Monoclonal},Bayes
-  Theorem,Biometry,{Clinical Trials, Phase I as Topic},{Clinical Trials, Phase
-  II as Topic},{Dose-Response Relationship, Drug},Graft vs Host
-  Disease,Humans,Immunoglobulin Fab Fragments,{Models,
-  Statistical},Pentostatin,Platelet Glycoprotein GPIIb-IIIa Complex,Recombinant
+    \keyw{Abciximab,Algorithms,Antibodies Monoclonal,Bayes
+  Theorem,Biometry,Clinical Trials Phase I as Topic,Clinical Trials Phase II as
+  Topic,Dose-Response Relationship Drug,Graft vs Host
+  Disease,Humans,Immunoglobulin Fab Fragments,Models
+  Statistical,Pentostatin,Platelet Glycoprotein GPIIb-IIIa Complex,Recombinant
   Proteins,Stroke,Tissue Plasminogen Activator,WT Chapter}
     \strng{namehash}{TPFCJD1}
     \strng{fullhash}{TPFCJD1}
@@ -4709,7 +4709,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{Wolters Kluwer}}%
+      {Wolters Kluwer}%
     }
     \keyw{WT Chapter}
     \strng{namehash}{JYWSJ1}
@@ -4877,7 +4877,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{SAGE Publications Ltd STM}}%
+      {SAGE Publications Ltd STM}%
     }
     \keyw{Dose-finding,molecularly targeted agents,oncology,phase I,phase II,WT
   Chapter}
@@ -4944,10 +4944,10 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{John Wiley \& Sons}}%
+      {John Wiley \& Sons}%
     }
-    \keyw{Mathematics / Probability \& Statistics / Stochastic
-  Processes,Medical / Clinical Medicine}
+    \keyw{Mathematics / Probability & Statistics / Stochastic Processes,Medical
+  / Clinical Medicine}
     \strng{namehash}{YG1}
     \strng{fullhash}{YG1}
     \field{labelnamesource}{author}
@@ -5004,7 +5004,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{[Oxford University Press, Biometrika Trust]}}%
+      {[Oxford University Press, Biometrika Trust]}%
     }
     \strng{namehash}{PPB1}
     \strng{fullhash}{PPB1}
@@ -5047,7 +5047,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{Routledge}}%
+      {Routledge}%
     }
     \keyw{WT Chapter}
     \strng{namehash}{CJ1}
@@ -5072,7 +5072,7 @@
     \field{title}{Statistical {{Power Analysis}} for the {{Behavioral
   Sciences}}}
     \list{location}{1}{%
-      {{New York}}%
+      {New York}%
     }
     \field{day}{01}
     \field{month}{07}
@@ -5101,7 +5101,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{Taylor \& Francis}}%
+      {Taylor \& Francis}%
     }
     \keyw{adaptive randomization,continual reassessment method,dose
   finding,molecularly targeted agent,optimal biological dose,Seamless I/II
@@ -5352,12 +5352,12 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{CRC Press}}%
+      {CRC Press}%
     }
-    \keyw{Computers / Mathematical \& Statistical Software,Mathematics /
-  Probability \& Statistics / General,Medical / Biostatistics,Medical /
+    \keyw{Computers / Mathematical & Statistical Software,Mathematics /
+  Probability & Statistics / General,Medical / Biostatistics,Medical /
   Epidemiology,Medical / Research,Science / Life Sciences / Biology,Technology
-  \& Engineering / Chemical \& Biochemical,TITE-DTP Chapter}
+  & Engineering / Chemical & Biochemical,TITE-DTP Chapter}
     \strng{namehash}{CYK1}
     \strng{fullhash}{CYK1}
     \field{labelnamesource}{author}
@@ -5415,7 +5415,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{SAGE Publications}}%
+      {SAGE Publications}%
     }
     \strng{namehash}{JT1}
     \strng{fullhash}{JT1}
@@ -5749,7 +5749,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{British Medical Journal Publishing Group}}%
+      {British Medical Journal Publishing Group}%
     }
     \strng{namehash}{HVYCBS+1}
     \strng{fullhash}{HVYCBSHJSDWKREJWGBSHSSMWCJRKPTYLMKJBAGCGP1}
@@ -6208,7 +6208,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{British Medical Journal Publishing Group}}%
+      {British Medical Journal Publishing Group}%
     }
     \strng{namehash}{MDHSSKF+1}
     \strng{fullhash}{MDHSSKFMVGPCDPJEDEMADG1}
@@ -6493,7 +6493,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{British Medical Journal Publishing Group}}%
+      {British Medical Journal Publishing Group}%
     }
     \strng{namehash}{YCRJUM+1}
   \strng{fullhash}{YCRJUMSOPDDMWCJCAWJTMAETRJPRHKSCMRKRLSKAHSADGMEIJGRKORDPBOMJSLISPMLVHALRTYBJEABJd1}
@@ -6765,7 +6765,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{British Medical Journal Publishing Group}}%
+      {British Medical Journal Publishing Group}%
     }
     \strng{namehash}{YCSOBJd+1}
   \strng{fullhash}{YCSOBJdRJPDJTMAETRJPRHKSHSUMRKRCMLSKAADCAWGMEIJDGRKORDBOMJSLISPMLVHALRTYBJEADMWCJ1}
@@ -6831,9 +6831,9 @@
          giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod},
       }}%
     }
-    \keyw{{Clinical Trials, Phase I as Topic},{Dose-Response Relationship,
-  Drug},Drug-Related Side Effects and Adverse Reactions,Humans,Maximum
-  Tolerated Dose,{Models, Statistical},Time Factors}
+    \keyw{Clinical Trials Phase I as Topic,Dose-Response Relationship
+  Drug,Drug-Related Side Effects and Adverse Reactions,Humans,Maximum Tolerated
+  Dose,Models Statistical,Time Factors}
     \strng{namehash}{BTM1}
     \strng{fullhash}{BTM1}
     \field{labelnamesource}{author}
@@ -6886,7 +6886,7 @@
 
   \entry{DictionaryPhysics2009}{incollection}{}
     \list{publisher}{1}{%
-      {{Oxford University Press}}%
+      {Oxford University Press}%
     }
     \keyw{Physics,Science and technology}
     \field{labeltitlesource}{title}
@@ -7028,7 +7028,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{Taylor \& Francis}}%
+      {Taylor \& Francis}%
     }
     \keyw{Fisher’s exact test,Minimax design,Optimal design,Two-stage
   design,Unbalanced allocation}
@@ -7143,7 +7143,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{American College of Cardiology Foundation}}%
+      {American College of Cardiology Foundation}%
     }
     \keyw{adaptive design,biomarker studies,false discovery rate,multiplicity
   problem,phase II clinical trials}
@@ -7214,7 +7214,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{Taylor \& Francis}}%
+      {Taylor \& Francis}%
     }
     \keyw{Fleming’s design,oncology,Phase II trials,Simon’s
   design,two-stage design}
@@ -7316,393 +7316,143 @@
     \field{urlyear}{2023}
   \endentry
 
-  \entry{harringtonGuidelinesPreclinicalEarly2011}{article}{}
-    \name{author}{15}{}{%
-      {{hash=HKJ}{%
-         family={Harrington},
+  \entry{lalondeModelbasedDrugDevelopment2007}{article}{}
+    \name{author}{16}{}{%
+      {{hash=LRL}{%
+         family={Lalonde},
+         familyi={L\bibinitperiod},
+         given={R\bibnamedelima L},
+         giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+      {{hash=KKG}{%
+         family={Kowalski},
+         familyi={K\bibinitperiod},
+         given={K\bibnamedelima G},
+         giveni={K\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=HMM}{%
+         family={Hutmacher},
          familyi={H\bibinitperiod},
-         given={K\bibnamedelima J},
-         giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+         given={M\bibnamedelima M},
+         giveni={M\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=EW}{%
+         family={Ewy},
+         familyi={E\bibinitperiod},
+         given={W},
+         giveni={W},
+      }}%
+      {{hash=NDJ}{%
+         family={Nichols},
+         familyi={N\bibinitperiod},
+         given={D\bibnamedelima J},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MPA}{%
+         family={Milligan},
+         familyi={M\bibinitperiod},
+         given={P\bibnamedelima A},
+         giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=CBW}{%
+         family={Corrigan},
+         familyi={C\bibinitperiod},
+         given={B\bibnamedelima W},
+         giveni={B\bibinitperiod\bibinitdelim W\bibinitperiod},
+      }}%
+      {{hash=LPA}{%
+         family={Lockwood},
+         familyi={L\bibinitperiod},
+         given={P\bibnamedelima A},
+         giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=MSA}{%
+         family={Marshall},
+         familyi={M\bibinitperiod},
+         given={S\bibnamedelima A},
+         giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
       }}%
       {{hash=BLJ}{%
-         family={Billingham},
+         family={Benincosa},
          familyi={B\bibinitperiod},
          given={L\bibnamedelima J},
          giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
       }}%
-      {{hash=BTB}{%
-         family={Brunner},
-         familyi={B\bibinitperiod},
-         given={T\bibnamedelima B},
-         giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod},
+      {{hash=TTG}{%
+         family={Tensfeldt},
+         familyi={T\bibinitperiod},
+         given={T\bibnamedelima G},
+         giveni={T\bibinitperiod\bibinitdelim G\bibinitperiod},
       }}%
-      {{hash=BNG}{%
-         family={Burnet},
-         familyi={B\bibinitperiod},
-         given={N\bibnamedelima G},
-         giveni={N\bibinitperiod\bibinitdelim G\bibinitperiod},
+      {{hash=PK}{%
+         family={Parivar},
+         familyi={P\bibinitperiod},
+         given={K},
+         giveni={K},
       }}%
-      {{hash=CCS}{%
-         family={Chan},
-         familyi={C\bibinitperiod},
-         given={C\bibnamedelima S},
-         giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod},
+      {{hash=AM}{%
+         family={Amantea},
+         familyi={A\bibinitperiod},
+         given={M},
+         giveni={M},
       }}%
-      {{hash=HP}{%
-         family={Hoskin},
-         familyi={H\bibinitperiod},
+      {{hash=GP}{%
+         family={Glue},
+         familyi={G\bibinitperiod},
          given={P},
          giveni={P},
       }}%
-      {{hash=MRI}{%
-         family={Mackay},
+      {{hash=KH}{%
+         family={Koide},
+         familyi={K\bibinitperiod},
+         given={H},
+         giveni={H},
+      }}%
+      {{hash=MR}{%
+         family={Miller},
          familyi={M\bibinitperiod},
-         given={R\bibnamedelima I},
-         giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
-      }}%
-      {{hash=MTS}{%
-         family={Maughan},
-         familyi={M\bibinitperiod},
-         given={T\bibnamedelima S},
-         giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
-      }}%
-      {{hash=MJ}{%
-         family={Macdougall},
-         familyi={M\bibinitperiod},
-         given={J},
-         giveni={J},
-      }}%
-      {{hash=MWG}{%
-         family={McKenna},
-         familyi={M\bibinitperiod},
-         given={W\bibnamedelima G},
-         giveni={W\bibinitperiod\bibinitdelim G\bibinitperiod},
-      }}%
-      {{hash=NCM}{%
-         family={Nutting},
-         familyi={N\bibinitperiod},
-         given={C\bibnamedelima M},
-         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-      {{hash=OA}{%
-         family={Oliver},
-         familyi={O\bibinitperiod},
-         given={A},
-         giveni={A},
-      }}%
-      {{hash=PR}{%
-         family={Plummer},
-         familyi={P\bibinitperiod},
          given={R},
          giveni={R},
       }}%
-      {{hash=SIJ}{%
-         family={Stratford},
-         familyi={S\bibinitperiod},
-         given={I\bibnamedelima J},
-         giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=IT}{%
-         family={Illidge},
-         familyi={I\bibinitperiod},
-         given={T},
-         giveni={T},
-      }}%
     }
-    \strng{namehash}{HKJBLJBTB+1}
-    \strng{fullhash}{HKJBLJBTBBNGCCSHPMRIMTSMJMWGNCMOAPRSIJIT1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \verb{doi}
-    \verb 10.1038/bjc.2011.240
-    \endverb
-    \verb{eprint}
-    \verb 21772330
-    \endverb
-    \field{issn}{0007-0920}
-    \field{number}{5}
-    \field{pages}{628\bibrangedash 639}
-    \field{shortjournal}{Br J Cancer}
-    \field{title}{Guidelines for Preclinical and Early Phase Clinical
-  Assessment of Novel Radiosensitisers}
-    \verb{url}
-    \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3188925/
-    \endverb
-    \field{volume}{105}
-    \verb{file}
-    \verb C:\Users\Amit\Zotero\storage\CX52L8FY\Harrington et al. - 2011 - Guid
-    \verb elines for preclinical and early phase clinica.pdf
-    \endverb
-    \field{journaltitle}{British Journal of Cancer}
-    \field{eprinttype}{pmid}
-    \field{day}{23}
-    \field{month}{08}
-    \field{year}{2011}
-    \field{urlday}{18}
-    \field{urlmonth}{11}
-    \field{urlyear}{2023}
-  \endentry
-
-  \entry{zhouBOP2BayesianOptimal2017}{article}{}
-    \name{author}{3}{}{%
-      {{hash=ZH}{%
-         family={Zhou},
-         familyi={Z\bibinitperiod},
-         given={Heng},
-         giveni={H\bibinitperiod},
-      }}%
-      {{hash=LJJ}{%
-         family={Lee},
-         familyi={L\bibinitperiod},
-         given={J.\bibnamedelima Jack},
-         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=YY}{%
-         family={Yuan},
-         familyi={Y\bibinitperiod},
-         given={Ying},
-         giveni={Y\bibinitperiod},
-      }}%
-    }
-    \keyw{Bayes Theorem,Bayesian adaptive design,Bias,{Clinical Trials, Phase
-  II as Topic},co-primary endpoints,Computer Simulation,early stopping,Endpoint
-  Determination,Humans,immunotherapy,Multivariate Analysis,ordinal
-  endpoint,Research Design,Sample Size,Treatment Outcome}
-    \strng{namehash}{ZHLJJYY1}
-    \strng{fullhash}{ZHLJJYY1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{shorttitle}
-    \field{abstract}{%
-    We propose a flexible Bayesian optimal phase II (BOP2) design that is
-  capable of handling simple (e.g., binary) and complicated (e.g., ordinal,
-  nested, and co-primary) endpoints under a unified framework. We use a
-  Dirichlet-multinomial model to accommodate different types of endpoints. At
-  each interim, the go/no-go decision is made by evaluating a set of posterior
-  probabilities of the events of interest, which is optimized to maximize power
-  or minimize the number of patients under the null hypothesis. Unlike other
-  existing Bayesian designs, the BOP2 design explicitly controls the type I
-  error rate, thereby bridging the gap between Bayesian designs and frequentist
-  designs. In addition, the stopping boundary of the BOP2 design can be
-  enumerated prior to the onset of the trial. These features make the BOP2
-  design accessible to a wide range of users and regulatory agencies and
-  particularly easy to implement in practice. Simulation studies show that the
-  BOP2 design has favorable operating characteristics with higher power and
-  lower risk of incorrectly terminating the trial than some existing Bayesian
-  phase II designs. The software to implement the BOP2 design is freely
-  available at www.trialdesign.org. Copyright © 2017 John Wiley \& Sons, Ltd.%
-    }
-    \verb{doi}
-    \verb 10.1002/sim.7338
-    \endverb
-    \verb{eprint}
-    \verb 28589563
-    \endverb
-    \field{issn}{1097-0258}
-    \field{number}{21}
-    \field{pages}{3302\bibrangedash 3314}
-    \field{shortjournal}{Stat Med}
-    \field{shorttitle}{{{BOP2}}}
-    \field{title}{{{BOP2}}: {{Bayesian}} Optimal Design for Phase {{II}}
-  Clinical Trials with Simple and Complex Endpoints}
-    \field{volume}{36}
-    \field{langid}{english}
-    \field{journaltitle}{Statistics in Medicine}
-    \field{eprinttype}{pmid}
-    \field{day}{20}
-    \field{month}{09}
-    \field{year}{2017}
-  \endentry
-
-  \entry{zhouBayesianOptimalPhase2020}{article}{}
-    \name{author}{4}{}{%
-      {{hash=ZH}{%
-         family={Zhou},
-         familyi={Z\bibinitperiod},
-         given={Heng},
-         giveni={H\bibinitperiod},
-      }}%
-      {{hash=CC}{%
-         family={Chen},
-         familyi={C\bibinitperiod},
-         given={Cong},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=SL}{%
-         family={Sun},
-         familyi={S\bibinitperiod},
-         given={Linda},
-         giveni={L\bibinitperiod},
-      }}%
-      {{hash=YY}{%
-         family={Yuan},
-         familyi={Y\bibinitperiod},
-         given={Ying},
-         giveni={Y\bibinitperiod},
-      }}%
-    }
-    \keyw{Bayesian adaptive design,early stopping,immunotherapy,progression
-  free survival,time-to-event endpoint}
-    \strng{namehash}{ZHCCSL+1}
-    \strng{fullhash}{ZHCCSLYY1}
+    \strng{namehash}{LRLKKGHMM+1}
+    \strng{fullhash}{LRLKKGHMMEWNDJMPACBWLPAMSABLJTTGPKAMGPKHMR1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
     \field{abstract}{%
-    We propose a Bayesian optimal phase II (BOP2) design for clinical trials
-  with a time-to-event endpoint (eg, progression-free survival [PFS]) or
-  co-primary endpoints consisted of a time-to-event endpoint and a categorical
-  endpoint (eg, PFS and toxicity). We use an exponential-inverse gamma model to
-  model the time to event. At each interim, the go/no-go decision is made by
-  comparing the posterior probabilities of the event of interest with an
-  adaptive probability cutoff. The BOP2 design is flexible in the number of
-  interim looks and applicable to both single-arm and two-arm trials. The
-  design maximizes the power for detecting effective treatments, with a
-  well-controlled type I error, thereby bridging the gap between Bayesian
-  designs and frequentist designs. The BOP2 design is easy to implement. Its
-  stopping boundary can be enumerated and included in study protocol before the
-  onset of the trial for single-arm studies. Simulation studies show that the
-  BOP2 design has favorable operating characteristics, with higher power and
-  lower risk of incorrectly terminating the trial than some Bayesian phase II
-  designs. The software to implement the BOP2 design will be freely available
-  at www.trialdesign.org.%
+    The low productivity and escalating costs of drug development have been
+  well documented over the past several years. Less than 10\% of new compounds
+  that enter clinical trials ultimately make it to the market, and many more
+  fail in the preclinical stages of development. These challenges in the
+  “critical path” of drug development are discussed in a 2004 publication
+  by the US Food and Drug Administration. The document emphasizes new tools and
+  various opportunities to improve drug development. One of the opportunities
+  recommended is the application of “model-based drug development (MBDD).”
+  This paper discusses what constitutes the key elements of MBDD and how these
+  elements should fit together to inform drug development strategy and
+  decision-making. Clinical Pharmacology \& Therapeutics (2007) 82, 21–32.
+  doi:10.1038/sj.clpt.6100235; published online 23 May 2007%
     }
     \verb{doi}
-    \verb 10.1002/pst.2030
+    \verb 10.1038/sj.clpt.6100235
     \endverb
-    \field{issn}{1539-1612}
-    \field{number}{6}
-    \field{pages}{776\bibrangedash 786}
-    \field{title}{Bayesian Optimal Phase {{II}} Clinical Trial Design with
-  Time-to-Event Endpoint}
+    \field{issn}{1532-6535}
+    \field{number}{1}
+    \field{pages}{21\bibrangedash 32}
+    \field{title}{Model-Based {{Drug Development}}}
     \verb{url}
-    \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/pst.2030
+    \verb https://onlinelibrary.wiley.com/doi/abs/10.1038/sj.clpt.6100235
     \endverb
-    \field{volume}{19}
+    \field{volume}{82}
     \field{langid}{english}
     \verb{file}
-    \verb C:\Users\Amit\Zotero\storage\5GWLTI3R\pst.html
+    \verb C:\Users\Amit\Zotero\storage\P3XKZQJZ\sj.clpt.html
     \endverb
-    \field{journaltitle}{Pharmaceutical Statistics}
-    \field{year}{2020}
-    \field{urlday}{18}
-    \field{urlmonth}{11}
-    \field{urlyear}{2023}
-  \endentry
-
-  \entry{tidwellBayesianClinicalTrials2019}{article}{}
-    \name{author}{6}{}{%
-      {{hash=TRSS}{%
-         family={Tidwell},
-         familyi={T\bibinitperiod},
-         given={Rebecca S\bibnamedelima Slack},
-         giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim
-  S\bibinitperiod},
-      }}%
-      {{hash=PSA}{%
-         family={Peng},
-         familyi={P\bibinitperiod},
-         given={S\bibnamedelima Andrew},
-         giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
-      }}%
-      {{hash=CM}{%
-         family={Chen},
-         familyi={C\bibinitperiod},
-         given={Minxing},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=LDD}{%
-         family={Liu},
-         familyi={L\bibinitperiod},
-         given={Diane\bibnamedelima D},
-         giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod},
-      }}%
-      {{hash=YY}{%
-         family={Yuan},
-         familyi={Y\bibinitperiod},
-         given={Ying},
-         giveni={Y\bibinitperiod},
-      }}%
-      {{hash=LJJ}{%
-         family={Lee},
-         familyi={L\bibinitperiod},
-         given={J\bibnamedelima Jack},
-         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {{SAGE Publications}}%
-    }
-    \strng{namehash}{TRSSPSACM+1}
-    \strng{fullhash}{TRSSPSACMLDDYYLJJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{shorttitle}
-    \field{abstract}{%
-    Background/aims In our 2009 article, we showed that Bayesian methods had
-  established a foothold in developing therapies in our institutional oncology
-  trials. In this article, we will document what has happened since that time.
-  In addition, we will describe barriers to implementing Bayesian clinical
-  trials, as well as our experience overcoming them. Methods We reviewed MD
-  Anderson Cancer Center clinical trials submitted to the institutional
-  protocol office for scientific and ethical review between January 2009 and
-  December 2013, the same length time period as the previous article. We
-  tabulated Bayesian methods implemented for design or analyses for each trial
-  and then compared these to our previous findings. Results Overall, we
-  identified 1020 trials and found that 283 (28\%) had Bayesian components so
-  we designated them as Bayesian trials. Among MD Anderson–only and
-  multicenter trials, 56\% and 14\%, respectively, were Bayesian, higher rates
-  than our previous study. Bayesian trials were more common in phase I/II
-  trials (34\%) than in phase III/IV (6\%) trials. Among Bayesian trials, the
-  most commonly used features were for toxicity monitoring (65\%), efficacy
-  monitoring (36\%), and dose finding (22\%). The majority (86\%) of Bayesian
-  trials used non-informative priors. A total of 75 (27\%) trials applied
-  Bayesian methods for trial design and primary endpoint analysis. Among this
-  latter group, the most commonly used methods were the Bayesian logistic
-  regression model (N\,=\,22), the continual reassessment method (N\,=\,20),
-  and adaptive randomization (N\,=\,16). Median institutional review board
-  approval time from protocol submission was the same 1.4\,months for Bayesian
-  and non-Bayesian trials. Since the previous publication, the
-  Biomarker-Integrated Approaches of Targeted Therapy for Lung Cancer
-  Elimination (BATTLE) trial was the first large-scale decision trial combining
-  multiple treatments in a single trial. Since then, two regimens in breast
-  cancer therapy have been identified and published from the cooperative
-  Investigation of Serial Studies to Predict Your Therapeutic Response with
-  Imaging and Molecular Analysis (I-SPY 2), enhancing cooperation among
-  investigators and drug developers across the nation, as well as advancing
-  information needed for personalized medicine. Many software programs and
-  Shiny applications for Bayesian trial design and calculations are available
-  from our website which has had more than 21,000 downloads worldwide since
-  2004. Conclusion Bayesian trials have the increased flexibility in trial
-  design needed for personalized medicine, resulting in more cooperation among
-  researchers working to fight against cancer. Some disadvantages of Bayesian
-  trials remain, but new methods and software are available to improve their
-  function and incorporation into cancer clinical research.%
-    }
-    \verb{doi}
-    \verb 10.1177/1740774519871471
-    \endverb
-    \field{issn}{1740-7745}
-    \field{number}{6}
-    \field{pages}{645\bibrangedash 656}
-    \field{shortjournal}{Clinical Trials}
-    \field{shorttitle}{Bayesian Clinical Trials at {{The University}} of
-  {{Texas MD Anderson Cancer Center}}}
-    \field{title}{Bayesian Clinical Trials at {{The University}} of {{Texas MD
-  Anderson Cancer Center}}: {{An}} Update}
-    \verb{url}
-    \verb https://doi.org/10.1177/1740774519871471
-    \endverb
-    \field{volume}{16}
-    \field{langid}{english}
-    \verb{file}
-    \verb C:\Users\Amit\Zotero\storage\NE93GP4T\Tidwell et al. - 2019 - Bayesia
-    \verb n clinical trials at The University of Texa.pdf
-    \endverb
-    \field{journaltitle}{Clinical Trials}
-    \field{day}{01}
-    \field{month}{12}
-    \field{year}{2019}
-    \field{urlday}{18}
-    \field{urlmonth}{11}
-    \field{urlyear}{2023}
+    \field{journaltitle}{Clinical Pharmacology \& Therapeutics}
+    \field{year}{2007}
+    \field{urlday}{03}
+    \field{urlmonth}{03}
+    \field{urlyear}{2024}
   \endentry
 
   \entry{changShinyWebApplication}{software}{}
@@ -8041,6 +7791,123 @@
     \field{urlyear}{2023}
   \endentry
 
+  \entry{tidwellBayesianClinicalTrials2019}{article}{}
+    \name{author}{6}{}{%
+      {{hash=TRSS}{%
+         family={Tidwell},
+         familyi={T\bibinitperiod},
+         given={Rebecca S\bibnamedelima Slack},
+         giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod\bibinitdelim
+  S\bibinitperiod},
+      }}%
+      {{hash=PSA}{%
+         family={Peng},
+         familyi={P\bibinitperiod},
+         given={S\bibnamedelima Andrew},
+         giveni={S\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=CM}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Minxing},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=LDD}{%
+         family={Liu},
+         familyi={L\bibinitperiod},
+         given={Diane\bibnamedelima D},
+         giveni={D\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yuan},
+         familyi={Y\bibinitperiod},
+         given={Ying},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=LJJ}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={J\bibnamedelima Jack},
+         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {SAGE Publications}%
+    }
+    \strng{namehash}{TRSSPSACM+1}
+    \strng{fullhash}{TRSSPSACMLDDYYLJJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    Background/aims In our 2009 article, we showed that Bayesian methods had
+  established a foothold in developing therapies in our institutional oncology
+  trials. In this article, we will document what has happened since that time.
+  In addition, we will describe barriers to implementing Bayesian clinical
+  trials, as well as our experience overcoming them. Methods We reviewed MD
+  Anderson Cancer Center clinical trials submitted to the institutional
+  protocol office for scientific and ethical review between January 2009 and
+  December 2013, the same length time period as the previous article. We
+  tabulated Bayesian methods implemented for design or analyses for each trial
+  and then compared these to our previous findings. Results Overall, we
+  identified 1020 trials and found that 283 (28\%) had Bayesian components so
+  we designated them as Bayesian trials. Among MD Anderson–only and
+  multicenter trials, 56\% and 14\%, respectively, were Bayesian, higher rates
+  than our previous study. Bayesian trials were more common in phase I/II
+  trials (34\%) than in phase III/IV (6\%) trials. Among Bayesian trials, the
+  most commonly used features were for toxicity monitoring (65\%), efficacy
+  monitoring (36\%), and dose finding (22\%). The majority (86\%) of Bayesian
+  trials used non-informative priors. A total of 75 (27\%) trials applied
+  Bayesian methods for trial design and primary endpoint analysis. Among this
+  latter group, the most commonly used methods were the Bayesian logistic
+  regression model (N\,=\,22), the continual reassessment method (N\,=\,20),
+  and adaptive randomization (N\,=\,16). Median institutional review board
+  approval time from protocol submission was the same 1.4\,months for Bayesian
+  and non-Bayesian trials. Since the previous publication, the
+  Biomarker-Integrated Approaches of Targeted Therapy for Lung Cancer
+  Elimination (BATTLE) trial was the first large-scale decision trial combining
+  multiple treatments in a single trial. Since then, two regimens in breast
+  cancer therapy have been identified and published from the cooperative
+  Investigation of Serial Studies to Predict Your Therapeutic Response with
+  Imaging and Molecular Analysis (I-SPY 2), enhancing cooperation among
+  investigators and drug developers across the nation, as well as advancing
+  information needed for personalized medicine. Many software programs and
+  Shiny applications for Bayesian trial design and calculations are available
+  from our website which has had more than 21,000 downloads worldwide since
+  2004. Conclusion Bayesian trials have the increased flexibility in trial
+  design needed for personalized medicine, resulting in more cooperation among
+  researchers working to fight against cancer. Some disadvantages of Bayesian
+  trials remain, but new methods and software are available to improve their
+  function and incorporation into cancer clinical research.%
+    }
+    \verb{doi}
+    \verb 10.1177/1740774519871471
+    \endverb
+    \field{issn}{1740-7745}
+    \field{number}{6}
+    \field{pages}{645\bibrangedash 656}
+    \field{shortjournal}{Clinical Trials}
+    \field{shorttitle}{Bayesian Clinical Trials at {{The University}} of
+  {{Texas MD Anderson Cancer Center}}}
+    \field{title}{Bayesian Clinical Trials at {{The University}} of {{Texas MD
+  Anderson Cancer Center}}: {{An}} Update}
+    \verb{url}
+    \verb https://doi.org/10.1177/1740774519871471
+    \endverb
+    \field{volume}{16}
+    \field{langid}{english}
+    \verb{file}
+    \verb C:\Users\Amit\Zotero\storage\NE93GP4T\Tidwell et al. - 2019 - Bayesia
+    \verb n clinical trials at The University of Texa.pdf
+    \endverb
+    \field{journaltitle}{Clinical Trials}
+    \field{day}{01}
+    \field{month}{12}
+    \field{year}{2019}
+    \field{urlday}{18}
+    \field{urlmonth}{11}
+    \field{urlyear}{2023}
+  \endentry
+
   \entry{wheelerAplusBWebApplication2016}{article}{}
     \name{author}{3}{}{%
       {{hash=WGM}{%
@@ -8063,7 +7930,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{Public Library of Science}}%
+      {Public Library of Science}%
     }
     \keyw{Cancer treatment,Cancers and neoplasms,Computer applications,Computer
   software,Graphical user interfaces,Phase I clinical investigation,Probability
@@ -8229,7 +8096,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{SAGE Publications}}%
+      {SAGE Publications}%
     }
     \strng{namehash}{PPWFMAP+1}
     \strng{fullhash}{PPWFMAPWGMYCCSHLVJT1}
@@ -8485,7 +8352,7 @@
       }}%
     }
     \list{publisher}{1}{%
-      {{University of Sheffield}}%
+      {University of Sheffield}%
     }
     \strng{namehash}{DMPPJT+1}
     \strng{fullhash}{DMPPJTWGBMFLCCML1}
@@ -9028,6 +8895,278 @@
     \verb C:\Users\Amit\Zotero\storage\KCD9TVXV\ICTMC 2022 6th International Cl
     \verb inical Trials Meth.pdf
     \endverb
+    \field{urlday}{18}
+    \field{urlmonth}{11}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{harringtonGuidelinesPreclinicalEarly2011}{article}{}
+    \name{author}{15}{}{%
+      {{hash=HKJ}{%
+         family={Harrington},
+         familyi={H\bibinitperiod},
+         given={K\bibnamedelima J},
+         giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=BLJ}{%
+         family={Billingham},
+         familyi={B\bibinitperiod},
+         given={L\bibnamedelima J},
+         giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=BTB}{%
+         family={Brunner},
+         familyi={B\bibinitperiod},
+         given={T\bibnamedelima B},
+         giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=BNG}{%
+         family={Burnet},
+         familyi={B\bibinitperiod},
+         given={N\bibnamedelima G},
+         giveni={N\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=CCS}{%
+         family={Chan},
+         familyi={C\bibinitperiod},
+         given={C\bibnamedelima S},
+         giveni={C\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=HP}{%
+         family={Hoskin},
+         familyi={H\bibinitperiod},
+         given={P},
+         giveni={P},
+      }}%
+      {{hash=MRI}{%
+         family={Mackay},
+         familyi={M\bibinitperiod},
+         given={R\bibnamedelima I},
+         giveni={R\bibinitperiod\bibinitdelim I\bibinitperiod},
+      }}%
+      {{hash=MTS}{%
+         family={Maughan},
+         familyi={M\bibinitperiod},
+         given={T\bibnamedelima S},
+         giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Macdougall},
+         familyi={M\bibinitperiod},
+         given={J},
+         giveni={J},
+      }}%
+      {{hash=MWG}{%
+         family={McKenna},
+         familyi={M\bibinitperiod},
+         given={W\bibnamedelima G},
+         giveni={W\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=NCM}{%
+         family={Nutting},
+         familyi={N\bibinitperiod},
+         given={C\bibnamedelima M},
+         giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=OA}{%
+         family={Oliver},
+         familyi={O\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=PR}{%
+         family={Plummer},
+         familyi={P\bibinitperiod},
+         given={R},
+         giveni={R},
+      }}%
+      {{hash=SIJ}{%
+         family={Stratford},
+         familyi={S\bibinitperiod},
+         given={I\bibnamedelima J},
+         giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=IT}{%
+         family={Illidge},
+         familyi={I\bibinitperiod},
+         given={T},
+         giveni={T},
+      }}%
+    }
+    \strng{namehash}{HKJBLJBTB+1}
+    \strng{fullhash}{HKJBLJBTBBNGCCSHPMRIMTSMJMWGNCMOAPRSIJIT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1038/bjc.2011.240
+    \endverb
+    \verb{eprint}
+    \verb 21772330
+    \endverb
+    \field{issn}{0007-0920}
+    \field{number}{5}
+    \field{pages}{628\bibrangedash 639}
+    \field{shortjournal}{Br J Cancer}
+    \field{title}{Guidelines for Preclinical and Early Phase Clinical
+  Assessment of Novel Radiosensitisers}
+    \verb{url}
+    \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3188925/
+    \endverb
+    \field{volume}{105}
+    \verb{file}
+    \verb C:\Users\Amit\Zotero\storage\CX52L8FY\Harrington et al. - 2011 - Guid
+    \verb elines for preclinical and early phase clinica.pdf
+    \endverb
+    \field{journaltitle}{British Journal of Cancer}
+    \field{eprinttype}{pmid}
+    \field{day}{23}
+    \field{month}{08}
+    \field{year}{2011}
+    \field{urlday}{18}
+    \field{urlmonth}{11}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{zhouBOP2BayesianOptimal2017}{article}{}
+    \name{author}{3}{}{%
+      {{hash=ZH}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Heng},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=LJJ}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+         given={J.\bibnamedelima Jack},
+         giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yuan},
+         familyi={Y\bibinitperiod},
+         given={Ying},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \keyw{Bayes Theorem,Bayesian adaptive design,Bias,Clinical Trials Phase II
+  as Topic,co-primary endpoints,Computer Simulation,early stopping,Endpoint
+  Determination,Humans,immunotherapy,Multivariate Analysis,ordinal
+  endpoint,Research Design,Sample Size,Treatment Outcome}
+    \strng{namehash}{ZHLJJYY1}
+    \strng{fullhash}{ZHLJJYY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    We propose a flexible Bayesian optimal phase II (BOP2) design that is
+  capable of handling simple (e.g., binary) and complicated (e.g., ordinal,
+  nested, and co-primary) endpoints under a unified framework. We use a
+  Dirichlet-multinomial model to accommodate different types of endpoints. At
+  each interim, the go/no-go decision is made by evaluating a set of posterior
+  probabilities of the events of interest, which is optimized to maximize power
+  or minimize the number of patients under the null hypothesis. Unlike other
+  existing Bayesian designs, the BOP2 design explicitly controls the type I
+  error rate, thereby bridging the gap between Bayesian designs and frequentist
+  designs. In addition, the stopping boundary of the BOP2 design can be
+  enumerated prior to the onset of the trial. These features make the BOP2
+  design accessible to a wide range of users and regulatory agencies and
+  particularly easy to implement in practice. Simulation studies show that the
+  BOP2 design has favorable operating characteristics with higher power and
+  lower risk of incorrectly terminating the trial than some existing Bayesian
+  phase II designs. The software to implement the BOP2 design is freely
+  available at www.trialdesign.org. Copyright © 2017 John Wiley \& Sons, Ltd.%
+    }
+    \verb{doi}
+    \verb 10.1002/sim.7338
+    \endverb
+    \verb{eprint}
+    \verb 28589563
+    \endverb
+    \field{issn}{1097-0258}
+    \field{number}{21}
+    \field{pages}{3302\bibrangedash 3314}
+    \field{shortjournal}{Stat Med}
+    \field{shorttitle}{{{BOP2}}}
+    \field{title}{{{BOP2}}: {{Bayesian}} Optimal Design for Phase {{II}}
+  Clinical Trials with Simple and Complex Endpoints}
+    \field{volume}{36}
+    \field{langid}{english}
+    \field{journaltitle}{Statistics in Medicine}
+    \field{eprinttype}{pmid}
+    \field{day}{20}
+    \field{month}{09}
+    \field{year}{2017}
+  \endentry
+
+  \entry{zhouBayesianOptimalPhase2020}{article}{}
+    \name{author}{4}{}{%
+      {{hash=ZH}{%
+         family={Zhou},
+         familyi={Z\bibinitperiod},
+         given={Heng},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Cong},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=SL}{%
+         family={Sun},
+         familyi={S\bibinitperiod},
+         given={Linda},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=YY}{%
+         family={Yuan},
+         familyi={Y\bibinitperiod},
+         given={Ying},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \keyw{Bayesian adaptive design,early stopping,immunotherapy,progression
+  free survival,time-to-event endpoint}
+    \strng{namehash}{ZHCCSL+1}
+    \strng{fullhash}{ZHCCSLYY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    We propose a Bayesian optimal phase II (BOP2) design for clinical trials
+  with a time-to-event endpoint (eg, progression-free survival [PFS]) or
+  co-primary endpoints consisted of a time-to-event endpoint and a categorical
+  endpoint (eg, PFS and toxicity). We use an exponential-inverse gamma model to
+  model the time to event. At each interim, the go/no-go decision is made by
+  comparing the posterior probabilities of the event of interest with an
+  adaptive probability cutoff. The BOP2 design is flexible in the number of
+  interim looks and applicable to both single-arm and two-arm trials. The
+  design maximizes the power for detecting effective treatments, with a
+  well-controlled type I error, thereby bridging the gap between Bayesian
+  designs and frequentist designs. The BOP2 design is easy to implement. Its
+  stopping boundary can be enumerated and included in study protocol before the
+  onset of the trial for single-arm studies. Simulation studies show that the
+  BOP2 design has favorable operating characteristics, with higher power and
+  lower risk of incorrectly terminating the trial than some Bayesian phase II
+  designs. The software to implement the BOP2 design will be freely available
+  at www.trialdesign.org.%
+    }
+    \verb{doi}
+    \verb 10.1002/pst.2030
+    \endverb
+    \field{issn}{1539-1612}
+    \field{number}{6}
+    \field{pages}{776\bibrangedash 786}
+    \field{title}{Bayesian Optimal Phase {{II}} Clinical Trial Design with
+  Time-to-Event Endpoint}
+    \verb{url}
+    \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/pst.2030
+    \endverb
+    \field{volume}{19}
+    \field{langid}{english}
+    \verb{file}
+    \verb C:\Users\Amit\Zotero\storage\5GWLTI3R\pst.html
+    \endverb
+    \field{journaltitle}{Pharmaceutical Statistics}
+    \field{year}{2020}
     \field{urlday}{18}
     \field{urlmonth}{11}
     \field{urlyear}{2023}
