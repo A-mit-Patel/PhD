@@ -45,7 +45,7 @@ This chapter provides novel insight into the methodology of PO-TITE-CRM through 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
 %----------------------------------------------------------------------------------------
-\section{The PO-TITE-CRM Design}
+\section{The PO-TITE-CRM design}
 \label{adept:PO-TITE-CRM-Design} 
 
 Wages et al. \cite{wagesUsingTimetoeventContinual2013} introduced the PO-TITE-CRM design which builds directly upon the PO-CRM design by incorporating a TITE component into the dose-toxicity model. The aim of which is to determine the target dose for combinations of drugs where the monotonicity assumption does not hold, in a setting where late-onset toxicities are possible.
@@ -131,7 +131,7 @@ A maximum of 60 patients will be recruited for the dose-finding aspect of this t
 %-----------------------------------
 %	SUBSECTION 3.1
 %-----------------------------------
-\subsection{Partial Ordering in Practice}
+\subsection{Partial ordering in practice}
 \label{adept:Partial-ordering-in-practice}%first number is the chapter number, second number is section number, third is subsection etc..
 
 Each patient entered into ADePT-DDR will receive fixed dose radiation, totalling 70 Gy in 35 fractions over seven weeks. For the dose-finding aspect we investigate six doses of AZD6738 detailed in Table \ref{tab_adept:AZD_dose_levels}. Treatment dose and duration to be selected for dose level 3 will be determined based on a combination of data observed, adverse events and compliance. The issue of partial ordering is illustrated in Figure \ref{fig_adept:AZD_dose_levels} inspired from plots by Wages et al. \cite{wagesUsingTimetoeventContinual2013}. The doses to be used in this trial are detailed in their appropriate box. Additionally, each dot represents a potential dose combination which theoretically could be investigated. The combinations are colour coordinated to indicate where partial ordering exists in this dose combination space. Doses across the same colour (each diagonal) cannot be distinguished from each other in terms of probability of toxicity. However, it forms a hierarchy in which doses of the same colour can be thought of as less/more toxic that doses in another colour i.e the red dose levels would have a higher probability of toxicity than the yellow dose levels. It is clear that dose levels 2a and 2b would be considered more toxic than dose level 1 due to the increase in treatment duration and treatment dose respectively. When comparing 2a and 2b it is unknown whether the increase in dose or duration will be more toxic. Hence there are two possible orderings for ADePT-DDR. 
@@ -206,7 +206,7 @@ The TITE-CRM originally presented by Cheung and Chappel \cite{cheungSequentialDe
 %-----------------------------------
 %	SUBSECTION 3.3
 %-----------------------------------
-\subsection{Stopping Rules}
+\subsection{Stopping rules}
 \label{adept:Stopping-rules}
 
 A practical modification was included to allow for early stopping of the trial if there is sufficient evidence that the TD has been reached. Sufficient evidence is achieved once 15 patients (five cohorts) have been treated at the same dose level and the model allocates that dose level again to a sixth cohort. This rule evolved from the original designs of the trial which involved 30 patients with a dose expansion cohort to ensure at least 15 patients were treated at the TD. 
@@ -221,7 +221,7 @@ An approximate estimate of the variance was calculated using methodology present
 %-----------------------------------
 %	SUBSECTION 3.4 
 %-----------------------------------
-\subsection{Operating Characteristics}
+\subsection{Operating characteristics}
 \label{adept:OCs} 
 
 Simulations were continually utilised during the design process of the trial to assess how various changes impact the overall performance. These changes to design features such as the sample size, weight function and stopping rules helped inform decisions which led to the design specified in the previous section.  

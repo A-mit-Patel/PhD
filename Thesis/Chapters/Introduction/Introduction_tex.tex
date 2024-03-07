@@ -7,7 +7,7 @@
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
-\section{Aims of this Thesis}
+\section{Aims of this thesis}
 Early phase clinical trials are essential in the drug development process as they provide key information about new interventions which can be used in later-phase testing. Therefore, it is important that the decisions made and conclusions reached in the early phase setting are correct or as accurate as possible. Failure to do so could lead to a waste of resources in pursuing unnecessary further research and could potentially negatively impact patients well-being. This thesis aims to explore methodologies used in early phase dose-finding trials. We look specifically at the implementation of novel methods as well as how they can be extended for use in complex and innovative designs. 
 
 In this chapter, we begin with a brief introduction of clinical trials and also provide a summary of the underlying methodology used within this thesis specific to early phase trials. A description of each chapter is then provided. 
@@ -15,7 +15,7 @@ In this chapter, we begin with a brief introduction of clinical trials and also 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
 %----------------------------------------------------------------------------------------
-\section{Clinical Trials}
+\section{Clinical trials}
 
 Clinical trials are often a time-consuming and costly process \cite{fogelFactorsAssociatedClinical2018}. It can take 10-20 years to get a new drug from inception to regulatory approval \cite{lipskyIdeaMarketDrug2001, mohsDrugDiscoveryDevelopment2017}. Any new treatments that come to market must be thoroughly tested and examined, to make sure not only that they are safe but also effective and better than treatments currently in use.
 
@@ -27,7 +27,7 @@ We usually consider Phase I and single arm Phase II trials to be early phase tri
 %----------------------------------------------------------------------------------------
 %	SECTION 3
 %----------------------------------------------------------------------------------------
-\section{Introduction to Early Phase Trials}
+\section{Introduction to early phase trials}
 
 For Phase \RN{1} trials the main aim is to establish a dose, commonly referred to as the maximum tolerated dose (MTD), which can then be taken forward into later phase testing. Normally these may be considered first-in-human trials as Phase \RN{1} is typically the point at which a drug would first be tested in healthy human volunteers. However, in the oncology setting this is generally not the case. Often times, due to the nature of the treatments, such as chemotherapy or radiotherapy, they may be considered too toxic to give to healthy individuals so are rather tested in patients with the specific disease of interest \cite{salzbergFirstinHumanPhaseStudies2012}. 
 
@@ -56,7 +56,7 @@ Whilst the development of new methodologies is necessary to facilitate better re
 %----------------------------------------------------------------------------------------
 %	SECTION 4
 %----------------------------------------------------------------------------------------
-\section{Chapters in this Thesis}
+\section{Chapters in this thesis}
 
 In Chapter \ref{Adept}, we detail our experiences implementing a novel methodology into the design of an early phase dose-finding trial in head and neck cancer. This trial, ADePT-DDR run by the University of Birmingham (UoB) Cancer Research Clinical UK Trials Unit (CRCTU), uses the partial ordering time-to-event continual reassessment method (PO-TITE-CRM) design \cite{wagesUsingTimetoeventContinual2013}. The PO-TITE-CRM design was introduced in 2013 as an extension to the TITE-CRM design, itself an extension of the original continual reassessment method (CRM), a model-based approach to dose-finding trials. Despite the publication of this novel dose-escalation design its implementation appears to be rare. The CRM operates under the monotonicity assumption which assumes that as the dosage of drug increases so does the probability of toxicity. The PO-TITE-CRM was developed to address scenarios where the ability to fully order the doses based on increasing toxicity is missing. Multiple iterations of simulations were utilised to determine the optimal parameterisation of the design. Simulation results from the optimal parameterisation show the operating characteristics of the design perform well across a variety of scenarios. Further work was then done to compare the design we chose against potential alternatives. We present an overview of the design methodology and its application in this trial scenario.
 
