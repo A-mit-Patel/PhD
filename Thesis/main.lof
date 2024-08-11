@@ -5,88 +5,92 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Example dose levels to illustrate partial ordering.\relax }}{15}{figure.caption.14}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Example dose levels to illustrate partial ordering.\relax }}{14}{figure.caption.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2}{\ignorespaces ADePT-DDR dose levels across dose and duration.\relax }}{24}{figure.caption.35}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces ADePT-DDR dose levels across dose and duration.\relax }}{25}{figure.caption.35}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Weight function across the follow-up period.}}{27}{figure.caption.38}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Weight function across the follow-up period.}}{29}{figure.caption.38}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Illustration of true DLT rates used in simulations.}}{36}{figure.caption.45}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Plot of data included for each dose decision at each cohort.\relax }}{34}{figure.caption.42}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Plot of simulations comparing designs for ordering 1.}}{41}{figure.caption.53}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Plot of dose decisions throughout the example trial.\relax }}{34}{figure.caption.43}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Plot of simulations comparing designs for ordering 2.}}{41}{figure.caption.54}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Illustration of true DLT rates used in simulations.}}{42}{figure.caption.49}%
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Plot of simulations comparing designs for ordering 1.}}{44}{figure.caption.57}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Flowchart of a two arm randomised dose-finding trial.}}{59}{figure.caption.77}%
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Initial DTP node plot.}}{107}{figure.caption.107}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Initial DTP flow plot.}}{108}{figure.caption.108}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Updated DTP node plot.}}{111}{figure.caption.111}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Updated DTP flow plot.}}{113}{figure.caption.112}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.5}{\ignorespaces DTP node plot for three additional cohorts.}}{119}{figure.caption.115}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.6}{\ignorespaces DTP node plot for three additional various sized cohorts.}}{122}{figure.caption.117}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Combined follow-up and dose decisions for a cohort of two.}}{132}{figure.caption.126}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Changes in $\beta $ based on combined follow-up for two patients.}}{136}{figure.caption.128}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Changes in $\beta $ based on combined follow-up of 20 and 21 days for two patients.}}{136}{figure.caption.129}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.10}{\ignorespaces TITE-DTP Node plot for a cohort of two patients.\relax }}{140}{figure.caption.132}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.11}{\ignorespaces TITE-DTP Flow plot for a cohort of two patients.\relax }}{142}{figure.caption.133}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Dose recommendations for a cohort of three patients for scenario 2NNN.\relax }}{146}{figure.caption.138}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Changes in $\beta $ based on combined follow-up for three patients.}}{148}{figure.caption.140}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.14}{\ignorespaces Changes in $\beta $ based on combined follow-up of 20 and 21 days for three patients.}}{149}{figure.caption.141}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.15}{\ignorespaces TITE-DTP Node plot for a cohort of two patients.\relax }}{152}{figure.caption.144}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.16}{\ignorespaces TITE-DTP Flow plot for a cohort of two patients.\relax }}{153}{figure.caption.145}%
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Plot of simulations comparing designs for ordering 2.}}{47}{figure.caption.58}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.1}{\ignorespaces ETP cell plot for 0 responses in 5 patients.\relax }}{173}{figure.caption.154}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Flowchart of a two arm randomised dose-finding trial.}}{65}{figure.caption.81}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.2}{\ignorespaces ETP cell plot for 2 responses in 5 patients.\relax }}{174}{figure.caption.155}%
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.3}{\ignorespaces ETP cell plot for 10 responses in 30 patients.\relax }}{175}{figure.caption.156}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Initial DTP node plot.}}{113}{figure.caption.111}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.4}{\ignorespaces ETP cell plot for 14 responses in 30 patients.\relax }}{175}{figure.caption.157}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Initial DTP flow plot.}}{114}{figure.caption.112}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Example of a constructed ETP.\relax }}{177}{figure.caption.158}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Updated DTP node plot.}}{117}{figure.caption.115}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.6}{\ignorespaces A left aligned version of the constructed ETP.\relax }}{178}{figure.caption.159}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Updated DTP flow plot.}}{119}{figure.caption.116}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.7}{\ignorespaces ETP with updated final decision rule.\relax }}{181}{figure.caption.161}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces DTP node plot for three additional cohorts.}}{125}{figure.caption.119}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Changes in posterior probability for decision criteria.\relax }}{183}{figure.caption.163}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces DTP node plot for three additional various sized cohorts.}}{128}{figure.caption.121}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Combined follow-up and dose decisions for a cohort of two.}}{138}{figure.caption.130}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Changes in $\beta $ based on combined follow-up for two patients.}}{142}{figure.caption.132}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Changes in $\beta $ based on combined follow-up of 20 and 21 days for two patients.}}{142}{figure.caption.133}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.10}{\ignorespaces TITE-DTP Node plot for a cohort of two patients.\relax }}{146}{figure.caption.136}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.11}{\ignorespaces TITE-DTP Flow plot for a cohort of two patients.\relax }}{148}{figure.caption.137}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Dose recommendations for a cohort of three patients for scenario 2NNN.\relax }}{152}{figure.caption.142}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Changes in $\beta $ based on combined follow-up for three patients.}}{154}{figure.caption.144}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.14}{\ignorespaces Changes in $\beta $ based on combined follow-up of 20 and 21 days for three patients.}}{155}{figure.caption.145}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.15}{\ignorespaces TITE-DTP Node plot for a cohort of two patients.\relax }}{158}{figure.caption.148}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.16}{\ignorespaces TITE-DTP Flow plot for a cohort of two patients.\relax }}{159}{figure.caption.149}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.1}{\ignorespaces ETP cell plot for 0 responses in 5 patients.\relax }}{179}{figure.caption.158}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.2}{\ignorespaces ETP cell plot for 2 responses in 5 patients.\relax }}{180}{figure.caption.159}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.3}{\ignorespaces ETP cell plot for 10 responses in 30 patients.\relax }}{181}{figure.caption.160}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.4}{\ignorespaces ETP cell plot for 14 responses in 30 patients.\relax }}{181}{figure.caption.161}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Example of a constructed ETP.\relax }}{183}{figure.caption.162}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.6}{\ignorespaces A left aligned version of the constructed ETP.\relax }}{184}{figure.caption.163}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.7}{\ignorespaces ETP with updated final decision rule.\relax }}{187}{figure.caption.165}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Changes in posterior probability for decision criteria.\relax }}{189}{figure.caption.167}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.1}{\ignorespaces Flip-flop recruitment design in the MonoGerm trial.\relax }}{211}{figure.caption.172}%
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Flip-flop recruitment design in the MonoGerm trial.\relax }}{217}{figure.caption.176}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.2}{\ignorespaces ETP for the MonoGerm trial.\relax }}{213}{figure.caption.174}%
+\contentsline {figure}{\numberline {A.2}{\ignorespaces ETP for the MonoGerm trial.\relax }}{219}{figure.caption.178}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.3}{\ignorespaces Flowchart of the decision making process in Glo-BNHL.\relax }}{217}{figure.caption.177}%
+\contentsline {figure}{\numberline {A.3}{\ignorespaces Flowchart of the decision making process in Glo-BNHL.\relax }}{223}{figure.caption.181}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.4}{\ignorespaces ETP for the initial stage of treatment arm \RN {1}a in Glo-BNHL.\relax }}{220}{figure.caption.183}%
+\contentsline {figure}{\numberline {A.4}{\ignorespaces ETP for the initial stage of treatment arm \RN {1}a in Glo-BNHL.\relax }}{226}{figure.caption.187}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.5}{\ignorespaces ETP for the expansion stage of treatment arm \RN {1}a in Glo-BNHL.\relax }}{221}{figure.caption.184}%
+\contentsline {figure}{\numberline {A.5}{\ignorespaces ETP for the expansion stage of treatment arm \RN {1}a in Glo-BNHL.\relax }}{227}{figure.caption.188}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.6}{\ignorespaces Umbrella-basket platform trial design in DETERMINE.\relax }}{223}{figure.caption.187}%
+\contentsline {figure}{\numberline {A.6}{\ignorespaces Umbrella-basket platform trial design in DETERMINE.\relax }}{229}{figure.caption.191}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {A.7}{\ignorespaces ETP for the DETERMINE trial.\relax }}{226}{figure.caption.189}%
+\contentsline {figure}{\numberline {A.7}{\ignorespaces ETP for the DETERMINE trial.\relax }}{232}{figure.caption.193}%

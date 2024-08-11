@@ -1185,6 +1185,286 @@
     \field{urlyear}{2020}
   \endentry
 
+  \entry{wagesDesignConsiderationsEarlyphase2018}{article}{}
+    \name{author}{3}{}{%
+      {{hash=WNA}{%
+         family={Wages},
+         familyi={W\bibinitperiod},
+         given={Nolan\bibnamedelima A.},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=CC}{%
+         family={Chiuzan},
+         familyi={C\bibinitperiod},
+         given={Cody},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=PKS}{%
+         family={Panageas},
+         familyi={P\bibinitperiod},
+         given={Katherine\bibnamedelima S.},
+         giveni={K\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \keyw{Clinical trials,Early-phase,Immunotherapy}
+    \strng{namehash}{WNACCPKS1}
+    \strng{fullhash}{WNACCPKS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    With numerous and fast approvals of different agents including immune
+  checkpoint inhibitors, monoclonal antibodies, or chimeric antigen receptor
+  (CAR) T-cell therapy, immunotherapy is now an established form of cancer
+  treatment. These agents have demonstrated impressive clinical activity across
+  many tumor types, but also revealed different toxicity profiles and
+  mechanisms of action. The classic assumptions imposed by cytotoxic agents may
+  no longer be applicable, requiring new strategies for dose selection and
+  trial design.%
+    }
+    \verb{doi}
+    \verb 10.1186/s40425-018-0389-8
+    \endverb
+    \field{issn}{2051-1426}
+    \field{number}{1}
+    \field{pages}{81}
+    \field{shortjournal}{j. immunotherapy cancer}
+    \field{title}{Design Considerations for Early-Phase Clinical Trials of
+  Immune-Oncology Agents}
+    \verb{url}
+    \verb https://doi.org/10.1186/s40425-018-0389-8
+    \endverb
+    \field{volume}{6}
+    \field{langid}{english}
+    \verb{file}
+    \verb C:\Users\Amit\Zotero\storage\VGF6LYDT\Wages et al. - 2018 - Design co
+    \verb nsiderations for early-phase clinical tri.pdf
+    \endverb
+    \field{journaltitle}{Journal for ImmunoTherapy of Cancer}
+    \field{day}{22}
+    \field{month}{08}
+    \field{year}{2018}
+    \field{urlday}{20}
+    \field{urlmonth}{07}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{wheelerHowDesignDosefinding2019}{article}{}
+    \name{author}{12}{}{%
+      {{hash=WGM}{%
+         family={Wheeler},
+         familyi={W\bibinitperiod},
+         given={Graham\bibnamedelima M.},
+         giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=MAP}{%
+         family={Mander},
+         familyi={M\bibinitperiod},
+         given={Adrian\bibnamedelima P.},
+         giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Bedding},
+         familyi={B\bibinitperiod},
+         given={Alun},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BK}{%
+         family={Brock},
+         familyi={B\bibinitperiod},
+         given={Kristian},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=CV}{%
+         family={Cornelius},
+         familyi={C\bibinitperiod},
+         given={Victoria},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=GAP}{%
+         family={Grieve},
+         familyi={G\bibinitperiod},
+         given={Andrew\bibnamedelima P.},
+         giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=JT}{%
+         family={Jaki},
+         familyi={J\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=LSB}{%
+         family={Love},
+         familyi={L\bibinitperiod},
+         given={Sharon\bibnamedelima B.},
+         giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+      {{hash=OL}{%
+         family={Odondi},
+         familyi={O\bibinitperiod},
+         given={Lang’o},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=WCJ}{%
+         family={Weir},
+         familyi={W\bibinitperiod},
+         given={Christopher\bibnamedelima J.},
+         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=YC}{%
+         family={Yap},
+         familyi={Y\bibinitperiod},
+         given={Christina},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BSJ}{%
+         family={Bond},
+         familyi={B\bibinitperiod},
+         given={Simon\bibnamedelima J.},
+         giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \keyw{Adaptive designs,Continual reassessment method,Dose
+  escalation,Dose-finding,Maximum tolerated dose,Phase I trials,TITE-DTP
+  Chapter}
+    \strng{namehash}{WGMMAPBA+1}
+    \strng{fullhash}{WGMMAPBABKCVGAPJTLSBOLWCJYCBSJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    The continual reassessment method (CRM) is a model-based design for phase I
+  trials, which aims to find the maximum tolerated dose (MTD) of a new therapy.
+  The CRM has been shown to be more accurate in targeting the MTD than
+  traditional rule-based approaches such as the 3\,+\,3 design, which is used
+  in most phase I trials. Furthermore, the CRM has been shown to assign more
+  trial participants at or close to the MTD than the 3\,+\,3 design. However,
+  the CRM’s uptake in clinical research has been incredibly slow, putting
+  trial participants, drug development and patients at risk. Barriers to
+  increasing the use of the CRM have been identified, most notably a lack of
+  knowledge amongst clinicians and statisticians on how to apply new designs in
+  practice. No recent tutorial, guidelines, or recommendations for clinicians
+  on conducting dose-finding studies using the CRM are available. Furthermore,
+  practical resources to support clinicians considering the CRM for their
+  trials are scarce.%
+    }
+    \verb{doi}
+    \verb 10.1186/s12874-018-0638-z
+    \endverb
+    \field{issn}{1471-2288}
+    \field{number}{1}
+    \field{pages}{18}
+    \field{shortjournal}{BMC Medical Research Methodology}
+    \field{title}{How to Design a Dose-Finding Study Using the Continual
+  Reassessment Method}
+    \verb{url}
+    \verb https://doi.org/10.1186/s12874-018-0638-z
+    \endverb
+    \field{volume}{19}
+    \verb{file}
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\AN5G5WE2\\Wheeler et al. - 2019 -
+    \verb How to design a dose-finding study using the conti.pdf;C\:\\Users\\Am
+    \verb it\\Zotero\\storage\\NG37AACW\\s12874-018-0638-z.html
+    \endverb
+    \field{journaltitle}{BMC Medical Research Methodology}
+    \field{day}{18}
+    \field{month}{01}
+    \field{year}{2019}
+    \field{urlday}{01}
+    \field{urlmonth}{01}
+    \field{urlyear}{2022}
+  \endentry
+
+  \entry{mozgunovPracticalImplementationPartial2022}{article}{}
+    \name{author}{6}{}{%
+      {{hash=MP}{%
+         family={Mozgunov},
+         familyi={M\bibinitperiod},
+         given={Pavel},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=JT}{%
+         family={Jaki},
+         familyi={J\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=GI}{%
+         family={Gounaris},
+         familyi={G\bibinitperiod},
+         given={Ioannis},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=GT}{%
+         family={Goddemeier},
+         familyi={G\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=VA}{%
+         family={Victor},
+         familyi={V\bibinitperiod},
+         given={Anja},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Grinberg},
+         familyi={G\bibinitperiod},
+         given={Marianna},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \keyw{combination study,dose-finding,dose-schedule,partial ordering}
+    \strng{namehash}{MPJTGI+1}
+    \strng{fullhash}{MPJTGIGTVAGM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    There is a growing medical interest in combining several agents and
+  optimizing their dosing schedules in a single trial in order to optimize the
+  treatment for patients. Evaluating at doses of several drugs and their
+  scheduling in a single Phase I trial simultaneously possess a number of
+  statistical challenges, and specialized methods to tackle these have been
+  proposed in the literature. However, the uptake of these methods is slow and
+  implementation examples of such advanced methods are still sparse to date. In
+  this work, we share our experience of proposing a model-based partial
+  ordering continual reassessment method (POCRM) design for three-dimensional
+  dose-finding in an oncology trial. In the trial, doses of two agents and the
+  dosing schedule of one of them can be escalated/de-escalated. We provide a
+  step-by-step summary on how the POCRM design was implemented and communicated
+  to the trial team. We proposed an approach to specify toxicity orderings and
+  their a-priori probabilities, and developed a number of visualization tools
+  to communicate the statistical properties of the design. The design
+  evaluation included both a comprehensive simulation study and considerations
+  of the individual trial behavior. The study is now enrolling patients. We
+  hope that sharing our experience of the successful implementation of an
+  advanced design in practice that went through evaluations of several health
+  authorities will facilitate a better uptake of more efficient methods in
+  practice.%
+    }
+    \verb{doi}
+    \verb 10.1002/sim.9594
+    \endverb
+    \field{issn}{1097-0258}
+    \field{number}{30}
+    \field{pages}{5789\bibrangedash 5809}
+    \field{title}{Practical Implementation of the Partial Ordering Continual
+  Reassessment Method in a {{Phase I}} Combination-Schedule Dose-Finding Trial}
+    \verb{url}
+    \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.9594
+    \endverb
+    \field{volume}{41}
+    \field{langid}{english}
+    \verb{file}
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\M9VXZ24R\\Mozgunov et al. - 2022 -
+    \verb  Practical implementation of the partial ordering c.pdf;C\:\\Users\\A
+    \verb mit\\Zotero\\storage\\44N99Q6B\\sim.html
+    \endverb
+    \field{journaltitle}{Statistics in Medicine}
+    \field{year}{2022}
+    \field{urlday}{17}
+    \field{urlmonth}{11}
+    \field{urlyear}{2023}
+  \endentry
+
   \entry{cheungDfcrmDoseFindingContinual2019}{software}{}
     \name{author}{1}{}{%
       {{hash=CK}{%
@@ -3690,6 +3970,709 @@
     \field{year}{2014}
   \endentry
 
+  \entry{vanwerkhovenPracticalitiesRunningEarlyphase2020}{article}{useprefix}
+    \name{author}{8}{}{%
+      {{hash=vWE}{%
+         prefix={van},
+         prefixi={v\bibinitperiod},
+         family={Werkhoven},
+         familyi={W\bibinitperiod},
+         given={Erik},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=HS}{%
+         family={Hinsley},
+         familyi={H\bibinitperiod},
+         given={Samantha},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=FE}{%
+         family={Frangou},
+         familyi={F\bibinitperiod},
+         given={Eleni},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=HJ}{%
+         family={Holmes},
+         familyi={H\bibinitperiod},
+         given={Jane},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=dHR}{%
+         prefix={de},
+         prefixi={d\bibinitperiod},
+         family={Haan},
+         familyi={H\bibinitperiod},
+         given={Rosemarie},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=HM}{%
+         family={Hawkins},
+         familyi={H\bibinitperiod},
+         given={Maria},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=BS}{%
+         family={Brown},
+         familyi={B\bibinitperiod},
+         given={Sarah},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=LSB}{%
+         family={Love},
+         familyi={L\bibinitperiod},
+         given={Sharon\bibnamedelima B.},
+         giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
+      }}%
+    }
+    \keyw{Adaptive trial design,Clinical trial design,Dose-finding,Late
+  toxicity,Phase I,TiTE-CRM}
+    \strng{namehash}{vWEHSFE+1}
+    \strng{fullhash}{vWEHSFEHJdHRHMBSLSB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Awareness of model-based designs for dose-finding studies such as the
+  Continual Reassessment Method (CRM) is now becoming more commonplace amongst
+  clinicians, statisticians and trial management staff. In some settings
+  toxicities can occur a long time after treatment has finished, resulting in
+  extremely long, interrupted, CRM design trials. The Time-to-Event CRM
+  (TiTE-CRM), a modification to the original CRM, accounts for the timing of
+  late-onset toxicities and results in shorter trial duration. In this article,
+  we discuss how to design and deliver a trial using this method, from the
+  grant application stage through to dissemination, using two radiotherapy
+  trials as examples.%
+    }
+    \verb{doi}
+    \verb 10.1186/s12874-020-01012-z
+    \endverb
+    \field{issn}{1471-2288}
+    \field{number}{1}
+    \field{pages}{162}
+    \field{shortjournal}{BMC Medical Research Methodology}
+    \field{title}{Practicalities in Running Early-Phase Trials Using the
+  Time-to-Event Continual Reassessment Method ({{TiTE-CRM}}) for Interventions
+  with Long Toxicity Periods Using Two Radiotherapy Oncology Trials as
+  Examples}
+    \verb{url}
+    \verb https://doi.org/10.1186/s12874-020-01012-z
+    \endverb
+    \field{volume}{20}
+    \verb{file}
+    \verb C\:\\Users\\Amit\\Zotero\\storage\\RLX6T84I\\van Werkhoven et al. - 2
+    \verb 020 - Practicalities in running early-phase trials using.pdf;C\:\\Use
+    \verb rs\\Amit\\Zotero\\storage\\PW6V2JHV\\s12874-020-01012-z.html
+    \endverb
+    \field{journaltitle}{BMC Medical Research Methodology}
+    \field{day}{22}
+    \field{month}{06}
+    \field{year}{2020}
+    \field{urlday}{19}
+    \field{urlmonth}{04}
+    \field{urlyear}{2023}
+  \endentry
+
+  \entry{brownRoadMapDesigning2022}{article}{}
+    \name{author}{8}{}{%
+      {{hash=BSR}{%
+         family={Brown},
+         familyi={B\bibinitperiod},
+         given={Sarah\bibnamedelima R.},
+         giveni={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+      {{hash=HS}{%
+         family={Hinsley},
+         familyi={H\bibinitperiod},
+         given={Samantha},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=HE}{%
+         family={Hall},
+         familyi={H\bibinitperiod},
+         given={Emma},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=HC}{%
+         family={Hurt},
+         familyi={H\bibinitperiod},
+         given={Chris},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BRD}{%
+         family={Baird},
+         familyi={B\bibinitperiod},
+         given={Richard\bibnamedelima D.},
+         giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Forster},
+         familyi={F\bibinitperiod},
+         given={Martin},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SAF}{%
+         family={Scarsbrook},
+         familyi={S\bibinitperiod},
+         given={Andrew\bibnamedelima F.},
+         giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod},
+      }}%
+      {{hash=ARA}{%
+         family={Adams},
+         familyi={A\bibinitperiod},
+         given={Richard\bibnamedelima A.},
+         giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \keyw{Antineoplastic Combined Chemotherapy Protocols,Clinical Trials Phase
+  I as Topic,Dose-Response Relationship Drug,Humans,Maximum Tolerated
+  Dose,Neoplasms,Research Design,Software}
+    \strng{namehash}{BSRHSHE+1}
+    \strng{fullhash}{BSRHSHEHCBRDFMSAFARA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Radiotherapy has proven efficacy in a wide range of cancers. There is
+  growing interest in evaluating radiotherapy-novel agent combinations and a
+  drive to initiate this earlier in the clinical development of the novel
+  agent, where the scientific rationale and preclinical evidence for a
+  radiotherapy combination approach are high. Optimal design, delivery, and
+  interpretation of studies are essential. In particular, the design of phase I
+  studies to determine safety and dosing is critical to an efficient
+  development strategy. There is significant interest in early-phase research
+  among scientific and clinical communities over recent years, at a time when
+  the scrutiny of the trial methodology has significantly increased. To enhance
+  trial design, optimize safety, and promote efficient trial conduct, this
+  position paper reviews the current phase I trial design landscape. Key design
+  characteristics extracted from 37 methodology papers were used to define a
+  road map and a design selection process for phase I radiotherapy-novel agent
+  trials. Design selection is based on single- or dual-therapy dose escalation,
+  dose-limiting toxicity categorization, maximum tolerated dose determination,
+  subgroup evaluation, software availability, and design performance. Fifteen
+  of the 37 designs were identified as being immediately accessible and
+  relevant to radiotherapy-novel agent phase I trials. Applied examples of
+  using the road map are presented. Developing these studies is intensive,
+  highlighting the need for funding and statistical input early in the trial
+  development to ensure appropriate design and implementation from the outset.
+  The application of this road map will improve the design of phase I
+  radiotherapy-novel agent combination trials, enabling a more efficient
+  development pathway.%
+    }
+    \verb{doi}
+    \verb 10.1158/1078-0432.CCR-21-4087
+    \endverb
+    \verb{eprint}
+    \verb 35552622
+    \endverb
+    \field{issn}{1557-3265}
+    \field{number}{17}
+    \field{pages}{3639\bibrangedash 3651}
+    \field{shortjournal}{Clin Cancer Res}
+    \field{title}{A {{Road Map}} for {{Designing Phase I Clinical Trials}} of
+  {{Radiotherapy-Novel Agent Combinations}}}
+    \field{volume}{28}
+    \field{langid}{english}
+    \verb{file}
+    \verb C:\Users\Amit\Zotero\storage\T7FTRAI3\Brown et al. - 2022 - A Road Ma
+    \verb p for Designing Phase I Clinical Trials o.pdf
+    \endverb
+    \field{journaltitle}{Clinical Cancer Research: An Official Journal of the
+  American Association for Cancer Research}
+    \field{eprinttype}{pmid}
+    \field{day}{02}
+    \field{month}{09}
+    \field{year}{2022}
+  \endentry
+
+  \entry{patelImplementingTimetoeventContinual2024}{article}{}
+    \name{author}{8}{}{%
+      {{hash=PA}{%
+         family={Patel},
+         familyi={P\bibinitperiod},
+         given={Amit},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BK}{%
+         family={Brock},
+         familyi={B\bibinitperiod},
+         given={Kristian},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Slade},
+         familyi={S\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=GC}{%
+         family={Gaunt},
+         familyi={G\bibinitperiod},
+         given={Claire},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kong},
+         familyi={K\bibinitperiod},
+         given={Anthony},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MH}{%
+         family={Mehanna},
+         familyi={M\bibinitperiod},
+         given={Hisham},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=BL}{%
+         family={Billingham},
+         familyi={B\bibinitperiod},
+         given={Lucinda},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={Gaunt},
+         familyi={G\bibinitperiod},
+         given={Piers},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \keyw{ADePT-DDR,Combined Modality Therapy,Computer
+  Simulation,Dose-finding,Dose-Response Relationship Drug,Head and Neck
+  Neoplasms,Humans,Maximum Tolerated Dose,Monotonicity assumption,Partial
+  orders,Phase I trial,PO-TITE-CRM,Research Design,Toxicity}
+    \strng{namehash}{PABKSD+1}
+    \strng{fullhash}{PABKSDGCKAMHBLGP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    BACKGROUND: In this article we describe the methodology of the
+  time-to-event continual reassessment method in the presence of partial orders
+  (PO-TITE-CRM) and the process of implementing this trial design into a phase
+  I trial in head and neck cancer called ADePT-DDR. The ADePT-DDR trial aims to
+  find the maximum tolerated dose of an ATR inhibitor given in conjunction with
+  radiotherapy in patients with head and neck squamous cell carcinoma. METHODS:
+  The PO-TITE-CRM is a phase I trial design that builds upon the time-to-event
+  continual reassessment method (TITE-CRM) to allow for the presence of partial
+  ordering of doses. Partial orders occur in the case where the monotonicity
+  assumption does not hold and the ordering of doses in terms of toxicity is
+  not fully known. RESULTS: We arrived at a parameterisation of the design
+  which performed well over a range of scenarios. Results from simulations were
+  used iteratively to determine the best parameterisation of the design and we
+  present the final set of simulations. We provide details on the methodology
+  as well as insight into how it is applied to the trial. CONCLUSIONS: Whilst
+  being a very efficient design we highlight some of the difficulties and
+  challenges that come with implementing such a design. As the issue of partial
+  ordering may become more frequent due to the increasing investigations of
+  combination therapies we believe this account will be beneficial to those
+  wishing to implement a design with partial orders. TRIAL REGISTRATION:
+  ADePT-DDR was added to the European Clinical Trials Database (EudraCT number:
+  2020-001034-35) on 2020-08-07.%
+    }
+    \verb{doi}
+    \verb 10.1186/s12874-024-02142-4
+    \endverb
+    \verb{eprint}
+    \verb 38218799
+    \endverb
+    \field{issn}{1471-2288}
+    \field{number}{1}
+    \field{pages}{11}
+    \field{shortjournal}{BMC Med Res Methodol}
+    \field{title}{Implementing the Time-to-Event Continual Reassessment Method
+  in the Presence of Partial Orders in a Phase {{I}} Head and Neck Cancer
+  Trial}
+    \field{volume}{24}
+    \field{langid}{english}
+    \verb{file}
+    \verb C:\Users\Amit\Zotero\storage\AN9R3GVY\Patel et al. - 2024 - Implement
+    \verb ing the time-to-event continual reassessm.pdf
+    \endverb
+    \field{journaltitle}{BMC medical research methodology}
+    \field{eprinttype}{pmid}
+    \field{day}{13}
+    \field{month}{01}
+    \field{year}{2024}
+  \endentry
+
+  \entry{walkerOpenLabelAdaptive2022}{article}{}
+    \name{author}{33}{}{%
+      {{hash=WLE}{%
+         family={Walker},
+         familyi={W\bibinitperiod},
+         given={Lauren\bibnamedelima E.},
+         giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+      {{hash=FR}{%
+         family={FitzGerald},
+         familyi={F\bibinitperiod},
+         given={Richard},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={Saunders},
+         familyi={S\bibinitperiod},
+         given={Geoffrey},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=LR}{%
+         family={Lyon},
+         familyi={L\bibinitperiod},
+         given={Rebecca},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=FM}{%
+         family={Fisher},
+         familyi={F\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MK}{%
+         family={Martin},
+         familyi={M\bibinitperiod},
+         given={Karen},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=EI}{%
+         family={Eberhart},
+         familyi={E\bibinitperiod},
+         given={Izabela},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=WC}{%
+         family={Woods},
+         familyi={W\bibinitperiod},
+         given={Christie},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=ES}{%
+         family={Ewings},
+         familyi={E\bibinitperiod},
+         given={Sean},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=HC}{%
+         family={Hale},
+         familyi={H\bibinitperiod},
+         given={Colin},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=RRKR}{%
+         family={Rajoli},
+         familyi={R\bibinitperiod},
+         given={Rajith K.\bibnamedelima R.},
+         giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod\bibinitdelim
+  R\bibinitperiod},
+      }}%
+      {{hash=EL}{%
+         family={Else},
+         familyi={E\bibinitperiod},
+         given={Laura},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=DS}{%
+         family={Dilly‐Penchala},
+         familyi={D\bibinitperiod},
+         given={Sujan},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=AA}{%
+         family={Amara},
+         familyi={A\bibinitperiod},
+         given={Alieu},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=LDG}{%
+         family={Lalloo},
+         familyi={L\bibinitperiod},
+         given={David\bibnamedelima G.},
+         giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod},
+      }}%
+      {{hash=JM}{%
+         family={Jacobs},
+         familyi={J\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PH}{%
+         family={Pertinez},
+         familyi={P\bibinitperiod},
+         given={Henry},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=HP}{%
+         family={Hatchard},
+         familyi={H\bibinitperiod},
+         given={Parys},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=WR}{%
+         family={Waugh},
+         familyi={W\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=LM}{%
+         family={Lawrence},
+         familyi={L\bibinitperiod},
+         given={Megan},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=JL}{%
+         family={Johnson},
+         familyi={J\bibinitperiod},
+         given={Lucy},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=FK}{%
+         family={Fines},
+         familyi={F\bibinitperiod},
+         given={Keira},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=RH}{%
+         family={Reynolds},
+         familyi={R\bibinitperiod},
+         given={Helen},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=RT}{%
+         family={Rowland},
+         familyi={R\bibinitperiod},
+         given={Timothy},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=CR}{%
+         family={Crook},
+         familyi={C\bibinitperiod},
+         given={Rebecca},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=OE}{%
+         family={Okenyi},
+         familyi={O\bibinitperiod},
+         given={Emmanuel},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=BK}{%
+         family={Byrne},
+         familyi={B\bibinitperiod},
+         given={Kelly},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=MP}{%
+         family={Mozgunov},
+         familyi={M\bibinitperiod},
+         given={Pavel},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=JT}{%
+         family={Jaki},
+         familyi={J\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=KS}{%
+         family={Khoo},
+         familyi={K\bibinitperiod},
+         given={Saye},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=OA}{%
+         family={Owen},
+         familyi={O\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=GG}{%
+         family={Griffiths},
+         familyi={G\bibinitperiod},
+         given={Gareth},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=FTE}{%
+         family={Fletcher},
+         familyi={F\bibinitperiod},
+         given={Thomas\bibnamedelima E.},
+         giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{WLEFRSG+1}
+  \strng{fullhash}{WLEFRSGLRFMMKEIWCESHCRRKRELDSAALDGJMPHHPWRLMJLFKRHRTCROEBKMPJTKSOAGGFTE1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    Repurposing approved drugs may rapidly establish effective interventions
+  during a public health crisis. This has yielded immunomodulatory treatments
+  for severe coronavirus disease 2019 (COVID‐19), but repurposed antivirals
+  have not been successful to date because of redundancy of the target in vivo
+  or suboptimal exposures at studied doses. Nitazoxanide is a US Food and Drug
+  Administration (FDA) approved antiparasitic medicine, that
+  physiologically‐based pharmacokinetic (PBPK) modeling has indicated may
+  provide antiviral concentrations across the dosing interval, when repurposed
+  at higher than approved doses. Within the AGILE trial platform (NCT04746183)
+  an open label, adaptive, phase I trial in healthy adult participants was
+  undertaken with high‐dose nitazoxanide. Participants received 1,500~mg
+  nitazoxanide orally twice‐daily with food for 7~days. Primary outcomes were
+  safety, tolerability, optimum dose, and schedule. Intensive pharmacokinetic
+  (PK) sampling was undertaken day 1 and 5 with minimum concentration (Cmin)
+  sampling on days 3 and 7. Fourteen healthy participants were enrolled between
+  February 18 and May 11, 2021. All 14 doses were completed by 10 of 14
+  participants. Nitazoxanide was safe and with no significant adverse events.
+  Moderate gastrointestinal disturbance (loose stools or diarrhea) occurred in
+  8 participants (57.1\%), with urine and sclera discoloration in 12 (85.7\%)
+  and 9 (64.3\%) participants, respectively, without clinically significant
+  bilirubin elevation. This was self‐limiting and resolved upon drug
+  discontinuation. PBPK predictions were confirmed on day 1 but with
+  underprediction at day 5. Median Cmin was above the in vitro target
+  concentration on the first dose and maintained throughout. Nitazoxanide
+  administered at 1,500~mg b.i.d. with food was safe with acceptable
+  tolerability a phase Ib/IIa study is now being initiated in patients with
+  COVID‐19.%
+    }
+    \verb{doi}
+    \verb 10.1002/cpt.2463
+    \endverb
+    \verb{eprint}
+    \verb 34699618
+    \endverb
+    \field{issn}{0009-9236}
+    \field{number}{3}
+    \field{pages}{585\bibrangedash 594}
+    \field{shortjournal}{Clin Pharmacol Ther}
+    \field{shorttitle}{An {{Open Label}}, {{Adaptive}}, {{Phase}} 1 {{Trial}}
+  of {{High}}‐{{Dose Oral Nitazoxanide}} in {{Healthy Volunteers}}}
+    \field{title}{An {{Open Label}}, {{Adaptive}}, {{Phase}} 1 {{Trial}} of
+  {{High}}‐{{Dose Oral Nitazoxanide}} in {{Healthy Volunteers}}: {{An
+  Antiviral Candidate}} for {{SARS}}‐{{CoV}}‐2}
+    \verb{url}
+    \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8653087/
+    \endverb
+    \field{volume}{111}
+    \verb{file}
+    \verb C:\Users\Amit\Zotero\storage\A2FFB5AY\Walker et al. - 2022 - An Open
+    \verb Label, Adaptive, Phase 1 Trial of High‐Dos.pdf
+    \endverb
+    \field{journaltitle}{Clinical Pharmacology and Therapeutics}
+    \field{eprinttype}{pmid}
+    \field{month}{03}
+    \field{year}{2022}
+    \field{urlday}{20}
+    \field{urlmonth}{07}
+    \field{urlyear}{2024}
+  \endentry
+
+  \entry{millardPilotStudyCombination2024}{article}{}
+    \name{author}{8}{}{%
+      {{hash=MT}{%
+         family={Millard},
+         familyi={M\bibinitperiod},
+         given={Trish},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=BC}{%
+         family={Brenin},
+         familyi={B\bibinitperiod},
+         given={Christiana},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=HC}{%
+         family={Humphrey},
+         familyi={H\bibinitperiod},
+         given={Clare},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=DA}{%
+         family={Dhakal},
+         familyi={D\bibinitperiod},
+         given={Ajay},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=FC}{%
+         family={Falkson},
+         familyi={F\bibinitperiod},
+         given={Carla},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=PG}{%
+         family={Petroni},
+         familyi={P\bibinitperiod},
+         given={Gina},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=WNA}{%
+         family={Wages},
+         familyi={W\bibinitperiod},
+         given={Nolan\bibnamedelima A.},
+         giveni={N\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=DP}{%
+         family={Dillon},
+         familyi={D\bibinitperiod},
+         given={Patrick},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MTBCHC+1}
+    \strng{fullhash}{MTBCHCDAFCPGWNADP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    Background Breast cancer has an unacceptably high recurrence rate when any
+  residual disease is found following neoadjuvant treatment of high-risk
+  disease. Based on clinical data suggesting an adjuvant role for epigenetic
+  modifying agents in breast cancer and preclinical data suggesting synergistic
+  activity of entinostat combined with capecitabine, we conducted a phase I,
+  open-label study of these agents in metastatic breast cancer (MBC). Both
+  agents have published doses for use in combination therapy, but the agents
+  had not previously been combined with each other in a human trial. Methods A
+  multisite phase I dose escalation study was performed at two academic
+  centers. Patients with pretreated, HER2-negative MBC, and measurable disease
+  were enrolled. Dual dose escalation was performed via a Bayesian partial
+  order continual assessment method. Dose levels ranged from entinostat 3\,mg
+  to 5\,mg and capecitabine 800\,mg/m2 to 1000\,mg/m2. Results Thirteen
+  patients with MBC and a median of 4 lines of prior therapy were enrolled
+  across four dose level combinations. The most common toxicities were
+  neutropenia, thrombocytopenia, and palmar-plantar dysesthesia, which were
+  expected toxicities. No new safety signals were observed. One dose-limiting
+  toxicity was observed, which did not exceed a prespecified toxicity rate of
+  25\%. The median treatment duration was 2.37 months. No partial nor complete
+  responses were observed. The study was halted early prior to entering an
+  expansion phase, due to drug supply limitations. Conclusion The tested dosing
+  combinations of entinostat and capecitabine are likely safe in heavily
+  pretreated metastatic breast cancer. This study's clinical investigation of
+  entinostat in breast cancer was halted, but drug development of this agent
+  continues outside the US. There remains a need for postoperative adjuvant
+  drug therapy for the subpopulation of breast cancer patients with high-risk
+  residual cancer after curative therapy. This trial is registered with
+  NCT03473639.%
+    }
+    \verb{doi}
+    \verb 10.1155/2024/5515966
+    \endverb
+    \verb{eprint}
+    \verb 38356965
+    \endverb
+    \field{issn}{2090-3170}
+    \field{pages}{5515966}
+    \field{shortjournal}{Int J Breast Cancer}
+    \field{title}{A {{Pilot Study}} of the {{Combination}} of {{Entinostat}}
+  with {{Capecitabine}} in {{Advanced Breast Cancer}}}
+    \verb{url}
+    \verb https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10866629/
+    \endverb
+    \field{volume}{2024}
+    \verb{file}
+    \verb C:\Users\Amit\Zotero\storage\D66U8RNI\Millard et al. - 2024 - A Pilot
+    \verb  Study of the Combination of Entinostat wit.pdf
+    \endverb
+    \field{journaltitle}{International Journal of Breast Cancer}
+    \field{eprinttype}{pmid}
+    \field{day}{07}
+    \field{month}{02}
+    \field{year}{2024}
+    \field{urlday}{20}
+    \field{urlmonth}{07}
+    \field{urlyear}{2024}
+  \endentry
+
   \entry{oquigleyContinualReassessmentMethod1996}{article}{}
     \name{author}{2}{}{%
       {{hash=OJ}{%
@@ -3826,6 +4809,108 @@
     \field{urlyear}{2022}
   \endentry
 
+  \entry{abbasComparisonPhaseDosefinding2020}{article}{}
+    \name{author}{5}{}{%
+      {{hash=AR}{%
+         family={Abbas},
+         familyi={A\bibinitperiod},
+         given={Rachid},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=RC}{%
+         family={Rossoni},
+         familyi={R\bibinitperiod},
+         given={Caroline},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=JT}{%
+         family={Jaki},
+         familyi={J\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=PX}{%
+         family={Paoletti},
+         familyi={P\bibinitperiod},
+         given={Xavier},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=MP}{%
+         family={Mozgunov},
+         familyi={M\bibinitperiod},
+         given={Pavel},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \keyw{Antineoplastic Agents,Bayes Theorem,Clinical Trials Phase I as
+  Topic,Computer Simulation,Dose escalation,Dose-Response Relationship
+  Drug,Drug-Related Side Effects and Adverse Reactions,Humans,Maximum Tolerated
+  Dose,Models Statistical,monotonicity
+  assumption,Neuroblastoma,oncology,partial ordering,phase I,Research Design}
+    \strng{namehash}{ARRCJT+1}
+    \strng{fullhash}{ARRCJTPXMP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    BACKGROUND/AIMS: In oncology, new combined treatments make it difficult to
+  order dose levels according to monotonically increasing toxicity. New
+  flexible dose-finding designs that take into account uncertainty in dose
+  levels ordering were compared with classical designs through simulations in
+  the setting of the monotonicity assumption violation. We give recommendations
+  for the choice of dose-finding design. METHODS: Motivated by a clinical trial
+  for patients with high-risk neuroblastoma, we considered designs that require
+  a monotonicity assumption, the Bayesian Continual Reassessment Method, the
+  modified Toxicity Probability Interval, the Bayesian Optimal Interval design,
+  and designs that relax monotonicity assumption, the Bayesian Partial Ordering
+  Continual Reassessment Method and the No Monotonicity Assumption design. We
+  considered 15 scenarios including monotonic and non-monotonic dose-toxicity
+  relationships among six dose levels. RESULTS: The No Monotonicity Assumption
+  and Partial Ordering Continual Reassessment Method designs were robust to the
+  violation of the monotonicity assumption. Under non-monotonic scenarios, the
+  No Monotonicity Assumption design selected the correct dose level more often
+  than alternative methods on average. Under the majority of monotonic
+  scenarios, the Partial Ordering Continual Reassessment Method selected the
+  correct dose level more often than the No Monotonicity Assumption design.
+  Other designs were impacted by the violation of the monotonicity assumption
+  with a proportion of correct selections below 20\% in most scenarios. Under
+  monotonic scenarios, the highest proportions of correct selections were
+  achieved using the Continual Reassessment Method and the Bayesian Optimal
+  Interval design (between 52.8\% and 73.1\%). The costs of relaxing the
+  monotonicity assumption by the No Monotonicity Assumption design and Partial
+  Ordering Continual Reassessment Method were decreases in the proportions of
+  correct selections under monotonic scenarios ranging from 5.3\% to 20.7\% and
+  from 1.4\% to 16.1\%, respectively, compared with the best performing design
+  and were higher proportions of patients allocated to toxic dose levels during
+  the trial. CONCLUSIONS: Innovative oncology treatments may no longer follow
+  monotonic dose levels ordering which makes standard phase I methods fail. In
+  such a setting, appropriate designs, as the No Monotonicity Assumption or
+  Partial Ordering Continual Reassessment Method designs, should be used to
+  safely determine recommended for phase II dose.%
+    }
+    \verb{doi}
+    \verb 10.1177/1740774520932130
+    \endverb
+    \verb{eprint}
+    \verb 32631095
+    \endverb
+    \field{issn}{1740-7753}
+    \field{number}{5}
+    \field{pages}{522\bibrangedash 534}
+    \field{shortjournal}{Clin Trials}
+    \field{title}{A Comparison of Phase {{I}} Dose-Finding Designs in Clinical
+  Trials with Monotonicity Assumption Violation}
+    \field{volume}{17}
+    \field{langid}{english}
+    \verb{file}
+    \verb C:\Users\Amit\Zotero\storage\WIFBE4XI\Abbas et al. - 2020 - A compari
+    \verb son of phase I dose-finding designs in cl.pdf
+    \endverb
+    \field{journaltitle}{Clinical Trials (London, England)}
+    \field{eprinttype}{pmid}
+    \field{month}{10}
+    \field{year}{2020}
+  \endentry
+
   \entry{wagesPhaseDesignCompletely2014}{article}{}
     \name{author}{3}{}{%
       {{hash=WNA}{%
@@ -3891,98 +4976,6 @@
     \field{day}{20}
     \field{month}{02}
     \field{year}{2014}
-    \field{urlday}{17}
-    \field{urlmonth}{11}
-    \field{urlyear}{2023}
-  \endentry
-
-  \entry{mozgunovPracticalImplementationPartial2022}{article}{}
-    \name{author}{6}{}{%
-      {{hash=MP}{%
-         family={Mozgunov},
-         familyi={M\bibinitperiod},
-         given={Pavel},
-         giveni={P\bibinitperiod},
-      }}%
-      {{hash=JT}{%
-         family={Jaki},
-         familyi={J\bibinitperiod},
-         given={Thomas},
-         giveni={T\bibinitperiod},
-      }}%
-      {{hash=GI}{%
-         family={Gounaris},
-         familyi={G\bibinitperiod},
-         given={Ioannis},
-         giveni={I\bibinitperiod},
-      }}%
-      {{hash=GT}{%
-         family={Goddemeier},
-         familyi={G\bibinitperiod},
-         given={Thomas},
-         giveni={T\bibinitperiod},
-      }}%
-      {{hash=VA}{%
-         family={Victor},
-         familyi={V\bibinitperiod},
-         given={Anja},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=GM}{%
-         family={Grinberg},
-         familyi={G\bibinitperiod},
-         given={Marianna},
-         giveni={M\bibinitperiod},
-      }}%
-    }
-    \keyw{combination study,dose-finding,dose-schedule,partial ordering}
-    \strng{namehash}{MPJTGI+1}
-    \strng{fullhash}{MPJTGIGTVAGM1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{abstract}{%
-    There is a growing medical interest in combining several agents and
-  optimizing their dosing schedules in a single trial in order to optimize the
-  treatment for patients. Evaluating at doses of several drugs and their
-  scheduling in a single Phase I trial simultaneously possess a number of
-  statistical challenges, and specialized methods to tackle these have been
-  proposed in the literature. However, the uptake of these methods is slow and
-  implementation examples of such advanced methods are still sparse to date. In
-  this work, we share our experience of proposing a model-based partial
-  ordering continual reassessment method (POCRM) design for three-dimensional
-  dose-finding in an oncology trial. In the trial, doses of two agents and the
-  dosing schedule of one of them can be escalated/de-escalated. We provide a
-  step-by-step summary on how the POCRM design was implemented and communicated
-  to the trial team. We proposed an approach to specify toxicity orderings and
-  their a-priori probabilities, and developed a number of visualization tools
-  to communicate the statistical properties of the design. The design
-  evaluation included both a comprehensive simulation study and considerations
-  of the individual trial behavior. The study is now enrolling patients. We
-  hope that sharing our experience of the successful implementation of an
-  advanced design in practice that went through evaluations of several health
-  authorities will facilitate a better uptake of more efficient methods in
-  practice.%
-    }
-    \verb{doi}
-    \verb 10.1002/sim.9594
-    \endverb
-    \field{issn}{1097-0258}
-    \field{number}{30}
-    \field{pages}{5789\bibrangedash 5809}
-    \field{title}{Practical Implementation of the Partial Ordering Continual
-  Reassessment Method in a {{Phase I}} Combination-Schedule Dose-Finding Trial}
-    \verb{url}
-    \verb https://onlinelibrary.wiley.com/doi/abs/10.1002/sim.9594
-    \endverb
-    \field{volume}{41}
-    \field{langid}{english}
-    \verb{file}
-    \verb C\:\\Users\\Amit\\Zotero\\storage\\M9VXZ24R\\Mozgunov et al. - 2022 -
-    \verb  Practical implementation of the partial ordering c.pdf;C\:\\Users\\A
-    \verb mit\\Zotero\\storage\\44N99Q6B\\sim.html
-    \endverb
-    \field{journaltitle}{Statistics in Medicine}
-    \field{year}{2022}
     \field{urlday}{17}
     \field{urlmonth}{11}
     \field{urlyear}{2023}
@@ -5157,131 +6150,6 @@
     \field{urlday}{21}
     \field{urlmonth}{06}
     \field{urlyear}{2021}
-  \endentry
-
-  \entry{wheelerHowDesignDosefinding2019}{article}{}
-    \name{author}{12}{}{%
-      {{hash=WGM}{%
-         family={Wheeler},
-         familyi={W\bibinitperiod},
-         given={Graham\bibnamedelima M.},
-         giveni={G\bibinitperiod\bibinitdelim M\bibinitperiod},
-      }}%
-      {{hash=MAP}{%
-         family={Mander},
-         familyi={M\bibinitperiod},
-         given={Adrian\bibnamedelima P.},
-         giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
-      }}%
-      {{hash=BA}{%
-         family={Bedding},
-         familyi={B\bibinitperiod},
-         given={Alun},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=BK}{%
-         family={Brock},
-         familyi={B\bibinitperiod},
-         given={Kristian},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=CV}{%
-         family={Cornelius},
-         familyi={C\bibinitperiod},
-         given={Victoria},
-         giveni={V\bibinitperiod},
-      }}%
-      {{hash=GAP}{%
-         family={Grieve},
-         familyi={G\bibinitperiod},
-         given={Andrew\bibnamedelima P.},
-         giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod},
-      }}%
-      {{hash=JT}{%
-         family={Jaki},
-         familyi={J\bibinitperiod},
-         given={Thomas},
-         giveni={T\bibinitperiod},
-      }}%
-      {{hash=LSB}{%
-         family={Love},
-         familyi={L\bibinitperiod},
-         given={Sharon\bibnamedelima B.},
-         giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
-      }}%
-      {{hash=OL}{%
-         family={Odondi},
-         familyi={O\bibinitperiod},
-         given={Lang’o},
-         giveni={L\bibinitperiod},
-      }}%
-      {{hash=WCJ}{%
-         family={Weir},
-         familyi={W\bibinitperiod},
-         given={Christopher\bibnamedelima J.},
-         giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-      {{hash=YC}{%
-         family={Yap},
-         familyi={Y\bibinitperiod},
-         given={Christina},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=BSJ}{%
-         family={Bond},
-         familyi={B\bibinitperiod},
-         given={Simon\bibnamedelima J.},
-         giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod},
-      }}%
-    }
-    \keyw{Adaptive designs,Continual reassessment method,Dose
-  escalation,Dose-finding,Maximum tolerated dose,Phase I trials,TITE-DTP
-  Chapter}
-    \strng{namehash}{WGMMAPBA+1}
-    \strng{fullhash}{WGMMAPBABKCVGAPJTLSBOLWCJYCBSJ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{abstract}{%
-    The continual reassessment method (CRM) is a model-based design for phase I
-  trials, which aims to find the maximum tolerated dose (MTD) of a new therapy.
-  The CRM has been shown to be more accurate in targeting the MTD than
-  traditional rule-based approaches such as the 3\,+\,3 design, which is used
-  in most phase I trials. Furthermore, the CRM has been shown to assign more
-  trial participants at or close to the MTD than the 3\,+\,3 design. However,
-  the CRM’s uptake in clinical research has been incredibly slow, putting
-  trial participants, drug development and patients at risk. Barriers to
-  increasing the use of the CRM have been identified, most notably a lack of
-  knowledge amongst clinicians and statisticians on how to apply new designs in
-  practice. No recent tutorial, guidelines, or recommendations for clinicians
-  on conducting dose-finding studies using the CRM are available. Furthermore,
-  practical resources to support clinicians considering the CRM for their
-  trials are scarce.%
-    }
-    \verb{doi}
-    \verb 10.1186/s12874-018-0638-z
-    \endverb
-    \field{issn}{1471-2288}
-    \field{number}{1}
-    \field{pages}{18}
-    \field{shortjournal}{BMC Medical Research Methodology}
-    \field{title}{How to Design a Dose-Finding Study Using the Continual
-  Reassessment Method}
-    \verb{url}
-    \verb https://doi.org/10.1186/s12874-018-0638-z
-    \endverb
-    \field{volume}{19}
-    \verb{file}
-    \verb C\:\\Users\\Amit\\Zotero\\storage\\AN5G5WE2\\Wheeler et al. - 2019 -
-    \verb How to design a dose-finding study using the conti.pdf;C\:\\Users\\Am
-    \verb it\\Zotero\\storage\\NG37AACW\\s12874-018-0638-z.html
-    \endverb
-    \field{journaltitle}{BMC Medical Research Methodology}
-    \field{day}{18}
-    \field{month}{01}
-    \field{year}{2019}
-    \field{urlday}{01}
-    \field{urlmonth}{01}
-    \field{urlyear}{2022}
   \endentry
 
   \entry{yapDtpcrmDoseTransition2019}{software}{}
@@ -6907,108 +7775,6 @@
     \field{year}{2009}
     \field{urlday}{17}
     \field{urlmonth}{11}
-    \field{urlyear}{2023}
-  \endentry
-
-  \entry{vanwerkhovenPracticalitiesRunningEarlyphase2020}{article}{useprefix}
-    \name{author}{8}{}{%
-      {{hash=vWE}{%
-         prefix={van},
-         prefixi={v\bibinitperiod},
-         family={Werkhoven},
-         familyi={W\bibinitperiod},
-         given={Erik},
-         giveni={E\bibinitperiod},
-      }}%
-      {{hash=HS}{%
-         family={Hinsley},
-         familyi={H\bibinitperiod},
-         given={Samantha},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=FE}{%
-         family={Frangou},
-         familyi={F\bibinitperiod},
-         given={Eleni},
-         giveni={E\bibinitperiod},
-      }}%
-      {{hash=HJ}{%
-         family={Holmes},
-         familyi={H\bibinitperiod},
-         given={Jane},
-         giveni={J\bibinitperiod},
-      }}%
-      {{hash=dHR}{%
-         prefix={de},
-         prefixi={d\bibinitperiod},
-         family={Haan},
-         familyi={H\bibinitperiod},
-         given={Rosemarie},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=HM}{%
-         family={Hawkins},
-         familyi={H\bibinitperiod},
-         given={Maria},
-         giveni={M\bibinitperiod},
-      }}%
-      {{hash=BS}{%
-         family={Brown},
-         familyi={B\bibinitperiod},
-         given={Sarah},
-         giveni={S\bibinitperiod},
-      }}%
-      {{hash=LSB}{%
-         family={Love},
-         familyi={L\bibinitperiod},
-         given={Sharon\bibnamedelima B.},
-         giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod},
-      }}%
-    }
-    \keyw{Adaptive trial design,Clinical trial design,Dose-finding,Late
-  toxicity,Phase I,TiTE-CRM}
-    \strng{namehash}{vWEHSFE+1}
-    \strng{fullhash}{vWEHSFEHJdHRHMBSLSB1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{abstract}{%
-    Awareness of model-based designs for dose-finding studies such as the
-  Continual Reassessment Method (CRM) is now becoming more commonplace amongst
-  clinicians, statisticians and trial management staff. In some settings
-  toxicities can occur a long time after treatment has finished, resulting in
-  extremely long, interrupted, CRM design trials. The Time-to-Event CRM
-  (TiTE-CRM), a modification to the original CRM, accounts for the timing of
-  late-onset toxicities and results in shorter trial duration. In this article,
-  we discuss how to design and deliver a trial using this method, from the
-  grant application stage through to dissemination, using two radiotherapy
-  trials as examples.%
-    }
-    \verb{doi}
-    \verb 10.1186/s12874-020-01012-z
-    \endverb
-    \field{issn}{1471-2288}
-    \field{number}{1}
-    \field{pages}{162}
-    \field{shortjournal}{BMC Medical Research Methodology}
-    \field{title}{Practicalities in Running Early-Phase Trials Using the
-  Time-to-Event Continual Reassessment Method ({{TiTE-CRM}}) for Interventions
-  with Long Toxicity Periods Using Two Radiotherapy Oncology Trials as
-  Examples}
-    \verb{url}
-    \verb https://doi.org/10.1186/s12874-020-01012-z
-    \endverb
-    \field{volume}{20}
-    \verb{file}
-    \verb C\:\\Users\\Amit\\Zotero\\storage\\RLX6T84I\\van Werkhoven et al. - 2
-    \verb 020 - Practicalities in running early-phase trials using.pdf;C\:\\Use
-    \verb rs\\Amit\\Zotero\\storage\\PW6V2JHV\\s12874-020-01012-z.html
-    \endverb
-    \field{journaltitle}{BMC Medical Research Methodology}
-    \field{day}{22}
-    \field{month}{06}
-    \field{year}{2020}
-    \field{urlday}{19}
-    \field{urlmonth}{04}
     \field{urlyear}{2023}
   \endentry
 
