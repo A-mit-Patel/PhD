@@ -31,64 +31,70 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {3.4}{\ignorespaces Summary of operating characteristics of multiple combinations and parameters}}{86}{table.caption.91}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.5}{\ignorespaces Summary of the three designs being compared. \relax }}{90}{table.caption.94}%
+\contentsline {table}{\numberline {3.5}{\ignorespaces Summary of model outputs during the adaptive randomisation phase for our example trial run.\relax }}{89}{table.caption.93}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.6}{\ignorespaces Operating characteristics comparing multiple designs.}}{91}{table.95}%
+\contentsline {table}{\numberline {3.6}{\ignorespaces Summary of model outputs during the maximisation phase for our example trial run.\relax }}{91}{table.caption.94}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.7}{\ignorespaces Probabilities of selecting the OBD and good dose levels for multiple designs, plus summary statistics.\relax }}{92}{table.caption.96}%
+\contentsline {table}{\numberline {3.7}{\ignorespaces Number and percentage of events for our example trial run by dose-level.\relax }}{93}{table.caption.95}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.8}{\ignorespaces List of effect sizes used in power calculations.\relax }}{96}{table.caption.100}%
+\contentsline {table}{\numberline {3.8}{\ignorespaces Summary of the three designs being compared. \relax }}{96}{table.caption.98}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.9}{\ignorespaces Mean power for various effect sizes based on simulation results.\relax }}{97}{table.caption.101}%
+\contentsline {table}{\numberline {3.9}{\ignorespaces Operating characteristics comparing multiple designs.}}{97}{table.99}%
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.10}{\ignorespaces Selection probabilities and summary statistics for multiple designs.\relax }}{98}{table.caption.100}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.1}{\ignorespaces Specification of parameters for an example CRM trial. \relax }}{109}{table.caption.107}%
+\contentsline {table}{\numberline {3.11}{\ignorespaces List of effect sizes used in power calculations.\relax }}{102}{table.caption.104}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.2}{\ignorespaces Selection probabilities from 10000 simulated trials under various scenarios for the example CRM.\relax }}{110}{table.caption.108}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.3}{\ignorespaces Initial DTP for the first three cohorts of our example CRM.\relax }}{112}{table.caption.110}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.4}{\ignorespaces Updated selection probabilities from 10000 simulated trials under various scenarios for the example CRM with additional rules.\relax }}{116}{table.caption.113}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.5}{\ignorespaces Updated DTPs for the first three cohorts of our example CRM with additional rules.\relax }}{118}{table.caption.114}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.6}{\ignorespaces DTPs for three additional cohorts after observing outcomes for the first three cohorts.\relax }}{124}{table.caption.118}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.7}{\ignorespaces DTPs for three additional cohorts with varying cohort sizes after observing outcomes for the first three cohorts.\relax }}{127}{table.caption.120}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.8}{\ignorespaces TITE-DTP for a cohort of one.\relax }}{133}{table.caption.124}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.9}{\ignorespaces Summary of TITE-DTP for a cohort of one.\relax }}{134}{table.caption.125}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.10}{\ignorespaces TITE-DTP for a cohort of two for scenario 2NT.\relax }}{136}{table.caption.127}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.11}{\ignorespaces Summary of pathways for a cohort of two for scenario 2NN.\relax }}{137}{table.caption.129}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.12}{\ignorespaces Different dose recommendations with overlapping combined follow-up times.\relax }}{139}{table.caption.131}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.13}{\ignorespaces Summary of TITE-DTP for a cohort of two.\relax }}{145}{table.caption.135}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.14}{\ignorespaces TITE-DTP for a cohort of three for scenario 2NTT.\relax }}{150}{table.caption.139}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.15}{\ignorespaces Summary of pathways for a cohort of three for scenario 2NNT. \relax }}{151}{table.caption.140}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.16}{\ignorespaces Summary of pathways for a cohort of three for scenario 2NNN.\relax }}{152}{table.caption.141}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.17}{\ignorespaces Follow-up combinations totalling 20 or 21 days leading to dose-level 5.\relax }}{153}{table.caption.143}%
-\defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.18}{\ignorespaces Summary of TITE-DTP for a cohort of three.\relax }}{158}{table.caption.147}%
+\contentsline {table}{\numberline {3.12}{\ignorespaces Mean power achieved across multiple scenarios for different assumptions of effect size.\relax }}{103}{table.caption.105}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.1}{\ignorespaces Specification of parameters for the example Beta-Binomial trial.\relax }}{177}{table.caption.156}%
+\contentsline {table}{\numberline {4.1}{\ignorespaces Specification of parameters for an example CRM trial. \relax }}{115}{table.caption.111}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.2}{\ignorespaces Examples of different decision criteria.\relax }}{188}{table.caption.166}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Selection probabilities from 10000 simulated trials under various scenarios for the example CRM.\relax }}{116}{table.caption.112}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.3}{\ignorespaces Initial DTP for the first three cohorts of our example CRM.\relax }}{118}{table.caption.114}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.4}{\ignorespaces Updated selection probabilities from 10000 simulated trials under various scenarios for the example CRM with additional rules.\relax }}{122}{table.caption.117}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.5}{\ignorespaces Updated DTPs for the first three cohorts of our example CRM with additional rules.\relax }}{124}{table.caption.118}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.6}{\ignorespaces DTPs for three additional cohorts after observing outcomes for the first three cohorts.\relax }}{130}{table.caption.122}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.7}{\ignorespaces DTPs for three additional cohorts with varying cohort sizes after observing outcomes for the first three cohorts.\relax }}{133}{table.caption.124}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.8}{\ignorespaces TITE-DTP for a cohort of one.\relax }}{139}{table.caption.128}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.9}{\ignorespaces Summary of TITE-DTP for a cohort of one.\relax }}{140}{table.caption.129}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.10}{\ignorespaces TITE-DTP for a cohort of two for scenario 2NT.\relax }}{142}{table.caption.131}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.11}{\ignorespaces Summary of pathways for a cohort of two for scenario 2NN.\relax }}{143}{table.caption.133}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.12}{\ignorespaces Different dose recommendations with overlapping combined follow-up times.\relax }}{145}{table.caption.135}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.13}{\ignorespaces Summary of TITE-DTP for a cohort of two.\relax }}{151}{table.caption.139}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.14}{\ignorespaces TITE-DTP for a cohort of three for scenario 2NTT.\relax }}{156}{table.caption.143}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.15}{\ignorespaces Summary of pathways for a cohort of three for scenario 2NNT. \relax }}{157}{table.caption.144}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.16}{\ignorespaces Summary of pathways for a cohort of three for scenario 2NNN.\relax }}{158}{table.caption.145}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.17}{\ignorespaces Follow-up combinations totalling 20 or 21 days leading to dose-level 5.\relax }}{159}{table.caption.147}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.18}{\ignorespaces Summary of TITE-DTP for a cohort of three.\relax }}{164}{table.caption.151}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.1}{\ignorespaces Specification of parameters for the example Beta-Binomial trial.\relax }}{183}{table.caption.160}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.2}{\ignorespaces Examples of different decision criteria.\relax }}{194}{table.caption.170}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {A.1}{\ignorespaces Summary of decision criteria for Glo-BNHL.\relax }}{224}{table.caption.182}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Summary of decision criteria for Glo-BNHL.\relax }}{230}{table.caption.186}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {A.2}{\ignorespaces Current treatment arms in DETERMINE\relax }}{229}{table.caption.192}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Current treatment arms in DETERMINE\relax }}{235}{table.caption.196}%

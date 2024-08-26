@@ -1,6 +1,6 @@
 % Chapter Template
 
-\chapter{Extensions to the Wages and Tait trial design} % Main chapter title
+\chapter{Extension to a Phase I/II trial design} % Main chapter title
 
 \label{WT} % For referencing this chapter elsewhere, use \ref{WT}
 
@@ -13,7 +13,9 @@
 
 In Chapters \ref{Intro} and \ref{Adept} we discuss the main aim of a Phase \RN{1} is to establish the maximum tolerated dose (MTD) for a treatment under investigation. Model-based designs such as the continual reassessment method (CRM) \cite{oquigleyContinualReassessmentMethod1990} operate with dose selection and escalation decisions being determined by the occurrence of toxicities. These designs also operate under the cytotoxic assumption which assumes the most toxic dose is also the most efficacious. Subsequent Phase \RN{2} trials aim to assess the efficacy of the treatment at the recommended dose (MTD). Usually, these two phases are conducted independently of each other and as such, the ability to share information across the phases is somewhat lost. 
 
-For treatments like chemotherapy which kills all cells including cancer cells \cite{corrieCytotoxicChemotherapyClinical2008}, the cytotoxic assumption is valid. However, the emergence of modern treatments such as immunotherapy and molecular targeted agents challenges this paradigm. Immunotherapy is a form of treatment that utilises the body's immune system to fight cancer \cite{mellmanCancerImmunotherapyComes2011}. Molecular targeted agents (MTA) work by interfering with specific molecules responsible for the growth, spread, and progression of cancer \cite{soriaAddedValueMolecular2011}. The monotonic assumption of dose-efficacy may not hold for these new types of treatments. Furthermore, these treatments, in general, are less toxic than traditional cytotoxic agents such as chemotherapy therefore it is possible the most efficacious dose may occur at a dose-level below the MTD \cite{ahnOptimalBiologicalDose2016}. This produces some methodological challenges for dose-finding trials. Instead of trying to identify the MTD, the goal would be to determine the optimal biological dose (OBD). Depending on the aims of the trial and the design implemented the definition of the OBD may vary. The OBD could be a dose that provides the maximum probability of efficacy with the probability of toxicity being less than a pre-defined target value, or the dose that has a beneficial trade-off between toxicity and efficacy. To determine an optimal dose both toxicity and efficacy outcomes need to be considered and this leads to a need for joint phase \RN{1}/\RN{2} trial designs. Here we will briefly explore some of these designs. 
+For treatments like chemotherapy which kills all cells including cancer cells \cite{corrieCytotoxicChemotherapyClinical2008}, the cytotoxic assumption is valid. However, the emergence of modern treatments such as immunotherapy and molecular targeted agents challenges this paradigm. Immunotherapy is a form of treatment that utilises the body's immune system to fight cancer \cite{mellmanCancerImmunotherapyComes2011}. Molecular targeted agents (MTA) work by interfering with specific molecules responsible for the growth, spread, and progression of cancer \cite{soriaAddedValueMolecular2011}. The monotonic assumption of dose-efficacy may not hold for these new types of treatments. Furthermore, these treatments, in general, are less toxic than traditional cytotoxic agents such as chemotherapy therefore it is possible the most efficacious dose may occur at a dose-level below the MTD \cite{ahnOptimalBiologicalDose2016}. This produces some methodological challenges for dose-finding trials. Instead of trying to identify the MTD, the goal would be to determine the optimal biological dose (OBD). Depending on the aims of the trial and the design implemented the definition of the OBD may vary. The OBD could be a dose that provides the maximum probability of efficacy with the probability of toxicity being less than a pre-defined target value, or the dose that has a beneficial trade-off between toxicity and efficacy. To determine an optimal dose both toxicity and efficacy outcomes need to be considered and this leads to a need for joint phase \RN{1}/\RN{2} trial designs. 
+
+Here we will briefly explore some of these designs. This is not an extensive review of the literature but just an illustration of these types of trial design. 
 
 Braun \cite{braunBivariateContinualReassessment2002} proposed the bivariate continual reassessment method (bCRM), an extension to the CRM which incorporates competing outcomes for both toxicity and disease progression. The design models the probabilities of toxicity and progression independently, it is suggested that either empiric, logistic, or hyperbolic tangent functions are used dependent on their biological plausibility. Both outcomes are then combined into a joint distribution which is used to estimate posterior means based on priors and observed data. 
 
@@ -27,7 +29,9 @@ Anathakrishnan et al. \cite{ananthakrishnanExtensionsMTPITEQR2018} produced exte
 
 Riviere et al. \cite{rivierePhaseIIDosefinding2018} developed a Bayesian dose-finding design for MTA. The design works on the premise that for MTA efficacy initially increases with dose then eventually plateaus. They use a logistic model with a plateau parameter to capture the dose-level at which plateaus begin in the dose-efficacy relationship. A weighted likelihood approach is also used to accommodate for any potential late-onset toxicities. This methodology incorporates adaptive randomisation to allocate patients to the dose-level closest to the likely plateau point.
 
-This chapter revolves around the seamless phase \RN{1}/\RN{2} dose-finding adaptive design by Wages and Tait \cite{wagesSeamlessPhaseII2015}, which we will refer to as the WT design. This design models toxicity and efficacy independently. To model the probability of efficacy, a set of possible efficacy skeletons are considered which would correspond to plausible dose-efficacy relationships. For the class of dose-efficacy models, a single parameter model is used similar to the empiric model of the CRM. The authors recommend that ($2n - 1$) efficacy skeletons are specified where $n$ is the number of doses being investigated. Toxicity is modelled using a CRM approach with an empiric model. As such a skeleton for toxicity is also required for this design. The dose-finding operates in two stages the adaptive randomisation (AR) phase and the maximisation phase. In the AR phase patients are adaptively randomised amongst a set of tolerable doses (determined by the CRM toxicity model), where probabilities of randomisation to each dose are proportional to their posterior probabilities of efficacy. A pre-defined number of patients enter the AR phase and once recruitment has been completed we move to the maximisation phase. In this phase, patients are allocated to the dose in the tolerable set which maximises the probability of efficacy.  
+Mozgunov et al. \cite{mozgunovRandomizedDoseescalationDesigns2019} discuss randomised dose-escalation designs for drug combination trials with immunotherapy. Here they investigate the use of a 4 parameter EMAX model with a randomisation scheme. The use of a four parameter model allows for toxicity risk at the standard of care to be modelled independently, modelling a plateau at a particular level and a steep increase in toxicity. 
+
+This chapter revolves around the seamless phase \RN{1}/\RN{2} dose-finding adaptive design by Wages and Tait \cite{wagesSeamlessPhaseII2015}, which we will refer to as the WT design. This design models toxicity and efficacy independently. To model the probability of efficacy, a set of possible efficacy skeletons are considered which would correspond to plausible dose-efficacy relationships. For the class of dose-efficacy models, a single parameter model is used similar to the empiric model of the CRM. The authors recommend that ($2n - 1$) efficacy skeletons are specified where $n$ is the number of doses being investigated. Toxicity is modelled using a CRM approach with an empiric model that requires a skeleton for toxicity. The dose-finding operates in two stages the adaptive randomisation (AR) phase and the maximisation phase. In the AR phase patients are adaptively randomised amongst a set of tolerable doses (determined by the CRM toxicity model), where probabilities of randomisation to each dose are proportional to their posterior probabilities of efficacy. A pre-defined number of patients enter the AR phase and once recruitment has been completed we move to the maximisation phase. In this phase, patients are allocated to the dose in the tolerable set which maximises the probability of efficacy.  
 
 The incorporation of an AR phase early on into the trial is beneficial since there may be a lack of data to rely on decisions made by the maximisation of efficacy probabilities. Also, there may be doses that have not been tested and randomisation allows for information to be collected from these. It also helps avoid getting stuck repeatedly recruiting to the same dose and allows for a more broad understanding of the dose-efficacy and toxicity relationships. One extension that we propose is the inclusion of randomisation to a control arm in the design. This would provide a set of patients who receive standard of care to act as controls and allow for comparisons to be made with outcomes from patients receiving the OBD. There is also the added benefit of being able to include standard of care into the models to get a better understanding of the dose-efficacy and toxicity relationships.  
 
@@ -40,7 +44,7 @@ Section \ref{WT:Wages-and-Tait-Design}, details the statistical aspects of the W
 \section{The Wages and Tait design}
 \label{WT:Wages-and-Tait-Design}
 
-In this section, we detail the Wages and Tait design using the same notation as presented in their paper \cite{wagesSeamlessPhaseII2015}. A set of $I$ doses under investigation can be denoted as $\mathscrsfs{D} = \{d_1, ...,d_i\}$. For each patient $j$ entered into the trial they are allocated to a dose-level and joint outcomes for toxicity and efficacy are measured. The dose for the $j$th patient, $X_j$, $j = 1,...n$ can be thought of as random, taking values $x_j \in  \mathscrsfs{D}$. Let $Y_j$ and $Z_j$ be the random variables for binary toxicity and efficacy events respectively. For an individual patient $j$, toxicity and efficacy outcomes can take values $y_j, z_j \in \{0,1\}$ where 0 indicates an event did not happen and 1 indicates that it did. 
+In this section, we detail the Wages and Tait design. Here we have used slightly different notation than first introduced in Chapter \ref{Adept}, this was to ensure that the design we present here is as specified in the original paper \cite{wagesSeamlessPhaseII2015} and also to make it simpler when cross referencing with available code. A set of $I$ doses under investigation can be denoted as $\mathscrsfs{D} = \{d_1, ...,d_i\}$. For each patient $j$ entered into the trial they are allocated to a dose-level and joint outcomes for toxicity and efficacy are measured. The dose for the $j$th patient, $X_j$, $j = 1,...n$ can be thought of as random, taking values $x_j \in  \mathscrsfs{D}$. Let $Y_j$ and $Z_j$ be the random variables for binary toxicity and efficacy events respectively. For an individual patient $j$, toxicity and efficacy outcomes can take values $y_j, z_j \in \{0,1\}$ where 0 indicates an event did not happen and 1 indicates that it did. 
 
 Wages and Tait \cite{wagesSeamlessPhaseII2015} utilise the CRM approach of O'Quigley et al. \cite{oquigleyContinualReassessmentMethod1990} to model toxicity. A univariate Bayesian method is used which begins by assuming a monotonically increasing dose-toxicity curve. The DLT probabilities, $\pi_T(d_i)$, are modelled at each dose level $i$ where $i= 1, ..., I$. The power model is specifically used by Wages and Tait in this design given by 
 
@@ -79,7 +83,7 @@ For a specific maximum acceptable toxicity rate, $\phi_T$ a set of acceptable or
 	\mathscrsfs{A}_j = \{d_i : \hat{\pi}_T(d_i)  \leq \phi_T ; i = 1,...,I \}.
 \end{equation} 
 
-To model efficacy, a Bayesian approach is taken similar to how toxicity was modelled but rather than using a singular working model a class of working models is considered. They use a class of skeletons that correspond to various dose-efficacy relationships. These relationships might be monotonically increasing (as the dose-levels increase efficacy increases), unimodal (initially increasing then decreasing) or plateau (initially increase then level off). As a guide, it is suggested that $(2I-1)$ working models should be specified. The probability of an efficacious response at dose $d_i$ is denoted as $\pi_E(d_i)$. The primary aim of the trial is to identify the optimal dose $d_v \in \mathscrsfs{D}$ which is defined such that 
+To model efficacy, a Bayesian approach is taken similar to how toxicity was modelled but rather than using a singular working model a class of working models is considered. They use a class of skeletons that correspond to various dose-efficacy relationships. These relationships might be monotonically increasing (as the dose-levels increase efficacy increases), unimodal (initially increasing then decreasing) or plateau (initially increase then level off). As a guide, it is suggested that $(2I-1)$ working models should be specified. The probability of an efficacious response at dose $d_i$ is denoted as $\pi_E(d_i)$. The primary aim of the trial is to identify the optimal dose from doses considered safe $d_v \in \mathscrsfs{D}$ which is defined such that 
 
 \begin{equation}
 	\pi_E(d_1) \leq ... \leq \pi_E(d_v) \geq ... \geq \pi_E(d_I). 
@@ -165,11 +169,11 @@ Typically, seamless phase \RN{1}/\RN{2} trial designs perform the tasks of phase
 
 An example of where this design may be beneficial is in the investigation of a standard of care treatment in combination with an experimental treatment. The standard of care treatment could be included as the control dose and should have a well-understood toxicity and efficacy profile which could be incorporated into the toxicity and efficacy skeletons. Further dose levels would also receive standard of care along with increasing levels of the experimental treatment, here the interaction between the two treatments in terms of toxicity and efficacy could be investigated and an OBD could be found using the RtC-WT design. 
 
-As a seamless phase \RN{1}/\RN{2} design WT is relatively simple and effective. The familiarity of using a CRM design to model toxicity and naturally extending that methodology to model efficacy with multiple working models mean the design is not particularly difficult to implement. The mathematics behind the design is also not too intense so extensive computation will not be necessary. Given some effort, this design could be implemented in a variety of programming languages although Brock offers easy implementation of this design in his R package escalation \cite{brockModularApproachDose2020}. Considering all these factors extensions to this design can be executed without too many obstacles.
+As a seamless phase \RN{1}/\RN{2} design WT is relatively simple and effective. The familiarity of using a CRM design to model toxicity and naturally extending that methodology to model efficacy with multiple working models means the design is not particularly difficult to implement. The mathematics behind the design is also not too intense so extensive computation will not be necessary. Given some effort, this design could be implemented in a variety of programming languages although Brock offers easy implementation of this design in his R package escalation \cite{brockModularApproachDose2020}. Considering all these factors, extensions to this design can easily be executed without too many obstacles.
 
 The WT design can be considered fairly unique due to its use of adaptive randomisation. Whilst adaptive randomisation is not the core focus of the design it is still a distinguishing factor that could be leveraged to help investigators answer questions other designs are unable to. Specifically, the randomisation allows for more dose-levels to be explored and perhaps obtain a better understanding of the dose-toxicity and efficacy relationships. 
 
-Conceptually the WT design could include a control arm without any modification to the design. All that this would require is the addition of a new dose-level at which patients receive control treatment/standard of care. This would need to be implemented as the lowest dose-level as dose-levels still need to obey the monotonicity assumption for toxicity. The issue with taking this approach is that the design is unlikely to allocate patients to the control dose-level. Even though adaptive randomisation is in play the randomisation probabilities are based on estimates of efficacy probabilities and control patients may be unexpected to have an efficacious event. This is a desirable characteristic when investigating treatments as we do not want to allocate too many patients to inefficacious doses. However, if the aim is to establish a cohort of patients as controls to facilitate comparisons to the OBD this is not an optimal characteristic. 
+Conceptually the WT design could include a control arm without any modification to the design. All that this would require is the addition of a new dose-level at which patients receive control treatment/standard of care. This would need to be implemented as the lowest dose-level as dose-levels still need to obey the monotonicity assumption for toxicity. The issue with taking this approach is that the design is unlikely to allocate patients to the control dose-level. Even though adaptive randomisation is being used the randomisation probabilities are based on estimates of efficacy probabilities and control patients may be unexpected to have an efficacious event. This is a desirable characteristic when investigating treatments as we do not want to allocate too many patients to inefficacious doses. However, if the aim is to establish a cohort of patients as controls to facilitate comparisons to the OBD this is not an optimal characteristic. 
 
 \begin{figure}[!h]
 	\centering
@@ -240,7 +244,7 @@ Here we detail the design specifications for RtC-WT that we will be using throug
 	\end{tabular}
 \end{table}
 
-For the control dose, we have set our prior beliefs for the probability of toxicity at 10\% and the probability of efficacy at 30\%. This can of course be adjusted if there is reason to believe that the control dose may be slightly more/less effective or toxic. 
+For the control dose, we have set our prior beliefs for the probability of toxicity at 10\% and the probability of efficacy at 30\%. These values can be altered if there is reason to believe that the control dose may have higher or lower probabilities of toxicity and efficacy. 
 
 Wages and Tait recommend $(2I-1)$ efficacy skeletons be used which in this example would be nine, however, we have only considered seven. As there are only four active doses and we are assuming we understand the control dose in terms of toxicity and probability then seven different skeletons fits in the Wages and Tait's recommendation. As we are investigating control plus some experimental treatment it is implausible to have scenarios where efficacy falls as dose increases. So, we have removed the two efficacy skeletons with dose-efficacy relationships that suggest the lowest dose would be the most efficacious. For completeness, the first extra skeleton would be unimodal with the highest efficacy occurring at dose-level one (i.e. 0.7, 0.6, 0.5, 0.4, 0.3 for dose-levels 1-5) and the second skeleton would be a plateau relationship with the plateau beginning at dose-level one (i.e. 0.7, 0.7, 0.7, 0.7, 0.7 for dose-levels 1-5). 
 
@@ -659,7 +663,7 @@ Scenario 6 only has one good dose to select, making it similar to scenario 3 exc
 
 A plateau relationship where dose-efficacy stops increasing after dose 3 is looked at in scenarios 7-9 with the three different toxicity curves. In scenario 7 the probability of selecting the OBD ranges from 48\%-56\%, with the probability of selecting a good dose ranging from 70-84\%. In this instance, we see quite a bit of discrepancy going from selecting the OBD to selecting the good doses in terms of the selection probabilities being much higher for good doses. Here we have three doses with the same efficacy level, two of which only have a slight increase in toxicity, which is still below the pre-specified target level. This can also be seen in the number of patients being treated at the good dose versus at the OBD. Scenario 8 exhibits the same behaviour as the other toxic scenarios 2 and 5. Then with scenario 9, the designs also behave similarly to scenarios 3 and 6 where higher dose-levels are too toxic. Selection probabilities range from 34\% to 56\% with the designs with higher AR phases performing better. 
 
-For scenarios 10-12 we look at a monotone decreasing efficacy curve where dose-level 2 is the most efficacious for each of the toxicity curves. In scenario 10 we see very high probabilities of selecting the OBD 76\%-80\% with the probability of selecting a good dose being 97\% or higher. We can also see that in terms of the numbers treated at the OBD and the good doses as these values are relatively high compared to other scenarios. As the OBD is one of the lower dose-levels it makes it relatively easy for the model to select since it is more likely that patients will be allocated there early on into recruitment. Once the maximisation phase starts there would be a lot of efficacy data for that dose and it would be favoured by the model. Even in the cases with larger AR phases, the adaptive randomisation probabilities are still scaled based on efficacy, so it would be more likely they would be allocated to dose-level 2 as well. 
+For scenarios 10-12 we look at a monotone decreasing efficacy curve where dose-level 2 is the most efficacious for each of the toxicity curves. In scenario 10 we see very high probabilities of selecting the OBD (76\%-80\%) with the probability of selecting a good dose being 97\% or higher. We can also see that in terms of the numbers treated at the OBD and the good doses as these values are relatively high compared to other scenarios. As the OBD is one of the lower dose-levels it makes it relatively easy for the model to select since it is more likely that patients will be allocated there early on into recruitment. Once the maximisation phase starts there would be a lot of efficacy data for that dose and it would be favoured by the model. Even in the cases with larger AR phases, the adaptive randomisation probabilities are still scaled based on efficacy, so it would be more likely they would be allocated to dose-level 2 as well. 
 
 In terms of stopping early if the dose-levels are too toxic for this efficacy curve (scenario 11), performance appears to be worse compared to other too-toxic scenarios (scenarios 2,5,8 and 14). Even so, we still see the same patterns where when the AR phase is 60, the same size as the trial stopping is relatively even worse. Ignoring those designs the stopping probability ranges from 52\%-65\%, adding in the percentage of patients allocated to the control arm this increases to 56\%-74\%. One reason why this may be worse is due to the very high efficacy rates early on and the toxicity rate only being slightly above our target rate by 5\%. Early on into the trial, that 5\% would be difficult for the model to detect but the high efficacy rate is likely to lead to more events so the trial would be less likely to stop until it went to higher dose-levels. Additionally, as the efficacy rates are so high as well for early doses the futility rule is less likely to be triggered meaning less stopping overall compared to other toxic scenarios.  
 
@@ -678,7 +682,7 @@ The means for selecting a good dose are about 10\% higher and appear to be sligh
 	\resizebox{\linewidth}{!}{
 		\begin{tabular}[t]{ccccccccccccccccccccc}
 			\toprule
-			\multicolumn{2}{c}{ } & \multicolumn{15}{c}{Probability of selecting good dose levels: Scenarios 1-15} & \multicolumn{2}{c}{All scenarios} & \multicolumn{2}{c}{Non Stopping} \\
+			\multicolumn{2}{c}{ } & \multicolumn{15}{c}{Selection probabilities: Scenarios 1-15} & \multicolumn{2}{c}{All scenarios} & \multicolumn{2}{c}{Non Stopping} \\
 			\cmidrule(l{3pt}r{3pt}){3-17} \cmidrule(l{3pt}r{3pt}){18-19} \cmidrule(l{3pt}r{3pt}){20-21}
 			$\phi_R$ & $j_R$ & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & Mean & StDev & Mean & StDev\\
 			\midrule
@@ -738,26 +742,200 @@ Based on these simulations it would be best to use an AR phase sized between 25\
 %-----------------------------------
 %	SUBSECTION 4.3
 %-----------------------------------
+\subsection{Example trial run}
+\label{WT:toy}
+
+To further demonstrate how the design works we provide a illustrative example of a single trial run. Here we will use the same design as specified in the previous section. Specifically we will be using the design with an AR phase size of 30 and an adaptive randomisation probability of 0.33. All other parameters and priors are as defined previously. In practice the trial will recruit patients in cohorts of three, they will then be given treatment and observed. After the observation period has been collected we will update the model with the data that has been observed and determine the dose to be recommended for the next cohort. 
+
+Toxicity and efficacy events are treated as binary variables, so for each patient there are four different potential outcomes. We will use a specific notation to denote each of these outcomes. A patient can experience a toxicity event (T), a efficacy event (E), both a toxicity and efficacy event (B) or neither a toxicity or efficacy event (N). To reference the outcomes for a specific cohort we label them with the dose-level of that cohort. For example a cohort at dose-level 4, where 1 patient had a toxicity, 1 patient experienced a toxicity and efficacy event and 1 patient had neither would be presented as 4TBN. It should be noted the order of the outcomes does not matter either, 4TBN is equivalent to 4BTN, 4BNT, etc. 
+
+For our example trial run we start at dose-level 2. Overall we will recruit 60 patients, unless the model recommends stopping early. The adaptive randomisation phase will last for 30 patients (10 cohorts). The results for our observed outcomes are shown in Table \ref{tab_WT:EstimatesExampleRunAR}. Here for each cohort we show the estimated probabilities from the model for toxicity and efficacy at each dose-level, we also present the randomisation probabilities as well which indicate the probability of randomly allocating the next cohort to the next dose-level. The table also shows what the recommended and optimal dose is after each cohort. 
+
+\begin{table}
+	\centering\begingroup\fontsize{9}{11}\selectfont
+	\caption{\label{tab_WT:EstimatesExampleRunAR}Summary of model outputs during the adaptive randomisation phase for our example trial run.}
+	\resizebox{\linewidth}{!}{
+		\begin{tabular}{ccccccccccc}
+			\toprule
+			\multicolumn{4}{c}{ } & \multicolumn{5}{c}{Estimated probabilities} & \multicolumn{2}{c}{ } \\
+			\cmidrule(l{3pt}r{3pt}){5-9}
+			Cohort & Dose & Outcome &   & 1 & 2 & 3 & 4 & 5 & Recommended & Optimal\\
+			\midrule
+			&  &  & tox & 0.06 & 0.09 & 0.14 & 0.19 & 0.26 &  & \\
+			
+			&  &  & eff & 0.34 & 0.68 & 0.59 & 0.5 & 0.42 &  & \\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 1} & \multirow{-3}{*}{\centering\arraybackslash 2} & \multirow{-3}{*}{\centering\arraybackslash EEN} & rand. & 0.33 & 0.21 & 0.18 & 0.15 & 0.13 & \multirow{-3}{*}{\centering\arraybackslash 3} & \multirow{-3}{*}{\centering\arraybackslash 2}\\
+			\cmidrule{1-11}
+			&  &  & tox & 0.02 & 0.04 & 0.07 & 0.11 & 0.17 &  & \\
+			
+			&  &  & eff & 0.51 & 0.74 & 0.8 & 0.74 & 0.67 &  & \\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 2} & \multirow{-3}{*}{\centering\arraybackslash 3} & \multirow{-3}{*}{\centering\arraybackslash EEE} & rand. & 0.33 & 0.17 & 0.18 & 0.17 & 0.15 & \multirow{-3}{*}{\centering\arraybackslash 3} & \multirow{-3}{*}{\centering\arraybackslash 3}\\
+			\cmidrule{1-11}
+			&  &  & tox & 0.02 & 0.04 & 0.07 & 0.11 & 0.17 &  & \\
+			
+			&  &  & eff & 0.51 & 0.74 & 0.8 & 0.74 & 0.67 &  & \\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 3} & \multirow{-3}{*}{\centering\arraybackslash 3} & \multirow{-3}{*}{\centering\arraybackslash EEE} & rand. & 0.33 & 0.17 & 0.18 & 0.17 & 0.15 & \multirow{-3}{*}{\centering\arraybackslash 4} & \multirow{-3}{*}{\centering\arraybackslash 3}\\
+			\cmidrule{1-11}
+			&  &  & tox & 0.01 & 0.01 & 0.03 & 0.05 & 0.09 &  & \\
+			
+			&  &  & eff & 0.44 & 0.69 & 0.77 & 0.69 & 0.61 &  & \\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 4} & \multirow{-3}{*}{\centering\arraybackslash 4} & \multirow{-3}{*}{\centering\arraybackslash ENN} & rand. & 0.33 & 0.17 & 0.19 & 0.17 & 0.15 & \multirow{-3}{*}{\centering\arraybackslash 1} & \multirow{-3}{*}{\centering\arraybackslash 3}\\
+			\cmidrule{1-11}
+			&  &  & tox & 0.01 & 0.01 & 0.03 & 0.05 & 0.09 &  & \\
+			
+			&  &  & eff & 0.32 & 0.6 & 0.7 & 0.6 & 0.5 &  & \\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 5} & \multirow{-3}{*}{\centering\arraybackslash 1} & \multirow{-3}{*}{\centering\arraybackslash NNN} & rand. & 0.33 & 0.17 & 0.19 & 0.17 & 0.14 & \multirow{-3}{*}{\centering\arraybackslash 2} & \multirow{-3}{*}{\centering\arraybackslash 3}\\
+			\cmidrule{1-11}
+			&  &  & tox & 0 & 0.01 & 0.02 & 0.05 & 0.08 &  & \\
+			
+			&  &  & eff & 0.27 & 0.56 & 0.66 & 0.56 & 0.46 &  & \\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 6} & \multirow{-3}{*}{\centering\arraybackslash 2} & \multirow{-3}{*}{\centering\arraybackslash ENN} & rand. & 0.33 & 0.17 & 0.2 & 0.17 & 0.14 & \multirow{-3}{*}{\centering\arraybackslash 4} & \multirow{-3}{*}{\centering\arraybackslash 3}\\
+			\cmidrule{1-11}
+			&  &  & tox & 0.01 & 0.03 & 0.06 & 0.12 & 0.19 &  & \\
+			
+			&  &  & eff & 0.23 & 0.53 & 0.64 & 0.53 & 0.42 &  & \\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 7} & \multirow{-3}{*}{\centering\arraybackslash 4} & \multirow{-3}{*}{\centering\arraybackslash ENT} & rand. & 0.33 & 0.17 & 0.2 & 0.17 & 0.13 & \multirow{-3}{*}{\centering\arraybackslash 1} & \multirow{-3}{*}{\centering\arraybackslash 3}\\
+			\cmidrule{1-11}
+			&  &  & tox & 0.01 & 0.03 & 0.06 & 0.11 & 0.18 &  & \\
+			
+			&  &  & eff & 0.25 & 0.54 & 0.65 & 0.54 & 0.44 &  & \\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 8} & \multirow{-3}{*}{\centering\arraybackslash 1} & \multirow{-3}{*}{\centering\arraybackslash ENN} & rand. & 0.33 & 0.17 & 0.2 & 0.17 & 0.14 & \multirow{-3}{*}{\centering\arraybackslash 5} & \multirow{-3}{*}{\centering\arraybackslash 3}\\
+			\cmidrule{1-11}
+			&  &  & tox & 0.03 & 0.05 & 0.1 & 0.17 & 0.26 &  & \\
+			
+			&  &  & eff & 0.24 & 0.53 & 0.64 & 0.53 & 0.43 &  & \\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 9} & \multirow{-3}{*}{\centering\arraybackslash 5} & \multirow{-3}{*}{\centering\arraybackslash ETT} & rand. & 0.33 & 0.17 & 0.2 & 0.17 & 0.13 & \multirow{-3}{*}{\centering\arraybackslash 1} & \multirow{-3}{*}{\centering\arraybackslash 3}\\
+			\cmidrule{1-11}
+			&  &  & tox & 0.03 & 0.05 & 0.1 & 0.17 & 0.25 &  & \\
+			
+			&  &  & eff & 0.25 & 0.55 & 0.65 & 0.55 & 0.44 &  & \\
+			
+			\multirow{-3}{*}{\centering\arraybackslash 10} & \multirow{-3}{*}{\centering\arraybackslash 1} & \multirow{-3}{*}{\centering\arraybackslash ENN} & rand. & 0.33 & 0.17 & 0.2 & 0.17 & 0.14 & \multirow{-3}{*}{\centering\arraybackslash 3} & \multirow{-3}{*}{\centering\arraybackslash 3}\\
+			\bottomrule
+	\end{tabular}}
+	\endgroup{}
+\end{table}
+
+For the first cohort we see 2EEN, so two patients had efficacy events and one patient has neither. Based on this data the model shows that all doses are considered safe as the probability of toxicity is less than 0.35 for all five doses. Looking at the estimated probability of efficacy we can see that dose-level 2 has the highest probability at 0.68. This implies that the optimal dose would be dose-level 2 as it has the highest estimated efficacy probability and is within the admissible safe set of doses. However, the recommended dose is dose-level 3. This is because the recommended dose in the AR phase is selected randomly based on the randomisation probabilities. As dose-level 2 has the highest efficacy probability we can see its randomisation probability is also the highest apart from dose-level 1 which is fixed at 0.33. Here there is still a chance to recommend the other doses as there randomisation probabilities are non zero. It is important to note if we were to run the model again with the exact same data, the estimated toxicity, efficacy and randomisation probabilities and optimal dose would all be the same but the recommended dose could be any of the five doses. 
+
+Continuing this example as the model recommended dose-level 3 after the first cohort the second cohort is recruited and assigned dose-level 3. In this example all 3 patients experience an efficacy event. When this is put into the model, dose-level 3 is determined to be the optimal dose. The recommended dose in this case is also dose-level 3. We see it has the highest estimated efficacy and therefore also has the highest randomisation probability outside of the control dose. As the efficacy probabilities are similar for the dose-levels 2-5 the randomisation probabilities are also similar (0.15-0.18). So, the model could have easily recommended any of the other dose-levels. 
+
+This process is repeated for the whole AR phase. After observing each cohort we can see from cohort 2 onwards the optimal dose is considered to be dose-level 3. This is due to the dose having the highest estimated efficacy probability whilst remaining in the admissible set of doses in terms of safety based on the estimated toxicity probability. Even though the optimal dose is considered to be dose-level 3 we see after most of the cohorts the recommended dose is usually a different dose. This is because the recommended dose is being randomly allocated and as there have been limited toxicities in this example all of the doses are considered safe and have a chance of being allocated to. In this example we see that all of the dose-levels have been allocated patients at some point during this AR phase. 
+
+As 10 cohorts of three patients have now been recruited we have reached the 30 patient limit for the AR phase. Moving into the maximisation phase doses are no longer randomly allocated and instead the optimal dose is now the dose that is recommended. From cohort 10 in Table \ref{tab_WT:EstimatesExampleRunAR} we can see the optimal dose is dose-level 3 and there would be the dose recommended for cohort 11. Table \ref{tab_WT:EstimatesExampleRunMax} provides a summary of the model outputs for the next 10 cohorts based on specific outcomes. Thee adaptive randomisation probabilities are no longer presented as they are not required to allocate patients and as the optimal dose is now always the recommended dose these can be considered the same. 
+
+ \begin{table}
+ 	\centering\begingroup\fontsize{9}{11}\selectfont
+ 	\caption{\label{tab_WT:EstimatesExampleRunMax}Summary of model outputs during the maximisation phase for our example trial run.}
+ 	\resizebox{\linewidth}{!}{
+ 		\begin{tabular}{cccccccccc}
+ 			\toprule
+ 			\multicolumn{4}{c}{ } & \multicolumn{5}{c}{Estimated probabilities} & \multicolumn{1}{c}{ } \\
+ 			\cmidrule(l{3pt}r{3pt}){5-9}
+ 			Cohort & Dose & Outcome &   & 1 & 2 & 3 & 4 & 5 & Recommended/Optimal\\
+ 			\midrule
+ 			&  &  & tox & 0.02 & 0.04 & 0.09 & 0.15 & 0.24 & \\
+ 			
+ 			\multirow{-2}{*}{\centering\arraybackslash 11} & \multirow{-2}{*}{\centering\arraybackslash 3} & \multirow{-2}{*}{\centering\arraybackslash EEN} & eff & 0.25 & 0.55 & 0.65 & 0.55 & 0.44 & \multirow{-2}{*}{\centering\arraybackslash 3}\\
+ 			\cmidrule{1-10}
+ 			&  &  & tox & 0.04 & 0.07 & 0.14 & 0.23 & 0.32 & \\
+ 			
+ 			\multirow{-2}{*}{\centering\arraybackslash 12} & \multirow{-2}{*}{\centering\arraybackslash 3} & \multirow{-2}{*}{\centering\arraybackslash BBE} & eff & 0.28 & 0.57 & 0.68 & 0.57 & 0.47 & \multirow{-2}{*}{\centering\arraybackslash 3}\\
+ 			\cmidrule{1-10}
+ 			&  &  & tox & 0.05 & 0.08 & 0.16 & 0.25 & 0.34 & \\
+ 			
+ 			\multirow{-2}{*}{\centering\arraybackslash 13} & \multirow{-2}{*}{\centering\arraybackslash 3} & \multirow{-2}{*}{\centering\arraybackslash BEE} & eff & 0.3 & 0.59 & 0.69 & 0.59 & 0.49 & \multirow{-2}{*}{\centering\arraybackslash 3}\\
+ 			\cmidrule{1-10}
+ 			&  &  & tox & 0.06 & 0.09 & 0.17 & 0.26 & 0.36 & \\
+ 			
+ 			\multirow{-2}{*}{\centering\arraybackslash 14} & \multirow{-2}{*}{\centering\arraybackslash 3} & \multirow{-2}{*}{\centering\arraybackslash EET} & eff & 0.3 & 0.59 & 0.69 & 0.59 & 0.49 & \multirow{-2}{*}{\centering\arraybackslash 3}\\
+ 			\cmidrule{1-10}
+ 			&  &  & tox & 0.06 & 0.1 & 0.18 & 0.28 & 0.37 & \\
+ 			
+ 			\multirow{-2}{*}{\centering\arraybackslash 15} & \multirow{-2}{*}{\centering\arraybackslash 3} & \multirow{-2}{*}{\centering\arraybackslash ENT} & eff & 0.27 & 0.57 & 0.67 & 0.57 & 0.47 & \multirow{-2}{*}{\centering\arraybackslash 3}\\
+ 			\cmidrule{1-10}
+ 			&  &  & tox & 0.07 & 0.11 & 0.19 & 0.29 & 0.39 & \\
+ 			
+ 			\multirow{-2}{*}{\centering\arraybackslash 16} & \multirow{-2}{*}{\centering\arraybackslash 3} & \multirow{-2}{*}{\centering\arraybackslash BEE} & eff & 0.29 & 0.59 & 0.69 & 0.59 & 0.49 & \multirow{-2}{*}{\centering\arraybackslash 3}\\
+ 			\cmidrule{1-10}
+ 			&  &  & tox & 0.09 & 0.13 & 0.22 & 0.32 & 0.42 & \\
+ 			
+ 			\multirow{-2}{*}{\centering\arraybackslash 17} & \multirow{-2}{*}{\centering\arraybackslash 3} & \multirow{-2}{*}{\centering\arraybackslash BET} & eff & 0.29 & 0.59 & 0.69 & 0.59 & 0.49 & \multirow{-2}{*}{\centering\arraybackslash 3}\\
+ 			\cmidrule{1-10}
+ 			&  &  & tox & 0.09 & 0.14 & 0.23 & 0.33 & 0.43 & \\
+ 			
+ 			\multirow{-2}{*}{\centering\arraybackslash 18} & \multirow{-2}{*}{\centering\arraybackslash 3} & \multirow{-2}{*}{\centering\arraybackslash BNN} & eff & 0.27 & 0.57 & 0.67 & 0.57 & 0.47 & \multirow{-2}{*}{\centering\arraybackslash 3}\\
+ 			\cmidrule{1-10}
+ 			&  &  & tox & 0.08 & 0.13 & 0.22 & 0.31 & 0.41 & \\
+ 			
+ 			\multirow{-2}{*}{\centering\arraybackslash 19} & \multirow{-2}{*}{\centering\arraybackslash 3} & \multirow{-2}{*}{\centering\arraybackslash EEN} & eff & 0.27 & 0.57 & 0.67 & 0.57 & 0.47 & \multirow{-2}{*}{\centering\arraybackslash 3}\\
+ 			\cmidrule{1-10}
+ 			&  &  & tox & 0.08 & 0.12 & 0.21 & 0.3 & 0.4 & \\
+ 			
+ 			\multirow{-2}{*}{\centering\arraybackslash 20} & \multirow{-2}{*}{\centering\arraybackslash 3} & \multirow{-2}{*}{\centering\arraybackslash ENN} & eff & 0.25 & 0.55 & 0.66 & 0.55 & 0.45 & \multirow{-2}{*}{\centering\arraybackslash 3}\\
+ 			\bottomrule
+ 	\end{tabular}}
+ 	\endgroup{}
+ \end{table}
+
+In maximisation phase we can see after each cohort the decision remains unchanged an the recommended/optimal dose is always dose-level 3. This is because that dose has the highest estimated probability of efficacy. Whilst doses 4 and 5 are still within the admissible set of doses in terms of probability of toxicity the estimated efficacy is not as high compared to dose-level 3. If perhaps we were to observe fewer efficacy events in some of the cohorts this may change and the model may consider moving to a higher or lower dose. Also in terms of toxicity whilst some patients do start to experience toxicity events there is not enough for the model to consider dose-level 3 no longer safe and move to a lower dose. 
+
+For example we see in cohorts 12 and 13 outcomes of BBE and BEE respectively so all six of those patients had an efficacy event and three also had an efficacy event. This causes the estimated probability of toxicity to go from 0.09 after evaluating outcomes for cohort 11 to 0.16 after cohort 13. Similarly, the estimated efficacy goes from 0.65 to 0.68. For future cohorts there would need to be a difference in the outcomes observed in order for the model to recommend a different dose as up to this point there has been data collected on 39 patients, with 15 who have been treated at dose-level 3.
+
+After the final cohort has been observed the model still recommends dose-level 3 so that would be declared as the OBD. Table \ref{tab_WT:SummaryExampleRunMax} shows a summary of the number of patients treated at each dose-level along with the number of efficacy and toxicity events and the percentage of patients in each dose-level who experienced an event. The majority of patients end up being allocated to dose-level 3 as this was continually defined as the optimal dose during the maximisation phase. 
+
+\begin{table}[h!]
+	\centering
+	\caption{\label{tab_WT:SummaryExampleRunMax}Number and percentage of events for our example trial run by dose-level.}
+	\begin{tabular}{cccc}
+		\toprule
+		\multicolumn{2}{c}{ } & \multicolumn{2}{c}{N (\%)} \\
+		\cmidrule(l{3pt}r{3pt}){3-4}
+		Dose & No. of patients & Toxicity & Efficacy\\
+		\midrule
+		\cellcolor{gray!6}{1} & \cellcolor{gray!6}{9} & \cellcolor{gray!6}{0 (0\%)} & \cellcolor{gray!6}{2 (22.22\%)}\\
+		2 & 6 & 0(0\%) & 3(50\%)\\
+		\cellcolor{gray!6}{3} & \cellcolor{gray!6}{36} & \cellcolor{gray!6}{9 (25\%)} & \cellcolor{gray!6}{26 (72.22\%)}\\
+		4 & 6 & 1(16.67\%) & 2(33.33\%)\\
+		\cellcolor{gray!6}{5} & \cellcolor{gray!6}{3} & \cellcolor{gray!6}{2 (66.67\%)} & \cellcolor{gray!6}{1 (33.33\%)}\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Overall, our design seems to work as intended. During the AR phase multiple different doses were allocated to cohorts of patients along with the control dose (dose-level 1). It is possible that just by chance during the AR phase you may end up selecting the same dose over and over again and not allocate patients to other doses. So we could include additional rules to mitigate against this. Ultimately the impact on performance of the design may be limited as a range of doses could still be explored during the maximisation phase. Here the outcomes observed could cause the estimated probabilities of efficacy and toxicity to change and thus give a different dose recommendations. 
+
+%-----------------------------------
+%	SUBSECTION 4.4
+%-----------------------------------
 \subsection{Comparison of RtC-WT against Alternative Designs }
 \label{WT:CompAltDesigns}
 
-The simulations in the previous section were about exploring the impact of varying the parameters controlling the randomisation in RtC-WT. In this section we investigate two alternative trial approaches which could be used to achieve the same aims as RtC-WT, that is to conduct a dose-finding study locating the ODB whilst recruiting patients to a control arm. Simulations will be conducted for these two alternatives across a variety of scenarios and operating characteristics will be compared against those for RtC-WT.       
+The simulations presented in Section \ref{WT:Impact-ARandRTCon-RtC-WT} were about exploring the impact of varying the parameters controlling the randomisation in RtC-WT. In this section we investigate two alternative trial approaches which could be used to achieve the same aims as RtC-WT, that is to conduct a dose-finding study locating the ODB whilst recruiting patients to a control arm. Simulations will be conducted for these two alternatives across a variety of scenarios and operating characteristics will be compared against those for RtC-WT.       
 
 The first alternative approach would be just to use a standard Wages and Tait design and include the lowest dose-level as control. We will refer to this approach as the standard Wages and Tait (WT). Technically this design does not aim to recruit control patients but by including it as a dose-level there is still a probability during the AR phase that this occurs. Either way, this will be a good comparator for RtC-WT as we will be able to directly compare how our extension impacts performance compared to a traditional Wages and Tait design. Theoretically, since the standard Wages and Tait design will not be forced to allocate patients to the control dose-level you would expect more patients to be allocated at the experimental treatment dose-levels leading to more data on efficacy and toxicity relationships making it easier to locate the ODB. The differences in performance between these two designs could be considered as the cost of including a control dose. 
 
-The second design uses a two-arm randomised approach. Patients once recruited are randomised to either a control arm or a dose-finding study arm. The dose-finding study arm will use the method of Wages and Tait to identify an OBD. We will refer to this method as the two-arm approach. One of the benefits of this approach is that it is fairly simplistic. This could be considered a straightforward way of including a control arm into complex designs without having to figure out any complicated mathematics. For example, the EffTox design could be used for the dose-finding arm, and due to the two-arm approach, we now have a cohort of control patients without building that methodology directly into the design. For the dose-finding study, any methodology could be used here to locate an OBD, however, we selected WT to provide more comparisons for RtC-WT. Since the randomisation occurs upfront a guaranteed number of patients can be expected in the control arm, which may be a desirable characteristic of this design. It is important to note in our simulations here that we will not consider any data from the patients in the control arm to have an impact on the dose-finding study arm. Both arms can be considered independent for our simulations. In terms of comparisons to RtC-WT, this design will allow us to see if it is worth including the control patients directly in the dose-finding aspect of the design and if there is any benefit in terms of operating characteristics.  
+The second design uses a two-arm randomised approach. Patients once recruited are randomised to either a control arm or a dose-finding study arm. The dose-finding study arm will use the method of Wages and Tait to identify an OBD. We will refer to this method as the two-arm approach. One of the benefits of this approach is that it is fairly simplistic. This could be considered a straightforward way of including a control arm into complex designs without having to deal with any mathematics. For example, the EffTox design could be used for the dose-finding arm, and due to the two-arm approach, we now have a cohort of control patients without building that methodology directly into the design. For the dose-finding study, any methodology could be used here to locate an OBD, however, we selected WT to provide more comparisons for RtC-WT. Since the randomisation occurs upfront a guaranteed number of patients can be expected in the control arm, which may be a desirable characteristic of this design. It is important to note in our simulations here that we will not consider any data from the patients in the control arm to have an impact on the dose-finding study arm. Both arms can be considered independent for our simulations. In terms of comparisons to RtC-WT, this design will allow us to see if it is worth including the control patients directly in the dose-finding aspect of the design and if there is any benefit in terms of operating characteristics.  
 
 For RtC-WT we will be using the same design specification as detailed in Section \ref{WT:Design-Spec}. In terms of parameters for the number of patients in the AR phase and the probability of randomising to control these will be set at $j_R = 30$ and $\phi_R = 0.33 $ respectively. These values were selected based on the work done in the previous section. This combination of parameters seemed to perform consistently across all the scenarios explored. The standard Wages and Tait approach will also be using the same specification except for the fixed probability of randomisation to control.
 
-For the two-arm approach, things are slightly different since patients are being randomised first. Looking at the RtC-WT design we have specified a sample size of 60, an AR phase size of 30 and a probability of randomising to control at 33\%. Here we would expect roughly ten patients to be allocated to the control arm (33\% of 30), looking at Table \ref{tab_wt:SelectProbCombos} for this combination we see on average we achieve around 9-10 patients at the control dose-level in non-toxic scenarios. To mimic this behaviour for the two-arm approach we would need to specify a randomisation ratio upfront. Based on the parameters set for RtC-WT this can be done generally using the formula:
+For the two-arm approach, patients are being randomised first. Looking at the RtC-WT design we have specified a sample size of 60, an AR phase size of 30 and a probability of randomising to control at 33\%. Here we would expect roughly ten patients to be allocated to the control arm (33\% of 30), looking at Table \ref{tab_wt:SelectProbCombos} for this combination we see on average we achieve around 9-10 patients at the control dose-level in non-toxic scenarios. To mimic this behaviour for the two-arm approach we would need to specify a randomisation ratio upfront. Based on the parameters set for RtC-WT this can be done generally using the formula:
 
 \begin{equation}
 	1 : \frac{J}{\phi_R j_r} - 1,
 \end{equation}
 
-where $J$ is the maximum sample size. Alternatively, if the number of control patients desired is known the denominator can be replaced by that number. In this scenario, this corresponds to a 1:5.06 randomisation which would lead to 10 patients in the control arm and 50 in the dose-finding study. As we are using cohorts of 3 it would be preferable to have the sample size of the dose-finding study be divisible by 3. Therefore we set the desired number of control patients as 9, leaving 51 for the dose-finding study. This gives a randomisation ratio of 1:5.67 (3:17). 
+where $J$ is the maximum sample size. Alternatively, if the number of control patients desired is known the denominator can be replaced by that number. In this scenario, using the equation above we obtain a randomisation ratio of approximately 1:5. This would lead to 10 patients in the control arm and 50 in the dose-finding arm. As we are using cohorts of 3 it would be preferable to have the sample size of the dose-finding study be divisible by 3. Therefore we set the desired number of control patients as 9, leaving 51 for the dose-finding study.
 
-The specifications for the dose-finding study will be somewhat similar as well. Here there will only be four dose levels (no control dose-level) i.e doses 2-5 in Section \ref{WT:Design-Spec}. We also adjust the toxicity and efficacy skeletons accordingly in Table \ref{tab_wt:tox-eff-skeleton} as well by removing the values from dose-level 1. Since there is no control dose-level in the design we will just be using approximately 50\% of the patients in the AR phase, as recommended by Wages and Tait. As there will be 51 patients in the dose-finding study we set the AR phase to 24, slightly less than 50\% as we are using cohorts of three and 51 patients can not be evenly split up between the two phases. Each design has an effective total sample size of 60 patients, however the allocation of patients to the specific dose-finding portion of the Two-Arm design differs slightly. All other design specifications remain the same such as the stopping rules and the pre-specified toxicity upper bound and lower bound. We summarise the three designs being compared in Table \ref{tab_wt:Designs-to-compare}.
+The specifications for the dose-finding study in the two-arm approach will be somewhat similar as well. Here there will only be four dose levels (no control dose-level) i.e doses 2-5 in Section \ref{WT:Design-Spec}. We also adjust the toxicity and efficacy skeletons accordingly in Table \ref{tab_wt:tox-eff-skeleton} as well by removing the values from dose-level 1. Since there is no control dose-level in the design we will just be using approximately 50\% of the patients in the AR phase, as recommended by Wages and Tait. As there will be 51 patients in the dose-finding study we set the AR phase to 24, slightly less than 50\% as we are using cohorts of three and 51 patients can not be evenly split up between the two phases. Each design has an effective total sample size of 60 patients, however the allocation of patients to the specific dose-finding portion of the Two-Arm design differs slightly. All other design specifications remain the same such as the stopping rules and the pre-specified toxicity upper bound and lower bound. We summarise the three designs being compared in Table \ref{tab_wt:Designs-to-compare}.
 
 \begin{table}[h!]
 	\centering
@@ -786,7 +964,7 @@ The specifications for the dose-finding study will be somewhat similar as well. 
 }
 \end{table}
 
-To compare these different approaches simulations will be used covering the same 15 scenarios as in section \ref{WT:Impact-ARandRTCon-RtC-WT}. For each scenario, we simulate 10000 trials using the designs mentioned above. Table \ref{tab_wt:OCsDesigns-to-compare} shows the operating characteristics comparing the three designs. Table \ref{tab_wt:OCsDesigns-to-compare-Summary} provides summary statistics of the operating characteristics.
+To compare these different approaches simulations will be used covering the same 15 scenarios as in section \ref{WT:Impact-ARandRTCon-RtC-WT}. For each scenario, we simulate 10000 trials using the designs mentioned above. Table \ref{tab_wt:OCsDesigns-to-compare} shows the operating characteristics comparing the three designs. Table \ref{tab_wt:OCsDesigns-to-compare-Summary} provides summary statistics of the operating characteristics. The mean and standard deviation of the selction probabilities are calculated for all scenarios and also all scenarios excluding those where stopping is the best option (non stopping). 
 
 \begingroup\fontsize{9}{11}\selectfont
 
@@ -899,7 +1077,7 @@ To compare these different approaches simulations will be used covering the same
 
 \begin{table}[h!]
 	
-	\caption{\label{tab_wt:OCsDesigns-to-compare-Summary}Probabilities of selecting the OBD and good dose levels for multiple designs, plus summary statistics.}
+	\caption{\label{tab_wt:OCsDesigns-to-compare-Summary} Selection probabilities and summary statistics for multiple designs.}
 	\centering
 	\resizebox{\linewidth}{!}{
 		\begin{tabular}[t]{cccccccccccccccccccc}
@@ -924,9 +1102,11 @@ To compare these different approaches simulations will be used covering the same
 
 To compare the Two-Arm design with the others, we still consider there to be five dose-levels, with the first dose-level being a separate arm and dose-levels 2-5 comprising the dose-finding arm. Also, since the two arms can be considered independent in scenarios where stopping is preferred, this would only stop the dose-finding arm so patients at dose-level 1, the control arm, can still be recruited.   
 
-Consistently the RtC-WT and WT designs outperform the Two-Arm approach in terms of selection of the OBD if only by a few percentage points. Since the Two-Arm approach is essentially the same as the standard WT design but with fewer patients, it is expected to be slightly inferior as with most dose-finding studies a higher number of patients yield better operating characteristics. However, with the RtC-WT design actively recruiting to the control dose there should be an equal number of patients receiving control and treatment dose-levels to equate to similar operating characteristics. There appears to be some added benefit in terms of modelling for including control as a dose-level rather than using the Two-Arm approach when it comes to selecting the OBD. It should be mentioned that the differences in selection of the OBD are only slight between 1\% and 8\%. In terms of MC error, which was discussed in Chapter \ref{Adept}, Section \ref{adept:OCs}, a slight difference of 1\% can still be interpreted as significant. Also, the Two-Arm approach manages to allocate more patients to the OBD in certain scenarios (10 and 12) which is the monotone decreasing efficacy curve. In these scenarios having fewer dose-levels is an advantage as the earlier dose-levels are the most optimal making selection easier. It should be mentioned that an alternative specification of the Two-Arm approach may lead to better performance overall. In scenarios where stopping early would be ideal all three designs seem to behave similarly and have relatively comparable operating characteristics. 
+Across most scenarios RtC-WT and WT designs outperform the Two-Arm approach in terms of selection of the OBD if only by a few percentage points. Since the Two-Arm approach is essentially the same as the standard WT design but with fewer patients, it is expected to be slightly inferior as with most dose-finding studies a higher number of patients yield better operating characteristics. However, with the RtC-WT design actively recruiting to the control dose there should be an equal number of patients receiving control and treatment dose-levels to equate to similar operating characteristics. There appears to be some added benefit in terms of modelling for including control as a dose-level rather than using the Two-Arm approach when it comes to selecting the OBD. It should be mentioned that the differences in selection of the OBD are only slight between 1\% and 8\%. In terms of MC error, which was discussed in Chapter \ref{Adept}, Section \ref{adept:OCs}, a slight difference of 1\% can still be interpreted as significant. Also, the Two-Arm approach manages to allocate more patients to the OBD in certain scenarios (10 and 12) which is the monotone decreasing efficacy curve. In these scenarios having fewer dose-levels is an advantage as the earlier dose-levels are the most optimal making selection easier. It should be mentioned that an alternative specification of the Two-Arm approach may lead to better performance overall. In scenarios where stopping early would be ideal all three designs seem to behave similarly and have relatively comparable operating characteristics. 
 
 The performance of the RtC-WT and WT design is quite similar across all the scenarios. The key differences between RtC-WT and WT can be seen in the number of patients recruited to the control dose-level. The WT design recruits fewer patients here as expected since the randomisation probability is not fixed. This usually results in more patients being allocated to the OBD. RtC-WT would experience situations where it would allocate a cohort to the control dose-level but the standard WT in the same situation would be able to randomise between the efficacious doses. This advantage however does not consistently yield better selection probabilities. Generally, we can say the WT design is not ideal if a trial aims to recruit control patients whilst conducting a dose-finding study. However, in the case where the control dose has high enough efficacy, the WT design can successfully still randomise patients there as can be seen in these simulations. It is possible under a different parametrisation, perhaps a design with a larger adaptive randomisation phase those numbers of control patients would be higher, although this may negatively impact performance. Overall, we can see the trade-off between allowing for this recruitment to control and overall performance. Based on these simulations and scenarios it seems RtC-WT performs relatively well.
+
+
 
 %-----------------------------------
 %	SUBSECTION 4.4
@@ -978,7 +1158,7 @@ Table \ref{tab_wt:Power-Calcs} details the power calculations which are based on
 
 \begin{table}[h!]
 	
-	\caption{\label{tab_wt:Power-Calcs}Mean power for various effect sizes based on simulation results.}
+	\caption{\label{tab_wt:Power-Calcs}Mean power achieved across multiple scenarios for different assumptions of effect size.}
 	\centering
 	\begin{tabular}[t]{cccccc}
 		\toprule
@@ -1031,5 +1211,7 @@ It should be noted that the inclusion of a control dose depends on the definitio
 We also explored how efficient our design would be when conducting efficacy tests. The power for detecting large differences in the effect size ranged from 64-70\%. Most Phase \RN{2} trials would strive to achieve higher power and may be able to detect smaller differences. Further work could be done by building upon this design to achieve this same goal. One other limitation is that whilst we have used some form of randomisation it is not entirely similar to randomisation that may occur in a Phase \RN{2} setting. So, it may be possible when using RtC-WT there is an imbalance in key patient characteristics when comparing the control and OBD doses.  
 
 A recent development by Yan et al. \cite{yanImprovedAdaptiveRandomization2019} suggested three alternative strategies of adaptive randomisation for the Wages and Tait design. They showed that their final recommended strategy achieved better accuracy when selecting the OBD as well as allocating more patients to that dose-level as well. The strategy works by gradually excluding efficacy skeletons as data is collected. RtC-WT could be improved further by the incorporation of this alternative adaptive randomisation method as we have already shown its effectiveness in comparison to the traditional Wages and Tait design.  
+
+In the paper by Mozgunov et al. \cite{mozgunovRandomizedDoseescalationDesigns2019} they compare the use of a 4 parameter EMAX model with a CRM one parameter model, a two parameter logistic model with and without randomisation. It was found that the four parameter model with the inclusion of randomisation out performed the alternative approaches in terms of identification of the optimal dose combination. It was also shown that the two parameter logistic models performed relatively well and out performed the one parameter model. For the RtC-WT design one limitation is we only investigated use of one parameter models for toxicity and efficacy. Based on the work by Mozgunov et al. \cite{mozgunovRandomizedDoseescalationDesigns2019} the use of a two parameter model may yield better performance from our design as it would be able to model the probability of toxicity at the control dose and the experimental doses separately. Based on the randomisation in our design patients would be allocated to doses around two points the control dose and OBD. Thus, more flexible models may be more appropriate. Considering our aims were to investigate the adaptive randomisation component of the WT design to see if it could be leveraged to include a control arm optimisation of this design could be apart of further research specifically investigating the benefit of using different models.
 
 Whilst relatively simplistic, our modification allowed for the inclusion of a control dose-level to the Wages and Tait method without compromising operating characteristics. We presented results from multiple simulations showing good performance, especially in non-monotonic efficacy scenarios. Further work could be done to consider a wider range of design specifications and scenarios. We utilised a relatively simple trial scenario and made a lot of assumptions that may not necessarily be applicable in a real-world trial setting.  
