@@ -13,14 +13,30 @@ library(ggpubr)
 
 data.frame(x = seq(from = 0, to = 35, by = 0.1)) %>% 
   mutate(y = x/35,
-         quick = 1 - exp(-(x/7)^2),
-         slow = 1 - exp(-(x/22)^6)) %>% 
-  ggplot() +
-  geom_line(aes(x = x, y = y)) +
-  geom_line(aes(x = x, y = quick)) +
-  geom_line(aes(x = x, y = slow))
+         w1 = 1 - exp(-(x/7)^2),
+         w2 = 1 - exp(-(x/22)^6)) %>% 
+  pivot_longer(cols = c("y", "w1", "w2"))%>% 
+  ggplot(aes(x = x, y = value, col = name)) +
+  geom_line(linewidth = 1) +
+  labs(x = "Time (days)", y = "Weight", col = "Function") +
+  scale_x_continuous(breaks = seq(0, 35, 5))+
+  scale_color_brewer(palette = "Set1", labels = c("Weight 1", "Weight 2",
+                                                  "Linear"))+
+  theme_bw()+
+  theme(legend.position = c(0.92, 0.2))
 
-
+data.frame(x = seq(from = 0, to = 35, by = 5)) %>% 
+  mutate(y = x/35,
+         w1 = 1 - exp(-(x/7)^2),
+         w2 = 1 - exp(-(x/22)^6)) %>% 
+  round(2) %>% 
+  kable('latex', booktabs = T, linesep = "", align = "c", 
+        col.names = c('Time (Days)', 'Linear', 'Weight 1', 'Weight 2'),
+        caption = '\\label{tab_tite-dtp:AltWeightSumm}Summary of weight value for different weight functions.') %>% 
+  kable_styling(latex_options = c("striped", "HOLD_position"),
+                position = "center") %>% 
+  add_header_above(c('', 'Weight functions' = 3)) %>% 
+  cat()
 ################################################################################
 
 # TITE-DTPs
@@ -146,7 +162,15 @@ results %>% mutate(TotalFollow = Patient1+Patient2,
                    Var = Var %>% round(4)) %>%
   filter(TotalFollow == 8) %>% 
   select(Patient1, Patient2, TotalFollow, Rec, Est, Var) %>% 
-  arrange(desc(TotalFollow)) 
+  arrange(desc(TotalFollow)) %>% 
+  kable('latex', booktabs = T, linesep = "", align = "c",
+        col.names = c('Patient 1', 'Patient 2', 'Combined', 'Dose Recommendation',
+                      'Beta', 'Variance'),
+        caption = '\\label{tab_tite-dtp:AltWeightW1prob}Follow-up combinations totalling 8 days for scenario NN using Weight 1.') %>%
+  kable_styling(latex_options = c("striped", "HOLD_position", "scale_down"),
+                position = "center", font_size = 11) %>%
+  add_header_above(c('Follow-up' = 3, ' ' = 1, 'Posterior Estimates' = 2)) %>%
+  cat()
 
 # Overall plot 
 results %>% mutate(TotalFollow = Patient1+Patient2) %>%
@@ -157,6 +181,21 @@ results %>% mutate(TotalFollow = Patient1+Patient2) %>%
        col = "Recommended Dose")+
   scale_color_manual(values = c("#994d1a","#1a6699"))+
   scale_x_continuous(breaks = seq(0, 70, 5))+
+  theme_bw()+
+  theme(legend.position = "bottom") 
+
+results %>% mutate(TotalFollow = Patient1+Patient2) %>%
+  filter(TotalFollow %in% c(7,8,9)) %>% 
+  ggplot(aes(x = TotalFollow, y = Est, col = factor(Rec))) + 
+  geom_point() +
+  geom_hline(yintercept = 0.149, col = "red", linetype = "longdash") +
+  labs(x = "Combined Total Follow-up", y = expression(Posterior ~ Estimate ~ beta),
+       col = "Recommended Dose")+
+  geom_text_repel(mapping = aes(label = paste0("(", Patient1, ", ",
+                                               Patient2, ")")),
+                  show.legend = FALSE, max.overlaps = Inf)+
+  scale_color_manual(values = c("#994d1a","#1a6699"))+
+  scale_x_continuous(breaks = c(7,8,9))+
   theme_bw()+
   theme(legend.position = "bottom") 
 
@@ -189,9 +228,6 @@ results %>% mutate(TotalFollow = Patient1+Patient2) %>%
 
 results <- results %>% 
   mutate(TF = Patient1 + Patient2)
-
-results %>% 
-  filter(TF <= 37 & TF >=23) 
 
 
 level <- c(2,2)

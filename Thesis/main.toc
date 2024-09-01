@@ -23,19 +23,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.3}PO-TITE-CRM in ADePT-DDR}{22}{section.30}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.1}Partial ordering in practice}{23}{subsection.31}%
+\contentsline {subsection}{\numberline {2.3.1}Partial ordering in practice}{24}{subsection.31}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.2}The TITE component}{27}{subsection.36}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.3}Stopping rules}{29}{subsection.39}%
+\contentsline {subsection}{\numberline {2.3.3}Stopping rules}{30}{subsection.39}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.4}Example trial run}{31}{subsection.40}%
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {2.3.5}Operating characteristics}{35}{subsection.44}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Exploring other designs}{40}{section.48}%
+\contentsline {section}{\numberline {2.4}Exploring other designs}{41}{section.48}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Discussion}{48}{section.59}%
+\contentsline {section}{\numberline {2.5}Discussion}{49}{section.59}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Extension to a Phase I/II trial design}{53}{chapter.60}%
 \defcounter {refsection}{0}\relax 
@@ -83,36 +83,52 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.3.3}Cohort of three patients}{155}{subsection.142}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Discussion}{166}{section.154}%
+\contentsline {section}{\numberline {4.4}Alternative weight functions}{167}{section.154}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Efficacy Transition Pathways}{177}{chapter.155}%
+\contentsline {subsection}{\numberline {4.4.1}Weight function 1 in the NN scenario}{170}{subsection.159}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Introduction}{177}{section.156}%
+\contentsline {subsection}{\numberline {4.4.2}Weight function 2 in the NN scenario}{173}{subsection.165}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Efficacy Transition Pathways}{179}{section.157}%
+\contentsline {section}{\numberline {4.5}Discussion}{176}{section.169}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.1}Illustrative example to showcase a Beta-Binomial design}{181}{subsection.158}%
+\contentsline {chapter}{\numberline {5}Efficacy Transition Pathways}{187}{chapter.170}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.2}Constructing Efficacy Transition Pathways}{183}{subsection.161}%
+\contentsline {section}{\numberline {5.1}Introduction}{187}{section.171}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.2.3}Updating decision criteria based on Efficacy Transition Pathways}{191}{subsection.168}%
+\contentsline {section}{\numberline {5.2}Efficacy Transition Pathways}{189}{section.172}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Implementation of ETPs}{196}{section.172}%
+\contentsline {subsection}{\numberline {5.2.1}Illustrative example to showcase a Beta-Binomial design}{191}{subsection.173}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Development of a web application for ETPs}{198}{section.173}%
+\contentsline {subsection}{\numberline {5.2.2}Constructing Efficacy Transition Pathways}{198}{subsection.191}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.1}Additional Features of the App}{202}{subsection.174}%
+\contentsline {subsection}{\numberline {5.2.3}Updating decision criteria based on Efficacy Transition Pathways}{207}{subsection.198}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.5}Discussion}{206}{section.175}%
+\contentsline {section}{\numberline {5.3}Implementation of ETPs}{213}{section.203}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Summary and Conclusions}{211}{chapter.176}%
+\contentsline {section}{\numberline {5.4}Development of a web application for ETPs}{215}{section.204}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Examples implementing ETPs}{221}{appendix.177}%
+\contentsline {subsection}{\numberline {5.4.1}Additional Features of the App}{219}{subsection.205}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.1}MonoGerm}{221}{section.178}%
+\contentsline {section}{\numberline {5.5}Discussion}{223}{section.206}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.2}Glo-BNHL}{226}{section.183}%
+\contentsline {chapter}{\numberline {6}Summary and Conclusions}{229}{chapter.207}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {A.3}DETERMINE}{234}{section.193}%
+\contentsline {chapter}{\numberline {A}Examples implementing ETPs}{239}{appendix.208}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{239}{appendix*.198}%
+\contentsline {section}{\numberline {A.1}MonoGerm}{239}{section.209}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.2}Glo-BNHL}{244}{section.214}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {A.3}DETERMINE}{252}{section.224}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {B}Code}{257}{appendix.229}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.1}TITE-PO-CRM in ADePT-DDR chapter code}{257}{section.230}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.2}Extension to Phase I/II design chapter code}{323}{section.1569}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.3}TITE-DTP chapter code}{346}{section.2039}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {B.4}ETP chapter code}{384}{section.2841}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{401}{appendix*.3173}%

@@ -9,11 +9,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {2.2}{\ignorespaces ADePT-DDR dose-levels.}}{24}{table.caption.34}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.3}{\ignorespaces Summary of model outputs for our example trial run.\relax }}{31}{table.caption.41}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Summary of model outputs for our example trial run.\relax }}{32}{table.caption.41}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.4}{\ignorespaces Operating Characteristics for ordering 1.}}{37}{table.caption.45}%
+\contentsline {table}{\numberline {2.4}{\ignorespaces Operating Characteristics for ordering 1.}}{38}{table.caption.45}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {2.5}{\ignorespaces Operating Characteristics for ordering 2.}}{38}{table.caption.46}%
+\contentsline {table}{\numberline {2.5}{\ignorespaces Operating Characteristics for ordering 2.}}{39}{table.caption.46}%
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {2.6}{\ignorespaces Summary of simulated patient numbers for each scenario.\relax }}{40}{table.caption.47}%
 \defcounter {refsection}{0}\relax 
@@ -81,20 +81,38 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {4.16}{\ignorespaces Summary of pathways for a cohort of three for scenario 2NNN.\relax }}{158}{table.caption.145}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {4.17}{\ignorespaces Follow-up combinations totalling 20 or 21 days leading to dose-level 5.\relax }}{159}{table.caption.147}%
+\contentsline {table}{\numberline {4.17}{\ignorespaces Follow-up combinations totalling 20 or 21 days leading to dose-level 5.\relax }}{160}{table.caption.147}%
 \defcounter {refsection}{0}\relax 
 \contentsline {table}{\numberline {4.18}{\ignorespaces Summary of TITE-DTP for a cohort of three.\relax }}{164}{table.caption.151}%
 \defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.19}{\ignorespaces Summary of weight values for different weight functions.\relax }}{169}{table.caption.158}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.20}{\ignorespaces Summary of pathways for scenario 2NN with Weight 1.\relax }}{171}{table.caption.160}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.21}{\ignorespaces Follow-up combinations totalling 8 days for scenario NN using Weight 1.\relax }}{171}{table.caption.161}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.22}{\ignorespaces Summary of TITE-DTP for scenario NN under Weight 1.\relax }}{173}{table.caption.164}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.23}{\ignorespaces Summary of pathways for scenario 2NN with Weight 2.\relax }}{174}{table.caption.166}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {4.24}{\ignorespaces Summary of TITE-DTP for scenario NN under Weight 2.\relax }}{176}{table.caption.168}%
+\defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.1}{\ignorespaces Specification of parameters for the example Beta-Binomial trial.\relax }}{183}{table.caption.160}%
+\contentsline {table}{\numberline {5.1}{\ignorespaces Specification of parameters for the example Beta-Binomial trial.\relax }}{197}{table.caption.189}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {5.2}{\ignorespaces Examples of different decision criteria.\relax }}{194}{table.caption.170}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Simulations for example Beta-Binomial design.\relax }}{198}{table.caption.190}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.3}{\ignorespaces Simulations for example Beta-Binomial design with new decision rule.\relax }}{208}{table.caption.199}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {5.4}{\ignorespaces Examples of different decision criteria.\relax }}{209}{table.caption.201}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {A.1}{\ignorespaces Summary of decision criteria for Glo-BNHL.\relax }}{230}{table.caption.186}%
+\contentsline {table}{\numberline {A.1}{\ignorespaces Summary of decision criteria for Glo-BNHL.\relax }}{248}{table.caption.217}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {A.2}{\ignorespaces Current treatment arms in DETERMINE\relax }}{235}{table.caption.196}%
+\contentsline {table}{\numberline {A.2}{\ignorespaces Current treatment arms in DETERMINE\relax }}{253}{table.caption.227}%
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }

@@ -42,7 +42,7 @@ ETPs can be utilised during this process as they are able to present the decisio
 
 For example, based on whatever the current specification is, it may be the case that in the first interim analysis 2/5 patients require a response to continue the trial. Once the clinicians see this they may feel its too strict and would only think about stopping if there are no responses or alternatively they may want to remove this interim analysis and decide to only look at the data once 10 patients have been recruited. This is far more intuitive then trying to explain these concepts and using different boundaries for predictive probabilities. This could then be used to facilitate further discussions about the design specification and if decision rules need to be more or less lenient.  
 
-ETPs much like DTPs could also be used throughout the trial as well. So, based on how many responses have already been observed you can easily figure out how many responses would be required for the next cohort of patients to obtain a 'GO' decision. Once the ETPs are produced all future decisions based on the number of responses can also be seen. So, this has the benefit of not requiring a statistician to run an analysis every time you need to figure out how many more responses are required for a 'GO' or 'No GO' decision. Whilst, ETPs should not replace the need for a statistician and they should still be involved with all the analyses they act as a tool that can help monitor the progress of a trial and can be referred to throughout the trials life cycle. In the next sections we provide an example trial to show how ETPs are constructed and utilised. 
+ETPs much like DTPs could also be used throughout the trial as well. So, based on how many responses have already been observed you can easily figure out how many responses would be required for the next cohort of patients to obtain a 'GO' decision. Once the ETPs are produced all future decisions based on the number of responses can also be seen. So, this has the benefit of not requiring a statistician to run an analysis to calculate the specific number of responses that are required for a 'GO' or 'No GO' decision. Whilst, ETPs should not replace the need for a statistician and they should still be involved with all the analyses they act as a tool that can help monitor the progress of a trial and can be referred to throughout the trials life cycle. In the next sections we provide an example trial to show how ETPs are constructed and utilised. 
 
 %-----------------------------------
 %	SUBSECTION 1
@@ -51,20 +51,134 @@ ETPs much like DTPs could also be used throughout the trial as well. So, based o
 \subsection{Illustrative example to showcase a Beta-Binomial design} 
 \label{etp:BBIllEx}
 
-Consider a Phase \RN{2} trial in which we are trying to evaluate the efficacy of some new treatment.This will be done using an outcome measure of response. Patients can either be considered a responder or a non-responder. Lets assume this is in a rare disease setting so patient numbers are limited and as such we will be using a single-arm design. The treatment effect will be the response rate which will be estimated using a Beta-Binomial conjugate model. We will require a sufficient level of evidence that the there is adequate treatment effect to warrant further research in a Phase \RN{3} trial. Here, we will be utilising a decision space with two outcomes: GO or No GO. However, this approach can be adapted for more complex scenarios, such as the Lalonde framework \cite{lalondeModelbasedDrugDevelopment2007} which implements a Go/Pause/Stop decision structure. 
+Consider a Phase \RN{2} trial where the objective is to evaluate the efficacy of some new treatment. This will be evaluated using an outcome measure of response. Patients can either be considered a responder or a non-responder. Consider this is in a rare disease setting so patient numbers are limited and as such we will be using a single-arm design. The treatment effect will be the response rate which will be estimated using a Beta-Binomial conjugate model. We will require a sufficient level of evidence that the there is adequate treatment effect to warrant further research in a Phase \RN{3} trial. Here, we will be utilising a decision space with two outcomes: GO or No GO. However, this approach can be adapted for more complex scenarios, such as the Lalonde framework \cite{lalondeModelbasedDrugDevelopment2007} which implements a Go/Pause/Stop decision structure. 
 
-To conduct the analysis and make a GO or No GO decision a prior and decision criteria need to be specified. For simplicity a minimally informative Beta(1,1) prior will be used. This represents a 50\% response rate from a group of two patients. Data will also need to be collected from patients recording if they had a response or not. This in turn is combined with the prior distribution to generate a posterior distribution for the treatment effect. Then pre-specified rules based on these direct probabilities from the posterior can be used for decision making purposes. This can take the form of
+The Beta-Binomial conjugate model is described by Lee \cite{leeBayesianStatisticsIntroduction2012}. Consider a parameter of interest $\theta$ that represents some treatment effect. More specifically, for binomial data in a single arm Phase \RN{2} clinical trial, lets say the parameter $\theta$ is the probability of response in a number of patients following a some new treatment. Each patient can experience either a response or no response, with the same probability of response and each patient being independent from each other. For a fixed sample size with $n$ patients and number of responses ($y$) we have: 
+
+\begin{equation}
+	Y \sim \text{Binomial}(n, \theta)
+\end{equation}
+
+So, $y$ is from a binomial distribution which produces the following likelihood: 
+
+\begin{equation}
+	L(\theta) = P(y|\theta) = {n \choose y}\theta^y (1-\theta)^{n-y} \; \; \; \; (y = 0,1,\ldots,n)
+\end{equation}
+
+If the prior for $\theta$ is from a Beta distribution such that 
+
+\begin{equation}
+	\label{eq_etp:betaprior}
+	P(\theta) = \text{Beta}(a,b)
+\end{equation}
+
+then the posterior distribution is also from a Beta distribution and can be expressed as 
+
+\begin{equation}
+	\label{eq_etp:betaposterior}
+	P(\theta|y) = \text{Beta}(a+y,b+n-y)
+\end{equation}
+
+To avoid confusion with the prior we will let $\alpha = a+y$ and $\beta = b+n-y$ which gives
+
+\begin{equation}
+	\label{eq_etp:betaposterior2}
+	P(\theta|y) = \text{Beta}(\alpha,\beta)
+\end{equation}
+
+Bayesian inference can then be used for estimation and decision making. Features such as the mean and  variance of the treatment effect $\theta$ can be  estimated from the posterior distribution given in equation \ref{eq_etp:betaposterior2}. For the posterior distribution of $\theta \sim Beta(\alpha,\beta)$ the mean, variance and mode are.
+
+\begin{equation}
+	\label{eq_etp:betamean}
+	E[\theta] = \frac{\alpha}{\alpha + \beta} 
+\end{equation}
+
+\begin{equation}
+	\label{eq_etp:betavar}
+	Var[\theta] = \frac{\alpha\beta}{(\alpha+\beta)^2 (\alpha+\beta+1)}
+\end{equation}
+
+\begin{equation}
+	\label{eq_etp:betamode}
+	mode[\theta] = \frac{\alpha - 1 }{\alpha + \beta - 2} 
+\end{equation}
+
+The proofs for these formula are relatively simple and can be found in \cite{sochBookStatisticalProofs2020}. We can also establish credible intervals or make other probability statements in a similar manner. 
+
+We can also establish credible intervals or make other probability statements in a similar manner. 
+Then pre-specified rules based on these direct probabilities from the posterior can be used for decision making purposes. For example, if 
 
 \begin{equation}
 	\label{eq_etp:betafinaldecrule}
 	P(\theta > c |y) \geq q  \; \; \; \; \text{then GO else No GO}
 \end{equation}
 
-where $\theta$ is the treatment effect (response rate), $c$ is some target level of treatment effect (target response rate), $y$ represents our data and $q$ is some threshold of sufficient evidence (acceptable probability level). 
- 
-For our example the following decision rule will also be used $P(\theta  \geq 30\%) \geq 0.9$. So, if there is a greater than  90\% chance that the true response rate is at least 30\% this will be considered sufficient evidence to warrant a GO decision. We will also include interim analyses after every five patients to evaluate whether or not the trial should be stopped for futility. To do this we will use the predictive probability of success (PPoS).
 
-This works by evaluating the data at pre-specified time points or after a certain number of patients have been recruited, in this example after every five patients. At these time points we can determine whether or not we have observed enough responses to warrant continuing with the trial based on the overall minimum responses we would need for a final GO decision. More explicitly the PPoS is the probability of the trial being considered a success given the current data observed at the interim analysis. This is calculated by predicting the future number of responses in the patients yet to be recruited based on the data that has already been observed and the prior distribution.
+where $c$ is some target level of treatment effect and $q$ is some threshold of sufficient evidence.
+
+For our example we specify a minimally informative Beta(1,1) prior. This represents a 50\% response rate from a group of two patients. Data will also need to be collected from patients recording if they had a response or not. This in turn is combined with the prior distribution to generate a posterior distribution for the treatment effect.
+ 
+We will also specify the following decision rule will also be used $P(\theta  \geq 30\%) \geq 0.9$. So, if there is a greater than  90\% chance that the true response rate is at least 30\% this will be considered sufficient evidence to warrant a 'GO' decision. This criteria is just for illustrative purposes, in practice both clinical and statistical considerations should be made for specifying these parameters. In a rare disease setting there may not be many effective treatments so targeting a low level of treatment effect could still be considered an improvement for patients. Depending on the scenario it may also be appropriate to require a high level of evidence that the treatment is effective. There may be a heavy treatment burden on patients with multiple hospital visits or negative side effects and so clinicians may want a higher amount of certainty that the targeted level of treatment is reached to trigger a 'GO' decision. For this example trial we will set our sample size at 30 patients. 
+
+We will also include interim analyses after every five patients to evaluate whether or not the trial should be stopped for futility. To do this we will use the predictive probability of success (PPoS).
+
+Consider for a fixed sample of size $n$ patients an interim analysis that will be conducted after $n_{int}$ patients, such that $n_{int} < n$. Again, the parameter of interest, treatment effect or response rate will be represented by $\theta$. Let the number of responses $x$ among the $n_{int}$ patients follow a binomial distribution: 
+
+\begin{equation}
+	X \sim \text{Binomial}(n_{int},\theta) 
+\end{equation}
+
+Let $Z$ be the number of responses in the remaining $m$ patients, where $m = n - n_{int}$. When $Z = i$, where $i = 1, ..., m$, the posterior distribution can be expressed as 
+
+\begin{equation}
+	P(\theta|x,Z=i) = \text{Beta}(a+x+z, b+n-x-z)
+\end{equation}
+
+Where $a$ and $b$ are parameters from the Beta prior distribution, see equation \ref{eq_etp:betaprior}. 
+
+Suppose we have a decision rule where a GO decision is made if the posterior probability of $\theta$ exceeds some pre-specified target treatment effect/ response rate $c$ with a probability greater than some threshold $q$ (as defined in equation \ref{eq_etp:betafinaldecrule}).
+
+The predictive probability of success (PPoS) can be calculated as follows. Let $B_i = P(\theta > c |x, Z=i)$ and $I_i = I(B_i \geq q)$ be an indicator variable taking a value of 1, if the criteria $B_i \geq q$ is satisfied or 0 otherwise. Then we have 
+
+\begin{equation}
+	\begin{aligned}
+		\text{PPoS} & = E\{I[P(\theta > c |x,Z) \geq q]|x \} \\
+		& = \int I[P(\theta > c |x,Z) \geq q]dP(Z|x) \\
+		& = \sum_{i =0}^{m} P(Z = i|x)I[P(\theta > c |x,Z=i) \geq q] \\
+		& = \sum_{i =0}^{m} P(Z=i|x)I(B_i \geq q) \\
+		& = \sum_{i =0}^{m} P(Z=i|x)I_i
+	\end{aligned}
+\end{equation}
+
+Where $P(Z = i | x)$ is the probability of observing $Z$ responses in $m$ patients based on a beta probability distribution with parameters $a+x$ and $b+n_{int}-x$. This can be calculated from the probability mass function
+
+\begin{equation}
+	\begin{aligned}
+		f(Z = i|m, a+x, b+n_{int}-x) & = {m\choose z} \frac{\text{Beta}(a+x+z, b+n_{int}+m-x-i)}{\text{Beta}(a+x, b+n_{int}-x)} \\
+		& = {m\choose z} \frac{\text{Beta}(a+x+z, b+n-x-i)}{\text{Beta}(a+x, b+n_{int}-x)} \\
+	\end{aligned}
+\end{equation}
+
+The Beta functions can be further simplified or alternatively expressed using the gamma function. Note $\Gamma(k) = (k-1)!$
+
+\small
+\begin{equation}
+	\begin{aligned}
+		f(Z = i) & = \frac{m!}{z!(m-z)!}\cfrac{\cfrac{\Gamma(a+x+z)\Gamma(b+n-x-z)}{\Gamma(a+b+n)}}{\cfrac{\Gamma(a+x)\Gamma(b+n_{int}-x)}{\Gamma(a+b+n)}} \\
+		& = \frac{\Gamma(m+1)}{\Gamma(z+1)\Gamma(m-z+1)}\frac{\Gamma(a+x+z)\Gamma(b+n-x-z)}{\Gamma(a+b+n)}\frac{a+b+n_{int}}{\Gamma(a+x)\Gamma(b+n_{int}-x)}
+	\end{aligned}
+\end{equation}
+\normalsize
+
+The process to calculate the PPoS starts with the quantity $B_i$ which represents the probability that the response rate is greater than some target $c$ given $x$ responses in $n_{int}$ patients and assuming $i$ future responses in the remaining $m$ patients. The quantity $B_i$ is then compared to our probability threshold $q$ which provides a value for the indicator variable $I_i$ and informs us if the trial would result in a GO decision at the end of the trial dependent on the data observed and the value of $Z=i$. The indicators $I_i$ are then weighted by the probability $P(Z=i)$ and summed to give the PPoS. 
+
+PPoS is then interpreted and used to make decisions at interim analyses. Low values of PPoS suggest there is a low probability of achieving a GO decision at the final analysis based on the data accrued so far. Similarly, a high PPoS suggests the opposite and that the trial would likely be a success based on the current data. An interim decision rule can then be implemented around values of PPoS to recommend stopping the trial early for either efficacy or futility. To stop for futility a the following rule could be imposed 
+
+\begin{equation}
+	\text{PPoS} < t  \; \; \; \; \text{then STOP for futility}
+\end{equation}
+
+Where $t$ is some PPoS acceptable probability threshold. Values of $t$ range from 0 to 1 but would typically be small. For example a value of 0.2 may be used to indicate if there is a less than 20\% chance that the response rate at the end of the trial will be greater than $c$ with some probability $q$ then the trial should stop early. 
 
 For our example trial we will specify a PPoS acceptable probability threshold where if PPoS < 0.05 then we should stop the trial for futility. This implies we would stop the trial if there is a less than 5\% chance that the response rate at the end of the trial will be greater than 30\% with a probability of 0.9 i.e a less than 5\% chance that the trial would reach a GO decision or be considered a success. 
 
@@ -88,7 +202,26 @@ Table \ref{tab_etp:exampleBBspecs} details the minimum number of responses requi
 
 Most of the specifications we have made here along with our decision rules are fairly arbitrary. In practice decision rules should be decided before the trial starts. This is typically done via the evaluation of simulations and looking at the minimum number of responses required for GO decisions. Multiple scenarios corresponding to different true response rates can be investigated. The probability of making a correct decision can then be calculated. This represents the power of our design. For scenarios with low true response rates (relative to the target response rate) we want the probability of making a No GO decision to be high. Similarly, for scenarios with high true response rates we want the probability of making a GO decision to be high. The decision rule parameters, the target response rate and probability threshold can then be adjusted to ensure the design is making appropriate decisions in these scenarios. 	
 
-Whilst simulations are useful they may not convey what is most meaningful for other collaborators when assessing the merits of each iterative design specification. This is where ETPs can be used to try and bridge that gap by offering a way to visually represent key information and decisions that are made with these types of designs. In the next section we detail how an ETP is constructed using the example trial design specified here. 
+Simulations for this example trial are shown in Table \ref{tab_etp:exampleBBsims}. There are five different scenarios where we vary the true response rate. For each scenario we simulate 10000 trials. for each individual trial run we sample responses from patients using the underlying true response rate and determine if the criteria are met to pass the interim analyses and final analysis decision criteria. The table records the probability in each scenario of there being a 'GO' decision. In scenarios where the true response rate is low (10\% and 20\%) we have almost no chance of a GO decision. As our decision criteria targets a response rate of 30\% if the actual response rate was also 30\% a 'GO' decision would be the desired outcome. However, the simulations show with the current design this does not often occur. For higher true response rates the design does perform slightly better in reaching 'GO' decisions with probabilities of 0.414 and 0.796 for 40\% and 50\% respectively. 
+
+\begin{table}[H]
+	
+	\caption{\label{tab_etp:exampleBBsims}Simulations for example Beta-Binomial design.}
+	\centering
+	\begin{tabular}[t]{cc}
+		\toprule
+		True response rate & Probability of 'GO' decision\\
+		\midrule
+		\cellcolor{gray!6}{10\%} & \cellcolor{gray!6}{0.000}\\
+		20\% & 0.003\\
+		\cellcolor{gray!6}{30\%} & \cellcolor{gray!6}{0.078}\\
+		40\% & 0.414\\
+		\cellcolor{gray!6}{50\%} & \cellcolor{gray!6}{0.796}\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Simulations are always an important aspect of the design process however, they may not convey what is most meaningful for other collaborators when assessing the merits of each iterative design specification. This is where ETPs can be used to try and bridge that gap by offering a way to visually represent key information and decisions that are made with these types of designs. In the next section we detail how an ETP is constructed using the example trial design specified here. 
 
 %-----------------------------------
 %	SUBSECTION 2
@@ -101,7 +234,7 @@ At each interim analysis PPoS is calculated based on the number of responses obs
 
 Intuitively, it is easier to understand that three responses have to be observed from 15 patients rather than a PPoS $\leq 0.05$ is needed. Through discussions with clinicians we can then calibrate our decision criteria based on these interpretations. We may want to be more strict or lenient at our interim. If the clinicians would be happy to continue recruitment after seeing only two responses we could lower the PPoS threshold, likewise if they wanted to be confident and only continue if six responses were observed we would increase the PPoS threshold. Similarly, this can also be done for the final analysis decision criteria. The acceptable probability level or target response rate could be adjusted so a specific minimum number of responses observed achieves a GO decision. Any changes made should be assessed by simulations as drastically changing the decision criteria could have a negative impact on performance. 
  
-As you add more interims to a design in this way, trying to understand the break points at each interim become more complex. A solution for this is ETPs. In our example trial we have a maximum sample size of 30 patients with interim analyses planned after every five patients. This results in a total of six analyses, one final analysis and five interims. The decision criteria at the end of the trial requires the treatment effect to be greater than 30\% with a probability of 0.9 and to pass the interim analyses we require the PPoS to be greater than 0.05. 
+As more interim analyses are added to a design, it may be more complicated to keep track of the specific number of responses required for 'GO' decisions at each interim. A solution for this is ETPs. In our example trial we have a maximum sample size of 30 patients with interim analyses planned after every five patients. This results in a total of six analyses, one final analysis and five interims. The decision criteria at the end of the trial requires the treatment effect to be greater than 30\% with a probability of 0.9 and to pass the interim analyses we require the PPoS to be greater than 0.05. 
 
 To construct an ETP we produce individual cells which contain key information about a specific outcome i.e. a certain amount of responses. If we consider our first interim at five patients, at that point there are six different possible outcomes that can be observed. Either one, two, three, four or all five of the patients had a response or none of them did. For each possible outcome we can then calculate the PPoS as well as the Bayesian estimate of the response rate and an associated credible interval. Figure \ref{fig_etp:Cell0Resp5Pat} shows what this cell would look like. 
 
@@ -127,6 +260,8 @@ This process is then repeated for each interim analysis. So, the next analysis w
 
 For the final analysis the presentation of the cells is slightly different. Here we are no longer interested in PPoS as no more patients will be recruited and rather we can just evaluate if the trial has met the decision criteria. So, in each cell rather than present PPoS, the posterior probability that the response rate is greater than our target rate is presented instead. Figures \ref{fig_etp:Cell10Resp30Pat} and \ref{fig_etp:Cell14Resp30Pat} show the cells for 10 responses and 14 responses out of 30 patients respectively. In this example our $q$ is set at 0.9 so if the posterior probability is greater than that we have a GO decision. 
 
+We opted to present the PPoS and posterior probability as decimals. This was done to avoid these values being confused with estimated treatment effect. It may be easy for a non-statistician to see a posterior probability of 0.976 and interpret it as the treatment having a 97.6\% response rate. These are also presented to three significant figures. This was done as in some instances the posterior probability was shown to be the same value for adjacent cells which could also cause some confusion. When constructing ETPs the presentation of these values and the cells in general can be altered to suit the needs of the users. 
+
 \begin{figure}[h!]
 	\centering
 	\caption{ETP cell plot for 10 responses in 30 patients.}
@@ -147,7 +282,7 @@ The efficacy transition pathway is then constructed by grouping each cell for ea
 
 From this figure what can clearly be seen is when we do or do not have a GO decision. At each interim of 5, 10, 15, 20, 25 patients we can see that the minimum number of responses for a GO decision is 1, 2, 4, 7 and 9 respectively. Also, for the final analysis a minimum of 13 responses is required. We can also read down the figure to gauge an idea of how many additional responses would be required in future analyses to warrant a GO decision. For instance if you observed five responses in your first cohort of five patients, that is enough observed data to continue passing the interim decision criteria until the fourth interim analysis in which case you would need an additional two responses. This can easily be seen by reformatting the ETP to be aligned to the left so the same number of responses are stacked on top of each other for each cohort. This is illustrated in Figure \ref{fig_etp:ConstructedETPleft}. 
 
-In addition to the easy visualisation of the number of responses required to achieve a GO decision, we can also quite easily see the estimates of the treatment effect for each potential outcome and each analysis time point. This is useful for interpreting the results for the final analysis (the bottom row of the ETP plot). Right away from interpreting the cell for the minimum number of responses (13/30) for a GO decision we can see the estimated response rate would be 44\% with a probability of 0.95 that the true response rate is between 27\% and 61\%. We also need to keep in mind the original decision rule for the final analysis which for any GO decision implies there is a greater than 0.9 probability that the response rate is greater than 30\%. This can then be used to facilitate discussions with the clinicians to deem if this is an acceptable level of evidence to warrant further research or potentially bring into practice, based on previous studies, current treatments or their experience. We can then adjust our design and decision rules accordingly, which we discuss in the next section. 
+In addition to the easy visualisation of the number of responses required to achieve a GO decision, we can also see the estimates of the treatment effect for each potential outcome and each analysis time point. This is useful for interpreting the results for the final analysis (the bottom row of the ETP plot). Right away from interpreting the cell for the minimum number of responses (13/30) for a GO decision we can see the estimated response rate would be 44\% with a probability of 0.95 that the true response rate is between 27\% and 61\%. It is important to remember the original decision rule for the final analysis which for any GO decision implies there is a greater than 0.9 probability that the response rate is greater than 30\%. This can then be used to facilitate discussions with the clinicians to deem if this is an acceptable level of evidence to warrant further research or potentially bring into practice, based on previous studies, current treatments or their experience. We can then adjust our design and decision rules accordingly, which we discuss in the next section. 
 
 \begin{sidewaysfigure}
 	\centering
@@ -171,11 +306,29 @@ In addition to the easy visualisation of the number of responses required to ach
 \subsection{Updating decision criteria based on Efficacy Transition Pathways} 
 \label{etp:updatingETPs}
 
-Having seen the ETP we created for our example trial, suppose we want to modify our decision criteria such that a GO decision at the final analysis requires only nine patients to achieve a response. Compared to the initial decision criteria, which required 13 responses, we may want to  consider lowering this due to the treatment options available for these patients may not being very effective. Obviously there may be many reasons why we would want to increase or decrease this requirement and this would depend on the context and background of each individual trial. This is just to provide an illustrative example of why we might consider changing the criteria and how we go about it with ETPs. 
+Having seen the ETP we created for our example trial, suppose we want to modify our decision criteria such that a GO decision at the final analysis requires only nine patients to achieve a response. Compared to the initial decision criteria, which required 13 responses, we may want to  consider lowering this due to the treatment options available for these patients may not being very effective. Obviously there may be many reasons why we would want to increase or decrease this requirement and this would depend on the context and background of each individual trial.
 
 By looking directly at the ETP Figures \ref{fig_etp:ConstructedETP} or \ref{fig_etp:ConstructedETPleft} we can see that nine responses out of 30 patients has a posterior probability of 0.542. So, based of the initial decision rule of $P(\theta  \geq 30\%) \geq 0.9$, this implies that the probability that the response rate is greater than or equal to 30\% is 0.542. Therefore, if we wanted to make this a GO decision we would change our decision criteria such that our acceptable level of probability was something smaller than that posterior probability. For example, a new decision rule could be $P(\theta  \geq 30\%) \geq 0.5$. This would mean that nine responses out of 30 patients would now be a GO decision. This is another benefit of ETPs, we can quickly ascertain how we would need to change our decision criteria to be in order for a specific minimum number of responses to be a GO decision. 
 
-Let's say we implement that new decision rule, we can then create an updated ETP. In Figure \ref{fig_etp:ConstructedETP_30-50_5} we can see for the final analysis (the bottom row of the plot) GO decisions start from nine responses. It is important to note the content of these cells have not changed. The estimates of response rates and credible intervals are still the same. This is because we fundamentally have not made any changes to the design, just the criteria for which we are making decisions. Changes in these estimates would only be triggered if we were to change the total sample size or prior. Additionally the posterior probabilities are also consistent with the previous ETP, this is because we have not altered the targeted response rate in our decision criteria. This value is still showing the probability that the treatment has a response rate greater than 30\%. These values would only differ if our target response rate was set as something else. For the rest of the cells showing previous cohorts and the interim analyses we can see the minimum number of responses required for a GO decision is now 0, 1, 3, 4 and 6 for each interim analysis respectively. Also, note how the PPoS is different compared to the last ETP. This is because PPoS takes into account the final decision rule we are using. Any change to that rule will impact PPoS calculations. 
+Given the ETPs observed in the previous section and the simulations shown in Table \ref{tab_etp:exampleBBsims} we will implement this new decision rule to see how it impacts our design. We provide updated simulations in Table \ref{tab_etp:exampleBBsims2}. Here we can see that there is now an increase in probability of making a 'GO' decision if the true response rates are low (10\% and 20\%) however these are still relatively small. Compared to before there is now higher probabilities of making a correct decision when the true response rates are above 30\%. 
+	
+	\begin{table}[H]
+		\caption{\label{tab_etp:exampleBBsims2}Simulations for example Beta-Binomial design with new decision rule.}
+		\centering
+		\begin{tabular}[t]{cc}
+			\toprule
+			True response rate & Probability of GO decision\\
+			\midrule
+			\cellcolor{gray!6}{10\%} & \cellcolor{gray!6}{0.001}\\
+			20\% & 0.126\\
+			\cellcolor{gray!6}{30\%} & \cellcolor{gray!6}{0.558}\\
+			40\% & 0.892\\
+			\cellcolor{gray!6}{50\%} & \cellcolor{gray!6}{0.988}\\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+
+We can then also update our ETPs. In Figure \ref{fig_etp:ConstructedETP_30-50_5} we can see for the final analysis (the bottom row of the plot) GO decisions start from nine responses. It is important to note the content of these cells have not changed. The estimates of response rates and credible intervals are still the same. This is because we fundamentally have not made any changes to the design, just the criteria for which we are making decisions. Changes in these estimates would only be triggered if we were to change the total sample size or prior. Additionally the posterior probabilities are also consistent with the previous ETP, this is because we have not altered the targeted response rate in our decision criteria. This value is still showing the probability that the treatment has a response rate greater than 30\%. These values would only differ if our target response rate was set as something else. For the rest of the cells showing previous cohorts and the interim analyses we can see the minimum number of responses required for a GO decision is now 0, 1, 3, 4 and 6 for each interim analysis respectively. Also, note how the PPoS is different compared to the last ETP. This is because PPoS takes into account the final decision rule we are using. Any change to that rule will impact PPoS calculations. 
 
 \begin{sidewaysfigure}
 	\centering
@@ -186,7 +339,7 @@ Let's say we implement that new decision rule, we can then create an updated ETP
 
 By altering our decision rule like this we ensure that if we observe the desired number of responses, in this case nine, the trial would be a success. We did this by just changing $q$, the acceptable probability level. However, it should be noted that this can also be achieved by changing both $c$ (the target response rate) and $q$. These values can both be manipulated so we still maintain the same practical decision making. This is important to note as whilst clinicians may find it more intuitive to specify decision rules based on a minimum number of responses there are different ways in which that can be achieved. 
 
-Table \ref{tab_etp:DecisionCriteria} details the posterior probability that the estimated response rate is greater than four different target response rates given we observe nine responses out of 30 patients. If our target response rate is 10\% and we observe nine responses the posterior probability is 0.999 so then our decision rule can be specified as if $P(\theta  \geq 10\%) \geq 0.95$. Here our value of $q$ just has to take a value lower than the posterior probability but we should be careful to make sure it is not low enough such that observing 8 responses also becomes a GO decision. We can then make similar statements about the other target response rates presented in the table. The associated decision criteria for those response rates are also presented. 
+Table \ref{tab_etp:DecisionCriteria} details the posterior probability that the estimated response rate is greater than four different target response rates given we observe nine responses out of 30 patients. If our target response rate is 10\% and we observe nine responses the posterior probability is 0.999 so then our decision rule can be specified as if $P(\theta  \geq 10\%) \geq 0.95$. Here our value of $q$ just has to take a value lower than the posterior probability but we should be careful to make sure it is not low enough such that observing 8 responses also becomes a GO decision. Similar statements can also be made about the other target response rates presented in the table. The associated decision criteria for those response rates are also presented. 
 
 \begin{table}[h!]
 	\centering
@@ -215,9 +368,9 @@ Here we have shown how ETPs are constructed and how they change and react to mod
 
 Overall ETPs can be a useful tool during the design stages of a trial as we can experiment with different decision rules and see what practical effect it has on the trial in terms of the number of responses that need to be observed for a GO decision. They can be used to facilitate discussions with non-statistical experts involved in the design of the trial. Much like dose transition pathways in a dose-finding trial they can also provide some transparency as to what decisions will be made and when they would be made. 
 
-A single ETP also provides us with the ability to see how multiple different decision rules may change the outcome for a trial. If just the acceptable probability levels for the PPoS and final analysis, $t$ and $q$, are changing in the decision rule the impact of those changes should be apparent just by comparing the PPoS and posterior probability without the need of generating a whole new plot like we have in our example.
+A single ETP also provides us with the ability to see how multiple different decision rules may change the outcome for a trial. If just the acceptable probability levels for the PPoS and final analysis, $t$ and $q$, are changing in the decision rule the impact of those changes should be apparent just by comparing the PPoS and posterior probability without the need of generating a new ETP like we have in our example.
 
-Whilst the calculations needed to produce these plots can be quite simple, actually constructing the plots is not so trivial. To overcome this issue and make ETPs easily accessible and producible, we developed a web based application to generate ETPs. All the ETPs shown so far were generated using this application. 
+Whilst the calculations needed to produce these plots can be simple, constructing the plots can be challenging. To overcome this issue and make ETPs easily accessible and producible, we developed a web based application to generate ETPs. All the ETPs shown in this chapter were generated using this application. 
 
 In the next sections we detail trials that have been designed using ETPs. These served as further motivation for development of the application to produce ETPs. We then go on to detail how the app was developed and how it works.    
 
@@ -231,7 +384,7 @@ With the development of any new methodology or novel tool such as ETPs there wil
 
 To overcome this barrier for ETPs we developed a R function to produce these plots given the input of key details such as the decision criteria, sample size and cohort size. We then used this function and built a web application around it. Rather than just offering code to implement ETPs a web app makes implementation even easier as it does not require knowledge or experience with a specific piece of stats software such as R, STATA or SAS. 
 
-Another barrier that limits the rate at which new methodology is implemented is a lack of awareness or familiarity with the methodology. Specifically, with clinical trials that often involve a multidisciplinary team it is unrealistic to expect clinicians or trial management to be up to date with the latest statistical innovations. Even the statisticians themselves may not be familiar with the latest methodology. As a result, newer methods may be overlooked even if it would be beneficial to implement. Even if statisticians are aware of new methodology, the struggle may then become explaining the methodology to non-statisticians and convincing them it will be beneficial to use. 
+Another barrier that limits the rate at which new methodology is implemented is a lack of awareness or familiarity with the methodology. Specifically, with clinical trials that often involve a multidisciplinary team it is unrealistic to expect clinicians or trial management to be up to date with the latest statistical innovations. Some statisticians may not be familiar with the latest methodology if it is not primarily an area they specialise in. As a result, newer methods may be overlooked even if it would be beneficial to implement. Even if statisticians are aware of new methodology, the struggle may then become explaining the methodology to non-statisticians and convincing them it will be beneficial to use. 
 
 Inherently ETPs as a tool were created to help better explain the analysis that is done in these phase \RN{2} trials as well as the decisions that are made. They exist more as a tool to help promote the underlying Bayesian methodology. Therefore ETPs may be simple to implement and explain to non-statisticians. Instead the issue may come from a lack of understanding of a Beta-Binomial conjugate analysis, predictive probabilities or the background methodology behind the ETPs. 
 
@@ -296,7 +449,6 @@ All of these additional features allow us to utilise this app as an effective te
 In this chapter we introduced the idea of Efficacy Transition Pathways. These were initially thought of as an extension to Dose Transition Pathways which are used as a visualisation tool to communicate decisions made in dose-finding trials. ETPs act in a similar manner and serve as a tool to better illustrate and communicate decisions made in single arm Phase \RN{2} trials that utilise a Beta-Binomial conjugate analysis. We detail the basics of these analyses and how posterior probability of success can be used to make decisions during a trial at the interim analysis stage. Just like in dose-finding, depending on the number of outcomes we observe, i.e. number of responses, we can know ahead of time the decisions that will be made. Depending on the complexity of the design and decision rules the number of different scenarios can be difficult to comprehend. So, ETPs help visualise these scenarios. These can be beneficial for not only statisticians but other investigators involved with the design and conduct of the study. 
 
 ETPs consist of an array of cells for each cohort in a trial, with each cell containing key information pertinent to a specific number of responses being observed in the total cohort size. Constructing ETPs requires numerous calculations to be run including determining PPoS as well as Bayesian estimates and credible intervals from the posterior distribution. These then need to be evaluated against the decision criteria to determine what the outcome of the trial would be based on the data that cell represents. All this then needs to be constructed into a larger image with multiple cells. A benefit of this approach is that the cells can be tailored to include information or other details that is felt relevant to portray. However, this whole process can be time consuming especially during the design stages of a trial where specifications and decision rules may constantly be changed and iterated upon. This was further illustrated in the three examples we gave of trials where ETPs had been implemented and used. Each of these trials could be considered as using complex and innovative designs which involve multiple treatment arms with various time-points for analyses and different decision rules. Throughout the design of these trials multiple different ETPs were having to be produced in order to facilitate discussions and showcase the design of the trials. 
-
 
 This is one of the issues with ETPs that motivated us to create an app and some software that would automatically produce these plots. The other motivation came from issues surrounding the introduction of new methodologies. Often times when a new methodology or tool is introduced it takes a long amount of time before it gets picked up and used by those other then the original creators of the methodology. This is often due to multiple factors such as lack of awareness about the new methodology or lack of useable code or relevant materials. From the perspective of statisticians working on and applying methodology, keeping up-to-date with all the latest innovations is often unfeasible. Similarly, if you do come across a new methodology where there is access to code, trying to implement the methods become a time-consuming task so we may default to standard or typical practice even if it is sub-optimal. Additionally, they may also need to take on the role of explaining the new methodology to non-statisticians involved in the oversight and management of the trial. This burden should fall on those developing the methodology if they want it to be used more frequently. In order to facilitate this for ETPs we created a simple R function along with a shiny app to make ETPs more accessible and easy to explain. 
 

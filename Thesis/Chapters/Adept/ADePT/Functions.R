@@ -43,9 +43,9 @@ titepocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
       rectime <- obswin/recrate
       
       while(length(tox) < n){
-        # Takes draws from a binomial distribution to determine if patients in            the cohort had a toxic outcome
+        # Takes draws from a binomial distribution to determine if patients in the cohort had a toxic outcome
         cohort_tox <- stats::rbinom(n = cohort, size = 1, prob = r[comb.curr])
-        # Dummy variable to store DLT which will be updated once the time for           DLT has passed
+        # Dummy variable to store DLT which will be updated once the time for DLT has passed
         cohort_dlt <- rep(0, cohort)
         # Patients in the same cohort recieve the same dose
         cohort_comb <- rep(comb.curr, cohort)
@@ -80,11 +80,11 @@ titepocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
         # Loop through all the patients who will have a DLT
         for(i in 1:length(fu)){
           if(tox[i] == 1){
-            # If the follow up time is greater than the time the dlt was                    determined to occur
+            # If the follow up time is greater than the time the dlt was determined to occur
             if(fu[i] >= dlt_time[i]){
-              # Change the follow up time to the obswin to indicate the dlt                   has now happened
+              # Change the follow up time to the obswin to indicate the dlt has now happened
               fu[i] <- obswin
-              # As the dlt has happened it should now be stored for                           calculation in the likelihood
+              # As the dlt has happened it should now be stored for calculation in the likelihood
               dlt[i] <- 1
             }
           }
@@ -94,7 +94,7 @@ titepocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
         # Calculated weights where the min fu accounts for 60% and is 80% by            window 2
         for (i in 1:length(fu)) {
           weights[i] <- 0.6 + 
-            0.2*(min(win2 - minfu, fu[i]-minfu)/(win2 - minfu))+                          0.2*(max(fu[i]- win2, 0)/(obswin-win2))
+            0.2*(min(win2 - minfu, fu[i]-minfu)/(win2 - minfu))+ 0.2*(max(fu[i]- win2, 0)/(obswin-win2))
         }
         # These values are used to calculate patient allocation and %DLT
         y[comb.curr] = y[comb.curr] + sum(cohort_tox)
@@ -311,7 +311,7 @@ titepocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
             # Calculated weights where the min fu accounts for 60% and 80% by win2
             for (i in 1:length(fu)) {
               weights[i] <- 0.6 + 
-                0.2*(min(win2 - minfu, fu[i]-minfu)/(win2 - minfu))+                          0.2*(max(fu[i]- win2, 0)/(obswin-win2))
+                0.2*(min(win2 - minfu, fu[i]-minfu)/(win2 - minfu))+ 0.2*(max(fu[i]- win2, 0)/(obswin-win2))
             }
             
             y[comb.curr] = y[comb.curr] + sum(cohort_tox)
@@ -398,15 +398,7 @@ pocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
         alpha = t(as.matrix(alpha))
       nord.tox = nrow(alpha)
       mprior.tox = prior.o
-      # Function for calculating the likelihood
-      # bcrml <- function(a, p1, y, w) {
-      #   lik = 0
-      #   for (j in 1:length(y)) {
-      #     lik = lik + y[j] * a * log(w[j]*p1[j]) + 
-      #       (1 - y[j]) * log((1 - w[j]*p1[j]^a))
-      #   }
-      #   return(lik)
-      # }
+
       bcrml <- function(a, p1, y, n) {
         lik = 0
         for (j in 1:length(p1)) {
@@ -444,52 +436,13 @@ pocrm_sim <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
         # Patients in the same cohort recieve the same dose
         cohort_comb <- rep(comb.curr, cohort)
         
-        # # Follow up time based on the time taken to recruit a patient
-        # # First patient assumed to be recruited instantly
-        # # Add the min fu time to indicate when analysis is done
-        # cohort_fu <- (rectime*(cohort-1)) - (rectime * 0:(cohort - 1)) + minfu
-        # # Time of DLT is recorded and set to be at any time during the obswin
-        # cohort_dlt_time <- vector()
-        # for (i in 1:cohort) {
-        #   if(cohort_tox[i] == 0){ 
-        #     cohort_dlt_time[i] <- NA  
-        #   }
-        #   else {
-        #     cohort_dlt_time[i] <- runif(1,0, obswin)
-        #   }
-        # } 
-        # # Stores the time DLT occurs for new cohort
-        # dlt_time <- c(dlt_time, cohort_dlt_time)
-        
         # Stores new cohorts toxicity 
         tox <- c(tox, cohort_tox)
         # Stores dose level for each new cohort  
         dose <- c(dose, cohort_comb)
         # Store dummy dlt for new cohort
         dlt <- c(dlt, cohort_dlt)
-        # # Add on follow up time and recruitment time for previous cohorts
-        # fu <- fu + (cohort * rectime) + minfu 
-        # # store new cohorts follow up time
-        # fu <- c(fu, cohort_fu)
-        # # Loop through all the patients who will have a DLT
-        # for(i in 1:length(fu)){
-        #   if(tox[i] == 1){
-        #     # If the follow up time is greater than the time the dlt was                    determined to occur
-        #     if(fu[i] >= dlt_time[i]){
-        #       # Change the follow up time to the obswin to indicate the dlt                   has now happened
-        #       fu[i] <- obswin
-        #       # As the dlt has happened it should now be stored for                           calculation in the likelihood
-        #       dlt[i] <- 1
-        #     }
-        #   }
-        # }
-        # fu <- pmin(fu, obswin)
-        # # Calculated weights where the min fu accounts for 60% and is 80% by            window 2
-        # for (i in 1:length(fu)) {
-        #   weights[i] <- 0.6 + 
-        #     0.2*(min(win2 - minfu, fu[i]-minfu)/(win2 - minfu))+                          0.2*(max(fu[i]- win2, 0)/(obswin-win2))
-        # }
-        # These values are used to calculate patient allocation and %DLT
+        
         y[comb.curr] = y[comb.curr] + sum(cohort_tox)
         npts[comb.curr] = npts[comb.curr] + cohort
         
@@ -678,15 +631,11 @@ applied_titecrmts_sim_v2 <- function (true_tox, prior, target, max_sample_size,
   iterations <- list()
   start_time <- Sys.time()
   for (s in 1:num_sims) {
-    # tox <- c()
-    # level <- c()
-    # fu <- c()
-    # dlt <- c() ##
-    # dlt_time <- c() ##
+
     stop <- FALSE
     stop_reason <- NULL
     rectime <- obswin/recrate
-    # tox <- stats::rbinom(n = length(initdes), size = 1, prob = true_tox[initdes])
+
     level <- initdes[1]
     stage1 <- c(initdes, rep(length(prior), max_sample_size - length(initdes)))
     duration <- dose <- dlt <- dlt_time <- fu <- tox <- weights <- vector()
@@ -732,18 +681,18 @@ applied_titecrmts_sim_v2 <- function (true_tox, prior, target, max_sample_size,
       # Loop through all the patients who will have a DLT
       for(k in 1:length(fu)){
         if(tox[k] == 1){
-          # If the follow up time is greater than the time the dlt was                    determined to occur
+          # If the follow up time is greater than the time the dlt was determined to occur
           if(fu[k] >= dlt_time[k]){
-            # Change the follow up time to the obswin to indicate the dlt                   has now happened
+            # Change the follow up time to the obswin to indicate the dlt has now happened
             fu[k] <- obswin
-            # As the dlt has happened it should now be stored for                           calculation in the likelihood
+            # As the dlt has happened it should now be stored for calculation in the likelihood
             dlt[k] <- 1
           }
         }
       }
       
       fu <- pmin(fu, obswin)
-      # Calculated weights where the min fu accounts for 60% and is 80% by            window 2
+      # Calculated weights where the min fu accounts for 60% and is 80% bywindow 2
       for (a in 1:length(fu)) {
         weights[a] <- 0.6 + 
           0.2*(min(win2 - minfu, fu[a]-minfu)/(win2 - minfu))+ 
@@ -771,49 +720,6 @@ applied_titecrmts_sim_v2 <- function (true_tox, prior, target, max_sample_size,
       cohort.count <- cohort.count +1
     } 
     
-    
-    
-    # fu = (rectime * (length(tox) - 1)) - (rectime * c(0:(length(tox) - 1))) + 
-    #   minfu * (((length(tox)/cohort)):1)
-    # for (k in 1:length(tox)) {
-    #   if(tox[k] == 1 & fu[k] >= dlt_time[k]){
-    #     fu[k] <- obswin
-    #     dlt[k] <- 1
-    #   }
-    # }
-    # 
-    # pos <- cohort * ceiling(which(dlt == 1)[1]/cohort)
-    # pos <- ifelse(is.na(pos),length(tox),pos)
-    # tox <- tox[1:pos]
-    # level <- level[1:pos]
-    # dlt <- dlt[1:pos]
-    # dlt_time <- dlt_time[1:pos]
-    # fu <- (rectime * (length(tox) - 1)) - (rectime * c(0:(length(tox) - 1))) + 
-    #   minfu * (((length(tox)/cohort)):1)
-    # duration <- fu
-    # for (a in 1:length(tox)) {
-    #   if(tox[a] == 1 & fu[a] >= dlt_time[a]){
-    #     fu[a] <- obswin
-    #     dlt[a] <- 1
-    #   }
-    # }
-    # 
-    # 
-    # #fu[tox == 1] <- obswin
-    # fu <- pmin(fu, obswin)
-    # weights <-  0.6 + 0.2*(pmin(win2 - minfu, fu-minfu)/(win2 - minfu))+
-    #   0.2*(pmax(fu- win2, 0)/(obswin-win2))
-    
-    #   x <- dose_func(prior = prior, target = target, tox = tox, 
-    #                  level = level, followup = fu, obswin = obswin, weights = weights,
-    #                  ...)
-    #   dose <- x$mtd
-    #   stop <- ifelse(is.null(x$stop), FALSE, x$stop)
-    #   stop_reason <- x$stop_reason
-    # }
-    # if (all(tox == 0)) {
-    #   dose = utils::tail(level, 1)
-    # }
     while ( !stop & length(tox) <= max_sample_size) {
       if (length(dlt) == max_sample_size & sum(dlt) == 0 ) {
         stop = TRUE
@@ -827,10 +733,6 @@ applied_titecrmts_sim_v2 <- function (true_tox, prior, target, max_sample_size,
         
         stop <- ifelse(is.null(x$stop), FALSE, x$stop)
         stop_reason <- x$stop_reason
-        # 
-        # if(stop == TRUE){
-        #   break
-        # }
         
         if(length(dlt) == max_sample_size | stop == TRUE ){
           x <- dose_func(prior = prior, target = target, tox = tox, 
@@ -884,67 +786,16 @@ applied_titecrmts_sim_v2 <- function (true_tox, prior, target, max_sample_size,
               0.2*(max(fu[b]- win2, 0)/(obswin-win2))
           }
           cohort.count <- cohort.count+1
-          # weights <-  0.6 + 0.2*(pmin(win2 - minfu, fu-minfu)/(win2 - minfu))+
-          #   0.2*(pmax(fu- win2, 0)/(obswin-win2)) ##
+
         }
       }
       
-      #  cohort_tox = stats::rbinom(n = cohort, size = 1, 
-      #                             prob = true_tox[dose])
-      #  cohort_dlt <- rep(0, cohort) ## 
-      #  cohort_level = rep(dose, cohort)
-      #  cohort_fu = (rectime * (cohort - 1)) - (rectime * 
-      #                                                 c(0:(cohort - 1))) + minfu
-      #  cohort_dlt_time <- c()
-      #  for (j in 1:cohort) {
-      #    if(cohort_tox[j] == 0){
-      #      cohort_dlt_time[j] <- NA
-      #    }
-      #    else {
-      #      cohort_dlt_time[j] <- runif(1,0, obswin)
-      #    }
-      #  }
-      # # cohort_fu[cohort_tox == 1] <- obswin
-      #  # Stores the time DLT occurs for new cohort
-      #  dlt_time <- c(dlt_time, cohort_dlt_time) ##
-      #  # Store dummy dlt for new cohort
-      #  dlt <- c(dlt, cohort_dlt) ##
-      #  tox <- c(tox, cohort_tox)
-      #  level <- c(level, cohort_level)
-      #  fu <- fu + (cohort * rectime) + minfu
-      #  fu <- c(fu, cohort_fu)
-      #  duration <- duration + (cohort * rectime) + minfu
-      # 
-      #  for (l in 1:length(tox)) {
-      #    if(tox[l] == 1 & fu[l] >= dlt_time[l]){
-      #      fu[l] <- obswin
-      #      dlt[l] <- 1
-      #    }
-      #  }
-      #  fu <- pmin(fu, obswin)
-      #  weights <-  0.6 + 0.2*(pmin(win2 - minfu, fu-minfu)/(win2 - minfu))+
-      #    0.2*(pmax(fu- win2, 0)/(obswin-win2)) ##
-      # 
-      # x <- dose_func(prior = prior, target = target, weights = weights, 
-      #                tox = tox, level = level, followup = fu, obswin = obswin, 
-      #                ...)
-      # dose <- x$mtd
-      # stop <- ifelse(is.null(x$stop), FALSE, x$stop)
-      # stop_reason <- x$stop_reason
+      
     }
     
-    # if (!stop) {
-    #   x <- dose_func(prior = prior, target = target, tox = tox, 
-    #                  level = level, followup = rep(obswin, length(tox)), 
-    #                  obswin = obswin, weights = rep(1, length(tox)),
-    #                  ...)
-    #   dose <- x$mtd
-    #   stop <- ifelse(is.null(x$stop), FALSE, x$stop)
-    # }
     print(s)
     num_cohorts <- length(tox) / cohort
     duration <- cohort_fu[1] + (rectime*(cohort-1) + minfu) * (cohort.count-1) +(obswin - minfu)
-    #print(duration)
     iterations[[s]] <- list(tox = tox, level = dose, mtd = fdose, 
                             stop = stop, stop_reason = stop_reason, 
                             duration = duration, cohorts = cohort.count)
@@ -1015,9 +866,9 @@ titepocrm_sim_nomin <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
       rectime <- obswin/recrate
       
       while(length(tox) < n){
-        # Takes draws from a binomial distribution to determine if patients in            the cohort had a toxic outcome
+        # Takes draws from a binomial distribution to determine if patients in the cohort had a toxic outcome
         cohort_tox <- stats::rbinom(n = cohort, size = 1, prob = r[comb.curr])
-        # Dummy variable to store DLT which will be updated once the time for           DLT has passed
+        # Dummy variable to store DLT which will be updated once the time for DLT has passed
         cohort_dlt <- rep(0, cohort)
         # Patients in the same cohort recieve the same dose
         cohort_comb <- rep(comb.curr, cohort)
@@ -1052,18 +903,18 @@ titepocrm_sim_nomin <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
         # Loop through all the patients who will have a DLT
         for(i in 1:length(fu)){
           if(tox[i] == 1){
-            # If the follow up time is greater than the time the dlt was                    determined to occur
+            # If the follow up time is greater than the time the dlt was determined to occur
             if(fu[i] >= dlt_time[i]){
-              # Change the follow up time to the obswin to indicate the dlt                   has now happened
+              # Change the follow up time to the obswin to indicate the dlt has now happened
               fu[i] <- obswin
-              # As the dlt has happened it should now be stored for                           calculation in the likelihood
+              # As the dlt has happened it should now be stored for  calculation in the likelihood
               dlt[i] <- 1
             }
           }
         }
         
         fu <- pmin(fu, obswin)
-        # Calculated weights where the min fu accounts for 60% and is 80% by            window 2
+        # Calculated weights where the min fu accounts for 60% and is 80% by window 2
         for (i in 1:length(fu)) {
           weights[i] <- 0.6*(min(fu[i],minfu)/minfu) + 
             0.2*max((min(win2 - minfu, fu[i]-minfu)/(win2 - minfu)),0)+ 
@@ -1166,7 +1017,7 @@ titepocrm_sim_nomin <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
           # stopping rule for when lowest dose is too toxic AND lowest dose has been tested ptox.hat[1] > 0.5 & 1 %in% dose
           # 
           # stopping rule if dose is being recommended for a xth time
-          if (length(dlt) == n |(prob.too.toxic > tox.cert) & 1 %in% dose |  sum(dose == comb.curr) == mtd.lim) {
+          if (length(dlt) == n |(prob.too.toxic > tox.cert) & 1 %in% dose | sum(dose == comb.curr) == mtd.lim) {
             stoprule = 0
             
             # once all patients recruited calculate likelihoods at max weight
@@ -1313,9 +1164,6 @@ titepocrm_sim_nomin <- function (r, alpha, prior.o, x0, stop, n, theta, nsim,
                   patient.allocation = npts, duration = duration,
                   stop = stop.count))
     }
-    
-    
-    
     
   }
   lpocrm.sim <- function(nsim) {

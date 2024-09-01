@@ -2221,6 +2221,115 @@
     \field{urlyear}{2021}
   \endentry
 
+  \entry{patelImplementingTimetoeventContinual2024}{article}{}
+    \name{author}{8}{}{%
+      {{hash=PA}{%
+         family={Patel},
+         familyi={P\bibinitperiod},
+         given={Amit},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=BK}{%
+         family={Brock},
+         familyi={B\bibinitperiod},
+         given={Kristian},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=SD}{%
+         family={Slade},
+         familyi={S\bibinitperiod},
+         given={Daniel},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=GC}{%
+         family={Gaunt},
+         familyi={G\bibinitperiod},
+         given={Claire},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Kong},
+         familyi={K\bibinitperiod},
+         given={Anthony},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=MH}{%
+         family={Mehanna},
+         familyi={M\bibinitperiod},
+         given={Hisham},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=BL}{%
+         family={Billingham},
+         familyi={B\bibinitperiod},
+         given={Lucinda},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=GP}{%
+         family={Gaunt},
+         familyi={G\bibinitperiod},
+         given={Piers},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \keyw{ADePT-DDR,Combined Modality Therapy,Computer
+  Simulation,Dose-finding,Dose-Response Relationship Drug,Head and Neck
+  Neoplasms,Humans,Maximum Tolerated Dose,Monotonicity assumption,Partial
+  orders,Phase I trial,PO-TITE-CRM,Research Design,Toxicity}
+    \strng{namehash}{PABKSD+1}
+    \strng{fullhash}{PABKSDGCKAMHBLGP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{abstract}{%
+    BACKGROUND: In this article we describe the methodology of the
+  time-to-event continual reassessment method in the presence of partial orders
+  (PO-TITE-CRM) and the process of implementing this trial design into a phase
+  I trial in head and neck cancer called ADePT-DDR. The ADePT-DDR trial aims to
+  find the maximum tolerated dose of an ATR inhibitor given in conjunction with
+  radiotherapy in patients with head and neck squamous cell carcinoma. METHODS:
+  The PO-TITE-CRM is a phase I trial design that builds upon the time-to-event
+  continual reassessment method (TITE-CRM) to allow for the presence of partial
+  ordering of doses. Partial orders occur in the case where the monotonicity
+  assumption does not hold and the ordering of doses in terms of toxicity is
+  not fully known. RESULTS: We arrived at a parameterisation of the design
+  which performed well over a range of scenarios. Results from simulations were
+  used iteratively to determine the best parameterisation of the design and we
+  present the final set of simulations. We provide details on the methodology
+  as well as insight into how it is applied to the trial. CONCLUSIONS: Whilst
+  being a very efficient design we highlight some of the difficulties and
+  challenges that come with implementing such a design. As the issue of partial
+  ordering may become more frequent due to the increasing investigations of
+  combination therapies we believe this account will be beneficial to those
+  wishing to implement a design with partial orders. TRIAL REGISTRATION:
+  ADePT-DDR was added to the European Clinical Trials Database (EudraCT number:
+  2020-001034-35) on 2020-08-07.%
+    }
+    \verb{doi}
+    \verb 10.1186/s12874-024-02142-4
+    \endverb
+    \verb{eprint}
+    \verb 38218799
+    \endverb
+    \field{issn}{1471-2288}
+    \field{number}{1}
+    \field{pages}{11}
+    \field{shortjournal}{BMC Med Res Methodol}
+    \field{title}{Implementing the Time-to-Event Continual Reassessment Method
+  in the Presence of Partial Orders in a Phase {{I}} Head and Neck Cancer
+  Trial}
+    \field{volume}{24}
+    \field{langid}{english}
+    \verb{file}
+    \verb C:\Users\Amit\Zotero\storage\AN9R3GVY\Patel et al. - 2024 - Implement
+    \verb ing the time-to-event continual reassessm.pdf
+    \endverb
+    \field{journaltitle}{BMC medical research methodology}
+    \field{eprinttype}{pmid}
+    \field{day}{13}
+    \field{month}{01}
+    \field{year}{2024}
+  \endentry
+
   \entry{stranskyMutationalLandscapeHead2011}{article}{}
     \name{author}{39}{}{%
       {{hash=SN}{%
@@ -4181,115 +4290,6 @@
     \field{day}{02}
     \field{month}{09}
     \field{year}{2022}
-  \endentry
-
-  \entry{patelImplementingTimetoeventContinual2024}{article}{}
-    \name{author}{8}{}{%
-      {{hash=PA}{%
-         family={Patel},
-         familyi={P\bibinitperiod},
-         given={Amit},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=BK}{%
-         family={Brock},
-         familyi={B\bibinitperiod},
-         given={Kristian},
-         giveni={K\bibinitperiod},
-      }}%
-      {{hash=SD}{%
-         family={Slade},
-         familyi={S\bibinitperiod},
-         given={Daniel},
-         giveni={D\bibinitperiod},
-      }}%
-      {{hash=GC}{%
-         family={Gaunt},
-         familyi={G\bibinitperiod},
-         given={Claire},
-         giveni={C\bibinitperiod},
-      }}%
-      {{hash=KA}{%
-         family={Kong},
-         familyi={K\bibinitperiod},
-         given={Anthony},
-         giveni={A\bibinitperiod},
-      }}%
-      {{hash=MH}{%
-         family={Mehanna},
-         familyi={M\bibinitperiod},
-         given={Hisham},
-         giveni={H\bibinitperiod},
-      }}%
-      {{hash=BL}{%
-         family={Billingham},
-         familyi={B\bibinitperiod},
-         given={Lucinda},
-         giveni={L\bibinitperiod},
-      }}%
-      {{hash=GP}{%
-         family={Gaunt},
-         familyi={G\bibinitperiod},
-         given={Piers},
-         giveni={P\bibinitperiod},
-      }}%
-    }
-    \keyw{ADePT-DDR,Combined Modality Therapy,Computer
-  Simulation,Dose-finding,Dose-Response Relationship Drug,Head and Neck
-  Neoplasms,Humans,Maximum Tolerated Dose,Monotonicity assumption,Partial
-  orders,Phase I trial,PO-TITE-CRM,Research Design,Toxicity}
-    \strng{namehash}{PABKSD+1}
-    \strng{fullhash}{PABKSDGCKAMHBLGP1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{abstract}{%
-    BACKGROUND: In this article we describe the methodology of the
-  time-to-event continual reassessment method in the presence of partial orders
-  (PO-TITE-CRM) and the process of implementing this trial design into a phase
-  I trial in head and neck cancer called ADePT-DDR. The ADePT-DDR trial aims to
-  find the maximum tolerated dose of an ATR inhibitor given in conjunction with
-  radiotherapy in patients with head and neck squamous cell carcinoma. METHODS:
-  The PO-TITE-CRM is a phase I trial design that builds upon the time-to-event
-  continual reassessment method (TITE-CRM) to allow for the presence of partial
-  ordering of doses. Partial orders occur in the case where the monotonicity
-  assumption does not hold and the ordering of doses in terms of toxicity is
-  not fully known. RESULTS: We arrived at a parameterisation of the design
-  which performed well over a range of scenarios. Results from simulations were
-  used iteratively to determine the best parameterisation of the design and we
-  present the final set of simulations. We provide details on the methodology
-  as well as insight into how it is applied to the trial. CONCLUSIONS: Whilst
-  being a very efficient design we highlight some of the difficulties and
-  challenges that come with implementing such a design. As the issue of partial
-  ordering may become more frequent due to the increasing investigations of
-  combination therapies we believe this account will be beneficial to those
-  wishing to implement a design with partial orders. TRIAL REGISTRATION:
-  ADePT-DDR was added to the European Clinical Trials Database (EudraCT number:
-  2020-001034-35) on 2020-08-07.%
-    }
-    \verb{doi}
-    \verb 10.1186/s12874-024-02142-4
-    \endverb
-    \verb{eprint}
-    \verb 38218799
-    \endverb
-    \field{issn}{1471-2288}
-    \field{number}{1}
-    \field{pages}{11}
-    \field{shortjournal}{BMC Med Res Methodol}
-    \field{title}{Implementing the Time-to-Event Continual Reassessment Method
-  in the Presence of Partial Orders in a Phase {{I}} Head and Neck Cancer
-  Trial}
-    \field{volume}{24}
-    \field{langid}{english}
-    \verb{file}
-    \verb C:\Users\Amit\Zotero\storage\AN9R3GVY\Patel et al. - 2024 - Implement
-    \verb ing the time-to-event continual reassessm.pdf
-    \endverb
-    \field{journaltitle}{BMC medical research methodology}
-    \field{eprinttype}{pmid}
-    \field{day}{13}
-    \field{month}{01}
-    \field{year}{2024}
   \endentry
 
   \entry{walkerOpenLabelAdaptive2022}{article}{}
@@ -8300,6 +8300,72 @@
     \field{urlday}{03}
     \field{urlmonth}{03}
     \field{urlyear}{2024}
+  \endentry
+
+  \entry{sochBookStatisticalProofs2020}{software}{}
+    \name{author}{5}{}{%
+      {{hash=SJ}{%
+         family={Soch},
+         familyi={S\bibinitperiod},
+         given={Joram},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=PTBoS}{%
+         family={Proofs},
+         familyi={P\bibinitperiod},
+         given={The Book of\bibnamedelima Statistical},
+         giveni={T\bibinitperiod\bibinitdelim B\bibinitperiod\bibinitdelim
+  o\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=FTJ}{%
+         family={Faulkenberry},
+         familyi={F\bibinitperiod},
+         given={Thomas\bibnamedelima J.},
+         giveni={T\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=PK}{%
+         family={Petrykowski},
+         familyi={P\bibinitperiod},
+         given={Kenneth},
+         giveni={K\bibinitperiod},
+      }}%
+      {{hash=AC}{%
+         family={Allefeld},
+         familyi={A\bibinitperiod},
+         given={Carsten},
+         giveni={C\bibinitperiod},
+      }}%
+    }
+    \list{organization}{1}{%
+      {Zenodo}%
+    }
+    \strng{namehash}{SJPTBoSFTJ+1}
+    \strng{fullhash}{SJPTBoSFTJPKAC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{abstract}{%
+    The Book of Statistical Proofs, as of 2020 Release Date: December 4, 2020
+  – browse repository at this point in time Statistics: 3 Authors – 123
+  Definitions – 200 Proofs – 323 Items in total – 291 PDF pages Links:
+  Website – Wiki – GitHub – Twitter – GMail%
+    }
+    \verb{doi}
+    \verb 10.5281/zenodo.4305950
+    \endverb
+    \field{shorttitle}{{{StatProofBook}}/{{StatProofBook}}.Github.Io}
+    \field{title}{The {{Book}} of {{Statistical Proofs}}}
+    \verb{url}
+    \verb https://zenodo.org/record/4305950
+    \endverb
+    \verb{file}
+    \verb C:\Users\Amit\Zotero\storage\4FCYJL3I\4305950.html
+    \endverb
+    \field{day}{04}
+    \field{month}{12}
+    \field{year}{2020}
+    \field{urlday}{28}
+    \field{urlmonth}{01}
+    \field{urlyear}{2023}
   \endentry
 
   \entry{changShinyWebApplication}{software}{}

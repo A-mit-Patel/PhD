@@ -34,7 +34,7 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
-Reallocating 'field_info' (item size: 4) to 20820 items.
+Reallocating 'field_info' (item size: 4) to 20960 items.
 Database file #1: main-blx.bib
 Database file #2: ref.bib
 Reallocating 'str_pool' (item size: 1) to 130000 items.
@@ -50,44 +50,44 @@ Biblatex version: 3.16
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'str_pool' (item size: 1) to 325000 items.
-You've used 113 entries,
+You've used 114 entries,
             6393 wiz_defined-function locations,
-            2654 strings with 233947 characters,
-and the built_in function-call counts, 1672822 in all, are:
-= -- 105652
-> -- 98387
-< -- 7617
-+ -- 108400
-- -- 80040
-* -- 105485
-:= -- 230820
+            2666 strings with 234613 characters,
+and the built_in function-call counts, 1689194 in all, are:
+= -- 106720
+> -- 99342
+< -- 7691
++ -- 109406
+- -- 80811
+* -- 106575
+:= -- 233055
 add.period$ -- 0
-call.type$ -- 113
-change.case$ -- 1839
-chr.to.int$ -- 6822
-cite$ -- 224
-duplicate$ -- 142253
-empty$ -- 119718
-format.name$ -- 11670
-if$ -- 270173
+call.type$ -- 114
+change.case$ -- 1853
+chr.to.int$ -- 6894
+cite$ -- 226
+duplicate$ -- 143475
+empty$ -- 120924
+format.name$ -- 11775
+if$ -- 272885
 int.to.chr$ -- 0
-int.to.str$ -- 272
+int.to.str$ -- 275
 missing$ -- 0
-newline$ -- 7703
-num.names$ -- 5344
-pop$ -- 43072
+newline$ -- 7765
+num.names$ -- 5391
+pop$ -- 43458
 preamble$ -- 1
-purify$ -- 3314
+purify$ -- 3341
 quote$ -- 0
-skip$ -- 29787
+skip$ -- 30051
 stack$ -- 0
-substring$ -- 218377
-swap$ -- 33833
-text.length$ -- 6024
+substring$ -- 220784
+swap$ -- 34111
+text.length$ -- 6082
 text.prefix$ -- 14
 top$ -- 1
-type$ -- 3826
+type$ -- 3860
 warning$ -- 0
-while$ -- 24450
+while$ -- 24662
 width$ -- 0
-write$ -- 7591
+write$ -- 7652
