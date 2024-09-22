@@ -1,4 +1,0 @@
-KB sims recreation (basic design):
-	Contains a recreation of the original simulations done by Kristian. 
-	Ran for sample size of 32 and 52 
-	Simulation Results stored in 'Basic_Sims.RData'

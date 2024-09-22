@@ -1,0 +1,337 @@
+---
+title: "TITE DTP Scoping"
+author: "Amit Patel"
+date: "`r format(Sys.Date(), format = '%d-%b-%Y')`"
+output: 
+  html_document:
+    theme: cerulean
+    df_print: paged
+    toc: true
+    toc_float: true
+    toc_depth: 3
+    number_sections: 3
+---
+
+
+```{r setup, include=FALSE}
+library(dfcrm)
+library(dtpcrm)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(kableExtra)
+library(car)
+library(rglwidget)
+library(knitr)
+options(rgl.useNULL=TRUE)
+library(rgl)
+rgl::setupKnitr()
+```
+
+# Example Trial 
+```{r }
+prior <- c(0.1, 0.2, 0.3)
+target <- 0.2
+obswin <- 56
+```
+Consider a trial with: 
+
+* 3 dose levels
+* A target DLT rate of 20% (TD20)
+* Prior guess of TD20 at dose level 2 
+* Follow up period of 8 weeks (56 days)
+* Patients starting at dose level 1
+* A linear weighting 
+* TITE-CRM using the empiric model
+
+
+# Simple Case 
+The simplest case would involve just a single patient. There are two possible outcomes: 
+
+* Toxicity (T)
+* No toxicity (N)
+
+## If Toxicity Occurs
+If a toxicity occurs, the time it happens is irrelevent as the weighting is automatically set at 1,  
+```{r}
+level <- 1 
+tox <- 1
+followup <- 56 
+
+mod <- titecrm(prior = prior, target = target, tox = tox, level = level, 
+               obswin = obswin, scheme = 'linear', followup = followup)
+mod
+```
+The reccommended dose is dose level `r mod$mtd`. 
+
+## If No Toxicity Occurs 
+If no toxicity is observed the next dose allocated would depend on the follow up of the patient. Here there would be 56 different possibilities. The patient could be followed up for either $1, 2, 3, ..., 56$ days. 
+```{r}
+tox <- 0 
+followup <- 1:obswin
+results <- data.frame('Observed' = followup, 'Rec' = rep(0,obswin))
+for (i in 1:obswin) {
+  followup <- i 
+  mod <- titecrm(prior = prior, target = target, tox = tox, level = level, 
+                    obswin = obswin, scheme = 'linear', followup = followup)
+  results$Rec[i] <- mod$mtd
+}
+```
+We can determine the next dose by looping through all possible values of follow up. The results can be summarised using the min and max follow up days for each dose. 
+```{r}
+results <- results %>% group_by('Next Dose' = Rec) %>% 
+  summarise('Follow up data' = paste(min(Observed), max(Observed), 
+                                     sep ='-'))
+kable(results, align = 'cc') %>% 
+ kable_styling(full_width = F, position = 'left')
+```
+This can be interpreted as the next dose will be 2 if the previous patien has no toxicity and has been observed between 1 and 30 days. Likewise, the next dose level would be 3 if no toxicities were observed between days 31 and 56. 
+
+## DTP for 1 Patient 
+```{r warning=FALSE}
+kable(results %>% 
+  pivot_wider(names_from = `Next Dose`, values_from = `Follow up data` ) %>%   mutate(Outcome = c('N'), `1` = '-') %>% 
+  select(Outcome, `1`, `2`, `3`) %>% 
+  rbind(c('T', 'Always', '-', '-' )) %>% 
+  arrange(`2`), align = 'lccc') %>% 
+  kable_styling(full_width = F, position = 'left') %>% 
+  add_header_above(c(" " = 1, "Recommended Dose" = 3))
+```
+Putting this all together gives the table above. The numbers represent the amount of follow up which would need to be observed. I just forced this together as a proof of concept. I'm not 100% sure how this should be summarised.  
+
+# Case of 2 Patients or Cohorts of 2 
+
+Calculating the next pathway becomes more tricky depending on the outcome. It is somewhat similar to having a cohort of 2 patients. In both these cases the possible outcomes are: 
+
+* TT
+* NT (note NT and TN are the same)
+* NN
+
+As before the TT case is quite simple to solve as the weights/follow-up are set at 1. Similarly NT can be summarised in a similar way as above except when we run the CRM there will be an extra patient with a toxicity. 
+
+## If TT Occurs
+```{r}
+level <- c(1,1)
+tox <- c(1,1)
+followup <- c(56,56)
+
+mod <- titecrm(prior = prior, target = target, tox = tox, level = level, 
+               obswin = obswin, scheme = 'linear', followup = followup)
+mod
+```
+The reccommended dose is dose level `r mod$mtd`. 
+
+## If NT Occurs
+```{r}
+level <- c(1,1)
+tox <- c(1,0)
+followupcombo <- cbind(rep(56, obswin), 1:56)
+results <- data.frame('Observed' = 1:56, 'Rec' = rep(0,obswin))
+for (i in 1:obswin) {
+  followup <- followupcombo[i,]
+  mod <- titecrm(prior = prior, target = target, tox = tox, level = level, 
+                 obswin = obswin, scheme = 'linear', followup = followup)
+  results$Rec[i] <- mod$mtd
+}
+
+kable(results %>% group_by(TD20 = Rec) %>% 
+  summarise(n = n()), align = 'cc') %>% 
+  kable_styling(full_width = F, position = 'left')
+```
+The recommended dose is 1  no matter how much observed data there is for the patient with no toxicity. 
+
+## If NN Occurs
+Here there are `r obswin^2` variations of the NN outcome. The number of variations is $(observation \; period)^ {No. \;Patients}$. We could observe both patiens for 1 day each or both for the whole window and everything inbetween. 
+
+```{r}
+level <- c(1,1)
+tox <- c(0,0)
+combos <- 1:obswin
+combos <- expand.grid(combos, combos)
+pos <- cbind(rep(0,nrow(combos)))
+results <-  pos[, rep(1, each=length(tox)+1)]
+for (i in 1:nrow(combos)) {
+  followup <- as.numeric(combos[i,])
+  weights <- followup / obswin 
+  mod <- titecrm(prior = prior, target = target, tox = tox, level = level, 
+                 obswin = obswin, weights = weights)
+
+  for (j in 1:ncol(results)) {
+    results[,j][i] <- followup[j]
+    results[,ncol(results)][i] <- mod$mtd
+  }
+}
+
+results <- data.frame(results)
+colnames(results) <- c('Patient1', 'Patient2', 'TD20')
+results
+```
+Scrolling through the table you can see that certain combinations of follow up times lead to different reccomendations for the TD. 
+
+### Summarising using Total Follow-Up 
+One thought I had was to look at the total follow up of both patients depending on what dose recommendation the TITE-CRM made. 
+```{r}
+kable(results %>% mutate(TotalFollow = Patient1+Patient2) %>% 
+  group_by(TD20) %>% 
+  summarise(n = n(), min = min(TotalFollow), max = max(TotalFollow)), 
+  align = 'cccc') %>% 
+  kable_styling(full_width = F, position = 'left')
+```
+One assumption used here is that both patients will have at least 1 day of follow-up. The table indicates that if the total follow-up time between both patients exceeds 33 the TITE-CRM will recommed dose level 3. Similarly, if total follow-up is less than 30 the model will always recommend dose level 2. However, there is a grey area, if the total follow-up is between 31 and 33 it could recommend either dose. 
+
+### Visualisation of the problem
+```{r}
+results %>% 
+  ggplot(aes(x = Patient1, y = Patient2, fill = as.factor(TD20))) +
+  geom_tile() +
+  scale_fill_brewer(palette = 'Paired') + 
+  theme_bw() + 
+  geom_abline(intercept = 30, slope = -1, col = 'red', 
+              linetype = 'dashed') +
+  geom_abline(intercept = 34, slope = -1, col = 'red', 
+              linetype = 'dashed') +
+  theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_line(colour = "black")) +
+  labs(fill = 'TD20', x = 'Patient 1 follow-up',
+       y = 'Patient 2 follow-up')+ 
+    scale_x_continuous(breaks = seq(0, 60, by = 05), expand = c(0, 0))+
+    scale_y_continuous(breaks = seq(0, 60, by = 05), expand = c(0, 0))
+```
+
+I am not sure what is causing this. If the observation window were longer I would assume this becomes a singular straight line. 
+
+## Summarising all outcomes 
+```{r}
+kable(data.frame(Outcomes = c('TT', 'NT', 'NN'),
+                `1` = c('Always', 'Always', '-'),
+                `2` = c('-', '-', '2-30'),
+                `3` = c('-', '-', '34-112'), check.names = FALSE),
+      align = 'lccc') %>%
+  kable_styling(full_width = F, position = 'left') %>% 
+  add_header_above(c(" " = 1, "Recommended Dose" = 3))
+  
+```
+
+
+# With 3 Patients 
+Possible outcomes: 
+
+* TTT 
+* NTT (56 variations)
+* NNT (3136 variations)
+* NNN (175616 variations)
+
+## TTT, NTT & NNT Outcomes
+These are just extensions of the case with two patients except an extra patient has a toxicity. 
+
+### If TT Occurs
+```{r}
+level <- c(1,1,1)
+tox <- c(1,1,1)
+followup <- c(56,56,56)
+
+mod <- titecrm(prior = prior, target = target, tox = tox, level = level, 
+               obswin = obswin, scheme = 'linear', followup = followup)
+mod
+```
+The reccommended dose is dose level `r mod$mtd`. 
+
+
+### If NTT Occurs
+```{r}
+level <- c(1,1,1)
+tox <- c(0,1,1)
+followupcombo <- cbind(1:56, rep(56, obswin), rep(56, obswin))
+results <- data.frame('Observed' = 1:56, 'Rec' = rep(0,obswin))
+for (i in 1:obswin) {
+  followup <- followupcombo[i,]
+  mod <- titecrm(prior = prior, target = target, tox = tox, level = level, 
+                 obswin = obswin, scheme = 'linear', followup = followup)
+  results$Rec[i] <- mod$mtd
+}
+
+kable(results %>% group_by(TD20 = Rec) %>% 
+  summarise(n=n()), align = 'cc') %>% 
+  kable_styling(full_width = F, position = 'left')
+```
+Similar to before the recommended dose will always be 1 no matter how much data is observed for the patient without a toxicity. 
+
+### If NNT Occurs
+```{r}
+level <- c(1,1,1)
+tox <- c(1,0,0)
+combos <- 1:obswin
+combos <- expand.grid(combos, combos) 
+combos <- cbind(56, combos)
+pos <- cbind(rep(0,nrow(combos)))
+results <-  pos[, rep(1, each=3)]
+for (i in 1:nrow(combos)) {
+  followup <- as.numeric(combos[i,])
+  weights <- followup / obswin 
+  mod <- titecrm(prior = prior, target = target, tox = tox, level = level, 
+                 obswin = obswin, weights = weights)
+
+  for (j in 1:ncol(results)) {
+    results[,j][i] <- followup[j]
+    results[,ncol(results)][i] <- mod$mtd
+  }
+}
+
+results <- data.frame(results)
+colnames(results) <- c('Patient1', 'Patient2', 'TD20')
+
+kable(results %>% group_by(TD20) %>% 
+  summarise(n=n()), align = 'cc') %>%
+  kable_styling(full_width = F, position = 'left')
+```
+With one toxicity the model still won't escalate even if two other patients have been fully observed without tox. 
+
+## NNN Outcome
+I ran these separately. Took about 1 hour for all iterations. 
+```{r}
+load('TITE_DTPs_3.RData')
+results <- data.frame(results)
+colnames(results) <- c('Patient1', 'Patient2', 'Patient3', 'TD20')
+results
+```
+
+```{r}
+kable(results %>%
+  mutate(TotalFollow = Patient1+Patient2+Patient3) %>% 
+  group_by(TD20) %>% 
+  summarise(n = n(), min = min(TotalFollow), max = max(TotalFollow)),
+  align = 'cccc') %>% 
+  kable_styling(full_width = F, position = 'left')
+```
+These results can be interpreted similar to the ones before except now the total follow-up is for three patients. So, if the total follow-up is between 3 and 30 the model will definitely recommend dose level 2. If the total follow up is between 35 and 168 the model will definitely recommend dose level 3. If the total follow up is between 31 and 34 it could be either 2 or 3. 
+
+### Visualisation
+Interactive plot. Essentially a 3D version of the plot before. We could define two planes where everything above and below would be a certain dose. My linear algebra is a bit rusty so i'll pursue this if you think its worth the time. 
+```{r, webgl = TRUE}
+plot3d(x = results$Patient1, y = results$Patient2, z = results$Patient3,
+       col = as.factor(results$TD20), xlab = 'Patient 1 follow-up',
+       ylab = 'Patient 2 follow-up', zlab = 'Patient 3 follow-up')
+```
+
+## Summary 
+```{r}
+kable(data.frame(Outcomes = c('TTT', 'NTT', 'NNT', 'NNN'),
+                `1` = c('Always', 'Always', 'Always', '-'),
+                `2` = c('-', '-', '-' ,'3-30'),
+                `3` = c('-', '-', '-', '35-168'), check.names = FALSE),
+      align = 'lccc') %>%
+  kable_styling(full_width = F, position = 'left') %>% 
+  add_header_above(c(" " = 1, "Recommended Dose" = 3))
+```
+This would be the DTP for a cohort of 3. 
+
+# Implementation into ADePT-DDR 
+ADePT is slightly different due to the way in which the follow-up period works. Each patient is observed for a minimum of 8 weeks post treatment which is assigned a weighting of 60%. So the DTP will be based on observed follow-up from 8 weeks till the end of the entire follow-up period (52 weeks). This is 308 days and as we are using cohorts of 3 there is about 29.5 million possible outcomes (this would take about 5-6 days to run). Due to the rules of ADePT we  won't be skipping untried doses. So for the first cohort there is only two options escalate to the dose above or de-escalate to the dose below.  
+
+# Session Info
+```{r}
+sessionInfo()
+```
+
+
